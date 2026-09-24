@@ -1,0 +1,345 @@
+---
+title: "Exploratory Factor Analysis (EFA) & Parallel Analysis"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+params:
+  k_factors: 3   # number of factors extracted in the EFA (run with 3 and 4)
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+# Required libraries
+library(psych)
+library(dplyr)
+library(knitr)
+library(GPArotation) # Required for oblique rotations (e.g., oblimin)
+library(here)
+
+# psych runs parallel analysis simulations on several cores on macOS/Linux,
+# which makes the random results change from run to run even with set.seed().
+# One core gives reproducible results, identical to those obtained on Windows.
+options(mc.cores = 1)
+
+# Paths are relative to the repository root (instrument.Rproj).
+# Input: polychoric correlations of the UXVis items, from step 03.
+phase_dir  <- here("phase3-validation")
+data_dir   <- file.path(phase_dir, "03_polychoric-correlations", "output", "uxvis-scales")
+output_dir <- file.path(phase_dir, "04_number-of-factors", "output",
+                        paste0(params$k_factors, "-factors"))
+```
+
+```{r load-polychoric matrices}
+# Construct file paths
+r_file <- file.path(data_dir, "polychoric_correlation_matrix_r.csv")
+n_file <- file.path(data_dir, "polychoric_correlation_matrix_n.csv")
+
+# Read the polychoric correlation matrix (r) and pairwise sample size matrix (n)
+r_mat <- as.matrix(read.csv(r_file, row.names = 1, check.names = FALSE))
+n_mat <- as.matrix(read.csv(n_file, row.names = 1, check.names = FALSE))
+
+# Representative sample size (median of pairwise complete observations)
+n_sample <- median(n_mat, na.rm = TRUE)
+
+cat("Matrix dimensions:", nrow(r_mat), "items x", ncol(r_mat), "items\n")
+cat("Representative sample size (median N):", n_sample, "\n")
+
+
+
+```
+
+```{r test of sphericity}
+# 1. Bartlett's Test of Sphericity
+bartlett_res <- cortest.bartlett(r_mat, n = n_sample)
+cat("--- Bartlett's Test of Sphericity ---\n")
+cat("Chi-square:", round(bartlett_res$chisq, 2), "| df:", bartlett_res$df, "\vert{} p-value:", bartlett_res$p.value, "\n\n")
+
+
+
+# 2. Kaiser-Meyer-Olkin (KMO) Measure of Sampling Adequacy
+kmo_res <- KMO(r_mat)
+cat("--- KMO Sampling Adequacy ---\n")
+cat("Overall MSA:", round(kmo_res$MSA, 3), "\n")
+
+
+# 3. Individual Item MSA Table with Qualitative Evaluation
+msa_values <- kmo_res$MSAi
+
+# Individual item MSA table
+#kmo_items <- data.frame(
+#  Item = names(kmo_res$MSAi),
+#  KMO = round(kmo_res$MSAi, 3)
+#)
+#kable(kmo_items, caption = "Individual Item Measure of Sampling Adequacy (KMO)")
+
+
+kmo_items <- data.frame(
+  Item = names(msa_values),
+  MSA = round(msa_values, 3),
+  Classification = cut(
+    msa_values,
+    breaks = c(0, 0.50, 0.60, 0.70, 0.80, 0.90, 1.00),
+    labels = c("Unacceptable", "Miserable", "Mediocre", "Middling", "Meritorious", "Marvelous"),
+    include.lowest = TRUE
+  ),
+  Status = ifelse(msa_values >= 0.50, "Acceptable", "Flag (< 0.50)"),
+  row.names = NULL
+)
+
+
+# Render table
+knitr::kable(kmo_items, caption = "Individual Item Measure of Sampling Adequacy (KMO)")
+
+# Print warning in console if any item is problematic
+low_msa <- kmo_items[kmo_items$MSA < 0.50, ]
+if (nrow(low_msa) > 0) {
+  cat("\n[Warning] The following items have MSA < 0.50 and should be evaluated for removal:\n")
+  print(low_msa[, c("Item", "MSA")])
+}
+
+
+```
+
+```{r parallel analysis}
+  
+
+
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+}
+
+
+pdf_path <- file.path(output_dir, "scree_plot_parallel_analysis.pdf")
+
+
+pdf(pdf_path, width = 8, height = 6)
+
+
+
+# 2. generating the plot in the pdf
+fa_parallel <- fa.parallel(
+  r_mat,
+  n.obs = n_sample,
+  fa = "fa",
+  fm = "minres",
+  main = "Horn's Parallel Analysis Scree Plot (EFA - MinRes)"
+)
+
+# 3. close pdf
+dev.off()
+
+# 4. Present in the screen
+plot(fa_parallel, main = "Horn's Parallel Analysis Scree Plot (EFA - MinRes)")
+
+cat("Number of factors suggested by Parallel Analysis:", fa_parallel$nfact, "\n")
+
+
+```
+
+```{r efa}
+k_factors <- params$k_factors
+
+efa_model <- fa(
+  r = r_mat,
+  nfactors = k_factors,
+  n.obs = n_sample,
+  rotate = "oblimin",
+  fm = "minres"
+)
+
+# Console output suppressing loadings below 0.30
+print(efa_model$loadings, cutoff = 0.30, sort = TRUE)
+
+#======
+# Test Promax rotation and check factor complexity
+efa_promax <- fa(
+  r = r_mat,
+  nfactors = k_factors,
+  n.obs = n_sample,
+  rotate = "promax",
+  fm = "minres"
+)
+
+# Inspect sorted pattern matrix and item complexity
+print(efa_promax$loadings, cutoff = 0.30, sort = TRUE)
+
+
+
+
+
+```
+
+```{r factor Loadings, Communalities, and Uniquenesses}
+loadings_mat <- unclass(efa_model$loadings)
+
+# Construct data frame with Loadings, Communality (h2), Uniqueness (u2), and Complexity
+loadings_df <- as.data.frame(round(loadings_mat, 3)) %>%
+  mutate(
+    h2 = round(efa_model$communality, 3),
+    u2 = round(efa_model$uniquenesses, 3),
+    com = round(efa_model$complexity, 2)
+  )
+
+kable(loadings_df, caption = "Oblimin - Factor Pattern Matrix, Communalities (h2), and Uniquenesses (u2)")
+
+loadings_mat_promax <- unclass(efa_promax$loadings)
+
+# Construct data frame with Loadings, Communality (h2), Uniqueness (u2), and Complexity
+loadings_df_promax <- as.data.frame(round(loadings_mat_promax, 3)) %>%
+  mutate(
+    h2 = round(efa_promax$communality, 3),
+    u2 = round(efa_promax$uniquenesses, 3),
+    com = round(efa_promax$complexity, 2)
+  )
+
+kable(loadings_df, caption = "Promax Factor Pattern Matrix, Communalities (h2), and Uniquenesses (u2)")
+
+
+```
+
+```{r Export}
+# --- 1. EXTRACT AND ORGANIZE FACTOR LOADINGS ---
+
+print(1)
+# Extract raw unclassed loading matrix
+loadings_mat <- unclass(efa_model$loadings)
+
+print(2)
+# Convert to data frame
+loadings_df <- as.data.frame(loadings_mat)
+
+print(3)
+# Identify the primary factor (highest absolute loading) for each item
+primary_factor_idx <- apply(abs(loadings_mat), 1, which.max)
+loadings_df$Primary_Factor <- colnames(loadings_mat)[primary_factor_idx]
+
+# Extract maximum loading magnitude (signed)
+loadings_df$Max_Loading <- mapply(function(row, col) loadings_mat[row, col], 
+                                  seq_len(nrow(loadings_mat)), 
+                                  primary_factor_idx)
+
+# Append item-level psychometric diagnostics
+loadings_df$Communality_h2 <- round(efa_model$communality, 3)
+loadings_df$Uniqueness_u2   <- round(efa_model$uniquenesses, 3)
+loadings_df$Complexity      <- round(efa_model$complexity, 2)
+
+# Move item identifiers from rownames to a clean dedicated column
+loadings_df$Item <- rownames(loadings_df)
+
+# Sort items: First by Primary Factor, then by Loading magnitude (descending)
+loadings_df <- loadings_df[order(loadings_df$Primary_Factor, -abs(loadings_df$Max_Loading)), ]
+
+# Reorder columns for clean display in Excel/Sheets
+factor_cols <- colnames(loadings_mat)
+final_cols <- c("Item", "Primary_Factor", "Max_Loading", factor_cols, 
+                "Communality_h2", "Uniqueness_u2", "Complexity")
+loadings_df <- loadings_df[, final_cols]
+
+# Round factor loadings to 3 decimal places
+loadings_df[, factor_cols] <- round(loadings_df[, factor_cols], 3)
+loadings_df$Max_Loading <- round(loadings_df$Max_Loading, 3)
+
+
+
+
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+# Export sorted pattern matrix
+write.csv(loadings_df, file.path(output_dir, "efa_factor_loadings_ordered.csv"), row.names = FALSE, na = "")
+
+# Export factor intercorrelations (Phi)
+write.csv(as.data.frame(round(efa_model$Phi, 3)), file.path(output_dir, "efa_factor_correlations.csv"), row.names = TRUE)
+
+# Export global fit indices
+fit_indices <- data.frame(
+  Index = c("TLI", "RMSEA", "RMSEA_90_Low", "RMSEA_90_High", "RMSR", "BIC"),
+  Value = c(
+    round(efa_model$TLI, 3),
+    round(efa_model$RMSEA[1], 3),
+    round(efa_model$RMSEA[2], 3),
+    round(efa_model$RMSEA[3], 3),
+    round(efa_model$rms, 3),
+    round(efa_model$BIC, 2)
+  )
+)
+write.csv(fit_indices, file.path(output_dir, "efa_global_fit_indices.csv"), row.names = FALSE)
+
+cat("Files successfully generated in:", normalizePath(output_dir), "\n")
+
+```
+
+
+```{r export-ordered-loadings promax}
+# --- 1. EXTRACT AND ORGANIZE FACTOR LOADINGS ---
+
+# Extract raw unclassed loading matrix
+loadings_mat <- unclass(efa_promax$loadings)
+
+# Convert to data frame
+loadings_df <- as.data.frame(loadings_mat)
+
+# Identify the primary factor (highest absolute loading) for each item
+primary_factor_idx <- apply(abs(loadings_mat), 1, which.max)
+loadings_df$Primary_Factor <- colnames(loadings_mat)[primary_factor_idx]
+
+# Extract maximum loading magnitude (signed)
+loadings_df$Max_Loading <- mapply(function(row, col) loadings_mat[row, col], 
+                                  seq_len(nrow(loadings_mat)), 
+                                  primary_factor_idx)
+
+# Append item-level psychometric diagnostics
+loadings_df$Communality_h2 <- round(efa_promax$communality, 3)
+loadings_df$Uniqueness_u2   <- round(efa_promax$uniquenesses, 3)
+loadings_df$Complexity      <- round(efa_promax$complexity, 2)
+
+# Move item identifiers from rownames to a clean dedicated column
+loadings_df$Item <- rownames(loadings_df)
+
+# Sort items: First by Primary Factor, then by Loading magnitude (descending)
+loadings_df <- loadings_df[order(loadings_df$Primary_Factor, -abs(loadings_df$Max_Loading)), ]
+
+# Reorder columns for clean display in Excel/Sheets
+factor_cols <- colnames(loadings_mat)
+final_cols <- c("Item", "Primary_Factor", "Max_Loading", factor_cols, 
+                "Communality_h2", "Uniqueness_u2", "Complexity")
+loadings_df <- loadings_df[, final_cols]
+
+# Round factor loadings to 3 decimal places
+loadings_df[, factor_cols] <- round(loadings_df[, factor_cols], 3)
+loadings_df$Max_Loading <- round(loadings_df$Max_Loading, 3)
+
+
+# --- 2. EXPORT ALL TABLES TO output/ ---
+
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+# Export sorted pattern matrix
+write.csv(loadings_df, file.path(output_dir, "efa_promax_factor_loadings_ordered.csv"), row.names = FALSE, na = "")
+
+# Export factor intercorrelations (Phi)
+write.csv(as.data.frame(round(efa_promax$Phi, 3)), file.path(output_dir, "efa_promax_factor_correlations.csv"), row.names = TRUE)
+
+# Export global fit indices
+fit_indices <- data.frame(
+  Index = c("TLI", "RMSEA", "RMSEA_90_Low", "RMSEA_90_High", "RMSR", "BIC"),
+  Value = c(
+    round(efa_promax$TLI, 3),
+    round(efa_promax$RMSEA[1], 3),
+    round(efa_promax$RMSEA[2], 3),
+    round(efa_promax$RMSEA[3], 3),
+    round(efa_promax$rms, 3),
+    round(efa_promax$BIC, 2)
+  )
+)
+write.csv(fit_indices, file.path(output_dir, "efa_promax_global_fit_indices.csv"), row.names = FALSE)
+
+cat("Files successfully generated in:", normalizePath(output_dir), "\n")
+
+```
+
+
+
+

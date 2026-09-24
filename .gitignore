@@ -1,0 +1,28 @@
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*_cache/
+*_files/
+renv/library/
+renv/staging/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+
+# Jekyll (local site builds)
+_site/
+.jekyll-cache/
+
+# Office temporary files and OS files
+~$*
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Original survey exports and the pseudonym map (personal information).
+# Never commit these. data/raw/ holds the anonymised exports instead.
+**/data/private/

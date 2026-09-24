@@ -1,0 +1,398 @@
+---
+title: "Polychoric correlations — SUS, UEQ, Cognitive value, Intuitiveness, Visualization"
+output: html_document
+params:
+  scales: "uxvis"   # "uxvis": the 13 UXVis items; "all": UXVis + SUS + UEQ-S items
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE)
+# for data analysis
+library(polycor)   # hetcor() for polychoric correlations
+library(dplyr)
+library(tidyr)
+
+# for plots
+library(ggplot2)
+
+# to knit
+library(knitr)
+library(here)
+
+stopifnot(params$scales %in% c("uxvis", "all"))
+
+# Paths are relative to the repository root (instrument.Rproj)
+phase_dir  <- here("phase3-validation")
+input_file <- file.path(phase_dir, "00_collapse-categories", "output", "uxColaps_sus_ueqs_ratings.csv")
+output_dir <- file.path(phase_dir, "03_polychoric-correlations", "output",
+                        paste0(params$scales, "-scales"))
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+```
+
+## Item groups
+
+- **SUS**: `SUS_1`–`SUS_10`
+- **UEQ_pragmatic**: `UEQ_1`–`UEQ_4`
+- **UEQ_hedonic**: `UEQ_5`–`UEQ_8`
+- **Cognitive_value**: `P064`, `P301`, `P060`, `P027`
+- **Intuitiveness**: `P088`, `P026`, `P4026A`
+- **Visualization**: `P106`, `P089`, `P098`, `P097`, `P022A`, `P067`
+
+The complete polychoric matrix is calculated item by item (including, in this instance, pairs within the same construct), organized by construct blocks in the previously indicated order. Subsequently, a hierarchical cluster analysis is performed on this same matrix to verify whether the items group together empirically as hypothesized by the six intended constructs or if the data suggest a different structure. This notebook is run twice, set by the `scales` parameter: `uxvis` uses only the items of the UXVis scale (this run is used by step 04), and `all` also includes the gold-standard items (SUS and UEQ-S).
+
+```{r show-params, echo=FALSE}
+cat("Items used in this run (params$scales):", params$scales)
+```
+
+```{r load-data}
+
+df <- read.csv(
+  input_file,
+  stringsAsFactors = FALSE,
+  na.strings = c("NA", ""),
+  check.names = FALSE
+)
+
+uxvis_groups <- list(
+  Cognitive_value = c("P064", "P301", "P060", "P027"),
+  Intuitiveness   = c("P088", "P026", "P4026A"),
+  Visualization   = c("P106", "P089", "P098", "P097", "P022A", "P067")
+)
+gold_standard_groups <- list(
+  SUS             = c("SUS_1", "SUS_2", "SUS_3", "SUS_4", "SUS_5",
+                       "SUS_6", "SUS_7", "SUS_8", "SUS_9", "SUS_10"),
+  UEQ_pragmatic   = c("UEQ_1", "UEQ_2", "UEQ_3", "UEQ_4"),
+  UEQ_hedonic     = c("UEQ_5", "UEQ_6", "UEQ_7", "UEQ_8")
+)
+
+item_groups <- if (params$scales == "all") c(gold_standard_groups, uxvis_groups) else uxvis_groups
+
+item_to_group <- data.frame(
+  item  = unlist(item_groups, use.names = FALSE),
+  group = rep(names(item_groups), lengths(item_groups)),
+  stringsAsFactors = FALSE
+)
+
+all_items <- item_to_group$item
+
+all_colors <- c(SUS = "#5E4EA3", UEQ_pragmatic = "#379EB8", UEQ_hedonic = "#4AAF77",
+                Cognitive_value = "#E02884", Intuitiveness = "#F06128", Visualization = "#E2A600")
+group_colors <- all_colors[names(item_groups)]
+```
+
+## Compute polychoric correlations (pairwise deletion)
+
+`hetcor(..., use = "pairwise.complete.obs")` estimates each pairwise correlation from only
+the rows where *that specific pair* of items is non-missing (pairwise deletion), rather than
+dropping a participant from the whole matrix because a single item elsewhere is missing.
+Every item is coerced to an ordered factor first, so every pair is estimated as a genuine
+polychoric correlation (not Pearson or polyserial).
+
+`std.err` is left off: computing polychoric standard errors requires a numerical Hessian,
+and its finite-difference probing routinely pushes the bivariate-normal CDF differences into
+underflow, producing `"NaNs produced"` warnings across most pairs. The `r` estimates
+themselves are unaffected — only that Hessian step is unstable. Significance is instead
+approximated below with the same t-approximation used for Pearson correlations
+(`t = r * sqrt(n-2) / sqrt(1-r^2)`, `df = n-2`); this is a standard practical stand-in
+for polychoric significance testing, not an exact analytic result.
+
+`SUS_2, SUS_4, SUS_6, SUS_8, SUS_10` are the negatively-worded SUS items (Brooke, 1996) — on the
+1–5 raw scale, a *higher* raw score means *worse* usability for these five, opposite every
+other item in the matrix. They're reverse-coded (`6 - score`) before scoring, so every item
+in the resulting matrix points the same "more positive" direction and signs are directly
+comparable across the whole matrix (matches the reverse-coding already applied to the SUS
+composite in the Pearson notebook).
+
+```{r hetcor}
+reverse_items <- c("SUS_2", "SUS_4", "SUS_6", "SUS_8", "SUS_10")
+
+# 1. Select only targeting columns
+item_df <- df[, all_items]
+
+# 2. Invert SUS negative items (1-5 -> 6 - value)
+# 
+for (col in reverse_items) {
+  if (col %in% colnames(item_df)) {
+    item_df[[col]] <- 6 - as.numeric(item_df[[col]])
+  }
+}
+
+# 3. Convert all columns to ordered factors 
+item_df <- as.data.frame(lapply(item_df, ordered))
+
+# 4. Executa a correlação policórica
+het <- polycor::hetcor(item_df, use = "pairwise.complete.obs", std.err = FALSE, ML = FALSE)
+
+```
+
+```{r extract}
+#r_mat <- het$correlations[all_items, all_items]  # enforce construct-block order
+#n_mat <- het$n[all_items, all_items]
+
+# Compute the correct pairwise sample size matrix (N)
+#valid_data <- !is.na(item_df[, all_items])
+#n_mat <- t(valid_data) %*% valid_data
+#dimnames(n_mat) <- dimnames(r_mat)
+
+
+#t_mat <- r_mat * sqrt(n_mat - 2) / sqrt(1 - r_mat^2)
+
+
+#p_raw <- 2 * pt(-abs(t_mat), df = n_mat - 2)
+#p_mat <- matrix(p_raw, nrow = nrow(r_mat), ncol = ncol(r_mat), dimnames = dimnames(r_mat))
+#diag(p_mat) <- NA  # self-correlation (r = 1) makes t = Inf/NaN; not a meaningful p-value anyway
+
+#groups_vec <- item_to_group$group[match(colnames(r_mat), item_to_group$item)]
+
+
+#axis_text_element <- function(colors, angle = 0, hjust = 0.5, vjust = 0.5) {
+#  element_text(angle = angle, hjust = hjust, vjust = vjust, colour = colors, face = "bold")
+#}
+
+
+r_mat <- het$correlations[all_items, all_items]  # enforce construct-block order
+
+# Compute the correct pairwise sample size matrix (N)
+valid_data <- as.matrix(!is.na(item_df[, all_items])) * 1
+n_mat <- t(valid_data) %*% valid_data
+dimnames(n_mat) <- dimnames(r_mat)
+
+# Approximated t-test and p-values
+t_mat <- r_mat * sqrt(n_mat - 2) / sqrt(1 - r_mat^2)
+p_raw <- 2 * pt(-abs(t_mat), df = n_mat - 2)
+p_mat <- matrix(p_raw, nrow = nrow(r_mat), ncol = ncol(r_mat), dimnames = dimnames(r_mat))
+diag(p_mat) <- NA
+
+groups_vec <- item_to_group$group[match(colnames(r_mat), item_to_group$item)]
+
+# Theme helper for axis labels
+axis_text_element <- function(colors, angle = 0, hjust = 0.5, vjust = 0.5) {
+  ggplot2::element_text(angle = angle, hjust = hjust, vjust = vjust, colour = colors, face = "bold")
+}
+
+
+
+
+
+```
+
+## Results — long table
+
+```{r long-table, results = 'asis'}
+long <- as.data.frame(as.table(r_mat)) %>%
+  rename(item1 = Var1, item2 = Var2, r = Freq) %>%
+  filter(as.character(item1) < as.character(item2)) %>%
+  mutate(
+    group1 = item_to_group$group[match(as.character(item1), item_to_group$item)],
+    group2 = item_to_group$group[match(as.character(item2), item_to_group$item)],
+    within_construct = group1 == group2
+  )
+
+# Vectorized lookup via an integer index matrix (guaranteed to return a plain
+# numeric vector, unlike mapply() over factor columns, which can degrade to a
+# list column that write.csv() then can't serialize).
+i_idx <- match(as.character(long$item1), colnames(p_mat))
+j_idx <- match(as.character(long$item2), colnames(p_mat))
+long$p <- p_mat[cbind(i_idx, j_idx)]
+long$n <- n_mat[cbind(i_idx, j_idx)]
+
+long <- long %>% arrange(group1, group2, item1, item2)
+
+kable(long, digits = c(NA, NA, 3, NA, NA, NA, 4, 0))
+```
+
+## Heatmap — construct-block order
+
+```{r heatmap, fig.width = 10, fig.height = 9}
+plot_df <- as.data.frame(as.table(r_mat)) %>%
+  rename(item1 = Var1, item2 = Var2, r = Freq) %>%
+  mutate(item1 = factor(item1, levels = all_items),
+         item2 = factor(item2, levels = rev(all_items)))
+
+# axis label colour per item, in the same order as the axis ticks (x = all_items,
+# y = rev(all_items))
+item_colors_construct <- group_colors[groups_vec]
+
+# a real "construct" legend requires a real aesthetic mapping — this dummy layer
+# is invisible (alpha = 0) but its legend key is forced visible via override.aes,
+# giving a colour-swatch legend for the axis label colours
+construct_legend_df <- data.frame(
+  item1 = factor(all_items[1], levels = levels(plot_df$item1)),
+  item2 = factor(all_items[1], levels = levels(plot_df$item2)),
+  construct = factor(names(group_colors), levels = names(group_colors))
+)
+
+p_heat_construct <- ggplot(plot_df, aes(item1, item2, fill = r)) +
+  geom_tile(color = "grey80") +
+  geom_text(aes(label = sprintf("%.2f", r)), size = 1.6, colour = "grey20") +
+  scale_fill_gradient2(
+    low = "red", mid = "white", high = "blue",
+    midpoint = 0, limits = c(-1, 1), na.value = "grey95"
+  ) +
+  geom_point(data = construct_legend_df, aes(x = item1, y = item2, colour = construct),
+             alpha = 0, inherit.aes = FALSE) +
+  scale_colour_manual(name = "Construct", values = group_colors) +
+  guides(colour = guide_legend(override.aes = list(alpha = 1, size = 4, shape = 15))) +
+  coord_fixed() +
+  theme_minimal() +
+  theme(
+    axis.text.x = axis_text_element(item_colors_construct, angle = 90, hjust = 1, vjust = 0.5),
+    axis.text.y = axis_text_element(rev(item_colors_construct))
+  ) +
+  labs(
+    title = "Polychoric correlations, ordered by construct",
+    x = NULL, y = NULL, fill = "r"
+  )
+
+p_heat_construct
+
+
+# --- save PNG to include in paper ---
+ggsave(
+  filename = file.path(output_dir, "heatmap_construct.png"),
+  plot = p_heat_construct,
+  width = 10,
+  height = 9,
+  dpi = 300
+)
+
+
+
+```
+
+## Hierarchical clustering of items
+
+Distance is `1 - r`: items that move together are placed close together. Now that the
+negatively-worded SUS items are reverse-coded, `r` is directly comparable in sign across the
+whole matrix, so the plain (non-absolute) distance is the right one to use. This is agnostic
+to construct labels; it is purely data-driven, then compared against the intended construct
+assignment.
+
+```{r clustering}
+dist_mat <- as.dist(1 - r_mat)
+hc <- hclust(dist_mat, method = "average")
+
+k <- length(item_groups)
+empirical_cluster <- cutree(hc, k = k)
+
+cat("Empirical cluster (k =", k, ") vs. intended construct:\n")
+table(cluster = empirical_cluster, construct = groups_vec)
+```
+
+```{r dendrogram, fig.width = 11, fig.height = 6}
+plot_dendrogram <- function() {
+  if (requireNamespace("dendextend", quietly = TRUE)) {
+    dend <- as.dendrogram(hc)
+    label_order <- labels(dend)
+    dend <- dendextend::set(dend, "labels_col",
+                             group_colors[groups_vec[match(label_order, colnames(r_mat))]])
+    dend <- dendextend::set(dend, "labels_cex", 0.8)
+    plot(dend, main = "Hierarchical clustering of items (distance = 1 - r)")
+    legend("topright", legend = names(group_colors), fill = group_colors,
+           cex = 0.7, bty = "n")
+  } else {
+    plot(hc, hang = -1, xlab = "", sub = "",
+         main = "Hierarchical clustering of items (distance = 1 - r)")
+    mtext("install.packages('dendextend') for construct-colored labels", side = 1, cex = 0.7)
+  }
+}
+plot_dendrogram()
+
+
+# --- PNG (ideal to include in docs ---
+png(file.path(output_dir, "dendrogram.png"), width = 10, height = 8, units = "in", res = 300)
+plot_dendrogram()
+dev.off()
+
+
+
+```
+
+## Heatmap — reordered by empirical clustering
+
+Same matrix, same values — just reordered by `hc$order` instead of the intended construct
+grouping, so you can visually compare the two structures.
+
+```{r heatmap-clustered, fig.width = 10, fig.height = 9}
+cluster_order <- colnames(r_mat)[hc$order]
+
+plot_df_cluster <- as.data.frame(as.table(r_mat)) %>%
+  rename(item1 = Var1, item2 = Var2, r = Freq) %>%
+  mutate(item1 = factor(item1, levels = cluster_order),
+         item2 = factor(item2, levels = rev(cluster_order)))
+
+item_colors_cluster <- group_colors[groups_vec[match(cluster_order, colnames(r_mat))]]
+
+construct_legend_df_cluster <- data.frame(
+  item1 = factor(cluster_order[1], levels = levels(plot_df_cluster$item1)),
+  item2 = factor(cluster_order[1], levels = levels(plot_df_cluster$item2)),
+  construct = factor(names(group_colors), levels = names(group_colors))
+)
+
+p_heat_cluster <- ggplot(plot_df_cluster, aes(item1, item2, fill = r)) +
+  geom_tile(color = "grey80") +
+  geom_text(aes(label = sprintf("%.2f", r)), size = 1.6, colour = "grey20") +
+  scale_fill_gradient2(
+    low = "red", mid = "white", high = "blue",
+    midpoint = 0, limits = c(-1, 1), na.value = "grey95"
+  ) +
+  geom_point(data = construct_legend_df_cluster, aes(x = item1, y = item2, colour = construct),
+             alpha = 0, inherit.aes = FALSE) +
+  scale_colour_manual(name = "Construct", values = group_colors) +
+  guides(colour = guide_legend(override.aes = list(alpha = 1, size = 4, shape = 15))) +
+  coord_fixed() +
+  theme_minimal() +
+  theme(
+    axis.text.x = axis_text_element(item_colors_cluster, angle = 90, hjust = 1, vjust = 0.5),
+    axis.text.y = axis_text_element(rev(item_colors_cluster))
+  ) +
+  labs(
+    title = "Polychoric correlations, reordered by empirical clustering",
+    x = NULL, y = NULL, fill = "r"
+  )
+
+p_heat_cluster
+
+# --- save PNG to include in paper ---
+ggsave(
+  filename = file.path(output_dir, "heatmap_empirical_cluster.png"),
+  plot = p_heat_cluster,
+  width = 10,
+  height = 9,
+  dpi = 300
+)
+
+
+```
+
+## Save outputs (CSV + PDF)
+
+A raw 31×31 numeric table isn't legible as a printed page, so the PDF renders the two
+heatmaps and the dendrogram (one per page); the exact numbers are in the CSVs alongside it.
+
+```{r save}
+write.csv(r_mat, file.path(output_dir, "polychoric_correlation_matrix_r.csv"))
+write.csv(p_mat, file.path(output_dir, "polychoric_correlation_matrix_p.csv"))
+write.csv(n_mat, file.path(output_dir, "polychoric_correlation_matrix_n.csv"))
+write.csv(long, file.path(output_dir, "polychoric_correlation_long.csv"), row.names = FALSE)
+
+
+
+
+
+pdf(file.path(output_dir, "polychoric_correlation_matrices.pdf"), width = 10, height = 9)
+print(p_heat_construct)
+print(p_heat_cluster)
+plot_dendrogram()
+invisible(dev.off())
+```
+
+Note: this environment has no R installation to execute against, so this file has not been
+run end-to-end — knit it locally (`rmarkdown::render(...)` or the Knit button in RStudio) and
+flag anything that errors. `dendextend` (`install.packages("dendextend")`) is optional, only
+for colored dendrogram labels, and degrades gracefully if missing. The two heatmaps' coloured
+axis labels use `element_text(colour = <vector>)`, which triggers a harmless "Vectorized
+input to element_text() is not officially supported" warning on knit — that's expected and
+can be ignored; it was chosen over `ggtext::element_markdown()` after the latter proved
+unreliable (intermittent literal `<span>` text, and a genuine `gridtext` error on repeat
+runs) in testing.

@@ -1,0 +1,14 @@
+"Item","Primary_Factor","Max_Loading","Loading_F1","Loading_F2","Loading_F3","Communality_h2","Uniqueness_u2","Complexity"
+"VisFaithful","Loading_F1",0.9304,0.9304,-0.0233,-0.2769,0.5914,0.4086,1.1772
+"VisAppropriate","Loading_F1",0.7802,0.7802,-0.1258,0.049,0.554,0.446,1.0601
+"VisSysRetrieveInfo","Loading_F1",0.5789,0.5789,-0.0373,0.2079,0.5014,0.4986,1.263
+"VisRemember","Loading_F1",0.5351,0.5351,0.3286,-0.1426,0.4715,0.5285,1.8281
+"CogSysUseful","Loading_F1",0.4886,0.4886,-0.2214,0.4743,0.5697,0.4303,2.3897
+"VisSimpleUnderstand","Loading_F1",0.4336,0.4336,0.3247,0.0232,0.4811,0.5189,1.86
+"CogTaskComplete","Loading_F1",0.4214,0.4214,0.1266,0.2739,0.5187,0.4813,1.9284
+"VisTrialError","Loading_F1",0.2806,0.2806,0.1778,0.216,0.3362,0.6638,2.6297
+"IntSysEasyStart","Loading_F2",0.9407,-0.0779,0.9407,-0.0273,0.78,0.22,1.0154
+"IntSysSimpleUnderstand","Loading_F2",0.872,-0.0172,0.872,0.0342,0.7761,0.2239,1.0038
+"IntAnalysisConfigure","Loading_F2",0.73,-0.0389,0.73,0.1039,0.5898,0.4102,1.0463
+"CogSysEnjoy","Loading_F3",1.0196,-0.3315,0.1937,1.0196,0.8912,0.1088,1.2877
+"CogSysThinkDeep","Loading_F3",0.6396,0.0536,-0.0256,0.6396,0.4373,0.5627,1.0173

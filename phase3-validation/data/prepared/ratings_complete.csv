@@ -1,0 +1,1063 @@
+Participant,CompletionCode,id,seed,stimulus,E01Expertise,SysCharac,InteractDesc,QGender,QGender[other,QAge2,P026,P088,P4026A,P902,EComIntuit,P022A,P067,P089,P097,P098,P106,EComVis,P027,P060,P064,P301,EComCog,UEQ_1,UEQ_2,UEQ_3,UEQ_4,UEQ_5,UEQ_6,UEQ_7,UEQ_8,SUS_1,SUS_2,SUS_3,SUS_4,SUS_5,SUS_6,SUS_7,SUS_8,SUS_9,SUS_10
+Forum,OK,FOR-0014,1886876404,Power BI,Sometimed,Interactive visualization,For course instruction,G2Man,,AO02,6,5,5,2,,7,5,6,7,6,7,,6,6,6,6,,AO05,AO04,AO04,AO05,AO04,AO05,AO04,AO04,AO04,AO02,AO03,AO01,AO04,AO03,AO03,AO03,AO04,AO04
+Forum,,FOR-0015,2005432789,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0016,316118155,,,,,G4NA,,AO08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0017,2060454778,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,OK,FOR-0018,823070095,Tableau,Every week for a half year,Drag and drop options to build visualizations ,The goal was to quickly generate meaningful visualizations to communicate analysis. The system was chosen because of its ease of use,G1Wom,,AO02,7,7,6,2,,6,7,5,5,5,3,,7,6,5,6,,AO04,AO06,AO04,AO05,AO03,AO03,AO05,AO02,AO03,AO02,AO04,AO01,AO04,AO02,AO04,AO03,AO04,AO02
+Forum,,FOR-0019,166568264,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0020,616346748,,,,,G1Wom,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0021,2022846311,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0022,1243573087,,,,,G1Wom,,AO03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,OK,FOR-0023,113523666,JMP,4 days/week,Dragging and dropping to create visuals fast,Preparing an internal training. Because it's used where I work.,G1Wom,,AO02,7,7,7,2,,7,7,7,7,7,7,,7,7,7,7,,AO07,AO06,AO07,AO06,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO01,AO04,AO01,AO04,AO01,AO05,AO03
+Forum,OK,FOR-0024,675873429,Qlik,everyday,engine,"I am qlik sense developer, admin and specialist",G2Man,,AO02,7,7,7,2,,7,7,7,7,7,7,,7,7,7,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO04,AO05,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO03
+Forum,OK,FOR-0025,886668237,Tableau,a couple times,Slow in the web version,Creating a showcase of my work for an interview. I crated a data pipeline in tableau server that ended in a dashboard,G2Man,,AO02,3,6,6,2,,7,4,6,6,6,6,,6,2,3,6,,AO05,AO03,AO02,AO04,AO06,AO05,AO01,AO01,AO04,AO03,AO03,AO02,AO04,AO02,AO03,AO02,AO05,AO03
+Forum,OK,FOR-0026,1684659697,Tableau,Weekly,Powerful,"Understand student engagement data. I'm experienced with Tableau, so I knew I could create the complex visualisations i wanted without spending hours to do so.",G4NA,,AO08,7,7,7,2,,7,7,6,7,7,6,,7,7,7,7,,AO07,AO06,AO07,AO07,AO05,AO06,AO05,AO05,AO05,AO02,AO05,AO01,AO04,AO01,AO03,AO01,AO05,AO01
+Forum,,FOR-0027,1019363851,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,OK,FOR-0028,853748090,Power BI,Only two times ever,"complex, but familiar. similar like excel",analyze survey results,G2Man,,AO02,5,3,5,2,,5,4,3,3,6,8,2. question: the visuals are as simple to understand as you as a user format them.,2,3,2,2,"I think it didn't make me think deeply about the data, because I had much trouble getting familiar with the particularities of the system, the general handling and the tools.",AO05,AO03,AO04,AO05,AO02,AO03,AO01,AO01,AO02,AO01,AO02,AO04,AO02,AO03,AO02,AO03,AO02,AO05
+Forum,,FOR-0029,472434349,,,,,G1Wom,,AO05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0030,1660002901,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0031,1505108170,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Forum,,FOR-0032,569509779,,,,,G4NA,,AO08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0010,1265358110,Tableau,Durante a disciplina.,A facilidade entre colunas e linhas. ,Vizualizacao de mapas e colunas,G1Wom,,AO01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0011,1067977115,Superset,Occasionally,It has lots of types of charts ready to use.,I was trying to make a presentation using public data. Just like a prototype for a future system.,G2Man,,AO05,3,4,3,2,,5,5,6,4,6,6,,5,4,5,5,,AO03,AO02,AO04,AO03,AO04,AO04,AO05,AO03,AO02,AO03,AO04,AO02,AO04,AO02,AO02,AO03,AO02,AO02
+Student,,STU-0012,934834457,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0013,901031683,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0014,1038124146,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0015,1945587774,,,,,G2Man,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0016,1509533776,[custom research tool],Very often. I need to use it in order to do my research about [research topic].,"A particular characteristic implemented is that the interface can be fully customized, in other words, you can change the number of visualizations, size and position of the visuals, etc.",The goal was to understand [research goal]. I chose this system because it was custom build for this sole purpose.,G2Man,,AO02,5,7,7,2,,7,2,6,5,6,7,,8,6,4,7,,AO07,AO06,AO04,AO06,AO06,AO05,AO05,AO03,AO02,AO01,AO04,AO04,AO05,AO01,AO03,AO01,AO05,AO02
+Student,OK,STU-0017,320709478,Power BI,Weekly,The brushing and linking mechanism,"I used it a lot during my intership, as i created all the reports myself using this tool. I chose it because of its ability to easily connect with Excel and the ease with which i could create charts and personalized metrics",G1Wom,,AO01,4,5,5,2,,7,3,5,6,6,6,,4,6,6,7,,AO06,AO05,AO06,AO05,AO05,AO07,AO04,AO03,AO05,AO02,AO03,AO02,AO04,AO02,AO03,AO02,AO04,AO01
+Student,,STU-0018,1375733593,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0019,1728050693,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0020,1867288919,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0021,1619005980,Tableau,I used it sometimes for a Data Visualization class I am currently taking.,"It was very simple to select the data files, because I could drag them and changing the data type was also easy because I could select a button and the software would do it automatically. Tableau also showed what visualizations you could create with the available data and showed what data types were needed to create the visualizations.",I used Tableau for a university class and the professor chose this software to woek on the class.,G1Wom,,AO01,7,7,7,2,"Since it was part of a class subject, the teacher gave a lot of tutorials on how to use the software.",6,4,6,6,7,6,"On tableau, it was possible to see the data organized in rows and columns but I did not like this visualization very much. If I wanted to see something specific about the data, I would open it in an app like Google Sheets and use the search option to find what I needed.",7,6,6,7,,AO06,AO07,AO07,AO06,AO05,AO05,AO07,AO06,AO05,AO02,AO04,AO03,AO05,AO01,AO03,AO02,AO04,AO03
+Student,OK,STU-0022,1215486064,Tableau,"I use Tableau occasionally. I used it during my data visualization course in the PhD program at [university], and i have also used it professionally to create dashboards and analyze data in previous work projects at [employer]","One characteristic that i remember is how fast and easy it is to create visualizations. Tableau allows users to build charts and dashboards with little effort, although it becomes more challenging when the data is not well structured or when highly customized visualizations are needed","My goal was to explore and visualize datasets as part of assignments in a data visualization course during my PhD program. I used Tableau because it was the tool adopted in the course and supported by the university, and i was already familiar with it from previous professional experience",G2Man,,AO02,7,7,7,2,"I strongly agreed with the first three statements because my most recente experience with the system was during a data visualization course. The datasets were already prepared, so getting started and performing the analysis was straightforward. In previous professional projects, data preparation was sometimes more challenging, but that was not the case in this most recent use.",6,5,7,6,7,7,,6,7,5,6,,AO07,AO06,AO06,AO06,AO05,AO07,AO04,AO03,AO03,AO02,AO04,AO02,AO04,AO02,AO04,AO01,AO04,AO03
+Student,,STU-0023,92678207,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0024,381776477,Gephi,Once a every 5 months ,It made it easy to visualize and customize graphs compared to Python libraries ,The goal was to customize graph visualization and understand the graph,G2Man,,AO02,7,6,5,2,,7,4,6,6,7,6,,5,6,6,6,,AO05,AO02,AO05,AO04,AO06,AO05,AO05,AO05,AO03,AO02,AO04,AO02,AO05,AO03,AO02,AO03,AO04,AO03
+Student,OK,STU-0026,1436526393,Tableau,"I have recently started using it in my graduate studies, specifically in my Data Visualization course. I also use it to create visualizations of datasets related to the research i am currently conducting.","The sorting and categorization of data on the side of the system. This organizes all the data, allowing the user to choose which views they want to generate.",My goal was to explore possible ways to manipulate and present the data i was working with. I chose Tableau because it makes it easy to understand the data and generate a variety of visualizations.,G2Man,,AO01,3,5,4,2,,6,5,6,7,6,5,,5,7,7,7,,AO05,AO04,AO07,AO05,AO06,AO06,AO07,AO06,AO04,AO01,AO03,AO01,AO05,AO02,AO03,AO02,AO04,AO05
+Student,OK,STU-0027,801069651,Tableau,5 days a month,The dashboard,Visual representation of data from different sources. Because my teacher uses the software in her classes.,G2Man,,AO02,6,6,6,2,,7,6,7,7,6,7,,7,7,7,7,"Tableau is a great software, now it is possible to see relations between variables that i couldn't easily see using softwares like Excel.",AO06,AO04,AO06,AO05,AO06,AO07,AO04,AO04,AO04,AO01,AO04,AO01,AO04,AO01,AO03,AO02,AO04,AO03
+Student,OK,STU-0028,1452448240,Tableau,"About three or four times per week, during a period of about 2 months.","Practical, but somewhat limited on specific things.",I was using the system to create visualizations in a module of an academic discipline of data visualization. It was choosed by the professor.,G2Man,,AO02,6,6,6,2,,6,7,7,6,7,7,,5,6,7,5,,AO05,AO07,AO05,AO06,AO05,AO07,AO04,AO03,AO02,AO01,AO05,AO01,AO04,AO01,AO04,AO02,AO04,AO01
+Student,,STU-0029,553222471,,,,,G1Wom,,AO01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0030,542513869,,,,,G2Man,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0031,603528807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0032,978948372,Tableau,I used sometimes in my faculty works,"His visual scheme constructing the charts based on lines and columns, and brands and channels","In the last time, i used it for make a dashboard to analysing administrative financial amendments",G2Man,,AO01,3,6,6,2,"I find the system easy to use and understand, but at first it requires some time to experiment in order to become familiar with it",7,6,6,6,6,6,"I think the visualizations are very good and easy to understand, I just think there could be more customization freedom",7,7,7,7,"I really like Tableau because it makes me think like an information designer; first I think about the data and how to organize it, then I think chart by chart about how to encode them, and finally I still think about how to compose an informative and efficient layout.",AO07,AO06,AO06,AO05,AO06,AO07,AO04,AO01,AO04,AO01,AO04,AO02,AO05,AO02,AO03,AO01,AO04,AO03
+Student,,STU-0033,798375593,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0034,1205869978,Tableau,"On the course, so once a week",the dragable rows and lines,to clean the data and to see the pattern,G1Wom,,AO02,6,2,3,2,,7,3,6,5,7,6,,4,6,5,6,,AO06,AO02,AO04,AO03,AO04,AO05,AO06,AO05,AO03,AO04,AO02,AO04,AO03,AO02,AO01,AO04,AO02,AO04
+Student,,STU-0035,1918858930,Excel,sometimes,It supports lots of common charts types and allows users to turn data into charts quickly.,I use excel to record experiments data and turn it into simple visualizations that can be shared with others. Because it is the widely used and most people can open/edit the file easily.,G2Man,,AO02,,,,,,6,6,6,6,6,6,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0036,612618131,,,,,G1Wom,,AO03,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0037,1339673230,NVivo/SPSS,I use NVivo intensively for about a week every three months.SPSS may once a year for the past three years.,"NVivo is ideal for encoding and visualizing text data while SPSS is comprehensive for statistics covering everthing from basic statistic(mean ,frequency)to advanced one (factor ,neural networks).",The most recent use NVivo case involved encoding transcripts of interviews. For SPSS is correlation analysis/,G1Wom,,AO02,5,6,5,2,,4,7,5,7,4,7,,7,7,3,7,,AO05,AO05,AO05,AO05,AO02,AO02,AO02,AO02,AO03,AO02,AO04,AO01,AO04,AO02,AO04,AO02,AO04,AO02
+Student,OK,STU-0038,1766729781,Tableau,I use it from time to time [in a course].,"drag and drop the variable, grammar of graphics that underly the system (based on rows and columns and other encodings)","it is based on grammar of graphics so it is related to [a course]. the ui is intuitive and the learning curve is low. it also provide a lot of options for data transformation, storyboard, and dashboard.",G2Man,,AO02,5,6,4,2,,6,6,6,6,7,7,,7,6,6,7,,AO07,AO06,AO06,AO06,AO05,AO05,AO03,AO03,AO03,AO02,AO04,AO01,AO04,AO01,AO04,AO01,AO04,AO03
+Student,OK,STU-0039,1200459716,Excel,sometimes,It supports lots of common charts and allow users to turn data into charts easily,I use excel to record experiments data and make some simple visualizations to share with others. Because it is widely used and most people can open/edit it.,G2Man,,AO02,6,6,6,2,,6,6,6,6,6,6,,5,4,5,6,"I mainly use excel for simple data tasks and sharing data with others. However, for advanced visualization analysis  task, I now prefer AI tools because they are more efficient, intutive and enjoyable.",AO05,AO05,AO04,AO06,AO01,AO01,AO01,AO01,AO02,AO03,AO04,AO01,AO04,AO02,AO04,AO02,AO04,AO03
+Student,,STU-0040,321782825,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0041,2131585415,Power BI,"Not often, just for one university project",problem with using PowerBI on MacBook and troubles with log in ,to create a dashboard on social media data ,G2Man,,AO01,3,5,3,2,,5,5,6,5,6,6,,5,2,2,5,,AO05,AO05,AO06,AO04,AO04,AO04,AO04,AO04,AO03,AO03,AO03,AO04,AO04,AO03,AO03,AO03,AO04,AO02
+Student,OK,STU-0042,1294407334,Power BI,I used this system few times for my classes at the university ,It is really easy to use for beginners,Used it for one of my classes to create a dashboard. I chose this system because it was the requirement from the professor.,G1Wom,,AO01,6,6,6,2,,6,7,6,6,6,6,,6,7,7,6,,AO04,AO06,AO07,AO06,AO05,AO05,AO05,AO04,AO05,AO01,AO04,AO01,AO04,AO02,AO04,AO01,AO04,AO02
+Student,,STU-0043,2147083114,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0044,261597258,,,,,G1Wom,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0045,1882719274,Tableau,[for a course],easy to learn as a beginner,[Course-related activity]. Tableau is one of the most popular/well-kown tool,G1Wom,,AO02,6,6,6,2,,6,5,6,6,5,6,,5,5,4,5,,AO05,AO06,AO06,AO06,AO05,AO05,AO06,AO03,AO02,AO02,AO04,AO03,AO03,AO03,AO04,AO01,AO04,AO02
+Student,OK,STU-0046,997895869,Data Studio,Often（twice a month）,simple,We selected the new area for the goal that we wanted to attract the attention of the audiences.,G1Wom,,AO01,7,6,6,2,,6,6,6,6,6,6,,6,6,7,7,,AO07,AO06,AO06,AO06,AO06,AO06,AO05,AO04,AO05,AO05,AO05,AO05,AO05,AO03,AO03,AO03,AO05,AO05
+Student,,STU-0047,1591124402,,,,,G1Wom,,AO01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0048,859134234,Excel,Every week,Excel is easy to use and check simple dataset. Python is very flexible as it can be used with many useful and powerful libraires.,"I want to see the distribution of my data. I like to use python to analyze the data and visualize it because it is flexible, and especially with AI's help, I could freely explore the data. Other commercial softwares are ready to use , but they are also somehow ""fixed"" and require learning how to use their interface and function panels..",G2Man,,AO02,1,2,7,2,"As I filled in both Excel and Python in the blank on the first page, but these statements remind me that I should only fill one. To clarify, I talk about Python in the scoring of these statements.",7,3,6,7,6,6,,6,5,4,7,,AO03,AO01,AO06,AO04,AO04,AO04,AO01,AO01,AO05,AO02,AO02,AO04,AO05,AO01,AO02,AO03,AO03,AO05
+Student,,STU-0049,1611746552,,,,,G1Wom,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0050,401866397,,,,,G2Man,,AO01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0051,932944878,Power BI,I am not currently using these tools.,Many options for integratibg and customizing the views,I primarily used it fo business analytics related to the company´s area of operation,-oth-,Man,AO04,5,5,6,2,"In my answer, I considered both tools: PowerBI and QlikView. However, while PowerBI is quite simple to understand and easy to use, the same cannot be said for QlikView.",6,2,6,6,5,6,"Although I liked the charts provided, I understand that there was a need to be able to visualize the data using more varied types of information Visualization techniques",7,7,6,7,,AO05,AO05,AO05,AO05,AO05,AO05,AO03,AO03,AO05,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Student,OK,STU-0052,284370096,Tableau,"A few times, during a university class","That the system is really good, but still a little hard to use, due to the usability,","Create a few views for a government data, for the final paper of a university class ",G1Wom,,AO02,1,3,3,2,,5,7,6,6,7,6,,5,5,7,6,,AO04,AO02,AO05,AO02,AO06,AO06,AO04,AO04,AO02,AO04,AO01,AO02,AO03,AO03,AO01,AO03,AO02,AO05
+Student,,STU-0053,461687960,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0054,2143177834,Gephi,twice a month,facilities,"The goal was to find communities within a graph, and the system already has several tools that allow for this",G2Man,,AO01,3,4,3,2,,7,6,7,7,7,7,,7,6,5,7,,AO07,AO03,AO07,AO02,AO06,AO06,AO02,AO02,AO05,AO02,AO03,AO01,AO05,AO01,AO02,AO03,AO04,AO03
+Student,,STU-0055,1723849725,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0056,263127770,Data Studio,,,,G2Man,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0057,1255544645,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0058,1595519896,Power BI,as,as,as,G1Wom,,AO04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0060,1915820641,Power BI,I habe used almost every week for 3 years,I was hard to set it properly,"I was to display sales data to the directors of the company, and also to the sales force",G2Man,,AO02,1,2,2,2,,6,7,7,6,6,6,,5,6,6,7,,AO06,AO03,AO06,AO04,AO06,AO06,AO07,AO05,AO03,AO03,AO02,AO01,AO03,AO02,AO01,AO03,AO04,AO04
+Student,,STU-0061,1392485956,,,,,G1Wom,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0062,1820989703,,,,,G1Wom,,AO01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0063,1667120322,Data Studio,Often,Hhhjsjdjdufj,Xjdidoeinejfici,G1Wom,,AO03,3,2,5,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0064,1525435672,Tableau,Sporadically,data processing facilited by tableau prep and intuitive construction and nice results for chats based on geograph maps,data analysis and personal studies involving government data,G2Man,,AO02,4,3,3,2,,5,6,5,5,4,7,More elaborate chats are complex to construct,6,6,6,5,,AO04,AO05,AO06,AO03,AO05,AO06,AO07,AO07,AO04,AO03,AO03,AO04,AO05,AO01,AO02,AO02,AO04,AO04
+Student,,STU-0065,1981313192,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0066,37513846,Streamlit,"I use streamlit about for times per week, mainly for research and for developing my project.",One specific characteristic I remember about Streamlit is that it allows users to create interactive dashboards and data visualization applications directly with Python code.,"My most recent interactions with Streamlit were focused on developing my research project and exploring data through interactive visualizations. I chose Streamlit because it is flexible, easy to integrate with Python, and useful for building visual analytics applications.",G2Man,,AO04,6,6,6,2,"In my recent use of Streamlit, I found the system simple to understand and easy to start using. The configuration process was straightforward for my analysis, including the integration with TensorFlow for machine learning and the development of interactive visualizations for my research project.",7,6,7,6,6,6,"In my recent use of Streamlit, I found the visualizations clear and appropriate for exploring my research data. The system allowed me to test different views and retrieve information from the data in a practical way.",6,6,6,7,"In my recent interactions with Streamlit, I found it useful for developing my research project. The system helped me build interactive visualizations efficiently and allowed me to integrate TensorFlow for machine learning in a practical and relatively easy way. It also supported the analysis and interpretation of the data and the results produced by the model.",AO06,AO06,AO05,AO06,AO05,AO06,AO05,AO05,AO05,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Student,OK,STU-0067,1563334965,Tableau,monthly,The system is easy to use.,I used the system to create a dashboard for my master's research. The free version of the system met my expectations.,G2Man,,AO03,4,5,4,2,,5,4,6,5,6,5,,6,5,5,6,,AO05,AO05,AO06,AO05,AO06,AO06,AO05,AO04,AO04,AO02,AO03,AO03,AO03,AO02,AO04,AO02,AO04,AO03
+Student,,STU-0068,1892925102,,,,,G1Wom,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0069,1142938765,Tableau,,,,G4NA,,AO08,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0070,368349023,Quick Sight,Daily,Ease to build new dashboards,My goal was to have KPIs reported easily everyday in a consistent manner ,G2Man,,AO03,7,7,6,2,,7,5,7,5,7,7,,6,5,5,6,I found quicksight good to have all my KPIs reported. It was not very useful for building new data visualizations as for that I had to ask a team member to include new columns and variables.,AO06,AO06,AO06,AO05,AO02,AO05,AO02,AO02,AO05,AO02,AO05,AO02,AO04,AO01,AO05,AO01,AO04,AO02
+Student,,STU-0071,1898677473,,,,,G2Man,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0072,441373914,,,,,G2Man,,AO02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,,STU-0073,120856490,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Student,OK,STU-0074,1748214382,Power BI,weekly,intuitive,interactions about data and enviroment ,G2Man,,AO03,7,7,5,2,,6,5,7,6,6,6,,6,6,6,7,,AO05,AO06,AO07,AO06,AO06,AO06,AO05,AO02,AO04,AO03,AO04,AO03,AO04,AO02,AO05,AO03,AO04,AO02
+Prolific,,PRO-0003,1769973087,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0004,717088209,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0005,402990863,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0006,469623414,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0007,716877815,Power BI,I use it everyday because it is a part of my job,Easy to navigate,I use Power Bi to illustrate and create dashboard for my customer and my team. It's easy for everyone to use and interact with the data so they can have a overview of what going on,G2Man,,AO01,6,5,6,2,,7,6,6,7,6,6,,6,5,5,7,,AO06,AO04,AO06,AO06,AO04,AO05,AO06,AO03,AO04,AO02,AO04,AO01,AO04,AO01,AO04,AO01,AO05,AO03
+Prolific,C1LYP9HZ,PRO-0008,733189687,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0009,1487548173,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0010,1920299883,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0011,666641461,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0012,983372660,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0013,1563444732,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0014,1845262647,Power BI,i was working with it for data analysis so maybe a 2 times per week for small project ,the customizable dashboard which make it easy to make the visualization as you planned before ,to visualize a project with ease and to able to link it with my Microsoft account so have easy access ,G2Man,,AO02,6,6,5,2,,6,5,6,6,6,6,,6,6,6,7,,AO04,AO06,AO06,AO06,AO04,AO04,AO05,AO06,AO03,AO02,AO04,AO03,AO04,AO04,AO02,AO03,AO04,AO04
+Prolific,C15VDVOL,PRO-0015,1211989598,Power BI,Once every two months,"Importing data from excel and making dashboards, like a global graphic visualization of the data","I was watching a power bi tutorial about making digital marketing dashboards, I wanted to learn how to improve the way I present data. ",G1Wom,,AO02,4,4,3,2,,3,5,5,4,5,5,,5,4,5,5,,AO06,AO04,AO06,AO04,AO05,AO07,AO05,AO05,AO04,AO02,AO03,AO04,AO04,AO02,AO03,AO03,AO04,AO03
+Prolific,C15VDVOL,PRO-0016,1335867889,Power BI,Almost everyday,"I do remember how to update it and send it to the cloud, which is the most common thing that I do",I use it to keep track of projects that need to be created and assigned,G2Man,,AO02,3,3,5,2,It is a bit hard to understand how it works in the beggining.,5,5,5,7,7,6,,7,6,7,7,It helps me to find all projects that were created and those who were not created,AO06,AO02,AO07,AO03,AO05,AO05,AO06,AO05,AO04,AO04,AO05,AO04,AO04,AO02,AO01,AO04,AO02,AO03
+Prolific,,PRO-0017,1752931275,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0018,739010156,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0019,762301917,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0020,1518385343,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0021,707495196,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0022,994653189,Tableau,Every few months,VizQL engine,Tableau is more customisable than other alternatives like Power BI and offers good visualisations,G1Wom,,AO02,2,2,2,2,,3,3,3,7,6,6,,5,6,7,7,,AO03,AO02,AO05,AO02,AO05,AO06,AO05,AO05,AO04,AO04,AO02,AO02,AO04,AO02,AO02,AO04,AO03,AO05
+Prolific,C1LYP9HZ,PRO-0023,1389052901,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0024,731340093,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0025,1782192555,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0026,270385247,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0027,1668917385,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0028,553357237,Gephi,"Gephi more often now, becouse I used this programm to create visualization to my scientic research","Ther is Nodes, edges and edges waight . Gephi build networks visualisation I can used statistic to calculated the data moderatiry ",As am archaeologist and I wanted to visualise the recourrence of artifacts across time and geographic range ,G1Wom,,AO03,5,5,6,2,,6,6,5,5,6,6,"For me, visualization was simple and easy to understand, but for other people, it was not. ",7,7,7,7,,AO07,AO02,AO06,AO06,AO07,AO07,AO07,AO05,AO05,AO03,AO03,AO02,AO04,AO02,AO01,AO03,AO03,AO05
+Prolific,C1LYP9HZ,PRO-0029,235586798,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0030,1146366304,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0031,505814978,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0032,1320981266,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0033,321738986,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0034,178077602,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0035,1904393829,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0036,1538136760,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0037,456879119,Power BI,I use power BI mostly every single day at my job.,I remember about collapsible visualizations and fields panes that are located on right side of the screen,My goals was to be able on building the automated weekly sales performance dashboard to help my team and with power BI i was able to do good intergration,G1Wom,,AO03,6,6,7,2,,6,6,7,7,7,6,The chart are very clear and easy to read,7,7,8,7, ,AO07,AO07,AO06,AO06,AO06,AO07,AO06,AO06,AO04,AO05,AO04,AO02,AO04,AO03,AO04,AO04,AO05,AO02
+Prolific,C1LYP9HZ,PRO-0038,1499330810,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0039,848893379,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0040,164794053,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0041,883817954,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0042,1122402820,Power BI,I use power BI everyday for work,Interactive dashboards ang visual data reports,"My goal was to analyze the recent performance data into visual charts, and i picked Power BI for its super friendly tools and integration",G1Wom,,AO01,6,6,6,2,,7,6,5,7,7,7,,6,6,7,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01
+Prolific,,PRO-0043,1119149942,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0044,1564399477,Data Studio,every day,drag and drop charts and dashboards,i use data studio to create a report with charts because it connects easily to google sheets and is free,G2Man,,AO02,7,7,6,2,,7,6,7,6,7,7,,7,7,6,7,,AO07,AO07,AO06,AO07,AO07,AO07,AO06,AO07,AO05,AO01,AO01,AO02,AO05,AO01,AO04,AO01,AO05,AO01
+Prolific,,PRO-0045,1480909606,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0046,1615005964,Tableau,"I used to use it like at least three times a week, but recently haven't used in a month.",The drag and drop feature is quite unique characteristic of tableau that i could remember now.,"I was learning some features for visualizations with Tableau, so i was following a tutorial and using Tableau at the same time.",G1Wom,,AO02,6,6,6,2,,6,5,6,6,6,6,,6,6,6,6,"At some points there were hiccups, but they have great tutorials, which made it easy to continue.",AO06,AO06,AO06,AO06,AO06,AO06,AO06,AO05,AO04,AO02,AO04,AO01,AO04,AO02,AO04,AO01,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0047,1644916521,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0048,1412637454,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0049,487324099,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0050,392254435,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0051,82360333,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0052,890274591,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0053,1909958936,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0054,1861762147,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0055,1093865409,Power BI,once every 2 weeks for my report,"cheap, like, its very cheap and somehow can bring all the function any other platform have",to generate a data for me to use in my review with my team about our performance,G2Man,,AO02,6,5,5,2,,6,6,4,6,7,7,,6,5,4,6,,AO07,AO07,AO07,AO05,AO06,AO03,AO01,AO05,AO02,AO01,AO04,AO02,AO05,AO01,AO03,AO01,AO03,AO04
+Prolific,C1LYP9HZ,PRO-0056,859931654,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0057,698202016,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0058,400273160,Tally ERP,I have used Tally very frequently in my official work time daily,Tally ERP is very good for processing fiancial data as well as payroll processing.,My most usage of tally was for preparing my financials and going through the fundamentals of accounting data. I have used it for getting the reports for my finance presentation.,G2Man,,AO03,7,6,7,2,,7,7,7,7,6,6,,7,6,7,7,,AO07,AO06,AO07,AO07,AO06,AO07,AO04,AO05,AO05,AO03,AO05,AO05,AO05,AO02,AO04,AO03,AO05,AO02
+Prolific,C15VDVOL,PRO-0059,1315070696,Tableau,I use it a few times every month for data analysis projects.,It drag-and-drop interface for creating interactive dashboards and visualizations.,The goal of my recent interaction was to analyze sales data and build visual charts. I chose Tableau because of its powerful data connection and rich visualization capabilities.,G2Man,,AO01,6,6,5,2,,6,5,7,7,6,6,,6,7,7,7,,AO06,AO05,AO07,AO06,AO05,AO03,AO04,AO05,AO05,AO03,AO03,AO03,AO04,AO02,AO04,AO03,AO04,AO05
+Prolific,C15VDVOL,PRO-0060,874906764,Power BI,I use Power BI a few times a month to analyze data and build visual dashboards.,I remember the drag and drop report canvas alongside the Visualizations and Fields panes on the right side.,My goal was to transform business data and build an interactive dashboard to track some key metrics. I chose Power BI because of its seamless data integration and easy visual formatting features. ,G2Man,,AO03,7,7,6,2,Power BI desktop is fast to set up and connecting to basic data sources like Excel or SQL databases takes very little time to configure. The interface is also well organized and this makes it simple to understand how to load datasets and immediately drag fields into visual charts.,7,6,7,7,7,6,The default visuals in Power BI represent datasets accurately and make key trends easy to interpret at a glance. The interactive cross-filtering makes it safe to experiment with different slice combinations and test hypotheses quickly. ,7,7,7,6,"Power BI makes it straightforward to explore datasets visually and the interactive cross-filtering on dashboards helps uncover insights quickly without having to go though complex manual setups. 
+The layout with the canvas, visualization pane and the field list makes building reports very intuitive and allows smooth data analysis workflows. ",AO07,AO07,AO07,AO07,AO06,AO07,AO07,AO06,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01
+Prolific,C15VDVOL,PRO-0061,1359875422,Power BI,"I use it occasionally, about once or twice a month.",It has interactive dashboards and a Visualizations panel for creating charts.,I used Power BI to analyze sales data and create dashboards for reports. I chose it because it makes it easy to build interactive visualizations and share insights.,G2Man,,AO03,6,6,6,2,,6,6,6,6,6,6,,6,6,6,6,,AO06,AO06,AO06,AO06,AO06,AO06,AO06,AO06,AO04,AO03,AO04,AO03,AO04,AO03,AO04,AO03,AO04,AO04
+Prolific,C15VDVOL,PRO-0062,1403896802,Power BI,"a few times a year , at work",easy to use if you are used to microsoft cloud products,create a report from data contained on sharepoint lists. We choose power BI beacuse it's easily connected to our Microsoft Sharepoint Online tenant,G2Man,,AO03,6,6,6,2,,6,5,6,6,5,7,,5,5,4,6,,AO05,AO06,AO05,AO05,AO04,AO05,AO02,AO02,AO03,AO03,AO04,AO02,AO04,AO02,AO03,AO02,AO03,AO03
+Prolific,C15VDVOL,PRO-0063,874843302,Power BI,I use it 2-3 times a week,Power BI helps to understand the data easily with some charts and graphs.,My goal was to create a dashboard for my customer behavioural analysis project. I choose PowerBI because it is Free and easy to use and also it offers powerful visualisation.,G2Man,,AO01,6,6,6,2,,6,5,5,7,6,6,,7,7,7,7,,AO06,AO06,AO06,AO06,AO07,AO07,AO06,AO06,AO05,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO03
+Prolific,C15VDVOL,PRO-0064,900224914,Tableau,I use Tableau on a weekly basis for regular reporting and data exploration.,The drag-and-drop interface for building dimensions and measure onto shelves.,My goal was to create an interactive sales dashboard to analyze regional performance trends. I chose Tableau because of its powerful visual analytics capabilities and seamless data integration.,G2Man,,AO02,7,7,7,2,,7,7,7,7,7,7,,7,7,7,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01
+Prolific,C15VDVOL,PRO-0065,1124991437,Excel,Data analysis,Pivot tables,To organize and visualize data,G2Man,,AO04,6,6,6,2,,7,6,7,5,6,7,,6,6,6,7,,AO07,AO07,AO06,AO06,AO07,AO05,AO03,AO02,AO04,AO02,AO05,AO01,AO04,AO02,AO05,AO02,AO05,AO03
+Prolific,C15VDVOL,PRO-0066,1140281166,Tableau,Weekly,Drag and drop dashboard creation,I use it to analyze data and to crate dashboard ,G1Wom,,AO02,5,5,6,2,,6,6,6,7,6,6,,7,6,7,6,,AO07,AO05,AO07,AO05,AO07,AO06,AO05,AO05,AO05,AO01,AO04,AO03,AO05,AO01,AO04,AO04,AO04,AO04
+Prolific,C1LYP9HZ,PRO-0067,1026152496,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0068,746719257,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0069,1752238046,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0070,1396563841,Power BI,I tend to use it weekly,"I don't really know what this question means - if it means a specific part of the software, then for example a waterfall chart that shows how things move through categories. If it's more general then I guess star schema",The goal was to use CRM data to assess the sales team performance,G2Man,,AO02,4,4,5,2,,6,6,6,5,5,6,,5,5,5,6,,AO03,AO03,AO03,AO03,AO04,AO05,AO03,AO04,AO03,AO02,AO03,AO02,AO04,AO03,AO02,AO03,AO03,AO03
+Prolific,C1LYP9HZ,PRO-0071,1407278257,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0072,410211385,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0073,678835810,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0074,1314575120,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0075,430979986,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0076,1034355264,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0077,1794144396,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0078,1228182047,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0079,1040031950,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0080,1883087916,Power BI,Once in a Month,Power Query Editor,I wanted to map my CRM data using power BI for visualization and client conversion rate.,G1Wom,,AO02,5,4,6,2,,7,6,5,7,6,6,,5,6,6,6,,AO06,AO04,AO06,AO02,AO03,AO05,AO06,AO04,AO04,AO03,AO03,AO02,AO04,AO02,AO04,AO02,AO04,AO04
+Prolific,,PRO-0081,1790223447,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0082,248072322,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0083,1741448893,Power BI,I use it occasionally for data analysis and creating reports.,It has interactive dashboards and customizable visualizations.,My goal was to analyze data and create clear visual reports. I chose power Bl because it makes it easier to understand data through charts and dashboards.,G2Man,,AO03,5,6,5,2,"The interface was generally easy to navigate, although some configuration options required a little time to understand.",5,6,5,6,6,6,The system was helpful for exploring data and creating clear visual reports. The dashboards and charts made it easier to understand patterns in the data.,6,5,5,6,Power BI made data exploration easier and helped me analyze information more effectively through interactive visuals.,AO06,AO05,AO06,AO06,AO04,AO05,AO04,AO04,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO03
+Prolific,C15VDVOL,PRO-0084,688255865,Quick Sight,I use it moderately ,It helps me analyze data data with charts quickly.,I used QuickSight to view a dashboard and analyze data trends. I choose it because it makes charts and reports easy to understand.,G2Man,,AO01,4,6,5,2,,5,4,4,5,6,5,,5,7,6,7,,AO06,AO05,AO05,AO04,AO06,AO06,AO05,AO06,AO05,AO04,AO04,AO04,AO03,AO03,AO04,AO03,AO04,AO05
+Prolific,,PRO-0085,827545322,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0086,1318990432,Power BI,I use Power BI 2 to 3 times a week.,I really like how clicking on a single bar chart automatically filters and update all the other visuals on the page.,"My main goal was to turn raw spreadsheet data into a clean, interactive dashboard. I picked Power BI because it is fast to set up and handles multiple data sources easily.",G2Man,,AO01,5,5,6,2,"Initial setup felt a bit complex at first, but using the tool become easy and smooth once I got familiar with it.",6,6,5,7,7,7,The built-in chart types was good and made my data interpretation accurate.,6,6,5,7,"The overall interaction was smooth, and the dynamic visual features helped me analyze the metrics quickly.",AO06,AO04,AO06,AO05,AO04,AO05,AO05,AO05,AO05,AO02,AO04,AO02,AO04,AO01,AO04,AO02,AO04,AO02
+Prolific,,PRO-0087,1055126424,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0088,698819494,Power BI,I use Power BI occasionally as I am currently learning it.,it has a yellow logo and panel for visualization on the right side,My goal was to learn data visualization as part of my career transitions from biology to data analysis. I choose learn Power BI because it is an essential industry standard tool.,G1Wom,,AO02,5,5,6,2,,5,5,5,5,6,6,,6,6,7,6,,AO05,AO03,AO04,AO04,AO05,AO05,AO05,AO06,AO03,AO02,AO03,AO03,AO04,AO02,AO03,AO02,AO02,AO04
+Prolific,C1LYP9HZ,PRO-0089,881548805,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0090,998532056,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0091,918544591,Tableau,I use Tableau on a weekly basis to build and analyze data dashboards.,The drag and drop shelf system for Dimensions and Measures on the left panel.,My goal was to create interactive visual reports to analyze trends and key metrics.  I chose Tableau because of its powerful data visualization capabilities and case of connecting to multiple data sources.,G1Wom,,AO02,6,7,7,2,,6,6,7,7,6,7,,6,7,7,7,,AO07,AO06,AO07,AO07,AO07,AO07,AO06,AO07,AO05,AO04,AO04,AO05,AO05,AO04,AO04,AO05,AO05,AO05
+Prolific,C15VDVOL,PRO-0092,553805631,Power BI,I use Power BI several times a week.,I remember its interactive dashboards and visual charts.,My goal was to review and understand data through dashboards and visual reports. I chose Power BI because it makes complex data easier to analyze and understand.,G2Man,,AO02,6,6,5,2,,6,5,6,6,6,6,,6,6,5,6,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO02,AO05,AO02,AO04,AO02,AO05,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0093,259671744,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0094,1114603431,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0095,2110824156,Power BI,a few times a month,it is easy to create interactive dashboards and charts,to analyze data and create clear visual reports ,G2Man,,AO02,6,6,6,2,,6,6,6,6,6,6,,6,7,6,7,,AO06,AO06,AO06,AO06,AO05,AO05,AO05,AO05,AO04,AO02,AO04,AO02,AO04,AO02,AO03,AO02,AO04,AO03
+Prolific,C15VDVOL,PRO-0096,1803798191,Power BI,Several times in a week,I like the cloud sharing service as it allows easy report distribution via browsers,I wanted to compare the quarterly spending against the actual annual budget.  I chose it because of variance analysis as it's easy to setup and present it.,G1Wom,,AO02,5,4,5,2,,5,4,6,6,6,5,,6,6,5,7,,AO06,AO05,AO06,AO05,AO06,AO06,AO02,AO06,AO02,AO04,AO03,AO03,AO02,AO03,AO02,AO04,AO02,AO02
+Prolific,,PRO-0097,988421177,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0098,160325607,Power BI,I use it on a daily basis for my data science workflows.,Its highly interactive drag-and-drop canvas and the robust DAX formula engine for building custom metrics.,"My recent goal was to visualize live market chart setups and evaluate digital transaction trends. I chose Power BI because it handles complex datasets flawlessly and allows for highly interactive, real-time drill-downs.",G2Man,,AO02,6,6,6,2,,6,6,6,6,6,7,,7,6,6,7,,AO06,AO05,AO07,AO06,AO05,AO06,AO06,AO06,AO05,AO02,AO04,AO01,AO05,AO02,AO03,AO02,AO05,AO04
+Prolific,C1LYP9HZ,PRO-0099,1898874151,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0100,179963133,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0101,596948835,Tableau,I use Tableau two to three times in a week for data reports.,Tableau has an easy drag and drop interface with interactive charts.,My goal was to create sales trend report. I choose Tableau because Tableau connects easily to large datasets.,G2Man,,AO02,5,6,6,2,,5,5,5,6,7,7,,6,5,6,7,,AO06,AO06,AO06,AO07,AO07,AO06,AO06,AO06,AO04,AO02,AO05,AO01,AO05,AO02,AO05,AO01,AO05,AO01
+Prolific,C15VDVOL,PRO-0102,381177351,Power BI,Weekly,it connects to Excel and other data sources ,it was to create a dashboard to visualise production and operation data so I could identify trends and improve decision making,G1Wom,,AO02,6,6,5,2,,6,6,7,6,6,6,,7,7,6,7,,AO07,AO04,AO07,AO06,AO07,AO07,AO06,AO04,AO05,AO02,AO04,AO03,AO04,AO02,AO03,AO02,AO04,AO04
+Prolific,C1LYP9HZ,PRO-0103,791531468,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0104,1137276955,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0105,648389670,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0106,800378525,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0107,896039418,Power BI,a few times a month,It was interactive dashboards and charts,My goal was to analyze data and create clear visual reports.  I chose Power BI because it is easy to use and organize data.,G2Man,,AO02,5,6,5,2,"Getting started was fairly easy, but some set up required extra effort",5,5,7,6,6,6,The visualization were generally clear and easy to understand. ,6,5,6,7,Power BI helped me complete my analysis and better understand the data.,AO06,AO06,AO07,AO06,AO05,AO06,AO05,AO05,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO03
+Prolific,C1LYP9HZ,PRO-0108,787928707,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0109,560750213,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0110,1704642788,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0111,432092366,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0112,797906848,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0113,1576002137,Power BI,I use it for the visualisation of market trends,interactive dashboards as well as real-time data updates,I use it for visualising market trends. I choose it because of its seamless Excel integration.,G2Man,,AO03,5,5,5,2,,6,6,6,6,6,6,,6,6,6,6,,AO07,AO06,AO07,AO06,AO06,AO07,AO06,AO06,AO04,AO02,AO04,AO03,AO04,AO02,AO03,AO02,AO04,AO03
+Prolific,,PRO-0114,672684556,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0115,1149513506,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0116,477429369,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0117,1869808049,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0118,1089403654,Tableau,I used it a few times for academic projetcs during my Information Systems classes.,"I remember it's intuitive drag-and-drop interface and the Marks card, which made it very easy to build custom graphs.",My most recent interaction was completing a data visualization project for my fundamentals of information systems class. I chose Tableau because it handles complex data easily without needing extensive coding.,G2Man,,AO01,6,6,6,2,,6,7,6,6,6,7,,7,7,6,6,,AO06,AO06,AO06,AO06,AO05,AO06,AO06,AO06,AO04,AO01,AO04,AO02,AO05,AO01,AO04,AO01,AO05,AO03
+Prolific,C15VDVOL,PRO-0119,1714315212,Power BI,Once a month,Create interactive visual graphics from data,I am a public servant who works with a lot of data and sometimes need to present that data into small understandable chucks for the public. My most recent interaction was to use our development applications to see which markets were most taken up and were the areas proposed for development in alignment with policy,G1Wom,,AO02,6,6,6,2,,7,7,7,7,7,7,,7,7,7,7,,AO07,AO06,AO07,AO06,AO07,AO07,AO06,AO06,AO05,AO02,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01
+Prolific,C1LYP9HZ,PRO-0120,1043273297,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0121,1205881084,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0122,457056357,Power BI,I use it monthly,Data regression,I was trying to extract some info for my econometry class. It was a set of data and I used regression,G2Man,,AO03,3,4,2,2,,4,5,4,5,6,6,,5,4,3,6,,AO04,AO03,AO05,AO04,AO03,AO04,AO02,AO03,AO02,AO03,AO02,AO02,AO03,AO02,AO01,AO04,AO03,AO04
+Prolific,C15VDVOL,PRO-0123,1660664264,Power BI,i use power bi 4-5 times a week,interractive visualizations pane on the right side,my goal is to create an interactive KPI dashboard,G2Man,,AO02,3,2,2,2,,5,5,4,5,4,5,,4,3,5,5,,AO05,AO03,AO03,AO02,AO01,AO02,AO02,AO04,AO03,AO04,AO03,AO03,AO03,AO04,AO03,AO03,AO02,AO04
+Prolific,C15VDVOL,PRO-0124,1583341806,Power BI,Sometimes,Connects to Excel quite easily and shapes data really nice especially with the drag and drop charts,I was creating a report on HR analytics and I needed to generate multiple charts and I used it because the managers didn't want super wordy content,G1Wom,,AO02,3,5,3,2,,7,5,7,7,6,6,,7,5,3,6,,AO05,AO04,AO07,AO03,AO06,AO05,AO04,AO06,AO02,AO04,AO03,AO04,AO05,AO02,AO01,AO03,AO02,AO05
+Prolific,C1LYP9HZ,PRO-0125,232753349,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0126,557773695,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0127,199996010,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0128,1900990668,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0129,2136415170,Power BI,I use it weekly ,Accurate modeling for management data,"The goal was to transform management data into visually striking data for the end user, and power bi was chosen by the company due to its proven track record with this type of task.",G2Man,,AO02,5,5,5,2,,6,6,7,7,7,7,,7,7,7,7,,AO07,AO06,AO07,AO06,AO05,AO06,AO06,AO06,AO04,AO02,AO04,AO04,AO04,AO02,AO02,AO03,AO04,AO02
+Prolific,C15VDVOL,PRO-0130,2126977592,Power BI,"occassionally, when needed",interactive dashboard and visual reports.,i used power BI to analyze data and create visual reports for easier understanding.,G1Wom,,AO02,5,5,5,2,,5,5,6,5,5,6,,5,4,5,4,,AO05,AO05,AO06,AO05,AO04,AO05,AO06,AO06,AO03,AO04,AO03,AO04,AO04,AO03,AO02,AO03,AO03,AO05
+Prolific,,PRO-0131,147444322,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0132,195680715,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0133,85274297,Power BI,few times a month for data analysis and creating reports,many different charts and graph options for presenting data,My goal is to analyze data and create reports. I chose Power BI because it's straightforward for organizing data.,G2Man,,AO01,6,6,7,2,,6,6,6,5,6,7,,5,6,4,6,,AO07,AO06,AO07,AO07,AO04,AO05,AO05,AO06,AO04,AO04,AO05,AO02,AO04,AO01,AO04,AO02,AO04,AO03
+Prolific,C1LYP9HZ,PRO-0134,300602192,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0135,1447906195,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0136,894914305,Power BI,I just start learn power BI around 2 months and i use power BI atleast 1 day per week,Power quesry to do a data transformation like clean and merge data from many data source,"my goal in most recent interaction is to make a dashboard about my analysis from a dataset i have. The reason i'm using Power BI is because many companies in my country (Indonesia) use Power BI as a main tools to be a data analyst, so if i want to apply for a data analyst job, i must learn about that. ",G2Man,,AO01,6,6,5,2,"From my experience, the system is easy to learn, but like what i said before, i still need to work with some of the tools.",7,7,7,7,7,7,All of this i strongly agree because they are very uselful to help me visualize and interpret the result i got.,6,6,7,5,"So overall i like the UI and the tools i used, but because i just learn it in 2 months, i still don't understand about some of the tools. So the useful section slightly lower because of that/",AO06,AO05,AO06,AO05,AO07,AO07,AO04,AO05,AO05,AO02,AO04,AO02,AO04,AO01,AO03,AO01,AO03,AO03
+Prolific,C1LYP9HZ,PRO-0137,2073319126,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0138,1930997507,Data Studio,I use data studio regularly ,It is easy to put together data on Google sheets,My recent interaction with Google studio was was when j created a report with charts. I chose data studio because it is easily accessible and cost effective  and also works well with Google tools.,G2Man,,AO02,7,6,6,2,,7,7,7,7,7,7,,7,7,7,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO02,AO04,AO01,AO04,AO04,AO03,AO02
+Prolific,C1LYP9HZ,PRO-0139,1071493631,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0140,133555356,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0141,1657407116,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0142,445775021,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0143,1905421237,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0144,390172768,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0145,1530389380,Power BI,Weekly basis typically two to three times per week,"The DAX formula language which is both powerful and frustrating, as a minor syntax error often produce cryptic error messages that require significant troubleshooting","The goal was to build a sales performance dashboard to track regional revenue against quarterly targets. I choose PowerBi because it offers seamless integration with our existing Excel data sources and Microsoft teams environment, allowing for easy sharing and collaboration with my colleagues",G2Man,,AO03,5,6,6,2,,6,6,6,6,6,7,"The default chart types were good, but adjusting formatting details like axis and tooltips took more clicks than i would have liked",7,6,7,7,"The report loaded quickly, but the relationship view took extra time to configure",AO06,AO05,AO06,AO06,AO07,AO07,AO07,AO06,AO05,AO02,AO04,AO02,AO04,AO02,AO04,AO01,AO05,AO03
+Prolific,C15VDVOL,PRO-0146,539459298,Power BI,I use power bi several times a week,I remember the interactive dashboards and reports,"I chose power to review and analyze data through interactive dashboards for one of our shippingportal project, i chose it because it makes complex data easier to understand",G2Man,,AO03,6,6,4,2,,6,2,5,4,6,6,,6,7,5,7,,AO06,AO05,AO07,AO07,AO07,AO07,AO07,AO05,AO04,AO01,AO04,AO03,AO04,AO01,AO03,AO01,AO04,AO01
+Prolific,C15VDVOL,PRO-0147,1647639038,Excel,Once a week,Easy to use ,"I chose it because is simple, my goal was to visualize the money I gained from different platforms",G1Wom,,AO03,6,7,7,2,,7,5,7,6,7,7,,6,6,4,7,,AO06,AO07,AO06,AO07,AO04,AO04,AO04,AO04,AO04,AO01,AO05,AO01,AO04,AO01,AO04,AO01,AO04,AO02
+Prolific,C15VDVOL,PRO-0148,1654473888,Power BI,i use it almost everday,"the system makes it easy to analyze and organize data, which makes things easier when you want to make a report.","I was running some samples so after running the samples , i record data to make graph for results interpretation ,so i used it to make charts for easy interpretation of data.",G1Wom,,AO02,7,6,6,2,,6,6,6,7,6,7,,5,6,4,6,,AO06,AO06,AO06,AO07,AO05,AO07,AO06,AO06,AO04,AO02,AO04,AO02,AO03,AO03,AO04,AO03,AO04,AO04
+Prolific,C1LYP9HZ,PRO-0149,2100901971,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0150,273798859,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0151,595514237,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0152,771686402,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0153,1927568479,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0154,1505265313,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0155,1345857013,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0156,1046282114,Power BI,seldomly,Power BI's interface and the tools and how related they are to excel,My most recent interaction was visualize student data to evaluate the overall performance of students in a particular over a 5 years,G2Man,,AO02,5,6,6,2,,7,5,6,6,6,6,,6,6,7,6,,AO05,AO05,AO05,AO05,AO03,AO03,AO04,AO04,AO04,AO02,AO05,AO02,AO04,AO02,AO03,AO02,AO04,AO02
+Prolific,,PRO-0157,2056370694,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0158,1388794190,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0159,1355940705,Data Studio,i rarely use Data Studio,the ability to filter unorganized data,"i used data studio to organize data related to a job accounting project. Specifically, i used it to group the data and then view grapghs much more intuitively.",G2Man,,AO02,5,5,6,2,,5,5,5,5,5,5,,5,5,5,5,,AO05,AO04,AO06,AO06,AO06,AO06,AO05,AO04,AO04,AO02,AO04,AO03,AO04,AO02,AO04,AO02,AO04,AO03
+Prolific,,PRO-0160,1493827285,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0161,7549886,Power BI,"I use PowerBI several times a weel, mostly for data analysis and reporting to the team.",create measures using DAX,"analyse data for s simulation system, and create visulization on data collected from simulation. I use Power BI because it is easy to explore data, and the final dashboard is interactive",G2Man,,AO02,7,6,6,2,,7,6,7,6,6,7,,7,6,6,7,,AO07,AO06,AO07,AO06,AO05,AO06,AO04,AO05,AO05,AO02,AO05,AO01,AO04,AO02,AO04,AO01,AO05,AO03
+Prolific,C1LYP9HZ,PRO-0162,1035262133,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0163,206304294,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0164,1002747943,Tableau,At least twice per month.,The drag and drop feature.,To perform statistical analysis and presentations of my scientific data after laboratory experiments.,G2Man,,AO02,6,7,6,2,,6,5,6,6,6,6,,6,7,7,6,,AO06,AO06,AO07,AO06,AO06,AO06,AO04,AO05,AO04,AO01,AO04,AO02,AO04,AO01,AO03,AO01,AO04,AO03
+Prolific,C15VDVOL,PRO-0165,1066929673,Qlik,about 3 times a week,analytic platform,analyze data of beneficiaries in our organization,G2Man,,AO03,5,6,4,2,,6,6,7,6,6,7,,7,6,7,6,,AO06,AO05,AO06,AO07,AO01,AO06,AO06,AO04,AO04,AO02,AO05,AO05,AO04,AO04,AO05,AO03,AO04,AO04
+Prolific,,PRO-0166,328593336,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0167,2099036116,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0168,892763405,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0194,1069222464,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0195,955312761,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0196,1917490764,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0197,1577477179,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0198,111469931,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0199,892806383,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0200,529791368,Quick Sight,I use it twice a week,"It was fast effective and efficient, reliable and quick",I chose quick systems because it is reliable and fast i can rely on it to get better system experience ,G1Wom,,AO02,6,6,7,2,,7,6,6,7,6,7,,7,1,6,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO01,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO05
+Prolific,C1LYP9HZ,PRO-0201,1995042841,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0202,1588749541,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0203,1815598325,Tableau,I used tableau for data analysis and interactive dashboard in daily work,the specific characterstic i remember is its interactive dashboard and easy use of visual features,my goal is like two analyze data of 20 years data and ceate a dashboard to compare it metrics so for that i use tableau to make quick visualization,G2Man,,AO01,6,7,4,2,,6,6,6,7,7,7,tableau provides information which is easy to understand we can easily explore and with clear interactive visuvalization it is provided and also we can easily identify trends,7,6,6,7,i like the flexibilty by tableau like we can explore different aspects of data analytics,AO07,AO07,AO07,AO07,AO06,AO07,AO07,AO07,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01
+Prolific,C1LYP9HZ,PRO-0204,1936311020,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0205,552283477,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0206,195800455,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0207,236710959,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0208,340788932,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0209,1000580427,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0210,1806553497,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0211,914581167,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0212,931210446,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0213,248908595,Data Studio,Few times.,I could create and adjust charts.,I used it to create financial charts.,G2Man,,AO01,6,6,6,2,,6,6,6,6,6,6,,6,7,5,6,,AO05,AO04,AO06,AO05,AO05,AO07,AO05,AO05,AO04,AO01,AO03,AO02,AO03,AO02,AO02,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0214,770030318,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0215,600413626,Tableau,I use Tableau occasionally for data analysis and reporting tasks,It features distinctive green and blue field pills.,My goal was to visualize plots and I chose Tableau for its drag and drop workspace layout.,G2Man,,AO05,7,6,7,2,The instructions were straightforward and easy to follow.,5,6,7,6,6,7,,6,6,7,7,The tool encouraged me to process and visualize the data I was working with.,AO07,AO06,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO02,AO04,AO02,AO05,AO01,AO05,AO01,AO05,AO03
+Prolific,,PRO-0216,1028097369,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0217,483420730,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0218,1486961530,Data Studio,I use Data Studio weekly to create dashboards and reports.,The drag and drop interface makes it easy to build interactive dashboards.,"My goal is to creat a monthly performance deport for a campaign. I choose data studio because it's free, intefrates with google tools, and is easy to share with my team.",G1Wom,,AO02,6,6,6,2,,6,6,6,6,6,6,,6,6,5,6,,AO06,AO06,AO06,AO07,AO04,AO06,AO06,AO03,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO03,AO04,AO02
+Prolific,C15VDVOL,PRO-0219,1200836915,Tableau,I use it occasionally when data analysis is required,It lets you create a large number of different graphics with data from various different databases,The goal was to prepare a quarterly report on the KPIs for the business and visualize this in the most easily digestible format for stakeholders of different levels of understanding of statistics,G2Man,,AO02,5,5,4,2,,5,7,6,6,6,6,,6,5,6,6,,AO05,AO05,AO05,AO03,AO05,AO06,AO04,AO05,AO04,AO02,AO04,AO04,AO04,AO02,AO04,AO02,AO04,AO03
+Prolific,,PRO-0220,5659953,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0221,1146877197,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0222,1247463306,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0223,1090871892,JMP,I have interacted with the system a few times when I had to prepare survey tasks for my projects.,The charts update automatically when data points are selected.,My goal was to be able to complete a survey on data visualizations and JMP was the required system to use for the task.,G2Man,,AO02,7,7,7,2,The system basically organizes all the information for you.,6,6,6,7,7,7,The system made it easy for me to be able to analyze the data that was presented.,7,7,6,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO01,AO05,AO01,AO04,AO01,AO05,AO02
+Prolific,C15VDVOL,PRO-0224,865186315,Data Studio,I use the system regularly ,It allows me create interactive visual dashboards easily and customized charts. ,My goal is to buid a weekly marketing performance report.,G2Man,,AO02,7,6,6,2,,5,6,6,6,7,7,,7,7,6,7,,AO07,AO07,AO06,AO07,AO06,AO06,AO06,AO05,AO04,AO03,AO05,AO05,AO05,AO02,AO04,AO01,AO05,AO02
+Prolific,C1LYP9HZ,PRO-0225,1043712128,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0226,1812549497,Quick Sight,once a week ,the black taskbar ,making dynamic dashboard for my job,G1Wom,,AO01,7,7,6,7,,6,6,5,6,6,5,,6,5,6,6,,AO04,AO05,AO05,AO04,AO04,AO05,AO05,AO04,AO03,AO02,AO03,AO02,AO03,AO03,AO02,AO02,AO03,AO03
+Prolific,,PRO-0227,1186217375,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0228,786654470,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0229,1002261867,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0230,2022511061,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0231,1738645369,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0232,1964829366,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0233,1086162449,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0234,448509805,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0235,1692232950,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0236,974692653,Tableau,"multiple times daily doing  my related  tasks, since my work is primarily data centered",its ability to allow  me use  distinct columns and rows that shelve above canvas grid for drag and drop visualization ,"I am currently striving to build an interactive executive dashboard which will help me to monitor monthly and quarterly  sales trends , not forgetting the key performance metrics because not only am I  directly involved in the financial management of our firm but also  with the data analysis  team, I chose the Tableau because it excels in processing large data sets  quickly under provides highly  customizable filtering options and if you compare it  with other options,  I believe it has  most competent features due to its ability to intuitively arrange complex data models without heavy reliance on the engineering support team.",G2Man,,AO02,5,6,6,2,,7,5,7,6,6,6,,6,7,7,7,,AO05,AO06,AO06,AO05,AO05,AO07,AO06,AO05,AO05,AO01,AO04,AO01,AO04,AO01,AO02,AO01,AO04,AO03
+Prolific,C1LYP9HZ,PRO-0237,1653492451,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0238,831374895,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0239,14967956,Tableau,i use mostly every week for data for my financial analysis trend observation,data visualisation  and interactive dashboards,identifying trends and patterns and visualisation of data which makes complex data easy to understand,G2Man,,AO02,6,7,7,7,easy to learn and needs practice,7,7,6,6,7,7,,6,7,7,7,,AO07,AO06,AO07,AO07,AO06,AO06,AO07,AO07,AO05,AO04,AO04,AO03,AO04,AO02,AO03,AO02,AO04,AO04
+Prolific,,PRO-0240,1809944187,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0241,1975312081,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0242,1329767987,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0243,1788360479,Data Studio,I use  data studio about once a month,I remember live dashboard,the goal was to track the orders for my small side hustle ,G1Wom,,AO03,6,5,6,2,,6,6,5,6,6,7,,6,6,6,7,,AO06,AO06,AO07,AO06,AO05,AO04,AO04,AO05,AO04,AO01,AO04,AO01,AO05,AO01,AO04,AO01,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0244,1775214360,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0245,527745446,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0246,1404487732,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0247,1442271648,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0248,19963387,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0249,1962837924,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0250,217854621,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0251,316822253,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0252,1396954416,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0253,1870707804,Datawrapper,"Once in a while, mostly to get a grasp of how to develop a RAG system ","Easy to use, I don't have to install it, quick and efficient","To see what kind of data I'm dealing with when creating a RAG, especially to develop a search that does not bias any side, like routing to the appropiate section",G2Man,,AO01,6,6,7,2,,6,5,7,6,6,6,,6,6,4,6,,AO06,AO06,AO06,AO07,AO05,AO05,AO05,AO02,AO04,AO01,AO05,AO01,AO04,AO02,AO03,AO02,AO04,AO01
+Prolific,C1LYP9HZ,PRO-0254,1312020548,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0255,169018809,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0256,1396615089,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0257,638912033,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0258,2062987415,Quick Sight,uso diario/frecuente,la creación de dashboards e informes interactivos en tiempo real.,"mi objetivo era crear un panel intercativo para monitorear las metricas de ventas, elegi QuickSight por su rapidez y facil in tegración con los datos AWS.",G1Wom,,AO04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0259,27943349,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0260,553233667,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0261,871295575,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0262,126901897,Tableau,A few times per month for a class,Drag and drop interface with dimensions ,"I created interactive dashboards from an excel data set for a report, I chose it because it makes visualizing data and finding trends very easy without needing coding. ",G1Wom,,AO01,6,6,6,2,,5,7,6,6,7,6,,7,7,7,7,,AO06,AO06,AO06,AO06,AO07,AO07,AO05,AO06,AO04,AO01,AO04,AO01,AO04,AO01,AO04,AO01,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0263,637127608,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0264,796883701,Tableau,I use it a couple of times a week,Drag and drop fields onto rows and columns,i needed to quickly build sales dashboards so i chose tableau for its smooth viusal interface and drag drop features,G2Man,,AO01,5,5,5,2,,6,6,6,6,6,6,,6,6,6,7,,AO06,AO06,AO07,AO06,AO07,AO07,AO06,AO07,AO04,AO02,AO04,AO03,AO04,AO03,AO03,AO04,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0265,664401297,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0266,488753974,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0267,2037245611,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0268,435668131,Tableau,I used Tableau every 2 weeks for creating interactive dashboard.,The drag and drop shelf interface,"Tableau is more versatile in comparison to other visualization tools. I wanted to analyze bug, so since Tableau is the best option due to the versality and interactivity",G2Man,,AO02,5,6,5,2,,6,5,6,5,6,6,,5,6,5,6,,AO06,AO05,AO06,AO06,AO05,AO06,AO05,AO05,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0269,1502938577,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0270,1637194131,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0271,1130525991,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0272,434036186,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0273,388616482,Tableau,I use it on a weekly basis ,The drag and rop interface ,"Analyze performance of the revenue in my company , I chose because of its advanced and easy visualization capabilities",G2Man,,AO02,5,6,4,2,,7,3,6,5,6,7,,7,3,5,6,,AO04,AO06,AO05,AO04,AO05,AO05,AO06,AO06,AO04,AO02,AO03,AO02,AO04,AO03,AO02,AO04,AO05,AO05
+Prolific,,PRO-0274,858946459,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0275,483704561,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0276,1968882488,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0277,952977556,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0278,352370088,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0279,641904496,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0280,1775342240,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0281,487838656,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0282,1896601432,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0283,864577956,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0284,692576547,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0285,800902704,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0286,1007205138,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0287,1029455787,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0288,801571777,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0289,1268611250,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0290,1967893812,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0291,232607844,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0292,1939793210,Data Studio,3-4 times a week,It had a simple and user friendly interface,"My goal was to analyze and organize data efficiently, and I chose Data Studio because it made data exploration and reporting easier",G1Wom,,AO02,6,4,5,2,,5,3,6,7,6,6,,6,7,6,5,,AO06,AO04,AO05,AO03,AO04,AO07,AO05,AO07,AO04,AO03,AO04,AO05,AO03,AO04,AO03,AO04,AO03,AO04
+Prolific,,PRO-0293,347317571,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0294,1096240597,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0295,363942676,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0296,1811080646,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0297,1109625961,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0298,20359539,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0299,444273974,Data Studio,I use it about three times a week.,It is run by Google.,I needed to create data visualisations faster and using a simpler method than manual.,G2Man,,AO02,5,6,5,2,,7,5,7,7,7,7,,6,5,7,7,,AO07,AO05,AO07,AO05,AO04,AO05,AO03,AO03,AO05,AO03,AO04,AO02,AO03,AO02,AO04,AO01,AO05,AO02
+Prolific,C1LYP9HZ,PRO-0300,199107250,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0301,1292486528,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0302,47087977,Data Studio,"I only used it once, in a date cience class and justr basic into it",I remember you can make dashbords with differente charts using your date,it wwas for class activity we just had to lear the basic tools. i used data stutudio because prefessr showed us,G1Wom,,AO02,5,5,4,2,,5,4,5,4,5,2,,4,5,5,5,,AO05,AO03,AO05,AO05,AO04,AO06,AO04,AO05,AO03,AO02,AO04,AO03,AO03,AO02,AO04,AO02,AO04,AO03
+Prolific,,PRO-0303,459823875,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0304,97089834,Tableau,"I use Tableau, 2-3 times a week, but sometimes less depending on the project that I am working on.",The filter section that allows me to add different conditions to the data.,"I used the Tableau to visualize the result from a project I work on, about predicting sepsis early using both traditional machine learning models and deep learning techniques.",G1Wom,,AO02,3,3,4,2,,6,5,5,6,6,7,,6,6,5,7,,AO06,AO05,AO07,AO05,AO04,AO04,AO06,AO05,AO05,AO03,AO04,AO03,AO04,AO02,AO03,AO02,AO04,AO03
+Prolific,,PRO-0305,595726857,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0306,331328487,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0307,2000230988,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0308,1265155001,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0309,1852104275,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0310,484604602,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0311,579571523,Data Studio,usually several times a week.,It has a clear and easy to use interface for working with data,my most recent interactions were mainly to review and analyse data. Because it makes data easier to organize and present visually.,G1Wom,,AO01,5,5,5,2,,5,5,5,5,6,6,,5,6,6,6,,AO06,AO05,AO06,AO06,AO05,AO06,AO05,AO04,AO03,AO03,AO03,AO02,AO03,AO01,AO03,AO02,AO03,AO03
+Prolific,,PRO-0312,2005451381,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0313,385809530,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0314,1039436367,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0315,1079099994,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0316,1048461799,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0317,1700667087,Tableau,I use Tableau occasionally for salesforce data analysis,easy to use data visualization,I used  it to analyze salesforce data and create visualizations,G2Man,,AO02,3,5,6,2,,6,6,7,4,6,5,,6,7,7,7,,AO06,AO06,AO06,AO07,AO06,AO05,AO06,AO07,AO04,AO01,AO04,AO03,AO04,AO04,AO05,AO01,AO04,AO03
+Prolific,C15VDVOL,PRO-0318,1148690733,Data Studio,weekly,Smooth integration with google tools like google sheets,Build realtime performace dashboards to monitor key metrics. I choose it because cloud based accessibility and easy drag and drop capabilities,G2Man,,AO03,6,6,5,2,Easy to learn and start to use it,5,5,7,5,6,6,Its a very visual pleassant ,4,4,4,4,"For my work its not a mandatory tool, we can live without it",AO05,AO06,AO06,AO06,AO03,AO04,AO04,AO04,AO03,AO02,AO04,AO03,AO04,AO02,AO03,AO02,AO04,AO03
+Prolific,,PRO-0319,153452221,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0320,299966051,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0321,1349891760,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0322,627089222,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0323,1144552931,JMP,2-3 times about 2 two weeks,no one,I don't remember,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0324,853519142,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0325,610380954,JMP,Occasionally for data analysis ,Interactive graphs on the right and data table on the left. ,I use JMP to create scatter plots for a project and run regression. I chose the system JMP because of the built-in statistical tools and make visualization much easier without need me to code.,G1Wom,,AO02,6,7,6,2,,6,6,7,6,6,6,,6,7,6,6,,AO06,AO06,AO06,AO07,AO07,AO07,AO02,AO07,AO05,AO02,AO04,AO01,AO05,AO03,AO02,AO04,AO05,AO01
+Prolific,C1LYP9HZ,PRO-0326,620240329,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0327,1872104363,Tableau,I use Tableau a few times a month for data analysis and visual reporting.,I remember dragging fields onto the Columns and Rows shelves to create dynamic chant visualizations easily.,My goal was to create an interactive dashboard to analyze trend data for a project. I chose Tableau because of its strong drag and drop visualizations features and clear UI.,G2Man,,AO02,6,7,6,2,,7,7,6,6,7,6,,7,7,6,7,,AO06,AO07,AO07,AO06,AO06,AO06,AO07,AO07,AO04,AO04,AO05,AO05,AO04,AO04,AO05,AO04,AO04,AO05
+Prolific,C1LYP9HZ,PRO-0328,1708897383,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0329,1949774668,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0330,1611042404,Tableau,a few times a month,i remember using drag and drop fields to build charts,i used Tableau to explore a dataset and create visualizations so i could compare patterns and trends more easily,G1Wom,,AO02,5,5,5,2,,5,6,5,5,6,6,,6,5,7,6,"i found tableau useful, although some parts took a little time to get used to",AO06,AO05,AO05,AO05,AO04,AO06,AO05,AO05,AO03,AO03,AO04,AO02,AO04,AO02,AO03,AO02,AO03,AO02
+Prolific,C1LYP9HZ,PRO-0331,1181835787,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0332,1835949987,Gephi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0333,1777241198,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0334,146944878,Tableau,A few times per month for uni projects,The drag and drop interface for row and columns,"i needed the visualize data for a cafe management project, and i choosed tableau because its way faster than coding charts from scratch ",G2Man,,AO01,6,6,6,2,,6,6,6,6,6,6,,6,6,6,6,,AO06,AO06,AO05,AO05,AO06,AO06,AO06,AO06,AO04,AO02,AO05,AO01,AO04,AO01,AO04,AO01,AO05,AO02
+Prolific,C15VDVOL,PRO-0335,1281578755,Tableau,"A few times a month, mainly when I need to explore or present data visually.",I remember the drag-and-drop interface for building charts and dashboards.,My most recent goal was to explore a dataset and create an interactive dashboard to compare trends across different categories. I chose Tableau because it made it easy to build and adjust the visualizations.,G2Man,,AO03,6,6,6,2,,7,6,6,6,7,7,,6,6,6,7,,AO06,AO06,AO06,AO06,AO05,AO06,AO05,AO05,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C15VDVOL,PRO-0336,1578823638,Data Studio,I use it a few times a month,I remember that it makes data easy to understand through clear visualizations,I used it to create a dashboard and visualize data so i could understand the results more easily,G2Man,,AO02,6,6,6,2,,6,5,6,6,6,6,,6,5,6,6,,AO06,AO06,AO06,AO06,AO05,AO05,AO04,AO04,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0337,611472045,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0338,1903380982,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0339,2014640975,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0340,739791162,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0341,1521919132,Data Studio,I have used it a few times,It is easy to create and customize charts.,I remember loading data and creating charts to understand the results.,G2Man,,AO05,5,5,5,2,,5,5,6,5,6,6,,5,6,5,6,,AO05,AO05,AO05,AO05,AO05,AO05,AO05,AO05,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0342,825546094,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0343,2003503742,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0344,2023275016,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0345,221351431,Gephi,At least twice a week,Node and edge customization,I needed to size and lable different properties. ,G1Wom,,AO03,5,5,6,2,,4,4,5,5,5,5,,5,6,6,6,,AO05,AO03,AO05,AO04,AO06,AO05,AO06,AO06,AO03,AO04,AO03,AO03,AO04,AO02,AO03,AO03,AO03,AO04
+Prolific,,PRO-0346,1573682990,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0347,1065209147,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0348,1020270157,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0349,1557649211,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0350,109466946,Data Studio,weekly,The reports update automatically in real time when the data from the source changes.,My goal was to analyze trends from our marketing data. I chose Data Studio because it is easy to use and I get updates automatically.,G1Wom,,AO01,6,6,7,2,,5,7,6,7,7,7,,7,7,7,7,,AO06,AO07,AO07,AO06,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO01,AO05,AO01,AO04,AO01,AO04,AO01
+Prolific,,PRO-0351,1253577053,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0352,1190061760,Superset,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0353,1376882140,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0354,1079086371,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0355,851076119,Tableau,"I use Tableau several times a month for both personal and professional projects. Professionally, I use it at least five days a month because it's the primary tool I use to help me create reports for my end-of-month reports.","Being able to create a dashboard after creating tables, graphs, and trends is one characteristic of Tableau","The goal of my recent interaction with Tableau was the creation of a compelling end of the month report for my department. I choose Tableau because it is able to create compelling graphs, tables, and trends to enhance a report and inform decision-making.",G2Man,,AO02,5,6,3,2,"Tableau is not that easy of a system, especially if you've never used it. However, once you get the hang of it, it becomes very easy to use. ",7,6,6,7,7,7,"Tableau visualization are some of the easiest to understand. However, depending on the context, interpreting that data can be challenging to a novice.",6,6,5,7,Tableau has been a fantastic tool for me and my experience with it has generally been positive. I can say that I am more efficient and professional because of this tool.,AO07,AO06,AO07,AO05,AO04,AO06,AO05,AO06,AO05,AO03,AO04,AO02,AO04,AO01,AO03,AO02,AO05,AO03
+Prolific,C1LYP9HZ,PRO-0356,72331571,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0357,1786132720,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0358,1290706009,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0359,1285068414,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0360,42781840,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0361,157527459,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0362,241117590,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0363,17505880,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0364,1216266766,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0365,2050546901,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0366,877289700,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0367,1723647857,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0368,1624392644,Tableau,Several times a week,Drag-and-drop,The goal of my most recent interaction was to analyze and present data clearly so I could identify  trends and make decisions.,G1Wom,,AO02,6,7,6,2,,7,6,7,7,7,7,,6,6,7,7,,AO07,AO07,AO07,AO07,AO06,AO06,AO05,AO05,AO05,AO02,AO04,AO02,AO04,AO02,AO04,AO03,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0369,973706222,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0370,323178013,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0371,42886596,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0372,1805803499,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0373,1303308162,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0374,844420503,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0375,803645990,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0376,379347754,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0377,1742011286,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0378,487151470,Tableau,I used Tableau on a few occasions.,"The drag and drop interaction style with tableau is the one that is most prominent characteristic, in making changes and adjustments easier.",My job desired an easier way to get valuable information on certain KPI's without doing much of the heavy lifting. Some googling and reddit search made me discover Tableau as the tool suitable for purposes like this one.,G2Man,,AO02,5,5,5,2,,6,5,6,6,6,6,,6,6,7,6,,AO05,AO03,AO05,AO04,AO07,AO07,AO05,AO07,AO03,AO03,AO02,AO02,AO03,AO04,AO02,AO03,AO02,AO04
+Prolific,C1LYP9HZ,PRO-0379,629743744,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0380,1654421527,Talend,I used for 2 years 10 years ago,Easy to use and able to create interesting and usefull service,Conversion data from file to db,G2Man,,AO04,6,6,3,2,Tool was easy to manage and interact with,4,3,5,6,5,6,,6,7,6,7,I started by the scratch and i was able to reach results,AO06,AO06,AO05,AO06,AO06,AO06,AO05,AO05,AO03,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0381,243518717,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0382,177516106,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0383,501419530,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0384,1895426003,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0385,708299659,Tableau,I use it few times a week.,Draw and drop to make charts easily.,"My goal was to understand sales numbers visually, I chose Tableau because it makes charts easy.",G1Wom,,AO04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0386,396590667,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0387,369317336,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0388,1879692732,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0389,231507044,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0390,1777560193,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0391,1420168144,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0392,865736672,JMP,i use JMP for my studies and working details,It is stastical analytic software,I made a project with using JMP.the project is undertaken for my office database to make them working statistics of client module,G2Man,,AO03,5,5,6,2,,6,5,6,5,6,7,,7,7,6,7,,AO06,AO06,AO05,AO05,AO06,AO06,AO05,AO05,AO04,AO03,AO04,AO05,AO04,AO03,AO03,AO04,AO04,AO04
+Prolific,,PRO-0393,1049118832,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0394,1725773382,Tableau,I use it a few times a week,I remember its interactive dashboards and easy-to-use data visualizations.,I used Tableau to analyze and visualize business data so I could identify trends and compare performance. I chose it because it makes complex data easier to understand.,G1Wom,,AO02,6,6,5,2,,6,6,6,6,6,7,,6,6,5,7,,AO06,AO06,AO06,AO06,AO05,AO06,AO05,AO05,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0395,2026788795,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0396,1926530300,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0397,1817832123,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0398,106011952,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0399,1476940194,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0400,1201204871,zerodha,i use the system on a weekly basis to tracak market movements and reveview my equity statements,"the technical charting iterface is highly detailed , marketing it easy to apply and read spacific technical indicators like the relative strength index (rsi)",my goal was to perform technical chart analysis to evaluate current market trends. i chose zerodha because its charting tools are reliable and integrate perfactly with my activ trending reqirement,G2Man,,AO02,6,6,6,2,,7,6,6,7,7,7,,7,6,7,7,,AO06,AO06,AO07,AO06,AO05,AO06,AO05,AO05,AO05,AO02,AO04,AO01,AO04,AO02,AO04,AO02,AO05,AO03
+Prolific,C15VDVOL,PRO-0401,216971323,Data Studio,moderamante ,graficos de tela,muito bom usar ,G2Man,,AO02,6,6,6,2,,6,6,6,6,6,6,,6,6,6,6,,AO07,AO07,AO07,AO07,AO05,AO07,AO06,AO05,AO05,AO02,AO04,AO02,AO03,AO02,AO05,AO02,AO05,AO03
+Prolific,,PRO-0402,1349760776,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0403,1685710089,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0404,1833725979,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0405,1446697989,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0406,638446437,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0407,2118881122,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0408,238263269,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0409,405544390,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0410,1729772269,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0411,1549319433,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0412,1325262944,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0413,1182586707,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0414,1801263926,Data Studio,Well I used it mainly whilst running a particular project hence not so much,The visuals were quite clear,Well it was mainly to coordinate and review the configuration requirements for a hotel autotmation project,G2Man,,AO02,6,6,6,2,,6,5,5,5,6,5,,5,5,5,5,,AO05,AO05,AO06,AO05,AO05,AO05,AO06,AO06,AO04,AO02,AO04,AO04,AO04,AO01,AO04,AO01,AO05,AO03
+Prolific,,PRO-0415,245105530,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0416,1090446024,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0417,1602358075,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0418,1879000626,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0419,1896443942,Tableau,once every month,Tableau is focused on visual analytics and business intelligence tools.,"I was working on sales data from a company with thousands of transactions , this complexity needed a tool capable of analysis without the need for programming.",G2Man,,AO02,5,6,6,2,,6,6,6,7,7,7,,6,7,6,6,,AO07,AO04,AO05,AO04,AO06,AO06,AO05,AO05,AO03,AO02,AO03,AO02,AO03,AO01,AO02,AO02,AO03,AO04
+Prolific,C1LYP9HZ,PRO-0420,1796630631,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0421,1793091864,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0422,1040654795,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0423,1171646684,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0424,2033941936,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0425,598762636,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0426,16334638,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0427,1635515593,Tableau,i use it quite frequently for my job which i am as a mis executive and data analysis,i like how we ca connect our data from diffrent platforms like sql databases cloud services and my favroite excel sheets,i choose tableau as a main data cleaning then visualizing then into clean dashbord . my most recent of them was how i created a doted line chart by mixing 5 tables ,G2Man,,AO01,6,6,7,2,,6,5,7,7,6,6,,7,7,5,6,,AO06,AO07,AO06,AO06,AO05,AO06,AO05,AO05,AO04,AO02,AO04,AO03,AO04,AO01,AO04,AO03,AO04,AO03
+Prolific,C15VDVOL,PRO-0428,413982115,JMP,i would use jmp t analyze and save my graphic files for school work,images can be converted into standard stactical data tables,my  goal was to prepare chaotic fragmented data for analysis and i chose jmp because it helps fix misaligned timestamps across different machines,G2Man,,AO01,7,7,6,2,,6,7,7,7,7,6,,7,7,6,7,,AO07,AO07,AO07,AO07,AO06,AO06,AO07,AO04,AO05,AO01,AO04,AO01,AO05,AO01,AO05,AO01,AO05,AO02
+Prolific,C1LYP9HZ,PRO-0441,1491927314,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0442,84858231,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0443,1210404599,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0444,1975413436,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0445,764154081,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0446,909487130,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0447,1146942444,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0448,24304262,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0449,1290647609,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0450,1263582438,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0451,223782274,Data Studio,I use it on weekly bases to build dashboards and views updates.,it has customized track drag and drop  chats and real-time data connection features.,my goal was to create a visual reports to track performance matrix efficiently. I choose data studio because it connects directly to live data sources and is easy to use.,G1Wom,,AO02,2,4,2,2,,6,7,7,5,7,6,,6,6,7,7,,AO07,AO04,AO05,AO02,AO04,AO07,AO07,AO07,AO05,AO03,AO05,AO04,AO04,AO04,AO02,AO02,AO03,AO04
+Prolific,C15VDVOL,PRO-0452,1221470694,Data Studio,5 to 7 times a week ,It is designed around true and verified data,I use it to turn live data from sources without writing codes,G2Man,,AO02,7,6,6,2,,7,6,7,7,6,6,,6,7,6,7,,AO07,AO05,AO07,AO05,AO06,AO06,AO07,AO06,AO04,AO05,AO04,AO05,AO04,AO05,AO04,AO05,AO04,AO05
+Prolific,C15VDVOL,PRO-0453,807734364,Data Studio,I use it a few times a month ,I remember easy integration with google analytics data sources,I use it to help me build a clean marketing report for a new client. I decided to use it because it is free and connects directly to my data,G1Wom,,AO03,6,6,7,2,,6,6,6,7,6,6,,7,7,6,7,,AO07,AO06,AO07,AO06,AO07,AO07,AO07,AO07,AO05,AO02,AO04,AO01,AO05,AO01,AO05,AO02,AO05,AO02
+Prolific,,PRO-0454,342615061,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0455,1754549103,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0456,758217336,Tableau,Weekly ,Drag and drop interface  for creating dashboard S ,`My goal was to create a dashboard to analyze sales trends. I chose Tableau because it makes complex data easy to visualize and share.` or `I used Tableau to build reports from multiple data sources. I picked it for its powerful data connection and visualization tools.`,G4NA,,AO01,6,6,6,2,,6,6,6,6,6,6,,6,6,6,6,,AO06,AO07,AO07,AO07,AO06,AO06,AO07,AO05,AO05,AO01,AO05,AO02,AO04,AO04,AO05,AO01,AO05,AO02
+Prolific,,PRO-0457,1143809809,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0458,1497244097,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0459,21918788,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0460,1369459962,Tableau,Daily operational tracking to monthly reviews ,"Movement, respiration, action,nutrition,excretion,ser,honesty ,integrity ","Because it's powerful visual -first approach ,intuitive drag and drop design, and unmatched flexibility in building complex ",G1Wom,,AO02,7,7,7,2,,7,7,7,7,7,7,,7,7,7,7,The question are simple and straightforward I am enjoying the study ,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO05,AO05,AO05,AO05,AO05,AO05,AO01
+Prolific,,PRO-0461,763847560,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0462,232314380,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0463,1491514929,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0464,2003912163,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0465,891652096,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0466,310590335,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0467,370555436,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0468,315680834,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0469,1381115273,Data Studio,i have used a few times,its easy to create interactive dashboards and visualizations,i used it to load data and create visualizations to better understanding the information,G2Man,,AO01,6,6,6,2,,6,5,6,6,6,6,,6,6,5,6,,AO06,AO06,AO06,AO06,AO05,AO05,AO04,AO04,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0511,1527247121,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0512,894223614,Data Studio,several times a week,customizable data visualizations ,to analyze project data and then to create visual reports.. it makes the complex data easier to understand,G2Man,,AO01,6,5,5,2,,6,5,6,5,6,6,,6,6,7,6,,AO06,AO05,AO06,AO05,AO06,AO06,AO06,AO05,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO01,AO04,AO02
+Prolific,C15VDVOL,PRO-0513,189117829,Data Studio,Once per week,Real-time data visualization,"The main was to track and analyze labor performance statistics. I didn't choose Data Studio, my company chose it.",G1Wom,,AO04,6,6,6,2,,6,7,7,7,7,7,,7,7,7,7,,AO07,AO06,AO07,AO06,AO04,AO05,AO05,AO05,AO05,AO01,AO05,AO01,AO05,AO01,AO03,AO01,AO05,AO02
+Prolific,C1LYP9HZ,PRO-0514,1372812924,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0515,726109906,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0516,920173153,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0517,1130575907,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0518,898337952,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0519,1808133682,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0520,1699364210,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0521,2091313258,Data Studio,I used Data studio a few times a month mainly when i need to load operational data and to quickly create visualizations or dashboards.,"Well, i remember that it was pretty easy to load the data and then create different charts and visualizations. I mean the filters and interactive dashboard features were also useful for looking at the data from different angles.","Basically, i used data studio to load operational data and create visualizations for things like shipment volumes, delivery performance and trends. I chose it because it was quick and easy to turn the data into visual dashboard without doing any kind of programming.",G2Man,,AO02,6,6,5,2,"I have found data studio fairly easy to use , the interface was simple to understand and i could load the data and create the visualizations i needed without much difficulty.",6,6,7,7,6,6,,7,6,5,7,,AO06,AO06,AO07,AO07,AO07,AO07,AO06,AO06,AO05,AO01,AO04,AO02,AO04,AO01,AO04,AO01,AO04,AO02
+Prolific,C15VDVOL,PRO-0522,774539036,Data Studio,I use it accasionally.,The drag and crop charts and dashboard layout .,I used it to create a dashboard  to visualize data from Google sheets for a report.,G1Wom,,AO02,6,6,5,2,,6,5,6,6,6,5,,6,6,5,6,,AO06,AO06,AO06,AO06,AO05,AO06,AO05,AO06,AO05,AO02,AO04,AO05,AO05,AO05,AO05,AO05,AO05,AO05
+Prolific,,PRO-0523,141024996,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0524,1902678460,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0525,1797440305,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0526,988229469,Data Studio,I use it several times a day when my work is related to data analysis and dashboards,"One of the major characteristics i remembered is that it provides interactive dashboards , easy to use data visualization tools and filtering",My goal was to analyze the data and create dashboards. I choose it as it makes the visualization of data much easier and helps identify trends,G2Man,,AO01,6,6,6,2,,6,6,7,7,7,7,,7,6,7,7,,AO06,AO06,AO07,AO06,AO06,AO06,AO06,AO06,AO04,AO02,AO04,AO03,AO04,AO02,AO04,AO03,AO03,AO02
+Prolific,C1LYP9HZ,PRO-0527,1812467152,Java,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0528,237560146,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0529,986867772,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0530,483795767,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0531,1227406609,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0532,1554223344,Data Studio,Daily,The user-friendly interface,Data analysis of competitors of the company I work for,G2Man,,AO03,6,6,7,2,,7,6,5,6,6,5,,6,7,6,6,,AO07,AO07,AO06,AO05,AO07,AO06,AO06,AO05,AO05,AO04,AO04,AO03,AO03,AO04,AO04,AO02,AO04,AO03
+Prolific,C1LYP9HZ,PRO-0533,604327756,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0534,1220369289,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0535,419606457,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0536,748909307,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0537,1000780902,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0538,695389802,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0539,1906040488,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0540,1641333107,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0541,504587884,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0542,1374763889,Data Studio,Mostly a few times a month to track project metrics.,I think it's the bar on the right with the style tabs and drag and drop green dimensions.,"Actually, my latest interaction was to build a dashboard to track API error logs and user activity from an exported data sheet. Well, Data Studio is so convenient and fast, I guess. It also can connect google data sources easily without any external charting libraries, which is so so helpful.",G2Man,,AO01,6,6,5,2,,6,5,6,6,6,7,,6,5,5,7,,AO06,AO05,AO06,AO06,AO04,AO05,AO05,AO05,AO05,AO02,AO04,AO01,AO04,AO01,AO05,AO01,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0543,26436782,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0544,2010768524,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0545,704094550,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0546,1468136928,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0547,102116980,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0548,787740832,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0549,1935445942,Data Studio,"Occasionally, really as needed type of thing. ",Easy to use and heavy visualization tools.,I used it to create and analyse reports and dashboards. ,G2Man,,AO02,7,7,6,2,,7,6,7,7,6,7,,7,6,7,6,,AO06,AO06,AO05,AO06,AO06,AO07,AO06,AO06,AO05,AO01,AO04,AO01,AO05,AO01,AO04,AO01,AO05,AO01
+Prolific,C1LYP9HZ,PRO-0550,495990757,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0551,1537742873,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0552,408532331,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0553,777091686,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0554,512551818,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0555,1952831631,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0556,980283984,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0557,924301313,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0558,790378445,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0559,1562743330,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0560,877675901,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0561,878268654,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0562,1931766549,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0563,1046383659,Workbench,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0564,1302825341,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0565,289379089,Data Studio,i use it on a weekly basis to monitor campaign performance,Drag and drop interface makes it easy to customize charts and tables,My goal was to create a monthly traffic report for my team. I chose Data studio because it easily allows a user to share interactive dashboards via a link,G2Man,,AO01,5,6,6,2,,5,5,5,6,6,7,,6,5,5,6,,AO06,AO05,AO05,AO05,AO06,AO06,AO07,AO06,AO04,AO01,AO03,AO03,AO04,AO01,AO03,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0566,577557573,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0567,562687844,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0568,1930087150,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0569,578207605,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0570,1718609263,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0571,1692463711,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0572,1509404214,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0573,19980584,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0574,238109360,Data Studio,Not so frequently ,I really enjoyed the interface,I chose to use the system as a recommendation from a colleague in collating data,G2Man,,AO02,6,6,6,2,,6,5,7,5,6,6,,6,6,6,7,,AO06,AO06,AO05,AO06,AO06,AO05,AO06,AO05,AO04,AO01,AO03,AO01,AO04,AO01,AO04,AO01,AO04,AO01
+Prolific,C1LYP9HZ,PRO-0575,502672512,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0576,627667687,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0577,879220424,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0578,1912525675,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0579,3864603,Data Studio,Every  few months ,The fact that it's owned by google and provides a sleek interface thats easy to interact with,I used data studio to generate reports from raw data on sales and revenue information.,G2Man,,AO01,5,6,6,2,,6,5,5,5,5,6,,7,6,4,5,,AO05,AO06,AO06,AO06,AO06,AO06,AO05,AO06,AO03,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0580,66851279,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0581,779167406,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0582,1593236087,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0583,96366876,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0584,113422023,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0585,1498811728,Data Studio,I use Data Studio several times a week for creating and updating reports ,It has a very intuitive drag and drop interface and connects easily to Google Sheets and BigQuery.,"I recently built a dashboard to track marketing campaign performance. I chose Data Studio because it's free, easy to share with the team and updates data automatically.",G2Man,,AO02,6,6,6,2,,6,6,6,7,7,7,,6,6,6,6,,AO06,AO06,AO06,AO06,AO05,AO05,AO04,AO04,AO05,AO02,AO05,AO01,AO04,AO02,AO04,AO01,AO05,AO02
+Prolific,C1LYP9HZ,PRO-0586,485617429,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0587,752398565,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0588,583480223,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0589,1642500602,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0590,1210256208,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0591,1636104158,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0592,1897218759,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0593,2143112843,Gephi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0594,1890557399,Data Studio,Multiple times in a day,Interactve data visualization,It was to clearly visualize our brand sales quanttities and top products ,G2Man,,AO02,7,7,7,2,,6,7,7,7,7,6,,7,7,7,7,,AO07,AO07,AO07,AO07,AO07,AO06,AO07,AO06,AO04,AO02,AO05,AO01,AO04,AO04,AO05,AO02,AO05,AO01
+Prolific,,PRO-0595,2001196413,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0596,1409130810,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0597,723870231,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0598,1242681066,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0599,373236250,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0600,170458880,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0601,2053675141,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0602,211902995,Data Studio,I use it almost twice a week,it easily connect me with my projects in google sheets easily and the ability to make dashboards easily,my recent interaction goal is to make a visual report of my sales data spreadsheets and i choose the system cause its free and easy to use,G2Man,,AO02,6,6,4,2,,5,4,5,4,6,6,,7,4,5,6,,AO06,AO07,AO05,AO06,AO04,AO04,AO03,AO02,AO03,AO02,AO04,AO02,AO03,AO01,AO05,AO02,AO03,AO02
+Prolific,,PRO-0603,612376051,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0604,1055958545,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0605,1504088714,Gantt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0606,1883578984,Data Studio,twice in a week,no cost accessibility,data studio is easy to use ,G1Wom,,AO02,6,7,7,2,,6,7,7,6,7,6,,6,7,7,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO04,AO04,AO05,AO01,AO04,AO03,AO05,AO05
+Prolific,C15VDVOL,PRO-0607,1040020478,Data Studio,I use Data Studio about 3 times per month,The data blending wich allows you to merge data from different sources,I recently used Data Studio to connect my database from Shopify,G2Man,,AO01,1,2,2,2,,5,4,2,6,7,7,,7,3,5,7,,AO06,AO02,AO07,AO01,AO03,AO04,AO01,AO01,AO05,AO05,AO02,AO05,AO03,AO01,AO02,AO03,AO03,AO05
+Prolific,C1LYP9HZ,PRO-0608,234585150,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0609,1075782562,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0610,1547367062,Data Studio,I use Data Studio occasionally and mainly when I need to create reports or dashboards,I remember the drag and drop interface for creating charts and visualizations ,my goal was to visualize data in interactive dashboard and make the results easier to understand. I chose Data Studio because it was convenient for creating and sharing visual report ,G2Man,,AO02,6,6,5,2,,6,6,6,6,7,7,,6,6,5,6,,AO06,AO06,AO06,AO06,AO05,AO05,AO05,AO05,AO04,AO02,AO04,AO04,AO05,AO02,AO04,AO01,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0611,1524505089,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0612,1177937952,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0613,38831662,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0614,1414254805,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0615,1122159794,Data Studio,"I use it regularly, several times a week, to load data, create reports and also to make charts and visuals.","There is plenty but the one thing that came to my mind instantly is the drag and drop feature that makes it easy to create charts and visualisations from my data, and it allows me to combine data from different sources into one report using data blending.","I am a data analyst, working with data is central to my career and my skills, and the system makes it easy to explore and present those insights, yes, I do use other platforms, power Bi, etc. But Data Studio is something I choose because it also allows me to experiment and I value its flexibility compared to others.",G1Wom,,AO02,6,6,6,2,,6,6,6,6,6,6,"As an analyst, I do use it quite regularly and for me, the biggest advantage is the reporting layer. I can do the heavier data preparation elsewhere and use Data Studio to make the results easy to explore. It is quite convenient.",6,6,6,6,"It is a platform which makes it relatively easy to get a dashboard running and share it, especially with Google Sheets, GA4, Ads and BigQuery. And I really do like the data blending feature.",AO06,AO04,AO06,AO05,AO06,AO05,AO06,AO05,AO04,AO02,AO04,AO04,AO04,AO02,AO04,AO02,AO04,AO04
+Prolific,C1LYP9HZ,PRO-0616,1538240043,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0617,1686163924,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0618,423107292,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0619,1465152544,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0620,1992433021,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0621,1306372133,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0622,761640264,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0623,730299382,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0624,109050167,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0625,2144470573,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0626,1270185159,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0627,198355730,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0628,364953432,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0629,578100716,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0630,1308417324,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0631,318340710,Data Studio,quite often,Interactive dashboards,to analyze data and build visual reports easily,G1Wom,,AO02,6,6,6,2,,6,6,7,6,6,6,,6,6,6,6,,AO07,AO06,AO06,AO06,AO06,AO07,AO06,AO06,AO04,AO01,AO04,AO01,AO04,AO01,AO04,AO01,AO04,AO01
+Prolific,C1LYP9HZ,PRO-0632,2015532689,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0633,156421959,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0634,590797905,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0635,408270647,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0636,813400355,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0637,1852904119,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0638,127701735,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0639,474079651,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0640,280989445,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0641,1639410681,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0642,695654509,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0643,1348107470,ArcGis,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0644,36508745,Data Studio,More than one a day,Drag and drop canvas,Because of integrations and reporting feature goal  and the reason is to respond tobusee prompt telling about the system ,G2Man,,AO01,7,6,6,2,,6,6,6,6,7,5,,6,6,6,7,,AO04,AO03,AO05,AO03,AO06,AO05,AO03,AO05,AO04,AO03,AO04,AO04,AO04,AO04,AO03,AO04,AO04,AO04
+Prolific,C1LYP9HZ,PRO-0645,2072731548,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0646,2096034855,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0647,1203480258,Data Studio,A few times a month,Charts were super easy to create and modify,I had to create a visual and interactive dashboard summarizing information of my company,G2Man,,AO03,6,6,6,2,,6,5,7,5,7,6,,7,7,5,7,,AO04,AO06,AO05,AO06,AO04,AO05,AO04,AO04,AO04,AO01,AO05,AO01,AO04,AO02,AO03,AO02,AO04,AO02
+Prolific,,PRO-0648,1243713174,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0649,1317284279,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0650,620586318,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0651,621606818,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0652,1498030857,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0653,1116398524,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0654,72686687,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0655,791843556,Data Studio,"I dont use it super often, maybe once every couple months when a client project needs a dashboard put together","The drag and drop chart builder is pretty simple once you get used to it, way less clicking around than I expected","Last time I needed to build a report for a client showing some project metrics, went with Data Studio cause it connects straight to Google Sheets and its free",G2Man,,AO02,5,5,4,2,,6,5,6,5,5,6,"The charts were pretty clear overall, just took some trial and error at first to get filters set up right",5,5,4,6,"It did the job for what I needed, nothing that really made me stop and think differently about the data though",AO06,AO05,AO05,AO06,AO04,AO04,AO03,AO03,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C15VDVOL,PRO-0707,2137288286,JMP,Utilizo o JMP diariamente como ferramenta de trabalho. ,Vinculação dinâmica e interativa entre os dados e os gráficos.,"Transformar dados complexos em decisões de negócios rápidas, visuais e esteticamente validadas, sem perder tempo escrevendo linhas de código.",G3NB,,AO02,6,5,7,2,Deu para perceber que a pesquisa foi muito bem planejada e desenvolvida. ,6,6,5,6,6,7,"As perguntas são claras, fáceis de entender e o layout está muito bonito, parabéns! ",6,7,6,7,,AO03,AO02,AO07,AO03,AO05,AO07,AO02,AO06,AO04,AO02,AO02,AO03,AO04,AO01,AO03,AO02,AO03,AO04
+Prolific,,PRO-0708,258558396,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0709,1380909467,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0710,174141255,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0711,314795677,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0712,150301690,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0713,1200147889,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0714,615965285,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0715,1227942323,JMP,i use the system on a regular weekly basis for data analysis tasks,the interactive graphical data tables and dynamic linking between graphs and data rows,my goal was to analyze dataset metric and visualize variable relationship quickly and i chose JMP because of its powerful statistical graphing capabilities.,G2Man,,AO03,5,5,5,2,,5,5,5,5,5,5,,5,5,5,5,,AO07,AO07,AO07,AO07,AO06,AO06,AO04,AO04,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0716,1089208144,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0717,1366397645,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0718,1756357060,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0719,1902591551,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0720,1877635666,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0721,1382995017,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0722,2130310332,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0723,2003454309,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0724,1148593090,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0725,1852710344,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0726,295927969,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0727,326178401,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0728,106912072,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0729,1052519078,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0730,1967308309,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0731,1873324421,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0732,1300067249,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0733,2039863733,JMP,I use it occasionally for data tasks,It's dynamic linked data tables.,My goal was to analyse a small dataset and to generate visual charts for the dataset. I chose JMP because I found it easy to use for me.,G1Wom,,AO02,3,4,5,2,,5,4,5,6,7,6,,5,6,5,6,,AO03,AO06,AO06,AO05,AO04,AO06,AO07,AO05,AO04,AO05,AO04,AO01,AO04,AO02,AO03,AO01,AO04,AO03
+Prolific,,PRO-0734,992772905,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0735,1573189476,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0736,804251925,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0737,1945733875,JMP,Once a month or less,Multiples windows with complementary information about the data,I have been trying differents softwares for data visualization and JMP is one of them that is more useful to me,G2Man,,AO02,3,5,4,2,,5,4,6,6,6,7,,5,5,5,6,,AO06,AO05,AO05,AO05,AO04,AO06,AO03,AO03,AO03,AO02,AO02,AO03,AO04,AO01,AO04,AO03,AO04,AO02
+Prolific,,PRO-0738,490912735,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0739,2091080149,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0740,1673667660,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0741,107371683,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0742,1074103061,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0743,410256474,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0744,1410609232,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0745,508267331,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0746,135403087,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0747,1720416964,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0748,789515705,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0749,1542900363,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0750,1444186678,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0751,1253399803,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0752,1886099898,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0753,35823756,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0754,269116157,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0755,754419974,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0756,515557837,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0757,1350516315,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0758,1299141921,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0759,9911205,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0760,520205488,Cytoscape,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0761,62202871,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0762,1516167165,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0763,1562716709,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0764,1002741528,JMP,I use it weekly to do advanced statistical analysis and visualize some datasets,The menu for design of experiments and the interface for statistical graphs,To analyze experimental data to evaluate model performance. I chose it for its graphical and statistical modeling tools,G2Man,,AO01,6,7,6,2,,6,7,7,6,7,7,,6,5,6,7,,AO07,AO06,AO07,AO06,AO05,AO07,AO06,AO06,AO05,AO01,AO04,AO01,AO05,AO01,AO04,AO01,AO04,AO01
+Prolific,C1LYP9HZ,PRO-0765,979143305,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0766,67994119,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0767,1441313877,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0768,244096506,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0769,1509336621,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0770,1541325756,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0771,57798368,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0772,995365431,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0773,1351051447,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0774,1349225669,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0775,1377145827,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0776,1390719382,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0777,201833364,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0778,553852368,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0779,1691845708,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0780,300323599,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0781,69831654,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0782,1165939482,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0783,1126716909,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0784,357054149,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0785,2064775461,JMP,I used it in my engineering school,Dynamic data linking for data analysis,"I didn't have the choice, It was mandatory to use it within my data analysis course in school, we also used PowerBI. So I used it mainly for school project",G2Man,,AO01,5,3,5,2,,7,7,7,7,7,7,,7,5,6,7,,AO05,AO06,AO07,AO05,AO04,AO06,AO04,AO03,AO01,AO02,AO04,AO04,AO04,AO02,AO04,AO03,AO02,AO04
+Prolific,,PRO-0786,496088904,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0787,717133184,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0788,1516326022,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0789,317020223,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0790,744901960,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0791,1423371713,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0792,1256070,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0793,800701590,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0794,63761588,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0795,1894851954,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0796,1209497484,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0797,309911401,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0798,1291942000,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0799,509094822,JMP,"I'd been using it whenever I had a uni project and during my thesis, approximately once per week","I remember the large variety of graphs, with areas visualization being the most interesting to me.","I mainly use it for simple graphs of my scientific data, such as for a linearity graph.",G2Man,,AO01,5,5,5,2,,4,6,6,6,7,7,,7,5,5,7,,AO06,AO05,AO06,AO05,AO04,AO05,AO05,AO05,AO04,AO02,AO04,AO01,AO04,AO02,AO03,AO03,AO03,AO02
+Prolific,C1LYP9HZ,PRO-0800,1953263046,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0801,608009732,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0802,294327242,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0803,1733069893,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0804,412605340,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0805,1226840171,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0806,1289458812,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0807,1255391545,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0808,37005637,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0809,2132221806,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0810,2123505160,JMP,few times a month,Style of diagrams,1) Data visualization for diagrams 2) Recommendation of work colleage,G1Wom,,AO01,3,5,3,2,,4,4,6,5,7,6,,6,5,4,7,,AO06,AO04,AO05,AO05,AO05,AO04,AO03,AO03,AO03,AO02,AO03,AO02,AO04,AO02,AO03,AO02,AO03,AO02
+Prolific,C1LYP9HZ,PRO-0811,1064745790,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0812,1121581394,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0813,1013758926,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0814,619557130,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0815,678312246,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0816,1526968303,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0817,2062133969,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0818,869376323,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0819,2069793759,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0820,1812620177,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0821,1552301983,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0822,1357018796,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0823,531938604,JMP,I use jmb daily ,It allows for dynamic data visualization and exploration,"I intended to use backtesting information for an automatic trading bot, and I selected JMP because it does a great job in handling complicated statistics.",G2Man,,AO02,7,7,6,2,,7,6,7,5,7,6,,7,7,7,6,,AO06,AO06,AO07,AO07,AO07,AO07,AO06,AO05,AO05,AO01,AO02,AO01,AO05,AO02,AO04,AO03,AO02,AO02
+Prolific,C15VDVOL,PRO-0824,1754629784,JMP,I use JMP regulary every week ,Useful interactive grapgh builder that let me drag and drop to make my charts easily ,My goal to analyze test data and chech relationships using regression plots then i choose  JMP because its easy to use and has great tools for statistics,G2Man,,AO02,7,7,6,2,,7,6,6,6,6,7,,6,6,6,6,,AO06,AO07,AO07,AO07,AO06,AO06,AO05,AO05,AO04,AO01,AO05,AO01,AO04,AO01,AO04,AO01,AO04,AO01
+Prolific,C1LYP9HZ,PRO-0825,215042333,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0826,2123781504,Superset,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0827,848128264,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0828,1892185705,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0829,1713967618,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0830,1581795101,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0831,1155255573,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0832,2055912445,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0833,141792752,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0834,129351375,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0835,1170767285,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0836,2065187514,Gephi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0837,1561829628,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0838,732015760,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0839,1430368498,SPSS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0840,1480364762,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0841,1968354666,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0842,1951200653,JMP,I use it almost daily for work purposes whenever I need to see the data visually.,Custom graphical interfaces using the boxes in the scripting.,"I wanted to create a list box to program checkboxes and buttons. The easy to navigate UI, features and simplicity and familiarity of the software was most helpful.",G2Man,,AO02,7,7,7,2,,7,7,7,7,7,7,,7,7,7,7,,AO06,AO06,AO07,AO06,AO05,AO05,AO06,AO06,AO05,AO01,AO05,AO02,AO04,AO01,AO04,AO02,AO05,AO04
+Prolific,C1LYP9HZ,PRO-0843,1026795443,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0844,1027312250,JMP,Couple of times every 2-3 months,its easy for analyzing data and graphs,"I used it to create some graphs, chose it because its easy to interact with.",G2Man,,AO02,6,5,6,2,,5,7,6,4,6,6,,6,5,4,7,,AO05,AO05,AO06,AO07,AO04,AO06,AO05,AO05,AO03,AO02,AO04,AO03,AO04,AO02,AO04,AO03,AO03,AO04
+Prolific,,PRO-0845,1087257238,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0846,2002307349,JMP,i do not use JMP much ,i remember it being used for data analysis,i choose JMP as all my fellow colleagues were using it for data and it provides good tools for data analysis and make visualisations ,G1Wom,,AO02,5,5,6,2,,5,5,5,5,6,6,,6,5,6,6,,AO06,AO04,AO06,AO05,AO05,AO05,AO06,AO06,AO04,AO03,AO03,AO03,AO04,AO03,AO02,AO03,AO03,AO04
+Prolific,C1LYP9HZ,PRO-0847,659423918,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0848,1065024941,JMP,Once a week ,Interactive graphs and data table together ,My goals was to analyze survey data and make plots.i choose JMP because it make graphs and statistics easy in one place.,G1Wom,,AO06,6,6,5,2,,5,5,5,5,6,6,,5,5,6,6,,AO06,AO05,AO05,AO04,AO06,AO05,AO04,AO05,AO04,AO03,AO03,AO03,AO03,AO03,AO04,AO03,AO04,AO03
+Prolific,C1LYP9HZ,PRO-0849,1793769842,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0850,898795426,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0851,1041499611,JMP,Few times a month ,Drag and drop graphs on visual and interactive ,To understand data fast and make decisions. It has super visual it makes work more easy and interesting. ,G1Wom,,AO02,7,6,6,2,,7,7,7,7,7,7,,6,7,7,6,,AO07,AO06,AO06,AO05,AO05,AO06,AO05,AO05,AO04,AO03,AO03,AO03,AO03,AO04,AO04,AO03,AO04,AO04
+Prolific,C1LYP9HZ,PRO-0852,645464528,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0853,823816863,JMP,i usually use it about 3 to 4 times weekly,pooling data into a graphs and linear regressions,"i needed it to visualise a large dataset to identify trends, i chose it because it makes it easier to put information and feedback is usually clear and easy to understand",G1Wom,,AO01,6,7,6,2,,7,5,7,6,7,7,,7,7,6,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO04,AO05,AO02,AO04,AO01,AO03,AO03,AO05,AO01
+Prolific,,PRO-0854,78850677,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0855,760534085,JMP,I normally use the system when I have some some data statistic work that I am working on. This can happen either two to four times within three months.,I have mostly used it data visualization.,I used in to visualise a data that I was working for on my project. I selected it because of it's histogram feature.,G2Man,,AO02,6,6,6,2,,6,6,6,6,6,6,,6,6,6,6,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO01,AO05,AO02
+Prolific,C15VDVOL,PRO-0856,740673864,JMP,once a week,Interactive data visualization for data analysis,"Well, I chose JMP because it supports data analysis and interactive dashboards, my goal was to explore data more efficiently and indentify trends to support better business decisions.",G2Man,,AO02,6,6,5,2,,6,5,7,6,6,6,,6,6,7,7,,AO07,AO06,AO06,AO06,AO05,AO06,AO02,AO02,AO04,AO02,AO03,AO02,AO04,AO02,AO04,AO02,AO04,AO03
+Prolific,C1LYP9HZ,PRO-0857,552290753,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0858,692535084,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0859,873970340,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0860,722305035,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0861,234187413,JMP,a few times a month for data analysis,interactive geaph builder for quick plots,to visualize statistical data,G1Wom,,AO01,7,7,7,2,,7,7,7,7,7,7,,7,7,7,7,,AO07,AO06,AO07,AO07,AO06,AO07,AO07,AO07,AO04,AO01,AO05,AO02,AO05,AO01,AO05,AO01,AO05,AO05
+Prolific,C1LYP9HZ,PRO-0862,927769894,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0863,429581358,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0864,1863660348,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0865,1054127717,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0866,114908223,JMP,About once a month,It has an intuitive and interactive interface.,I used it for statistical analysis and data visualization.,G1Wom,,AO02,6,6,5,2,,6,4,6,5,6,5,,7,6,5,6,,AO05,AO06,AO06,AO06,AO04,AO05,AO05,AO05,AO03,AO02,AO04,AO02,AO03,AO02,AO04,AO02,AO04,AO03
+Prolific,C1LYP9HZ,PRO-0867,2126196513,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0868,723167296,JMP,i use JMP often especially for statistical analysis,"Its interactive and visual interface, which makes it easy t create graphs","My goal was to analyze data, identify patterns and understand the results ",G2Man,,AO01,5,6,5,2,,6,6,6,6,6,6,,6,6,6,6,,AO06,AO05,AO06,AO06,AO05,AO05,AO04,AO05,AO04,AO02,AO04,AO04,AO04,AO02,AO03,AO03,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0869,2088396923,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0870,1347029309,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0871,315542413,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0872,823994985,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0873,86733961,Salesforce,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0874,748966742,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0875,1118542047,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0876,2037354499,JMP,twice a week,l dont remember,l dont remember,G2Man,,AO02,6,6,6,5,,5,6,5,6,5,5,none,5,6,6,6,,AO07,AO07,AO06,AO06,AO06,AO06,AO07,AO06,AO04,AO03,AO04,AO04,AO04,AO03,AO04,AO04,AO04,AO05
+Prolific,C15VDVOL,PRO-0877,1614260584,JMP,monthly ,Analytical Diagrams ,Dynamic and analytical diagrams for some calculations for business ,G2Man,,AO01,4,5,6,2,,5,5,6,5,6,6,,6,6,5,5,,AO05,AO05,AO06,AO04,AO05,AO06,AO04,AO05,AO03,AO02,AO04,AO02,AO04,AO02,AO03,AO03,AO04,AO02
+Prolific,C1LYP9HZ,PRO-0878,319153350,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0879,882126016,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0880,1411528541,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0881,1004160815,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0882,403072232,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0883,1610706405,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0884,1353662587,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0885,68654287,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C13OIWSR,PRO-0886,1867608393,JMP,I use it daily for work,an intuitive interface and reliable data processing.,evaluate system output quality,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0887,649855272,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0888,881857103,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C13OIWSR,PRO-0889,560643215,JMP,I use it daily for work ,Reliable data processing ,Evaluate output system quality ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0890,100862717,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0891,1159524790,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0892,1466924716,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0893,1329568896,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0894,331256142,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0895,2126086870,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0896,261026035,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0897,827907980,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0898,402084725,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0899,1566831386,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0900,1942956691,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0901,1955008098,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0902,289901595,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0903,484607447,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0904,1853432150,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0905,933235263,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0906,2042051033,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0907,1694026086,JMP,I use it once or twice a week,I use it for data visualisations,I analysed some cycling trips I did with Strava. I looked at the average speed distribution of the trips. I chose JMP because I am familiar with it and used it the first time during University,G2Man,,AO02,4,6,6,2,,6,5,6,6,7,7,,6,6,5,7,,AO06,AO05,AO07,AO05,AO03,AO04,AO02,AO03,AO04,AO02,AO04,AO01,AO05,AO01,AO03,AO01,AO03,AO02
+Prolific,,PRO-0908,728759748,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0909,1925774892,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0910,347483070,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0911,578396068,JMP,seldom,visual prediction profiler,my most recent interaction with it was running an analysis on a survey dataset so as to quickly spot trends and fit linear models across variables. i chose jmp because of it's drag and drop interface and also the instant graph linking which made it faster for the hypotheses testing.,G2Man,,AO01,3,5,6,2,,6,6,7,6,7,6,,6,6,5,7,,AO06,AO04,AO06,AO06,AO05,AO07,AO04,AO05,AO04,AO03,AO04,AO02,AO04,AO03,AO04,AO02,AO05,AO02
+Prolific,C1LYP9HZ,PRO-0912,6071110,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0913,384473193,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0914,1392603395,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0915,1470176034,JMP,I use it very often,Interactive Graph Builder which allows you to drag and drop your variables and make visual graphs.,"My goal was to conduct regressions as well as examine data set distribution patterns, and JMP helps me do that quicker than manual efforts.",G2Man,,AO02,6,7,7,2,,7,5,7,6,6,6,,7,6,6,7,,AO07,AO06,AO07,AO07,AO07,AO06,AO06,AO06,AO04,AO01,AO01,AO04,AO04,AO01,AO05,AO05,AO05,AO04
+Prolific,C1LYP9HZ,PRO-0916,627671487,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0917,892211894,JMP,I use JMP a few times a week,The interactive graphs and line fit tool,My recent goal was to analyse interview time data and create scatter plots. I chose it because it makes data visualisation very easy ,G1Wom,,AO01,6,7,6,2,,7,7,6,7,6,7,,7,7,7,6,,AO07,AO06,AO06,AO07,AO06,AO06,AO07,AO06,AO05,AO01,AO05,AO02,AO04,AO01,AO04,AO01,AO04,AO04
+Prolific,C1LYP9HZ,PRO-0918,406010795,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0919,595099971,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0920,2026151734,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0921,1256309533,JMP,Dgcd ucf,Dtcd hff hv h g b b h,Fyfff gcf h h h h ,G2Man,,AO02,6,5,6,2,,6,5,7,7,7,5,,5,4,7,7,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0922,206032858,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0923,1928610678,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0924,819791214,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0925,1185587806,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0926,990254958,Infogram,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0927,1881728534,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0928,2095550955,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0929,910245192,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0930,1235620821,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0931,1819652638,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0932,1453190584,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0933,95843807,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0934,210663365,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0935,418197866,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0936,869124987,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0937,341789941,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0938,1783184976,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0939,537084241,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0940,224091404,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0941,1023493658,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0942,336626769,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0943,1011270456,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0944,1099198156,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0945,1596649519,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0946,1610176241,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0947,1582316056,Gephi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0948,1590730656,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0949,617056828,JMP,This a couple times a week,The fact that you can visualize data so easy.,I used it to get all of my data in check and be able to see everything in a nice dynamic graph,G2Man,,AO01,3,4,4,2,,6,5,4,7,5,6,,5,5,6,6,,AO04,AO02,AO05,AO03,AO04,AO06,AO03,AO05,AO04,AO03,AO02,AO03,AO03,AO03,AO01,AO03,AO02,AO04
+Prolific,,PRO-0950,1272121368,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0951,1005940552,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0952,1943433001,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0953,1987012333,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0954,1087705069,JMP,About once a week,The design of experimetns and tables and rows,I used JMP for studying because I needed some ideas for a college project and was great brainstorming and visualising the results,G2Man,,AO01,5,5,4,2,"With some tutorials the JMP was easy to use, but just powering the app and trying to figure it out by myself was a bit tedious.",5,6,5,6,6,6,"JMP is overall easy to use and really powerful when I want to see my data, sometimes I really can't figure out what I need to look at, but most of the time is just easy.",5,5,5,6,"The JMP helped my a lot because I am a visual learned, so seeing all the stuff I am doing really helped me understand so many stuff.",AO05,AO05,AO06,AO05,AO06,AO05,AO05,AO04,AO04,AO02,AO04,AO03,AO04,AO02,AO04,AO03,AO03,AO03
+Prolific,C1LYP9HZ,PRO-0955,709603501,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0956,877745876,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0957,142942956,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0958,1763030848,JMP,at least a couple times a week,the content organization,i feel like its the most intuitive and easy method to collect and analize data,G2Man,,AO02,4,7,5,2,,4,4,5,5,7,7,,7,6,4,7,,AO07,AO06,AO05,AO06,AO03,AO03,AO03,AO04,AO05,AO01,AO05,AO01,AO04,AO02,AO03,AO03,AO05,AO03
+Prolific,C1LYP9HZ,PRO-0959,1027556037,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0960,920035499,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-0961,1053269030,JMP,I use it a few times a month.,It hasw great data visualization tools and interactive graphs.,I used it to analyze a dataset for a academic project. I chose it because it was the most suitable tool for this task and the visualisations were importand.,G2Man,,AO01,5,6,6,2,,7,7,7,7,7,7,,6,7,7,7,,AO06,AO06,AO07,AO06,AO05,AO06,AO05,AO05,AO04,AO01,AO04,AO01,AO04,AO01,AO04,AO01,AO05,AO03
+Prolific,C1LYP9HZ,PRO-0962,1577106549,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0963,867422496,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0964,22700781,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0965,1221499904,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0966,41699062,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0967,758845384,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0968,1167832267,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0969,1323082060,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0970,1537323556,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0971,1705818064,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0972,1593546098,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0973,323361331,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0974,2119226426,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0975,1839166656,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0976,1647378239,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0977,24279092,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0978,1193913347,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0979,62973501,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0980,1274277690,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0981,444570575,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0982,496664860,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0983,196701714,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0984,1869349565,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0985,501841083,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0986,1026747434,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0987,1994959243,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0988,1993206890,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0989,50850887,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0990,2111050877,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0991,1299151599,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0992,499153878,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0993,1492944467,Quick Sight,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0994,424932615,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0995,303204147,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0996,952481574,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0997,1525796459,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-0998,490287755,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-0999,923709697,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1000,795255417,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1001,1480795151,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1002,1549417598,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1003,1940703397,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1004,382762375,JMP,few times a month ,Easy to explore data,I used to explore data and spot trends ,G1Wom,,AO02,7,6,6,2,,6,6,7,5,6,6,,7,6,6,6,,AO07,AO06,AO07,AO06,AO05,AO05,AO04,AO06,AO04,AO01,AO04,AO05,AO04,AO01,AO03,AO01,AO04,AO04
+Prolific,C15VDVOL,PRO-1005,1090423504,JMP,I use JMP occasionally for data analysis,JMP has powerful data visualization tools,I used JMP to analyze data and create visualizations because it makes statistical analysis easier.,G2Man,,AO03,6,6,6,2,,6,6,6,6,6,6,,6,6,6,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO01,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02,AO04,AO02
+Prolific,C1LYP9HZ,PRO-1006,435272494,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1007,257267889,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1008,1638117873,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1009,1409990146,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1010,787700329,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1011,251594679,JMP,Occasionally,"Interactive data visualization, you can select a data point in a graph dynamically that is taken from the data table. ",My goal was to perform exploratory data analysis to find statistical description a dataset. The most I use is something general like to find data distribution and correlation. I chose JMP because its interactive tools make it efficient to spot data patterns.,G2Man,,AO02,5,5,6,2,,6,4,5,7,5,6,"The visualizations are quite clear and helpful for my data, though navigating and engaging a trial-and-error analysis can slightly tricky for an occasional user.",6,5,5,5,"I found it useful for basic use, but since I was an occasional user, it needs more time to learn advanced features.",AO06,AO05,AO05,AO04,AO04,AO05,AO03,AO03,AO03,AO03,AO04,AO04,AO04,AO02,AO03,AO02,AO04,AO05
+Prolific,C1LYP9HZ,PRO-1012,1945885198,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1013,1860482724,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1014,1235968859,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1015,1360586557,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1016,1305464764,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1017,1674005566,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1018,138382115,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1019,1109108699,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1020,1078387959,no one,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1021,1173204791,JMP,Every day ,The sound and quality of the JMP,The goal was to reach the level of love that I have for the JMP and the quality of the service it offers ,G1Wom,,AO03,7,6,6,2,,3,7,6,6,5,5,,7,7,7,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO03,AO04,AO02,AO04,AO05,AO05,AO02
+Prolific,C1LYP9HZ,PRO-1022,925542693,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1023,1302048927,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1024,2076881071,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1025,1510741338,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1026,1709312872,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1027,1990321833,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1028,1323155373,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1029,510535872,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1030,1954918573,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1031,268525240,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1032,234497382,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1033,931819519,JMP,Once or twice a month.,Its powerful data visualisation capabilities,"Analysing data to identify key drivers of customer satisfaction, because JMP has  a capacity to handle large datasets",G1Wom,,AO02,6,6,6,2,,6,6,6,6,6,6,,6,6,6,6,,AO07,AO04,AO07,AO05,AO07,AO07,AO07,AO07,AO04,AO02,AO04,AO04,AO04,AO02,AO04,AO02,AO04,AO03
+Prolific,C1LYP9HZ,PRO-1034,1128589409,Data Studio,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1035,215778384,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1036,367753671,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1037,649271275,No visual data analysis system,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1038,21500276,JMP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1039,1301559108,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1040,1463523051,JMP,a few months ago I used it about 3 times per week,i remember selecting a data point and it highlighted all the connected data to it,i was trying to interact with data represented in a 3d model ,G2Man,,AO02,5,6,5,2,,4,5,4,7,4,8,,4,7,7,7,,AO06,AO05,AO06,AO06,AO07,AO07,AO06,AO04,AO04,AO03,AO04,AO04,AO05,AO05,AO04,AO03,AO03,AO04
+Prolific,,PRO-1041,376355507,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1072,1642380683,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1073,830014491,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1074,1561208328,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1075,1841962915,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1076,1530381833,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1077,28722643,Python,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1078,1284712706,Excel,I use it to organize and evaluate data.  Sometimes I will import/export data into Excel files to either turn into database objects or to parse through AI or something like that.,It is very versatile but also can get complex and bloated if you do a lot of functions and links.,It is our approved app at my work and I do not have any other choices.  We had a team project where I had to refer to a shared sheet in Excel for information I needed for my own action items on the task.,G2Man,,AO03,3,3,3,2,,6,7,6,5,5,6,,5,5,4,6,,AO03,AO02,AO03,AO03,AO02,AO01,AO04,AO02,AO01,AO04,AO02,AO03,AO04,AO02,AO03,AO04,AO04,AO02
+Prolific,C15VDVOL,PRO-1079,1657385912,Excel,Daily on weekdays for work and personal data tracking,"Its powerful grid system that uses dynamic formulas, conditional formatting and pivot tables to organize large datasets",My primary goal was to summarize monthly expense reports and create a dashboard for project tracking. I chose Excel because it handles structured data efficiently and allows for quick calculations using buit-in formulas,G2Man,,AO01,7,6,5,2,,7,4,5,6,7,7,,7,5,6,7,,AO06,AO05,AO07,AO03,AO04,AO03,AO04,AO03,AO04,AO02,AO04,AO04,AO02,AO03,AO05,AO03,AO04,AO05
+Prolific,C1LYP9HZ,PRO-1080,1980725831,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1081,1537520580,Excel,Monthly,I could use code to manipulate data,"Doing a budget, tracking my expenses ",G1Wom,,AO03,7,7,6,2,,7,7,7,7,6,6,,7,7,6,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO01,AO05,AO03,AO05,AO01,AO04,AO01,AO05,AO03
+Prolific,,PRO-1082,530646961,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1083,347781793,Tableau,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1084,799717003,Excel,weekly,chart presentation,Data visualisation. Excel is the easiest tool for me,G1Wom,,AO02,6,6,6,2,,6,6,7,7,7,6,,7,7,6,7,,AO07,AO07,AO06,AO06,AO05,AO05,AO04,AO03,AO04,AO02,AO04,AO01,AO03,AO02,AO03,AO01,AO03,AO02
+Prolific,,PRO-1085,1168121625,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1086,195853745,R,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1087,1688850455,Excel,About once a week.,"Math (formulas), pivot tables, autofill, charts, graphs, formatting",I used it to visualize data (collected from a program I have written to search for different key words on reddit) for an assignment (college).,G1Wom,,AO01,5,6,4,2,,6,8,6,5,6,6,"If it comes to the last question, if I caught an error it was almost always on my side (invalid data) so I always corrected it manually. If I misunderstood the question, please contact me.",6,7,7,7,"Experiences with Excel taught me a lot about how to better visualize the data and actually work with it. Before that, my work (mostly for college, not personal projects) was rather poorly done.",AO06,AO06,AO07,AO06,AO03,AO04,AO03,AO02,AO05,AO02,AO04,AO02,AO03,AO02,AO04,AO02,AO04,AO04
+Prolific,,PRO-1088,1283120459,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1089,1125828222,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1090,1950584027,Excel,4 or 5 Times per week,The generation of heatmap and bar chart,"In my most recent interaction with excel, my goal was to visualize the changement within the dataset and compare two features to reveal their correlation. Excel is easy to use and control, I used it many years since my freshman year ",G1Wom,,AO02,5,5,6,2,,6,6,7,7,6,7,,6,6,6,6,,AO06,AO05,AO06,AO06,AO04,AO04,AO02,AO04,AO05,AO03,AO04,AO04,AO04,AO03,AO03,AO03,AO04,AO02
+Prolific,C15VDVOL,PRO-1091,2144449168,Excel,Sometimes to do university projects or manage home budget.,"Pivot table was my favourite feature, it eased up managing many data tables.",I've used excel for simple home budget managing and creating tables of used products for my students science club. I've chosed excel because its easy to use and I was taught it in middle school.,G2Man,,AO01,5,6,6,2,,5,5,3,5,5,5,,6,6,4,6,,AO05,AO07,AO06,AO06,AO05,AO05,AO06,AO05,AO04,AO02,AO04,AO02,AO03,AO02,AO04,AO02,AO04,AO03
+Prolific,C15VDVOL,PRO-1092,2129304939,Excel,"I use Excel every few weeks for work, especially for interest calculations. ",The formulas. I use formulas every time I use Excel for work.,"Most recently, I had to use Excel to calculate compounded interest calculated bi-yearly. The goal was to get the total amount of interest over a certain amount of years for a legal matter.",G1Wom,,AO03,6,6,6,2,,7,4,6,7,6,7,,6,6,2,7,,AO06,AO04,AO07,AO04,AO03,AO03,AO05,AO05,AO04,AO02,AO04,AO02,AO04,AO01,AO03,AO02,AO04,AO03
+Prolific,C1LYP9HZ,PRO-1093,1058471527,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1094,388308666,Excel,I use Excel daily for my job. I'm an engineer,Excel is excellent as visual analytic tool. I can load all the data I have and then use Excel as visual analytic tool,I work using Excel daily. I usually use it loading data and make calculations with these data. Then I use excel to creat visual elaborations of these data to analyse them all,G2Man,,AO02,7,7,6,2,Excel is really usefull and easy to use thanks to the guide in the program and the different options and functions given,7,6,7,7,6,7,,7,6,7,7,,AO06,AO07,AO07,AO07,AO05,AO06,AO06,AO07,AO05,AO01,AO04,AO01,AO05,AO02,AO04,AO03,AO05,AO03
+Prolific,C1LYP9HZ,PRO-1095,1411433458,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1096,1388935098,Excel,Couple of times a month,Pie charts,It was to gather data and evaluate it for grading a school assessment,G3NB,,AO01,5,5,5,2,,6,6,7,7,6,6,,6,6,6,6,,AO06,AO05,AO06,AO04,AO05,AO06,AO06,AO04,AO04,AO03,AO04,AO03,AO04,AO02,AO04,AO04,AO04,AO04
+Prolific,C1LYP9HZ,PRO-1097,507104431,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1098,847464747,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1099,184906911,Excel,I use it weekly for data analysis and organisation,rthe grid based spreadsheet layout with tools,To organise data set for my paid advertising campaigns. The spreadsheet and tools are powerful,G2Man,,AO02,5,6,6,2,,4,5,6,5,6,6,,6,7,6,6,,AO05,AO04,AO05,AO05,AO03,AO06,AO04,AO06,AO03,AO04,AO05,AO04,AO03,AO04,AO03,AO04,AO04,AO04
+Prolific,,PRO-1100,590273174,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1101,1200049878,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1102,233351559,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1103,718357415,Excel,Almost every day.,The tables and the graphics and the functions,I would like to sum up many datas I have to work with. I am using Excel to visualize and calculate the data so fast as I can.,G1Wom,,AO02,6,6,6,2,,6,6,6,6,6,6,,6,6,6,6,,AO06,AO06,AO06,AO06,AO06,AO06,AO02,AO02,AO05,AO02,AO04,AO01,AO04,AO02,AO03,AO02,AO04,AO04
+Prolific,C15VDVOL,PRO-1104,551554932,Excel,I use it maybe once or twice a week,It has a grid layout,I used it to create a project schedule for my work. I chose it because it makes it easy to organize.,G1Wom,,AO02,5,5,4,2,,6,4,6,6,6,5,,6,6,4,6,,AO06,AO05,AO06,AO05,AO04,AO05,AO05,AO04,AO04,AO01,AO04,AO01,AO04,AO01,AO04,AO03,AO04,AO03
+Prolific,C15VDVOL,PRO-1105,1865131227,Excel,I use it for work,creating tables for work and formulas which help with it ,to control working procces with payments and attendance,G1Wom,,AO02,3,3,4,2,,5,4,5,6,5,6,,6,5,6,6,,AO05,AO04,AO06,AO04,AO05,AO05,AO03,AO04,AO04,AO03,AO05,AO03,AO04,AO02,AO03,AO04,AO04,AO04
+Prolific,C1LYP9HZ,PRO-1106,2051850530,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1107,1842593871,Excel,once a month,"i rmember that excel was easy to use, wasnt as difficult","i was helping my friend during the work and we had this one in work, i didnt even choosen that one",G2Man,,AO03,6,6,6,2,,5,5,6,6,5,6,,6,6,5,6,,AO06,AO06,AO06,AO06,AO04,AO05,AO02,AO03,AO04,AO03,AO04,AO03,AO03,AO04,AO05,AO02,AO03,AO03
+Prolific,,PRO-1108,1817529467,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1109,1374822522,Excel,I use Excel a few times every week,"It's very good for analyzing and inputting data because of the grid system where every cell can be referenced and used in calculations. It's also good in analyzing data using bar and pie charts, graphs and pivot tables.",I used excel to analyze sales made in a hotel over a one year period using a bar chart - this allowed us to easily identify best & worst performing months using the sort function and graphically using a bar chart. we were also able to calculate the monthly average. I've used Excel most of my life so it's my go to tool for data analysis,G2Man,,AO04,7,7,7,2,,7,7,7,7,7,7,,7,7,7,7,I've used Excel most my life,AO07,AO03,AO07,AO07,AO07,AO07,AO07,AO06,AO05,AO02,AO04,AO01,AO04,AO01,AO03,AO01,AO05,AO03
+Prolific,C15VDVOL,PRO-1110,1117509554,Excel,"I use excel almost every day at work, mostly for tracking data and building simple reports to share with the respective teams.","One thing that stands out is how it oragnizes everything into rows and columns, making it easy to sort, filter and calculate large sets of data. The ability to also compare and contrast data to look for ways to improve.","I was putting together a monthly budget and needed to track expenses, so I used Excel to enter all my data. I chose Excel because the formulas update automatically whenever I add new number, which saves me a lot of time compared to doing it manually. It also makes it easy to share amongst other, and I can set clear goals on how to move the business forward.",G2Man,,AO02,7,6,7,2,The system was easy to pick up and get started with. Setup didn't take much effort and the layout made sense. ,5,5,6,6,7,7,Overall.I found the visualizations easy to work clear and easy to work with. They matched the data well and made it simple to spot patterns without much extra effort.,7,6,6,7,"Overall it was pleasant to use. It genuinely is so useful to my work and helped me sort all that raw data a bit more efficiently, and let me get my main tasks down without hassle. ",AO06,AO05,AO07,AO04,AO05,AO05,AO04,AO06,AO05,AO01,AO04,AO01,AO05,AO02,AO04,AO01,AO04,AO02
+Prolific,C1LYP9HZ,PRO-1111,1216144882,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1112,1160276223,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1113,1996400227,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1114,684399116,A programming language,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1115,715997543,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1116,549706751,Excel, Weekly,Data entry,For entering the data and completing the task,G2Man,,AO01,6,4,4,2,,6,7,7,7,7,6,,7,5,6,7,,AO06,AO05,AO04,AO06,AO06,AO06,AO06,AO06,AO04,AO02,AO04,AO04,AO04,AO02,AO04,AO02,AO02,AO04
+Prolific,C15VDVOL,PRO-1117,259862117,Excel,I use it daily,It is reallly helpful to organize information,The main goal from my interaction with excel was to create registration sheets for the school where I currently work. I choose Excel as I needed to share this information with some of our partners and this is a system most of the people is familiar with,G2Man,,AO03,6,7,6,2,,6,5,6,7,6,7,,7,6,6,7,,AO07,AO07,AO07,AO06,AO06,AO06,AO04,AO04,AO05,AO01,AO04,AO01,AO04,AO01,AO04,AO03,AO04,AO02
+Prolific,C15VDVOL,PRO-1118,646517781,Excel,I have used Excel every day for the past 3 months.,"Excel can be very surprising, creative: so far, for me, whatever I am trying to achieve with it, I've been able to to do it. Two things that I find most useful are timelines and slicers. ","I am building a budget worksheet, that I hope to distribute online. I chose Excel, because I worked extensively with it in the past, as a data analyst, and this is the go-to analysis tool for amost everybody.",G1Wom,,AO02,7,7,7,2,"I found the system easy to understand in my current interactions, because I have known Excel for a long time now. So, it wasn't difficult to get up to speed with it, 3 months ago.",7,7,7,7,7,7,"For visualizations, I use charts(bar charts, pie charts, kpi cards, slicers, timelines, progression bars, etc..), linked to a pivot table. Once you know where to put the data(column, row, filter) and how to interpret the axis(horizontal.vertical), it comes easier.",7,7,7,7,,AO07,AO06,AO07,AO06,AO07,AO07,AO05,AO04,AO05,AO01,AO05,AO01,AO05,AO01,AO04,AO01,AO05,AO02
+Prolific,C15VDVOL,PRO-1119,14649853,Excel,I use Excel al leat twice a month.,I remember being able to make a chart from data inserted in a table.,The goal of my most recent interaction with Excel was to show a trend in a data set. I chose Excel because I am familiar with it.,G1Wom,,AO05,5,5,6,2,,6,4,6,6,6,6,,6,5,5,6,,AO06,AO06,AO06,AO06,AO04,AO05,AO06,AO05,AO04,AO01,AO04,AO02,AO04,AO01,AO04,AO01,AO03,AO02
+Prolific,,PRO-1120,1059127542,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1121,232187531,Excel,I am not using Excel frequently ,Spreadsheet and columns ,I have used excel most of my work experience ,G1Wom,,AO03,7,7,6,2,,7,7,7,7,7,7,,7,7,6,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO01,AO07,AO05,AO01,AO05,AO01,AO02,AO01,AO04,AO04,AO05,AO03
+Prolific,C15VDVOL,PRO-1122,709666755,Excel,I use it daily as part of my jobs which involves analysing data and compiling excel based reports.,It's a relatively easy program to use. It's great when dealing with complicated data sets. Pivot tables and graphs can be used to visually display data,My last task was to create a lease amortization table. I selected excel as I can use excel formulas to make the entire table formula driven. This allowed me to complete the table quickly compared to if I was using another system.,G1Wom,,AO02,5,6,7,2,,7,6,7,7,7,7,,7,6,6,7,,AO07,AO05,AO07,AO06,AO06,AO06,AO03,AO04,AO05,AO02,AO04,AO01,AO05,AO01,AO04,AO02,AO04,AO04
+Prolific,,PRO-1123,1369125826,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1124,1045094927,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1125,552666768,Excel,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1126,1614216812,Excel,Few times a week,The filters search,I had to select different parameters for a search among thousands of data. Excel helped me to find the datas i was looking for,G2Man,,AO03,3,4,3,2,,5,5,6,6,6,6,,7,6,5,7,It helped me through a very difficult research for my job,AO05,AO03,AO07,AO05,AO05,AO06,AO06,AO05,AO04,AO03,AO04,AO02,AO04,AO01,AO02,AO03,AO04,AO04
+Prolific,C15VDVOL,PRO-1127,15308611,Excel,Very frequently,Data filtration ,"I need to often clean collected data before it is processed. Because that is not possible in SPSS, I use Excel because it is so universal and user-friendly.",G1Wom,,AO02,6,7,7,2,,7,6,7,7,6,6,,5,6,7,6,,AO05,AO06,AO04,AO06,AO03,AO05,AO02,AO03,AO04,AO01,AO05,AO01,AO04,AO01,AO04,AO02,AO05,AO02
+Prolific,C15VDVOL,PRO-1128,580284189,Excel,"i use it almost everyday, preparing reports,creating tables","the one specific characteristics about excel is its flexibility. it allows you to organise , calculate and analyse","the goal of my most recent interaction with excel was to organise and analyse project related data and prepare a clear report. I chose excel because it is easy to use, flexible  and allows me to perform calculations",G1Wom,,AO02,7,7,7,2,,7,7,7,7,5,7,,7,7,2,7,,AO07,AO07,AO07,AO07,AO07,AO07,AO05,AO02,AO05,AO02,AO01,AO01,AO03,AO01,AO05,AO01,AO05,AO01
+Prolific,C15VDVOL,PRO-1129,617695464,Excel,i use once or twice a month,using formulas for accounting,we use excel at home for household income and taxing,G2Man,,AO03,6,4,5,2,,5,5,6,6,6,6,,6,4,4,5,,AO05,AO02,AO06,AO03,AO04,AO04,AO03,AO03,AO03,AO04,AO03,AO02,AO03,AO02,AO01,AO02,AO02,AO05
+Prolific,C15VDVOL,PRO-1130,1577465896,Excel,"I have used it daily for work, for the past 2-3 years. Before that, I used it about weekly in my previous job.","I like the way you can apply a color gradient to a ranked dataset (for example, scores high to low). Looks very elegant. ","I have recently used Excel to generate graphs displaying a breakdown of investors in historical annuities, for an academic monograph. I chose Excel because in my field, it is the to-go program to do it, likely because it is relatively accessible to users without an extensive technical/IT background. ",G1Wom,,AO02,4,4,5,2,"Though using Excel for visualizations is not rocket science, it does take some trial, error and tutorials before figuring it out. Hence, while it takes some practice in the beginning, it is relatively easy to get good at it, hence the middle-of-the-road score for the last two questions. ",7,7,7,6,6,6,,6,4,2,6,"To me, Excel generates mere visualizations of data that I am already intimately familiar with. Hence, it does not particularly encourage me to think more deeply about it, nor does a visualization render insights that are very surprising when you are already familiar with the data itself (in this case). ",AO05,AO05,AO06,AO05,AO03,AO03,AO01,AO01,AO04,AO03,AO03,AO02,AO05,AO02,AO03,AO02,AO04,AO03
+Prolific,,PRO-1131,826221702,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1132,868875017,Excel,"I use Excel every day at work, dive days a week",Pivot tables for analysis and formula auto completion using matching,The goal was to create informative and illustrative charts using more  than 4000 public procurement records from purchases made by my institution. I used Excel because it is only tool in which I have an advanced level of proficiency and it is also the tool used throughout the entire institution,G2Man,,AO02,7,6,6,2,,6,5,7,6,6,7,,7,5,6,6,,AO05,AO03,AO06,AO06,AO03,AO05,AO04,AO02,AO04,AO02,AO03,AO01,AO04,AO02,AO03,AO01,AO04,AO05
+Prolific,C1LYP9HZ,PRO-1133,247524744,Qlik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C1LYP9HZ,PRO-1134,728891814,Power BI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,C15VDVOL,PRO-1135,1470007809,Excel,Almost every day,Calc operations,I am acquainted with the tool since release by Microsoft,G2Man,,AO06,5,3,5,2,,6,4,5,6,6,6,,6,6,6,6,,AO04,AO05,AO06,AO05,AO05,AO06,AO05,AO05,AO04,AO03,AO03,AO03,AO03,AO02,AO03,AO02,AO04,AO04
+Prolific,,PRO-1136,1735593567,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1137,858333145,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1138,366681661,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1139,148285860,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prolific,,PRO-1140,1646941325,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

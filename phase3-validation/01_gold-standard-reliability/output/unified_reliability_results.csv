@@ -1,0 +1,27 @@
+=== RELIABILITY SUMMARY OVERVIEW ===
+"Scale_Or_Dimension","Items_Evaluated","Items_Count","Raw_Cronbach_Alpha","Std_Cronbach_Alpha","McDonald_Omega_Total"
+"SUS (System Usability Scale)","SUS_1 - SUS_10",10,0.814,0.817,0.818
+"UEQ-S Pragmatic Quality (PQ)","UEQ_1 - UEQ_4",4,0.817,0.819,0.824
+"UEQ-S Hedonic Quality (HQ)","UEQ_5 - UEQ_8",4,0.826,0.833,0.833
+"UEQ-S Overall","UEQ_1 - UEQ_8",8,0.844,0.853,0.89
+
+=== ITEM-LEVEL DIAGNOSTICS (ALPHA IF DROPPED) ===
+"Scale_Or_Dimension","Item","Raw_Alpha_If_Dropped","Std_Alpha_If_Dropped"
+"SUS (System Usability Scale)","SUS_1",0.806,0.807
+"SUS (System Usability Scale)","SUS_2",0.785,0.79
+"SUS (System Usability Scale)","SUS_3",0.803,0.805
+"SUS (System Usability Scale)","SUS_4",0.798,0.802
+"SUS (System Usability Scale)","SUS_5",0.808,0.81
+"SUS (System Usability Scale)","SUS_6",0.8,0.805
+"SUS (System Usability Scale)","SUS_7",0.799,0.8
+"SUS (System Usability Scale)","SUS_8",0.789,0.794
+"SUS (System Usability Scale)","SUS_9",0.793,0.792
+"SUS (System Usability Scale)","SUS_10",0.796,0.8
+"UEQ-S Pragmatic Quality (PQ)","UEQ_1",0.782,0.779
+"UEQ-S Pragmatic Quality (PQ)","UEQ_2",0.734,0.746
+"UEQ-S Pragmatic Quality (PQ)","UEQ_3",0.817,0.818
+"UEQ-S Pragmatic Quality (PQ)","UEQ_4",0.724,0.743
+"UEQ-S Hedonic Quality (HQ)","UEQ_5",0.786,0.789
+"UEQ-S Hedonic Quality (HQ)","UEQ_6",0.777,0.775
+"UEQ-S Hedonic Quality (HQ)","UEQ_7",0.782,0.797
+"UEQ-S Hedonic Quality (HQ)","UEQ_8",0.779,0.795

@@ -1,0 +1,14 @@
+code,short_name,factor,wording
+P064,CogSysThinkDeep,Cognitive value,The tool encouraged me to think deeply about my data
+P027,CogTaskComplete,Cognitive value,I could complete my essential tasks efficiently
+P060,CogSysEnjoy,Cognitive value,I enjoyed using this system
+P301,CogSysUseful,Cognitive value,The system was useful for me
+P026,IntSysEasyStart,Intuitiveness,I found it easy to get started using this system
+P4026A,IntAnalysisConfigure,Intuitiveness,Getting the tool configured for my analysis was straightforward
+P088,IntSysSimpleUnderstand,Intuitiveness,I found the system simple to understand
+P089,VisSimpleUnderstand,Visualization,The visual representations I saw were simple to understand
+P022A,VisRemember,Visualization,I can easily remember how to read the visualizations in the system
+P067,VisTrialError,Visualization,I could safely engage in a trial and error analysis process
+P097,VisSysRetrieveInfo,Visualization,Using the system I could easily retrieve information from my data
+P098,VisAppropriate,Visualization,I found the visual representations provided by the system were appropriate
+P106,VisFaithful,Visualization,The visualizations I saw seemed to represent the data faithfully

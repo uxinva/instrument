@@ -1,0 +1,18 @@
+# Python packages for the data preparation scripts (phase3-validation/data/)
+# and the step 02 notebook (phase3-validation/02_scale-correlations/).
+#
+# Versions are those of the environment that produced the published results
+# (Python on Windows). The same results were also obtained with pandas 2.3.3.
+# Install with:  pip install -r requirements.txt
+
+pandas==3.0.1
+numpy==2.4.3
+scipy==1.17.1
+matplotlib==3.10.8
+seaborn==0.13.1
+openpyxl==3.1.5
+
+# to run the notebook and export its HTML report
+jupyterlab==4.0.13
+ipykernel==6.29.4
+nbconvert==7.17.0

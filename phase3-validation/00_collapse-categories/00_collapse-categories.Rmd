@@ -1,0 +1,188 @@
+---
+title: "Category Collapsing for Low-Frequency Likert Items"
+output:
+  html_document:
+    toc: true
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = TRUE
+)
+
+library(knitr)
+library(dplyr)
+library(here)
+
+# Paths are relative to the repository root (instrument.Rproj)
+phase_dir  <- here("phase3-validation")
+data_dir   <- file.path(phase_dir, "data", "prepared")
+output_dir <- file.path(phase_dir, "00_collapse-categories", "output")
+```
+
+## 1. Defining Function
+
+```{r define-function}
+collapse_logic <- function(file_name, threshold = 0.025, out_dir = output_dir) {
+  
+  if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
+  
+  base_file   <- basename(file_name)
+  output_name <- gsub(".csv", "_lowfreqcollapsed.csv", base_file)
+  output_path <- file.path(out_dir, output_name)
+  
+  log_name    <- gsub(".csv", "_changes_made.csv", base_file)
+  log_path    <- file.path(out_dir, log_name)
+  
+  if (!file.exists(file_name)) {
+    message("--- File not found: ", file_name)
+    return(NULL)
+  }
+  
+  df_mod <- read.csv(file_name, check.names = FALSE, fileEncoding = "UTF-8-BOM")
+  message("--- Processing: ", file_name)
+  
+  # Ignore id and non-item columns
+  items <- setdiff(names(df_mod), c("id", "seed", "stimulus"))
+  
+  fusion_log <- data.frame(
+    item         = character(),
+    from         = numeric(),
+    to           = numeric(),
+    prop         = numeric(),
+    num_cases    = numeric(),
+    stringsAsFactors = FALSE
+  )
+  
+  changes_made <- 0
+  
+  for (item in items) {
+    if (item == "id" || !is.numeric(df_mod[[item]])) next
+    
+    repeat {
+      counts <- table(df_mod[[item]], useNA = "no")
+      if (length(counts) <= 1) break 
+      
+      props <- prop.table(counts)
+      low_freq_cats <- as.numeric(names(props[props <= threshold]))
+      if (length(low_freq_cats) == 0) break
+      
+      # Scale with active categories
+      active_scale <- sort(as.numeric(names(counts)))
+      
+      target <- low_freq_cats[1]
+      current_idx <- which(active_scale == target)
+      
+      left_val  <- if (current_idx > 1) active_scale[current_idx - 1] else NA
+      right_val <- if (current_idx < length(active_scale)) active_scale[current_idx + 1] else NA
+      
+      c_left  <- if (!is.na(left_val)) counts[as.character(left_val)] else -1
+      c_right <- if (!is.na(right_val)) counts[as.character(right_val)] else -1
+      
+      # Criteria for selecting the best neighbor
+      if (!is.na(left_val) && !is.na(right_val)) {
+        destination <- if (c_left >= c_right) left_val else right_val
+      } else if (!is.na(left_val)) {
+        destination <- left_val
+      } else if (!is.na(right_val)) {
+        destination <- right_val
+      } else {
+        break
+      }
+      
+      # Registering change
+      n_casos_target <- as.numeric(counts[as.character(target)])
+      prop_target    <- as.numeric(props[as.character(target)])
+      
+      fusion_log <- rbind(
+        fusion_log,
+        data.frame(
+          item      = item,
+          from      = target,
+          to        = destination,
+          prop      = round(prop_target, 4),
+          num_cases = n_casos_target,
+          stringsAsFactors = FALSE
+        )
+      )
+      
+      # Substituting value
+      df_mod[[item]][df_mod[[item]] == target] <- destination
+      changes_made <- changes_made + 1
+    }
+  }
+  
+  write.csv(df_mod, output_path, row.names = FALSE)
+  write.csv(fusion_log, log_path, row.names = FALSE)
+  message("DONE: Saved in ", output_path, " (Total changes: ", changes_made, ")")
+  
+  return(list(log = fusion_log, changes = changes_made))
+}
+```
+
+## 2. Execution
+
+```{r run-collapse}
+threshold_val <- 0.025
+
+files_to_process <- c(file.path(data_dir, "ux_ratings.csv"))
+
+results_list <- list()
+
+for (f in files_to_process) {
+  results_list[[f]] <- collapse_logic(f, threshold = threshold_val, out_dir = output_dir)
+}
+```
+
+## 3. Summary of Collapsed Categories
+
+```{r show-log, echo=FALSE}
+all_logs <- bind_rows(lapply(results_list, function(res) res$log))
+
+if (!is.null(all_logs) && nrow(all_logs) > 0) {
+  kable(
+    all_logs,
+    caption = "Merged Categories (Proportion <= 2.5%)",
+    col.names = c("Item", "Original Value", "Merged Into", "Proportion", "Cases (N)")
+  )
+} else {
+  cat("**No categories required collapsing or the input file was not found.**")
+}
+```
+
+## 4. Files for the next steps
+
+The collapsed UXVis items are combined with the gold-standard answers, which are not collapsed. This file is used by step 03.
+
+```{r combine-gold-standards}
+ux_collapsed <- read.csv(file.path(output_dir, "ux_ratings_lowfreqcollapsed.csv"), check.names = FALSE)
+ueqs <- read.csv(file.path(data_dir, "ueqs_ratings.csv"), check.names = FALSE, fileEncoding = "UTF-8-BOM")
+sus  <- read.csv(file.path(data_dir, "sus_ratings.csv"),  check.names = FALSE, fileEncoding = "UTF-8-BOM")
+
+# The three files have the same participants in the same order
+stopifnot(identical(ux_collapsed$id, ueqs$id), identical(ux_collapsed$id, sus$id))
+
+ux_sus_ueqs <- cbind(ux_collapsed,
+                     ueqs[, grep("^UEQ_", names(ueqs))],
+                     sus[,  grep("^SUS_", names(sus))])
+
+write.csv(ux_sus_ueqs, file.path(output_dir, "uxColaps_sus_ueqs_ratings.csv"), row.names = FALSE)
+dim(ux_sus_ueqs)
+```
+
+The item codes are replaced by their short names from the codebook. This file is used by steps 05 and 06.
+
+```{r rename-items}
+codebook <- read.csv(file.path(phase_dir, "data", "codebook", "items.csv"))
+
+multigroup <- ux_collapsed
+item_cols  <- match(codebook$code, names(multigroup))
+stopifnot(!anyNA(item_cols))
+names(multigroup)[item_cols] <- codebook$short_name
+
+write.csv(multigroup, file.path(output_dir, "multigroup_ratings.csv"), row.names = FALSE)
+kable(codebook[, c("code", "short_name", "factor")], caption = "Item names used in multigroup_ratings.csv")
+```

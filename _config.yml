@@ -1,0 +1,27 @@
+# GitHub Pages (Jekyll) settings.
+# README.md files become the index page of their folder, and links between
+# .md files are converted to links between the generated pages.
+title: "UX in Visual Analytics – Instrument"
+description: "Data, scripts and analysis reports for an instrument to evaluate the user experience of visual analytics systems"
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+relative_links:
+  enabled: true
+  collections: false
+
+# Not published on the site
+exclude:
+  - phase3-validation/data/raw
+  - "*.Rproj"
+  - renv/
+  - renv.lock
+  - requirements.txt
+  - Gemfile
+  - Gemfile.lock

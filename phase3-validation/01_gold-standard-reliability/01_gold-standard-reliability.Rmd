@@ -1,0 +1,177 @@
+---
+title: "Unified Reliability Analysis: SUS and UEQ-S"
+output:
+  html_document:
+    toc: true
+    theme: readable
+---
+
+
+
+```{r setup, include=FALSE}
+# ------------------------------------------------------------------------------
+# R Script: Unified Reliability Analysis for SUS and UEQ-S
+# Dynamic Path Resolution & Single CSV Output Export
+# Output: output/unified_reliability_results.csv
+# ------------------------------------------------------------------------------
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(psych)
+library(tidyverse)
+library(knitr)
+
+library(here)
+
+# Paths are relative to the repository root (instrument.Rproj)
+data_dir   <- here("phase3-validation", "data", "prepared")
+output_dir <- here("phase3-validation", "01_gold-standard-reliability", "output")
+
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+```
+## Reliability Analysis
+
+```{r reliability-analysis}
+# ==============================================================================
+# SECTION 1: SYSTEM USABILITY SCALE (SUS) RELIABILITY ANALYSIS
+# ==============================================================================
+
+sus_input_path <- file.path(data_dir, "sus_ratings.csv")
+
+if (file.exists(sus_input_path)) {
+  cat("[INFO] Processing SUS data from:", sus_input_path, "\n")
+  sus_data <- read.csv(sus_input_path, fileEncoding = "UTF-8-BOM")
+  
+  # Normalize column names to uppercase 'SUS_' (SUS_1 to SUS_10)
+  colnames(sus_data) <- gsub("sus_", "SUS_", colnames(sus_data), ignore.case = TRUE)
+  
+  # Reverse scoring for negative items (SUS_2, SUS_4, SUS_6, SUS_8, SUS_10)
+  sus_negative_items <- c("SUS_2", "SUS_4", "SUS_6", "SUS_8", "SUS_10")
+  
+  sus_data_recoded <- sus_data %>%
+    select(SUS_1:SUS_10) %>%
+    mutate(across(all_of(sus_negative_items), ~ 6 - .x))
+  
+  # Compute reliability metrics
+  sus_alpha <- psych::alpha(sus_data_recoded)
+  sus_omega <- psych::omega(sus_data_recoded, nfactors = 1, plot = FALSE)
+  
+  # SUS Summary Entry
+  sus_summary <- data.frame(
+    Scale_Or_Dimension   = "SUS (System Usability Scale)",
+    Items_Evaluated      = "SUS_1 - SUS_10",
+    Items_Count          = 10,
+    Raw_Cronbach_Alpha   = round(sus_alpha$total$raw_alpha, 3),
+    Std_Cronbach_Alpha   = round(sus_alpha$total$std.alpha, 3),
+    McDonald_Omega_Total = round(sus_omega$omega.tot, 3)
+  )
+  
+  # SUS Item Diagnostics
+  sus_item_diag <- as.data.frame(sus_alpha$alpha.drop[, c("raw_alpha", "std.alpha")]) %>%
+    rownames_to_column(var = "Item") %>%
+    mutate(
+      Scale_Or_Dimension   = "SUS (System Usability Scale)",
+      Raw_Alpha_If_Dropped = round(raw_alpha, 3),
+      Std_Alpha_If_Dropped = round(std.alpha, 3)
+    ) %>%
+    select(Scale_Or_Dimension, Item, Raw_Alpha_If_Dropped, Std_Alpha_If_Dropped)
+
+} else {
+  warning("File 'sus_ratings.csv' not found in Data directory.")
+  sus_summary   <- NULL
+  sus_item_diag <- NULL
+}
+
+# ==============================================================================
+# SECTION 2: SHORT USER EXPERIENCE QUESTIONNAIRE (UEQ-S) RELIABILITY ANALYSIS
+# ==============================================================================
+
+ueqs_input_path <- file.path(data_dir, "ueqs_ratings.csv")
+
+if (file.exists(ueqs_input_path)) {
+  cat("[INFO] Processing UEQ-S data from:", ueqs_input_path, "\n")
+  ueqs_data <- read.csv(ueqs_input_path, fileEncoding = "UTF-8-BOM")
+  
+  # Normalize column names to uppercase 'UEQ_' (UEQ_1 to UEQ_8)
+  colnames(ueqs_data) <- gsub("ueq_", "UEQ_", colnames(ueqs_data), ignore.case = TRUE)
+  ueqs_data <- ueqs_data %>% select(UEQ_1:UEQ_8)
+  
+  # Subset dimensions
+  ueqs_pq <- ueqs_data %>% select(UEQ_1:UEQ_4)
+  ueqs_hq <- ueqs_data %>% select(UEQ_5:UEQ_8)
+  
+  # Compute reliability metrics
+  alpha_pq <- psych::alpha(ueqs_pq)
+  omega_pq <- psych::omega(ueqs_pq, nfactors = 1, plot = FALSE)
+  
+  alpha_hq <- psych::alpha(ueqs_hq)
+  omega_hq <- psych::omega(ueqs_hq, nfactors = 1, plot = FALSE)
+  
+  alpha_overall <- psych::alpha(ueqs_data)
+  omega_overall <- psych::omega(ueqs_data, nfactors = 2, plot = FALSE)
+  
+  # UEQ-S Summary Entries
+  ueqs_summary <- data.frame(
+    Scale_Or_Dimension   = c("UEQ-S Pragmatic Quality (PQ)", "UEQ-S Hedonic Quality (HQ)", "UEQ-S Overall"),
+    Items_Evaluated      = c("UEQ_1 - UEQ_4", "UEQ_5 - UEQ_8", "UEQ_1 - UEQ_8"),
+    Items_Count          = c(4, 4, 8),
+    Raw_Cronbach_Alpha   = round(c(alpha_pq$total$raw_alpha, alpha_hq$total$raw_alpha, alpha_overall$total$raw_alpha), 3),
+    Std_Cronbach_Alpha   = round(c(alpha_pq$total$std.alpha, alpha_hq$total$std.alpha, alpha_overall$total$std.alpha), 3),
+    McDonald_Omega_Total = round(c(omega_pq$omega.tot, omega_hq$omega.tot, omega_overall$omega.tot), 3)
+  )
+  
+  # UEQ-S Item Diagnostics
+  diag_pq <- as.data.frame(alpha_pq$alpha.drop[, c("raw_alpha", "std.alpha")]) %>%
+    rownames_to_column(var = "Item") %>%
+    mutate(Scale_Or_Dimension = "UEQ-S Pragmatic Quality (PQ)")
+    
+  diag_hq <- as.data.frame(alpha_hq$alpha.drop[, c("raw_alpha", "std.alpha")]) %>%
+    rownames_to_column(var = "Item") %>%
+    mutate(Scale_Or_Dimension = "UEQ-S Hedonic Quality (HQ)")
+    
+  ueqs_item_diag <- bind_rows(diag_pq, diag_hq) %>%
+    mutate(
+      Raw_Alpha_If_Dropped = round(raw_alpha, 3),
+      Std_Alpha_If_Dropped = round(std.alpha, 3)
+    ) %>%
+    select(Scale_Or_Dimension, Item, Raw_Alpha_If_Dropped, Std_Alpha_If_Dropped)
+
+} else {
+  warning("File 'ueqs_ratings.csv' not found in Data directory.")
+  ueqs_summary   <- NULL
+  ueqs_item_diag <- NULL
+}
+
+```
+
+
+```{r export-and-diagnostics, echo=TRUE}
+
+## Export and Summary Diagnostics
+
+# ==============================================================================
+# SECTION 3: SINGLE CONSOLIDATED CSV EXPORT
+# ==============================================================================
+
+combined_summary     <- bind_rows(sus_summary, ueqs_summary)
+combined_diagnostics <- bind_rows(sus_item_diag, ueqs_item_diag)
+
+output_csv_path <- file.path(output_dir, "unified_reliability_results.csv")
+
+file_conn <- file(output_csv_path, open = "wt")
+writeLines("=== RELIABILITY SUMMARY OVERVIEW ===", file_conn)
+write.csv(combined_summary, file_conn, row.names = FALSE)
+
+writeLines("\n=== ITEM-LEVEL DIAGNOSTICS (ALPHA IF DROPPED) ===", file_conn)
+write.csv(combined_diagnostics, file_conn, row.names = FALSE)
+close(file_conn)
+
+# HTML Exibition:
+if (!is.null(combined_summary)) {
+  kable(combined_summary, caption = "Unified Reliability Analysis Summary")
+}
+
+if (!is.null(combined_diagnostics)) {
+  kable(combined_diagnostics, caption = "Unified Item-Level Diagnostics (Alpha If Dropped)")
+}
+```
+
