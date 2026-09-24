@@ -1,6 +1,6 @@
 # 00 Collapse categories
 
-**Notebook:** [`00_collapse-categories.Rmd`](00_collapse-categories.Rmd) · **Report:** [`00_collapse-categories.html`](00_collapse-categories.html)
+**Notebook:** [`00_collapse-categories.Rmd`](00_collapse-categories.Rmd) · **Report:** [`00_collapse-categories.html`](https://uxinva.github.io/instrument/phase3-validation/00_collapse-categories/00_collapse-categories.html)
 
 ## What it does
 

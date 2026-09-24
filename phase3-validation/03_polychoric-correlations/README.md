@@ -1,6 +1,6 @@
 # 03 Polychoric correlations
 
-**Notebook:** [`03_polychoric-correlations.Rmd`](03_polychoric-correlations.Rmd) · **Reports:** [UXVis items](03_polychoric-correlations_uxvis-scales.html) · [All items](03_polychoric-correlations_all-scales.html)
+**Notebook:** [`03_polychoric-correlations.Rmd`](03_polychoric-correlations.Rmd) · **Reports:** [UXVis items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_uxvis-scales.html) · [All items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_all-scales.html)
 
 ## What it does
 

@@ -1,6 +1,6 @@
 # 05 Multi-group CFA
 
-**Notebook:** [`05_cfa-multigroup.Rmd`](05_cfa-multigroup.Rmd) · **Report:** [`05_cfa-multigroup.html`](05_cfa-multigroup.html)
+**Notebook:** [`05_cfa-multigroup.Rmd`](05_cfa-multigroup.Rmd) · **Report:** [`05_cfa-multigroup.html`](https://uxinva.github.io/instrument/phase3-validation/05_cfa-multigroup/05_cfa-multigroup.html)
 
 ## What it does
 

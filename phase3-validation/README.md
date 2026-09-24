@@ -11,13 +11,13 @@ The steps must be run in this order, because each step reads files produced by t
 | Step | What it does | Reads | Report |
 |---|---|---|---|
 | [Data preparation](data/README.md) | Anonymises, cleans and merges the three LimeSurvey exports (Python scripts) | `data/raw/` | — |
-| [00 Collapse categories](00_collapse-categories/README.md) | Merges rarely used answer options of the UXVis items into neighbouring ones | `data/prepared/` | [HTML](00_collapse-categories/00_collapse-categories.html) |
-| [01 Gold-standard reliability](01_gold-standard-reliability/README.md) | Reliability (α, ω) of SUS and UEQ-S | `data/prepared/` | [HTML](01_gold-standard-reliability/01_gold-standard-reliability.html) |
-| [02 Scale correlations](02_scale-correlations/README.md) | Pearson correlations between scale scores (UXVis factors, SUS, UEQ-S) | `data/prepared/` | [HTML](02_scale-correlations/02_scale-correlations.html) |
-| [03 Polychoric correlations](03_polychoric-correlations/README.md) | Item-level polychoric correlations and clustering | step 00 | [UXVis items](03_polychoric-correlations/03_polychoric-correlations_uxvis-scales.html) · [All items](03_polychoric-correlations/03_polychoric-correlations_all-scales.html) |
-| [04 Number of factors](04_number-of-factors/README.md) | Exploratory factor analysis and parallel analysis | step 03 | [3 factors](04_number-of-factors/04_number-of-factors_3-factors.html) · [4 factors](04_number-of-factors/04_number-of-factors_4-factors.html) |
-| [05 Multi-group CFA](05_cfa-multigroup/README.md) | Reliability and confirmatory factor analysis, pooled and per system | step 00 | [HTML](05_cfa-multigroup/05_cfa-multigroup.html) |
-| [06 Alternative structures](06_alternative-structures/README.md) | Compares 11 alternative factor structures (EFA and CFA) | step 00 | [HTML](06_alternative-structures/06_alternative-structures.html) |
+| [00 Collapse categories](00_collapse-categories/README.md) | Merges rarely used answer options of the UXVis items into neighbouring ones | `data/prepared/` | [HTML](https://uxinva.github.io/instrument/phase3-validation/00_collapse-categories/00_collapse-categories.html) |
+| [01 Gold-standard reliability](01_gold-standard-reliability/README.md) | Reliability (α, ω) of SUS and UEQ-S | `data/prepared/` | [HTML](https://uxinva.github.io/instrument/phase3-validation/01_gold-standard-reliability/01_gold-standard-reliability.html) |
+| [02 Scale correlations](02_scale-correlations/README.md) | Pearson correlations between scale scores (UXVis factors, SUS, UEQ-S) | `data/prepared/` | [HTML](https://uxinva.github.io/instrument/phase3-validation/02_scale-correlations/02_scale-correlations.html) |
+| [03 Polychoric correlations](03_polychoric-correlations/README.md) | Item-level polychoric correlations and clustering | step 00 | [UXVis items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_uxvis-scales.html) · [All items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_all-scales.html) |
+| [04 Number of factors](04_number-of-factors/README.md) | Exploratory factor analysis and parallel analysis | step 03 | [3 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_3-factors.html) · [4 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_4-factors.html) |
+| [05 Multi-group CFA](05_cfa-multigroup/README.md) | Reliability and confirmatory factor analysis, pooled and per system | step 00 | [HTML](https://uxinva.github.io/instrument/phase3-validation/05_cfa-multigroup/05_cfa-multigroup.html) |
+| [06 Alternative structures](06_alternative-structures/README.md) | Compares 11 alternative factor structures (EFA and CFA) | step 00 | [HTML](https://uxinva.github.io/instrument/phase3-validation/06_alternative-structures/06_alternative-structures.html) |
 
 ## How to reproduce
 

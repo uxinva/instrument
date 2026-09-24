@@ -1,6 +1,6 @@
 # 02 Scale correlations
 
-**Notebook:** [`02_scale-correlations.ipynb`](02_scale-correlations.ipynb) (Python) · **Report:** [`02_scale-correlations.html`](02_scale-correlations.html)
+**Notebook:** [`02_scale-correlations.ipynb`](02_scale-correlations.ipynb) (Python) · **Report:** [`02_scale-correlations.html`](https://uxinva.github.io/instrument/phase3-validation/02_scale-correlations/02_scale-correlations.html)
 
 ## What it does
 

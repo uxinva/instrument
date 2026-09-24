@@ -1,6 +1,6 @@
 # 06 Alternative structures
 
-**Notebook:** [`06_alternative-structures.Rmd`](06_alternative-structures.Rmd) · **Report:** [`06_alternative-structures.html`](06_alternative-structures.html)
+**Notebook:** [`06_alternative-structures.Rmd`](06_alternative-structures.Rmd) · **Report:** [`06_alternative-structures.html`](https://uxinva.github.io/instrument/phase3-validation/06_alternative-structures/06_alternative-structures.html)
 
 ## What it does
 

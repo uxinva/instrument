@@ -1,6 +1,6 @@
 # 01 Gold-standard reliability
 
-**Notebook:** [`01_gold-standard-reliability.Rmd`](01_gold-standard-reliability.Rmd) · **Report:** [`01_gold-standard-reliability.html`](01_gold-standard-reliability.html)
+**Notebook:** [`01_gold-standard-reliability.Rmd`](01_gold-standard-reliability.Rmd) · **Report:** [`01_gold-standard-reliability.html`](https://uxinva.github.io/instrument/phase3-validation/01_gold-standard-reliability/01_gold-standard-reliability.html)
 
 ## What it does
 

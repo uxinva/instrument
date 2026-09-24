@@ -13,6 +13,20 @@ The rendered reports are published at **<https://uxinva.github.io/instrument/>**
 | Phase 3: Scale validation | [`phase3-validation/`](phase3-validation/README.md) | Being documented |
 | Other phases | *to be added* | Not yet documented |
 
+### Analysis reports: phase 3 (scale validation)
+
+| Step | Report |
+|---|---|
+| 00 Collapse categories | [report](https://uxinva.github.io/instrument/phase3-validation/00_collapse-categories/00_collapse-categories.html) |
+| 01 Gold-standard reliability | [report](https://uxinva.github.io/instrument/phase3-validation/01_gold-standard-reliability/01_gold-standard-reliability.html) |
+| 02 Scale correlations | [report](https://uxinva.github.io/instrument/phase3-validation/02_scale-correlations/02_scale-correlations.html) |
+| 03 Polychoric correlations | [UXVis items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_uxvis-scales.html) · [all items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_all-scales.html) |
+| 04 Number of factors | [3 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_3-factors.html) · [4 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_4-factors.html) |
+| 05 Multi-group CFA | [report](https://uxinva.github.io/instrument/phase3-validation/05_cfa-multigroup/05_cfa-multigroup.html) |
+| 06 Alternative structures | [report](https://uxinva.github.io/instrument/phase3-validation/06_alternative-structures/06_alternative-structures.html) |
+
+What each step does is described in the [phase README](phase3-validation/README.md).
+
 Each phase is self-contained. It has its own `data/` folder and a series of numbered analysis steps, each with a README, a notebook, its rendered HTML report and an `output/` folder.
 
 ## Repository structure

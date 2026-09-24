@@ -1,6 +1,6 @@
 # 04 Number of factors
 
-**Notebook:** [`04_number-of-factors.Rmd`](04_number-of-factors.Rmd) · **Reports:** [3 factors](04_number-of-factors_3-factors.html) · [4 factors](04_number-of-factors_4-factors.html)
+**Notebook:** [`04_number-of-factors.Rmd`](04_number-of-factors.Rmd) · **Reports:** [3 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_3-factors.html) · [4 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_4-factors.html)
 
 ## What it does
 
