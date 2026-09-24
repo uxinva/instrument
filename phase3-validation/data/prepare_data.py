@@ -42,7 +42,7 @@ EXCLUDED = {"results-survey127653.csv": ["25", "59"]}
 VALID_COMPLETION_CODE = "C15VDVOL"
 ATTENTION_ITEM = "P902"      # attention check: participants were asked to answer 2
 ATTENTION_ANSWER = "2"
-NOT_APPLICABLE = "8"         # TO CONFIRM: meaning of answer option 8 in the UXVis items
+DONT_KNOW = "8"              # answer option 8 of the UXVis items is "I don't know"
 
 
 # --- A. Corrections to individual files -------------------------------------
@@ -152,7 +152,8 @@ def valid_grades(complete: pd.DataFrame) -> pd.DataFrame:
 
     uxvis = [c for c in df.columns if c.startswith("P")]
     for col in uxvis:
-        df[col] = pd.to_numeric(df[col].where(df[col] != NOT_APPLICABLE), errors="raise").astype("Int64")
+        # "I don't know" is not a position on the 1-7 scale, so it becomes a missing value
+        df[col] = pd.to_numeric(df[col].where(df[col] != DONT_KNOW), errors="raise").astype("Int64")
 
     return df.reset_index(drop=True)
 

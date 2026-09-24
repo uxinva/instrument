@@ -140,8 +140,7 @@ Starting from `ratings_complete.csv`:
 2. **Attention check.** `P902` is an attention-check item that asked participants to answer 2. Keep only rows where `P902` = 2, then drop `P902`.
 3. Drop the comment columns, `E01Expertise`, `SysCharac`, `InteractDesc`, `QGender`, `QGender[other`, `QAge2`, `Participant` and `ExitOK` / `CompletionCode`.
 4. Convert the SUS and UEQ answers from codes to numbers: `AO01` → 1, `AO02` → 2, …, `AO07` → 7.
-5. In the UXVis items (columns starting with `P`), replace `8` with `NA`.
-   > **To confirm:** what answer option 8 means (e.g. "not applicable" / "don't know").
+5. **"I don't know" answers.** The UXVis items (columns starting with `P`) are answered on a 1–7 scale, plus an 8th option, *I don't know*. It is not a position on the scale, so `8` is replaced with `NA` (missing). In the valid data this concerns 5 answers from 5 participants (P106: 2; P067, P027, P064: 1 each).
 
 ### E. Split by instrument
 

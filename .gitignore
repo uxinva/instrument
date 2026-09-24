@@ -26,3 +26,5 @@ Thumbs.db
 # Original survey exports and the pseudonym map (personal information).
 # Never commit these. data/raw/ holds the anonymised exports instead.
 **/data/private/
+**/data/private.*
+**/data/private-*
