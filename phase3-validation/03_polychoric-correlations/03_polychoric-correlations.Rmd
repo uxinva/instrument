@@ -166,8 +166,8 @@ diag(p_mat) <- NA
 groups_vec <- item_to_group$group[match(colnames(r_mat), item_to_group$item)]
 
 # Theme helper for axis labels
-axis_text_element <- function(colors, angle = 0, hjust = 0.5, vjust = 0.5) {
-  ggplot2::element_text(angle = angle, hjust = hjust, vjust = vjust, colour = colors, face = "bold")
+axis_text_element <- function(colors, angle = 0, hjust = 0.5, vjust = 0.5, size = 12) {
+  ggplot2::element_text(angle = angle, hjust = hjust, vjust = vjust, colour = colors, face = "bold", size = size)
 }
 
 
@@ -224,7 +224,7 @@ construct_legend_df <- data.frame(
 
 p_heat_construct <- ggplot(plot_df, aes(item1, item2, fill = r)) +
   geom_tile(color = "grey80") +
-  geom_text(aes(label = sprintf("%.2f", r)), size = 1.6, colour = "grey20") +
+  #geom_text(aes(label = sprintf("%.2f", r)), size = 1.6, colour = "grey20") +
   scale_fill_gradient2(
     low = "red", mid = "white", high = "blue",
     midpoint = 0, limits = c(-1, 1), na.value = "grey95"
@@ -237,7 +237,10 @@ p_heat_construct <- ggplot(plot_df, aes(item1, item2, fill = r)) +
   theme_minimal() +
   theme(
     axis.text.x = axis_text_element(item_colors_construct, angle = 90, hjust = 1, vjust = 0.5),
-    axis.text.y = axis_text_element(rev(item_colors_construct))
+    axis.text.y = axis_text_element(rev(item_colors_construct), size = 12),
+    
+    legend.text  = element_text(size = 12),     
+    legend.title = element_text(size = 12, face = "bold")
   ) +
   labs(
     title = "Polychoric correlations, ordered by construct",
