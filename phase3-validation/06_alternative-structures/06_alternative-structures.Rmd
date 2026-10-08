@@ -238,6 +238,29 @@ extract_cfa_loadings <- function(fit_obj, model_label) {
   return(loadings_df)
 }
 
+# 5. Extraction of latent factor correlations
+extract_latent_correlations <- function(fit_obj, model_label) {
+  if (is.null(fit_obj) || !is(fit_obj, "lavaan") || !lavInspect(fit_obj, "converged")) {
+    return(NULL)
+  }
+  
+  cor_mat <- tryCatch({
+    lavaan::lavInspect(fit_obj, what = "cor.lv")
+  }, error = function(e) NULL)
+  
+  if (is.null(cor_mat) || length(cor_mat) <= 1) return(NULL)
+  
+  cor_df <- as.data.frame(as.table(cor_mat))
+  colnames(cor_df) <- c("Factor1", "Factor2", "Correlation")
+  cor_df$Model <- as.character(model_label)
+  
+  cor_df$Correlation <- round(cor_df$Correlation, 4)
+  cor_df <- cor_df[, c("Model", "Factor1", "Factor2", "Correlation")]
+  rownames(cor_df) <- NULL
+  
+  return(cor_df)
+}
+
 
 
 ```
@@ -685,6 +708,7 @@ saveWorkbook(efa_excel_wb, output_efa_excel, overwrite = TRUE)
 pooled_cfa_list      <- list()
 pooled_rel_list      <- list()
 pooled_loadings_list <- list()
+pooled_cor_list      <- list() #new
 
 for (m_name in names(cfa_models_list)) {
   m_syntax <- cfa_models_list[[m_name]]
@@ -707,11 +731,17 @@ for (m_name in names(cfa_models_list)) {
   
   # Extract Standardized Loadings (Std.all)
   pooled_loadings_list[[m_name]] <- extract_cfa_loadings(fit_pooled, label_entry)
+  
+  
+  # Extract Latent Factor Correlations <--- Adicionado
+  pooled_cor_list[[m_name]]      <- extract_latent_correlations(fit_pooled, label_entry)
+
 }
 
 pooled_cfa_results      <- dplyr::bind_rows(pooled_cfa_list)
 pooled_rel_results      <- dplyr::bind_rows(pooled_rel_list)
 pooled_loadings_results <- dplyr::bind_rows(pooled_loadings_list)
+pooled_cor_results      <- dplyr::bind_rows(pooled_cor_list) #
 
 
 # 4.2 Multigroup CFA Models
@@ -739,6 +769,7 @@ multigroup_cfa_results <- dplyr::bind_rows(multigroup_cfa_list)
 individual_cfa_list      <- list()
 individual_rel_list      <- list()
 individual_loadings_list <- list()
+individual_cor_list      <- list() # <--- new
 
 for (stim in stimuli_letters) {
   stim_data <- grp_data %>% dplyr::filter(stimulus == stim) %>% droplevels()
@@ -758,12 +789,14 @@ for (stim in stimuli_letters) {
     individual_cfa_list[[label_entry]]      <- extract_fit_measures(fit_indiv, label_entry)
     individual_rel_list[[label_entry]]      <- extract_reliability(fit_indiv, label_entry)
     individual_loadings_list[[label_entry]] <- extract_cfa_loadings(fit_indiv, label_entry)
+    individual_cor_list[[label_entry]]      <- extract_latent_correlations(fit_indiv, label_entry) # <--- new
   }
 }
 
 individual_cfa_results      <- dplyr::bind_rows(individual_cfa_list)
 individual_rel_results      <- dplyr::bind_rows(individual_rel_list)
 individual_loadings_results <- dplyr::bind_rows(individual_loadings_list)
+individual_cor_results      <- dplyr::bind_rows(individual_cor_list) # <--- Adicionado
 
 
 # 4.4 Save Multi-Tab Excel Workbook (Fit + Reliability + Std.all Loadings)
@@ -779,6 +812,10 @@ writeData(cfa_excel_wb, "Pooled_Reliability_AVE", pooled_rel_results)
 # Standardized Loadings Tab (Std.all)
 addWorksheet(cfa_excel_wb, "Pooled_CFA_Loadings")
 writeData(cfa_excel_wb, "Pooled_CFA_Loadings", pooled_loadings_results)
+
+# <--- new --->
+addWorksheet(cfa_excel_wb, "Pooled_Latent_Correlations")
+writeData(cfa_excel_wb, "Pooled_Latent_Correlations", pooled_cor_results)
 
 addWorksheet(cfa_excel_wb, "Multigroup_Fit")
 writeData(cfa_excel_wb, "Multigroup_Fit", multigroup_cfa_results)

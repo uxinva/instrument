@@ -591,13 +591,13 @@ extract_cfa_loadings &lt;- function(fit_obj, model_label) {
 </div>
 <div id="model-factor-definitions-global-registry" class="section level2">
 <h2>Model Factor Definitions &amp; Global Registry</h2>
-<pre class="r"><code># 4-Factor Model A (Visualization Clarity + Visualization Retrieval) + Cognitive + Intuitiveness
+<pre class="r"><code># 4-Factor Model A (Visualization Clarity + Visualization Retrieval) + cognitive_value + Intuitiveness
 
-# 4-Factor Model B (Visualization -  &#39;VisTrialError&#39;) +   (Cognitive  - &#39;CogTaskComplete&#39;), +new factor (VisTrialError + CogTaskComplete) +  Intuitiveness
+# 4-Factor Model B (Visualization -  &#39;VisTrialError&#39;) +   (Cognitive value  - &#39;CogTaskComplete&#39;), +new factor (VisTrialError + CogTaskComplete) +  Intuitiveness
 
-# 4-Factor Model C - 4 factors suggested by EFA - 
+# 4-Factor Model C - 4 factors suggested by EFA -  (Visualization + migrated items -&gt; Effectiveness + Visual Interaction)
 
-# 3-Factor Model A: Our selection of Visualization + Cognitive + Intuitiveness)
+# 3-Factor Model A: Our selection of Visualization + Cognitive value + Intuitiveness)
 
 # 3-Factor Model B: Our selection of items without VisTrialError item
 
@@ -609,7 +609,7 @@ extract_cfa_loadings &lt;- function(fit_obj, model_label) {
 
 # 3-Factor Model F:  Our selection of items without VisTrialError, taskCompletion, and CogSysUseful items
 
-# 2-Factor Model A: Interface Usability vs. Cognitive Utility
+# 2-Factor Model A: Interface Usability vs. Cognitive value Utility
 
 # 2-Factor Model B (Alternative: System Experience vs. Intuitiveness)
 
@@ -626,7 +626,7 @@ models_factor_specs &lt;- list(
   &quot;2_Factor_A&quot; = list(
     interface_usability = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, 
                             &#39;VisRemember&#39;, &#39;VisTrialError&#39;, &#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;),
-    cognitive_utility   = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;)
+    cognitive_value   = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;)
   ),
   
   &quot;2_Factor_B&quot; = list(
@@ -637,56 +637,56 @@ models_factor_specs &lt;- list(
   
   &quot;3_Factor_A&quot; = list(
     visualization = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;, &#39;VisTrialError&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
   
   &quot;3_Factor_B&quot; = list(
     visualization = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
   
   &quot;3_Factor_C&quot; = list(
     visualization = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;, &#39;VisTrialError&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
   
   &quot;3_Factor_D&quot; = list(
     visualization = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
   &quot;3_Factor_E&quot; = list(
     visualization = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;, &#39;VisTrialError&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
    &quot;3_Factor_F&quot; = list(
     visualization = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysEnjoy&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysEnjoy&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
   
   &quot;4_Factor_A&quot; = list(
     vis_clarity   = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;),
     sys_retrieval = c(&#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;, &#39;VisTrialError&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;, &#39;CogTaskComplete&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
   
   &quot;4_Factor_B&quot; = list(
     visualization = c(&#39;VisFaithful&#39;, &#39;VisSimpleUnderstand&#39;, &#39;VisAppropriate&#39;, &#39;VisSysRetrieveInfo&#39;, &#39;VisRemember&#39;),
     task          = c(&#39;VisTrialError&#39;, &#39;CogTaskComplete&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;, &#39;CogSysUseful&#39;, &#39;CogSysEnjoy&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   ),
   
   &quot;4_Factor_C&quot; = list(
-    visual_fluidity = c(&#39;VisSimpleUnderstand&#39;, &#39;VisRemember&#39;, &#39;VisTrialError&#39;,&#39;VisSysRetrieveInfo&#39;),
-    task_utility    = c (&#39;CogSysUseful&#39;,&#39;VisFaithful&#39;, &#39;VisAppropriate&#39;,&#39;CogTaskComplete&#39;),
-    cognitive     = c(&#39;CogSysThinkDeep&#39;,  &#39;CogSysEnjoy&#39;),
+    visual_interaction = c(&#39;VisSimpleUnderstand&#39;, &#39;VisRemember&#39;, &#39;VisTrialError&#39;,&#39;VisSysRetrieveInfo&#39;),
+    effectiveness   = c (&#39;CogSysUseful&#39;,&#39;VisFaithful&#39;, &#39;VisAppropriate&#39;,&#39;CogTaskComplete&#39;),
+    cognitive_value     = c(&#39;CogSysThinkDeep&#39;,  &#39;CogSysEnjoy&#39;),
     intuitiveness = c(&#39;IntSysSimpleUnderstand&#39;, &#39;IntSysEasyStart&#39;, &#39;IntAnalysisConfigure&#39;)
   )
   
@@ -1288,19 +1288,19 @@ cat(&quot;\n--- Standardized CFA Loadings Preview (Pooled_3_Factor_D) ---\n&quot
 ## 
 ## Table: Standardized Loadings (Std.all) for 3_Factor_D
 ## 
-## |Model             |Factor        |Item                   | Std_all| R_Squared|    SE| Z_Value| P_Value| CI_Lower| CI_Upper|
-## |:-----------------|:-------------|:----------------------|-------:|---------:|-----:|-------:|-------:|--------:|--------:|
-## |Pooled_3_Factor_D |visualization |VisFaithful            |   0.558|     0.312| 0.057|   9.726|       0|    0.446|    0.671|
-## |Pooled_3_Factor_D |visualization |VisSimpleUnderstand    |   0.667|     0.444| 0.049|  13.614|       0|    0.571|    0.763|
-## |Pooled_3_Factor_D |visualization |VisAppropriate         |   0.583|     0.340| 0.055|  10.661|       0|    0.476|    0.690|
-## |Pooled_3_Factor_D |visualization |VisSysRetrieveInfo     |   0.632|     0.399| 0.051|  12.282|       0|    0.531|    0.733|
-## |Pooled_3_Factor_D |visualization |VisRemember            |   0.679|     0.461| 0.048|  14.163|       0|    0.585|    0.773|
-## |Pooled_3_Factor_D |cognitive     |CogSysThinkDeep        |   0.629|     0.396| 0.052|  11.983|       0|    0.526|    0.732|
-## |Pooled_3_Factor_D |cognitive     |CogSysUseful           |   0.574|     0.330| 0.059|   9.796|       0|    0.459|    0.689|
-## |Pooled_3_Factor_D |cognitive     |CogSysEnjoy            |   0.798|     0.638| 0.050|  15.915|       0|    0.700|    0.897|
-## |Pooled_3_Factor_D |intuitiveness |IntSysSimpleUnderstand |   0.854|     0.729| 0.028|  31.005|       0|    0.800|    0.908|
-## |Pooled_3_Factor_D |intuitiveness |IntSysEasyStart        |   0.840|     0.706| 0.028|  29.767|       0|    0.785|    0.896|
-## |Pooled_3_Factor_D |intuitiveness |IntAnalysisConfigure   |   0.766|     0.587| 0.034|  22.339|       0|    0.699|    0.833|</code></pre>
+## |Model             |Factor          |Item                   | Std_all| R_Squared|    SE| Z_Value| P_Value| CI_Lower| CI_Upper|
+## |:-----------------|:---------------|:----------------------|-------:|---------:|-----:|-------:|-------:|--------:|--------:|
+## |Pooled_3_Factor_D |visualization   |VisFaithful            |   0.558|     0.312| 0.057|   9.726|       0|    0.446|    0.671|
+## |Pooled_3_Factor_D |visualization   |VisSimpleUnderstand    |   0.667|     0.444| 0.049|  13.614|       0|    0.571|    0.763|
+## |Pooled_3_Factor_D |visualization   |VisAppropriate         |   0.583|     0.340| 0.055|  10.661|       0|    0.476|    0.690|
+## |Pooled_3_Factor_D |visualization   |VisSysRetrieveInfo     |   0.632|     0.399| 0.051|  12.282|       0|    0.531|    0.733|
+## |Pooled_3_Factor_D |visualization   |VisRemember            |   0.679|     0.461| 0.048|  14.163|       0|    0.585|    0.773|
+## |Pooled_3_Factor_D |cognitive_value |CogSysThinkDeep        |   0.629|     0.396| 0.052|  11.983|       0|    0.526|    0.732|
+## |Pooled_3_Factor_D |cognitive_value |CogSysUseful           |   0.574|     0.330| 0.059|   9.796|       0|    0.459|    0.689|
+## |Pooled_3_Factor_D |cognitive_value |CogSysEnjoy            |   0.798|     0.638| 0.050|  15.915|       0|    0.700|    0.897|
+## |Pooled_3_Factor_D |intuitiveness   |IntSysSimpleUnderstand |   0.854|     0.729| 0.028|  31.005|       0|    0.800|    0.908|
+## |Pooled_3_Factor_D |intuitiveness   |IntSysEasyStart        |   0.840|     0.706| 0.028|  29.767|       0|    0.785|    0.896|
+## |Pooled_3_Factor_D |intuitiveness   |IntAnalysisConfigure   |   0.766|     0.587| 0.034|  22.339|       0|    0.699|    0.833|</code></pre>
 </div>
 
 
