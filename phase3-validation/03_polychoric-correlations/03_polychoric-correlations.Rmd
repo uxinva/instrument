@@ -224,7 +224,7 @@ construct_legend_df <- data.frame(
 
 p_heat_construct <- ggplot(plot_df, aes(item1, item2, fill = r)) +
   geom_tile(color = "grey80") +
-  #geom_text(aes(label = sprintf("%.2f", r)), size = 1.6, colour = "grey20") +
+  geom_text(aes(label = sprintf("%.2f", r)), size = 4.5, colour = "grey20") +
   scale_fill_gradient2(
     low = "red", mid = "white", high = "blue",
     midpoint = 0, limits = c(-1, 1), na.value = "grey95"
@@ -232,16 +232,32 @@ p_heat_construct <- ggplot(plot_df, aes(item1, item2, fill = r)) +
   geom_point(data = construct_legend_df, aes(x = item1, y = item2, colour = construct),
              alpha = 0, inherit.aes = FALSE) +
   scale_colour_manual(name = "Construct", values = group_colors) +
-  guides(colour = guide_legend(override.aes = list(alpha = 1, size = 4, shape = 15))) +
+  
+  # Eliane - size of internal label
+  guides(
+    colour = guide_legend(override.aes = list(alpha = 1, size = 4, shape = 15), nrow = 1, order = 1),
+    fill = guide_colorbar(title.position = "top", title.hjust = 0.5, barwidth = 15, barheight = 0.8, order = 2)
+  ) +
+  
+  
+ # guides(colour = guide_legend(override.aes = list(alpha = 1, size = 4, shape = 15))) + # Eliane - 
   coord_fixed() +
   theme_minimal() +
   theme(
     axis.text.x = axis_text_element(item_colors_construct, angle = 90, hjust = 1, vjust = 0.5),
     axis.text.y = axis_text_element(rev(item_colors_construct), size = 12),
     
-    legend.text  = element_text(size = 12),     
-    legend.title = element_text(size = 12, face = "bold")
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+    legend.box = "vertical", # Eliane - bottom legend - gradient colors
+    
+    
+    legend.text  = element_text(size = 10),      
+    legend.title = element_text(size = 10, face = "bold")
+    
   ) +
+  
+  
   labs(
     title = "Polychoric correlations, ordered by construct",
     x = NULL, y = NULL, fill = "r"
