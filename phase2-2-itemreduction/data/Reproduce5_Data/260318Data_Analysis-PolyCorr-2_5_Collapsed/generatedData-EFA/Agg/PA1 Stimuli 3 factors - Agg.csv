@@ -1,0 +1,72 @@
+"terms","PA1","PA2","PA3"
+"P062.The.system.encouraged.me.to.explore.my.data.further",0.827636745386744,0.000701655355511024,-0.143630423506597
+"P064.The.tool.encouraged.me.to.think.deeply.about.my.data",0.747139090186452,-0.0160581031430061,-0.121796556980438
+"P301.The.system.was.useful.for.me",0.734216872082236,-0.0979600072826937,0.157214970573131
+"P057.The.system.helped.me.to.gain.knowledge.about.my.data",0.709106574979673,-0.174845978317154,0.23380969848705
+"P052.The.system.helped.me.to.focus.on.my.tasks",0.708820353277896,0.172757474436164,-0.0797154399157495
+"P029.The.system.provided.useful.information.to.help.me.accomplish.my.tasks",0.605547542134,0.0414658070918858,0.155270585976145
+"P030.The.system.was.effective.for.my.tasks",0.596524781057775,0.00816283909186634,0.23839658770689
+"P060.I.enjoyed.using.this.system",0.580138307908514,0.307598923329734,-0.0400926454256915
+"P092.The.system.effectively.guided.me.in.performing.my.tasks",0.563305097321602,0.490607154949396,-0.276315245252623
+"P083.The.system.stimulated.my.thinking.process",0.561700259954833,0.0151604815430116,0.0416177984800633
+"P04A.I.would.use.this.system.frequently.if.I.had.a.reason.to",0.561146738936084,-0.0271258319237041,0.210992610294518
+"P027.I.could.complete.my.essential.tasks.efficiently",0.543495636259108,0.277346357270845,0.045407566912415
+"P208.I.found.the.system.interesting.to.use",0.540239877273094,-0.0378570508865245,0.200928781194755
+"P302.The.system.helped.me.to.understand.the.data",0.5143975492482,-0.00214790739794872,0.254899452527553
+"P062C.The.system.helped.to.form.and.evaluate.hypotheses.about.my.data",0.508297303809589,-0.0209411661017057,0.165412411471144
+"P025.Once.I.knew.how.to.use.it..the.tool.made.it.easy.to.get.answers.to.my.questions.about.the.data",0.488692119928122,-0.0052233056532522,0.318910709979309
+"P095.The.system.provided.value.for.the.work.I.needed.to.perform",0.476294496783423,-0.081625362463856,0.350690531969434
+"P209.The.system.kept.me.informed.about.the.automated.steps.it.was.taking",0.472354945308444,0.379562098859547,-0.152097456173684
+"P213.The.system.helped.me.complete.my.work.quickly",0.468130773241308,0.380216040250644,-0.0561579699700918
+"P4026B.Once.I.learned.to.use.it..accomplishing.my.tasks.was.straightforward",0.437291100188598,0.110730922097471,0.217091348845435
+"P072.I.felt.satisfied.with.this.system",0.428670153517257,0.212121804132818,0.218892209379509
+"P102.I.felt.the.system.worked.reliably",0.407922375646156,0.0284942300154264,0.379011897195302
+"P037.The.system.integrates.well.into.my.overall.data.analysis.workflow",0.39609004144832,0.0874080417600305,0.310486128694245
+"P041.I.found.the.system.s.components.worked.seamlessly.together",0.361961676671614,0.212391617830347,0.238854265704507
+"P201.I.felt.in.control.when.using.the.system",0.353521322706197,0.340438046451069,0.0912197378703212
+"P088.I.found.the.system.simple.to.understand",-0.107107833940804,0.89173301738616,0.0170504996294449
+"P026.I.found.it.easy.to.get.started.using.this.system",-0.0814768602047713,0.884165290923137,-0.0677948293497775
+"P214.Using.this.system.did.not.require.a.lot.of.effort.from.me",-0.176522060644768,0.869845281864574,0.032781158534214
+"P4026A.Getting.the.tool.configured.for.my.analysis.was.straightforward",0.000578280351601123,0.792910306243936,-0.0267459999778746
+"P074.I.did.not.feel.frustrated.when.using.this.system",-0.032215861115405,0.727062829041748,0.0514951609365949
+"P086.The.system.was.self.explanatory",0.0382715718796887,0.726494400070667,-0.00435214474168346
+"P054.I.found.it.intuitive.to.interact.with.the.system",0.256546440971708,0.656322732356497,-0.171997826016732
+"P024.Using.the.tool.s.options.and.controls.was.intuitive.for.me",0.203623724504509,0.653809425650072,-0.105837963441316
+"P204.I.only.needed.to.learn.a.few.things.before.I.could.get.going.with.this.system",0.0292105608373781,0.617689284946916,-0.0225028628408481
+"P074A.I.did.not.feel.mentally.drained.after.using.this.system",-0.00290253887560214,0.590336249992127,0.176647208178065
+"P049.Executing.the.multiple.data.processing.steps.felt.seamless.for.me",0.138151396176294,0.517210892493715,0.0798987486434564
+"P084.I.felt.confident.that.I.was.using.the.system.correctly",0.309698982154892,0.513891770035882,0.0362354152933944
+"P022.I.can.easily.remember.how.to.use.the.system",0.238823221625256,0.506172542949263,0.0477606121995625
+"P207.I.did.not.have.to.think.too.hard.to.make.sense.of.the.data",-0.165034050896774,0.465716290544275,0.353919058041558
+"P06.I.found.the.visual.layout.of.the.system.clear",-0.0842321589129014,0.427200402466807,0.399364976406307
+"P096.I.found.it.straightforward.to.link.information.across.different.visualizations.in.the.system",0.105327419990941,0.415207659721747,0.270584168049342
+"P203.When.I.made.a.mistake..it.was.easy.to.get.back.on.track",0.0345762755933135,0.41256181148996,0.295770089998147
+"P031.I.have.not.experienced.latency.issues.with.the.system",0.0110278027113021,0.272184986159806,0.24239617278005
+"P106.The.visualizations.I.saw.seemed.to.represent.the.data.faithfully",0.170068311234687,-0.266991775153519,0.774739618635164
+"P05.The.visual.representations.I.saw.were.not.too.complex.for.me",-0.357648905059984,0.201199470573007,0.698588840211202
+"P089.The.visual.representations.I.saw.were.simple.to.understand",-0.22451649184226,0.280235491730353,0.648704973033811
+"P068.I.found.the.system.consistent.in.that.the.same.actions.led.to.the.same.outcomes",0.172188267623211,-0.127331095796342,0.626338290380668
+"P098.I.found.the.visual.representations.provided.by.the.system.were.appropriate",0.188999998157222,0.003092600388751,0.582146609269853
+"P105.I.trusted.the.insights.I.generated.with.the.tool",0.330458675779857,-0.220577086186767,0.578353607486889
+"P211.The.system.made.it.easy.to.visualize.my.data.in.different.ways",0.247532847189831,-0.0725460151398209,0.5201043285065
+"P097.Using.the.system..I.could.easily.retrieve.information.from.my.data",0.214703669951925,0.0570590220271529,0.515605639880766
+"P104.I.trusted.the.system.to.handle.my.data.appropriately",0.334470143177235,-0.133584661042387,0.4965309877417
+"P305.The.system.allowed.me.to.focus.on.the.informtaion.that.interested.me",0.0757757528077415,0.0766525200138398,0.481805121530085
+"P205.I.could.clearly.see.data.features..for.example..a.minimum..an.outlier..or.a.trend..in.the.visualizations.provided",0.154188193079065,0.0303331681395604,0.457379494841363
+"P012.The.system.felt.consistent.while.I.was.interacting.with.the.data",0.262785622890021,0.000610703326315519,0.453960252766593
+"P022A.I.can.easily.remember.how.to.read.the.visualizations.in.the.system",0.102999744815187,0.199379733045419,0.449982340588317
+"P206.I.could.easily.identify.relevant.information.in.the.visualizations.provided.by.the.system",0.271332798909951,0.0613402691727935,0.448296642780285
+"P067.I.could.safely.engage.in.a.trial.and.error.analysis.process",-0.0325571210128177,0.263592823683044,0.432177614008679
+"P09.I.could.easily.share.the.analysis.results.of.this.system.with.others",0.120207544768567,0.0997352428903437,0.423985516737514
+"P212.The.system.lets.me.switch.between.an.overview.and.detailed.views.of.my.data",0.19474375396816,0.0190086250479586,0.387107089830945
+"P103.The.system.handled.my.data.in.a.transparent.way",0.340586114831288,0.00119370460744895,0.358474129905747
+"P097A.I.could.easily.navigate.between.visualizations",0.164582009391547,0.269135352590266,0.352982837251735
+"P014.I.could.complete.my.analysis.without.having.to.switch.to.another.tool",0.158274836292263,0.164725750405326,0.335717018835407
+"P033.I.found.the.system.s.response.time.satisfactory",0.241376461654896,0.210770730914324,0.319518744902441
+"P045A.The.system.reacted.to.my.inputs.as.I.expected",0.25154213280821,0.246510653217317,0.307573390464436
+"--- VARIANCE EXPLAINED ---",,,
+"SS loadings",12.2761017041449,10.4640117051997,9.88282757498484
+"Proportion Var",0.18886310314069,0.160984795464611,0.152043501153613
+"Cumulative Var",0.18886310314069,0.349847898605301,0.501891399758914
+"Proportion Explained",0.376302728501448,0.320756234400392,0.302941037098161
+"Cumulative Proportion",0.376302728501448,0.697058962901839,1
