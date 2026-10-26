@@ -28,3 +28,13 @@ Thumbs.db
 **/data/private/
 **/data/private.*
 **/data/private-*
+
+# Local working folders (not versioned). The scripts that read
+# Gdrive_files/ (ignored above by *_files/) use it only for optional checks.
+Data_Analysis/
+phase2-2-itemreduction/
+.here
+git_status_claude.txt
+
+
+
