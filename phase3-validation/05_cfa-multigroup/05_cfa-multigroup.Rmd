@@ -507,6 +507,62 @@ reliability_df_full <- rbind(subscale_reliability_df, subscale_group_reliability
 write.csv(reliability_df_full, file.path(output_dir, "reliability-subscales.csv"))
 ```
 
+## Mean inter-item correlation
+
+The mean inter-item correlation (MIC) is the average of the correlations between all pairs of items of a scale (the off-diagonal elements of the correlation matrix). It is computed for the full 13-item instrument and separately for each of the three subscales, on the whole sample.
+
+Clark and Watson (1995) recommend a MIC between .15 and .50: lower values suggest that the items do not measure the same construct, higher values that the items are redundant. For a narrow construct, values up to about .50 are acceptable.
+https://doi.org/10.1037/1040-3590.7.3.309
+
+Two versions are reported:
+
+- **Pearson** (pairwise deletion), the usual definition. It is the `average_r` reported by `psych::alpha()`.
+- **Polychoric**, consistent with the treatment of the items as ordinal in this notebook. The values are taken from the polychoric matrix `corrM` computed above (pairwise deletion), so the subscale values are the averages of the corresponding blocks of that matrix.
+
+The minimum and maximum inter-item correlations are also reported.
+
+```{r mean inter-item correlation}
+
+# Summary of the off-diagonal elements of a correlation matrix
+inter_item_summary <- function(r_mat) {
+  r <- r_mat[lower.tri(r_mat)]
+  c(n_items = ncol(r_mat), n_pairs = length(r),
+    mean_r = mean(r), min_r = min(r), max_r = max(r))
+}
+
+mic_scales <- c(list(full_scale = unname(unlist(UX_factors))),
+                lapply(UX_factors, unlist))
+
+mic_df <- do.call(rbind, lapply(names(mic_scales), function(scale_name) {
+  items   <- mic_scales[[scale_name]]
+  pearson <- cor(data[, items], use = "pairwise.complete.obs")
+  poly    <- corrM[items, items]
+  data.frame(
+    scale  = scale_name,
+    method = c("pearson", "polychoric"),
+    rbind(inter_item_summary(pearson), inter_item_summary(poly)),
+    row.names = NULL
+  )
+}))
+
+# Check: the Pearson MIC must equal average_r from psych::alpha()
+for (scale_name in names(mic_scales)) {
+  avg_r <- suppressWarnings(
+    psych::alpha(data[, mic_scales[[scale_name]]], check.keys = FALSE, warnings = FALSE)
+  )$total$average_r
+  stopifnot(isTRUE(all.equal(
+    avg_r,
+    mic_df$mean_r[mic_df$scale == scale_name & mic_df$method == "pearson"]
+  )))
+}
+
+cat("\nSample size:", nrow(data), "\n\n")
+knitr::kable(mic_df, digits = 3,
+             caption = "Mean inter-item correlation (whole sample)")
+
+write.csv(mic_df, file.path(output_dir, "mean-inter-item-correlations.csv"), row.names = FALSE)
+```
+
 ```{r run CFA analysis}
 
 cat("\n\n==========================================")

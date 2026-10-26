@@ -11,7 +11,8 @@ Checks the three-factor model of the 13-item UXVis scale (Cognitive value, Intui
 3. checks the pattern of missing data (Little's MCAR test);
 4. checks that factor analysis is appropriate (Bartlett's test, KMO);
 5. computes reliability: Cronbach's α, Guttman's λ6 and McDonald's ω;
-6. fits the three-factor confirmatory factor analysis (CFA) with full-information maximum likelihood (FIML):
+6. computes the mean inter-item correlation (Pearson and polychoric, with minimum and maximum) for the full 13-item scale and for each subscale;
+7. fits the three-factor confirmatory factor analysis (CFA) with full-information maximum likelihood (FIML):
    - on the pooled data;
    - as a multi-group model across the five systems (Power BI, Tableau, JMP, Excel, Data Studio), to test whether the model holds the same way for every system (measurement invariance).
 
@@ -28,6 +29,7 @@ Checks the three-factor model of the 13-item UXVis scale (Cognitive value, Intui
 | `items_correlations.csv` | Polychoric correlations of the 13 items |
 | `items-correlation-plot.pdf` | Heatmap of these correlations |
 | `reliability-subscales.csv` | α, standardised α and ω for each factor: pooled and per system |
+| `mean-inter-item-correlations.csv` | Mean, minimum and maximum inter-item correlation (Pearson and polychoric) for the full scale and each factor, whole sample |
 | `reliability-global-by-stimuli.csv` | α and ω (1-factor and 3-factor) for each system |
 | `fit_indices_pooled.csv` | CFA fit indices, pooled sample (df, χ², CFI, TLI, RMSEA, SRMR, AIC, BIC, …) |
 | `fit_indices_multigroup.csv` | Multi-group CFA fit indices |
