@@ -1,0 +1,20 @@
+data_file: C:/Users/Eliane/My_codes/GitInstrument/phase2-2-item-reduction/data/raw/ratings-stimulus_original.csv
+md5: 2e967d9c37a6f2f1d2d7e79505a3dbb3
+combination_file: C:/Users/Eliane/My_codes/GitInstrument/phase2-2-item-reduction/05_combinatorial/input/combinations_6-3-3.csv
+run at: 2026-10-21 15:07:03.014199
+data_file: phase2-2-item-reduction/data/raw/ratings-stimulus_original.csv
+group_col: 
+estimator: MLR
+missing: fiml
+fit_rule_cfi_tli: 0.95
+fit_rule_srmr: 0.08
+fit_rule_rmsea: 0.06
+max_reliable_sets_kept_per_scale: 0
+progress_every: 50
+top_n_results: 100
+max_diagnostic_errors: 20
+save_fitted_models: FALSE
+combination_file: phase2-2-item-reduction/05_combinatorial/input/combinations_6-3-3.csv
+run_name: rel075_6-3-3_singlegroup_uncollapsed
+reliability_threshold: 0.75
+max_models: 0

@@ -1,0 +1,10 @@
+Items in the EFA: 65; retained: 49; excluded: 16
+  excluded for cross-loading: 11 (P092, P095, P209, P213, P102, P201, P207, P06, P105, P104, P103)
+  excluded for missing: 5 (P049, P031, P305, P09, P212)
+Items whose highest loading is not on their factor: none
+Retained with primary loading < 0.32 (flag only): ['P033', 'P045A']
+OK   task_cognition: 19 retained vs 19 in Version_A Model_1
+OK   system: 14 retained vs 14 in Version_A Model_1
+OK   visualization: 16 retained vs 16 in Version_A Model_1
+Result matches Version_A Model_1.
+Result matches screened_3_factors (baseline of Versions A-D).

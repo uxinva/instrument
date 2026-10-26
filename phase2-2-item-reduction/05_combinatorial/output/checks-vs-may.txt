@@ -1,0 +1,12 @@
+Repository runs versus May 2026 runs (same threshold and arrangement)
+
+OK   3 / 6 / 3 0.79: identical
+OK   3 / 6 / 3 0.78: identical
+OK   3 / 6 / 3 0.77: identical
+OK   3 / 6 / 3 0.76: identical
+OK   3 / 6 / 3 0.75: identical
+OK   3 / 6 / 3 0.74: identical
+OK   3 / 6 / 3 0.73: identical
+CUT  3 / 6 / 3 0.72: May fitted 1000 of 1960 (461 passing); now 1960 (855 passing)
+OK   4 / 6 / 3 0.79: identical
+OK   4 / 6 / 3 0.78: identical

@@ -1,0 +1,31 @@
+"stimulus","factor_1","factor_2","correlation"
+"Tableau","task_cognition","system",0.771204945289083
+"Tableau","task_cognition","visualization",0.911841131863928
+"Tableau","system","visualization",0.793489612259787
+"Tableau","task_cognition","reliability",0.951644051941994
+"Tableau","system","reliability",0.798366384810625
+"Tableau","visualization","reliability",0.899839079919502
+"Qlik","task_cognition","system",0.773179476166353
+"Qlik","task_cognition","visualization",0.917287620723468
+"Qlik","system","visualization",0.81680952935804
+"Qlik","task_cognition","reliability",0.927271963264762
+"Qlik","system","reliability",0.784723562120831
+"Qlik","visualization","reliability",0.890126006484196
+"Gephi","task_cognition","system",0.840813443723774
+"Gephi","task_cognition","visualization",0.883307080269502
+"Gephi","system","visualization",0.843888733630812
+"Gephi","task_cognition","reliability",0.895520711081651
+"Gephi","system","reliability",0.833997975841929
+"Gephi","visualization","reliability",0.901409892787341
+"JMP","task_cognition","system",0.876197237808846
+"JMP","task_cognition","visualization",0.902163017172081
+"JMP","system","visualization",0.800930741536042
+"JMP","task_cognition","reliability",0.924931612431328
+"JMP","system","reliability",0.838185383206717
+"JMP","visualization","reliability",0.937153769015889
+"Power BI","task_cognition","system",0.644507147775812
+"Power BI","task_cognition","visualization",0.8487118816192
+"Power BI","system","visualization",0.622661116920149
+"Power BI","task_cognition","reliability",0.861597026152137
+"Power BI","system","reliability",0.675144207712025
+"Power BI","visualization","reliability",0.956152123848949

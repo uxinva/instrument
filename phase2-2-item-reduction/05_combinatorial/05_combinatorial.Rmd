@@ -1,0 +1,624 @@
+---
+title: "05 Automated combinatorial reduction (reliability prefilter + CFA for every combination)"
+output:
+  html_document:
+    toc: true
+params:
+  data_file: "phase2-2-item-reduction/data/raw/ratings-stimulus_original.csv"
+  combination_file: "phase2-2-item-reduction/05_combinatorial/input/combinations_6-4-3.csv"
+  run_name: "rel078_6-4-3_singlegroup_uncollapsed"
+  reliability_threshold: 0.78
+  group_col: ""
+  estimator: "MLR"
+  missing: "fiml"
+  fit_rule_cfi_tli: 0.95
+  fit_rule_srmr: 0.08
+  fit_rule_rmsea: 0.06
+  max_models: 0
+  max_reliable_sets_kept_per_scale: 0
+  progress_every: 50
+  top_n_results: 100
+  max_diagnostic_errors: 20
+  save_fitted_models: FALSE
+---
+
+<!--
+Recovered from Notebooks/Reproduce8_Notebooks/Reproduce8-reliability_CFA_exploration.Rmd (May 2026).
+The analysis code (helper functions, prefilter, CFA, ranking, export) is unchanged.
+Changes:
+  * paths from the repository root (package here); output in 05_combinatorial/output/<run_name>/
+  * parameters in the YAML header (Knit with Parameters...)
+  * group_col: "" = single-group CFA, as the May runs actually did (the May notebook asked for
+    group_col = "SYSTEM", a column that does not exist, so lavaan silently fitted one group).
+    Set group_col: "stimulus" for a multigroup CFA by tool.
+  * max_models and max_reliable_sets_kept_per_scale: 0 = no limit. The May notebook had
+    max_models = 1000, which cut the runs at thresholds 0.70-0.72.
+The defaults reproduce the final May run (threshold 0.78, 6/4/3): expected 144 candidate models, 118 approved.
+-->
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE, message = TRUE, warning = TRUE)
+options(stringsAsFactors = FALSE)
+
+positive_int_or_zero <- function(x) {
+  if (is.null(x) || length(x) != 1 || is.na(x) || !is.finite(x) || x < 1) return(0L)
+  as.integer(x)
+}
+limit_or_null <- function(x) if (positive_int_or_zero(x) > 0) as.integer(x) else NULL
+```
+
+# Purpose
+
+Each row of the combination file is one candidate item set for one scale. The workflow:
+
+- computes alpha and omega total for each predefined scale combination;
+- keeps only combinations that pass the reliability threshold (alpha **or** omega);
+- crosses the kept visualization, task cognition and system combinations into CFA models;
+- fits and ranks the CFA models.
+
+A model passes if:
+
+- TLI >= 0.95 **or** CFI >= 0.95
+- and SRMR <= 0.08 **or** RMSEA <= 0.06
+- and each scale has alpha >= threshold **or** omega total >= threshold
+
+# Libraries
+
+```{r libraries}
+required_packages <- c(
+  "here", "dplyr", "tidyr", "purrr", "readr", "stringr", "tibble",
+  "lavaan", "psych", "knitr"
+)
+missing_packages <- required_packages[!vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)]
+if (length(missing_packages) > 0) stop("Missing required packages: ", paste(missing_packages, collapse = ", "))
+invisible(lapply(required_packages, library, character.only = TRUE))
+```
+
+# Paths and run settings
+
+```{r paths}
+data_file        <- here::here(params$data_file)
+combination_file <- here::here(params$combination_file)
+output_dir       <- here::here("phase2-2-item-reduction", "05_combinatorial", "output", params$run_name)
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+use_grouped_cfa <- nzchar(params$group_col)
+max_models      <- limit_or_null(params$max_models)
+max_kept        <- limit_or_null(params$max_reliable_sets_kept_per_scale)
+
+writeLines(c(paste("data_file:", data_file), paste("md5:", tools::md5sum(data_file)),
+             paste("combination_file:", combination_file),
+             paste("run at:", Sys.time()),
+             paste(names(params), unlist(lapply(params, as.character)), sep = ": ")),
+           file.path(output_dir, "run_info.txt"))
+
+cat("Data file:", data_file, "\n")
+cat("Combination file:", combination_file, "\n")
+cat("Output directory:", output_dir, "\n")
+cat("CFA:", if (use_grouped_cfa) paste("multigroup by", params$group_col) else "single group", "\n")
+```
+
+# Helper Functions
+
+```{r helper-functions}
+required_scales <- c("visualization", "task_cognition", "system")
+
+parse_item_list <- function(x) {
+  x %>%
+    as.character() %>%
+    stringr::str_replace_all("[\"']", "") %>%
+    stringr::str_split(",") %>%
+    unlist(use.names = FALSE) %>%
+    stringr::str_trim() %>%
+    purrr::discard(~ is.na(.x) || .x == "")
+}
+
+items_to_label <- function(items) paste(items, collapse = " + ")
+items_to_id <- function(items) paste(items, collapse = "__")
+
+make_lavaan_model <- function(visualization_items, task_items, system_items) {
+  paste(
+    paste0("visualization =~ ", items_to_label(visualization_items)),
+    paste0("task_cognition =~ ", items_to_label(task_items)),
+    paste0("system =~ ", items_to_label(system_items)),
+    sep = "\n"
+  )
+}
+
+coerce_items_numeric <- function(data, item_cols) {
+  data %>%
+    mutate(across(
+      all_of(item_cols),
+      ~ {
+        if (is.factor(.x)) as.numeric(as.character(.x))
+        else if (is.character(.x)) suppressWarnings(as.numeric(.x))
+        else as.numeric(.x)
+      }
+    ))
+}
+
+safe_alpha <- function(data, items) {
+  out <- tryCatch({
+    suppressWarnings(psych::alpha(data[, items, drop = FALSE], check.keys = FALSE))$total$raw_alpha
+  }, error = function(e) NA_real_)
+  as.numeric(out)
+}
+
+safe_omega_total <- function(data, items) {
+  out <- tryCatch({
+    suppressWarnings(psych::omega(data[, items, drop = FALSE], nfactors = 1, plot = FALSE))$omega.tot
+  }, error = function(e) NA_real_)
+  as.numeric(out)
+}
+
+reliability_for_scale <- function(data, items, scale_name, threshold) {
+  alpha <- safe_alpha(data, items)
+  omega_total <- safe_omega_total(data, items)
+  tibble(
+    alpha = alpha,
+    omega_total = omega_total,
+    reliability_pass = (!is.na(alpha) && alpha >= threshold) || (!is.na(omega_total) && omega_total >= threshold)
+  )
+}
+
+extract_fit <- function(fit) {
+  wanted <- c("cfi", "tli", "rmsea", "srmr", "chisq", "df", "pvalue", "aic", "bic")
+  measures <- lavaan::fitMeasures(fit)
+  present <- intersect(wanted, names(measures))
+  values <- as.list(rep(NA_real_, length(wanted)))
+  names(values) <- toupper(wanted)
+  for (m in present) values[[toupper(m)]] <- as.numeric(measures[[m]])
+  tibble::as_tibble(values)
+}
+
+safe_cfa <- function(model_syntax, data, group_col, use_grouped_cfa, estimator, missing) {
+  tryCatch({
+    if (use_grouped_cfa && !is.null(group_col) && group_col %in% names(data)) {
+      lavaan::cfa(
+        model_syntax,
+        data = data,
+        group = group_col,
+        estimator = estimator,
+        missing = missing,
+        std.lv = TRUE
+      )
+    } else {
+      lavaan::cfa(
+        model_syntax,
+        data = data,
+        estimator = estimator,
+        missing = missing,
+        std.lv = TRUE
+      )
+    }
+  }, error = function(e) e)
+}
+
+fit_one_candidate <- function(row, data, group_col, use_grouped_cfa, estimator, missing,
+                              fit_rule_cfi_tli, fit_rule_srmr, fit_rule_rmsea,
+                              reliability_threshold, save_fit = FALSE) {
+  visualization_items <- row$visualization_items[[1]]
+  task_items <- row$task_cognition_items[[1]]
+  system_items <- row$system_items[[1]]
+
+  model_syntax <- make_lavaan_model(visualization_items, task_items, system_items)
+  #print(reliability_threshold)
+  rel_visualization <- reliability_for_scale(data, visualization_items, "visualization", reliability_threshold)
+  rel_task <- reliability_for_scale(data, task_items, "task_cognition", reliability_threshold)
+  rel_system <- reliability_for_scale(data, system_items, "system", reliability_threshold)
+
+  fit <- safe_cfa(model_syntax, data, group_col, use_grouped_cfa, estimator, missing)
+
+  if (inherits(fit, "error")) {
+    fit_tbl <- tibble(
+      CFI = NA_real_, TLI = NA_real_, RMSEA = NA_real_, SRMR = NA_real_,
+      CHISQ = NA_real_, DF = NA_real_, PVALUE = NA_real_, AIC = NA_real_, BIC = NA_real_
+    )
+    converged <- FALSE
+    fit_error <- conditionMessage(fit)
+    admissible <- NA
+  } else {
+    fit_tbl <- extract_fit(fit)
+    converged <- lavaan::lavInspect(fit, "converged")
+    admissible <- tryCatch(lavaan::lavInspect(fit, "post.check"), error = function(e) NA)
+    fit_error <- NA_character_
+  }
+
+  out <- tibble(
+    candidate_id = row$candidate_id,
+    visualization_combination_id = row$visualization_combination_id,
+    task_cognition_combination_id = row$task_cognition_combination_id,
+    system_combination_id = row$system_combination_id,
+    visualization_items = items_to_id(visualization_items),
+    task_cognition_items = items_to_id(task_items),
+    system_items = items_to_id(system_items),
+    model_syntax = model_syntax,
+    converged = converged,
+    admissible = admissible,
+    fit_error = fit_error,
+    alpha_visualization = rel_visualization$alpha,
+    omega_visualization = rel_visualization$omega_total,
+    reliability_pass_visualization = rel_visualization$reliability_pass,
+    alpha_task_cognition = rel_task$alpha,
+    omega_task_cognition = rel_task$omega_total,
+    reliability_pass_task_cognition = rel_task$reliability_pass,
+    alpha_system = rel_system$alpha,
+    omega_system = rel_system$omega_total,
+    reliability_pass_system = rel_system$reliability_pass
+  ) %>%
+    bind_cols(fit_tbl) %>%
+    mutate(
+      global_fit_pass = (TLI >= fit_rule_cfi_tli | CFI >= fit_rule_cfi_tli) &
+        (SRMR <= fit_rule_srmr | RMSEA <= fit_rule_rmsea),
+      reliability_pass = reliability_pass_visualization & reliability_pass_task_cognition & reliability_pass_system,
+      pass = isTRUE(converged) & isTRUE(global_fit_pass) & isTRUE(reliability_pass)
+    )
+
+  if (save_fit && !inherits(fit, "error")) out$fit_object <- list(fit)
+  out
+}
+```
+
+# Load Inputs
+
+```{r load-inputs}
+raw_data <- readr::read_csv(data_file, show_col_types = FALSE)
+
+combination_raw <- readr::read_csv(
+  combination_file,
+  show_col_types = FALSE,
+  col_types = cols(
+    scale = col_character(),
+    combination = col_character(),
+    combination_id = col_character()
+  )
+)
+
+combination_sets <- combination_raw %>%
+  mutate(
+    scale = stringr::str_trim(scale),
+    combination_id = stringr::str_trim(combination_id),
+    items = purrr::map(combination, parse_item_list),
+    n_items = purrr::map_int(items, length),
+    items_id = purrr::map_chr(items, items_to_id)
+  ) %>%
+  filter(scale %in% required_scales)
+
+missing_scales <- setdiff(required_scales, unique(combination_sets$scale))
+if (length(missing_scales) > 0) {
+  stop("The combination file is missing scale(s): ", paste(missing_scales, collapse = ", "))
+}
+
+duplicate_combination_ids <- combination_sets %>%
+  count(combination_id) %>%
+  filter(n > 1)
+if (nrow(duplicate_combination_ids) > 0) {
+  stop("Duplicate combination_id values found: ", paste(duplicate_combination_ids$combination_id, collapse = ", "))
+}
+
+all_source_items <- combination_sets %>%
+  pull(items) %>%
+  unlist(use.names = FALSE) %>%
+  unique()
+
+missing_items <- setdiff(all_source_items, names(raw_data))
+if (length(missing_items) > 0) {
+  stop("These combination items are missing from the data: ", paste(missing_items, collapse = ", "))
+}
+
+analysis_data <- raw_data %>%
+  coerce_items_numeric(all_source_items)
+
+combination_sets %>%
+  count(scale, n_items, name = "n_combinations") %>%
+  arrange(match(scale, required_scales), n_items) %>%
+  knitr::kable()
+```
+
+# Calculate Reliability For All Combinations
+
+```{r calculate-reliability}
+combination_reliability <- combination_sets %>%
+  mutate(
+    reliability = purrr::map2(items, scale, ~ reliability_for_scale(
+      data = analysis_data,
+      items = .x,
+      scale_name = .y,
+      threshold = params$reliability_threshold
+    ))
+  ) %>%
+  tidyr::unnest(reliability) %>%
+  mutate(
+    reliability_score = pmax(alpha, omega_total, na.rm = TRUE),
+    reliability_score = if_else(is.finite(reliability_score), reliability_score, NA_real_)
+  )
+
+combination_reliability_file <- file.path(output_dir, "combinations_of_items_by_scale_with_reliability.csv")
+
+readr::write_csv(
+  combination_reliability %>%
+    select(scale, combination, combination_id, reliability_score, alpha, omega_total, reliability_pass),
+  combination_reliability_file
+)
+
+cat("Wrote reliability table:", combination_reliability_file, "\n")
+
+combination_reliability %>%
+  select(scale, combination_id, reliability_score, alpha, omega_total, reliability_pass) %>%
+  slice_head(n = positive_int_or_zero(params$top_n_results)) %>%
+  knitr::kable(digits = 3)
+```
+
+# Reliability Prefilter
+
+```{r reliability-prefilter}
+reliability_sets <- readr::read_csv(
+  combination_reliability_file,
+  show_col_types = FALSE,
+  col_types = cols(
+    scale = col_character(),
+    combination = col_character(),
+    combination_id = col_character(),
+    reliability_score = col_double(),
+    alpha = col_double(),
+    omega_total = col_double(),
+    reliability_pass = col_logical()
+  )
+) %>%
+  mutate(
+    scale = stringr::str_trim(scale),
+    combination_id = stringr::str_trim(combination_id),
+    items = purrr::map(combination, parse_item_list),
+    n_items = purrr::map_int(items, length),
+    items_id = purrr::map_chr(items, items_to_id)
+  ) %>%
+  filter(scale %in% required_scales) %>%
+  group_by(scale) %>%
+  arrange(desc(reliability_pass), desc(reliability_score), .by_group = TRUE) %>%
+  mutate(rank_within_scale = row_number()) %>%
+  ungroup()
+
+readr::write_csv(
+  reliability_sets %>%
+    select(scale, combination, combination_id, reliability_score, alpha, omega_total, reliability_pass, rank_within_scale),
+  file.path(output_dir, "tested_reliability_sets.csv")
+)
+
+kept_reliability_sets <- reliability_sets %>%
+  group_by(scale) %>%
+  group_modify(function(.x, .y) {
+    reliable <- .x %>% filter(reliability_pass)
+
+    if (!is.null(max_kept)) {
+      reliable <- reliable %>% slice_head(n = max_kept)
+    }
+
+    reliable %>% mutate(kept_for_cfa = TRUE)
+  }) %>%
+  ungroup()
+
+readr::write_csv(
+  kept_reliability_sets %>%
+    select(scale, combination_id, combination, n_items, alpha, omega_total, reliability_pass, reliability_score),
+  file.path(output_dir, "kept_reliability_sets_for_cfa.csv")
+)
+
+prefilter_summary <- reliability_sets %>%
+  left_join(
+    kept_reliability_sets %>%
+      select(scale, combination_id, kept_for_cfa),
+    by = c("scale", "combination_id")
+  ) %>%
+  mutate(
+    kept_for_cfa = coalesce(kept_for_cfa, FALSE)
+  ) %>%
+  group_by(scale, n_items) %>%
+  summarise(
+    n_item_sets_evaluated = n(),
+    n_reliability_pass = sum(reliability_pass, na.rm = TRUE),
+    n_kept_for_cfa = sum(kept_for_cfa, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+knitr::kable(prefilter_summary)
+```
+
+# Build CFA Candidates
+
+```{r build-candidates}
+empty_scales <- setdiff(required_scales, unique(kept_reliability_sets$scale))
+if (length(empty_scales) > 0) {
+  stop("No item sets remain for scale(s): ", paste(empty_scales, collapse = ", "))
+}
+
+visualization_sets <- kept_reliability_sets %>% filter(scale == "visualization")
+task_sets <- kept_reliability_sets %>% filter(scale == "task_cognition")
+system_sets <- kept_reliability_sets %>% filter(scale == "system")
+
+candidates <- tidyr::crossing(
+  visualization_combination_id = visualization_sets$combination_id,
+  task_cognition_combination_id = task_sets$combination_id,
+  system_combination_id = system_sets$combination_id
+) %>%
+  mutate(
+    visualization_items = visualization_sets$items[match(visualization_combination_id, visualization_sets$combination_id)],
+    task_cognition_items = task_sets$items[match(task_cognition_combination_id, task_sets$combination_id)],
+    system_items = system_sets$items[match(system_combination_id, system_sets$combination_id)],
+    candidate_id = paste(
+      visualization_combination_id,
+      task_cognition_combination_id,
+      system_combination_id,
+      sep = "__"
+    )
+  )
+
+cat("Number of candidate CFA models after reliability prefilter:", nrow(candidates), "\n")
+
+if (!is.null(max_models)) {
+  candidates <- candidates %>% slice_head(n = max_models)
+}
+
+all_candidate_items <- candidates %>%
+  transmute(items = purrr::pmap(list(visualization_items, task_cognition_items, system_items), c)) %>%
+  pull(items) %>%
+  unlist(use.names = FALSE) %>%
+  unique()
+
+cat("Number of candidate CFA models to fit:", nrow(candidates), "\n")
+cat("Number of unique item columns used:", length(all_candidate_items), "\n")
+
+tibble(n_candidate_models = nrow(candidates)) %>%
+  knitr::kable()
+```
+
+# Run CFA and Reliability Exploration
+
+```{r run-exploration}
+started_at <- Sys.time()
+progress_every <- positive_int_or_zero(params$progress_every)
+
+results <- purrr::map_dfr(seq_len(nrow(candidates)), function(i) {
+  if (progress_every > 0 && i %% progress_every == 0) {
+    cat("Fitting candidate", i, "of", nrow(candidates), "\n")
+  }
+
+  fit_one_candidate(
+    row = candidates[i, ],
+    data = analysis_data,
+    group_col = params$group_col,
+    use_grouped_cfa = use_grouped_cfa,
+    estimator = params$estimator,
+    missing = params$missing,
+    fit_rule_cfi_tli = params$fit_rule_cfi_tli,
+    fit_rule_srmr = params$fit_rule_srmr,
+    fit_rule_rmsea = params$fit_rule_rmsea,
+    reliability_threshold = params$reliability_threshold,
+    save_fit = params$save_fitted_models
+  )
+})
+
+finished_at <- Sys.time()
+cat("Started:", format(started_at), "\n")
+cat("Finished:", format(finished_at), "\n")
+cat("Elapsed:", round(as.numeric(difftime(finished_at, started_at, units = "mins")), 2), "minutes\n")
+```
+
+# Filter and Rank
+
+```{r filter-rank}
+ranked_results <- results %>%
+  mutate(
+    min_reliability = pmin(
+      pmax(alpha_visualization, omega_visualization, na.rm = TRUE),
+      pmax(alpha_task_cognition, omega_task_cognition, na.rm = TRUE),
+      pmax(alpha_system, omega_system, na.rm = TRUE),
+      na.rm = TRUE
+    ),
+    fit_score = rowMeans(cbind(CFI, TLI, 1 - pmin(RMSEA, 1), 1 - pmin(SRMR, 1)), na.rm = TRUE)
+  ) %>%
+  arrange(desc(pass), desc(global_fit_pass), desc(reliability_pass), desc(CFI), desc(TLI), RMSEA, SRMR, desc(min_reliability))
+
+passing_models <- ranked_results %>% filter(pass)
+
+cat("Total fitted candidates:", nrow(results), "\n")
+cat("Converged candidates:", sum(results$converged, na.rm = TRUE), "\n")
+cat("Passing candidates:", nrow(passing_models), "\n")
+
+results %>%
+  summarise(
+    n = n(),
+    n_converged = sum(converged, na.rm = TRUE),
+    n_global_fit_pass = sum(global_fit_pass, na.rm = TRUE),
+    n_reliability_pass = sum(reliability_pass, na.rm = TRUE),
+    n_pass = sum(pass, na.rm = TRUE)
+  ) %>%
+  knitr::kable()
+```
+
+# Best Models
+
+```{r best-models}
+top_n <- positive_int_or_zero(params$top_n_results)
+
+ranked_results %>%
+  select(
+    candidate_id, pass, converged, admissible,
+    CFI, TLI, RMSEA, SRMR,
+    alpha_visualization, omega_visualization,
+    alpha_task_cognition, omega_task_cognition,
+    alpha_system, omega_system,
+    visualization_combination_id, task_cognition_combination_id, system_combination_id,
+    visualization_items, task_cognition_items, system_items
+  ) %>%
+  slice_head(n = top_n) %>%
+  knitr::kable(digits = 3)
+```
+
+# Diagnostics
+
+```{r diagnostics}
+results %>%
+  count(pass, global_fit_pass, reliability_pass, name = "n") %>%
+  arrange(desc(pass), desc(global_fit_pass), desc(reliability_pass)) %>%
+  knitr::kable()
+
+if (any(!results$converged, na.rm = TRUE)) {
+  results %>%
+    filter(!converged) %>%
+    count(fit_error, sort = TRUE, name = "n") %>%
+    slice_head(n = positive_int_or_zero(params$max_diagnostic_errors)) %>%
+    knitr::kable()
+}
+```
+
+# Export Results
+
+```{r export-results}
+results_file <- file.path(output_dir, "all_reliability_cfa_results.csv")
+passing_file <- file.path(output_dir, "passing_reliability_cfa_results.csv")
+best_file <- file.path(output_dir, paste0("top_", positive_int_or_zero(params$top_n_results), "_reliability_cfa_results.csv"))
+syntax_file <- file.path(output_dir, "passing_reliability_cfa_model_syntax.txt")
+
+readr::write_csv(ranked_results %>% select(-any_of("fit_object")), results_file)
+readr::write_csv(passing_models %>% select(-any_of("fit_object")), passing_file)
+readr::write_csv(ranked_results %>% slice_head(n = positive_int_or_zero(params$top_n_results)) %>% select(-any_of("fit_object")), best_file)
+
+if (nrow(passing_models) > 0) {
+  syntax_text <- passing_models %>%
+    mutate(block = paste0(
+      "# ", candidate_id, "\n",
+      "# CFI=", round(CFI, 3), ", TLI=", round(TLI, 3),
+      ", RMSEA=", round(RMSEA, 3), ", SRMR=", round(SRMR, 3), "\n",
+      model_syntax, "\n"
+    )) %>%
+    pull(block) %>%
+    paste(collapse = "\n")
+  writeLines(syntax_text, syntax_file)
+} else {
+  writeLines("No passing models found under the current rules.", syntax_file)
+}
+
+cat("Wrote:\n")
+cat(results_file, "\n")
+cat(passing_file, "\n")
+cat(best_file, "\n")
+cat(syntax_file, "\n")
+```
+
+
+# Comparison with the May 2026 run
+
+```{r compare-may}
+may_dir <- here::here("Gdrive_files", "Item Reduction", "Reliability_CFA_Analysis", "4_factors_task_cognition",
+                      "260506Data_AnalysisReliability078-4taskCFAExploration-100best")
+may_file <- file.path(may_dir, "R78-4passing_reliability_cfa_results.csv")
+if (params$run_name == "rel078_6-4-3_singlegroup_uncollapsed" && file.exists(may_file)) {
+  may <- readr::read_csv(may_file, show_col_types = FALSE)
+  key <- function(d) paste(d$visualization_items, d$task_cognition_items, d$system_items)
+  cat("Approved now:", nrow(passing_models), "| approved in May:", nrow(may), "\n")
+  cat("Same approved models:", setequal(key(passing_models), key(may)), "\n")
+  both <- dplyr::inner_join(passing_models %>% mutate(k = key(.)), may %>% mutate(k = key(.)), by = "k")
+  cat("Max |CFI difference|:", max(abs(both$CFI.x - both$CFI.y)), "\n")
+}
+writeLines(capture.output(sessionInfo()), file.path(output_dir, "sessionInfo.txt"))
+```

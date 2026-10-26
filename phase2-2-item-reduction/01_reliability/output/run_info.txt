@@ -1,0 +1,3 @@
+data_file: C:/Users/Eliane/My_codes/GitInstrument/phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv
+md5: eb83954b17ac6ef2149f63f4f7c0c572
+run at: 2026-10-20 16:29:52.989804

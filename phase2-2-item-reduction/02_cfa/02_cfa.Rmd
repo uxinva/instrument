@@ -1,0 +1,235 @@
+---
+title: "02 Multi-group CFA for all item-reduction versions"
+author: "Eliane (refactor of Reproduce3-MG-CFA-Model_1/2/3.Rmd)"
+date: "`r Sys.Date()`"
+output: html_document
+params:
+  # Same data as the reliability notebook: low-frequency COLLAPSED data.
+  data_file: "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv"
+  invariance: FALSE  # TRUE = also fit metric (loadings) and scalar (loadings + intercepts) models (much slower)
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(here)      # project root = GitInstrument/
+library(lavaan)
+library(dplyr)
+library(tidyr)
+```
+
+# 1. Configuration
+
+Item lists come from the shared file `phase2-2-item-reduction/item_versions_config.R`,
+the same one used by `01_reliability/01_reliability.Rmd`.
+
+The model specification is the same as in the old notebooks (`Reproduce3-MG-CFA-Model_1/2/3.Rmd`):
+
+* multigroup CFA by `stimulus` (Tableau, Qlik, Power BI, Gephi, JMP);
+* estimator ML (lavaan default), `missing = "fiml"`;
+* one latent factor per scale, items as indicators.
+
+```{r config}
+source(here("phase2-2-item-reduction", "item_versions_config.R"))
+cat("Versions:", paste(names(versions), collapse = ", "), "\n")
+
+# indices reported in the paper table (Results Summary)
+paper_indices <- c("chisq", "df", "pvalue", "cfi", "tli", "rmsea",
+                   "rmsea.ci.lower", "rmsea.ci.upper", "srmr", "ntotal", "npar")
+```
+
+# 2. Data and output folders
+
+```{r data}
+data_path <- here(params$data_file)
+stopifnot(file.exists(data_path))
+raw <- read.csv(data_path, encoding = "UTF-8", check.names = FALSE)
+
+# drop the blank rows and make stimulus an explicit factor
+grp_data <- raw %>% filter(!is.na(stimulus) & stimulus != "") %>% select(-seed)
+grp_data$stimulus <- factor(grp_data$stimulus)
+cat("N =", nrow(grp_data), "\n"); print(table(grp_data$stimulus))
+
+all_items <- unique(unlist(lapply(versions, function(v) c(unlist(v$full), unlist(v$models)))))
+missing <- setdiff(all_items, names(grp_data))
+if (length(missing) > 0) stop("Items not found in data: ", paste(missing, collapse = ", "))
+
+out_root <- here("phase2-2-item-reduction", "02_cfa", "output")
+dir.create(out_root, recursive = TRUE, showWarnings = FALSE)
+cat("Output folder:", out_root, "\n")
+
+writeLines(c(paste("data_file:", data_path),
+             paste("md5:", tools::md5sum(data_path)),
+             paste("run at:", Sys.time())),
+           file.path(out_root, "run_info.txt"))
+file.copy(here("phase2-2-item-reduction", "item_versions_config.R"), out_root, overwrite = TRUE)
+```
+
+# 3. Functions
+
+```{r functions}
+# write.csv that does not stop the knit when a file is locked (e.g. open in Excel):
+# it writes a copy with a time stamp instead and warns.
+safe_write_csv <- function(x, file, ...) {
+  ok <- tryCatch({ write.csv(x, file, ...); TRUE }, error = function(e) FALSE)
+  if (!ok) {
+    alt <- sub("\\.csv$", paste0("_", format(Sys.time(), "%H%M%S"), ".csv"), file)
+    write.csv(x, alt, ...)
+    warning("Could not write ", basename(file), " (is it open in Excel?). Saved as ", basename(alt))
+  }
+  invisible(file)
+}
+
+model_syntax <- function(factors) {
+  paste(sapply(names(factors), function(f)
+    paste(f, "=~", paste(factors[[f]], collapse = " + "))), collapse = "\n")
+}
+
+# fit one multigroup CFA, capturing warnings instead of hiding them
+fit_cfa <- function(factors, group.equal = "") {
+  warns <- character(0)
+  fit <- withCallingHandlers(
+    cfa(model_syntax(factors), data = grp_data, group = "stimulus",
+        missing = "fiml", group.equal = group.equal),
+    warning = function(w) { warns <<- c(warns, conditionMessage(w)); invokeRestart("muffleWarning") })
+  attr(fit, "warnings") <- warns
+  fit
+}
+
+save_fit <- function(fit, version, model, out_dir) {
+  # fitMeasures() of the full model is slow (FIML, many items, 5 groups): it is computed
+  # once and stored with the cached fit (attribute "fm"), so later versions reuse it.
+  fm <- attr(fit, "fm")
+  if (is.null(fm)) fm <- fitMeasures(fit)
+  m <- as.matrix(fm); colnames(m) <- model
+  safe_write_csv(m, file.path(out_dir, paste0("fit_indices-", model, ".csv")))
+
+  groups <- lavInspect(fit, "group.label")          # lavaan numbers the groups 1..5
+  std <- standardizedSolution(fit) %>% filter(op == "=~")
+  std$stimulus <- groups[std$group]                  # tool name of each group
+  safe_write_csv(std, file.path(out_dir, paste0("std_loadings-", model, ".csv")), row.names = FALSE)
+
+  # latent factor correlations per tool (to inspect warnings such as a non positive definite matrix)
+  cors <- lavInspect(fit, "cor.lv")
+  cors <- do.call(rbind, lapply(seq_along(cors), function(g) {
+    cm <- cors[[g]]
+    idx <- which(upper.tri(cm), arr.ind = TRUE)
+    data.frame(stimulus = groups[g], factor_1 = rownames(cm)[idx[, 1]],
+               factor_2 = colnames(cm)[idx[, 2]], correlation = cm[idx])
+  }))
+  safe_write_csv(cors, file.path(out_dir, paste0("factor_cor-", model, ".csv")), row.names = FALSE)
+
+  data.frame(version = version, model = model,
+             converged = lavInspect(fit, "converged"),
+             warnings = paste(unique(attr(fit, "warnings")), collapse = " | "),
+             t(fm[paper_indices]), row.names = NULL)
+}
+```
+
+# 4. Run everything
+
+The full model is fitted once per structure (3-factor or 4-factor) and reused by every version
+that shares it. Versions A–D share the 3-factor full model; Version E uses the 4-factor one.
+
+```{r run}
+full_fits <- list()
+rows <- list()
+invariance_rows <- list()
+
+for (v in names(versions)) {
+  cfg <- versions[[v]]
+  out_dir <- file.path(out_root, v)
+  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+
+  # full model (cached by structure)
+  key <- paste(names(cfg$full), sapply(cfg$full, length), collapse = "_")
+  if (is.null(full_fits[[key]])) {
+    full_fits[[key]] <- fit_cfa(cfg$full)
+    attr(full_fits[[key]], "fm") <- fitMeasures(full_fits[[key]])   # computed once per structure
+  }
+  rows[[length(rows) + 1]] <- save_fit(full_fits[[key]], v, "full_model", out_dir)
+
+  # reduced models
+  for (m in names(cfg$models)) {
+    fit <- fit_cfa(cfg$models[[m]])
+    rows[[length(rows) + 1]] <- save_fit(fit, v, m, out_dir)
+
+    if (params$invariance) {
+      fit_metric <- fit_cfa(cfg$models[[m]], group.equal = "loadings")
+      fit_scalar <- fit_cfa(cfg$models[[m]], group.equal = c("loadings", "intercepts"))
+      lrt <- lavTestLRT(fit, fit_metric, fit_scalar)
+      inv <- data.frame(version = v, model = m,
+                        level = c("configural", "metric", "scalar"),
+                        as.data.frame(lrt), row.names = NULL)
+      inv <- cbind(inv, t(sapply(list(fit, fit_metric, fit_scalar),
+                                 function(f) fitMeasures(f, c("cfi", "tli", "rmsea", "srmr")))))
+      safe_write_csv(inv, file.path(out_dir, paste0("invariance-", m, ".csv")), row.names = FALSE)
+      invariance_rows[[length(invariance_rows) + 1]] <- inv
+    }
+  }
+  cat("done:", v, "\n")
+}
+
+fit_long <- bind_rows(rows)
+safe_write_csv(fit_long, file.path(out_root, "fit_all_versions_long.csv"), row.names = FALSE)
+if (length(invariance_rows) > 0)
+  safe_write_csv(bind_rows(invariance_rows), file.path(out_root, "invariance_all_versions.csv"), row.names = FALSE)
+
+# models that did not converge or raised warnings
+fit_long %>% filter(!converged | warnings != "") %>% select(version, model, converged, warnings)
+```
+
+# 5. Table in the same layout as "Results Summary"
+
+One block per index; rows = model, columns = version.
+
+```{r summary table}
+fit_wide <- fit_long %>%
+  select(version, model, chisq, df, pvalue, cfi, tli, rmsea, srmr) %>%
+  pivot_longer(c(chisq, df, pvalue, cfi, tli, rmsea, srmr), names_to = "index") %>%
+  pivot_wider(names_from = version, values_from = value) %>%
+  mutate(index = factor(index, levels = c("chisq", "df", "pvalue", "tli", "cfi", "rmsea", "srmr")),
+         model = factor(model, levels = c("full_model", "Model_1", "Model_2", "Model_3"))) %>%
+  arrange(index, model)
+safe_write_csv(fit_wide, file.path(out_root, "fit_summary_wide.csv"), row.names = FALSE)
+knitr::kable(fit_wide, digits = 3)
+
+# Paper table (LaTeX): one block per fit index; rows = model, columns = version
+idx <- c(chisq = "$\\chi^2$ (df)", cfi = "CFI ($\\geq$ 0.95)", tli = "TLI ($\\geq$ 0.95)",
+         rmsea = "RMSEA ($\\leq$ 0.06)", srmr = "SRMR ($\\leq$ 0.08)")
+mod_order <- c("full_model", "Model_1", "Model_2", "Model_3")
+mod_label <- c(full_model = "Baseline", Model_1 = "Model 1", Model_2 = "Model 2", Model_3 = "Model 3")
+fl <- as.data.frame(fit_long)
+vers <- sort(unique(fl$version))
+cellf <- function(ix, r) {
+  if (nrow(r) == 0) return("--")
+  if (ix == "chisq") sprintf("%.1f (%d)", r$chisq[1], as.integer(r$df[1])) else sprintf("%.3f", r[[ix]][1])
+}
+body <- character(0)
+for (ix in names(idx)) {
+  for (k in seq_along(mod_order)) {
+    m <- mod_order[k]
+    cells <- vapply(vers, function(v) cellf(ix, fl[fl$version == v & fl$model == m, , drop = FALSE]), "")
+    body <- c(body, paste0(if (k == 1) idx[[ix]] else "", " & ", mod_label[[m]], " & ",
+                           paste(cells, collapse = " & "), " \\\\"))
+  }
+  body[length(body)] <- paste(body[length(body)], "\\hline")
+}
+fit_tex <- c("% Generated by phase2-2-item-reduction/02_cfa/02_cfa.Rmd -- do not edit by hand",
+             "% Needs \\usepackage{graphicx} (\\resizebox)",
+             "\\begin{table}[htbp]", "\\centering", "\\small",
+             paste0("\\caption{Global fit of the multigroup CFA (five tools, FIML, collapsed data) by model and version. ",
+                    "Baseline: the 49 items that started the item reduction phase (Versions A--D) and the 61 items ",
+                    "of the four-factor structure (Version E). A model meets the fit rule when (CFI or TLI $\\geq$ 0.95) and ",
+                    "(SRMR $\\leq$ 0.08 or RMSEA $\\leq$ 0.06); the cutoff of each index is shown next to it. ",
+                    "-- = model not defined for the version.}"),
+             "\\label{tab:fit-summary}",
+             "\\resizebox{\\linewidth}{!}{%",
+             paste0("\\begin{tabular}{ll", strrep("r", length(vers)), "}"), "\\hline",
+             paste0("Index & Model & ", paste(sub("Version_", "Version ", vers), collapse = " & "), " \\\\"),
+             "\\hline", body, "\\end{tabular}}", "\\end{table}")
+writeLines(fit_tex, file.path(out_root, "fit-summary-table.tex"))
+```
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(out_root, "sessionInfo.txt"))
+```

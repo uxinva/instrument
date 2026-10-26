@@ -1,0 +1,51 @@
+factor,rank_reliability,alpha_if_dropped,rank_loading,loading,rank_irt,priority,code,irt_monotonicity,irt_discrimination,irt_middle_category,irt_coverage,priority_final,considerations
+system,2,0.9263131149,3,0.869845281864574,1,1,P214,3,3,3,3,1,
+system,1,0.9256590095,1,0.89173301738616,2,2,P088,2,3,3,3,2,
+system,7,0.9274439081,8,0.653809425650072,3,3,P024,3,3,3,3,,
+system,4,0.9268913507,4,0.792910306243936,4,4,P4026A,3,3,3,3,4,
+system,3,0.9265686342,2,0.884165290923137,5,5,P026,3,2,3,3,5,
+system,6,0.9272711146,6,0.726494400070667,6,,P086,3,3,3,3,,
+system,5,0.9270698527,5,0.727062829041748,7,,P074,2,3,3,3,3,
+system,11,0.9279738687,7,0.656322732356497,8,,P054,2,3,2,3,,
+system,13,0.9293441435,9,0.617689284946916,9,,P204,3,2,1,3,,
+system,9,0.927853435,10,0.590336249992127,10,,P074A,3,2,3,3,,
+system,10,0.9279241839,12,0.506172542949263,11,,P022,2,2,2,3,,
+system,14,0.9294891728,14,0.41256181148996,15,,P203,2,2,2,3,,
+system,8,0.9276326002,11,0.513891770035882,17,,P084,2,3,2,3,,
+system,12,0.9291714297,13,0.415207659721747,18,,P096,2,2,2,3,,
+visualization,10,0.9125157496,9,0.453960252766593,9,,P012,2,2,1,1,,"not related to visualization - but items about consistency appears in the visualization factor -  it is not so bad in IRT, but It's related to consistency and we didn't want to keep it because it didn't feel like it was about the visualizations. We could interpret this been about the visual encodings consistency ... we are not sure It is so bad ... but it is not loading strongly"
+visualization,15,0.9148581798,14,0.335717018835407,12,,P014,0,0,2,3,,
+visualization,5,0.9118787111,10,0.449982340588317,2,2,P022A,1,3,2,2,2,The sentence is hard to parse. It has good psicometric properties. better than the 89
+visualization,11,0.9125336306,15,0.319518744902441,10,,P033,1,2,1,3,,
+visualization,4,0.9114006272,16,0.307573390464436,3,,P045A,2,2,3,2,,"AF in Mattermost - P045A load poorly on this factor (.31) so we don't want to keep it as an option
+So I removed it from the list. -too low loading factor - not related to visualization"
+visualization,16,0.9164284248,2,0.698588840211202,13,,P05,1,2,1,3,6,good loadings - very bad IRT properties - IRT it is all over the place - It's quite a mess. - it is a little redundant with the 089
+visualization,13,0.9129627396,12,0.432177614008679,5,,P067,1,2,2,2,7,Next IRT  properties - not related to visualization and the loading is not so good
+visualization,8,0.9124385961,4,0.626338290380668,4,5,P068,2,3,2,2,5,maybe try with it instead of the 012 - it is related to consistency .  The 012 -  the text is better than this  068 - but the 068  loading is even higher than 12 - why does this load (factor  loading) strongly with visualization items ? same in 5-factor -
+visualization,12,0.9125412298,3,0.648704973033811,8,2,P089,1,2,1,1,2,"IRT graph is a little messy (-1 curve is above the middle curve), but it's very similar to P068 in IRT terms, and its has a high loading - and the text is somthing we could have -"
+visualization,1,0.9110838471,7,0.515605639880766,1,3,P097,1,3,2,0,3,
+visualization,6,0.9121527522,13,0.352982837251735,6,,P097A,1,2,1,2,,
+visualization,2,0.9113192372,5,0.582146609269853,7,1,P098,1,2,2,3,1,
+visualization,7,0.9121943523,1,0.774739618635164,11,4,P106,2,2,1,0,4,"IRT - not so bad - but it is good in the right, but do not have much on the left."
+visualization,14,0.9134817941,8,0.457379494841363,16,,P205,1,2,0,0,,
+visualization,3,0.9113753229,11,0.448296642780285,14,,P206,1,3,0,1,,
+visualization,9,0.9124725969,6,0.5201043285065,15,,P211,1,2,0,1,,
+task_cognition,16,0.9441841097,1,0.827636745386744,4,1,P062,3,3,2,3,1,
+task_cognition,17,0.9449052039,2,0.747139090186452,3,2,P064,3,2,2,3,2,
+task_cognition,1,0.9425158497,8,0.580138307908514,2,3,P060,2,2,2,3,3,
+task_cognition,3,0.9428009005,11,0.543495636259108,5,4,P027,2,3,2,2,4,
+task_cognition,6,0.9432648439,3,0.734216872082236,,5,P301,2,2,1,1,5,
+task_cognition,2,0.9427459394,17,0.428670153517257,6,6,P072,1,3,0,2,6,
+task_cognition,15,0.9440308633,12,0.540239877273094,7,7,P208,2,2,2,2,7,
+task_cognition,19,0.945214674,9,0.561700259954833,8,8,P083,2,2,2,3,8,
+task_cognition,10,0.9437158092,19,0.361961676671614,1,,P041,3,2,2,2,,possibly excluding this item because it seems to belong to the system factor/Verified: it's not loading strongly on that factor
+task_cognition,4,0.9430114354,5,0.708820353277896,,,P052,2,3,2,2,,
+task_cognition,8,0.9436704268,6,0.605547542134,,,P029,2,3,2,2,,
+task_cognition,5,0.9431556686,7,0.596524781057775,,,P030,2,3,1,1,,
+task_cognition,9,0.9436752143,4,0.709106574979673,,,P057,2,3,1,1,,
+task_cognition,7,0.9435765985,15,0.488692119928122,,,P025,2,2,1,0,,
+task_cognition,13,0.9439016319,10,0.561146738936084,,,P04A,0,2,0,2,,
+task_cognition,14,0.9439695703,13,0.5143975492482,,,P302,2,2,1,1,,
+task_cognition,11,0.9438242515,18,0.39609004144832,,,P037,2,2,1,1,,
+task_cognition,18,0.9449681741,14,0.508297303809589,,,P062C,2,3,1,1,,
+task_cognition,12,0.9438475274,16,0.437291100188598,,,P4026B,1,2,0,0,,

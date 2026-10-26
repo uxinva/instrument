@@ -1,0 +1,17 @@
+IRT rank versus total of the four scores (the rank was agreed by the team, not computed)
+
+task_cognition: 19 items, 8 with an IRT rank; Spearman(rank, total) = 0.43
+  top 5 by IRT rank: ['P027', 'P041', 'P060', 'P062', 'P064']
+  top 5 by total:    ['P027', 'P041', 'P060', 'P062', 'P064', 'P083'] (ties averaged)
+  largest differences (IRT rank - rank by total): P083 8 vs 4.5, P041 1 vs 4.5, P062 4 vs 1
+  without IRT rank: P301, P052, P029, P030, P057, P025, P04A, P302, P037, P062C, P4026B
+
+system: 14 items, 14 with an IRT rank; Spearman(rank, total) = 0.81
+  top 5 by IRT rank: ['P024', 'P026', 'P088', 'P214', 'P4026A']
+  top 5 by total:    ['P024', 'P086', 'P214', 'P4026A'] (ties averaged)
+  largest differences (IRT rank - rank by total): P084 17 vs 9.5, P096 18 vs 12.5, P088 2 vs 6.5, P086 6 vs 2.5
+
+visualization: 16 items, 16 with an IRT rank; Spearman(rank, total) = 0.72
+  top 5 by IRT rank: ['P022A', 'P045A', 'P067', 'P068', 'P097']
+  top 5 by total:    ['P022A', 'P045A', 'P068', 'P098'] (ties averaged)
+  largest differences (IRT rank - rank by total): P097 1 vs 9, P05 13 vs 6, P089 8 vs 12.5, P033 10 vs 6

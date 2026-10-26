@@ -1,0 +1,16 @@
+"stimulus","factor_1","factor_2","correlation"
+"Tableau","visualization","task_cognition",0.880633445000075
+"Tableau","visualization","system",0.753081271566639
+"Tableau","task_cognition","system",0.746764326789019
+"Qlik","visualization","task_cognition",0.917528107360259
+"Qlik","visualization","system",0.806116394294323
+"Qlik","task_cognition","system",0.738408156105972
+"Gephi","visualization","task_cognition",0.877483303939751
+"Gephi","visualization","system",0.746864374820872
+"Gephi","task_cognition","system",0.756086267747145
+"JMP","visualization","task_cognition",0.924652117035266
+"JMP","visualization","system",0.7827899456965
+"JMP","task_cognition","system",0.881812492034676
+"Power BI","visualization","task_cognition",0.783151876497353
+"Power BI","visualization","system",0.592278578761221
+"Power BI","task_cognition","system",0.48366412673297

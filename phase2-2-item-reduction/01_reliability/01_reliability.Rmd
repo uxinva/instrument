@@ -1,0 +1,246 @@
+---
+title: "01 Reliability: alpha and omega for all item-reduction versions"
+author: "Eliane (refactor of Reproduce2-reliability.Rmd)"
+date: "`r Sys.Date()`"
+output: html_document
+params:
+  # Input data: low-frequency COLLAPSED data (categories <= 2.5% merged to the right,
+  # 04_Colapsing_Low-Frequency Categories-toRight.R). Decision 2026-10-15: use collapsed data in all phase 2.
+  # The old (2026-04) reliability values were computed on uncollapsed data, so they differ slightly.
+  data_file: "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv"
+  per_stimulus: TRUE        # also compute alpha/omega per tool (Tableau, Qlik, ...)
+  compute_omega: TRUE       # omega total from the polychoric matrix (slower)
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(here)      # project root = GitInstrument/ (the .here file is there)
+library(psych)
+library(dplyr)
+library(tidyr)
+```
+
+# 1. Configuration
+
+Item lists are in `phase2-2-item-reduction/item_versions_config.R` (shared with the CFA notebook).
+Each version has a `full` structure (complete item list used as baseline) and up to 3 models.
+
+```{r config}
+# Item lists live in ONE shared file, also used by the CFA notebook.
+source(here("phase2-2-item-reduction", "item_versions_config.R"))
+cat("Versions:", paste(names(versions), collapse = ", "), "\n")
+```
+
+# 2. Data and output folders
+
+```{r data}
+data_path <- here(params$data_file)
+stopifnot(file.exists(data_path))
+raw <- read.csv(data_path, encoding = "UTF-8", check.names = FALSE)
+
+# drop empty rows (the csv has 5 blank lines at the end)
+grp_data <- raw %>% filter(!is.na(stimulus) & stimulus != "") %>% select(-seed)
+item_data <- grp_data %>% select(-stimulus)
+stimuli <- sort(unique(grp_data$stimulus))
+cat("N =", nrow(grp_data), "| stimuli:", paste(stimuli, collapse = ", "), "\n")
+
+# check that every configured item exists in the data
+all_items <- unique(unlist(lapply(versions, function(v) c(unlist(v$full), unlist(v$models)))))
+missing <- setdiff(all_items, names(item_data))
+if (length(missing) > 0) stop("Items not found in data: ", paste(missing, collapse = ", "))
+
+out_root <- here("phase2-2-item-reduction", "01_reliability", "output")
+dir.create(out_root, recursive = TRUE, showWarnings = FALSE)
+cat("Output folder:", out_root, "\n")
+
+# keep a record of exactly what was run
+writeLines(c(paste("data_file:", data_path),
+             paste("md5:", tools::md5sum(data_path)),
+             paste("run at:", Sys.time())),
+           file.path(out_root, "run_info.txt"))
+saveRDS(versions, file.path(out_root, "versions_config.rds"))
+file.copy(here("phase2-2-item-reduction", "item_versions_config.R"), out_root, overwrite = TRUE)
+```
+
+# 3. Functions
+
+```{r functions}
+# write.csv that does not stop the knit when a file is locked (e.g. open in Excel):
+# it writes a copy with a time stamp instead and warns.
+safe_write_csv <- function(x, file, ...) {
+  ok <- tryCatch({ write.csv(x, file, ...); TRUE }, error = function(e) FALSE)
+  if (!ok) {
+    alt <- sub("\\.csv$", paste0("_", format(Sys.time(), "%H%M%S"), ".csv"), file)
+    write.csv(x, alt, ...)
+    warning("Could not write ", basename(file), " (is it open in Excel?). Saved as ", basename(alt))
+  }
+  invisible(file)
+}
+
+# Omega total from the polychoric matrix of THIS subset (no global-matrix shortcut,
+# so per-stimulus omegas are really computed on that stimulus' data).
+omega_total <- function(d) {
+  if (!params$compute_omega || ncol(d) < 3) return(NA_real_)
+  rho <- tryCatch(psych::polychoric(droplevels(d))$rho, error = function(e) NULL)
+  if (is.null(rho)) return(NA_real_)
+  om <- tryCatch(psych::omega(rho, nfactors = 1, n.obs = nrow(d), plot = FALSE),
+                 error = function(e) NULL)
+  if (is.null(om)) NA_real_ else om$omega.tot
+}
+
+reliability_row <- function(d) {
+  a <- psych::alpha(d, check.keys = FALSE, warnings = FALSE)
+  list(total = cbind(a$total, omega_tot = omega_total(d), n_obs = nrow(d), n_items = ncol(d)),
+       drop  = a$alpha.drop)
+}
+
+run_block <- function(version, model, factor, items, out_dir) {
+  d <- item_data[, items, drop = FALSE]
+  r <- reliability_row(d)
+  safe_write_csv(r$total, file.path(out_dir, paste0(factor, "-", model, "-reliability.csv")))
+  safe_write_csv(r$drop,  file.path(out_dir, paste0(factor, "-", model, "-items-drop-detailed.csv")))
+
+  rows <- list(data.frame(version = version, model = model, factor = factor, stimulus = "All",
+                          items = paste(items, collapse = " "), r$total, row.names = NULL))
+  if (params$per_stimulus) {
+    for (s in stimuli) {
+      ds <- grp_data[grp_data$stimulus == s, items, drop = FALSE]
+      rs <- reliability_row(ds)
+      safe_write_csv(rs$total, file.path(out_dir, paste0(factor, "-", model, "-", s, "-reliability.csv")))
+      rows[[length(rows) + 1]] <- data.frame(version = version, model = model, factor = factor,
+                                             stimulus = s, items = paste(items, collapse = " "),
+                                             rs$total, row.names = NULL)
+    }
+  }
+  bind_rows(rows)
+}
+```
+
+# 4. Run everything
+
+```{r run}
+results <- list()
+for (v in names(versions)) {
+  out_dir <- file.path(out_root, v)
+  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+  cfg <- versions[[v]]
+  for (f in names(cfg$full))
+    results[[length(results) + 1]] <- run_block(v, "full_data", f, cfg$full[[f]], out_dir)
+  for (m in names(cfg$models))
+    for (f in names(cfg$models[[m]]))
+      results[[length(results) + 1]] <- run_block(v, m, f, cfg$models[[m]][[f]], out_dir)
+  cat("done:", v, "\n")
+}
+all_results <- bind_rows(results)
+safe_write_csv(all_results, file.path(out_root, "reliability_all_versions_long.csv"), row.names = FALSE)
+```
+
+# 5. Table in the same layout as "Results Summary"
+
+```{r summary table}
+summary_wide <- all_results %>%
+  filter(stimulus == "All") %>%
+  select(factor, model, version, raw_alpha) %>%
+  pivot_wider(names_from = version, values_from = raw_alpha) %>%
+  arrange(factor, model)
+safe_write_csv(summary_wide, file.path(out_root, "reliability_summary_wide.csv"), row.names = FALSE)
+knitr::kable(summary_wide, digits = 3)
+
+omega_wide <- all_results %>%
+  filter(stimulus == "All") %>%
+  select(factor, model, version, omega_tot) %>%
+  pivot_wider(names_from = version, values_from = omega_tot) %>%
+  arrange(factor, model)
+safe_write_csv(omega_wide, file.path(out_root, "omega_summary_wide.csv"), row.names = FALSE)
+
+# Paper table (LaTeX): Cronbach's alpha by factor x model (rows) and version (columns)
+fac_order <- c("system", "task_cognition", "visualization", "reliability")
+fac_label <- c(system = "System", task_cognition = "Task\\_cognition",
+               visualization = "Visualization", reliability = "Reliability")
+mod_order <- c("full_data", "Model_1", "Model_2", "Model_3")
+mod_label <- c(full_data = "Baseline", Model_1 = "Model 1", Model_2 = "Model 2", Model_3 = "Model 3")
+sw <- as.data.frame(summary_wide)
+vers <- setdiff(names(sw), c("factor", "model"))
+sw <- sw[order(match(sw$factor, fac_order), match(sw$model, mod_order)), ]
+cell <- function(x) ifelse(is.na(x), "--", sprintf("%.3f", x))
+body <- character(0); prev <- ""
+for (i in seq_len(nrow(sw))) {
+  f <- sw$factor[i]
+  if (prev != "" && f != prev) body[length(body)] <- paste(body[length(body)], "\\hline")
+  body <- c(body, paste0(if (f != prev) fac_label[[f]] else "", " & ", mod_label[[sw$model[i]]], " & ",
+                         paste(cell(unlist(sw[i, vers])), collapse = " & "), " \\\\"))
+  prev <- f
+}
+rel_tex <- c("% Generated by phase2-2-item-reduction/01_reliability/01_reliability.Rmd -- do not edit by hand",
+             "\\begin{table}[htbp]", "\\centering", "\\small",
+             paste0("\\caption{Cronbach's $\\alpha$ of each factor by model and version (collapsed data). ",
+                    "Baseline: the 49 items that started the item reduction phase (Versions A--D) and the ",
+                    "61 items of the four-factor structure (Version E). -- = model not defined for the version.}"),
+             "\\label{tab:reliability-summary}",
+             paste0("\\begin{tabular}{ll", strrep("r", length(vers)), "}"), "\\hline",
+             paste0("Factor & Model & ", paste(sub("Version_", "Version ", vers), collapse = " & "), " \\\\"),
+             "\\hline", body, "\\hline", "\\end{tabular}", "\\end{table}")
+writeLines(rel_tex, file.path(out_root, "reliability-summary-table.tex"))
+```
+
+# 6. Paper table: alpha if item dropped
+
+All items of each factor, sorted by alpha if item dropped (lowest first). Bold items and factor labels are set in `item_versions_config.R` (`item_table`).
+Item wording comes from `data/codebook/items.csv`.
+
+```{r item drop table}
+tab_factors <- get(item_table_structure)
+codebook <- read.csv(here("phase2-2-item-reduction", "data", "codebook", "items.csv"),
+                     stringsAsFactors = FALSE, check.names = FALSE)
+wording <- setNames(codebook$wording, codebook$code)
+
+latex_escape <- function(x) gsub("([&%$#_{}])", "\\\\\\1", x)
+fmt <- function(x) sprintf("%.3f", x)
+
+rows <- list(); tex <- c()
+for (f in names(item_table)) {
+  items <- tab_factors[[f]]
+  a <- psych::alpha(item_data[, items, drop = FALSE], check.keys = FALSE, warnings = FALSE)
+  base <- a$total$raw_alpha
+  drop <- setNames(a$alpha.drop$raw_alpha, rownames(a$alpha.drop))
+  spec <- item_table[[f]]
+  missing_items <- setdiff(spec$bold, items)
+  if (length(missing_items) > 0) stop("Not in ", f, ": ", paste(missing_items, collapse = ", "))
+  role <- ifelse(items %in% spec$bold, "bold", "listed")
+  sorted <- items[order(drop[items], seq_along(items))]   # lowest alpha if dropped first
+  rows[[f]] <- data.frame(factor = f, baseline_alpha = base, position_in_full_list = seq_along(items),
+                          code = items, wording = unname(wording[items]),
+                          alpha_if_dropped = unname(drop[items]), role = role,
+                          row.names = NULL)[order(drop[items], seq_along(items)), ]
+  rows[[f]]$rank <- seq_len(nrow(rows[[f]]))
+
+  label <- latex_escape(item_table_factor_labels[[f]])
+  tex <- c(tex, sprintf("\\multicolumn{3}{l}{\\textbf{%s Factor} (\\textit{Subscale baseline Cronbach's $\\alpha = %s$})} \\\\",
+                        label, fmt(base)))
+  shown <- sorted
+  for (it in shown) {
+    b <- it %in% spec$bold
+    wrap <- function(x) if (b) paste0("\\textbf{", x, "}") else x
+    tex <- c(tex, sprintf("%s & %s & %s \\\\", wrap(latex_escape(it)),
+                          latex_escape(wording[[it]]), wrap(fmt(drop[[it]]))))
+  }
+  tex[length(tex)] <- paste(tex[length(tex)], "\\hline")
+}
+
+item_drop_table <- bind_rows(rows)
+safe_write_csv(item_drop_table, file.path(out_root, "item_drop_table.csv"), row.names = FALSE)
+
+tex_doc <- c("\\begin{table}[ht]", "\\centering",
+             "\\caption{Item-level reliability statistics (Cronbach's $\\alpha$ if item dropped)}",
+             "\\label{tab:item-drop}",
+             "\\begin{tabular}{llr}", "\\hline",
+             "\\textbf{Item Code} & \\textbf{Item Statement} & \\textbf{$\\alpha$ if dropped} \\\\ \\hline",
+             tex, "\\end{tabular}", "\\end{table}")
+writeLines(tex_doc, file.path(out_root, "item_drop_table.tex"))
+
+knitr::kable(item_drop_table %>% select(factor, rank, code, wording, alpha_if_dropped, role), digits = 3)
+```
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(out_root, "sessionInfo.txt"))
+```

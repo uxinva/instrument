@@ -1,0 +1,708 @@
+# visualization_comb_16__task_cognition_comb_3__system_comb_6
+# CFI=0.97, TLI=0.963, RMSEA=0.046, SRMR=0.033
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_6
+# CFI=0.97, TLI=0.963, RMSEA=0.046, SRMR=0.035
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_4
+# CFI=0.969, TLI=0.962, RMSEA=0.048, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_5
+# CFI=0.969, TLI=0.961, RMSEA=0.048, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_6
+# CFI=0.969, TLI=0.961, RMSEA=0.047, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_9
+# CFI=0.969, TLI=0.961, RMSEA=0.047, SRMR=0.035
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_10
+# CFI=0.969, TLI=0.961, RMSEA=0.048, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_6
+# CFI=0.969, TLI=0.961, RMSEA=0.048, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_9
+# CFI=0.969, TLI=0.961, RMSEA=0.047, SRMR=0.036
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_9
+# CFI=0.969, TLI=0.96, RMSEA=0.048, SRMR=0.033
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_8
+# CFI=0.968, TLI=0.96, RMSEA=0.048, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_9
+# CFI=0.968, TLI=0.959, RMSEA=0.049, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_4
+# CFI=0.967, TLI=0.959, RMSEA=0.05, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_10
+# CFI=0.967, TLI=0.958, RMSEA=0.049, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_5
+# CFI=0.967, TLI=0.958, RMSEA=0.05, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_8
+# CFI=0.966, TLI=0.958, RMSEA=0.049, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_4
+# CFI=0.966, TLI=0.958, RMSEA=0.051, SRMR=0.035
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_4
+# CFI=0.966, TLI=0.957, RMSEA=0.051, SRMR=0.037
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_5
+# CFI=0.965, TLI=0.956, RMSEA=0.051, SRMR=0.036
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_6
+# CFI=0.965, TLI=0.956, RMSEA=0.051, SRMR=0.035
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_6
+# CFI=0.965, TLI=0.956, RMSEA=0.05, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_9
+# CFI=0.964, TLI=0.955, RMSEA=0.05, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_5
+# CFI=0.964, TLI=0.955, RMSEA=0.052, SRMR=0.038
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_6
+# CFI=0.964, TLI=0.955, RMSEA=0.051, SRMR=0.037
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_6
+# CFI=0.964, TLI=0.955, RMSEA=0.051, SRMR=0.038
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_7
+# CFI=0.964, TLI=0.954, RMSEA=0.052, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_6
+# CFI=0.963, TLI=0.954, RMSEA=0.052, SRMR=0.037
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_9
+# CFI=0.963, TLI=0.954, RMSEA=0.051, SRMR=0.038
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_4
+# CFI=0.963, TLI=0.954, RMSEA=0.053, SRMR=0.036
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_10
+# CFI=0.963, TLI=0.954, RMSEA=0.052, SRMR=0.037
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_9
+# CFI=0.963, TLI=0.953, RMSEA=0.052, SRMR=0.037
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_10
+# CFI=0.963, TLI=0.953, RMSEA=0.052, SRMR=0.036
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_4
+# CFI=0.963, TLI=0.953, RMSEA=0.054, SRMR=0.038
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_9
+# CFI=0.963, TLI=0.953, RMSEA=0.052, SRMR=0.035
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_8
+# CFI=0.963, TLI=0.953, RMSEA=0.052, SRMR=0.036
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_1
+# CFI=0.963, TLI=0.953, RMSEA=0.053, SRMR=0.041
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_5
+# CFI=0.963, TLI=0.953, RMSEA=0.053, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_7
+# CFI=0.962, TLI=0.953, RMSEA=0.053, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_9
+# CFI=0.962, TLI=0.953, RMSEA=0.053, SRMR=0.037
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_8
+# CFI=0.962, TLI=0.952, RMSEA=0.053, SRMR=0.036
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_15__task_cognition_comb_3__system_comb_6
+# CFI=0.962, TLI=0.952, RMSEA=0.052, SRMR=0.038
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_2
+# CFI=0.962, TLI=0.952, RMSEA=0.053, SRMR=0.035
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_6
+# CFI=0.962, TLI=0.952, RMSEA=0.053, SRMR=0.039
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_2
+# CFI=0.962, TLI=0.952, RMSEA=0.053, SRMR=0.037
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_5
+# CFI=0.961, TLI=0.951, RMSEA=0.055, SRMR=0.038
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_2
+# CFI=0.961, TLI=0.951, RMSEA=0.053, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_19__task_cognition_comb_3__system_comb_1
+# CFI=0.961, TLI=0.951, RMSEA=0.054, SRMR=0.041
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_9
+# CFI=0.961, TLI=0.951, RMSEA=0.054, SRMR=0.039
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_15__task_cognition_comb_3__system_comb_9
+# CFI=0.961, TLI=0.95, RMSEA=0.053, SRMR=0.038
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_19__task_cognition_comb_2__system_comb_2
+# CFI=0.96, TLI=0.95, RMSEA=0.054, SRMR=0.04
+visualization =~ P022A + P067 + P068 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_10
+# CFI=0.96, TLI=0.95, RMSEA=0.055, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_1
+# CFI=0.96, TLI=0.949, RMSEA=0.055, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_10
+# CFI=0.96, TLI=0.949, RMSEA=0.055, SRMR=0.038
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_4
+# CFI=0.959, TLI=0.949, RMSEA=0.055, SRMR=0.041
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_8
+# CFI=0.959, TLI=0.949, RMSEA=0.055, SRMR=0.036
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_17__task_cognition_comb_2__system_comb_6
+# CFI=0.959, TLI=0.948, RMSEA=0.055, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_4
+# CFI=0.959, TLI=0.948, RMSEA=0.056, SRMR=0.041
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_5
+# CFI=0.959, TLI=0.948, RMSEA=0.055, SRMR=0.041
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_4
+# CFI=0.959, TLI=0.948, RMSEA=0.056, SRMR=0.041
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_1
+# CFI=0.959, TLI=0.948, RMSEA=0.056, SRMR=0.039
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_20__task_cognition_comb_3__system_comb_7
+# CFI=0.958, TLI=0.948, RMSEA=0.056, SRMR=0.038
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_16__task_cognition_comb_3__system_comb_7
+# CFI=0.958, TLI=0.948, RMSEA=0.056, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_21__task_cognition_comb_2__system_comb_6
+# CFI=0.958, TLI=0.948, RMSEA=0.056, SRMR=0.039
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_5
+# CFI=0.958, TLI=0.948, RMSEA=0.056, SRMR=0.042
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_8
+# CFI=0.958, TLI=0.947, RMSEA=0.056, SRMR=0.037
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_5
+# CFI=0.958, TLI=0.947, RMSEA=0.056, SRMR=0.042
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_17__task_cognition_comb_2__system_comb_9
+# CFI=0.958, TLI=0.947, RMSEA=0.055, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_10
+# CFI=0.958, TLI=0.947, RMSEA=0.055, SRMR=0.04
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_8
+# CFI=0.958, TLI=0.947, RMSEA=0.055, SRMR=0.04
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_21__task_cognition_comb_2__system_comb_9
+# CFI=0.957, TLI=0.946, RMSEA=0.057, SRMR=0.038
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_4
+# CFI=0.957, TLI=0.946, RMSEA=0.057, SRMR=0.041
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_5
+# CFI=0.957, TLI=0.946, RMSEA=0.057, SRMR=0.041
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_10
+# CFI=0.957, TLI=0.946, RMSEA=0.056, SRMR=0.041
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_10
+# CFI=0.957, TLI=0.946, RMSEA=0.056, SRMR=0.04
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_8
+# CFI=0.957, TLI=0.946, RMSEA=0.056, SRMR=0.04
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_15__task_cognition_comb_3__system_comb_4
+# CFI=0.957, TLI=0.946, RMSEA=0.057, SRMR=0.04
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_1
+# CFI=0.957, TLI=0.945, RMSEA=0.058, SRMR=0.039
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_8
+# CFI=0.957, TLI=0.945, RMSEA=0.056, SRMR=0.04
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_10
+# CFI=0.957, TLI=0.945, RMSEA=0.057, SRMR=0.04
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_15__task_cognition_comb_3__system_comb_5
+# CFI=0.956, TLI=0.945, RMSEA=0.057, SRMR=0.04
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_2
+# CFI=0.956, TLI=0.945, RMSEA=0.057, SRMR=0.037
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_17__task_cognition_comb_2__system_comb_4
+# CFI=0.956, TLI=0.945, RMSEA=0.058, SRMR=0.042
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_17__task_cognition_comb_2__system_comb_5
+# CFI=0.956, TLI=0.944, RMSEA=0.058, SRMR=0.042
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_8
+# CFI=0.956, TLI=0.944, RMSEA=0.057, SRMR=0.04
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_2
+# CFI=0.956, TLI=0.944, RMSEA=0.056, SRMR=0.04
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_2
+# CFI=0.955, TLI=0.944, RMSEA=0.057, SRMR=0.039
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_2
+# CFI=0.955, TLI=0.944, RMSEA=0.056, SRMR=0.04
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_15__task_cognition_comb_2__system_comb_6
+# CFI=0.955, TLI=0.944, RMSEA=0.057, SRMR=0.04
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_16__task_cognition_comb_2__system_comb_7
+# CFI=0.955, TLI=0.943, RMSEA=0.059, SRMR=0.038
+visualization =~ P022A + P067 + P068 + P089 + P097 + P098
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_15__task_cognition_comb_3__system_comb_10
+# CFI=0.955, TLI=0.943, RMSEA=0.057, SRMR=0.04
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_21__task_cognition_comb_2__system_comb_5
+# CFI=0.955, TLI=0.943, RMSEA=0.059, SRMR=0.041
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_21__task_cognition_comb_2__system_comb_4
+# CFI=0.955, TLI=0.943, RMSEA=0.06, SRMR=0.041
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_1
+# CFI=0.955, TLI=0.943, RMSEA=0.059, SRMR=0.04
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_20__task_cognition_comb_2__system_comb_7
+# CFI=0.954, TLI=0.943, RMSEA=0.059, SRMR=0.039
+visualization =~ P022A + P067 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_17__task_cognition_comb_2__system_comb_10
+# CFI=0.954, TLI=0.943, RMSEA=0.058, SRMR=0.041
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_27__task_cognition_comb_3__system_comb_6
+# CFI=0.954, TLI=0.943, RMSEA=0.057, SRMR=0.04
+visualization =~ P05 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_15__task_cognition_comb_3__system_comb_8
+# CFI=0.954, TLI=0.942, RMSEA=0.058, SRMR=0.039
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_2
+# CFI=0.954, TLI=0.942, RMSEA=0.058, SRMR=0.04
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_17__task_cognition_comb_2__system_comb_8
+# CFI=0.954, TLI=0.942, RMSEA=0.058, SRMR=0.041
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_21__task_cognition_comb_2__system_comb_10
+# CFI=0.954, TLI=0.942, RMSEA=0.059, SRMR=0.04
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_15__task_cognition_comb_2__system_comb_9
+# CFI=0.953, TLI=0.941, RMSEA=0.058, SRMR=0.04
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_2
+# CFI=0.953, TLI=0.941, RMSEA=0.059, SRMR=0.041
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_1
+# CFI=0.953, TLI=0.941, RMSEA=0.059, SRMR=0.043
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_27__task_cognition_comb_3__system_comb_9
+# CFI=0.953, TLI=0.941, RMSEA=0.058, SRMR=0.041
+visualization =~ P05 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P214 + P4026A
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_7
+# CFI=0.953, TLI=0.941, RMSEA=0.059, SRMR=0.042
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_17__task_cognition_comb_3__system_comb_7
+# CFI=0.953, TLI=0.941, RMSEA=0.059, SRMR=0.042
+visualization =~ P022A + P067 + P068 + P089 + P097 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_15__task_cognition_comb_3__system_comb_2
+# CFI=0.953, TLI=0.94, RMSEA=0.058, SRMR=0.04
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P214
+
+# visualization_comb_21__task_cognition_comb_2__system_comb_8
+# CFI=0.953, TLI=0.94, RMSEA=0.06, SRMR=0.04
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P4026A
+
+# visualization_comb_15__task_cognition_comb_2__system_comb_4
+# CFI=0.953, TLI=0.94, RMSEA=0.06, SRMR=0.042
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P214
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_7
+# CFI=0.952, TLI=0.94, RMSEA=0.06, SRMR=0.042
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_28__task_cognition_comb_3__system_comb_1
+# CFI=0.952, TLI=0.94, RMSEA=0.06, SRMR=0.043
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_15__task_cognition_comb_2__system_comb_5
+# CFI=0.952, TLI=0.94, RMSEA=0.06, SRMR=0.042
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P088 + P4026A
+
+# visualization_comb_28__task_cognition_comb_2__system_comb_1
+# CFI=0.952, TLI=0.94, RMSEA=0.06, SRMR=0.043
+visualization =~ P067 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_27__task_cognition_comb_2__system_comb_6
+# CFI=0.952, TLI=0.939, RMSEA=0.059, SRMR=0.041
+visualization =~ P05 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P026 + P214 + P4026A
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_7
+# CFI=0.951, TLI=0.938, RMSEA=0.061, SRMR=0.041
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P074 + P088 + P214
+
+# visualization_comb_15__task_cognition_comb_2__system_comb_10
+# CFI=0.951, TLI=0.938, RMSEA=0.061, SRMR=0.042
+visualization =~ P022A + P05 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P088 + P214 + P4026A
+
+# visualization_comb_21__task_cognition_comb_3__system_comb_1
+# CFI=0.951, TLI=0.938, RMSEA=0.062, SRMR=0.043
+visualization =~ P022A + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P064 + P301
+system =~ P026 + P074 + P088
+
+# visualization_comb_27__task_cognition_comb_2__system_comb_9
+# CFI=0.95, TLI=0.937, RMSEA=0.06, SRMR=0.042
+visualization =~ P05 + P068 + P089 + P097 + P098 + P106
+task_cognition =~ P027 + P060 + P062 + P301
+system =~ P074 + P214 + P4026A
+

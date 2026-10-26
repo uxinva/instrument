@@ -1,0 +1,66 @@
+code,wording,factor_3f,factor_4f
+P012,The system felt consistent while I was interacting with the data,visualization,
+P4026A,Getting the tool configured for my analysis was straightforward,system,system
+P213,The system helped me complete my work quickly,task_cognition,task_cognition
+P301,The system was useful for me,task_cognition,task_cognition
+P4026B,"Once I learned to use it, accomplishing my tasks was straightforward",task_cognition,task_cognition
+P302,The system helped me to understand the data,task_cognition,task_cognition
+P014,I could complete my analysis without having to switch to another tool,visualization,reliability
+P022,I can easily remember how to use the system,system,system
+P022A,I can easily remember how to read the visualizations in the system,visualization,visualization
+P024,Using the tool's options and controls was intuitive for me,system,system
+P025,"Once I knew how to use it, the tool made it easy to get answers to my questions about the data",task_cognition,task_cognition
+P026,I found it easy to get started using this system,system,system
+P027,I could complete my essential tasks efficiently,task_cognition,task_cognition
+P029,The system provided useful information to help me accomplish my tasks,task_cognition,task_cognition
+P030,The system was effective for my tasks,task_cognition,task_cognition
+P031,I have not experienced latency issues with the system,system,reliability
+P04A,I would use this system frequently if I had a reason to,task_cognition,task_cognition
+P037,The system integrates well into my overall data analysis workflow,task_cognition,task_cognition
+P041,I found the system's components worked seamlessly together,task_cognition,
+P033,I found the system's response time satisfactory,visualization,reliability
+P049,Executing the multiple data processing steps felt seamless for me,system,system
+P045A,The system reacted to my inputs as I expected,visualization,reliability
+P052,The system helped me to focus on my tasks,task_cognition,task_cognition
+P05,The visual representations I saw were not too complex for me,visualization,visualization
+P057,The system helped me to gain knowledge about my data,task_cognition,task_cognition
+P064,The tool encouraged me to think deeply about my data,task_cognition,task_cognition
+P054,I found it intuitive to interact with the system,system,system
+P060,I enjoyed using this system,task_cognition,task_cognition
+P062,The system encouraged me to explore my data further,task_cognition,task_cognition
+P06,I found the visual layout of the system clear,system,visualization
+P088,I found the system simple to understand,system,system
+P072,I felt satisfied with this system,task_cognition,reliability
+P062C,The system helped to form and evaluate hypotheses about my data,task_cognition,task_cognition
+P074,I did not feel frustrated when using this system,system,system
+P067,I could safely engage in a trial-and-error analysis process,visualization,visualization
+P068,I found the system consistent in that the same actions led to the same outcomes,visualization,visualization
+P074A,I did not feel mentally drained after using this system,system,system
+P083,The system stimulated my thinking process,task_cognition,task_cognition
+P084,I felt confident that I was using the system correctly,system,system
+P086,The system was self-explanatory,system,system
+P089,The visual representations I saw were simple to understand,visualization,visualization
+P09,I could easily share the analysis results of this system with others,visualization,visualization
+P092,The system effectively guided me in performing my tasks,task_cognition,task_cognition
+P097A,I could easily navigate between visualizations,visualization,visualization
+P096,I found it straightforward to link information across different visualizations in the system,system,system
+P098,I found the visual representations provided by the system were appropriate,visualization,visualization
+P097,"Using the system, I could easily retrieve information from my data",visualization,visualization
+P095,The system provided value for the work I needed to perform,task_cognition,task_cognition
+P105,I trusted the insights I generated with the tool,visualization,visualization
+P102,I felt the system worked reliably,task_cognition,reliability
+P103,The system handled my data in a transparent way,visualization,reliability
+P201,I felt in control when using the system,task_cognition,
+P104,I trusted the system to handle my data appropriately,visualization,visualization
+P203,"When I made a mistake, it was easy to get back on track",system,system
+P204,I only needed to learn a few things before I could get going with this system,system,system
+P106,The visualizations I saw seemed to represent the data faithfully,visualization,visualization
+P206,I could easily identify relevant information in the visualizations provided by the system,visualization,visualization
+P205,"I could clearly see data features (for example, a minimum, an outlier, or a trend) in the visualizations provided",visualization,visualization
+P208,I found the system interesting to use,task_cognition,task_cognition
+P212,The system lets me switch between an overview and detailed views of my data,visualization,
+P207,I did not have to think too hard to make sense of the data,system,system
+P209,The system kept me informed about the automated steps it was taking,task_cognition,task_cognition
+P214,Using this system did not require a lot of effort from me,system,system
+P211,The system made it easy to visualize my data in different ways,visualization,visualization
+P305,The system allowed me to focus on the informtaion that interested me,visualization,visualization

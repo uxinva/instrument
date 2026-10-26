@@ -1,0 +1,50 @@
+factor,code,wording,irt_monotonicity,irt_discrimination,irt_middle_category,irt_coverage,total,rank_irt
+task_cognition,P041,I found the system's components worked seamlessly together,3,2,2,2,9,1
+task_cognition,P060,I enjoyed using this system,2,2,2,3,9,2
+task_cognition,P064,The tool encouraged me to think deeply about my data,3,2,2,3,10,3
+task_cognition,P062,The system encouraged me to explore my data further,3,3,2,3,11,4
+task_cognition,P027,I could complete my essential tasks efficiently,2,3,2,2,9,5
+task_cognition,P072,I felt satisfied with this system,1,3,0,2,6,6
+task_cognition,P208,I found the system interesting to use,2,2,2,2,8,7
+task_cognition,P083,The system stimulated my thinking process,2,2,2,3,9,8
+task_cognition,P029,The system provided useful information to help me accomplish my tasks,2,3,2,2,9,
+task_cognition,P052,The system helped me to focus on my tasks,2,3,2,2,9,
+task_cognition,P030,The system was effective for my tasks,2,3,1,1,7,
+task_cognition,P057,The system helped me to gain knowledge about my data,2,3,1,1,7,
+task_cognition,P062C,The system helped to form and evaluate hypotheses about my data,2,3,1,1,7,
+task_cognition,P037,The system integrates well into my overall data analysis workflow,2,2,1,1,6,
+task_cognition,P301,The system was useful for me,2,2,1,1,6,
+task_cognition,P302,The system helped me to understand the data,2,2,1,1,6,
+task_cognition,P025,"Once I knew how to use it, the tool made it easy to get answers to my questions about the data",2,2,1,0,5,
+task_cognition,P04A,I would use this system frequently if I had a reason to,0,2,0,2,4,
+task_cognition,P4026B,"Once I learned to use it, accomplishing my tasks was straightforward",1,2,0,0,3,
+system,P214,Using this system did not require a lot of effort from me,3,3,3,3,12,1
+system,P088,I found the system simple to understand,2,3,3,3,11,2
+system,P024,Using the tool's options and controls was intuitive for me,3,3,3,3,12,3
+system,P4026A,Getting the tool configured for my analysis was straightforward,3,3,3,3,12,4
+system,P026,I found it easy to get started using this system,3,2,3,3,11,5
+system,P086,The system was self-explanatory,3,3,3,3,12,6
+system,P074,I did not feel frustrated when using this system,2,3,3,3,11,7
+system,P054,I found it intuitive to interact with the system,2,3,2,3,10,8
+system,P204,I only needed to learn a few things before I could get going with this system,3,2,1,3,9,9
+system,P074A,I did not feel mentally drained after using this system,3,2,3,3,11,10
+system,P022,I can easily remember how to use the system,2,2,2,3,9,11
+system,P203,"When I made a mistake, it was easy to get back on track",2,2,2,3,9,15
+system,P084,I felt confident that I was using the system correctly,2,3,2,3,10,17
+system,P096,I found it straightforward to link information across different visualizations in the system,2,2,2,3,9,18
+visualization,P097,"Using the system, I could easily retrieve information from my data",1,3,2,0,6,1
+visualization,P022A,I can easily remember how to read the visualizations in the system,1,3,2,2,8,2
+visualization,P045A,The system reacted to my inputs as I expected,2,2,3,2,9,3
+visualization,P068,I found the system consistent in that the same actions led to the same outcomes,2,3,2,2,9,4
+visualization,P067,I could safely engage in a trial-and-error analysis process,1,2,2,2,7,5
+visualization,P097A,I could easily navigate between visualizations,1,2,1,2,6,6
+visualization,P098,I found the visual representations provided by the system were appropriate,1,2,2,3,8,7
+visualization,P089,The visual representations I saw were simple to understand,1,2,1,1,5,8
+visualization,P012,The system felt consistent while I was interacting with the data,2,2,1,1,6,9
+visualization,P033,I found the system's response time satisfactory,1,2,1,3,7,10
+visualization,P106,The visualizations I saw seemed to represent the data faithfully,2,2,1,0,5,11
+visualization,P014,I could complete my analysis without having to switch to another tool,0,0,2,3,5,12
+visualization,P05,The visual representations I saw were not too complex for me,1,2,1,3,7,13
+visualization,P206,I could easily identify relevant information in the visualizations provided by the system,1,3,0,1,5,14
+visualization,P211,The system made it easy to visualize my data in different ways,1,2,0,1,4,15
+visualization,P205,"I could clearly see data features (for example, a minimum, an outlier, or a trend) in the visualizations provided",1,2,0,0,3,16

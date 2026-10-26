@@ -1,0 +1,50 @@
+"factor","baseline_alpha","position_in_full_list","code","wording","alpha_if_dropped","role","rank"
+"task_cognition",0.934761327053432,8,"P060","I enjoyed using this system",0.929895820780159,"listed",1
+"task_cognition",0.934761327053432,11,"P027","I could complete my essential tasks efficiently",0.930237241431418,"listed",2
+"task_cognition",0.934761327053432,7,"P030","The system was effective for my tasks",0.930316723387547,"listed",3
+"task_cognition",0.934761327053432,17,"P072","I felt satisfied with this system",0.930343197724965,"listed",4
+"task_cognition",0.934761327053432,5,"P052","The system helped me to focus on my tasks",0.930371325509589,"listed",5
+"task_cognition",0.934761327053432,3,"P301","The system was useful for me",0.930640837503822,"listed",6
+"task_cognition",0.934761327053432,4,"P057","The system helped me to gain knowledge about my data",0.930894787713364,"listed",7
+"task_cognition",0.934761327053432,6,"P029","The system provided useful information to help me accomplish my tasks",0.930988075037697,"listed",8
+"task_cognition",0.934761327053432,15,"P025","Once I knew how to use it, the tool made it easy to get answers to my questions about the data",0.9310223999921,"listed",9
+"task_cognition",0.934761327053432,10,"P04A","I would use this system frequently if I had a reason to",0.931271143749668,"listed",10
+"task_cognition",0.934761327053432,13,"P302","The system helped me to understand the data",0.931382735348122,"listed",11
+"task_cognition",0.934761327053432,18,"P037","The system integrates well into my overall data analysis workflow",0.931627430067839,"listed",12
+"task_cognition",0.934761327053432,19,"P041","I found the system's components worked seamlessly together",0.931717314571277,"listed",13
+"task_cognition",0.934761327053432,1,"P062","The system encouraged me to explore my data further",0.931843139286053,"listed",14
+"task_cognition",0.934761327053432,12,"P208","I found the system interesting to use",0.931932337669627,"listed",15
+"task_cognition",0.934761327053432,16,"P4026B","Once I learned to use it, accomplishing my tasks was straightforward",0.931996848496638,"listed",16
+"task_cognition",0.934761327053432,2,"P064","The tool encouraged me to think deeply about my data",0.932960276543956,"listed",17
+"task_cognition",0.934761327053432,14,"P062C","The system helped to form and evaluate hypotheses about my data",0.933067283093876,"listed",18
+"task_cognition",0.934761327053432,9,"P083","The system stimulated my thinking process",0.933743351790601,"listed",19
+"system",0.928690839014221,1,"P088","I found the system simple to understand",0.920614666305136,"listed",1
+"system",0.928690839014221,2,"P026","I found it easy to get started using this system",0.922003493427638,"listed",2
+"system",0.928690839014221,3,"P214","Using this system did not require a lot of effort from me",0.922076477774081,"listed",3
+"system",0.928690839014221,4,"P4026A","Getting the tool configured for my analysis was straightforward",0.922403149671074,"listed",4
+"system",0.928690839014221,5,"P074","I did not feel frustrated when using this system",0.922923443280106,"listed",5
+"system",0.928690839014221,6,"P086","The system was self-explanatory",0.923030300610249,"listed",6
+"system",0.928690839014221,8,"P024","Using the tool's options and controls was intuitive for me",0.923152360576584,"listed",7
+"system",0.928690839014221,11,"P084","I felt confident that I was using the system correctly",0.923383762562123,"listed",8
+"system",0.928690839014221,7,"P054","I found it intuitive to interact with the system",0.923861428661217,"listed",9
+"system",0.928690839014221,12,"P022","I can easily remember how to use the system",0.924111265111493,"listed",10
+"system",0.928690839014221,10,"P074A","I did not feel mentally drained after using this system",0.924289702666734,"listed",11
+"system",0.928690839014221,13,"P096","I found it straightforward to link information across different visualizations in the system",0.925944362931132,"listed",12
+"system",0.928690839014221,9,"P204","I only needed to learn a few things before I could get going with this system",0.926106652167574,"listed",13
+"system",0.928690839014221,14,"P203","When I made a mistake, it was easy to get back on track",0.926456424206794,"listed",14
+"visualization",0.894388955597612,7,"P097","Using the system, I could easily retrieve information from my data",0.88550058563922,"listed",1
+"visualization",0.894388955597612,5,"P098","I found the visual representations provided by the system were appropriate",0.885589785839172,"listed",2
+"visualization",0.894388955597612,16,"P045A","The system reacted to my inputs as I expected",0.885932434266525,"listed",3
+"visualization",0.894388955597612,11,"P206","I could easily identify relevant information in the visualizations provided by the system",0.886307603857034,"listed",4
+"visualization",0.894388955597612,10,"P022A","I can easily remember how to read the visualizations in the system",0.886496488045793,"listed",5
+"visualization",0.894388955597612,3,"P089","The visual representations I saw were simple to understand",0.887234213900834,"listed",6
+"visualization",0.894388955597612,13,"P097A","I could easily navigate between visualizations",0.887397435913867,"listed",7
+"visualization",0.894388955597612,15,"P033","I found the system's response time satisfactory",0.887460593619667,"listed",8
+"visualization",0.894388955597612,1,"P106","The visualizations I saw seemed to represent the data faithfully",0.887615055357371,"listed",9
+"visualization",0.894388955597612,9,"P012","The system felt consistent while I was interacting with the data",0.887692516143645,"listed",10
+"visualization",0.894388955597612,6,"P211","The system made it easy to visualize my data in different ways",0.887922191449543,"listed",11
+"visualization",0.894388955597612,4,"P068","I found the system consistent in that the same actions led to the same outcomes",0.888163322779501,"listed",12
+"visualization",0.894388955597612,12,"P067","I could safely engage in a trial-and-error analysis process",0.889435116914377,"listed",13
+"visualization",0.894388955597612,8,"P205","I could clearly see data features (for example, a minimum, an outlier, or a trend) in the visualizations provided",0.890048264985579,"listed",14
+"visualization",0.894388955597612,14,"P014","I could complete my analysis without having to switch to another tool",0.892769627953613,"listed",15
+"visualization",0.894388955597612,2,"P05","The visual representations I saw were not too complex for me",0.894862360657887,"listed",16

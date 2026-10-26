@@ -1,0 +1,51 @@
+factor,code,wording,alpha_if_dropped,rank_reliability,loading,rank_loading,irt_monotonicity,irt_discrimination,irt_middle_category,irt_coverage,rank_irt,mean_rank,top5_in,priority,priority_final,considerations
+task_cognition,P062,The system encouraged me to explore my data further,0.944184,16,0.827637,1,3,3,2,3,4,7.0,"L, I",1,1,
+task_cognition,P064,The tool encouraged me to think deeply about my data,0.944905,17,0.747139,2,3,2,2,3,3,7.333,"L, I",2,2,
+task_cognition,P060,I enjoyed using this system,0.942516,1,0.580138,8,2,2,2,3,2,3.667,"R, I",3,3,
+task_cognition,P027,I could complete my essential tasks efficiently,0.942801,3,0.543496,11,2,3,2,2,5,6.333,"R, I",4,4,
+task_cognition,P301,The system was useful for me,0.943265,6,0.734217,3,2,2,1,1,,4.5,L,5,5,
+task_cognition,P072,I felt satisfied with this system,0.942746,2,0.42867,17,1,3,0,2,6,8.333,R,6,6,
+task_cognition,P208,I found the system interesting to use,0.944031,15,0.54024,12,2,2,2,2,7,11.333,,7,7,
+task_cognition,P083,The system stimulated my thinking process,0.945215,19,0.5617,9,2,2,2,3,8,12.0,,8,8,
+task_cognition,P052,The system helped me to focus on my tasks,0.943011,4,0.70882,5,2,3,2,2,,4.5,"R, L",,,
+task_cognition,P030,The system was effective for my tasks,0.943156,5,0.596525,7,2,3,1,1,,6.0,R,,,
+task_cognition,P057,The system helped me to gain knowledge about my data,0.943675,9,0.709107,4,2,3,1,1,,6.5,L,,,
+task_cognition,P029,The system provided useful information to help me accomplish my tasks,0.94367,8,0.605548,6,2,3,2,2,,7.0,,,,
+task_cognition,P041,I found the system's components worked seamlessly together,0.943716,10,0.361962,19,3,2,2,2,1,10.0,I,,,possibly excluding this item because it seems to belong to the system factor/Verified: it's not loading strongly on that factor
+task_cognition,P025,"Once I knew how to use it, the tool made it easy to get answers to my questions about the data",0.943577,7,0.488692,15,2,2,1,0,,11.0,,,,
+task_cognition,P04A,I would use this system frequently if I had a reason to,0.943902,13,0.561147,10,0,2,0,2,,11.5,,,,
+task_cognition,P302,The system helped me to understand the data,0.94397,14,0.514398,13,2,2,1,1,,13.5,,,,
+task_cognition,P4026B,"Once I learned to use it, accomplishing my tasks was straightforward",0.943848,12,0.437291,16,1,2,0,0,,14.0,,,,
+task_cognition,P037,The system integrates well into my overall data analysis workflow,0.943824,11,0.39609,18,2,2,1,1,,14.5,,,,
+task_cognition,P062C,The system helped to form and evaluate hypotheses about my data,0.944968,18,0.508297,14,2,3,1,1,,16.0,,,,
+system,P214,Using this system did not require a lot of effort from me,0.926313,2,0.869845,3,3,3,3,3,1,2.0,"R, L, I",1,1,
+system,P088,I found the system simple to understand,0.925659,1,0.891733,1,2,3,3,3,2,1.333,"R, L, I",2,2,
+system,P074,I did not feel frustrated when using this system,0.92707,5,0.727063,5,2,3,3,3,7,5.667,"R, L",,3,
+system,P4026A,Getting the tool configured for my analysis was straightforward,0.926891,4,0.79291,4,3,3,3,3,4,4.0,"R, L, I",4,4,
+system,P026,I found it easy to get started using this system,0.926569,3,0.884165,2,3,2,3,3,5,3.333,"R, L, I",5,5,
+system,P086,The system was self-explanatory,0.927271,6,0.726494,6,3,3,3,3,6,6.0,,,,
+system,P024,Using the tool's options and controls was intuitive for me,0.927444,7,0.653809,8,3,3,3,3,3,6.0,I,3,,
+system,P054,I found it intuitive to interact with the system,0.927974,11,0.656323,7,2,3,2,3,8,8.667,,,,
+system,P074A,I did not feel mentally drained after using this system,0.927853,9,0.590336,10,3,2,3,3,10,9.667,,,,
+system,P204,I only needed to learn a few things before I could get going with this system,0.929344,13,0.617689,9,3,2,1,3,9,10.333,,,,
+system,P022,I can easily remember how to use the system,0.927924,10,0.506173,12,2,2,2,3,11,11.0,,,,
+system,P084,I felt confident that I was using the system correctly,0.927633,8,0.513892,11,2,3,2,3,17,12.0,,,,
+system,P096,I found it straightforward to link information across different visualizations in the system,0.929171,12,0.415208,13,2,2,2,3,18,14.333,,,,
+system,P203,"When I made a mistake, it was easy to get back on track",0.929489,14,0.412562,14,2,2,2,3,15,14.333,,,,
+visualization,P098,I found the visual representations provided by the system were appropriate,0.911319,2,0.582147,5,1,2,2,3,7,4.667,"R, L",1,1,
+visualization,P022A,I can easily remember how to read the visualizations in the system,0.911879,5,0.449982,10,1,3,2,2,2,5.667,"R, I",2,2,The sentence is hard to parse. It has good psicometric properties. better than the 89
+visualization,P089,The visual representations I saw were simple to understand,0.912541,12,0.648705,3,1,2,1,1,8,7.667,L,2,2,"IRT graph is a little messy (-1 curve is above the middle curve), but it's very similar to P068 in IRT terms, and its has a high loading - and the text is somthing we could have -"
+visualization,P097,"Using the system, I could easily retrieve information from my data",0.911084,1,0.515606,7,1,3,2,0,1,3.0,"R, I",3,3,
+visualization,P106,The visualizations I saw seemed to represent the data faithfully,0.912194,7,0.77474,1,2,2,1,0,11,6.333,L,4,4,"IRT - not so bad - but it is good in the right, but do not have much on the left."
+visualization,P068,I found the system consistent in that the same actions led to the same outcomes,0.912439,8,0.626338,4,2,3,2,2,4,5.333,"L, I",5,5,maybe try with it instead of the 012 - it is related to consistency .  The 012 -  the text is better than this  068 - but the 068  loading is even higher than 12 - why does this load (factor  loading) strongly with visualization items ? same in 5-factor -
+visualization,P05,The visual representations I saw were not too complex for me,0.916428,16,0.698589,2,1,2,1,3,13,10.333,L,,6,good loadings - very bad IRT properties - IRT it is all over the place - It's quite a mess. - it is a little redundant with the 089
+visualization,P067,I could safely engage in a trial-and-error analysis process,0.912963,13,0.432178,12,1,2,2,2,5,10.0,I,,7,Next IRT  properties - not related to visualization and the loading is not so good
+visualization,P045A,The system reacted to my inputs as I expected,0.911401,4,0.307573,16,2,2,3,2,3,7.667,"R, I",,,"AF in Mattermost - P045A load poorly on this factor (.31) so we don't want to keep it as an option
+So I removed it from the list. -too low loading factor - not related to visualization"
+visualization,P097A,I could easily navigate between visualizations,0.912153,6,0.352983,13,1,2,1,2,6,8.333,,,,
+visualization,P012,The system felt consistent while I was interacting with the data,0.912516,10,0.45396,9,2,2,1,1,9,9.333,,,,"not related to visualization - but items about consistency appears in the visualization factor -  it is not so bad in IRT, but It's related to consistency and we didn't want to keep it because it didn't feel like it was about the visualizations. We could interpret this been about the visual encodings consistency ... we are not sure It is so bad ... but it is not loading strongly"
+visualization,P206,I could easily identify relevant information in the visualizations provided by the system,0.911375,3,0.448297,11,1,3,0,1,14,9.333,R,,,
+visualization,P211,The system made it easy to visualize my data in different ways,0.912473,9,0.520104,6,1,2,0,1,15,10.0,,,,
+visualization,P033,I found the system's response time satisfactory,0.912534,11,0.319519,15,1,2,1,3,10,12.0,,,,
+visualization,P205,"I could clearly see data features (for example, a minimum, an outlier, or a trend) in the visualizations provided",0.913482,14,0.457379,8,1,2,0,0,16,12.667,,,,
+visualization,P014,I could complete my analysis without having to switch to another tool,0.914858,15,0.335717,14,0,0,2,3,12,13.667,,,,

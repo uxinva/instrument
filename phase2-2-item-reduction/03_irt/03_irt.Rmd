@@ -1,0 +1,154 @@
+---
+title: "03 IRT: graded response model per factor"
+author: "Eliane (refactor of Reproduce7-IRT-graded.Rmd)"
+date: "`r Sys.Date()`"
+output: html_document
+params:
+  # UNCOLLAPSED data, as in the April 2026 figures on which the IRT rubric scores were given
+  # (decision of 2026-10-21: the figures must match the scores). Steps 01 and 02 use the collapsed data;
+  # for a collapsed run use "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv".
+  data_file: "phase2-2-item-reduction/data/raw/ratings-stimulus_original.csv"
+  listwise: TRUE      # TRUE = drop participants with a missing answer in the factor's items (as the old notebook)
+  theta_lim: 3        # theta axis from -theta_lim to +theta_lim
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(here)
+library(mirt)
+library(lavaan)
+library(dplyr)
+library(lattice)
+library(gridExtra)
+library(grid)
+```
+
+# 1. Configuration
+
+Item sets come from `phase2-2-item-reduction/item_versions_config.R` (`irt_item_sets`), the same file used by steps 01 and 02.
+One unidimensional graded response model (`mirt`, `itemtype = "graded"`) is fitted per factor, on all tools together.
+
+```{r config}
+source(here("phase2-2-item-reduction", "item_versions_config.R"))
+sapply(irt_item_sets, length)
+
+# one fixed colour per answer option, so the same answer has the same colour in every panel
+answer_colors <- c("-3" = "#1f77b4", "-2" = "#ff7f0e", "-1" = "#2ca02c", "0" = "#d62728",
+                   "1"  = "#9467bd", "2"  = "#bcbd22", "3"  = "#e377c2")
+```
+
+# 2. Data and output folders
+
+```{r data}
+data_path <- here(params$data_file)
+stopifnot(file.exists(data_path))
+raw <- read.csv(data_path, encoding = "UTF-8", check.names = FALSE)
+grp_data <- raw %>% filter(!is.na(stimulus) & stimulus != "")
+item_data <- grp_data %>% select(-seed, -stimulus)
+cat("N =", nrow(item_data), "\n")
+
+missing <- setdiff(unlist(irt_item_sets), names(item_data))
+if (length(missing) > 0) stop("Items not found in data: ", paste(missing, collapse = ", "))
+
+out_root <- here("phase2-2-item-reduction", "03_irt", "output")
+dir.create(file.path(out_root, "items"), recursive = TRUE, showWarnings = FALSE)
+writeLines(c(paste("data_file:", data_path),
+             paste("md5:", tools::md5sum(data_path)),
+             paste("run at:", Sys.time())),
+           file.path(out_root, "run_info.txt"))
+```
+
+# 3. Functions
+
+```{r functions}
+safe_write_csv <- function(x, file, ...) {
+  ok <- tryCatch({ write.csv(x, file, ...); TRUE }, error = function(e) FALSE)
+  if (!ok) {
+    alt <- sub("\\.csv$", paste0("_", format(Sys.time(), "%H%M%S"), ".csv"), file)
+    write.csv(x, alt, ...)
+    warning("Could not write ", basename(file), " (is it open in Excel?). Saved as ", basename(alt))
+  }
+  invisible(file)
+}
+
+trace_plot <- function(fit, d, item) {
+  vals <- sort(unique(d[[item]]))
+  itemplot(fit, item, type = "trace",
+           theta_lim = c(-params$theta_lim, params$theta_lim),
+           par.settings = list(superpose.line = list(col = unname(answer_colors[as.character(vals)]), lwd = 2)),
+           auto.key = list(text = as.character(vals), points = FALSE, lines = TRUE,
+                           columns = length(vals), space = "top",
+                           cex = 0.5, size = 0.5, between = 0.01, padding.text = 0.2),
+           main = list(label = item, cex = 0.7),
+           scales = list(cex = 0.5))
+}
+
+run_irt <- function(factor, items) {
+  d <- item_data[, items, drop = FALSE]
+  n_all <- nrow(d)
+  if (params$listwise) d <- na.omit(d)
+
+  fit <- mirt(d, 1, itemtype = "graded", verbose = FALSE)
+
+  # global fit (M2*, or C2 if M2* cannot be computed)
+  m2 <- tryCatch(M2(fit, type = "M2*", na.rm = TRUE),
+                 error = function(e) tryCatch(M2(fit, type = "C2", na.rm = TRUE),
+                                              error = function(e2) NULL))
+
+  # check against classical test theory: one-factor CFA scores vs IRT scores
+  cfa_fit <- cfa(paste(factor, "=~", paste(items, collapse = " + ")), data = d)
+  r_ctt <- cor(lavPredict(cfa_fit)[, 1], fscores(fit)[, 1])
+
+  # item parameters: a = discrimination, b1..bk = thresholds
+  pars <- coef(fit, IRTpars = TRUE, simplify = TRUE)$items
+  safe_write_csv(round(pars, 3), file.path(out_root, paste0("item_parameters_", factor, ".csv")))
+
+  # one trace plot per item + one figure with all items of the factor
+  plots <- lapply(items, function(it) trace_plot(fit, d, it)); names(plots) <- items
+  for (it in items) {
+    pdf(file.path(out_root, "items", paste0("ItemIRT-", it, "-trace.pdf")), height = 6, width = 6)
+    print(plots[[it]]); dev.off()
+  }
+  n_rows <- ceiling(length(plots) / 5)
+  # no title in the figure: the caption in the paper names the factor
+  pdf(file.path(out_root, paste0("irt_traces_", factor, ".pdf")), height = 4.5 * n_rows, width = 15)
+  grid.arrange(grobs = plots, ncol = 5); dev.off()
+  png(file.path(out_root, paste0("irt_traces_", factor, ".png")),
+      height = 4.5 * n_rows, width = 15, units = "in", res = 300)
+  grid.arrange(grobs = plots, ncol = 5); dev.off()
+
+  # item information curves
+  pdf(file.path(out_root, paste0("irt_information_", factor, ".pdf")), height = 8, width = 12)
+  print(plot(fit, type = "infotrace", facet_items = FALSE,
+             theta_lim = c(-params$theta_lim, params$theta_lim), main = irt_figure_titles[[factor]]))
+  dev.off()
+
+  fit_row <- data.frame(factor = factor, n_items = length(items), n_participants = n_all,
+                        n_used = nrow(d), r_ctt_irt = r_ctt)
+  if (!is.null(m2)) fit_row <- cbind(fit_row, as.data.frame(m2, row.names = NULL))
+  list(fit = fit_row, pars = data.frame(factor = factor, item = rownames(pars), pars, row.names = NULL))
+}
+```
+
+# 4. Run all factors
+
+```{r run}
+res <- lapply(names(irt_item_sets), function(f) run_irt(f, irt_item_sets[[f]]))
+irt_fit <- bind_rows(lapply(res, `[[`, "fit"))
+irt_pars <- bind_rows(lapply(res, `[[`, "pars"))
+safe_write_csv(irt_fit, file.path(out_root, "irt_fit_by_factor.csv"), row.names = FALSE)
+safe_write_csv(irt_pars, file.path(out_root, "item_parameters_all.csv"), row.names = FALSE)
+knitr::kable(irt_fit, digits = 3)
+```
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(out_root, "sessionInfo.txt"))
+```
+
+# IRT concepts
+
+* **a (discrimination):** how well the item separates respondents with different levels of the latent trait. Higher is better.
+* **b1 … bk (thresholds):** the points on the latent trait where answering in category *k* or above becomes more likely than below. There is one threshold fewer than the number of answer options the item actually has, so collapsed items have fewer thresholds.
+* **Trace plots:** the probability of each answer option along the latent trait θ. Each option keeps the same colour in every panel (−3 blue … +3 pink).
+
+Code sources: <https://github.com/ccs-amsterdam/r-course-material/blob/master/tutorials/R_test-theory_3_irt_graded.md>, <https://bookdown.org/bean_jerry/using_r_for_social_work_research/item-response-theory.html>

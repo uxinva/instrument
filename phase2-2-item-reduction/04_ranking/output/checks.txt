@@ -1,0 +1,21 @@
+OK   task_cognition: reliability rank follows alpha if dropped (lowest = 1) 
+OK   task_cognition: loading rank follows the factor loading (highest = 1) 
+OK   system: reliability rank follows alpha if dropped (lowest = 1) 
+OK   system: loading rank follows the factor loading (highest = 1) 
+OK   visualization: reliability rank follows alpha if dropped (lowest = 1) 
+OK   visualization: loading rank follows the factor loading (highest = 1) 
+OK   Version_B Model_1 task_cognition = top 5 by loadings 
+OK   Version_B Model_1 system = top 5 by loadings 
+OK   Version_B Model_1 visualization = top 5 by loadings 
+OK   Version_A Model_2 task_cognition = top 5 by IRT 
+OK   Version_A Model_2 system = top 5 by IRT 
+OK   Version_A Model_2 visualization = top 5 by IRT 
+OK   Version_A Model_3 task_cognition = top 5 by triangulated priority 
+OK   Version_A Model_3 system = top 5 by triangulated priority 
+NOTE Version_A Model_3 visualization = top 5 by triangulated priority (top 5: ['P022A', 'P068', 'P089', 'P097', 'P098', 'P106']; config: ['P068', 'P089', 'P097', 'P098', 'P106'])
+OK   task_cognition: candidate pool of 05_combinatorial = items with final priority 1-5 
+INFO task_cognition: priority changed after the handpicked revision: none
+OK   system: candidate pool of 05_combinatorial = items with final priority 1-5 
+INFO system: priority changed after the handpicked revision: P024 3->--, P074 --->3
+OK   visualization: candidate pool of 05_combinatorial = items with final priority 1-7 
+INFO visualization: priority changed after the handpicked revision: P05 --->6, P067 --->7

@@ -1,0 +1,10 @@
+code,content_scope,content,rationale
+P209,feature-specific,automated steps,Excluded earlier for cross-loading (second loading > 0.32); not part of the missing-data review.
+P212,feature-specific,overview/detail switching,Switching between overview and detailed views is a feature that only some tools offer; weak primary loading (0.39).
+P031,feature-specific,latency,Latency depends on the tool's runtime performance; weakest System loading (0.27); it formed its own latency factor in the 4- to 6-factor solutions.
+P067,general,trial and error,Safely engaging in trial and error is a general aspect of the interaction; loading 0.43. Retained.
+P203,general,error recovery,Recovering from mistakes is a general aspect of the interaction; loading 0.41. Retained.
+P09,feature-specific,sharing results,Sharing analysis results is a feature that only some tools offer.
+P049,not assessed,multi-step data processing,Excluded for redundancy with P041 (meeting notes of 2025-11-25); content scope not assessed.
+P096,general,linking information across visualizations,"The team read 'link information across different visualizations' as a general characteristic of the system, not as a predefined physical link between views (coordinated views). Retained."
+P305,feature-specific,focusing on the information of interest,Focusing on the information of interest depends on the tool's filtering features and on the kind of data.

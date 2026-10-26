@@ -1,0 +1,13 @@
+run,source,threshold,arrangement,tested_Task,tested_Vis,tested_Sys,pass_reliability_Task,pass_reliability_Vis,pass_reliability_Sys,candidate_models,models_fitted,truncated,models_passing_fit,n_tc_subsets_passing,tc_subsets_in_passing
+derived from rel072_6-3-3_singlegroup_uncollapsed,derived,0.8,3 / 6 / 3,10,28,10,0,0,5,0,0,False,0,0,
+rel079_6-3-3_singlegroup_uncollapsed,run,0.79,3 / 6 / 3,10,28,10,1,2,8,16,16,False,16,1,"P027, P060, P301 (16)"
+rel078_6-3-3_singlegroup_uncollapsed,run,0.78,3 / 6 / 3,10,28,10,1,8,9,72,72,False,67,1,"P027, P060, P301 (67)"
+rel077_6-3-3_singlegroup_uncollapsed,run,0.77,3 / 6 / 3,10,28,10,1,22,10,220,220,False,197,1,"P027, P060, P301 (197)"
+rel076_6-3-3_singlegroup_uncollapsed,run,0.76,3 / 6 / 3,10,28,10,1,28,10,280,280,False,244,1,"P027, P060, P301 (244)"
+rel075_6-3-3_singlegroup_uncollapsed,run,0.75,3 / 6 / 3,10,28,10,1,28,10,280,280,False,244,1,"P027, P060, P301 (244)"
+rel074_6-3-3_singlegroup_uncollapsed,run,0.74,3 / 6 / 3,10,28,10,1,28,10,280,280,False,244,1,"P027, P060, P301 (244)"
+rel073_6-3-3_singlegroup_uncollapsed,run,0.73,3 / 6 / 3,10,28,10,2,28,10,560,560,False,244,1,"P027, P060, P301 (244)"
+rel072_6-3-3_singlegroup_uncollapsed,run,0.72,3 / 6 / 3,10,28,10,7,28,10,1960,1960,False,855,5,"P027, P060, P301 (244); P027, P060, P062 (240); P027, P062, P301 (185); P060, P062, P301 (172); P062, P064, P301 (14)"
+derived from rel078_6-4-3_singlegroup_uncollapsed,derived,0.8,4 / 6 / 3,5,28,10,0,0,5,0,0,False,0,0,
+rel079_6-4-3_singlegroup_uncollapsed,run,0.79,4 / 6 / 3,5,28,10,1,2,8,16,16,False,13,1,"P027, P060, P062, P301 (13)"
+rel078_6-4-3_singlegroup_uncollapsed,run,0.78,4 / 6 / 3,5,28,10,2,8,9,144,144,False,118,2,"P027, P060, P064, P301 (63); P027, P060, P062, P301 (55)"
