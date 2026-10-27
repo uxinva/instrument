@@ -1,6 +1,6 @@
 # 03 IRT
 
-**Notebook:** [`03_irt.Rmd`](03_irt.Rmd) · **Report:** `03_irt.html`
+**Notebook:** [`03_irt.Rmd`](03_irt.Rmd) · **Report:** [`03_irt.html`](https://uxinva.github.io/instrument/phase2-2-item-reduction/03_irt/03_irt.html)
 
 ## What it does
 

@@ -1,6 +1,6 @@
 # 00 EFA screening: from 65 to 49 items
 
-**Script:** [`screen-efa-items.py`](screen-efa-items.py) (Python ≥ 3.11 with `pandas`)
+**Scripts:** [`screen-efa-items.py`](screen-efa-items.py) · [`review-missing-data.py`](review-missing-data.py) · [`build-screening-table.py`](build-screening-table.py) (Python ≥ 3.11 with `pandas`)
 
 This is the starting point of the item reduction. The 3-factor EFA solution has **65 items**: Task_cognition 25, System 18, Visualization 22. This step reduces them to the **49 items** used by the following steps: Task_cognition 19, System 14, Visualization 16. These 49 are `Version_A` `Model_1` in `item_versions_config.R`, and steps 03 (IRT) and 04 (ranking) use them.
 

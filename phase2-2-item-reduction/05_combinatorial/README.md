@@ -1,5 +1,7 @@
 # 05 Automated combinatorial reduction: history of the May 2026 runs
 
+**Notebook:** [`05_combinatorial.Rmd`](05_combinatorial.Rmd) · **Report (final run):** [`05_combinatorial.html`](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/05_combinatorial.html) · **Scripts:** [`generate_combinations.py`](generate_combinations.py), [`run-all-thresholds.R`](run-all-thresholds.R), [`build_runs_table.py`](build_runs_table.py)
+
 This folder records **what was run** for the paper section "Automated Combinatorial Reduction Pipeline" (which files, settings and results the text is based on), and has a **recovered, runnable copy of the pipeline**. The numbers below were recomputed on 2026-10-16 from the output files of the May runs.
 
 ## How to run the recovered pipeline
@@ -42,6 +44,25 @@ The output files are the same as in May:
 The run also writes `run_info.txt` and `sessionInfo.txt`.
 
 Check of the reliability stage, done in Python without R: α recomputed for every set of the final run differs from the May values by at most 0.0005, which changes no pass/fail decision. ω (`psych::omega`) can only be checked in R.
+
+## Runs of 2026-10-21
+
+All runs were repeated in the repository with `run-all-thresholds.R`, with no limit on the number of models. Each run has its folder in `output/` and its HTML report. The final run (threshold 0.78, 4/6/3 items) was knitted directly from `05_combinatorial.Rmd` on 2026-10-18, so its report is the one next to the notebook.
+
+| Items (Task / Vis / Sys) | Reliability threshold | Report |
+|---|---|---|
+| 3 / 6 / 3 | 0.79 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel079_6-3-3_singlegroup_uncollapsed/rel079_6-3-3_singlegroup_uncollapsed.html) |
+| 3 / 6 / 3 | 0.78 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel078_6-3-3_singlegroup_uncollapsed/rel078_6-3-3_singlegroup_uncollapsed.html) |
+| 3 / 6 / 3 | 0.77 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel077_6-3-3_singlegroup_uncollapsed/rel077_6-3-3_singlegroup_uncollapsed.html) |
+| 3 / 6 / 3 | 0.76 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel076_6-3-3_singlegroup_uncollapsed/rel076_6-3-3_singlegroup_uncollapsed.html) |
+| 3 / 6 / 3 | 0.75 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel075_6-3-3_singlegroup_uncollapsed/rel075_6-3-3_singlegroup_uncollapsed.html) |
+| 3 / 6 / 3 | 0.74 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel074_6-3-3_singlegroup_uncollapsed/rel074_6-3-3_singlegroup_uncollapsed.html) |
+| 3 / 6 / 3 | 0.73 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel073_6-3-3_singlegroup_uncollapsed/rel073_6-3-3_singlegroup_uncollapsed.html) |
+| 3 / 6 / 3 | 0.72 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel072_6-3-3_singlegroup_uncollapsed/rel072_6-3-3_singlegroup_uncollapsed.html) |
+| 4 / 6 / 3 | 0.79 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/output/rel079_6-4-3_singlegroup_uncollapsed/rel079_6-4-3_singlegroup_uncollapsed.html) |
+| 4 / 6 / 3 | 0.78 | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/05_combinatorial.html) (final run) |
+
+The summary of the runs and the comparison with the May runs are in `output/runs_summary.csv` and `output/checks-vs-may.txt`.
 
 ## Appendix tables: step by step
 

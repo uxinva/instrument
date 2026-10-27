@@ -19,6 +19,7 @@ relative_links:
 # Not published on the site
 exclude:
   - phase3-validation/data/raw
+  - phase2-2-item-reduction/data/raw
   - "*.Rproj"
   - renv/
   - renv.lock

@@ -1,5 +1,7 @@
-# Python packages for the data preparation scripts (phase3-validation/data/)
-# and the step 02 notebook (phase3-validation/02_scale-correlations/).
+# Python packages for the data preparation scripts (phase2-2-item-reduction/data/,
+# phase3-validation/data/), the scripts of steps 00, 04 and 05 of the item
+# reduction phase (pandas; openpyxl to read the team spreadsheets), and the
+# step 02 notebook of the validation phase (phase3-validation/02_scale-correlations/).
 #
 # Versions are those of the environment that produced the published results
 # (Python on Windows). The same results were also obtained with pandas 2.3.3.

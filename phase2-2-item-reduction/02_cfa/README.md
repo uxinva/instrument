@@ -1,6 +1,6 @@
 # 02 Multi-group CFA
 
-**Notebook:** [`02_cfa.Rmd`](02_cfa.Rmd) · **Report:** `02_cfa.html`
+**Notebook:** [`02_cfa.Rmd`](02_cfa.Rmd) · **Report:** [`02_cfa.html`](https://uxinva.github.io/instrument/phase2-2-item-reduction/02_cfa/02_cfa.html)
 
 ## What it does
 

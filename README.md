@@ -10,8 +10,24 @@ The rendered reports are published at **<https://uxinva.github.io/instrument/>**
 
 | Phase | Folder | Status |
 |---|---|---|
+| Phase 2.2: Item reduction | [`phase2-2-item-reduction/`](phase2-2-item-reduction/README.md) | Documented |
 | Phase 3: Scale validation | [`phase3-validation/`](phase3-validation/README.md) | Being documented |
 | Other phases | *to be added* | Not yet documented |
+
+The phases follow each other. **Item reduction** starts from the 65 items of the three-factor exploratory factor analysis and ends with a 13-item, three-factor instrument (Visualization, Task cognition and System). **Validation** tests this instrument on an independent sample, where the factors are called Visualization, Cognitive value and Intuitiveness.
+
+### Analysis reports: phase 2.2 (item reduction)
+
+| Step | Report |
+|---|---|
+| 00 EFA screening | Python scripts; results in the [step README](phase2-2-item-reduction/00-efa-screening/README.md) |
+| 01 Reliability | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/01_reliability/01_reliability.html) |
+| 02 Multi-group CFA | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/02_cfa/02_cfa.html) |
+| 03 IRT | [report](https://uxinva.github.io/instrument/phase2-2-item-reduction/03_irt/03_irt.html) |
+| 04 Multi-criteria ranking | Python scripts; results in the [step README](phase2-2-item-reduction/04_ranking/README.md) |
+| 05 Combinatorial search | [final run](https://uxinva.github.io/instrument/phase2-2-item-reduction/05_combinatorial/05_combinatorial.html) (threshold 0.78, 4/6/3 items); one report per threshold in the [step README](phase2-2-item-reduction/05_combinatorial/README.md#runs-of-2026-10-21) |
+
+What each step does is described in the [phase README](phase2-2-item-reduction/README.md). A summary of the phase (data, decisions, reference results and software versions) is in [`item-reduction-context.md`](phase2-2-item-reduction/item-reduction-context.md).
 
 ### Analysis reports: phase 3 (scale validation)
 
@@ -27,7 +43,7 @@ The rendered reports are published at **<https://uxinva.github.io/instrument/>**
 
 What each step does is described in the [phase README](phase3-validation/README.md).
 
-Each phase is self-contained. It has its own `data/` folder and a series of numbered analysis steps, each with a README, a notebook, its rendered HTML report and an `output/` folder.
+Each phase is self-contained. It has its own `data/` folder and a series of numbered analysis steps, each with a README, a notebook or scripts, its rendered HTML report (for the R notebooks) and an `output/` folder.
 
 ## Repository structure
 
@@ -37,6 +53,18 @@ instrument/
 ├── instrument.Rproj           R project: open this in RStudio
 ├── _config.yml                GitHub Pages site settings
 ├── .github/workflows/         builds and publishes the site
+├── phase2-2-item-reduction/
+│   ├── README.md              overview of the phase and how to reproduce it
+│   ├── item-reduction-context.md   summary: data, decisions, reference results, software
+│   ├── item_versions_config.R item lists of every version and model (read by the R notebooks)
+│   ├── render_all.R           runs the R notebooks of steps 01–03
+│   ├── data/                  raw data, data preparation, prepared data, item codebook
+│   └── NN_step-name/          one folder per analysis step (00–05)
+│       ├── README.md          what the step does, its inputs and outputs
+│       ├── NN_step-name.Rmd   notebook (steps 00 and 04 are Python scripts, .py)
+│       ├── NN_step-name.html  rendered report
+│       ├── input/             step inputs (steps 00 and 05)
+│       └── output/            tables and figures produced by the step
 └── phase3-validation/
     ├── README.md              overview of the phase and how to reproduce it
     ├── render_all.R           runs every step in order
@@ -51,7 +79,7 @@ instrument/
 ## Requirements
 
 - [R](https://cran.r-project.org) 4.5.2 and [RStudio Desktop](https://posit.co/download/rstudio-desktop/). The exact R package versions are recorded in `renv.lock` and installed with `renv::restore()`.
-- [Python](https://www.python.org) (≥ 3.11) for the data preparation scripts and step 02 of the validation phase. The package versions are in `requirements.txt` (`pip install -r requirements.txt`).
+- [Python](https://www.python.org) (≥ 3.11) for the data preparation scripts of both phases, steps 00, 04 and 05 of the item reduction phase, and step 02 of the validation phase. The package versions are in `requirements.txt` (`pip install -r requirements.txt`).
 
 More details are in the README of each phase.
 
@@ -59,7 +87,7 @@ More details are in the README of each phase.
 
 1. Clone this repository.
 2. Open `instrument.Rproj` in RStudio. All paths in the notebooks start from the repository root, so they work no matter where the repository is on your computer.
-3. Follow the instructions in the README of the phase you want to reproduce, e.g. [`phase3-validation/README.md`](phase3-validation/README.md).
+3. Follow the instructions in the README of the phase you want to reproduce: [`phase2-2-item-reduction/README.md`](phase2-2-item-reduction/README.md) or [`phase3-validation/README.md`](phase3-validation/README.md).
 
 ## Website
 

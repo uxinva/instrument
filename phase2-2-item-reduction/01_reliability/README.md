@@ -1,6 +1,6 @@
 # 01 Reliability
 
-**Notebook:** [`01_reliability.Rmd`](01_reliability.Rmd) · **Report:** `01_reliability.html`
+**Notebook:** [`01_reliability.Rmd`](01_reliability.Rmd) · **Report:** [`01_reliability.html`](https://uxinva.github.io/instrument/phase2-2-item-reduction/01_reliability/01_reliability.html)
 
 ## What it does
 

@@ -16,8 +16,8 @@ The **priority** is the list agreed by the team after looking at the three ranks
 
 | Column | When | Source | Used for |
 |---|---|---|---|
-| `priority` (*First*) | April 2026 | `Ranking revisited considering reliabitiy- loadings- and IRT.xlsx` | Model_3 of Versions A–D |
-| `priority_final` (*Final*) | May 2026, when Petra Isenberg and Anne-Flore Cabouat chose the candidate pool of the combinatorial search | `Ranking revisited 2 - AfterHandpickedItemsbyAFandP- … .xlsx`; pool in `handpicked_items_list_by_factor.csv`; history in `Historic of handpicked_items_list_by_factor.pdf` | candidate pool of `05_combinatorial` |
+| `priority` (first) | April 2026 | `Ranking revisited considering reliabitiy- loadings- and IRT.xlsx` | Model_3 of Versions A–D |
+| `priority_final` (final) | May 2026, when Petra Isenberg and Anne-Flore Cabouat chose the candidate pool of the combinatorial search | `Ranking revisited 2 - AfterHandpickedItemsbyAFandP- … .xlsx`; pool in `handpicked_items_list_by_factor.csv`; history in `Historic of handpicked_items_list_by_factor.pdf` | paper table (`ranking_table_main.tex`) and candidate pool of `05_combinatorial` |
 
 The revision changed:
 - **System:** P074 entered at 3 and P024 left;
