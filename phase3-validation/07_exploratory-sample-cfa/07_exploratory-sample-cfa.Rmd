@@ -1,0 +1,348 @@
+---
+title: "07 CFA of the alternative structures on the exploratory sample"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    theme: readable
+params:
+  # Exploratory sample (phase 2.2): 506 participants, 5 tools, rare options collapsed (<= 2.5%)
+  data_file: "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv"
+  # Validation results of step 06, for the side-by-side comparison
+  validation_file: "phase3-validation/06_alternative-structures/output/CFA_Model_Fit_Comparison.xlsx"
+---
+
+Suggestion of Anne-Flore (2026-11-04): fit the same CFA structures on the **exploratory
+sample** (the sample used for the EFA and the item reduction), not only on the
+confirmatory one, to see how stable the 3- and 4-factor structures are across samples.
+
+**Same specification as step 06** (`06_alternative-structures.Rmd`): the same 11 structures,
+ML (lavaan default), `missing = "fiml"`, collapsed data; pooled, unconstrained multi-group by
+tool, and each tool alone. Only the data change.
+
+Points to keep in mind when reading the results:
+
+* The 13 items of `3_Factor_A` were **selected on this sample** (step 05 of phase 2.2), so
+  its fit here is optimistic. `4_Factor_C` was derived from the EFA of the **validation**
+  sample. Each structure is therefore "out of sample" in a different dataset.
+* The tools differ: Gephi, Power BI, Qlik, Tableau, JMP here; Tableau, JMP, Excel,
+  Data Studio, Power BI in validation.
+* The exploratory data use a −3 … +3 scale and validation 1 … 7. A shift of the scale does
+  not change the fit, loadings, α or ω.
+* The rare options were collapsed with the same rule as validation (≤ 2.5%, merged into the
+  neighbour with more answers), item by item, so it does not matter that the exploratory file
+  was collapsed with all 65 items present.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(here)
+library(dplyr)
+library(tidyr)
+library(lavaan)
+library(semTools)
+library(knitr)
+library(openxlsx)
+
+phase_dir  <- here("phase3-validation")
+output_dir <- file.path(phase_dir, "07_exploratory-sample-cfa", "output")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+```
+
+## 1. Data
+
+Item codes of the exploratory file are renamed with the short names of the validation
+codebook, so the model definitions are the same as in step 06.
+
+```{r data}
+data_path <- here(params$data_file)
+stopifnot(file.exists(data_path))
+raw <- read.csv(data_path, check.names = FALSE, fileEncoding = "UTF-8-BOM")
+
+codebook <- read.csv(file.path(phase_dir, "data", "codebook", "items.csv"))
+missing_items <- setdiff(codebook$code, names(raw))
+if (length(missing_items) > 0) stop("Items not in the exploratory data: ", paste(missing_items, collapse = ", "))
+
+grp_data <- raw %>%
+  filter(!is.na(stimulus) & stimulus != "") %>%
+  select(seed, stimulus, all_of(codebook$code))
+names(grp_data)[match(codebook$code, names(grp_data))] <- codebook$short_name
+grp_data$stimulus <- factor(grp_data$stimulus)
+
+stimuli_letters <- levels(grp_data$stimulus)
+cat("N =", nrow(grp_data), "\n"); print(table(grp_data$stimulus))
+
+# Missing answers per item (FIML uses all available answers)
+kable(data.frame(item = codebook$short_name, code = codebook$code,
+                 n_missing = colSums(is.na(grp_data[codebook$short_name]))),
+      row.names = FALSE, caption = "Missing answers per item")
+
+writeLines(c(paste("data_file:", data_path),
+             paste("md5:", tools::md5sum(data_path)),
+             paste("run at:", Sys.time())),
+           file.path(output_dir, "run_info.txt"))
+```
+
+## 2. Model definitions (copied from step 06)
+
+```{r model definitions}
+models_factor_specs <- list(
+  "1_Factor" = list(
+    general_ux = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo',
+                   'VisRemember', 'VisTrialError', 'CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy',
+                   'CogTaskComplete', 'IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "2_Factor_A" = list(
+    interface_usability = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo',
+                            'VisRemember', 'VisTrialError', 'IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure'),
+    cognitive_value   = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy', 'CogTaskComplete')
+  ),
+  "2_Factor_B" = list(
+    system_experience = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo',
+                          'VisRemember', 'VisTrialError', 'CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy', 'CogTaskComplete'),
+    intuitiveness     = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "3_Factor_A" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember', 'VisTrialError'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy', 'CogTaskComplete'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "3_Factor_B" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy', 'CogTaskComplete'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "3_Factor_C" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember', 'VisTrialError'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "3_Factor_D" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "3_Factor_E" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember', 'VisTrialError'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysEnjoy', 'CogTaskComplete'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "3_Factor_F" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysEnjoy'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "4_Factor_A" = list(
+    vis_clarity     = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate'),
+    sys_retrieval   = c('VisSysRetrieveInfo', 'VisRemember', 'VisTrialError'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy', 'CogTaskComplete'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "4_Factor_B" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember'),
+    task            = c('VisTrialError', 'CogTaskComplete'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "4_Factor_C" = list(
+    visual_interaction = c('VisSimpleUnderstand', 'VisRemember', 'VisTrialError', 'VisSysRetrieveInfo'),
+    effectiveness      = c('CogSysUseful', 'VisFaithful', 'VisAppropriate', 'CogTaskComplete'),
+    cognitive_value    = c('CogSysThinkDeep', 'CogSysEnjoy'),
+    intuitiveness      = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  )
+)
+
+build_syntax <- function(factor_list) {
+  paste(sapply(names(factor_list), function(f)
+    paste0(f, " =~ ", paste(factor_list[[f]], collapse = " + "))), collapse = "\n")
+}
+cfa_models_list <- lapply(models_factor_specs, build_syntax)
+```
+
+## 3. Functions (as in step 06, plus admissibility)
+
+```{r functions}
+# Fit one CFA and keep the warnings (e.g. a non positive definite latent matrix)
+fit_cfa <- function(syntax, data, group = NULL) {
+  warns <- character(0)
+  fit <- tryCatch(withCallingHandlers(
+    lavaan::cfa(model = syntax, data = data, group = group, missing = "fiml"),
+    warning = function(w) { warns <<- c(warns, conditionMessage(w)); invokeRestart("muffleWarning") }),
+    error = function(e) NULL)
+  if (!is.null(fit)) attr(fit, "warnings") <- unique(warns)
+  fit
+}
+
+ok_fit <- function(fit) !is.null(fit) && is(fit, "lavaan") && lavInspect(fit, "converged")
+
+fit_indices <- c("chisq", "df", "pvalue", "cfi", "tli", "rmsea",
+                 "rmsea.ci.lower", "rmsea.ci.upper", "srmr", "aic", "bic")
+
+extract_fit_measures <- function(fit, label) {
+  res <- data.frame(Model = label, t(setNames(rep(NA_real_, length(fit_indices)), fit_indices)),
+                    admissible = NA, warnings = NA_character_)
+  if (!ok_fit(fit)) return(res)
+  fm <- fitMeasures(fit, fit_indices)
+  res[fit_indices] <- as.numeric(fm[fit_indices])
+  # post.check: FALSE when there are negative variances or a latent correlation matrix that is
+  # not positive definite (e.g. a latent correlation > 1)
+  res$admissible <- suppressWarnings(lavInspect(fit, "post.check"))
+  res$warnings <- gsub("\\s+", " ", paste(attr(fit, "warnings"), collapse = " | "))
+  res
+}
+
+extract_reliability <- function(fit, label) {
+  if (!ok_fit(fit)) return(NULL)
+  rel <- tryCatch(suppressWarnings(semTools::reliability(fit)), error = function(e) NULL)
+  if (is.null(rel)) return(NULL)
+  d <- as.data.frame(t(rel)); d$Factor <- rownames(d); d$Model <- label
+  if ("avevar" %in% names(d)) d$ave <- d$avevar
+  d <- d[, intersect(c("Model", "Factor", "alpha", "omega", "ave"), names(d))]
+  d[sapply(d, is.numeric)] <- round(d[sapply(d, is.numeric)], 4)
+  rownames(d) <- NULL
+  d
+}
+
+extract_cfa_loadings <- function(fit, label) {
+  if (!ok_fit(fit)) return(NULL)
+  standardizedSolution(fit) %>%
+    filter(op == "=~") %>%
+    transmute(Model = label, Factor = lhs, Item = rhs,
+              Std_all = round(est.std, 4), R_Squared = round(est.std^2, 4),
+              SE = round(se, 4), P_Value = round(pvalue, 4))
+}
+
+extract_latent_correlations <- function(fit, label) {
+  if (!ok_fit(fit)) return(NULL)
+  cm <- lavInspect(fit, "cor.lv")
+  if (is.list(cm)) return(NULL)            # multi-group: not used here
+  if (length(cm) <= 1) return(NULL)
+  idx <- which(upper.tri(cm), arr.ind = TRUE)
+  data.frame(Model = label, Factor1 = rownames(cm)[idx[, 1]], Factor2 = colnames(cm)[idx[, 2]],
+             Correlation = round(cm[idx], 4))
+}
+```
+
+## 4. CFA on the exploratory sample
+
+```{r cfa}
+pooled_fit <- pooled_rel <- pooled_load <- pooled_cor <- list()
+mg_fit <- list()
+ind_fit <- ind_rel <- ind_load <- ind_cor <- list()
+
+for (m in names(cfa_models_list)) {
+  syn <- cfa_models_list[[m]]
+
+  # 4.1 Pooled
+  f <- fit_cfa(syn, grp_data)
+  lab <- paste0("Pooled_", m)
+  pooled_fit[[m]]  <- extract_fit_measures(f, lab)
+  pooled_rel[[m]]  <- extract_reliability(f, lab)
+  pooled_load[[m]] <- extract_cfa_loadings(f, lab)
+  pooled_cor[[m]]  <- extract_latent_correlations(f, lab)
+
+  # 4.2 Unconstrained multi-group by tool
+  f <- fit_cfa(syn, grp_data, group = "stimulus")
+  mg_fit[[m]] <- extract_fit_measures(f, paste0("Multigroup_", m))
+
+  # 4.3 Each tool alone
+  for (s in stimuli_letters) {
+    f <- fit_cfa(syn, droplevels(filter(grp_data, stimulus == s)))
+    lab <- paste0(s, "_", m)
+    ind_fit[[lab]]  <- extract_fit_measures(f, lab)
+    ind_rel[[lab]]  <- extract_reliability(f, lab)
+    ind_load[[lab]] <- extract_cfa_loadings(f, lab)
+    ind_cor[[lab]]  <- extract_latent_correlations(f, lab)
+  }
+  cat("done:", m, "\n")
+}
+
+pooled_fit  <- bind_rows(pooled_fit);  pooled_rel <- bind_rows(pooled_rel)
+pooled_load <- bind_rows(pooled_load); pooled_cor <- bind_rows(pooled_cor)
+mg_fit      <- bind_rows(mg_fit)
+ind_fit     <- bind_rows(ind_fit);     ind_rel    <- bind_rows(ind_rel)
+ind_load    <- bind_rows(ind_load);    ind_cor    <- bind_rows(ind_cor)
+
+wb <- createWorkbook()
+for (sh in list(list("Pooled_Fit", pooled_fit), list("Pooled_Reliability_AVE", pooled_rel),
+                list("Pooled_CFA_Loadings", pooled_load), list("Pooled_Latent_Correlations", pooled_cor),
+                list("Multigroup_Fit", mg_fit), list("By_Stimulus_Fit", ind_fit),
+                list("By_Stimulus_Reliability", ind_rel), list("By_Stimulus_CFA_Loadings", ind_load),
+                list("By_Stimulus_Latent_Corr", ind_cor))) {
+  addWorksheet(wb, sh[[1]]); writeData(wb, sh[[1]], sh[[2]])
+}
+saveWorkbook(wb, file.path(output_dir, "CFA_Model_Fit_Exploratory.xlsx"), overwrite = TRUE)
+
+show_cols <- c("Model", "chisq", "df", "cfi", "tli", "rmsea", "srmr", "bic", "admissible")
+kable(pooled_fit[, show_cols], digits = 3, caption = "Exploratory sample, pooled")
+kable(mg_fit[, show_cols], digits = 3, caption = "Exploratory sample, multi-group by tool")
+```
+
+### Fit rule and admissibility
+
+Fit rule of the project: (CFI or TLI ≥ 0.95) and (SRMR ≤ 0.08 or RMSEA ≤ 0.06).
+Models with warnings (e.g. a latent correlation above 1):
+
+```{r warnings}
+bind_rows(pooled_fit, mg_fit) %>%
+  mutate(meets_rule = (cfi >= .95 | tli >= .95) & (srmr <= .08 | rmsea <= .06)) %>%
+  select(Model, meets_rule, admissible, warnings) %>%
+  kable()
+```
+
+### 3_Factor_A and 4_Factor_C: reliability and latent correlations (pooled)
+
+```{r focus}
+focus <- c("Pooled_3_Factor_A", "Pooled_4_Factor_C")
+kable(filter(pooled_rel, Model %in% focus), caption = "alpha, omega, AVE")
+kable(filter(pooled_cor, Model %in% focus), caption = "Latent correlations")
+kable(filter(ind_cor, grepl("_4_Factor_C$", Model), Factor1 == "visual_interaction", Factor2 == "effectiveness"),
+      caption = "4_Factor_C: visual_interaction with effectiveness, by tool")
+```
+
+## 5. Exploratory vs. validation sample
+
+```{r comparison}
+val_path <- here(params$validation_file)
+if (file.exists(val_path)) {
+  read_val <- function(sheet) read.xlsx(val_path, sheet = sheet)
+  strip <- function(x, prefix) sub(paste0("^", prefix, "_"), "", x)
+  cols <- c("cfi", "tli", "rmsea", "srmr", "bic")
+
+  side_by_side <- function(expl, val, prefix) {
+    e <- expl %>% mutate(Structure = strip(Model, prefix)) %>% select(Structure, all_of(cols))
+    v <- val  %>% mutate(Structure = strip(Model, prefix)) %>% select(Structure, all_of(cols))
+    full_join(e, v, by = "Structure", suffix = c("_expl", "_valid")) %>%
+      mutate(cfi_change = cfi_valid - cfi_expl, rmsea_change = rmsea_valid - rmsea_expl) %>%
+      select(Structure, cfi_expl, cfi_valid, cfi_change, tli_expl, tli_valid,
+             rmsea_expl, rmsea_valid, rmsea_change, srmr_expl, srmr_valid) %>%
+      arrange(Structure)
+  }
+
+  cmp_pooled <- side_by_side(pooled_fit, read_val("Pooled_Fit"), "Pooled")
+  cmp_mg     <- side_by_side(mg_fit, read_val("Multigroup_Fit"), "Multigroup")
+
+  rel_val <- read_val("Pooled_Reliability_AVE")
+  cmp_rel <- full_join(
+    pooled_rel %>% mutate(Structure = strip(Model, "Pooled")) %>% select(-Model),
+    rel_val    %>% mutate(Structure = strip(Model, "Pooled")) %>% select(-Model),
+    by = c("Structure", "Factor"), suffix = c("_expl", "_valid")) %>%
+    filter(Structure %in% c("3_Factor_A", "4_Factor_C")) %>%
+    select(Structure, Factor, alpha_expl, alpha_valid, omega_expl, omega_valid, ave_expl, ave_valid)
+
+  wb2 <- createWorkbook()
+  addWorksheet(wb2, "Pooled_Fit"); writeData(wb2, "Pooled_Fit", cmp_pooled)
+  addWorksheet(wb2, "Multigroup_Fit"); writeData(wb2, "Multigroup_Fit", cmp_mg)
+  addWorksheet(wb2, "Reliability_3A_4C"); writeData(wb2, "Reliability_3A_4C", cmp_rel)
+  saveWorkbook(wb2, file.path(output_dir, "Comparison_Exploratory_vs_Validation.xlsx"), overwrite = TRUE)
+
+  print(kable(cmp_pooled, digits = 3, caption = "Pooled: exploratory vs. validation"))
+  print(kable(cmp_mg, digits = 3, caption = "Multi-group: exploratory vs. validation"))
+  print(kable(cmp_rel, digits = 3, caption = "3_Factor_A and 4_Factor_C: reliability"))
+} else {
+  cat("Validation workbook not found; run step 06 first:", val_path, "\n")
+}
+```
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(output_dir, "sessionInfo.txt"))
+```
