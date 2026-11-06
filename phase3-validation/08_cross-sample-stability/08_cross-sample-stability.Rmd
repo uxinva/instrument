@@ -1,0 +1,476 @@
+---
+title: "08 Stability of the factor structure across the exploratory and validation samples"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    theme: readable
+params:
+  # Exploratory sample (phase 2.2): -3 ... +3, rare options collapsed (<= 2.5%)
+  exploratory_file: "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv"
+  # Validation sample (phase 3, step 00): 1 ... 7, rare options collapsed (<= 2.5%)
+  validation_file: "phase3-validation/00_collapse-categories/output/multigroup_ratings.csv"
+  # Criteria for a meaningful loss of fit between invariance levels (Chen, 2007)
+  delta_cfi: 0.010
+  delta_rmsea: 0.015
+  # Flag a standardized loading that changes at least this much between samples
+  delta_loading: 0.10
+---
+
+This notebook tests whether the claim "the Visualization component is the unstable part"
+holds, with three analyses:
+
+1. **Measurement invariance across samples.** Multi-group CFA with the **sample** as the
+   group (exploratory vs. validation): configural, metric (equal loadings) and scalar
+   (equal loadings and intercepts). When metric or scalar invariance fails, the constraints
+   that contribute most to the misfit are freed one at a time (partial invariance), to see
+   which items differ between the samples.
+2. **Standardized loadings side by side.** The same CFA in each sample separately, item by
+   item, with the difference.
+3. **The same EFA in both samples.** EFA of the 13 items with the specification of step 06
+   (smoothed polychoric correlations, MinRes, Promax, 3 and 4 factors), compared with Tucker's
+   congruence coefficients and each item's primary factor.
+
+The claim is supported if the items that are not invariant, the loadings that change and the
+items that move between factors are mainly the **visualization** items (and, with them, the
+cognitive-value items they mix with in `4_Factor_C`), while the **intuitiveness** items stay put.
+
+Specification of the CFAs: ML (lavaan default), `missing = "fiml"`, collapsed data, as in
+steps 05–07. Structures tested: `3_Factor_A` (the final model) and `4_Factor_C` (from the EFA
+of the validation sample).
+
+Points to keep in mind:
+
+* The exploratory scale (−3 … +3) is **recoded to 1 … 7** (+4), so intercepts are comparable
+  in the scalar model. This does not change loadings, fit or correlations.
+* Rare options were collapsed **within each sample** with the same rule (≤ 2.5%). An option can
+  therefore be merged in one sample and not in the other, which can shift an intercept a little.
+* The tools differ between samples (Gephi, Power BI, Qlik, Tableau, JMP vs. Tableau, JMP, Excel,
+  Data Studio, Power BI), and so do the populations. Non-invariance across samples mixes all
+  these differences; it does not say which one causes it.
+* The items of `3_Factor_A` were selected on the exploratory sample, and `4_Factor_C` was derived
+  from the validation sample.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(here)
+library(dplyr)
+library(tidyr)
+library(lavaan)
+library(psych)
+library(polycor)
+library(knitr)
+library(openxlsx)
+
+# psych may use several cores on macOS/Linux; one core keeps results reproducible (as in step 06)
+options(mc.cores = 1)
+
+phase_dir  <- here("phase3-validation")
+output_dir <- file.path(phase_dir, "08_cross-sample-stability", "output")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+```
+
+## 1. Data
+
+```{r data}
+codebook <- read.csv(file.path(phase_dir, "data", "codebook", "items.csv"))
+items    <- codebook$short_name
+
+# Exploratory: item codes -> short names, scale -3..+3 -> 1..7
+expl_path <- here(params$exploratory_file); stopifnot(file.exists(expl_path))
+expl_raw  <- read.csv(expl_path, check.names = FALSE, fileEncoding = "UTF-8-BOM")
+stopifnot(all(codebook$code %in% names(expl_raw)))
+expl <- expl_raw %>%
+  filter(!is.na(stimulus) & stimulus != "") %>%
+  select(stimulus, all_of(codebook$code))
+names(expl)[match(codebook$code, names(expl))] <- items
+expl[items] <- expl[items] + 4
+expl$sample <- "exploratory"
+
+# Validation
+val_path <- here(params$validation_file); stopifnot(file.exists(val_path))
+val <- read.csv(val_path, check.names = FALSE, fileEncoding = "UTF-8-BOM") %>%
+  select(stimulus, all_of(items))
+val$sample <- "validation"
+
+both <- bind_rows(expl, val)
+both$sample <- factor(both$sample, levels = c("exploratory", "validation"))
+
+stopifnot(all(range(unlist(expl[items]), na.rm = TRUE) %in% 1:7),
+          all(range(unlist(val[items]),  na.rm = TRUE) %in% 1:7))
+kable(both %>% count(sample, stimulus), caption = "Participants per sample and tool")
+
+# Answer options left after collapsing, per item and sample
+options_left <- both %>%
+  pivot_longer(all_of(items), names_to = "item", values_to = "value") %>%
+  filter(!is.na(value)) %>%
+  group_by(item, sample) %>%
+  summarise(options = paste(sort(unique(value)), collapse = " "), .groups = "drop") %>%
+  pivot_wider(names_from = sample, values_from = options) %>%
+  mutate(same = exploratory == validation)
+kable(options_left, caption = "Answer options left after collapsing (1 ... 7)")
+
+writeLines(c(paste("exploratory_file:", expl_path), paste("md5:", tools::md5sum(expl_path)),
+             paste("validation_file:", val_path),   paste("md5:", tools::md5sum(val_path)),
+             paste("run at:", Sys.time())),
+           file.path(output_dir, "run_info.txt"))
+```
+
+## 2. Structures
+
+Copied from step 06.
+
+```{r structures}
+structures <- list(
+  "3_Factor_A" = list(
+    visualization   = c('VisFaithful', 'VisSimpleUnderstand', 'VisAppropriate', 'VisSysRetrieveInfo', 'VisRemember', 'VisTrialError'),
+    cognitive_value = c('CogSysThinkDeep', 'CogSysUseful', 'CogSysEnjoy', 'CogTaskComplete'),
+    intuitiveness   = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  ),
+  "4_Factor_C" = list(
+    visual_interaction = c('VisSimpleUnderstand', 'VisRemember', 'VisTrialError', 'VisSysRetrieveInfo'),
+    effectiveness      = c('CogSysUseful', 'VisFaithful', 'VisAppropriate', 'CogTaskComplete'),
+    cognitive_value    = c('CogSysThinkDeep', 'CogSysEnjoy'),
+    intuitiveness      = c('IntSysSimpleUnderstand', 'IntSysEasyStart', 'IntAnalysisConfigure')
+  )
+)
+build_syntax <- function(f) paste(sapply(names(f), function(n)
+  paste0(n, " =~ ", paste(f[[n]], collapse = " + "))), collapse = "\n")
+
+# Content block of each item in the codebook (Visualization / Cognitive value / Intuitiveness)
+item_block <- setNames(codebook$factor, codebook$short_name)
+```
+
+## 3. Functions
+
+```{r functions}
+fit_cfa <- function(syntax, data, group = NULL, group.equal = "", group.partial = "") {
+  warns <- character(0)
+  fit <- tryCatch(withCallingHandlers(
+    cfa(syntax, data = data, group = group, missing = "fiml",
+        group.equal = group.equal, group.partial = group.partial),
+    warning = function(w) { warns <<- c(warns, conditionMessage(w)); invokeRestart("muffleWarning") }),
+    error = function(e) NULL)
+  if (!is.null(fit)) attr(fit, "warnings") <- unique(warns)
+  fit
+}
+
+fit_row <- function(fit, structure, level, freed = "") {
+  fm <- fitMeasures(fit, c("chisq", "df", "pvalue", "cfi", "tli", "rmsea", "srmr", "bic"))
+  fm <- setNames(round(as.numeric(fm), 4), names(fm))
+  data.frame(structure = structure, level = level, freed = freed, as.list(fm),
+             admissible = suppressWarnings(lavInspect(fit, "post.check")),
+             warnings = gsub("\\s+", " ", paste(attr(fit, "warnings"), collapse = " | ")),
+             row.names = NULL)
+}
+
+# Equality constraints of a fitted model, labelled as lavaan's group.partial expects
+# ("factor=~item" for loadings, "item~1" for intercepts), with the univariate score test
+score_tests <- function(fit) {
+  pt <- parTable(fit)
+  st <- lavTestScore(fit)$uni
+  lab <- function(p) {
+    r <- pt[pt$plabel == p & pt$group == 1, ]
+    if (r$op == "=~") paste0(r$lhs, "=~", r$rhs) else paste0(r$lhs, r$op, r$rhs)
+  }
+  st$parameter <- vapply(st$lhs, lab, "")
+  st[order(-st$X2), c("parameter", "X2", "df", "p.value")]
+}
+
+# Free, one at a time, the constraint with the largest score test until the loss of fit
+# against the reference model is within the delta criteria (or nothing significant is left).
+# type = "loadings" frees loadings ("f=~item"); type = "intercepts" frees intercepts ("item~1"),
+# keeping the loadings already freed in the metric step (start_freed).
+param_item <- function(p) sub("~1$", "", sub(".*=~", "", p))
+
+partial_invariance <- function(syntax, structure, level, group.equal, ref_fit, type,
+                               start_freed = character(0), max_steps = 10) {
+  freed <- start_freed; rows <- list(); steps <- list()
+  ref <- fitMeasures(ref_fit, c("cfi", "rmsea"))
+  pattern <- if (type == "loadings") "=~" else "~1$"
+  fit <- NULL
+  for (k in 0:max_steps) {
+    fit <- fit_cfa(syntax, both, group = "sample", group.equal = group.equal,
+                   group.partial = if (length(freed)) freed else "")
+    if (is.null(fit)) break
+    fm <- fitMeasures(fit, c("cfi", "rmsea"))
+    d_cfi <- unname(ref["cfi"] - fm["cfi"]); d_rmsea <- unname(fm["rmsea"] - ref["rmsea"])
+    rows[[length(rows) + 1]] <- cbind(
+      fit_row(fit, structure, level, paste(setdiff(freed, start_freed), collapse = "; ")),
+      delta_cfi = round(d_cfi, 4), delta_rmsea = round(d_rmsea, 4))
+    if (d_cfi <= params$delta_cfi && d_rmsea <= params$delta_rmsea) break
+    st <- score_tests(fit)
+    st <- st[grepl(pattern, st$parameter) & !st$parameter %in% freed & st$p.value < .05, ]
+    if (nrow(st) == 0) break
+    steps[[length(steps) + 1]] <- data.frame(structure = structure, level = level, step = k + 1,
+                                             st[1, ], block = unname(item_block[param_item(st$parameter[1])]),
+                                             row.names = NULL)
+    freed <- c(freed, st$parameter[1])
+  }
+  list(fit = fit, freed = freed, rows = bind_rows(rows), steps = bind_rows(steps))
+}
+```
+
+## 4. Test 1: measurement invariance across samples
+
+Each level is compared with the one before it. A level holds when CFI drops by at most
+`r params$delta_cfi` and RMSEA rises by at most `r params$delta_rmsea`. The likelihood-ratio
+test is shown as well; with N ≈ 1,000 it rejects small differences.
+
+```{r invariance}
+inv_rows <- list(); lrt_rows <- list(); partial_rows <- list(); freed_steps <- list()
+
+for (s in names(structures)) {
+  syn <- build_syntax(structures[[s]])
+  configural <- fit_cfa(syn, both, group = "sample")
+  metric     <- fit_cfa(syn, both, group = "sample", group.equal = "loadings")
+  scalar     <- fit_cfa(syn, both, group = "sample", group.equal = c("loadings", "intercepts"))
+
+  tab <- bind_rows(fit_row(configural, s, "configural"),
+                   fit_row(metric, s, "metric"),
+                   fit_row(scalar, s, "scalar")) %>%
+    mutate(delta_cfi = round(lag(cfi) - cfi, 4), delta_rmsea = round(rmsea - lag(rmsea), 4),
+           holds = ifelse(is.na(delta_cfi), NA,
+                          delta_cfi <= params$delta_cfi & delta_rmsea <= params$delta_rmsea))
+  inv_rows[[s]] <- tab
+
+  lrt <- as.data.frame(lavTestLRT(configural, metric, scalar))
+  lrt_rows[[s]] <- data.frame(structure = s, level = c("configural", "metric", "scalar"),
+                              round(lrt, 4), row.names = NULL)
+
+  # Partial invariance: metric against configural; then scalar against the (partial) metric model
+  pm <- partial_invariance(syn, s, "metric", "loadings", configural, type = "loadings")
+  ps <- partial_invariance(syn, s, "scalar", c("loadings", "intercepts"), pm$fit,
+                           type = "intercepts", start_freed = pm$freed)
+  partial_rows[[s]] <- bind_rows(pm$rows, ps$rows)
+  freed_steps[[s]]  <- bind_rows(pm$steps, ps$steps)
+}
+
+inv_tab     <- bind_rows(inv_rows)
+lrt_tab     <- bind_rows(lrt_rows)
+partial_tab <- bind_rows(partial_rows)
+freed_tab   <- bind_rows(freed_steps)
+rownames(freed_tab) <- NULL
+
+show <- c("structure", "level", "chisq", "df", "cfi", "tli", "rmsea", "srmr", "delta_cfi", "delta_rmsea", "holds", "admissible")
+kable(inv_tab[, show], digits = 3, caption = "Invariance across samples (group = sample)")
+kable(lrt_tab, digits = 3, caption = "Likelihood-ratio tests")
+kable(partial_tab[, c("structure", "level", "freed", "cfi", "rmsea", "delta_cfi", "delta_rmsea", "admissible")],
+      digits = 3, caption = "Partial invariance: constraints freed one at a time")
+kable(freed_tab, digits = 3, caption = "Constraints freed, in order, with the content block of the item")
+```
+
+## 5. Test 2: standardized loadings in each sample
+
+```{r loadings}
+load_rows <- list()
+for (s in names(structures)) {
+  syn <- build_syntax(structures[[s]])
+  for (smp in levels(both$sample)) {
+    fit <- fit_cfa(syn, filter(both, sample == smp))
+    load_rows[[paste(s, smp)]] <- standardizedSolution(fit) %>%
+      filter(op == "=~") %>%
+      transmute(structure = s, sample = smp, factor = lhs, item = rhs,
+                lambda = est.std, ci_lower = ci.lower, ci_upper = ci.upper)
+  }
+}
+loadings_long <- bind_rows(load_rows)
+
+loadings_wide <- loadings_long %>%
+  select(structure, factor, item, sample, lambda) %>%
+  pivot_wider(names_from = sample, values_from = lambda) %>%
+  mutate(block = item_block[item],
+         change = validation - exploratory,
+         flagged = abs(change) >= params$delta_loading) %>%
+  arrange(structure, factor, item)
+
+kable(loadings_wide, digits = 3, caption = "Standardized loadings by sample (change = validation - exploratory)")
+
+kable(loadings_wide %>% group_by(structure, block) %>%
+        summarise(items = n(), mean_abs_change = mean(abs(change)), max_abs_change = max(abs(change)),
+                  flagged = sum(flagged), .groups = "drop"),
+      digits = 3, caption = "Change in loadings by content block")
+```
+
+## 6. Test 3: the same EFA in both samples
+
+Same specification as step 06: smoothed polychoric correlations (`polycor::hetcor`), MinRes,
+Promax, all tools pooled. Factors of the two samples are matched by Tucker's congruence
+coefficient (φ). Common reading: φ ≥ 0.95 equal, 0.85–0.94 fairly similar, < 0.85 different.
+
+```{r efa}
+make_corrM <- function(d) {
+  d <- as.data.frame(lapply(d, ordered), check.names = FALSE)
+  cm <- polycor::hetcor(d, use = "pairwise.complete.obs", std.err = FALSE, ML = FALSE)$correlations
+  dimnames(cm) <- list(names(d), names(d))
+  if (any(eigen(cm)$values <= 0)) cm <- psych::cor.smooth(cm)
+  cm
+}
+
+efa_one <- function(d, nf) {
+  fa_fit <- psych::fa(make_corrM(d), nfactors = nf, n.obs = nrow(d), rotate = "promax", fm = "minres")
+  L <- unclass(fa_fit$loadings)
+  colnames(L) <- paste0("F", seq_len(nf))
+  L
+}
+
+efa_rows <- list(); congruence_rows <- list(); primary_rows <- list()
+for (nf in 3:4) {
+  Le <- efa_one(expl[items], nf)
+  Lv <- efa_one(val[items], nf)
+
+  # Match each validation factor to an exploratory one (greedy, by |phi|)
+  phi <- psych::factor.congruence(Le, Lv)
+  match_v <- rep(NA_integer_, nf); used <- integer(0)
+  for (k in order(-apply(abs(phi), 2, max))) {
+    cand <- setdiff(seq_len(nf), used)
+    best <- cand[which.max(abs(phi[cand, k]))]
+    match_v[k] <- best; used <- c(used, best)
+  }
+  # Re-label validation factors with the exploratory label they match (and flip signs if needed)
+  Lv_m <- Lv
+  for (k in seq_len(nf)) Lv_m[, k] <- Lv[, k] * sign(phi[match_v[k], k])
+  colnames(Lv_m) <- colnames(Le)[match_v]
+  Lv_m <- Lv_m[, colnames(Le), drop = FALSE]
+
+  congruence_rows[[nf]] <- data.frame(
+    n_factors = nf, exploratory_factor = colnames(Le),
+    validation_factor = colnames(Lv)[match(colnames(Le), colnames(Le)[match_v])],
+    phi = round(diag(psych::factor.congruence(Le, Lv_m)), 3))
+
+  prim <- function(L) colnames(L)[apply(abs(L), 1, which.max)]
+  primary_rows[[nf]] <- data.frame(
+    n_factors = nf, item = items, block = item_block[items],
+    primary_exploratory = prim(Le), loading_exploratory = round(apply(Le, 1, function(x) x[which.max(abs(x))]), 3),
+    primary_validation = prim(Lv_m), loading_validation = round(apply(Lv_m, 1, function(x) x[which.max(abs(x))]), 3),
+    row.names = NULL) %>%
+    mutate(same_factor = primary_exploratory == primary_validation)
+
+  efa_rows[[nf]] <- bind_rows(
+    data.frame(n_factors = nf, sample = "exploratory", item = items, round(Le, 3), row.names = NULL),
+    data.frame(n_factors = nf, sample = "validation (matched)", item = items, round(Lv_m, 3), row.names = NULL))
+}
+congruence_tab <- bind_rows(congruence_rows)
+primary_tab    <- bind_rows(primary_rows)
+efa_tab        <- bind_rows(efa_rows)
+
+kable(congruence_tab, caption = "Tucker's congruence between the samples' factors")
+kable(primary_tab, caption = "Primary factor of each item (validation factors relabelled to match the exploratory ones)")
+kable(primary_tab %>% group_by(n_factors, block) %>%
+        summarise(items = n(), moved = sum(!same_factor), .groups = "drop"),
+      caption = "Items that change primary factor, by content block")
+```
+
+## 7. Follow-up A: item distributions in each sample
+
+Hypothesis from the first run (2026-11-05): the fourth factor of `4_Factor_C` (effectiveness:
+CogSysUseful, CogTaskComplete, VisAppropriate, VisFaithful) appears only in the validation
+sample because these items have the strongest ceiling there, and items with similarly skewed
+distributions can group together for that reason alone (a "difficulty factor"). If so, these
+four items should be the ones whose distributions are most piled up at the top of the scale in
+validation, and whose distributions change most between samples.
+
+Computed on the collapsed data, on the 1 … 7 scale.
+
+```{r distributions}
+dist_tab <- both %>%
+  pivot_longer(all_of(items), names_to = "item", values_to = "value") %>%
+  filter(!is.na(value)) %>%
+  group_by(item, sample) %>%
+  summarise(n = n(), mean = mean(value), sd = sd(value),
+            skew = psych::skew(value), kurtosis = psych::kurtosi(value),
+            pct_7 = mean(value == 7), pct_6_7 = mean(value >= 6),
+            n_options = n_distinct(value), .groups = "drop") %>%
+  mutate(block = item_block[item],
+         effectiveness_item = item %in% structures[["4_Factor_C"]]$effectiveness)
+
+dist_wide <- dist_tab %>%
+  select(item, block, effectiveness_item, sample, mean, skew, pct_6_7, n_options) %>%
+  pivot_wider(names_from = sample, values_from = c(mean, skew, pct_6_7, n_options)) %>%
+  mutate(mean_change = mean_validation - mean_exploratory,
+         skew_change = skew_validation - skew_exploratory,
+         pct_6_7_change = pct_6_7_validation - pct_6_7_exploratory) %>%
+  arrange(desc(pct_6_7_validation))
+
+kable(dist_tab, digits = 3, caption = "Item distributions by sample (collapsed data, 1 ... 7)")
+kable(dist_wide, digits = 3, caption = "Distributions side by side, sorted by % of answers 6-7 in validation")
+
+kable(dist_wide %>% group_by(effectiveness_item) %>%
+        summarise(items = n(),
+                  pct_6_7_expl = mean(pct_6_7_exploratory), pct_6_7_valid = mean(pct_6_7_validation),
+                  skew_expl = mean(skew_exploratory), skew_valid = mean(skew_validation),
+                  .groups = "drop"),
+      digits = 3, caption = "Effectiveness items of 4_Factor_C vs. the other nine items (means)")
+
+# Rank of the four effectiveness items among the 13 by % of answers 6-7 in validation (1 = most)
+kable(dist_wide %>% mutate(rank_pct_6_7_validation = rank(-pct_6_7_validation)) %>%
+        filter(effectiveness_item) %>% select(item, pct_6_7_validation, rank_pct_6_7_validation),
+      digits = 3, caption = "Where the effectiveness items rank in ceiling (validation)")
+```
+
+## 8. Follow-up B: where the misfit of 3_Factor_A comes from
+
+Test 1 shows that loadings and intercepts of `3_Factor_A` are equivalent across samples, yet
+the pooled fit is much worse in validation (CFI 0.971 vs. 0.900, step 07). The misfit must then
+come from parts of the model the invariance tests do not constrain, such as residual
+covariances (local dependence) or cross-loadings. Modification indices (MI) of the CFA in each
+sample show which ones. `sepc.all` is the standardized expected change: the residual correlation
+or cross-loading the model would estimate if that parameter were freed.
+
+```{r modification indices}
+mi_rows <- list()
+syn_3a <- build_syntax(structures[["3_Factor_A"]])
+for (smp in levels(both$sample)) {
+  fit <- fit_cfa(syn_3a, filter(both, sample == smp))
+  mi <- modindices(fit, sort. = TRUE, standardized = TRUE)
+  mi <- mi[mi$op %in% c("~~", "=~") & !(mi$op == "~~" & mi$lhs == mi$rhs), ]
+  mi_rows[[smp]] <- mi %>%
+    transmute(sample = smp,
+              parameter = paste(lhs, op, rhs),
+              type = ifelse(op == "~~", "residual covariance", "cross-loading"),
+              block_lhs = ifelse(op == "~~", item_block[lhs], lhs),
+              block_rhs = item_block[rhs],
+              mi = round(mi, 2), sepc.all = round(sepc.all, 3))
+}
+mi_tab <- bind_rows(mi_rows)
+
+for (smp in levels(both$sample))
+  print(kable(head(filter(mi_tab, sample == smp), 15),
+              caption = paste("Top 15 modification indices,", smp, "sample")))
+
+# Total MI by pair of content blocks (where the local misfit concentrates)
+kable(mi_tab %>%
+        mutate(pair = ifelse(type == "residual covariance",
+                             paste(pmin(block_lhs, block_rhs), "-", pmax(block_lhs, block_rhs)),
+                             paste("cross-loading on", block_lhs, "of", block_rhs, "item"))) %>%
+        group_by(sample, pair) %>%
+        summarise(n = n(), total_mi = sum(mi), max_mi = max(mi), .groups = "drop") %>%
+        arrange(sample, desc(total_mi)),
+      digits = 1, caption = "Modification indices summed by pair of content blocks")
+```
+
+## 9. Workbook
+
+```{r workbook}
+wb <- createWorkbook()
+sheets <- list(
+  "1_Invariance"         = inv_tab,
+  "1_LRT"                = lrt_tab,
+  "1_Partial_invariance" = partial_tab,
+  "1_Freed_constraints"  = freed_tab,
+  "2_Loadings_by_sample" = loadings_wide,
+  "2_Loadings_CI"        = loadings_long,
+  "3_EFA_congruence"     = congruence_tab,
+  "3_EFA_primary_factor" = primary_tab,
+  "3_EFA_loadings"       = efa_tab,
+  "Answer_options"       = options_left,
+  "A_Distributions"      = dist_tab,
+  "A_Distributions_wide" = dist_wide,
+  "B_Modification_idx"   = mi_tab)
+for (n in names(sheets)) { addWorksheet(wb, n); writeData(wb, n, sheets[[n]]) }
+saveWorkbook(wb, file.path(output_dir, "Cross_Sample_Stability.xlsx"), overwrite = TRUE)
+```
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(output_dir, "sessionInfo.txt"))
+```

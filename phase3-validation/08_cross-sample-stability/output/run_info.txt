@@ -1,0 +1,5 @@
+exploratory_file: C:/Users/Eliane/My_codes/GitInstrument/phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv
+md5: eb83954b17ac6ef2149f63f4f7c0c572
+validation_file: C:/Users/Eliane/My_codes/GitInstrument/phase3-validation/00_collapse-categories/output/multigroup_ratings.csv
+md5: ffe4e6618351906dba451aef2b5c83e0
+run at: 2026-11-05 17:49:33.027685

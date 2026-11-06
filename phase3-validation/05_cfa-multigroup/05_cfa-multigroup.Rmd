@@ -731,6 +731,109 @@ cat("\n--- Likelihood Ratio Tests (Model Comparison) ---\n")
 lavTestLRT(fit1, fit2, fit3)
 ```
 
+### Measurement invariance: changes in fit, and the alternative structure 4_Factor_C
+
+Added on 2026-11-05. The chunk above is kept as it was (it gives the LRT values reported in
+the paper). This chunk repeats the same three models for the final structure (`3_Factor_A`,
+the model above) and for the alternative structure `4_Factor_C` (from the EFA of this sample,
+step 06), and reports for each level:
+
+* the fit indices and the change against the previous level (ΔCFI, ΔRMSEA, ΔSRMR);
+* whether the level holds by the usual criteria of Chen (2007), ΔCFI ≤ 0.010 and
+  ΔRMSEA ≤ 0.015, and by the stricter ones he suggests for unequal groups smaller than 300,
+  ΔCFI ≤ 0.005 and ΔRMSEA ≤ 0.010 (the case here: n = 41 to 44 in the smallest groups);
+* the likelihood-ratio test against the previous level;
+* whether the solution is admissible (`lavInspect(fit, "post.check")`) and the largest latent
+  correlation in any group.
+
+```{r measurement invariance by structure}
+invariance_structures <- list(
+  "3_Factor_A" = model_string,
+  "4_Factor_C" = paste(
+    "visual_interaction =~ VisSimpleUnderstand + VisRemember + VisTrialError + VisSysRetrieveInfo",
+    "effectiveness =~ CogSysUseful + VisFaithful + VisAppropriate + CogTaskComplete",
+    "cognitive_value =~ CogSysThinkDeep + CogSysEnjoy",
+    "intuitiveness =~ IntSysSimpleUnderstand + IntSysEasyStart + IntAnalysisConfigure",
+    sep = "\n")
+)
+invariance_levels <- list(configural = "", metric = "loadings", scalar = c("loadings", "intercepts"))
+
+fit_quiet <- function(syntax, group.equal) {
+  warns <- character(0)
+  fit <- withCallingHandlers(
+    lavaan::cfa(model = syntax, data = grp_data_cfa, missing = "fiml",
+                group = "stimulus", group.equal = group.equal),
+    warning = function(w) { warns <<- c(warns, conditionMessage(w)); invokeRestart("muffleWarning") })
+  attr(fit, "warnings") <- unique(warns)
+  fit
+}
+
+max_latent_cor <- function(fit) {
+  cl <- lavaan::lavInspect(fit, "cor.lv")
+  max(sapply(cl, function(m) max(abs(m[upper.tri(m)]))))
+}
+
+inv_rows <- list()
+for (s in names(invariance_structures)) {
+  fits <- lapply(invariance_levels, function(ge) fit_quiet(invariance_structures[[s]], ge))
+  lrt  <- as.data.frame(lavaan::lavTestLRT(fits$configural, fits$metric, fits$scalar))
+  for (k in seq_along(fits)) {
+    fm <- lavaan::fitMeasures(fits[[k]], c("chisq", "df", "pvalue", "cfi", "tli", "rmsea", "srmr", "bic"))
+    inv_rows[[length(inv_rows) + 1]] <- data.frame(
+      structure = s, level = names(fits)[k], n = lavaan::lavInspect(fits[[k]], "ntotal"),
+      t(setNames(as.numeric(fm), names(fm))),
+      lrt_chisq_diff = lrt[k, "Chisq diff"], lrt_df_diff = lrt[k, "Df diff"], lrt_p = lrt[k, "Pr(>Chisq)"],
+      admissible = suppressWarnings(lavaan::lavInspect(fits[[k]], "post.check")),
+      max_latent_cor = max_latent_cor(fits[[k]]),
+      warnings = gsub("\\s+", " ", paste(attr(fits[[k]], "warnings"), collapse = " | ")),
+      check.names = FALSE)
+  }
+}
+
+invariance_table <- dplyr::bind_rows(inv_rows) %>%
+  dplyr::group_by(structure) %>%
+  dplyr::mutate(delta_cfi   = dplyr::lag(cfi) - cfi,
+                delta_rmsea = rmsea - dplyr::lag(rmsea),
+                delta_srmr  = srmr - dplyr::lag(srmr),
+                holds_chen        = ifelse(is.na(delta_cfi), NA, delta_cfi <= 0.010 & delta_rmsea <= 0.015),
+                holds_chen_strict = ifelse(is.na(delta_cfi), NA, delta_cfi <= 0.005 & delta_rmsea <= 0.010)) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(dplyr::across(where(is.numeric), ~ round(.x, 4)))
+
+write.csv(invariance_table, file.path(output_dir, "invariance-by-system.csv"), row.names = FALSE)
+
+# Latent correlations of every system and level, to see where (system, factor pair) a
+# correlation reaches or exceeds 1 (added 2026-11-05)
+lv_rows <- list()
+for (s in names(invariance_structures)) {
+  for (lev in names(invariance_levels)) {
+    fit <- fit_quiet(invariance_structures[[s]], invariance_levels[[lev]])
+    groups <- lavaan::lavInspect(fit, "group.label")
+    n_g    <- lavaan::lavInspect(fit, "nobs")
+    cl     <- lavaan::lavInspect(fit, "cor.lv")
+    for (g in seq_along(cl)) {
+      m <- cl[[g]]; idx <- which(upper.tri(m), arr.ind = TRUE)
+      lv_rows[[length(lv_rows) + 1]] <- data.frame(
+        structure = s, level = lev, system = groups[g], n = n_g[g],
+        factor_1 = rownames(m)[idx[, 1]], factor_2 = colnames(m)[idx[, 2]],
+        correlation = round(m[idx], 4))
+    }
+  }
+}
+latent_cor_by_system <- dplyr::bind_rows(lv_rows)
+write.csv(latent_cor_by_system, file.path(output_dir, "latent-correlations-by-system.csv"), row.names = FALSE)
+
+knitr::kable(latent_cor_by_system %>% dplyr::filter(correlation >= 0.95) %>%
+               dplyr::arrange(structure, level, dplyr::desc(correlation)),
+             digits = 3, caption = "Latent correlations of 0.95 or more, by structure, level and system")
+
+knitr::kable(invariance_table %>%
+               dplyr::select(structure, level, n, chisq, df, cfi, tli, rmsea, srmr, bic,
+                             delta_cfi, delta_rmsea, lrt_chisq_diff, lrt_df_diff, lrt_p,
+                             holds_chen, holds_chen_strict, admissible, max_latent_cor),
+             digits = 3, caption = "Measurement invariance across systems, by structure")
+```
+
 #We already ran checks on overall data. Now we also check individual subgroups
 ```{r individual group data normality and EFA appropriateness checks}
 

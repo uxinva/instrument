@@ -358,37 +358,16 @@ analysis</h1>
 
 <div id="librairies" class="section level2">
 <h2>Librairies</h2>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## 
-## Anexando pacote: &#39;dplyr&#39;</code></pre>
-<pre><code>## Os seguintes objetos são mascarados por &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## Os seguintes objetos são mascarados por &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(knitr) #RStudio
-library(png) #output png</code></pre>
-<pre><code>## Warning: pacote &#39;png&#39; foi compilado no R versão 4.5.3</code></pre>
-<pre class="r"><code>library(corrplot) #plot correlation matrix</code></pre>
-<pre><code>## corrplot 0.95 loaded</code></pre>
-<pre class="r"><code>library(misty) #Little&#39;s test for MCAR</code></pre>
-<pre><code>## |-------------------------------------|
-## | misty 0.8.0 (2026-01-18)            |
-## | Miscellaneous Functions T. Yanagida |
-## |-------------------------------------|</code></pre>
-<pre class="r"><code>#library(mice)
+<pre class="r"><code>library(dplyr)
+library(knitr) #RStudio
+library(png) #output png
+library(corrplot) #plot correlation matrix
+library(misty) #Little&#39;s test for MCAR
+#library(mice)
 library(mifa) # MICE for missing data handling
 library(psych) # for EFA
 library(RColorBrewer) #for corr matrix
 library(lavaan) # for cfa</code></pre>
-<pre><code>## This is lavaan 0.6-21
-## lavaan is FREE software! Please report any bugs.</code></pre>
-<pre><code>## 
-## Anexando pacote: &#39;lavaan&#39;</code></pre>
-<pre><code>## O seguinte objeto é mascarado por &#39;package:psych&#39;:
-## 
-##     cor2cov</code></pre>
 </div>
 <div id="functions" class="section level2">
 <h2>Functions</h2>
@@ -695,8 +674,7 @@ screen for missing values</h2>
 ## CogSysThinkDeep          12 225 5.76 1.07      6    5.87 1.48   3   7     4 -0.70    -0.09 0.07
 ## CogSysUseful             13 226 6.42 0.65      7    6.52 0.00   5   7     2 -0.69    -0.58 0.04</code></pre>
 <pre class="r"><code>response.frequencies(data)</code></pre>
-<pre><code>## Warning in response.frequencies(data): response.frequency has been deprecated and replaced with responseFrequecy.  Please
-## fix your call</code></pre>
+<pre><code>## Warning in response.frequencies(data): response.frequency has been deprecated and replaced with responseFrequecy.  Please fix your call</code></pre>
 <pre><code>##                                 2          3          4          5         6         7        miss
 ## IntSysEasyStart        0.02654867 0.08849558 0.04424779 0.25221239 0.4026549 0.1858407 0.000000000
 ## IntSysSimpleUnderstand 0.02654867 0.03982301 0.06637168 0.19911504 0.4823009 0.1858407 0.000000000
@@ -748,10 +726,8 @@ cat(&quot;\n Sample size:&quot;)</code></pre>
 print(&quot;1 - antes make_corrM&quot;)</code></pre>
 <pre><code>## [1] &quot;1 - antes make_corrM&quot;</code></pre>
 <pre class="r"><code>colnames(data_reduced_factors)</code></pre>
-<pre><code>##  [1] &quot;VisFaithful&quot;            &quot;VisSimpleUnderstand&quot;    &quot;VisAppropriate&quot;         &quot;VisSysRetrieveInfo&quot;    
-##  [5] &quot;VisRemember&quot;            &quot;VisTrialError&quot;          &quot;CogSysThinkDeep&quot;        &quot;CogSysUseful&quot;          
-##  [9] &quot;CogSysEnjoy&quot;            &quot;CogTaskComplete&quot;        &quot;IntSysSimpleUnderstand&quot; &quot;IntSysEasyStart&quot;       
-## [13] &quot;IntAnalysisConfigure&quot;</code></pre>
+<pre><code>##  [1] &quot;VisFaithful&quot;            &quot;VisSimpleUnderstand&quot;    &quot;VisAppropriate&quot;         &quot;VisSysRetrieveInfo&quot;     &quot;VisRemember&quot;            &quot;VisTrialError&quot;          &quot;CogSysThinkDeep&quot;       
+##  [8] &quot;CogSysUseful&quot;           &quot;CogSysEnjoy&quot;            &quot;CogTaskComplete&quot;        &quot;IntSysSimpleUnderstand&quot; &quot;IntSysEasyStart&quot;        &quot;IntAnalysisConfigure&quot;</code></pre>
 <pre class="r"><code>corrM &lt;- make_corrM(data_reduced_factors)</code></pre>
 <pre><code>## [1] &quot;corr M linha 55&quot;</code></pre>
 <pre class="r"><code>## Save as CSV
@@ -907,7 +883,6 @@ for (factor in names(UX_factors)) {
 ## 
 ## [1] &quot;2 - antes make_corrM&quot;
 ## [1] &quot;corr M linha 55&quot;</code></pre>
-<pre><code>## Carregando namespace exigido: GPArotation</code></pre>
 <pre><code>## Omega_h for 1 factor is not meaningful, just omega_t</code></pre>
 <pre><code>## [1] &quot;2 - antes make_corrM&quot;
 ## [1] &quot;corr M linha 55&quot;</code></pre>
@@ -1375,11 +1350,9 @@ cat(&quot;\n Model fitting\n&quot;)</code></pre>
   missing = &quot;fiml&quot;
 )</code></pre>
 <pre><code>## Warning: lavaan-&gt;lav_object_post_check():  
-##    covariance matrix of latent variables is not positive definite in group 3; use lavInspect(fit, &quot;cov.lv&quot;) to 
-##    investigate.</code></pre>
+##    covariance matrix of latent variables is not positive definite in group 3; use lavInspect(fit, &quot;cov.lv&quot;) to investigate.</code></pre>
 <pre><code>## Warning: lavaan-&gt;lav_object_post_check():  
-##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to 
-##    investigate.</code></pre>
+##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to investigate.</code></pre>
 <pre class="r"><code>#
 #  this_fit &lt;- cfa(model_string,
 #           data = grp_data, 
@@ -1963,11 +1936,9 @@ fit1 &lt;- cfa(
   group   = &quot;stimulus&quot;
 )</code></pre>
 <pre><code>## Warning: lavaan-&gt;lav_object_post_check():  
-##    covariance matrix of latent variables is not positive definite in group 3; use lavInspect(fit, &quot;cov.lv&quot;) to 
-##    investigate.</code></pre>
+##    covariance matrix of latent variables is not positive definite in group 3; use lavInspect(fit, &quot;cov.lv&quot;) to investigate.</code></pre>
 <pre><code>## Warning: lavaan-&gt;lav_object_post_check():  
-##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to 
-##    investigate.</code></pre>
+##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to investigate.</code></pre>
 <pre class="r"><code># 3. Metric / Weak Invariance (cargas fatoriais fixadas como iguais)
 fit2 &lt;- cfa(
   model       = model_string, 
@@ -1977,8 +1948,7 @@ fit2 &lt;- cfa(
   group.equal = &quot;loadings&quot;
 )</code></pre>
 <pre><code>## Warning: lavaan-&gt;lav_object_post_check():  
-##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to 
-##    investigate.</code></pre>
+##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to investigate.</code></pre>
 <pre class="r"><code># 4. Scalar / Strong Invariance (cargas e interceptos fixados como iguais)
 fit3 &lt;- cfa(
   model       = model_string, 
@@ -1988,8 +1958,7 @@ fit3 &lt;- cfa(
   group.equal = c(&quot;intercepts&quot;, &quot;loadings&quot;)
 )</code></pre>
 <pre><code>## Warning: lavaan-&gt;lav_object_post_check():  
-##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to 
-##    investigate.</code></pre>
+##    covariance matrix of latent variables is not positive definite in group 5; use lavInspect(fit, &quot;cov.lv&quot;) to investigate.</code></pre>
 <pre class="r"><code># 5. Testes de Comparação Hierárquica de Modelos (Likelihood Ratio Test)
 cat(&quot;\n--- Likelihood Ratio Tests (Model Comparison) ---\n&quot;)</code></pre>
 <pre><code>## 
@@ -2004,6 +1973,393 @@ cat(&quot;\n--- Likelihood Ratio Tests (Model Comparison) ---\n&quot;)</code></p
 ## fit3 390 6152.8 6587.3 604.52     52.614      40    0.08734 .
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+</div>
+<div id="measurement-invariance-changes-in-fit-and-the-alternative-structure-4_factor_c" class="section level3">
+<h3>Measurement invariance: changes in fit, and the alternative
+structure 4_Factor_C</h3>
+<p>Added on 2026-11-05. The chunk above is kept as it was (it gives the
+LRT values reported in the paper). This chunk repeats the same three
+models for the final structure (<code>3_Factor_A</code>, the model
+above) and for the alternative structure <code>4_Factor_C</code> (from
+the EFA of this sample, step 06), and reports for each level:</p>
+<ul>
+<li>the fit indices and the change against the previous level (ΔCFI,
+ΔRMSEA, ΔSRMR);</li>
+<li>whether the level holds by the usual criteria of Chen (2007), ΔCFI ≤
+0.010 and ΔRMSEA ≤ 0.015, and by the stricter ones he suggests for
+unequal groups smaller than 300, ΔCFI ≤ 0.005 and ΔRMSEA ≤ 0.010 (the
+case here: n = 41 to 44 in the smallest groups);</li>
+<li>the likelihood-ratio test against the previous level;</li>
+<li>whether the solution is admissible
+(<code>lavInspect(fit, &quot;post.check&quot;)</code>) and the largest latent
+correlation in any group.</li>
+</ul>
+<pre class="r"><code>invariance_structures &lt;- list(
+  &quot;3_Factor_A&quot; = model_string,
+  &quot;4_Factor_C&quot; = paste(
+    &quot;visual_interaction =~ VisSimpleUnderstand + VisRemember + VisTrialError + VisSysRetrieveInfo&quot;,
+    &quot;effectiveness =~ CogSysUseful + VisFaithful + VisAppropriate + CogTaskComplete&quot;,
+    &quot;cognitive_value =~ CogSysThinkDeep + CogSysEnjoy&quot;,
+    &quot;intuitiveness =~ IntSysSimpleUnderstand + IntSysEasyStart + IntAnalysisConfigure&quot;,
+    sep = &quot;\n&quot;)
+)
+invariance_levels &lt;- list(configural = &quot;&quot;, metric = &quot;loadings&quot;, scalar = c(&quot;loadings&quot;, &quot;intercepts&quot;))
+
+fit_quiet &lt;- function(syntax, group.equal) {
+  warns &lt;- character(0)
+  fit &lt;- withCallingHandlers(
+    lavaan::cfa(model = syntax, data = grp_data_cfa, missing = &quot;fiml&quot;,
+                group = &quot;stimulus&quot;, group.equal = group.equal),
+    warning = function(w) { warns &lt;&lt;- c(warns, conditionMessage(w)); invokeRestart(&quot;muffleWarning&quot;) })
+  attr(fit, &quot;warnings&quot;) &lt;- unique(warns)
+  fit
+}
+
+max_latent_cor &lt;- function(fit) {
+  cl &lt;- lavaan::lavInspect(fit, &quot;cor.lv&quot;)
+  max(sapply(cl, function(m) max(abs(m[upper.tri(m)]))))
+}
+
+inv_rows &lt;- list()
+for (s in names(invariance_structures)) {
+  fits &lt;- lapply(invariance_levels, function(ge) fit_quiet(invariance_structures[[s]], ge))
+  lrt  &lt;- as.data.frame(lavaan::lavTestLRT(fits$configural, fits$metric, fits$scalar))
+  for (k in seq_along(fits)) {
+    fm &lt;- lavaan::fitMeasures(fits[[k]], c(&quot;chisq&quot;, &quot;df&quot;, &quot;pvalue&quot;, &quot;cfi&quot;, &quot;tli&quot;, &quot;rmsea&quot;, &quot;srmr&quot;, &quot;bic&quot;))
+    inv_rows[[length(inv_rows) + 1]] &lt;- data.frame(
+      structure = s, level = names(fits)[k], n = lavaan::lavInspect(fits[[k]], &quot;ntotal&quot;),
+      t(setNames(as.numeric(fm), names(fm))),
+      lrt_chisq_diff = lrt[k, &quot;Chisq diff&quot;], lrt_df_diff = lrt[k, &quot;Df diff&quot;], lrt_p = lrt[k, &quot;Pr(&gt;Chisq)&quot;],
+      admissible = suppressWarnings(lavaan::lavInspect(fits[[k]], &quot;post.check&quot;)),
+      max_latent_cor = max_latent_cor(fits[[k]]),
+      warnings = gsub(&quot;\\s+&quot;, &quot; &quot;, paste(attr(fits[[k]], &quot;warnings&quot;), collapse = &quot; | &quot;)),
+      check.names = FALSE)
+  }
+}
+
+invariance_table &lt;- dplyr::bind_rows(inv_rows) %&gt;%
+  dplyr::group_by(structure) %&gt;%
+  dplyr::mutate(delta_cfi   = dplyr::lag(cfi) - cfi,
+                delta_rmsea = rmsea - dplyr::lag(rmsea),
+                delta_srmr  = srmr - dplyr::lag(srmr),
+                holds_chen        = ifelse(is.na(delta_cfi), NA, delta_cfi &lt;= 0.010 &amp; delta_rmsea &lt;= 0.015),
+                holds_chen_strict = ifelse(is.na(delta_cfi), NA, delta_cfi &lt;= 0.005 &amp; delta_rmsea &lt;= 0.010)) %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::mutate(dplyr::across(where(is.numeric), ~ round(.x, 4)))
+
+write.csv(invariance_table, file.path(output_dir, &quot;invariance-by-system.csv&quot;), row.names = FALSE)
+
+# Latent correlations of every system and level, to see where (system, factor pair) a
+# correlation reaches or exceeds 1 (added 2026-11-05)
+lv_rows &lt;- list()
+for (s in names(invariance_structures)) {
+  for (lev in names(invariance_levels)) {
+    fit &lt;- fit_quiet(invariance_structures[[s]], invariance_levels[[lev]])
+    groups &lt;- lavaan::lavInspect(fit, &quot;group.label&quot;)
+    n_g    &lt;- lavaan::lavInspect(fit, &quot;nobs&quot;)
+    cl     &lt;- lavaan::lavInspect(fit, &quot;cor.lv&quot;)
+    for (g in seq_along(cl)) {
+      m &lt;- cl[[g]]; idx &lt;- which(upper.tri(m), arr.ind = TRUE)
+      lv_rows[[length(lv_rows) + 1]] &lt;- data.frame(
+        structure = s, level = lev, system = groups[g], n = n_g[g],
+        factor_1 = rownames(m)[idx[, 1]], factor_2 = colnames(m)[idx[, 2]],
+        correlation = round(m[idx], 4))
+    }
+  }
+}
+latent_cor_by_system &lt;- dplyr::bind_rows(lv_rows)
+write.csv(latent_cor_by_system, file.path(output_dir, &quot;latent-correlations-by-system.csv&quot;), row.names = FALSE)
+
+knitr::kable(latent_cor_by_system %&gt;% dplyr::filter(correlation &gt;= 0.95) %&gt;%
+               dplyr::arrange(structure, level, dplyr::desc(correlation)),
+             digits = 3, caption = &quot;Latent correlations of 0.95 or more, by structure, level and system&quot;)</code></pre>
+<table>
+<caption>Latent correlations of 0.95 or more, by structure, level and
+system</caption>
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="14%" />
+<col width="3%" />
+<col width="22%" />
+<col width="19%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">structure</th>
+<th align="left">level</th>
+<th align="left">system</th>
+<th align="right">n</th>
+<th align="left">factor_1</th>
+<th align="left">factor_2</th>
+<th align="right">correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">3_Factor_A</td>
+<td align="left">configural</td>
+<td align="left">Data Studio</td>
+<td align="right">44</td>
+<td align="left">visualization</td>
+<td align="left">cognitive</td>
+<td align="right">1.018</td>
+</tr>
+<tr class="even">
+<td align="left">3_Factor_A</td>
+<td align="left">configural</td>
+<td align="left">JMP</td>
+<td align="right">41</td>
+<td align="left">cognitive</td>
+<td align="left">intuitiveness</td>
+<td align="right">0.971</td>
+</tr>
+<tr class="odd">
+<td align="left">3_Factor_A</td>
+<td align="left">metric</td>
+<td align="left">Data Studio</td>
+<td align="right">44</td>
+<td align="left">visualization</td>
+<td align="left">cognitive</td>
+<td align="right">1.022</td>
+</tr>
+<tr class="even">
+<td align="left">3_Factor_A</td>
+<td align="left">metric</td>
+<td align="left">JMP</td>
+<td align="right">41</td>
+<td align="left">cognitive</td>
+<td align="left">intuitiveness</td>
+<td align="right">0.954</td>
+</tr>
+<tr class="odd">
+<td align="left">3_Factor_A</td>
+<td align="left">scalar</td>
+<td align="left">Data Studio</td>
+<td align="right">44</td>
+<td align="left">visualization</td>
+<td align="left">cognitive</td>
+<td align="right">1.023</td>
+</tr>
+<tr class="even">
+<td align="left">3_Factor_A</td>
+<td align="left">scalar</td>
+<td align="left">JMP</td>
+<td align="right">41</td>
+<td align="left">cognitive</td>
+<td align="left">intuitiveness</td>
+<td align="right">0.962</td>
+</tr>
+<tr class="odd">
+<td align="left">4_Factor_C</td>
+<td align="left">configural</td>
+<td align="left">Data Studio</td>
+<td align="right">44</td>
+<td align="left">visual_interaction</td>
+<td align="left">cognitive_value</td>
+<td align="right">1.034</td>
+</tr>
+<tr class="even">
+<td align="left">4_Factor_C</td>
+<td align="left">metric</td>
+<td align="left">Data Studio</td>
+<td align="right">44</td>
+<td align="left">visual_interaction</td>
+<td align="left">cognitive_value</td>
+<td align="right">1.021</td>
+</tr>
+<tr class="odd">
+<td align="left">4_Factor_C</td>
+<td align="left">scalar</td>
+<td align="left">Data Studio</td>
+<td align="right">44</td>
+<td align="left">visual_interaction</td>
+<td align="left">cognitive_value</td>
+<td align="right">1.022</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>knitr::kable(invariance_table %&gt;%
+               dplyr::select(structure, level, n, chisq, df, cfi, tli, rmsea, srmr, bic,
+                             delta_cfi, delta_rmsea, lrt_chisq_diff, lrt_df_diff, lrt_p,
+                             holds_chen, holds_chen_strict, admissible, max_latent_cor),
+             digits = 3, caption = &quot;Measurement invariance across systems, by structure&quot;)</code></pre>
+<table style="width:100%;">
+<caption>Measurement invariance across systems, by structure</caption>
+<colgroup>
+<col width="6%" />
+<col width="6%" />
+<col width="2%" />
+<col width="4%" />
+<col width="2%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="3%" />
+<col width="4%" />
+<col width="5%" />
+<col width="6%" />
+<col width="8%" />
+<col width="6%" />
+<col width="3%" />
+<col width="6%" />
+<col width="9%" />
+<col width="6%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">structure</th>
+<th align="left">level</th>
+<th align="right">n</th>
+<th align="right">chisq</th>
+<th align="right">df</th>
+<th align="right">cfi</th>
+<th align="right">tli</th>
+<th align="right">rmsea</th>
+<th align="right">srmr</th>
+<th align="right">bic</th>
+<th align="right">delta_cfi</th>
+<th align="right">delta_rmsea</th>
+<th align="right">lrt_chisq_diff</th>
+<th align="right">lrt_df_diff</th>
+<th align="right">lrt_p</th>
+<th align="left">holds_chen</th>
+<th align="left">holds_chen_strict</th>
+<th align="left">admissible</th>
+<th align="right">max_latent_cor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">3_Factor_A</td>
+<td align="left">configural</td>
+<td align="right">209</td>
+<td align="right">508.085</td>
+<td align="right">310</td>
+<td align="right">0.828</td>
+<td align="right">0.784</td>
+<td align="right">0.124</td>
+<td align="right">0.103</td>
+<td align="right">6918.244</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">FALSE</td>
+<td align="right">1.018</td>
+</tr>
+<tr class="even">
+<td align="left">3_Factor_A</td>
+<td align="left">metric</td>
+<td align="right">209</td>
+<td align="right">551.902</td>
+<td align="right">350</td>
+<td align="right">0.825</td>
+<td align="right">0.805</td>
+<td align="right">0.117</td>
+<td align="right">0.125</td>
+<td align="right">6748.366</td>
+<td align="right">0.003</td>
+<td align="right">-0.006</td>
+<td align="right">43.816</td>
+<td align="right">40</td>
+<td align="right">0.313</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="right">1.022</td>
+</tr>
+<tr class="odd">
+<td align="left">3_Factor_A</td>
+<td align="left">scalar</td>
+<td align="right">209</td>
+<td align="right">604.515</td>
+<td align="right">390</td>
+<td align="right">0.814</td>
+<td align="right">0.814</td>
+<td align="right">0.115</td>
+<td align="right">0.130</td>
+<td align="right">6587.287</td>
+<td align="right">0.011</td>
+<td align="right">-0.003</td>
+<td align="right">52.614</td>
+<td align="right">40</td>
+<td align="right">0.087</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="right">1.023</td>
+</tr>
+<tr class="even">
+<td align="left">4_Factor_C</td>
+<td align="left">configural</td>
+<td align="right">209</td>
+<td align="right">445.515</td>
+<td align="right">295</td>
+<td align="right">0.870</td>
+<td align="right">0.828</td>
+<td align="right">0.110</td>
+<td align="right">0.094</td>
+<td align="right">6935.808</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">FALSE</td>
+<td align="right">1.034</td>
+</tr>
+<tr class="odd">
+<td align="left">4_Factor_C</td>
+<td align="left">metric</td>
+<td align="right">209</td>
+<td align="right">495.792</td>
+<td align="right">331</td>
+<td align="right">0.857</td>
+<td align="right">0.832</td>
+<td align="right">0.109</td>
+<td align="right">0.116</td>
+<td align="right">6793.761</td>
+<td align="right">0.012</td>
+<td align="right">-0.001</td>
+<td align="right">50.277</td>
+<td align="right">36</td>
+<td align="right">0.057</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="right">1.021</td>
+</tr>
+<tr class="even">
+<td align="left">4_Factor_C</td>
+<td align="left">scalar</td>
+<td align="right">209</td>
+<td align="right">536.817</td>
+<td align="right">367</td>
+<td align="right">0.853</td>
+<td align="right">0.844</td>
+<td align="right">0.105</td>
+<td align="right">0.121</td>
+<td align="right">6642.462</td>
+<td align="right">0.004</td>
+<td align="right">-0.004</td>
+<td align="right">41.025</td>
+<td align="right">36</td>
+<td align="right">0.260</td>
+<td align="left">TRUE</td>
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="right">1.022</td>
+</tr>
+</tbody>
+</table>
 <p>#We already ran checks on overall data. Now we also check individual
 subgroups</p>
 <pre class="r"><code>row_names &lt;- c(&quot;alpha&quot;, &quot;omega.tot (1 factor)&quot;, &quot;omega.tot (3 factors)&quot;)
@@ -2242,8 +2598,7 @@ for (letter in stimuli_letters) {
 ## [1] &quot;corr M linha 55&quot;</code></pre>
 <pre><code>## Warning in FUN(X[[i]], ...): polychoric correlation between variables visualization1 and cognitive4 produced a warning:
 ##    1 row with zero marginal removed</code></pre>
-<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been
-## adjusted to make it positive-definite</code></pre>
+<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been adjusted to make it positive-definite</code></pre>
 <pre><code>## Omega_h for 1 factor is not meaningful, just omega_t</code></pre>
 <pre><code>## Alpha: 0.9149629 
 ## G.6: 0.9775661 
@@ -2361,8 +2716,7 @@ for (letter in stimuli_letters) {
 <pre><code>## 
 ## --- RELIABILITY with 1 factor(s) in Excel ---
 ## [1] &quot;corr M linha 55&quot;</code></pre>
-<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been
-## adjusted to make it positive-definite</code></pre>
+<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been adjusted to make it positive-definite</code></pre>
 <pre><code>## Omega_h for 1 factor is not meaningful, just omega_t</code></pre>
 <pre><code>## Alpha: 0.9130716 
 ## G.6: 0.9834554 
@@ -2370,8 +2724,7 @@ for (letter in stimuli_letters) {
 ## 
 ## --- RELIABILITY with 3 factor(s) in Excel ---
 ## [1] &quot;corr M linha 55&quot;</code></pre>
-<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been
-## adjusted to make it positive-definite</code></pre>
+<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been adjusted to make it positive-definite</code></pre>
 <pre><code>## Alpha: 0.9130716 
 ## G.6: 0.9834554 
 ## Omega Total: 0.9412448 
@@ -2390,12 +2743,67 @@ for (letter in stimuli_letters) {
 ## 
 ## Root Mean Square Error of Approximation:
 ## 
-##   RMSEA                                          0.120</code></pre>
-<pre><code>## Warning in file(file, ifelse(append, &quot;a&quot;, &quot;w&quot;)): não foi possível abrir o arquivo
-## &#39;C:/Users/Eliane/My_codes/GitInstrument/phase3-validation/05_cfa-multigroup/output/fit_indices_excel.csv&#39;: Permission
-## denied</code></pre>
-<pre><code>## Error in CFA for stimulus Excel: não é possível abrir a conexão</code></pre>
-<pre><code>## 
+##   RMSEA                                          0.120
+## 
+## DETAILS
+## =================
+##                                Tst_-E
+## npar                           42.000
+## fmin                            1.355
+## chisq                          92.119
+## df                             62.000
+## pvalue                          0.008
+## baseline.chisq                256.981
+## baseline.df                    78.000
+## baseline.pvalue                 0.000
+## cfi                             0.832
+## tli                             0.788
+## cfi.robust                      0.827
+## tli.robust                      0.783
+## nnfi                            0.788
+## rfi                             0.549
+## nfi                             0.642
+## pnfi                            0.510
+## ifi                             0.846
+## rni                             0.832
+## nnfi.robust                     0.783
+## rni.robust                      0.827
+## logl                         -475.813
+## unrestricted.logl            -429.753
+## aic                          1035.626
+## bic                          1099.733
+## ntotal                         34.000
+## bic2                          968.655
+## rmsea                           0.120
+## rmsea.ci.lower                  0.063
+## rmsea.ci.upper                  0.169
+## rmsea.ci.level                  0.900
+## rmsea.pvalue                    0.028
+## rmsea.close.h0                  0.050
+## rmsea.notclose.pvalue           0.889
+## rmsea.notclose.h0               0.080
+## rmsea.robust                    0.121
+## rmsea.ci.lower.robust           0.065
+## rmsea.ci.upper.robust           0.170
+## rmsea.pvalue.robust             0.025
+## rmsea.notclose.pvalue.robust    0.898
+## rmr                             0.080
+## rmr_nomean                      0.085
+## srmr                            0.094
+## srmr_bentler                    0.094
+## srmr_bentler_nomean             0.100
+## crmr                            0.100
+## crmr_nomean                     0.108
+## srmr_mplus                      0.094
+## srmr_mplus_nomean               0.100
+## cn_05                          31.037
+## cn_01                          34.514
+## gfi                             0.991
+## agfi                            0.984
+## pgfi                            0.591
+## mfi                             0.642
+## ecvi                            5.180
+## 
 ## ==========================================
 ##  Processing stimulus: Data Studio
 ## ==========================================
@@ -2419,8 +2827,7 @@ for (letter in stimuli_letters) {
 <pre><code>## 
 ## --- RELIABILITY with 1 factor(s) in Data Studio ---
 ## [1] &quot;corr M linha 55&quot;</code></pre>
-<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been
-## adjusted to make it positive-definite</code></pre>
+<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been adjusted to make it positive-definite</code></pre>
 <pre><code>## Omega_h for 1 factor is not meaningful, just omega_t</code></pre>
 <pre><code>## Alpha: 0.9246009 
 ## G.6: 0.9491362 
@@ -2428,8 +2835,7 @@ for (letter in stimuli_letters) {
 ## 
 ## --- RELIABILITY with 3 factor(s) in Data Studio ---
 ## [1] &quot;corr M linha 55&quot;</code></pre>
-<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been
-## adjusted to make it positive-definite</code></pre>
+<pre><code>## Warning in hetcor.data.frame(d_ordered, use = &quot;pairwise.complete.obs&quot;, std.err = FALSE, : the correlation matrix has been adjusted to make it positive-definite</code></pre>
 <pre><code>## Alpha: 0.9246009 
 ## G.6: 0.9491362 
 ## Omega Total: 0.955402 

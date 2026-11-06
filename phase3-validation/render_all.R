@@ -35,5 +35,7 @@ render_step("04_number-of-factors", list(k_factors = 4), "_4-factors")
 
 render_step("05_cfa-multigroup")
 render_step("06_alternative-structures")
+render_step("07_exploratory-sample-cfa")
+render_step("08_cross-sample-stability")
 
 message("\nDone. Commit the updated .html files together with the notebooks.")

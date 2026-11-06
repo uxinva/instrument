@@ -14,7 +14,7 @@ Checks the three-factor model of the 13-item UXVis scale (Cognitive value, Intui
 6. computes the mean inter-item correlation (Pearson and polychoric, with minimum and maximum) for the full 13-item scale and for each subscale;
 7. fits the three-factor confirmatory factor analysis (CFA) with full-information maximum likelihood (FIML):
    - on the pooled data;
-   - as a multi-group model across the five systems (Power BI, Tableau, JMP, Excel, Data Studio), to test whether the model holds the same way for every system (measurement invariance).
+   - as a multi-group model across the five systems (Power BI, Tableau, JMP, Excel, Data Studio), to test whether the model holds the same way for every system (measurement invariance). The invariance tests are also run for the alternative structure `4_Factor_C`, with the changes in fit between levels (added 2026-11-05).
 
 ## Inputs
 
@@ -35,3 +35,5 @@ Checks the three-factor model of the 13-item UXVis scale (Cognitive value, Intui
 | `fit_indices_multigroup.csv` | Multi-group CFA fit indices |
 | `fit_indices_<system>.csv` | CFA fit indices for each system (`power_bi`, `tableau`, `jmp`, `excel`, `data_studio`) |
 | `corr_matrix_<system>.csv` | Item correlations for each system |
+| `latent-correlations-by-system.csv` | Every latent correlation by structure, invariance level and system, with the group size (to locate correlations ≥ 1) |
+| `invariance-by-system.csv` | Invariance across systems (configural, metric, scalar) for `3_Factor_A` and `4_Factor_C`: fit, ΔCFI/ΔRMSEA/ΔSRMR, Chen (2007) criteria (usual and strict), LRT, admissibility, largest latent correlation |
