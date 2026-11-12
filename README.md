@@ -12,7 +12,7 @@ The rendered reports are published at **<https://uxinva.github.io/instrument/>**
 |---|---|---|
 | Phase 2.1: Scale development | [`phase2-1-scale-development/`](phase2-1-scale-development/README.md) | Started |
 | Phase 2.2: Item reduction | [`phase2-2-item-reduction/`](phase2-2-item-reduction/README.md) | Documented |
-| Phase 3: Scale validation | [`phase3-validation/`](phase3-validation/README.md) | Being documented |
+| Phase 3: Scale validation | [`phase3-validation/`](phase3-validation/README.md) | Documented |
 | Other phases | *to be added* | Not yet documented |
 
 The phases follow each other. **Scale development** produces the 65-item, three-factor exploratory factor analysis. **Item reduction** starts from the 65 items of the three-factor exploratory factor analysis and ends with a 13-item, three-factor instrument (Visualization, Task cognition and System). **Validation** tests this instrument on an independent sample, where the factors are called Visualization, Cognitive value and Intuitiveness.
@@ -41,6 +41,8 @@ What each step does is described in the [phase README](phase2-2-item-reduction/R
 | 04 Number of factors | [3 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_3-factors.html) · [4 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_4-factors.html) |
 | 05 Multi-group CFA | [report](https://uxinva.github.io/instrument/phase3-validation/05_cfa-multigroup/05_cfa-multigroup.html) |
 | 06 Alternative structures | [report](https://uxinva.github.io/instrument/phase3-validation/06_alternative-structures/06_alternative-structures.html) |
+| 07 Exploratory-sample CFA | [report](https://uxinva.github.io/instrument/phase3-validation/07_exploratory-sample-cfa/07_exploratory-sample-cfa.html) |
+| 08 Cross-sample stability | [report](https://uxinva.github.io/instrument/phase3-validation/08_cross-sample-stability/08_cross-sample-stability.html) |
 
 What each step does is described in the [phase README](phase3-validation/README.md).
 
@@ -71,7 +73,7 @@ instrument/
     ├── README.md              overview of the phase and how to reproduce it
     ├── render_all.R           runs every step in order
     ├── data/                  raw data, data preparation, prepared data, item codebook
-    └── NN_step-name/          one folder per analysis step (00–06)
+    └── NN_step-name/          one folder per analysis step (00–08)
         ├── README.md          what the step does, its inputs and outputs
         ├── NN_step-name.Rmd   notebook (step 02 is a Python notebook, .ipynb)
         ├── NN_step-name.html  rendered report

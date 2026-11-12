@@ -1,6 +1,6 @@
 # 07 CFA of the alternative structures on the exploratory sample
 
-**Notebook:** [`07_exploratory-sample-cfa.Rmd`](07_exploratory-sample-cfa.Rmd)
+**Notebook:** [`07_exploratory-sample-cfa.Rmd`](07_exploratory-sample-cfa.Rmd) · **Report:** [`07_exploratory-sample-cfa.html`](https://uxinva.github.io/instrument/phase3-validation/07_exploratory-sample-cfa/07_exploratory-sample-cfa.html)
 
 ## What it does
 

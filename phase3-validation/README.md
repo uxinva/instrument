@@ -16,8 +16,10 @@ The steps must be run in this order, because each step reads files produced by t
 | [02 Scale correlations](02_scale-correlations/README.md) | Pearson correlations between scale scores (UXVis factors, SUS, UEQ-S) | `data/prepared/` | [HTML](https://uxinva.github.io/instrument/phase3-validation/02_scale-correlations/02_scale-correlations.html) |
 | [03 Polychoric correlations](03_polychoric-correlations/README.md) | Item-level polychoric correlations and clustering | step 00 | [UXVis items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_uxvis-scales.html) · [All items](https://uxinva.github.io/instrument/phase3-validation/03_polychoric-correlations/03_polychoric-correlations_all-scales.html) |
 | [04 Number of factors](04_number-of-factors/README.md) | Exploratory factor analysis and parallel analysis | step 03 | [3 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_3-factors.html) · [4 factors](https://uxinva.github.io/instrument/phase3-validation/04_number-of-factors/04_number-of-factors_4-factors.html) |
-| [05 Multi-group CFA](05_cfa-multigroup/README.md) | Reliability and confirmatory factor analysis, pooled and per system | step 00 | [HTML](https://uxinva.github.io/instrument/phase3-validation/05_cfa-multigroup/05_cfa-multigroup.html) |
+| [05 Multi-group CFA](05_cfa-multigroup/README.md) | Reliability and confirmatory factor analysis, pooled and per system; measurement invariance across systems for `3_Factor_A` and `4_Factor_C` | step 00 | [HTML](https://uxinva.github.io/instrument/phase3-validation/05_cfa-multigroup/05_cfa-multigroup.html) |
 | [06 Alternative structures](06_alternative-structures/README.md) | Compares 11 alternative factor structures (EFA and CFA) | step 00 | [HTML](https://uxinva.github.io/instrument/phase3-validation/06_alternative-structures/06_alternative-structures.html) |
+| [07 Exploratory-sample CFA](07_exploratory-sample-cfa/README.md) | Fits the 11 structures of step 06 on the exploratory sample of phase 2.2 (506 participants) and compares them with the validation results | step 06; phase 2.2 `data/prepared/` | [HTML](https://uxinva.github.io/instrument/phase3-validation/07_exploratory-sample-cfa/07_exploratory-sample-cfa.html) |
+| [08 Cross-sample stability](08_cross-sample-stability/README.md) | Measurement invariance across the two samples, loadings by sample, the same EFA in both samples, item distributions and modification indices | step 00; phase 2.2 `data/prepared/` | [HTML](https://uxinva.github.io/instrument/phase3-validation/08_cross-sample-stability/08_cross-sample-stability.html) |
 
 ## How to reproduce
 
@@ -65,7 +67,7 @@ The results were reproduced on a second computer (macOS on Apple Silicon, with t
 
 ## Stimuli
 
-Participants evaluated the visual analytics system they use (the **stimulus**). The multi-group analyses (steps 05 and 06) use the five systems with enough responses: **Power BI**, **Tableau**, **JMP**, **Excel** and **Data Studio**.
+Participants evaluated the visual analytics system they use (the **stimulus**). The multi-group analyses by system (steps 05 and 06) use the five systems with enough responses: **Power BI**, **Tableau**, **JMP**, **Excel** and **Data Studio**. Steps 07 and 08 also use the exploratory sample of [phase 2.2](../phase2-2-item-reduction/README.md) (Gephi, Power BI, Qlik, Tableau, JMP).
 
 ## Item codes
 

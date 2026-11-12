@@ -1,6 +1,6 @@
 # 08 Stability of the factor structure across samples
 
-**Notebook:** [`08_cross-sample-stability.Rmd`](08_cross-sample-stability.Rmd)
+**Notebook:** [`08_cross-sample-stability.Rmd`](08_cross-sample-stability.Rmd) · **Report:** [`08_cross-sample-stability.html`](https://uxinva.github.io/instrument/phase3-validation/08_cross-sample-stability/08_cross-sample-stability.html)
 
 ## What it does
 
