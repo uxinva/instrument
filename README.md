@@ -10,11 +10,12 @@ The rendered reports are published at **<https://uxinva.github.io/instrument/>**
 
 | Phase | Folder | Status |
 |---|---|---|
+| Phase 2.1: Scale development | [`phase2-1-scale-development/`](phase2-1-scale-development/README.md) | Started |
 | Phase 2.2: Item reduction | [`phase2-2-item-reduction/`](phase2-2-item-reduction/README.md) | Documented |
 | Phase 3: Scale validation | [`phase3-validation/`](phase3-validation/README.md) | Being documented |
 | Other phases | *to be added* | Not yet documented |
 
-The phases follow each other. **Item reduction** starts from the 65 items of the three-factor exploratory factor analysis and ends with a 13-item, three-factor instrument (Visualization, Task cognition and System). **Validation** tests this instrument on an independent sample, where the factors are called Visualization, Cognitive value and Intuitiveness.
+The phases follow each other. **Scale development** produces the 65-item, three-factor exploratory factor analysis. **Item reduction** starts from the 65 items of the three-factor exploratory factor analysis and ends with a 13-item, three-factor instrument (Visualization, Task cognition and System). **Validation** tests this instrument on an independent sample, where the factors are called Visualization, Cognitive value and Intuitiveness.
 
 ### Analysis reports: phase 2.2 (item reduction)
 
@@ -53,6 +54,7 @@ instrument/
 ├── instrument.Rproj           R project: open this in RStudio
 ├── _config.yml                GitHub Pages site settings
 ├── .github/workflows/         builds and publishes the site
+├── phase2-1-scale-development/  being documented: EFA of the 65 items
 ├── phase2-2-item-reduction/
 │   ├── README.md              overview of the phase and how to reproduce it
 │   ├── item-reduction-context.md   summary: data, decisions, reference results, software
