@@ -8,8 +8,11 @@ This phase produces the **65-item, three-factor exploratory factor analysis (EFA
 
 ## Steps
 
+Run in order: `data/prepare_data.py` (only if the raw data change), then knit `01_efa/01_efa.Rmd`, then run `02_efa-loadings/efa_loadings.py`.
+
 | Step | Content | Status |
 |---|---|---|
-| [`01_efa/`](01_efa/README.md) | EFA (polychoric, principal axis, 1–6 factors) on the whole sample and on each tool; factorability, parallel analysis, fit indices | Reproduces the run of 2026-03-18 (\|difference\| < 1e-6) |
+| [`01_efa/`](01_efa/README.md) | EFA (polychoric, principal axis, 1–6 factors) on the whole sample and on each tool; normality, factorability, number of factors, fit indices | Reproduces the run of 2026-03-18 (\|difference\| < 1e-6) |
+| [`02_efa-loadings/`](02_efa-loadings/README.md) | Loadings above 0.32, cross-loadings, item ranks per factor and group, presence across groups (Python) | Reproduces the notebook of 2026-03-23; corrected version without the variance rows |
 
 The steps follow the layout of the other phases: a `data/` folder and numbered steps `NN_step-name/`, each with a README, a notebook or scripts, the rendered report and an `output/` folder.

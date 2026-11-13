@@ -1,5 +1,6 @@
 "criterion","suggested_factors"
 "Parallel analysis, factors (fa = ""fa"")","5 (20 of 20 seeds)"
 "Parallel analysis, principal components","3 (20 of 20 seeds)"
+"Parallel analysis, factors, polychoric simulated data (cor = ""poly"", 20 iterations, seed 257)","5"
 "Velicer's MAP (minimum)","4"
 "Eigenvalues > 1 (Kaiser)","9"

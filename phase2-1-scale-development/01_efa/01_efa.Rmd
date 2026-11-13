@@ -13,6 +13,11 @@ params:
   # factors cannot be reproduced exactly; this run sets one.
   pa_iterations: 100
   seed: 257
+  # Parallel analysis on the raw data with polychoric correlations also for the simulated data (whole sample only).
+  # Each iteration computes polychoric matrices (about 10 s), so fewer iterations are used. 0 skips it.
+  poly_pa_iterations: 20
+  # Uncollapsed ratings, used only for the item-level normality table.
+  raw_file: "phase2-1-scale-development/data/raw/ratings-stimulus_original.csv"
   # Folder with the results of 2026-03-18 to compare with ("" to skip the comparison).
   reference_dir: "phase2-1-scale-development/01_efa/input/reference-2026-03-18"
 ---
@@ -165,11 +170,45 @@ knitr::kable(summary_table, digits = 3)
 - **KMO** ≥ 0.70 and a significant **Bartlett** test indicate that the matrix is suitable for factor analysis.
 - **parallel_n_factors** is the number of factors suggested by parallel analysis (random; see the seed above).
 
+### Item-level normality (whole sample)
+
+Skewness and excess kurtosis of each item (`psych::skew` and `psych::kurtosi`, `type = 2`, the estimates reported by
+SPSS), before and after collapsing rare options, and the Shapiro-Wilk test. Thresholds of Fabrigar et al. (1999) for a
+severe violation: |skewness| > 2, kurtosis > 7.
+
+```{r item-normality}
+raw <- read.csv(here(params$raw_file), check.names = FALSE, fileEncoding = "UTF-8-BOM")
+raw <- raw[, names(datasets[["Agg"]])]
+agg <- datasets[["Agg"]]
+item_normality <- data.frame(
+  item = names(agg),
+  skew_raw = psych::skew(raw, type = 2), kurtosis_raw = psych::kurtosi(raw, type = 2),
+  skew_collapsed = psych::skew(agg, type = 2), kurtosis_collapsed = psych::kurtosi(agg, type = 2),
+  shapiro_p_raw = sapply(raw, function(x) shapiro.test(x)$p.value),
+  row.names = NULL)
+write.csv(item_normality, file.path(out_dir, "item-normality.csv"), row.names = FALSE)
+
+count_table <- data.frame(
+  data = c("uncollapsed", "collapsed (EFA input)"),
+  skew_min = c(min(item_normality$skew_raw), min(item_normality$skew_collapsed)),
+  skew_max = c(max(item_normality$skew_raw), max(item_normality$skew_collapsed)),
+  kurtosis_min = c(min(item_normality$kurtosis_raw), min(item_normality$kurtosis_collapsed)),
+  kurtosis_max = c(max(item_normality$kurtosis_raw), max(item_normality$kurtosis_collapsed)),
+  items_abs_skew_gt_1 = c(sum(abs(item_normality$skew_raw) > 1), sum(abs(item_normality$skew_collapsed) > 1)),
+  items_abs_skew_gt_2 = c(sum(abs(item_normality$skew_raw) > 2), sum(abs(item_normality$skew_collapsed) > 2)),
+  items_kurtosis_gt_7 = c(sum(item_normality$kurtosis_raw > 7), sum(item_normality$kurtosis_collapsed > 7)))
+knitr::kable(count_table, digits = 2)
+cat("Items rejecting normality (Shapiro-Wilk, uncollapsed, p < .05):",
+    sum(item_normality$shapiro_p_raw < .05), "of", nrow(item_normality), "\n")
+```
+
 ### Number of factors: other criteria (whole sample)
 
 Parallel analysis with `fa = "fa"` is the criterion of the original notebook. The criteria below are computed on the same
 polychoric matrix so that the suggested number of factors can be read against them; they do not change any loading.
-The parallel analyses are repeated with 20 seeds to show how stable they are.
+The parallel analyses on the matrix are repeated with 20 seeds to show how stable they are. Given a correlation
+matrix, `fa.parallel` compares its eigenvalues with those of random normal data (Pearson correlations); the version with
+`cor = "poly"` starts from the raw ratings and uses polychoric correlations for the random data as well.
 
 ```{r n-factors-criteria}
 rho_agg <- results[["Agg"]]$rho
@@ -179,13 +218,20 @@ pa_runs <- t(sapply(1:20, function(s) {
   p <- psych::fa.parallel(rho_agg, n.obs = n_agg, fa = "both", n.iter = params$pa_iterations, plot = FALSE)
   c(fa = p$nfact, pc = p$ncomp)
 }))
+poly_pa <- if (params$poly_pa_iterations > 0) {
+  set.seed(params$seed)
+  psych::fa.parallel(datasets[["Agg"]], fa = "fa", cor = "poly", n.iter = params$poly_pa_iterations,
+                     plot = FALSE)$nfact
+} else NA
 vss <- psych::VSS(rho_agg, n = 8, n.obs = n_agg, fm = "pa", plot = FALSE)
 eigenvalues <- eigen(rho_agg, only.values = TRUE)$values
 tab_runs <- function(x) paste(sprintf("%s (%d of 20 seeds)", names(table(x)), as.integer(table(x))), collapse = ", ")
 criteria <- data.frame(
   criterion = c("Parallel analysis, factors (fa = \"fa\")", "Parallel analysis, principal components",
+                sprintf("Parallel analysis, factors, polychoric simulated data (cor = \"poly\", %d iterations, seed %d)",
+                        params$poly_pa_iterations, params$seed),
                 "Velicer's MAP (minimum)", "Eigenvalues > 1 (Kaiser)"),
-  suggested_factors = c(tab_runs(pa_runs[, "fa"]), tab_runs(pa_runs[, "pc"]),
+  suggested_factors = c(tab_runs(pa_runs[, "fa"]), tab_runs(pa_runs[, "pc"]), as.character(poly_pa),
                         as.character(which.min(vss$map)), as.character(sum(eigenvalues > 1))))
 write.csv(criteria, file.path(out_dir, "number-of-factors-criteria-agg.csv"), row.names = FALSE)
 knitr::kable(criteria)

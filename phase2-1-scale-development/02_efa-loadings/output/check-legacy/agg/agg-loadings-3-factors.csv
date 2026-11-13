@@ -1,0 +1,67 @@
+item,Cross-loadings in Agg,factor rank in PA1 Agg,PA1 Agg,factor rank in PA2 Agg,PA2 Agg,factor rank in PA3 Agg,PA3 Agg,Order in Agg
+SS loadings,2,1.0,12.2761017041449,,10.4640117051997,,9.88282757498484,1.0
+P062.The.system.encouraged.me.to.explore.my.data.further,0,2.0,0.827636745386744,,,,,2.0
+P064.The.tool.encouraged.me.to.think.deeply.about.my.data,0,3.0,0.747139090186452,,,,,3.0
+P301.The.system.was.useful.for.me,0,4.0,0.734216872082236,,,,,4.0
+P057.The.system.helped.me.to.gain.knowledge.about.my.data,0,5.0,0.709106574979673,,,,,5.0
+P052.The.system.helped.me.to.focus.on.my.tasks,0,6.0,0.708820353277896,,,,,6.0
+P029.The.system.provided.useful.information.to.help.me.accomplish.my.tasks,0,7.0,0.605547542134,,,,,7.0
+P030.The.system.was.effective.for.my.tasks,0,8.0,0.596524781057775,,,,,8.0
+P060.I.enjoyed.using.this.system,0,9.0,0.580138307908514,,,,,9.0
+P092.The.system.effectively.guided.me.in.performing.my.tasks,1,10.0,0.563305097321602,,0.490607154949396,,,10.0
+P083.The.system.stimulated.my.thinking.process,0,11.0,0.561700259954833,,,,,11.0
+P04A.I.would.use.this.system.frequently.if.I.had.a.reason.to,0,12.0,0.561146738936084,,,,,12.0
+P027.I.could.complete.my.essential.tasks.efficiently,0,13.0,0.543495636259108,,,,,13.0
+P208.I.found.the.system.interesting.to.use,0,14.0,0.540239877273094,,,,,14.0
+P302.The.system.helped.me.to.understand.the.data,0,15.0,0.5143975492482,,,,,15.0
+P062C.The.system.helped.to.form.and.evaluate.hypotheses.about.my.data,0,16.0,0.508297303809589,,,,,16.0
+P025.Once.I.knew.how.to.use.it..the.tool.made.it.easy.to.get.answers.to.my.questions.about.the.data,0,17.0,0.488692119928122,,,,,17.0
+P095.The.system.provided.value.for.the.work.I.needed.to.perform,1,18.0,0.476294496783423,,,,0.350690531969434,18.0
+P209.The.system.kept.me.informed.about.the.automated.steps.it.was.taking,1,19.0,0.472354945308444,,0.379562098859547,,,19.0
+P213.The.system.helped.me.complete.my.work.quickly,1,20.0,0.468130773241308,,0.380216040250644,,,20.0
+P4026B.Once.I.learned.to.use.it..accomplishing.my.tasks.was.straightforward,0,21.0,0.437291100188598,,,,,21.0
+P072.I.felt.satisfied.with.this.system,0,22.0,0.428670153517257,,,,,22.0
+P102.I.felt.the.system.worked.reliably,1,23.0,0.407922375646156,,,,0.379011897195302,23.0
+P037.The.system.integrates.well.into.my.overall.data.analysis.workflow,0,24.0,0.39609004144832,,,,,24.0
+Cumulative Proportion,2,24.0,0.376302728501448,7.0,0.697058962901839,1.0,1.0,47.0
+Proportion Explained,1,25.0,0.376302728501448,,0.320756234400392,,,25.0
+P041.I.found.the.system.s.components.worked.seamlessly.together,0,26.0,0.361961676671614,,,,,26.0
+P201.I.felt.in.control.when.using.the.system,1,27.0,0.353521322706197,,0.340438046451069,,,27.0
+P103.The.system.handled.my.data.in.a.transparent.way,1,,0.340586114831288,,,20.0,0.358474129905747,66.0
+P104.I.trusted.the.system.to.handle.my.data.appropriately,1,,0.334470143177235,,,11.0,0.4965309877417,57.0
+P105.I.trusted.the.insights.I.generated.with.the.tool,1,,0.330458675779857,,,7.0,0.578353607486889,53.0
+P088.I.found.the.system.simple.to.understand,0,,,1.0,0.89173301738616,,,29.0
+P026.I.found.it.easy.to.get.started.using.this.system,0,,,2.0,0.884165290923137,,,30.0
+P214.Using.this.system.did.not.require.a.lot.of.effort.from.me,0,,,3.0,0.869845281864574,,,31.0
+P4026A.Getting.the.tool.configured.for.my.analysis.was.straightforward,0,,,4.0,0.792910306243936,,,32.0
+P074.I.did.not.feel.frustrated.when.using.this.system,0,,,5.0,0.727062829041748,,,33.0
+P086.The.system.was.self.explanatory,0,,,6.0,0.726494400070667,,,34.0
+P054.I.found.it.intuitive.to.interact.with.the.system,0,,,7.0,0.656322732356497,,,35.0
+P024.Using.the.tool.s.options.and.controls.was.intuitive.for.me,0,,,8.0,0.653809425650072,,,36.0
+P204.I.only.needed.to.learn.a.few.things.before.I.could.get.going.with.this.system,0,,,9.0,0.617689284946916,,,37.0
+P074A.I.did.not.feel.mentally.drained.after.using.this.system,0,,,10.0,0.590336249992127,,,38.0
+P049.Executing.the.multiple.data.processing.steps.felt.seamless.for.me,0,,,11.0,0.517210892493715,,,39.0
+P084.I.felt.confident.that.I.was.using.the.system.correctly,0,,,12.0,0.513891770035882,,,40.0
+P022.I.can.easily.remember.how.to.use.the.system,0,,,13.0,0.506172542949263,,,41.0
+P207.I.did.not.have.to.think.too.hard.to.make.sense.of.the.data,1,,,14.0,0.465716290544275,,0.353919058041558,42.0
+P06.I.found.the.visual.layout.of.the.system.clear,1,,,15.0,0.427200402466807,,0.399364976406307,43.0
+P096.I.found.it.straightforward.to.link.information.across.different.visualizations.in.the.system,0,,,16.0,0.415207659721747,,,44.0
+P203.When.I.made.a.mistake..it.was.easy.to.get.back.on.track,0,,,17.0,0.41256181148996,,,45.0
+Cumulative Var,1,,,,0.349847898605301,10.0,0.501891399758914,56.0
+P106.The.visualizations.I.saw.seemed.to.represent.the.data.faithfully,0,,,,,2.0,0.774739618635164,48.0
+P05.The.visual.representations.I.saw.were.not.too.complex.for.me,0,,,,,3.0,0.698588840211202,49.0
+P089.The.visual.representations.I.saw.were.simple.to.understand,0,,,,,4.0,0.648704973033811,50.0
+P068.I.found.the.system.consistent.in.that.the.same.actions.led.to.the.same.outcomes,0,,,,,5.0,0.626338290380668,51.0
+P098.I.found.the.visual.representations.provided.by.the.system.were.appropriate,0,,,,,6.0,0.582146609269853,52.0
+P211.The.system.made.it.easy.to.visualize.my.data.in.different.ways,0,,,,,8.0,0.5201043285065,54.0
+P097.Using.the.system..I.could.easily.retrieve.information.from.my.data,0,,,,,9.0,0.515605639880766,55.0
+P305.The.system.allowed.me.to.focus.on.the.informtaion.that.interested.me,0,,,,,12.0,0.481805121530085,58.0
+P205.I.could.clearly.see.data.features..for.example..a.minimum..an.outlier..or.a.trend..in.the.visualizations.provided,0,,,,,13.0,0.457379494841363,59.0
+P012.The.system.felt.consistent.while.I.was.interacting.with.the.data,0,,,,,14.0,0.453960252766593,60.0
+P022A.I.can.easily.remember.how.to.read.the.visualizations.in.the.system,0,,,,,15.0,0.449982340588317,61.0
+P206.I.could.easily.identify.relevant.information.in.the.visualizations.provided.by.the.system,0,,,,,16.0,0.448296642780285,62.0
+P067.I.could.safely.engage.in.a.trial.and.error.analysis.process,0,,,,,17.0,0.432177614008679,63.0
+P09.I.could.easily.share.the.analysis.results.of.this.system.with.others,0,,,,,18.0,0.423985516737514,64.0
+P212.The.system.lets.me.switch.between.an.overview.and.detailed.views.of.my.data,0,,,,,19.0,0.387107089830945,65.0
+P097A.I.could.easily.navigate.between.visualizations,0,,,,,21.0,0.352982837251735,67.0
+P014.I.could.complete.my.analysis.without.having.to.switch.to.another.tool,0,,,,,22.0,0.335717018835407,68.0

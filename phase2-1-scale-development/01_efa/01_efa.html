@@ -1797,13 +1797,95 @@ factor analysis.</li>
 suggested by parallel analysis (random; see the seed above).</li>
 </ul>
 </div>
+<div id="item-level-normality-whole-sample" class="section level3">
+<h3>Item-level normality (whole sample)</h3>
+<p>Skewness and excess kurtosis of each item (<code>psych::skew</code>
+and <code>psych::kurtosi</code>, <code>type = 2</code>, the estimates
+reported by SPSS), before and after collapsing rare options, and the
+Shapiro-Wilk test. Thresholds of Fabrigar et al. (1999) for a severe
+violation: |skewness| &gt; 2, kurtosis &gt; 7.</p>
+<pre class="r"><code>raw &lt;- read.csv(here(params$raw_file), check.names = FALSE, fileEncoding = &quot;UTF-8-BOM&quot;)
+raw &lt;- raw[, names(datasets[[&quot;Agg&quot;]])]
+agg &lt;- datasets[[&quot;Agg&quot;]]
+item_normality &lt;- data.frame(
+  item = names(agg),
+  skew_raw = psych::skew(raw, type = 2), kurtosis_raw = psych::kurtosi(raw, type = 2),
+  skew_collapsed = psych::skew(agg, type = 2), kurtosis_collapsed = psych::kurtosi(agg, type = 2),
+  shapiro_p_raw = sapply(raw, function(x) shapiro.test(x)$p.value),
+  row.names = NULL)
+write.csv(item_normality, file.path(out_dir, &quot;item-normality.csv&quot;), row.names = FALSE)
+
+count_table &lt;- data.frame(
+  data = c(&quot;uncollapsed&quot;, &quot;collapsed (EFA input)&quot;),
+  skew_min = c(min(item_normality$skew_raw), min(item_normality$skew_collapsed)),
+  skew_max = c(max(item_normality$skew_raw), max(item_normality$skew_collapsed)),
+  kurtosis_min = c(min(item_normality$kurtosis_raw), min(item_normality$kurtosis_collapsed)),
+  kurtosis_max = c(max(item_normality$kurtosis_raw), max(item_normality$kurtosis_collapsed)),
+  items_abs_skew_gt_1 = c(sum(abs(item_normality$skew_raw) &gt; 1), sum(abs(item_normality$skew_collapsed) &gt; 1)),
+  items_abs_skew_gt_2 = c(sum(abs(item_normality$skew_raw) &gt; 2), sum(abs(item_normality$skew_collapsed) &gt; 2)),
+  items_kurtosis_gt_7 = c(sum(item_normality$kurtosis_raw &gt; 7), sum(item_normality$kurtosis_collapsed &gt; 7)))
+knitr::kable(count_table, digits = 2)</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="17%" />
+<col width="7%" />
+<col width="7%" />
+<col width="10%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">data</th>
+<th align="right">skew_min</th>
+<th align="right">skew_max</th>
+<th align="right">kurtosis_min</th>
+<th align="right">kurtosis_max</th>
+<th align="right">items_abs_skew_gt_1</th>
+<th align="right">items_abs_skew_gt_2</th>
+<th align="right">items_kurtosis_gt_7</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">uncollapsed</td>
+<td align="right">-1.66</td>
+<td align="right">-0.46</td>
+<td align="right">-0.72</td>
+<td align="right">4.88</td>
+<td align="right">39</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">collapsed (EFA input)</td>
+<td align="right">-1.23</td>
+<td align="right">-0.37</td>
+<td align="right">-0.75</td>
+<td align="right">2.09</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>cat(&quot;Items rejecting normality (Shapiro-Wilk, uncollapsed, p &lt; .05):&quot;,
+    sum(item_normality$shapiro_p_raw &lt; .05), &quot;of&quot;, nrow(item_normality), &quot;\n&quot;)</code></pre>
+<pre><code>## Items rejecting normality (Shapiro-Wilk, uncollapsed, p &lt; .05): 65 of 65</code></pre>
+</div>
 <div id="number-of-factors-other-criteria-whole-sample" class="section level3">
 <h3>Number of factors: other criteria (whole sample)</h3>
 <p>Parallel analysis with <code>fa = &quot;fa&quot;</code> is the criterion of the
 original notebook. The criteria below are computed on the same
 polychoric matrix so that the suggested number of factors can be read
-against them; they do not change any loading. The parallel analyses are
-repeated with 20 seeds to show how stable they are.</p>
+against them; they do not change any loading. The parallel analyses on
+the matrix are repeated with 20 seeds to show how stable they are. Given
+a correlation matrix, <code>fa.parallel</code> compares its eigenvalues
+with those of random normal data (Pearson correlations); the version
+with <code>cor = &quot;poly&quot;</code> starts from the raw ratings and uses
+polychoric correlations for the random data as well.</p>
 <pre class="r"><code>rho_agg &lt;- results[[&quot;Agg&quot;]]$rho
 n_agg &lt;- nrow(datasets[[&quot;Agg&quot;]])
 pa_runs &lt;- t(sapply(1:20, function(s) {
@@ -1831,17 +1913,29 @@ pa_runs &lt;- t(sapply(1:20, function(s) {
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  3</code></pre>
+<pre class="r"><code>poly_pa &lt;- if (params$poly_pa_iterations &gt; 0) {
+  set.seed(params$seed)
+  psych::fa.parallel(datasets[[&quot;Agg&quot;]], fa = &quot;fa&quot;, cor = &quot;poly&quot;, n.iter = params$poly_pa_iterations,
+                     plot = FALSE)$nfact
+} else NA</code></pre>
+<pre><code>## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA</code></pre>
 <pre class="r"><code>vss &lt;- psych::VSS(rho_agg, n = 8, n.obs = n_agg, fm = &quot;pa&quot;, plot = FALSE)
 eigenvalues &lt;- eigen(rho_agg, only.values = TRUE)$values
 tab_runs &lt;- function(x) paste(sprintf(&quot;%s (%d of 20 seeds)&quot;, names(table(x)), as.integer(table(x))), collapse = &quot;, &quot;)
 criteria &lt;- data.frame(
   criterion = c(&quot;Parallel analysis, factors (fa = \&quot;fa\&quot;)&quot;, &quot;Parallel analysis, principal components&quot;,
+                sprintf(&quot;Parallel analysis, factors, polychoric simulated data (cor = \&quot;poly\&quot;, %d iterations, seed %d)&quot;,
+                        params$poly_pa_iterations, params$seed),
                 &quot;Velicer&#39;s MAP (minimum)&quot;, &quot;Eigenvalues &gt; 1 (Kaiser)&quot;),
-  suggested_factors = c(tab_runs(pa_runs[, &quot;fa&quot;]), tab_runs(pa_runs[, &quot;pc&quot;]),
+  suggested_factors = c(tab_runs(pa_runs[, &quot;fa&quot;]), tab_runs(pa_runs[, &quot;pc&quot;]), as.character(poly_pa),
                         as.character(which.min(vss$map)), as.character(sum(eigenvalues &gt; 1))))
 write.csv(criteria, file.path(out_dir, &quot;number-of-factors-criteria-agg.csv&quot;), row.names = FALSE)
 knitr::kable(criteria)</code></pre>
 <table>
+<colgroup>
+<col width="83%" />
+<col width="16%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">criterion</th>
@@ -1858,10 +1952,15 @@ knitr::kable(criteria)</code></pre>
 <td align="left">3 (20 of 20 seeds)</td>
 </tr>
 <tr class="odd">
+<td align="left">Parallel analysis, factors, polychoric simulated data
+(cor = “poly”, 20 iterations, seed 257)</td>
+<td align="left">5</td>
+</tr>
+<tr class="even">
 <td align="left">Velicer’s MAP (minimum)</td>
 <td align="left">4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Eigenvalues &gt; 1 (Kaiser)</td>
 <td align="left">9</td>
 </tr>

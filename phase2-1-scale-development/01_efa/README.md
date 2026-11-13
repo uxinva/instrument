@@ -12,7 +12,7 @@ Open `instrument.Rproj` (repository root) and knit `01_efa.Rmd`, or run from the
 Rscript -e 'rmarkdown::render("phase2-1-scale-development/01_efa/01_efa.Rmd")'
 ```
 
-You need R 4.5.2 with `psych`, `corrplot`, `naniar`, `here` and `rmarkdown` (see `renv.lock`). The run takes about 1–2 minutes. First run `data/prepare_data.py` once so that `data/prepared/by-tool/` exists (see [`data/README.md`](../data/README.md)).
+You need R 4.5.2 with `psych`, `corrplot`, `naniar`, `here` and `rmarkdown` (see `renv.lock`). The run takes about 6 minutes, most of it in the parallel analysis with polychoric simulated data (`poly_pa_iterations` in the header; set it to 0 for a 1–2 minute run). First run `data/prepare_data.py` once so that `data/prepared/by-tool/` exists (see [`data/README.md`](../data/README.md)).
 
 ## Input
 
@@ -48,6 +48,7 @@ Differences from the original notebook. None of them changes a result:
 | `correlations/polychoric-<group>.csv` | Polychoric correlation matrix |
 | `sampling-adequacy-summary.csv` | n, % missing, MCAR p, KMO, Bartlett, determinant, α, Mardia, number of factors from parallel analysis |
 | `fit-indices.csv` | Fit indices of every solution |
+| `item-normality.csv` | Whole sample: skewness and excess kurtosis of each item (uncollapsed and collapsed), Shapiro-Wilk p |
 | `number-of-factors-criteria-agg.csv` | Whole sample: parallel analysis (factors and components, 20 seeds), MAP, eigenvalues > 1 |
 | `plots/scree-<group>.pdf`, `plots/polychoric-agg.pdf` | Scree plots with parallel analysis; whole-sample correlation plot |
 | `check-vs-2026-03-18.csv`, `check-kmo-vs-2026-03-18.csv` | Comparison with the reference run |
@@ -57,6 +58,11 @@ The rendered report is `01_efa.html`.
 
 ## Main results (whole sample, n = 506)
 
+- **Normality.** Multivariate normality is rejected: Mardia kurtosis = 100.9, p < .001; skewness p < .001. Univariate normality is rejected for all 65 items (Shapiro-Wilk, p < .001). No item reaches the thresholds of Fabrigar et al. (1999) for a severe violation (|skewness| > 2, kurtosis > 7). Every item is skewed to the left, towards agreement.
+  - Uncollapsed data: skewness from −1.66 to −0.46 (39 items with |skewness| > 1); excess kurtosis from −0.72 to 4.89.
+  - Collapsed data (input of the EFA): skewness from −1.23 to −0.37; excess kurtosis from −0.75 to 2.09.
+  - Hence the choices of the EFA: polychoric correlations (7-point ordinal items) and principal axis extraction, which does not assume multivariate normality. Maximum likelihood was not used.
+  - The fit indices of `psych::fa` (χ², RMSEA, TLI) are computed with a maximum-likelihood formula even for principal axis; with polychoric correlations and non-normal data they are approximate and best read as descriptive.
 - KMO = 0.964. Bartlett χ²(2080) = 24,037, p < .001. Determinant = 2.3e-22. α = 0.972.
 - **Number of factors.** The criteria disagree, from 3 to 5 factors (table below). The first factor dominates: the first eigenvalues are 29.1, 3.1, 1.9, 1.3, 1.2 and 1.1, so the drop flattens after the second or third. Phase 2.2 used the 3-factor and 4-factor solutions.
 
@@ -64,10 +70,11 @@ The rendered report is `01_efa.html`.
   |---|---|
   | Parallel analysis, factors (`fa = "fa"`; the criterion of the original notebook) | **5** (in all 20 seeds; also 5 on 2026-03-18) |
   | Parallel analysis, principal components | **3** (in all 20 seeds) |
+  | Parallel analysis, factors, polychoric correlations also for the simulated data (`cor = "poly"`, 20 iterations) | **5** |
   | Velicer's MAP | **4** |
   | Eigenvalues > 1 (Kaiser; known to over-extract) | 9 |
 
-  These criteria were added to the notebook on 2026-11-13 (`output/number-of-factors-criteria-agg.csv`). They do not change any loading. Which criterion supported the 3-factor choice in the original analysis is not recorded in the files of 2026-03-18.
+  The parallel analysis on the matrix compares it with random normal data (Pearson correlations), which could favour extra factors; the `cor = "poly"` version rules this out, since it also gives 5. These criteria were added to the notebook on 2026-11-13 (`output/number-of-factors-criteria-agg.csv`). They do not change any loading. Which criterion supported the 3-factor choice in the original analysis is not recorded in the files of 2026-03-18.
 - The three-factor solution explains 50.2% of the variance (SS loadings 12.28, 10.46 and 9.88). Fit: RMSEA = 0.059 [0.057, 0.061], TLI = 0.832, RMSR = 0.025.
 - `loadings/pa-3-factors-agg.csv` has the same values as `phase2-2-item-reduction/00-efa-screening/input/efa-pa-3-factors-agg.csv` to within 1e-11. The files are not byte-identical: item names are codes only, and the last digits differ.
 
