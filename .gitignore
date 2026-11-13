@@ -28,6 +28,7 @@ Thumbs.db
 **/data/private/
 **/data/private.*
 **/data/private-*
+**/tmp-data/
 
 # Local working folders (not versioned). The scripts that read
 # Gdrive_files/ (ignored above by *_files/) use it only for optional checks.

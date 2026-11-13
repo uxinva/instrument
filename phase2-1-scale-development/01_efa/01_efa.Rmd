@@ -1,0 +1,266 @@
+---
+title: "Phase 2.1, step 01: exploratory factor analysis"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+params:
+  # Input folder (relative to the repository root). The aggregate file and the per-tool files are made by
+  # phase2-1-scale-development/data/prepare_data.py.
+  data_dir: "phase2-1-scale-development/data/prepared"
+  n_factors_max: 6
+  # Parallel analysis simulates random data. The run of 2026-03-18 set no seed, so its suggested number of
+  # factors cannot be reproduced exactly; this run sets one.
+  pa_iterations: 100
+  seed: 257
+  # Folder with the results of 2026-03-18 to compare with ("" to skip the comparison).
+  reference_dir: "phase2-1-scale-development/01_efa/input/reference-2026-03-18"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(here)
+library(psych)
+library(corrplot)
+library(naniar)
+
+step_dir <- here("phase2-1-scale-development", "01_efa")
+out_dir  <- file.path(step_dir, "output")
+dir.create(file.path(out_dir, "loadings"), recursive = TRUE, showWarnings = FALSE)
+dir.create(file.path(out_dir, "correlations"), recursive = TRUE, showWarnings = FALSE)
+dir.create(file.path(out_dir, "plots"), recursive = TRUE, showWarnings = FALSE)
+```
+
+## What this notebook does
+
+It reproduces the exploratory factor analysis (EFA) of the exploratory survey (65 items, 506 participants), run on
+2026-03-18 with `Notebooks/01_Notebooks/01-EFAFactorLoadings.Rmd` of the OSF supplemental folder. For the whole
+sample (`Agg`) and for each of the five tools it computes:
+
+1. missing data (percentage, Little's MCAR test) and multivariate normality (Mardia);
+2. the **polychoric** correlation matrix (`psych::polychoric`, default settings);
+3. factorability: KMO, Bartlett's test, determinant, Cronbach's α (from the data and from the matrix);
+4. the scree plot with **parallel analysis** (`fa.parallel`, `fa = "fa"`);
+5. EFA with **principal axis** extraction (`fm = "pa"`) on the polychoric matrix: 1 factor without rotation,
+   2–6 factors with **promax** rotation; loadings sorted with `fa.sort`;
+6. fit indices of each solution (RMSEA, TLI, BIC, RMSR, χ², df), as in `01-EFAModelFitIndex.Rmd`.
+
+At the end it compares the loadings, the correlations and the KMO with the results of 2026-03-18.
+
+Changes from the original notebook, none of which changes a result:
+
+- input files are listed by name (the original took every `.csv` of `Data/` and dropped the 7th, which breaks when
+  a file is added);
+- items are named by their code (the original used code + wording as column names);
+- a seed is set before the parallel analysis;
+- the factor weights and the correlation plots in other orders (AOE, hclust) are not written.
+
+## Data
+
+```{r data}
+groups <- c(
+  "Tableau"  = "by-tool/ratings-tableau_collapsed.csv",
+  "Qlik"     = "by-tool/ratings-qlik_collapsed.csv",
+  "Power BI" = "by-tool/ratings-power-bi_collapsed.csv",
+  "Gephi"    = "by-tool/ratings-gephi_collapsed.csv",
+  "JMP"      = "by-tool/ratings-jmp_collapsed.csv",
+  "Agg"      = "ratings-stimulus_collapsed.csv"
+)
+data_dir <- here(params$data_dir)
+read_group <- function(file) {
+  d <- read.csv(file.path(data_dir, file), check.names = FALSE)
+  d[, setdiff(names(d), c("seed", "stimulus"))]
+}
+datasets <- lapply(groups, read_group)
+data.frame(group = names(datasets), file = unname(groups),
+           participants = sapply(datasets, nrow), items = sapply(datasets, ncol),
+           md5 = unname(tools::md5sum(file.path(data_dir, groups))))
+```
+
+The aggregate file is collapsed over the whole sample; each per-tool file is collapsed within its tool (see
+`data/README.md`). This is how the files of 2026-03-18 were made.
+
+## Analysis
+
+```{r functions}
+group_slug <- function(g) tolower(gsub(" ", "-", g))
+
+analyse_group <- function(g, data) {
+  n <- nrow(data)
+  # missing data and normality
+  na_pct <- 100 * sum(is.na(data)) / (nrow(data) * ncol(data))
+  mcar_p <- tryCatch(naniar::mcar_test(data)$p.value, error = function(e) NA_real_)
+  mardia_res <- psych::mardia(data, plot = FALSE)
+
+  # polychoric correlations
+  rho <- psych::polychoric(data)$rho
+  write.csv(rho, file.path(out_dir, "correlations", paste0("polychoric-", group_slug(g), ".csv")))
+
+  # factorability
+  kmo <- psych::KMO(rho)$MSA
+  bart <- psych::cortest.bartlett(rho, n = n)
+  alpha_data   <- psych::alpha(data, warnings = FALSE)$total$raw_alpha
+  alpha_matrix <- psych::alpha(rho, n.obs = n, warnings = FALSE)$total$raw_alpha
+
+  # parallel analysis
+  set.seed(params$seed)
+  pdf(file.path(out_dir, "plots", paste0("scree-", group_slug(g), ".pdf")), width = 8, height = 4)
+  pa <- psych::fa.parallel(rho, n.obs = n, fa = "fa", n.iter = params$pa_iterations,
+                           main = paste("Scree plot with parallel analysis:", g), plot = TRUE)
+  dev.off()
+
+  # EFA, 1 to n_factors_max factors
+  fits <- list()
+  for (k in seq_len(params$n_factors_max)) {
+    efa <- psych::fa(rho, n.obs = n, nfactors = k, rotate = if (k == 1) "none" else "promax", fm = "pa")
+    efa <- psych::fa.sort(efa)
+    loadings <- as.data.frame(unclass(efa$loadings))
+    variance <- as.data.frame(efa$Vaccounted)
+    out <- rbind(cbind(terms = rownames(loadings), loadings),
+                 cbind(terms = "--- VARIANCE EXPLAINED ---", variance[0, , drop = FALSE][1, ]),
+                 cbind(terms = rownames(variance), variance))
+    write.csv(out, file.path(out_dir, "loadings", sprintf("pa-%d-factors-%s.csv", k, group_slug(g))),
+              row.names = FALSE, na = "")
+    fits[[k]] <- data.frame(group = g, factors = k,
+                            chi_sq = efa$STATISTIC, df = efa$dof,
+                            rmsea = efa$RMSEA[1], rmsea_lower = efa$RMSEA[2], rmsea_upper = efa$RMSEA[3],
+                            tli = efa$TLI, bic = efa$BIC, rmsr = efa$rms)
+  }
+
+  list(
+    summary = data.frame(group = g, n = n, na_pct = na_pct, mcar_p = mcar_p,
+                         kmo = kmo, bartlett_chisq = bart$chisq, bartlett_df = bart$df, bartlett_p = bart$p.value,
+                         determinant = det(rho), alpha_data = alpha_data, alpha_matrix = alpha_matrix,
+                         mardia_kurtosis = mardia_res$kurtosis, mardia_kurtosis_p = mardia_res$p.kurt,
+                         mardia_skew = mardia_res$skew, mardia_skew_p = mardia_res$p.skew,
+                         parallel_n_factors = pa$nfact),
+    fit = do.call(rbind, fits),
+    rho = rho
+  )
+}
+```
+
+```{r run}
+results <- lapply(names(datasets), function(g) analyse_group(g, datasets[[g]]))
+names(results) <- names(datasets)
+
+summary_table <- do.call(rbind, lapply(results, `[[`, "summary"))
+fit_table     <- do.call(rbind, lapply(results, `[[`, "fit"))
+rownames(summary_table) <- NULL
+rownames(fit_table) <- NULL
+write.csv(summary_table, file.path(out_dir, "sampling-adequacy-summary.csv"), row.names = FALSE)
+write.csv(fit_table, file.path(out_dir, "fit-indices.csv"), row.names = FALSE)
+```
+
+### Missing data, normality and factorability
+
+```{r summary-table}
+knitr::kable(summary_table, digits = 3)
+```
+
+- **Little's MCAR test**: p < .05 rejects "missing completely at random".
+- **Mardia**: p < .05 rejects multivariate normality, one reason for principal axis extraction.
+- **KMO** ≥ 0.70 and a significant **Bartlett** test indicate that the matrix is suitable for factor analysis.
+- **parallel_n_factors** is the number of factors suggested by parallel analysis (random; see the seed above).
+
+### Fit indices
+
+```{r fit-table}
+knitr::kable(fit_table, digits = 3)
+```
+
+### Polychoric correlations (whole sample)
+
+```{r corrplot, fig.width = 12, fig.height = 12}
+rho_agg <- results[["Agg"]]$rho
+pdf(file.path(out_dir, "plots", "polychoric-agg.pdf"), width = 15, height = 15)
+corrplot(rho_agg, method = "color", cl.cex = 1.5, tl.pos = "lt", tl.col = "black", tl.cex = 1.0,
+         tl.srt = 90, cl.pos = "r", type = "lower")
+dev.off()
+corrplot(rho_agg, method = "color", tl.pos = "lt", tl.col = "black", tl.cex = 0.6, tl.srt = 90,
+         cl.pos = "r", type = "lower")
+```
+
+### Three-factor solution (whole sample)
+
+```{r three-factors}
+three <- read.csv(file.path(out_dir, "loadings", "pa-3-factors-agg.csv"), check.names = FALSE)
+knitr::kable(three, digits = 3)
+```
+
+## Comparison with the run of 2026-03-18
+
+```{r reference, eval = nzchar(params$reference_dir)}
+ref_dir <- here(params$reference_dir)
+code_of <- function(x) sub("[.-].*$", "", x)
+
+read_reference_loadings <- function(g, k) {
+  f <- file.path(ref_dir, g, sprintf("PA1 Stimuli %d factors - %s.csv", k, g))
+  r <- read.csv(f, check.names = FALSE)
+  r <- r[seq_len(which(r$terms == "--- VARIANCE EXPLAINED ---") - 1), ]
+  r$terms <- code_of(r$terms)
+  r
+}
+read_new_loadings <- function(g, k) {
+  f <- file.path(out_dir, "loadings", sprintf("pa-%d-factors-%s.csv", k, group_slug(g)))
+  r <- read.csv(f, check.names = FALSE)
+  r[seq_len(which(r$terms == "--- VARIANCE EXPLAINED ---") - 1), ]
+}
+
+loading_checks <- do.call(rbind, lapply(names(datasets), function(g) {
+  do.call(rbind, lapply(seq_len(params$n_factors_max), function(k) {
+    old <- read_reference_loadings(g, k)
+    new <- read_new_loadings(g, k)
+    cols <- setdiff(names(old), "terms")
+    new <- new[match(old$terms, new$terms), c("terms", cols)]
+    diff <- max(abs(as.matrix(old[, cols]) - as.matrix(new[, cols])))
+    data.frame(group = g, factors = k, items = nrow(old),
+               same_item_order = identical(old$terms, read_new_loadings(g, k)$terms),
+               max_abs_diff_loading = diff)
+  }))
+}))
+
+corr_checks <- do.call(rbind, lapply(names(datasets), function(g) {
+  old <- as.matrix(read.csv(file.path(ref_dir, "correlations", paste0("corr", g, "-POLY.csv")),
+                            row.names = 1, check.names = FALSE))
+  new <- results[[g]]$rho[rownames(old), colnames(old)]
+  data.frame(group = g, max_abs_diff_polychoric = max(abs(old - new)))
+}))
+
+ref_summary <- read.csv(file.path(ref_dir, "Summary of Measures of Sampling Adequacy.csv"), check.names = FALSE)
+kmo_checks <- data.frame(group = ref_summary$System,
+                         kmo_2026_03_18 = ref_summary$`KMO Poly`,
+                         kmo_now = summary_table$kmo[match(ref_summary$System, summary_table$group)],
+                         n_factors_2026_03_18 = ref_summary$`Number of factors`,
+                         n_factors_now = summary_table$parallel_n_factors[match(ref_summary$System, summary_table$group)])
+kmo_checks$abs_diff_kmo <- abs(kmo_checks$kmo_2026_03_18 - kmo_checks$kmo_now)
+
+checks <- merge(loading_checks, corr_checks, by = "group")
+write.csv(checks, file.path(out_dir, "check-vs-2026-03-18.csv"), row.names = FALSE)
+write.csv(kmo_checks, file.path(out_dir, "check-kmo-vs-2026-03-18.csv"), row.names = FALSE)
+
+tol <- 1e-6
+cat(sprintf("Loadings: largest difference %.2e over %d solutions; correlations: largest difference %.2e; KMO: largest difference %.2e.\n",
+            max(checks$max_abs_diff_loading), nrow(loading_checks),
+            max(corr_checks$max_abs_diff_polychoric), max(kmo_checks$abs_diff_kmo)))
+cat(if (max(checks$max_abs_diff_loading) < tol && max(corr_checks$max_abs_diff_polychoric) < tol)
+  "REPRODUCED: every loading and correlation matches the run of 2026-03-18 (|difference| < 1e-6).\n" else
+  "DIFFERENT: see the tables below.\n")
+knitr::kable(loading_checks, digits = 8)
+knitr::kable(corr_checks, digits = 8)
+knitr::kable(kmo_checks, digits = 6)
+```
+
+The number of factors suggested by parallel analysis depends on the random simulation; the run of 2026-03-18 set
+no seed, so a difference there is expected and does not mean that the data or the method differ.
+
+## Session
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(out_dir, "sessionInfo.txt"))
+writeLines(c(paste("rendered:", format(Sys.time())),
+             paste("data_dir:", params$data_dir),
+             paste0("md5 ", names(groups), ": ", tools::md5sum(file.path(data_dir, groups)))),
+           file.path(out_dir, "run_info.txt"))
+sessionInfo()
+```

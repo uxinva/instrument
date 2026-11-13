@@ -1,4 +1,6 @@
-# Data
+# Data of the exploratory survey
+
+Ratings of the exploratory survey (65 items, 506 participants). They are used by the EFA of [phase 2.1](../README.md), by [phase 2.2](../../phase2-2-item-reduction/README.md) (item reduction), and by steps 07 and 08 of [phase 3](../../phase3-validation/README.md). This folder was in `phase2-2-item-reduction/data/` until 2026-11-12.
 
 ## Files
 
@@ -7,7 +9,7 @@
 | `raw/ratings-stimulus_original.csv` | Ratings of the 65 items by 506 participants, **uncollapsed** (−3 … +3), with the tool each participant rated |
 | `raw/survey_seed_system/SeedSystem1.xlsx`, `SeedSystem2.xlsx` | Exported from the survey tool on 2026-10-16: `Response ID`, `Seed` and `SYSTEM` (the tool rated) of **all** responses, including incomplete ones (3,140 seeds). Used to check the tool labels. |
 | `prepare_data.py` | Checks the tool labels and collapses rare answer options (see below) |
-| `prepared/ratings-stimulus_collapsed.csv` | **Input of steps 01 and 02**: the same ratings with rare answer options collapsed |
+| `prepared/ratings-stimulus_collapsed.csv` | **Input of phase 2.2 steps 01 and 02** (and of phase 3, steps 07 and 08): the same ratings with rare answer options collapsed |
 | `prepared/collapse_changes.csv` | Every merge that was made: item, original option, new option, number of answers, size of the left and right neighbours |
 | `prepared/label_check.csv` | Tool label in the data vs. in the survey export (and which export file), per participant |
 | `codebook/items.csv` | Item code, wording, and factor in the 3-factor and the 4-factor structures |
@@ -17,13 +19,13 @@
 From the repository root (Python ≥ 3.11 with `pandas` and `openpyxl`):
 
 ```bash
-python phase2-2-item-reduction/data/prepare_data.py
+python phase2-1-scale-development/data/prepare_data.py
 ```
 
 The script does two things:
 
 1. **Checks the tool labels.** It compares the `stimulus` column with the survey exports and stops if any label disagrees, or if a seed has more than one tool in the exports. All **506** participants are in the exports, and all 506 labels agree.
-2. **Collapses rare answer options.** For each item, an answer option chosen by **≤ 2.5%** of the non-missing answers is merged into the **neighbouring option with more answers** (left or right; on a tie, the left one). The merge repeats until no option is below the threshold. This is the rule of `phase2-2-itemreduction/Notebooks/Reproduce4_Notebooks/04_Colapsing_Low-Frequency_Categories-toMoreFrequent.R`. The script made 111 merges in 64 items, all of them to the right: the rare options are at the negative end of the scale, where the left neighbour is empty or already merged. The result is therefore identical to the "toRight" variant of the script. `collapse_changes.csv` records the size of both neighbours for every merge.
+2. **Collapses rare answer options.** For each item, an answer option chosen by **≤ 2.5%** of the non-missing answers is merged into the **neighbouring option with more answers** (left or right; on a tie, the left one). The merge repeats until no option is below the threshold. This is the rule of `04_Colapsing_Low-Frequency_Categories-toMoreFrequent.R` (old folder `phase2-2-itemreduction/Notebooks/Reproduce4_Notebooks/`; now in the OSF supplemental folder, `Notebooks/04_Notebooks/`). The script made 111 merges in 64 items, all of them to the right: the rare options are at the negative end of the scale, where the left neighbour is empty or already merged. The result is therefore identical to the "toRight" variant of the script. `collapse_changes.csv` records the size of both neighbours for every merge.
 
 ## `prepared/ratings-stimulus_collapsed.csv`
 
