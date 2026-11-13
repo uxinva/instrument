@@ -46,7 +46,7 @@ What each step does is described in the [phase README](phase2-2-item-reduction/R
 
 What each step does is described in the [phase README](phase3-validation/README.md).
 
-Each phase is self-contained. It has its own `data/` folder and a series of numbered analysis steps, each with a README, a notebook or scripts, its rendered HTML report (for the R notebooks) and an `output/` folder.
+Each phase has its own `data/` folder (phase 2.2 uses the data of phase 2.1, which comes from the same survey) and a series of numbered analysis steps, each with a README, a notebook or scripts, its rendered HTML report (for the R notebooks) and an `output/` folder.
 
 ## Repository structure
 
@@ -57,13 +57,13 @@ instrument/
 ├── _config.yml                GitHub Pages site settings
 ├── .github/workflows/         builds and publishes the site
 ├── phase2-1-scale-development/  being documented: EFA of the 65 items
+│   └── data/                  exploratory survey: raw data, data preparation, prepared data, item codebook (also used by phase 2.2)
 ├── phase2-2-item-reduction/
 │   ├── README.md              overview of the phase and how to reproduce it
 │   ├── item-reduction-context.md   summary: data, decisions, reference results, software
 │   ├── item_versions_config.R item lists of every version and model (read by the R notebooks)
 │   ├── render_all.R           runs the R notebooks of steps 01–03
-│   ├── data/                  raw data, data preparation, prepared data, item codebook
-│   └── NN_step-name/          one folder per analysis step (00–05)
+│   └── NN_step-name/          one folder per analysis step (00–05); data in phase2-1-scale-development/data/
 │       ├── README.md          what the step does, its inputs and outputs
 │       ├── NN_step-name.Rmd   notebook (steps 00 and 04 are Python scripts, .py)
 │       ├── NN_step-name.html  rendered report

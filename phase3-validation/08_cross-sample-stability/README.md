@@ -45,7 +45,7 @@ Reading notes:
 
 | File | From |
 |---|---|
-| `phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv` | phase 2.2 `data/prepare_data.py` |
+| `phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv` | phase 2.1 `data/prepare_data.py` |
 | `00_collapse-categories/output/multigroup_ratings.csv` | [step 00](../00_collapse-categories/README.md) |
 | `data/codebook/items.csv` | item code, short name, content block |
 

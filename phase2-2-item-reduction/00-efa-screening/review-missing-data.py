@@ -20,7 +20,7 @@ excluded when it also had at least one of:
 The script applies the rule and checks that it reproduces every decision (column rule_matches).
 
 Inputs:
-  ../data/raw/ratings-stimulus_original.csv   missing rates recomputed per system (uncollapsed data)
+  ../../phase2-1-scale-development/data/raw/ratings-stimulus_original.csv   missing rates recomputed per system (uncollapsed data)
   input/summary-missing-data-ux.csv           team sheet "summary_missing_data_UX" (Google Sheets
                                               1gYWB2ORfyswcoRk0LHK93KOrwwC7Djommcr1tGN6TUw, gid 1590052030),
                                               exported on 2026-10-21: missing % per system and, for the
@@ -55,7 +55,7 @@ REDUNDANT = {"P049": "P041"}  # criterion 2
 
 
 def main():
-    data = pd.read_csv(PHASE / "data" / "raw" / "ratings-stimulus_original.csv")
+    data = pd.read_csv(PHASE.parent / "phase2-1-scale-development" / "data" / "raw" / "ratings-stimulus_original.csv")
     team = pd.read_csv(STEP / "input" / "summary-missing-data-ux.csv", dtype=str).set_index("item_id")
     flags = pd.read_csv(STEP / "input" / "efa-missing-data-flags.csv").set_index("code")["missing_data_flag"]
     screen = pd.read_csv(STEP / "output" / "efa-screening-items.csv").set_index("code")
@@ -131,7 +131,7 @@ def main():
     ok = not (df.rule_matches == "NO").any() and not unscored
     note_rows = [
         "Missing-data review of the item screening (step 00). Made by review-missing-data.py.",
-        f"Missing % recomputed from data/raw/ratings-stimulus_original.csv (N = {len(data)}).",
+        f"Missing % recomputed from phase2-1-scale-development/data/raw/ratings-stimulus_original.csv (N = {len(data)}).",
         "factor_4/5/6_solution: from the team sheet summary_missing_data_UX (only the six items with most missing answers).",
         "efa_missing_flag: column 'Missing Data' of the EFA workbook (TRUE / MAYBE); no criterion is recorded for it.",
         "max_over_overall: highest rate in one system divided by the overall rate (concentration in one system).",

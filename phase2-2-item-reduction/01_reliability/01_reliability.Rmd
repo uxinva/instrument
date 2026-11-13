@@ -7,7 +7,7 @@ params:
   # Input data: low-frequency COLLAPSED data (categories <= 2.5% merged to the right,
   # 04_Colapsing_Low-Frequency Categories-toRight.R). Decision 2026-10-15: use collapsed data in all phase 2.
   # The old (2026-04) reliability values were computed on uncollapsed data, so they differ slightly.
-  data_file: "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv"
+  data_file: "phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv"
   per_stimulus: TRUE        # also compute alpha/omega per tool (Tableau, Qlik, ...)
   compute_omega: TRUE       # omega total from the polychoric matrix (slower)
 ---
@@ -186,11 +186,11 @@ writeLines(rel_tex, file.path(out_root, "reliability-summary-table.tex"))
 # 6. Paper table: alpha if item dropped
 
 All items of each factor, sorted by alpha if item dropped (lowest first). Bold items and factor labels are set in `item_versions_config.R` (`item_table`).
-Item wording comes from `data/codebook/items.csv`.
+Item wording comes from `phase2-1-scale-development/data/codebook/items.csv`.
 
 ```{r item drop table}
 tab_factors <- get(item_table_structure)
-codebook <- read.csv(here("phase2-2-item-reduction", "data", "codebook", "items.csv"),
+codebook <- read.csv(here("phase2-1-scale-development", "data", "codebook", "items.csv"),
                      stringsAsFactors = FALSE, check.names = FALSE)
 wording <- setNames(codebook$wording, codebook$code)
 

@@ -7,7 +7,7 @@ output:
     theme: readable
 params:
   # Exploratory sample (phase 2.2): -3 ... +3, rare options collapsed (<= 2.5%)
-  exploratory_file: "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv"
+  exploratory_file: "phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv"
   # Validation sample (phase 3, step 00): 1 ... 7, rare options collapsed (<= 2.5%)
   validation_file: "phase3-validation/00_collapse-categories/output/multigroup_ratings.csv"
   # Criteria for a meaningful loss of fit between invariance levels (Chen, 2007)

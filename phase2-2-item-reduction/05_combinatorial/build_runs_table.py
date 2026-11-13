@@ -235,7 +235,7 @@ SCALE_NAME = {"visualization": "Visualization", "task_cognition": "Cognitive Val
 def selected_model_table(folder, out):
     """Selected instrument and the alternatives in input/selected-models.csv, looked up in one run."""
     spec = pd.read_csv(STEP / "input" / "selected-models.csv")
-    wording = pd.read_csv(STEP.parent / "data" / "codebook" / "items.csv").set_index("code")["wording"]
+    wording = pd.read_csv(STEP.parents[1] / "phase2-1-scale-development" / "data" / "codebook" / "items.csv").set_index("code")["wording"]
     passing = pd.read_csv(find(folder, "passing_reliability_cfa_results.csv"))
     passing["rank"] = range(1, len(passing) + 1)   # file is ordered by CFI, TLI, RMSEA, SRMR
     key = lambda items: "__".join(sorted(items.split(",")))

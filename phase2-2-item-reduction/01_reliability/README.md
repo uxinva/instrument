@@ -11,7 +11,7 @@ For every version (A, B, B2, C, D, E), every model (`full_data`, `Model_1`, `Mod
 - **α if an item is dropped**, for every item.
 - **The same α and ω for each stimulus separately** (Tableau, Qlik, Power BI, Gephi, JMP).
 
-Item lists come from [`../item_versions_config.R`](../item_versions_config.R). The same file defines which items appear in the paper table (`item_table`); the item wording comes from [`../data/codebook/items.csv`](../data/codebook/items.csv).
+Item lists come from [`../item_versions_config.R`](../item_versions_config.R). The same file defines which items appear in the paper table (`item_table`); the item wording comes from [`phase2-1-scale-development/data/codebook/items.csv`](../../phase2-1-scale-development/data/codebook/items.csv).
 
 **Parameters** (in the YAML header):
 - `per_stimulus`: per-tool reliability, default `TRUE`;
@@ -26,7 +26,7 @@ Item lists come from [`../item_versions_config.R`](../item_versions_config.R). T
 
 | File | Content |
 |---|---|
-| `../data/prepared/ratings-stimulus_collapsed.csv` | Collapsed ratings (see [data](../data/README.md)) |
+| `phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv` | Collapsed ratings (see [data](../../phase2-1-scale-development/data/README.md)) |
 | `../item_versions_config.R` | Item lists for all versions and models |
 
 ## Outputs (`output/`)

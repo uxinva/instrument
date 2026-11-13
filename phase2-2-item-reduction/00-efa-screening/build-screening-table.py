@@ -6,7 +6,7 @@ Inputs (made by screen-efa-items.py and review-missing-data.py):
   output/efa-screening-items.csv     loadings, decision and reason
   output/missing-data-review.csv     missing % overall and per system, rule criteria
   input/missing-data-review-notes.csv  short description of the content of the reviewed items
-  ../data/codebook/items.csv         item wording
+  ../../phase2-1-scale-development/data/codebook/items.csv         item wording
 
 Output:
   output/table-screening-decisions.tex   LaTeX table (table*), label tab:screening-decisions
@@ -32,7 +32,7 @@ def main():
     scr = pd.read_csv(STEP / "output" / "efa-screening-items.csv").set_index("code")
     rev = pd.read_csv(STEP / "output" / "missing-data-review.csv").set_index("code")
     notes = pd.read_csv(STEP / "input" / "missing-data-review-notes.csv").set_index("code")
-    wording = pd.read_csv(PHASE / "data" / "codebook" / "items.csv").set_index("code")["wording"]
+    wording = pd.read_csv(PHASE.parent / "phase2-1-scale-development" / "data" / "codebook" / "items.csv").set_index("code")["wording"]
 
     def row(code, rule):
         s, r = scr.loc[code], rev.loc[code]

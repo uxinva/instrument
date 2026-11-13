@@ -57,7 +57,7 @@ The result matches `Version_A` `Model_1` exactly (see `output/check.txt`).
 | `input/efa-missing-data-flags.csv` | Column "Missing Data" (TRUE / MAYBE) of the EFA workbook, tab *PA1 Stimuli 3 factors – Agg* |
 | `input/manual-exclusions.csv` | Items excluded by the team in the missing-data review, with the status (`confirmed` / `inferred`), the source and a note on what else is recorded for the item |
 | `../item_versions_config.R` | `full_3_factors` (65 items) and `Version_A` `Model_1` (49 items), used for the check |
-| `../data/raw/ratings-stimulus_original.csv` | Used to report the percentage of missing answers per item |
+| `phase2-1-scale-development/data/raw/ratings-stimulus_original.csv` | Used to report the percentage of missing answers per item |
 
 ## Outputs (`output/`)
 
@@ -68,7 +68,7 @@ The result matches `Version_A` `Model_1` exactly (see `output/check.txt`).
 | `check.txt` | Counts and comparison with `Version_A` `Model_1` |
 | `missing-data-review.csv` / `.xlsx` | Missing-data review: per item, missing % overall and per system, the system with the highest rate, the factor in the 4–6 factor solutions, the EFA flag and the decision. The xlsx has the sheets *Items*, *Decision cases* (items with ≥ 2% missing or a flag) and *Notes* |
 | `table-screening-decisions.tex` | **Appendix table** (`tab:screening-decisions`, `table*`): the 16 excluded items and the 3 items retained after the missing-data review, with loadings, missing % and the rule applied. Made by [`build-screening-table.py`](build-screening-table.py) |
-| `table-items-after-screening.tex` | LaTeX table (`longtable`) of the 49 items by factor, with wording and loading (wording from `../data/codebook/items.csv`) |
+| `table-items-after-screening.tex` | LaTeX table (`longtable`) of the 49 items by factor, with wording and loading (wording from `phase2-1-scale-development/data/codebook/items.csv`) |
 
 ## How to run
 

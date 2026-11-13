@@ -6,8 +6,8 @@ output: html_document
 params:
   # UNCOLLAPSED data, as in the April 2026 figures on which the IRT rubric scores were given
   # (decision of 2026-10-21: the figures must match the scores). Steps 01 and 02 use the collapsed data;
-  # for a collapsed run use "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv".
-  data_file: "phase2-2-item-reduction/data/raw/ratings-stimulus_original.csv"
+  # for a collapsed run use "phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv".
+  data_file: "phase2-1-scale-development/data/raw/ratings-stimulus_original.csv"
   listwise: TRUE      # TRUE = drop participants with a missing answer in the factor's items (as the old notebook)
   theta_lim: 3        # theta axis from -theta_lim to +theta_lim
 ---

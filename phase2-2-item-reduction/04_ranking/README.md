@@ -48,7 +48,7 @@ A further check confirms that the candidate pool of `05_combinatorial` is the to
 |---|---|
 | `ranking_criteria.csv` | Per item: factor, α if dropped and rank, λ and rank, the four IRT scores, IRT rank, first and final priority, considerations. Made by `extract_ranking_criteria.py` from three files in `Gdrive_files/Item Reduction/`: `Ranking revisited considering reliabitiy- loadings- and IRT.xlsx` and `Ranking revisited 2 - AfterHandpickedItemsbyAFandP- … .xlsx` (tab *3 fators merged*), and `ranking_table_full.xlsx` (considerations) |
 | `../05_combinatorial/input/candidate_pool.csv` | Handpicked candidate pool, used only for the checks |
-| `../data/codebook/items.csv` | Item wording |
+| `phase2-1-scale-development/data/codebook/items.csv` | Item wording |
 | `../item_versions_config.R` | Model item lists, used only for the checks |
 
 ## Outputs (`output/`)
@@ -81,7 +81,7 @@ python phase2-2-item-reduction/04_ranking/build-irt-ranking-table.py
 
 The ranks are the ones the decisions were based on (April 2026):
 
-- **α if dropped** was computed on the **uncollapsed** data (`data/raw/ratings-stimulus_original.csv`). It is reproduced exactly, with a maximum difference of 5·10⁻¹¹.
+- **α if dropped** was computed on the **uncollapsed** data (`phase2-1-scale-development/data/raw/ratings-stimulus_original.csv`). It is reproduced exactly, with a maximum difference of 5·10⁻¹¹.
 - **Loadings** come from the EFA on the collapsed data.
 - **No criterion depends on the tool labels**, so the label correction does not affect this step.
 

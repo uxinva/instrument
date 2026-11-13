@@ -80,7 +80,7 @@ The summary of the runs and the comparison with the May runs are in `output/runs
 - `reliability_threshold`;
 - `run_name`, a different one for each run, e.g. `rel079_6-3-3`.
 
-The data file is `data/raw/ratings-stimulus_original.csv`, single group, as in May. Each run writes its folder `output/<run_name>/`, with `tested_reliability_sets.csv`, `all_reliability_cfa_results.csv`, `passing_reliability_cfa_results.csv` and `run_info.txt`, among others. The May runs are already in `Gdrive_files/Item Reduction/Reliability_CFA_Analysis/`, so this step is only needed to re-run them.
+The data file is `phase2-1-scale-development/data/raw/ratings-stimulus_original.csv`, single group, as in May. Each run writes its folder `output/<run_name>/`, with `tested_reliability_sets.csv`, `all_reliability_cfa_results.csv`, `passing_reliability_cfa_results.csv` and `run_info.txt`, among others. The May runs are already in `Gdrive_files/Item Reduction/Reliability_CFA_Analysis/`, so this step is only needed to re-run them.
 
 **Step 3 – summary and tables (Python).**
 - For the May runs: `python phase2-2-item-reduction/05_combinatorial/build_runs_table.py`.
@@ -97,7 +97,7 @@ Output: the four tables above, `output/runs_summary.csv`, `output/final_reliabil
 | Combinations, 6/3/3 runs | `Gdrive_files/Item Reduction/Reliability_CFA_Analysis/combinations_of_items_by_scale.csv` (48 sets) |
 | Combinations, 6/4/3 runs | `phase2-2-itemreduction/Data/Reproduce8_Data/combinations_of_items_by_scale.csv` (43 sets) |
 | Stages 2 and 3 (R) | `…/Notebooks/Reproduce8_Notebooks/Reproduce8-reliability_CFA_exploration.Rmd`. The copies in `phase2-2-itemreduction/` and `Gdrive_files/` are identical |
-| Data | `phase2-2-itemreduction/Data/Reproduce8_Data/rating-data.csv`, identical to `data/raw/ratings-stimulus_original.csv` (**uncollapsed**) |
+| Data | `phase2-2-itemreduction/Data/Reproduce8_Data/rating-data.csv`, identical to `phase2-1-scale-development/data/raw/ratings-stimulus_original.csv` (**uncollapsed**) |
 | Results, 3 task_cognition items | `Gdrive_files/Item Reduction/Reliability_CFA_Analysis/2605*Reliability0XXCFAExploration-100best/` (thresholds 0.70 … 0.79) |
 | Results, 4 task_cognition items | `Gdrive_files/Item Reduction/Reliability_CFA_Analysis/4_factors_task_cognition/2605*Reliability078-4task…`, `…079-4task…` |
 | Earlier attempts | `Reliability_CFA_Analysis/OLD/` (2026-05-02 and 05-04) |

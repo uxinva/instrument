@@ -30,9 +30,9 @@ The phase rebuilt and documented work that had first been done by hand in March�
 
 | File | Content |
 |---|---|
-| `data/raw/ratings-stimulus_original.csv` | 65 items rated by **506 participants** on a −3 … +3 scale, **uncollapsed**. MD5 `2e967d9c37a6f2f1d2d7e79505a3dbb3` |
-| `data/prepared/ratings-stimulus_collapsed.csv` | The same ratings with **rare answer options collapsed**: an option chosen by ≤ 2.5% of answers is merged into the neighbouring option with more answers. There are 111 merges, all at the negative end. MD5 `eb83954b17ac6ef2149f63f4f7c0c572`. Built by `data/prepare_data.py` |
-| `data/codebook/items.csv` | Item code, wording, factor in the 3- and 4-factor structures |
+| `phase2-1-scale-development/data/raw/ratings-stimulus_original.csv` | 65 items rated by **506 participants** on a −3 … +3 scale, **uncollapsed**. MD5 `2e967d9c37a6f2f1d2d7e79505a3dbb3` |
+| `phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv` | The same ratings with **rare answer options collapsed**: an option chosen by ≤ 2.5% of answers is merged into the neighbouring option with more answers. There are 111 merges, all at the negative end. MD5 `eb83954b17ac6ef2149f63f4f7c0c572`. Built by `data/prepare_data.py` |
+| `phase2-1-scale-development/data/codebook/items.csv` | Item code, wording, factor in the 3- and 4-factor structures |
 
 - **Tools (stimulus):** Gephi 104, Power BI 102, Qlik 101, Tableau 100, JMP 99.
 - **Attention checks** P901 and P902 were removed earlier and are not in the data.
@@ -55,7 +55,7 @@ All item lists are in **one file**, `item_versions_config.R`, which the R notebo
 | Step | Scripts | What it does | Main outputs (paper label) |
 |---|---|---|---|
 | 00 EFA screening | `screen-efa-items.py`, `review-missing-data.py`, `build-screening-table.py` | 65 → 49 items: cross-loading rule, and missing-data review | `table-items-after-screening.tex` (`tab:items-after-screening`), `table-screening-decisions.tex` (`tab:screening-decisions`), `missing-data-review.xlsx` |
-| Data | `data/prepare_data.py` | Checks the tool labels; collapses rare options | `data/prepared/` |
+| Data | `phase2-1-scale-development/data/prepare_data.py` (moved to phase 2.1 on 2026-11-12) | Checks the tool labels; collapses rare options | `phase2-1-scale-development/data/prepared/` |
 | 01 Reliability | `01_reliability.Rmd` | α and ω for every factor, model and version; α if item dropped | `reliability-summary-table.tex` (`tab:reliability-summary`), `item_drop_table.tex` (`tab:item-drop`) |
 | 02 Multi-group CFA | `02_cfa.Rmd` | Multi-group CFA by tool (ML, FIML, collapsed), measurement invariance | `fit-summary-table.tex` (`tab:fit-summary`) |
 | 03 IRT | `03_irt.Rmd` | Graded response model per factor (`mirt`), trace plots | `irt_traces_<factor>.pdf/png` (no title), item parameters |
@@ -64,7 +64,7 @@ All item lists are in **one file**, `item_versions_config.R`, which the R notebo
 
 **Order to reproduce:**
 1. Run `00` (Python).
-2. Run `data/prepare_data.py` (only if the raw data change).
+2. Run `phase2-1-scale-development/data/prepare_data.py` (only if the raw data change).
 3. Knit `01`, `02` and `03` (independent of each other).
 4. Run `04` (Python).
 5. Run `05/run-all-thresholds.R`, then `05/build_runs_table.py`.
@@ -285,6 +285,7 @@ Use these to check a re-run.
   - the 3-factor EFA (2026-03-18, polychoric, principal axis, collapsed 2.5%) and the item history live outside the repository for now: `UXVis/Replication…` and `Gdrive_files/Exploratory Factor Analysis - temp/`;
   - step 00 copies the loadings it needs (`00-efa-screening/input/efa-pa-3-factors-agg.csv`, MD5 `2f937169c9d566d693c9ba1c2a43ef53`);
   - when the EFA phase enters the repository, these inputs should point there.
+  - **Data moved (2026-11-12):** the `data/` folder (raw and prepared ratings, `prepare_data.py`, codebook) moved from `phase2-2-item-reduction/data/` to `phase2-1-scale-development/data/`; all phase 2.2 scripts and phase 3 steps 07–08 read it there. The EFA input files of 2026-03-18 were checked: the aggregate file is identical to `prepared/ratings-stimulus_collapsed.csv`, and all 506 tool labels and 32,890 ratings agree with the original LimeSurvey exports (see `phases/scale-development-context.md`).
 - **After (validation, `phase3-validation/`):**
   - new sample (students, user forums, Prolific), tools Power BI, Tableau, JMP, Excel and Data Studio;
   - the 13-item model is `3_Factor_A`;
@@ -303,7 +304,7 @@ Use these to check a re-run.
 - Version E baseline (61 items) still contains 13 items excluded in the 3-factor screening. Decide whether that is intended.
 - System loading order quoted in the paper ("#2 P088, #5 P086, #6 P026"): check which ranking it refers to (see §4.3).
 - P088 wording: the paper uses "I could easily understand the system"; the codebook has "I found the system simple to understand".
-- P305 wording in the codebook has "informtaion": check whether the typo was in the survey.
+- P305 wording in the codebook has "informtaion". In the survey export (checked 2026-11-12) the item reads "The system allowed me to reduce the information displayed and focus …", and P212 reads "…an overview and a detailed views…": the codebook wordings of both differ from the survey.
 
 **Repository:**
 - Commit to Git after each change. Several files were reverted on the computer on 2026-10-20 and 21, and the RStudio open-tab problem also caused reverts.
@@ -312,7 +313,7 @@ Use these to check a re-run.
   - step 05 now has `run-all-thresholds.R` and exhaustive runs;
   - step 00 now has the missing-data review.
 - Record Python package versions (`requirements.txt`).
-- Move the EFA inputs into the repository when the EFA phase is documented.
+- Move the EFA inputs into the repository when the EFA phase is documented (the data folder was moved to phase 2.1 on 2026-11-12).
 
 **Paper (Overleaf):**
 - Replace stale table copies with the generated `.tex` files:

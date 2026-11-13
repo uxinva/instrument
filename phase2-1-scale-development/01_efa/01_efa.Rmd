@@ -115,10 +115,12 @@ analyse_group <- function(g, data) {
     efa <- psych::fa(rho, n.obs = n, nfactors = k, rotate = if (k == 1) "none" else "promax", fm = "pa")
     efa <- psych::fa.sort(efa)
     loadings <- as.data.frame(unclass(efa$loadings))
-    variance <- as.data.frame(efa$Vaccounted)
-    out <- rbind(cbind(terms = rownames(loadings), loadings),
-                 cbind(terms = "--- VARIANCE EXPLAINED ---", variance[0, , drop = FALSE][1, ]),
-                 cbind(terms = rownames(variance), variance))
+    variance <- as.data.frame(efa$Vaccounted)[, names(loadings), drop = FALSE]
+    separator <- as.data.frame(setNames(rep(list(NA_real_), ncol(loadings)), names(loadings)))
+    out <- rbind(data.frame(terms = rownames(loadings), loadings, check.names = FALSE),
+                 data.frame(terms = "--- VARIANCE EXPLAINED ---", separator, check.names = FALSE),
+                 data.frame(terms = rownames(variance), variance, check.names = FALSE))
+    rownames(out) <- NULL
     write.csv(out, file.path(out_dir, "loadings", sprintf("pa-%d-factors-%s.csv", k, group_slug(g))),
               row.names = FALSE, na = "")
     fits[[k]] <- data.frame(group = g, factors = k,
@@ -162,6 +164,33 @@ knitr::kable(summary_table, digits = 3)
 - **Mardia**: p < .05 rejects multivariate normality, one reason for principal axis extraction.
 - **KMO** ≥ 0.70 and a significant **Bartlett** test indicate that the matrix is suitable for factor analysis.
 - **parallel_n_factors** is the number of factors suggested by parallel analysis (random; see the seed above).
+
+### Number of factors: other criteria (whole sample)
+
+Parallel analysis with `fa = "fa"` is the criterion of the original notebook. The criteria below are computed on the same
+polychoric matrix so that the suggested number of factors can be read against them; they do not change any loading.
+The parallel analyses are repeated with 20 seeds to show how stable they are.
+
+```{r n-factors-criteria}
+rho_agg <- results[["Agg"]]$rho
+n_agg <- nrow(datasets[["Agg"]])
+pa_runs <- t(sapply(1:20, function(s) {
+  set.seed(s)
+  p <- psych::fa.parallel(rho_agg, n.obs = n_agg, fa = "both", n.iter = params$pa_iterations, plot = FALSE)
+  c(fa = p$nfact, pc = p$ncomp)
+}))
+vss <- psych::VSS(rho_agg, n = 8, n.obs = n_agg, fm = "pa", plot = FALSE)
+eigenvalues <- eigen(rho_agg, only.values = TRUE)$values
+tab_runs <- function(x) paste(sprintf("%s (%d of 20 seeds)", names(table(x)), as.integer(table(x))), collapse = ", ")
+criteria <- data.frame(
+  criterion = c("Parallel analysis, factors (fa = \"fa\")", "Parallel analysis, principal components",
+                "Velicer's MAP (minimum)", "Eigenvalues > 1 (Kaiser)"),
+  suggested_factors = c(tab_runs(pa_runs[, "fa"]), tab_runs(pa_runs[, "pc"]),
+                        as.character(which.min(vss$map)), as.character(sum(eigenvalues > 1))))
+write.csv(criteria, file.path(out_dir, "number-of-factors-criteria-agg.csv"), row.names = FALSE)
+knitr::kable(criteria)
+cat("First eigenvalues:", paste(round(eigenvalues[1:6], 2), collapse = ", "), "\n")
+```
 
 ### Fit indices
 
@@ -243,8 +272,9 @@ tol <- 1e-6
 cat(sprintf("Loadings: largest difference %.2e over %d solutions; correlations: largest difference %.2e; KMO: largest difference %.2e.\n",
             max(checks$max_abs_diff_loading), nrow(loading_checks),
             max(corr_checks$max_abs_diff_polychoric), max(kmo_checks$abs_diff_kmo)))
-cat(if (max(checks$max_abs_diff_loading) < tol && max(corr_checks$max_abs_diff_polychoric) < tol)
-  "REPRODUCED: every loading and correlation matches the run of 2026-03-18 (|difference| < 1e-6).\n" else
+cat(if (max(checks$max_abs_diff_loading) < tol && max(corr_checks$max_abs_diff_polychoric) < tol &&
+        max(kmo_checks$abs_diff_kmo) < tol)
+  "REPRODUCED: every loading, correlation and KMO matches the run of 2026-03-18 (|difference| < 1e-6).\n" else
   "DIFFERENT: see the tables below.\n")
 knitr::kable(loading_checks, digits = 8)
 knitr::kable(corr_checks, digits = 8)
@@ -253,6 +283,12 @@ knitr::kable(kmo_checks, digits = 6)
 
 The number of factors suggested by parallel analysis depends on the random simulation; the run of 2026-03-18 set
 no seed, so a difference there is expected and does not mean that the data or the method differ.
+
+The per-tool KMO differs from 2026-03-18 by about 1e-8, while the whole-sample KMO differs by about 1e-13. Each
+tool has about 100 participants for 65 items, so its polychoric matrix is not positive definite and `psych`
+smooths it (smallest eigenvalue about 1e-10, condition number about 3e11). KMO inverts the matrix, which
+magnifies differences of 1e-11 in the correlations to about 1e-8. The loadings do not invert the matrix and
+match to about 1e-11.
 
 ## Session
 

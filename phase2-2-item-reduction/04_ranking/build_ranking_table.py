@@ -3,7 +3,7 @@ Builds the tables of the multi-criteria triangulation ranking (paper section 3.3
 
 Inputs (all in the repository):
   04_ranking/ranking_criteria.csv   per-item criteria (made by extract_ranking_criteria.py)
-  data/codebook/items.csv           item wording
+  phase2-1-scale-development/data/codebook/items.csv           item wording
   item_versions_config.R            item lists of the models, used only for the checks
   05_combinatorial/input/candidate_pool.csv   handpicked candidate pool, used only for the checks
 
@@ -58,7 +58,7 @@ def model_lists(cfg, version, model):
 
 
 items = read_csv(STEP / "ranking_criteria.csv")
-wording = {r["code"]: r["wording"] for r in read_csv(PHASE / "data" / "codebook" / "items.csv")}
+wording = {r["code"]: r["wording"] for r in read_csv(PHASE.parent / "phase2-1-scale-development" / "data" / "codebook" / "items.csv")}
 cfg = (PHASE / "item_versions_config.R").read_text(encoding="utf-8")
 
 for r in items:

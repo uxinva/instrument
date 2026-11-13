@@ -8,7 +8,7 @@ the rank follows that total (Spearman correlation and the items whose order disa
 
 Inputs (all in the repository):
   04_ranking/ranking_criteria.csv   per-item criteria (made by extract_ranking_criteria.py)
-  data/codebook/items.csv           item wording
+  phase2-1-scale-development/data/codebook/items.csv           item wording
 
 Outputs (04_ranking/output/):
   irt-ranking-table.tex   LaTeX table (longtable), label tab:IRT-ranking
@@ -76,7 +76,7 @@ def spearman(x, y):
 
 
 items = read_csv(STEP / "ranking_criteria.csv")
-wording = {r["code"]: r["wording"] for r in read_csv(PHASE / "data" / "codebook" / "items.csv")}
+wording = {r["code"]: r["wording"] for r in read_csv(PHASE.parent / "phase2-1-scale-development" / "data" / "codebook" / "items.csv")}
 for r in items:
     for k, _ in SCORES:
         r[k] = to_int(r[k])

@@ -19,7 +19,7 @@ Item lists come from [`../item_versions_config.R`](../item_versions_config.R), t
 
 | File | Content |
 |---|---|
-| `../data/prepared/ratings-stimulus_collapsed.csv` | Collapsed ratings (see [data](../data/README.md)) |
+| `phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv` | Collapsed ratings (see [data](../../phase2-1-scale-development/data/README.md)) |
 | `../item_versions_config.R` | Item lists for all versions and models |
 
 ## Outputs (`output/`)

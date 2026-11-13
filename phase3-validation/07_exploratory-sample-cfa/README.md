@@ -20,7 +20,7 @@ fit here is optimistic; `4_Factor_C` was derived from the EFA of the validation 
 
 | File | From |
 |---|---|
-| `phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv` | phase 2.2 `data/prepare_data.py` |
+| `phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv` | phase 2.1 `data/prepare_data.py` |
 | `phase3-validation/data/codebook/items.csv` | item code → short name |
 | `06_alternative-structures/output/CFA_Model_Fit_Comparison.xlsx` | [step 06](../06_alternative-structures/README.md), for the comparison |
 

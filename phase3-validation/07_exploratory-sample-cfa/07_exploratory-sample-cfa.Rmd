@@ -7,7 +7,7 @@ output:
     theme: readable
 params:
   # Exploratory sample (phase 2.2): 506 participants, 5 tools, rare options collapsed (<= 2.5%)
-  data_file: "phase2-2-item-reduction/data/prepared/ratings-stimulus_collapsed.csv"
+  data_file: "phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv"
   # Validation results of step 06, for the side-by-side comparison
   validation_file: "phase3-validation/06_alternative-structures/output/CFA_Model_Fit_Comparison.xlsx"
 ---

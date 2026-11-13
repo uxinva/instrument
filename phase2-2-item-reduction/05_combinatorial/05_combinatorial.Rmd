@@ -4,7 +4,7 @@ output:
   html_document:
     toc: true
 params:
-  data_file: "phase2-2-item-reduction/data/raw/ratings-stimulus_original.csv"
+  data_file: "phase2-1-scale-development/data/raw/ratings-stimulus_original.csv"
   combination_file: "phase2-2-item-reduction/05_combinatorial/input/combinations_6-4-3.csv"
   run_name: "rel078_6-4-3_singlegroup_uncollapsed"
   reliability_threshold: 0.78

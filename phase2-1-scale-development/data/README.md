@@ -10,6 +10,7 @@ Ratings of the exploratory survey (65 items, 506 participants). They are used by
 | `raw/survey_seed_system/SeedSystem1.xlsx`, `SeedSystem2.xlsx` | Exported from the survey tool on 2026-10-16: `Response ID`, `Seed` and `SYSTEM` (the tool rated) of **all** responses, including incomplete ones (3,140 seeds). Used to check the tool labels. |
 | `prepare_data.py` | Checks the tool labels and collapses rare answer options (see below) |
 | `prepared/ratings-stimulus_collapsed.csv` | **Input of phase 2.2 steps 01 and 02** (and of phase 3, steps 07 and 08): the same ratings with rare answer options collapsed |
+| `prepared/by-tool/ratings-<tool>_collapsed.csv` | **Input of the per-tool EFA** ([step 01](../01_efa/README.md)): one file per tool (gephi, jmp, power-bi, qlik, tableau), with rare options collapsed **within** the tool (see below). Columns: `seed` and the 65 items. |
 | `prepared/collapse_changes.csv` | Every merge that was made: item, original option, new option, number of answers, size of the left and right neighbours |
 | `prepared/label_check.csv` | Tool label in the data vs. in the survey export (and which export file), per participant |
 | `codebook/items.csv` | Item code, wording, and factor in the 3-factor and the 4-factor structures |
@@ -26,6 +27,7 @@ The script does two things:
 
 1. **Checks the tool labels.** It compares the `stimulus` column with the survey exports and stops if any label disagrees, or if a seed has more than one tool in the exports. All **506** participants are in the exports, and all 506 labels agree.
 2. **Collapses rare answer options.** For each item, an answer option chosen by **≤ 2.5%** of the non-missing answers is merged into the **neighbouring option with more answers** (left or right; on a tie, the left one). The merge repeats until no option is below the threshold. This is the rule of `04_Colapsing_Low-Frequency_Categories-toMoreFrequent.R` (old folder `phase2-2-itemreduction/Notebooks/Reproduce4_Notebooks/`; now in the OSF supplemental folder, `Notebooks/04_Notebooks/`). The script made 111 merges in 64 items, all of them to the right: the rare options are at the negative end of the scale, where the left neighbour is empty or already merged. The result is therefore identical to the "toRight" variant of the script. `collapse_changes.csv` records the size of both neighbours for every merge.
+3. **Writes one collapsed file per tool** (`prepared/by-tool/`). The same 2.5% threshold is applied within each tool's participants, with the **"toRight" rule**: a rare option is merged into the option on its right, or into the one on its left for +3. This is the rule of `04_Colapsing_Low-Frequency Categories-toRight.R`. The "to more frequent" rule is not used within a tool for two reasons. In small groups it can merge an option into an empty neighbour and back again without end. And the per-tool files of the 2026-03-18 EFA (`Data/ratings-1.csv` … `ratings-5.csv` in the OSF folder) are the output of the toRight script. The five files equal those inputs cell by cell, in the same row and column order.
 
 ## `prepared/ratings-stimulus_collapsed.csv`
 

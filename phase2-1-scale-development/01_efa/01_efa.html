@@ -1797,6 +1797,79 @@ factor analysis.</li>
 suggested by parallel analysis (random; see the seed above).</li>
 </ul>
 </div>
+<div id="number-of-factors-other-criteria-whole-sample" class="section level3">
+<h3>Number of factors: other criteria (whole sample)</h3>
+<p>Parallel analysis with <code>fa = &quot;fa&quot;</code> is the criterion of the
+original notebook. The criteria below are computed on the same
+polychoric matrix so that the suggested number of factors can be read
+against them; they do not change any loading. The parallel analyses are
+repeated with 20 seeds to show how stable they are.</p>
+<pre class="r"><code>rho_agg &lt;- results[[&quot;Agg&quot;]]$rho
+n_agg &lt;- nrow(datasets[[&quot;Agg&quot;]])
+pa_runs &lt;- t(sapply(1:20, function(s) {
+  set.seed(s)
+  p &lt;- psych::fa.parallel(rho_agg, n.obs = n_agg, fa = &quot;both&quot;, n.iter = params$pa_iterations, plot = FALSE)
+  c(fa = p$nfact, pc = p$ncomp)
+}))</code></pre>
+<pre><code>## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  3</code></pre>
+<pre class="r"><code>vss &lt;- psych::VSS(rho_agg, n = 8, n.obs = n_agg, fm = &quot;pa&quot;, plot = FALSE)
+eigenvalues &lt;- eigen(rho_agg, only.values = TRUE)$values
+tab_runs &lt;- function(x) paste(sprintf(&quot;%s (%d of 20 seeds)&quot;, names(table(x)), as.integer(table(x))), collapse = &quot;, &quot;)
+criteria &lt;- data.frame(
+  criterion = c(&quot;Parallel analysis, factors (fa = \&quot;fa\&quot;)&quot;, &quot;Parallel analysis, principal components&quot;,
+                &quot;Velicer&#39;s MAP (minimum)&quot;, &quot;Eigenvalues &gt; 1 (Kaiser)&quot;),
+  suggested_factors = c(tab_runs(pa_runs[, &quot;fa&quot;]), tab_runs(pa_runs[, &quot;pc&quot;]),
+                        as.character(which.min(vss$map)), as.character(sum(eigenvalues &gt; 1))))
+write.csv(criteria, file.path(out_dir, &quot;number-of-factors-criteria-agg.csv&quot;), row.names = FALSE)
+knitr::kable(criteria)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">criterion</th>
+<th align="left">suggested_factors</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Parallel analysis, factors (fa = “fa”)</td>
+<td align="left">5 (20 of 20 seeds)</td>
+</tr>
+<tr class="even">
+<td align="left">Parallel analysis, principal components</td>
+<td align="left">3 (20 of 20 seeds)</td>
+</tr>
+<tr class="odd">
+<td align="left">Velicer’s MAP (minimum)</td>
+<td align="left">4</td>
+</tr>
+<tr class="even">
+<td align="left">Eigenvalues &gt; 1 (Kaiser)</td>
+<td align="left">9</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>cat(&quot;First eigenvalues:&quot;, paste(round(eigenvalues[1:6], 2), collapse = &quot;, &quot;), &quot;\n&quot;)</code></pre>
+<pre><code>## First eigenvalues: 29.06, 3.12, 1.89, 1.34, 1.23, 1.11</code></pre>
+</div>
 <div id="fit-indices" class="section level3">
 <h3>Fit indices</h3>
 <pre class="r"><code>knitr::kable(fit_table, digits = 3)</code></pre>

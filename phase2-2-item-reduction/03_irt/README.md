@@ -22,7 +22,7 @@ For each factor (`task_cognition`, `system`, `visualization`), the notebook fits
 
 | Parameter | Meaning |
 |---|---|
-| `data_file` | Input data. Default (since 2026-10-21): the **uncollapsed** data, `../data/raw/ratings-stimulus_original.csv`, as in the April 2026 figures on which the IRT rubric scores (`04_ranking`, Table `tab:IRT-ranking`) were given. Steps 01 and 02 use the collapsed data |
+| `data_file` | Input data. Default (since 2026-10-21): the **uncollapsed** data, `phase2-1-scale-development/data/raw/ratings-stimulus_original.csv`, as in the April 2026 figures on which the IRT rubric scores (`04_ranking`, Table `tab:IRT-ranking`) were given. Steps 01 and 02 use the collapsed data |
 | `listwise` | `TRUE` (default): participants with a missing answer in the factor's items are dropped, as in the old notebook |
 | `theta_lim` | The θ axis goes from −`theta_lim` to +`theta_lim` (default 3) |
 
@@ -38,8 +38,8 @@ The April 2026 figures (`Gdrive_files/Item Reduction/IRT/260412-IRT-ThirdRun-Col
 
 | File | Content |
 |---|---|
-| `../data/raw/ratings-stimulus_original.csv` | Uncollapsed ratings (default; see [data](../data/README.md)) |
-| `../data/prepared/ratings-stimulus_collapsed.csv` | Collapsed ratings (optional) |
+| `phase2-1-scale-development/data/raw/ratings-stimulus_original.csv` | Uncollapsed ratings (default; see [data](../../phase2-1-scale-development/data/README.md)) |
+| `phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv` | Collapsed ratings (optional) |
 | `../item_versions_config.R` | `irt_item_sets` (items per factor) and `irt_figure_titles` |
 
 ## Outputs (`output/`)

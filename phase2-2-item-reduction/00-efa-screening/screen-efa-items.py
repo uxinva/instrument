@@ -18,14 +18,14 @@ Inputs:
   input/manual-exclusions.csv     exclusions decided by the team (missing data)
   ../item_versions_config.R       full_3_factors (65 items); screened_3_factors and Version_A Model_1
                                   (49 items), for the check
-  ../data/raw/ratings-stimulus_original.csv   to report the percentage of missing answers per item
+  ../../phase2-1-scale-development/data/raw/ratings-stimulus_original.csv   to report the percentage of missing answers per item
 
 Outputs:
   output/efa-screening-items.csv    one row per item: factor, loadings, cross-loading, missing %, decision, reason
   output/items-after-screening.csv  the retained items per factor
   output/check.txt                  comparison with Version_A Model_1 in item_versions_config.R
   output/table-items-after-screening.tex   LaTeX table (longtable) of the retained items, with wording
-                                           (../data/codebook/items.csv) and primary loading
+                                           (../../phase2-1-scale-development/data/codebook/items.csv) and primary loading
 
 Run from the repository root:
   python phase2-2-item-reduction/00-efa-screening/screen-efa-items.py
@@ -64,7 +64,7 @@ def main():
         sys.exit("The EFA items differ from full_3_factors in item_versions_config.R")
 
     manual = pd.read_csv(STEP / "input" / "manual-exclusions.csv").set_index("code")
-    data = pd.read_csv(PHASE / "data" / "raw" / "ratings-stimulus_original.csv")
+    data = pd.read_csv(PHASE.parent / "phase2-1-scale-development" / "data" / "raw" / "ratings-stimulus_original.csv")
     missing = data.drop(columns=["seed", "stimulus"]).isna().mean() * 100
 
     rows = []
@@ -95,7 +95,7 @@ def main():
     kept = res[res.decision == "retained"]
     kept[["factor", "code", "primary_loading"]].to_csv(out / "items-after-screening.csv", index=False)
 
-    wording = pd.read_csv(PHASE / "data" / "codebook" / "items.csv").set_index("code")["wording"]
+    wording = pd.read_csv(PHASE.parent / "phase2-1-scale-development" / "data" / "codebook" / "items.csv").set_index("code")["wording"]
     label = {"task_cognition": "Task\\_cognition", "system": "System", "visualization": "Visualization"}
     esc = lambda t: str(t).replace("&", "\\&").replace("%", "\\%").replace("_", "\\_")
     excl = res[res.decision == "excluded"]
