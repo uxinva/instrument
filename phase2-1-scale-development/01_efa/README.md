@@ -4,6 +4,8 @@
 
 This step runs the exploratory factor analysis (EFA) of the exploratory survey: 65 items and 506 participants. It runs once on the whole sample (`Agg`) and once on each of the five tools. The three-factor solution on the whole sample is the starting point of [phase 2.2](../../phase2-2-item-reduction/README.md).
 
+The numbers of Sections 3.4.1–3.4.2 of the paper are traced to these outputs in [`supplement-section-3-4-1.md`](supplement-section-3-4-1.md).
+
 ## How to run
 
 Open `instrument.Rproj` (repository root) and knit `01_efa.Rmd`, or run from the root:
@@ -12,7 +14,7 @@ Open `instrument.Rproj` (repository root) and knit `01_efa.Rmd`, or run from the
 Rscript -e 'rmarkdown::render("phase2-1-scale-development/01_efa/01_efa.Rmd")'
 ```
 
-You need R 4.5.2 with `psych`, `corrplot`, `naniar`, `here` and `rmarkdown` (see `renv.lock`). The run takes about 6 minutes, most of it in the parallel analysis with polychoric simulated data (`poly_pa_iterations` in the header; set it to 0 for a 1–2 minute run). First run `data/prepare_data.py` once so that `data/prepared/by-tool/` exists (see [`data/README.md`](../data/README.md)).
+You need R 4.5.2 with `psych`, `corrplot`, `naniar`, `here` and `rmarkdown` (see `renv.lock`). The run takes about 10 minutes, most of it in the parallel analyses (polychoric simulated data: `poly_pa_iterations` in the header, 0 skips it and saves about 4 minutes). First run `data/prepare_data.py` once so that `data/prepared/by-tool/` exists (see [`data/README.md`](../data/README.md)).
 
 ## Input
 
@@ -47,8 +49,14 @@ Differences from the original notebook. None of them changes a result:
 | `loadings/pa-<k>-factors-<group>.csv` | Loadings (k = 1–6; group = agg, tableau, qlik, power-bi, gephi, jmp), then a `--- VARIANCE EXPLAINED ---` row and the variance table. The layout is the same as the old `PA1 Stimuli k factors - Group.csv` files. |
 | `correlations/polychoric-<group>.csv` | Polychoric correlation matrix |
 | `sampling-adequacy-summary.csv` | n, % missing, MCAR p, KMO, Bartlett, determinant, α, Mardia, number of factors from parallel analysis |
-| `fit-indices.csv` | Fit indices of every solution |
-| `item-normality.csv` | Whole sample: skewness and excess kurtosis of each item (uncollapsed and collapsed), Shapiro-Wilk p |
+| `fit-indices.csv` | Fit indices of every solution (χ², df, RMSEA with CI, CFI, TLI, BIC, RMSR) |
+| `table-efa-fit.tex` | LaTeX table (booktabs) of the whole-sample fit, 1–6 factors, for the paper (`tab:efa-fit`) |
+| `item-normality.csv` | Whole sample, per item: skewness and excess kurtosis (uncollapsed and collapsed), Shapiro-Wilk p, share of answers in 2–3 and below 0 |
+| `correlation-summary.csv` | Per group: range, median and share of polychoric correlations above .30 and .50, number of negative ones |
+| `collapsed-vs-uncollapsed-agg.csv` | Whole sample, 1–6 factors: congruence between the factors of the collapsed and uncollapsed solutions, items with the same primary factor, cumulative variance |
+| `variance-explained-agg.csv` | Whole sample, 1–6 factors: proportion of variance explained by each factor and in total, collapsed and uncollapsed data |
+| `loadings-uncollapsed/pa-<k>-factors-agg.csv`, `correlations/polychoric-agg-uncollapsed.csv` | EFA of the whole sample on the uncollapsed ratings |
+| `parallel-analysis-stability.csv` | Per group: factors suggested by the parallel analysis of the main run and over 20 seeds |
 | `number-of-factors-criteria-agg.csv` | Whole sample: parallel analysis (factors and components, 20 seeds), MAP, eigenvalues > 1 |
 | `plots/scree-<group>.pdf`, `plots/polychoric-agg.pdf` | Scree plots with parallel analysis; whole-sample correlation plot |
 | `check-vs-2026-03-18.csv`, `check-kmo-vs-2026-03-18.csv` | Comparison with the reference run |
@@ -63,6 +71,7 @@ The rendered report is `01_efa.html`.
   - Collapsed data (input of the EFA): skewness from −1.23 to −0.37; excess kurtosis from −0.75 to 2.09.
   - Hence the choices of the EFA: polychoric correlations (7-point ordinal items) and principal axis extraction, which does not assume multivariate normality. Maximum likelihood was not used.
   - The fit indices of `psych::fa` (χ², RMSEA, TLI) are computed with a maximum-likelihood formula even for principal axis; with polychoric correlations and non-normal data they are approximate and best read as descriptive.
+- **Collapsed vs uncollapsed data.** The EFA on the uncollapsed ratings gives the same factors: Tucker's congruence is 1.00 for every factor of the 1–5 factor solutions, and ≥ 0.93 for 6 factors. With 3 factors, 62 of 65 items keep their primary factor; P031, P06 and P102 change, and all three were excluded in phase 2.2 (weak loading or cross-loading). Cumulative variance with 3 factors: 50.2% collapsed, 49.6% uncollapsed.
 - KMO = 0.964. Bartlett χ²(2080) = 24,037, p < .001. Determinant = 2.3e-22. α = 0.972.
 - **Number of factors.** The criteria disagree, from 3 to 5 factors (table below). The first factor dominates: the first eigenvalues are 29.1, 3.1, 1.9, 1.3, 1.2 and 1.1, so the drop flattens after the second or third. Phase 2.2 used the 3-factor and 4-factor solutions.
 
@@ -91,5 +100,5 @@ Each tool has about 100 participants for 65 items. The per-tool polychoric matri
 | % missing, Little's MCAR, α, Mardia | identical |
 
 - **Why the per-tool KMO differs slightly more:** KMO inverts the correlation matrix. The smoothed per-tool matrices have a condition number of about 3e11, so differences of 1e-11 in the correlations become about 1e-8 in KMO.
-- **Parallel analysis is random.** Each group gets the same number of factors as on 2026-03-18, except JMP. The groups do not agree with each other: Agg 5; Tableau, Qlik and Gephi 2; Power BI 4; JMP 3 (2 on 2026-03-18). Across 20 seeds, JMP gives 3 in 15 runs and 2 in 5; every other group gives the same number in all 20. The 2026-03-18 run set no seed, so the JMP difference is expected. The per-tool samples (about 100 participants) suggest fewer factors than the whole sample, as is usual with small n.
+- **Parallel analysis is random.** Each group gets the same number of factors as on 2026-03-18, except JMP. The groups do not agree with each other: Agg 5; Tableau, Qlik and Gephi 2; Power BI 4; JMP 3 (2 on 2026-03-18). Across 20 seeds (`output/parallel-analysis-stability.csv`), JMP gives 3 in 17 runs and 2 in 3; every other group gives the same number in all 20. The 2026-03-18 run set no seed, so the JMP difference is expected. The per-tool samples (about 100 participants) suggest fewer factors than the whole sample, as is usual with small n.
 - **Error in the old summary file:** the reference `Summary of Measures of Sampling Adequacy.csv` has the Mardia skewness value in its "Skew p_value" column. `sampling-adequacy-summary.csv` gives the real p-value.

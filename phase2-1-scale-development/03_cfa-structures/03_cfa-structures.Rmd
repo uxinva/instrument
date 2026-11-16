@@ -1,0 +1,209 @@
+---
+title: "Phase 2.1, step 03: confirmatory factor analysis of the 1–6 factor structures"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+params:
+  data_file: "phase2-1-scale-development/data/prepared/ratings-stimulus_collapsed.csv"
+  efa_dir: "phase2-1-scale-development/01_efa/output"
+  n_factors_max: 6
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(here)
+library(lavaan)
+step_dir <- here("phase2-1-scale-development", "03_cfa-structures")
+out_dir  <- file.path(step_dir, "output")
+dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
+```
+
+## What this notebook does
+
+Step 01 extracts EFA solutions with 1 to 6 factors and reports their fit (`psych::fa`). In an EFA every item loads on
+every factor, so the fit describes the free solution. This notebook tests the same structures as **confirmatory**
+models: each item loads only on the factor of its largest EFA loading, all other loadings are fixed at zero, and the
+factors are allowed to correlate. The fit of these models can then be compared with the EFA fit and judged with the
+usual CFA criteria (Hu & Bentler, 1999).
+
+- **Data:** whole sample (506), 65 items, rare options collapsed (as in the EFA). Single group: the tools are pooled.
+- **Structures:** from `01_efa/output/loadings/pa-<k>-factors-agg.csv` (k = 1–6). For k = 3 the assignment is the
+  `full_UX_3_factors` list of the paper (25, 18 and 22 items).
+- **Estimators:**
+  - `ML` with full-information maximum likelihood for missing answers (`missing = "fiml"`), as in the manual CFA
+    testing of phase 2.2;
+  - `WLSMV` with the items declared ordinal (`ordered = TRUE`, pairwise handling of missing answers), which uses
+    polychoric correlations like the EFA. Its fit indices are the scaled ones.
+- Factors are identified by fixing their variances to 1 (`std.lv = TRUE`).
+
+## Data and structures
+
+```{r data}
+d <- read.csv(here(params$data_file), check.names = FALSE)
+d <- d[, setdiff(names(d), c("seed", "stimulus"))]
+items <- names(d)
+
+read_loadings <- function(k) {
+  r <- read.csv(file.path(here(params$efa_dir), "loadings", sprintf("pa-%d-factors-agg.csv", k)), check.names = FALSE)
+  r <- r[seq_len(which(r$terms == "--- VARIANCE EXPLAINED ---") - 1), ]
+  L <- as.matrix(r[, -1, drop = FALSE]); rownames(L) <- r$terms
+  storage.mode(L) <- "numeric"
+  L[items, , drop = FALSE]
+}
+
+structures <- lapply(seq_len(params$n_factors_max), function(k) {
+  L <- read_loadings(k)
+  setNames(colnames(L)[apply(L, 1, which.max)], items)   # factor of the largest loading
+})
+
+assignment <- data.frame(item = items, sapply(structures, identity))
+names(assignment)[-1] <- paste0("factor_in_", seq_len(params$n_factors_max), "_factor_model")
+write.csv(assignment, file.path(out_dir, "item-assignment.csv"), row.names = FALSE)
+
+model_syntax <- function(s) {
+  paste(sapply(sort(unique(s)), function(f) paste0(f, " =~ ", paste(names(s)[s == f], collapse = " + "))),
+        collapse = "\n")
+}
+data.frame(factors = seq_len(params$n_factors_max),
+           items_per_factor = sapply(structures, function(s) paste(table(factor(s, levels = sort(unique(s)))), collapse = ", ")))
+```
+
+## CFA of each structure
+
+With FIML, `lavaan::fitMeasures` takes about 100 s per model for each of RMSEA and CFI. The ML indices are therefore
+computed here from the χ² of the model and of the independence model (fitted once, it is the same for every
+structure), with the formulas `lavaan` uses. For the 1-factor model they were checked against `fitMeasures`
+(CFI 0.800, TLI 0.794, RMSEA 0.057 [0.056, 0.059]): identical.
+
+```{r fit-indices-ml}
+baseline <- NULL
+fit_indices_ml <- function(fit) {
+  if (is.null(baseline)) baseline <<- lavaan:::lav_object_independence(fit)
+  x2 <- unname(fitMeasures(fit, "chisq")); df <- unname(fitMeasures(fit, "df")); N <- lavInspect(fit, "ntotal")
+  x2b <- unname(fitMeasures(baseline, "chisq")); dfb <- unname(fitMeasures(baseline, "df"))
+  rmsea_ci <- function(p) {
+    f0 <- function(l) pchisq(x2, df, ncp = l) - p
+    if (f0(0) < 0) return(0)
+    sqrt(uniroot(f0, c(0, max(10 * x2, 1)))$root / (df * N))
+  }
+  c(chisq = x2, df = df,
+    cfi = 1 - max(x2 - df, 0) / max(x2 - df, x2b - dfb, 0),
+    tli = ((x2b / dfb) - (x2 / df)) / ((x2b / dfb) - 1),
+    rmsea = sqrt(max((x2 - df) / (df * N), 0)), rmsea_lower = rmsea_ci(0.95), rmsea_upper = rmsea_ci(0.05),
+    srmr = unname(fitMeasures(fit, "srmr")), bic = unname(fitMeasures(fit, "bic")))
+}
+```
+
+```{r cfa}
+fit_one <- function(k, estimator) {
+  model <- model_syntax(structures[[k]])
+  fit <- if (estimator == "ML") {
+    # Starting values from the listwise solution: with lavaan's default start the FIML fit of the 5-factor
+    # structure did not finish in 15 minutes; with these it converges in about 50 iterations. The estimates are
+    # the FIML ones either way.
+    start <- cfa(model, data = d, estimator = "ML", std.lv = TRUE)
+    cfa(model, data = d, estimator = "ML", missing = "fiml", std.lv = TRUE, start = start)
+  } else {
+    cfa(model, data = d, ordered = items, estimator = "WLSMV", missing = "pairwise", std.lv = TRUE)
+  }
+  idx <- if (estimator == "ML") {
+    fit_indices_ml(fit)
+  } else {
+    m <- fitMeasures(fit, c("chisq.scaled", "df.scaled", "cfi.scaled", "tli.scaled", "rmsea.scaled",
+                            "rmsea.ci.lower.scaled", "rmsea.ci.upper.scaled", "srmr"))
+    c(m, bic = NA)
+  }
+  names(idx) <- c("chisq", "df", "cfi", "tli", "rmsea", "rmsea_lower", "rmsea_upper", "srmr", "bic")
+  data.frame(factors = k, estimator = estimator, n = lavInspect(fit, "nobs"),
+             converged = lavInspect(fit, "converged"), t(idx), row.names = NULL)
+}
+
+cfa_fit <- do.call(rbind, lapply(c("ML", "WLSMV"), function(e)
+  do.call(rbind, lapply(seq_len(params$n_factors_max), fit_one, estimator = e))))
+write.csv(cfa_fit, file.path(out_dir, "cfa-fit-by-structure.csv"), row.names = FALSE)
+knitr::kable(cfa_fit, digits = 3)
+```
+
+The **Hu and Bentler** combinations: SRMR ≤ .08 with CFI or TLI ≥ .95, or SRMR ≤ .08 with RMSEA ≤ .06.
+
+Correlations between the factors (WLSMV), to see whether the extra factors of the 4–6 factor structures are distinct:
+
+```{r factor-correlations}
+lv_cor <- do.call(rbind, lapply(2:params$n_factors_max, function(k) {
+  fit <- cfa(model_syntax(structures[[k]]), data = d, ordered = items, estimator = "WLSMV",
+             missing = "pairwise", std.lv = TRUE)
+  r <- lavInspect(fit, "cor.lv")
+  u <- r[upper.tri(r)]
+  data.frame(factors = k, min_factor_correlation = min(u), max_factor_correlation = max(u))
+}))
+write.csv(lv_cor, file.path(out_dir, "factor-correlations-wlsmv.csv"), row.names = FALSE)
+knitr::kable(lv_cor, digits = 2)
+```
+
+```{r hu-bentler}
+cfa_fit$hu_bentler <- with(cfa_fit, srmr <= .08 & (cfi >= .95 | tli >= .95 | rmsea <= .06))
+knitr::kable(cfa_fit[, c("factors", "estimator", "cfi", "tli", "rmsea", "srmr", "hu_bentler")], digits = 3)
+```
+
+## EFA fit and CFA fit side by side
+
+```{r efa-vs-cfa}
+efa_fit <- read.csv(file.path(here(params$efa_dir), "fit-indices.csv"))
+efa_fit <- efa_fit[efa_fit$group == "Agg", ]
+wide <- function(e) {
+  x <- cfa_fit[cfa_fit$estimator == e, c("factors", "cfi", "tli", "rmsea", "srmr", "bic")]
+  names(x)[-1] <- paste0("cfa_", tolower(e), "_", names(x)[-1]); x
+}
+side <- merge(data.frame(factors = efa_fit$factors, efa_cfi = efa_fit$cfi, efa_tli = efa_fit$tli, efa_rmsea = efa_fit$rmsea,
+                         efa_rmsr = efa_fit$rmsr, efa_bic = efa_fit$bic),
+              merge(wide("ML"), wide("WLSMV")[, c("factors", "cfa_wlsmv_cfi", "cfa_wlsmv_tli", "cfa_wlsmv_rmsea",
+                                                  "cfa_wlsmv_srmr")], by = "factors"), by = "factors")
+write.csv(side, file.path(out_dir, "efa-vs-cfa-fit.csv"), row.names = FALSE)
+knitr::kable(side, digits = 3)
+```
+
+LaTeX table of the CFA fit for the paper (`output/table-cfa-fit.tex`, needs `booktabs`):
+
+```{r cfa-table-tex}
+num <- function(x, d) sub("^-", "$-$", formatC(x, format = "f", digits = d, big.mark = ","))
+ml <- cfa_fit[cfa_fit$estimator == "ML", ]
+wl <- cfa_fit[cfa_fit$estimator == "WLSMV", ]
+rows <- sprintf("%d & %s & %s & %s [%s, %s] & %s & %s & & %s & %s & %s & %s \\\\",
+                ml$factors, num(ml$cfi, 3), num(ml$tli, 3), num(ml$rmsea, 3), num(ml$rmsea_lower, 3),
+                num(ml$rmsea_upper, 3), num(ml$srmr, 3), num(ml$bic, 0),
+                num(wl$cfi, 3), num(wl$tli, 3), num(wl$rmsea, 3), num(wl$srmr, 3))
+writeLines(c(
+  "\\begin{table}[htbp]",
+  "\\centering",
+  "\\caption{Fit of confirmatory factor models of the 1 to 6 factor structures (whole sample, $N = 506$; each item loads only on the factor of its largest EFA loading). ML: maximum likelihood with FIML; WLSMV: items treated as ordinal (scaled indices).}",
+  "\\label{tab:cfa-fit}",
+  "\\begin{tabular}{rrrcrrcrrrr}",
+  "\\toprule",
+  " & \\multicolumn{5}{c}{ML (FIML)} & & \\multicolumn{4}{c}{WLSMV} \\\\",
+  "\\cmidrule(lr){2-6} \\cmidrule(lr){8-11}",
+  "Factors & CFI & TLI & RMSEA [90\\% CI] & SRMR & BIC & & CFI & TLI & RMSEA & SRMR \\\\",
+  "\\midrule",
+  rows,
+  "\\bottomrule",
+  "\\end{tabular}",
+  "\\end{table}"), file.path(out_dir, "table-cfa-fit.tex"))
+cat(readLines(file.path(out_dir, "table-cfa-fit.tex")), sep = "\n")
+```
+
+Reading the table:
+
+- The EFA indices come from `psych::fa` (principal axis on the polychoric matrix). `psych` computes χ², TLI, RMSEA
+  and BIC with a maximum-likelihood formula and reports RMSR, the root mean square of the residual correlations,
+  which is close to but not the same as the SRMR of a CFA.
+- The CFA indices come from `lavaan`. The CFA is more restrictive (no cross-loadings), but its indices are computed
+  on a different basis (raw data with ML, or the ordinal model with WLSMV), so the two sets are not directly
+  comparable: a CFA index can be higher than the EFA one.
+- BIC is comparable only within one column. For the EFA and for the ML CFA, lower is better.
+
+## Session
+
+```{r session}
+writeLines(capture.output(sessionInfo()), file.path(out_dir, "sessionInfo.txt"))
+sessionInfo()
+```

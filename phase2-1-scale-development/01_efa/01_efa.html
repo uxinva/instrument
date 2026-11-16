@@ -1589,8 +1589,8 @@ analyse_group &lt;- function(g, data) {
   # EFA, 1 to n_factors_max factors
   fits &lt;- list()
   for (k in seq_len(params$n_factors_max)) {
-    efa &lt;- psych::fa(rho, n.obs = n, nfactors = k, rotate = if (k == 1) &quot;none&quot; else &quot;promax&quot;, fm = &quot;pa&quot;)
-    efa &lt;- psych::fa.sort(efa)
+    efa_fit &lt;- psych::fa(rho, n.obs = n, nfactors = k, rotate = if (k == 1) &quot;none&quot; else &quot;promax&quot;, fm = &quot;pa&quot;)
+    efa &lt;- psych::fa.sort(efa_fit)   # fa.sort drops some fit statistics (CFI): fit is read from efa_fit
     loadings &lt;- as.data.frame(unclass(efa$loadings))
     variance &lt;- as.data.frame(efa$Vaccounted)[, names(loadings), drop = FALSE]
     separator &lt;- as.data.frame(setNames(rep(list(NA_real_), ncol(loadings)), names(loadings)))
@@ -1601,9 +1601,9 @@ analyse_group &lt;- function(g, data) {
     write.csv(out, file.path(out_dir, &quot;loadings&quot;, sprintf(&quot;pa-%d-factors-%s.csv&quot;, k, group_slug(g))),
               row.names = FALSE, na = &quot;&quot;)
     fits[[k]] &lt;- data.frame(group = g, factors = k,
-                            chi_sq = efa$STATISTIC, df = efa$dof,
-                            rmsea = efa$RMSEA[1], rmsea_lower = efa$RMSEA[2], rmsea_upper = efa$RMSEA[3],
-                            tli = efa$TLI, bic = efa$BIC, rmsr = efa$rms)
+                            chi_sq = efa_fit$STATISTIC, df = efa_fit$dof,
+                            rmsea = efa_fit$RMSEA[1], rmsea_lower = efa_fit$RMSEA[2], rmsea_upper = efa_fit$RMSEA[3],
+                            cfi = efa_fit$CFI, tli = efa_fit$TLI, bic = efa_fit$BIC, rmsr = efa_fit$rms)
   }
 
   list(
@@ -1812,6 +1812,9 @@ item_normality &lt;- data.frame(
   skew_raw = psych::skew(raw, type = 2), kurtosis_raw = psych::kurtosi(raw, type = 2),
   skew_collapsed = psych::skew(agg, type = 2), kurtosis_collapsed = psych::kurtosi(agg, type = 2),
   shapiro_p_raw = sapply(raw, function(x) shapiro.test(x)$p.value),
+  # ceiling and left tail, uncollapsed answers (share of non-missing answers)
+  share_top_2_3 = sapply(raw, function(x) mean(x[!is.na(x)] &gt;= 2)),
+  share_negative = sapply(raw, function(x) mean(x[!is.na(x)] &lt; 0)),
   row.names = NULL)
 write.csv(item_normality, file.path(out_dir, &quot;item-normality.csv&quot;), row.names = FALSE)
 
@@ -1874,6 +1877,108 @@ knitr::kable(count_table, digits = 2)</code></pre>
 <pre class="r"><code>cat(&quot;Items rejecting normality (Shapiro-Wilk, uncollapsed, p &lt; .05):&quot;,
     sum(item_normality$shapiro_p_raw &lt; .05), &quot;of&quot;, nrow(item_normality), &quot;\n&quot;)</code></pre>
 <pre><code>## Items rejecting normality (Shapiro-Wilk, uncollapsed, p &lt; .05): 65 of 65</code></pre>
+<pre class="r"><code>cat(sprintf(&quot;Ceiling: %d of %d items have at least half of their answers in 2 or 3 (median item %.0f%%, range %.0f%%-%.0f%%); negative answers: median item %.1f%%, largest %.1f%%.\n&quot;,
+            sum(item_normality$share_top_2_3 &gt;= .5), nrow(item_normality),
+            100 * median(item_normality$share_top_2_3), 100 * min(item_normality$share_top_2_3),
+            100 * max(item_normality$share_top_2_3),
+            100 * median(item_normality$share_negative), 100 * max(item_normality$share_negative)))</code></pre>
+<pre><code>## Ceiling: 59 of 65 items have at least half of their answers in 2 or 3 (median item 72%, range 36%-88%); negative answers: median item 3.6%, largest 27.1%.</code></pre>
+</div>
+<div id="size-of-the-polychoric-correlations" class="section level3">
+<h3>Size of the polychoric correlations</h3>
+<pre class="r"><code>correlation_summary &lt;- do.call(rbind, lapply(names(results), function(g) {
+  u &lt;- results[[g]]$rho[upper.tri(results[[g]]$rho)]
+  data.frame(group = g, pairs = length(u), min = min(u), median = median(u), max = max(u),
+             share_above_0.30 = mean(u &gt; .30), share_above_0.50 = mean(u &gt; .50), negative = sum(u &lt; 0))
+}))
+write.csv(correlation_summary, file.path(out_dir, &quot;correlation-summary.csv&quot;), row.names = FALSE)
+knitr::kable(correlation_summary, digits = 3)</code></pre>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="7%" />
+<col width="8%" />
+<col width="8%" />
+<col width="7%" />
+<col width="21%" />
+<col width="21%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">group</th>
+<th align="right">pairs</th>
+<th align="right">min</th>
+<th align="right">median</th>
+<th align="right">max</th>
+<th align="right">share_above_0.30</th>
+<th align="right">share_above_0.50</th>
+<th align="right">negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tableau</td>
+<td align="right">2080</td>
+<td align="right">0.081</td>
+<td align="right">0.473</td>
+<td align="right">0.805</td>
+<td align="right">0.924</td>
+<td align="right">0.406</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Qlik</td>
+<td align="right">2080</td>
+<td align="right">0.030</td>
+<td align="right">0.398</td>
+<td align="right">0.751</td>
+<td align="right">0.788</td>
+<td align="right">0.184</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Power BI</td>
+<td align="right">2080</td>
+<td align="right">-0.123</td>
+<td align="right">0.314</td>
+<td align="right">0.708</td>
+<td align="right">0.539</td>
+<td align="right">0.071</td>
+<td align="right">23</td>
+</tr>
+<tr class="even">
+<td align="left">Gephi</td>
+<td align="right">2080</td>
+<td align="right">0.091</td>
+<td align="right">0.507</td>
+<td align="right">0.778</td>
+<td align="right">0.954</td>
+<td align="right">0.523</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">JMP</td>
+<td align="right">2080</td>
+<td align="right">0.023</td>
+<td align="right">0.469</td>
+<td align="right">0.801</td>
+<td align="right">0.904</td>
+<td align="right">0.392</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Agg</td>
+<td align="right">2080</td>
+<td align="right">0.162</td>
+<td align="right">0.434</td>
+<td align="right">0.723</td>
+<td align="right">0.944</td>
+<td align="right">0.225</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="number-of-factors-other-criteria-whole-sample" class="section level3">
 <h3>Number of factors: other criteria (whole sample)</h3>
@@ -1969,21 +2074,537 @@ knitr::kable(criteria)</code></pre>
 <pre class="r"><code>cat(&quot;First eigenvalues:&quot;, paste(round(eigenvalues[1:6], 2), collapse = &quot;, &quot;), &quot;\n&quot;)</code></pre>
 <pre><code>## First eigenvalues: 29.06, 3.12, 1.89, 1.34, 1.23, 1.11</code></pre>
 </div>
+<div id="stability-of-the-parallel-analysis-all-groups" class="section level3">
+<h3>Stability of the parallel analysis (all groups)</h3>
+<p>The parallel analysis of the main run (one seed) is repeated with 20
+seeds for each group, on the same polychoric matrices, to show how much
+the suggested number of factors depends on the random data.</p>
+<pre class="r"><code>pa_stability &lt;- do.call(rbind, lapply(names(results), function(g) {
+  nf &lt;- sapply(1:20, function(s) {
+    set.seed(s)
+    psych::fa.parallel(results[[g]]$rho, n.obs = nrow(datasets[[g]]), fa = &quot;fa&quot;,
+                       n.iter = params$pa_iterations, plot = FALSE)$nfact
+  })
+  data.frame(group = g, main_run = summary_table$parallel_n_factors[summary_table$group == g],
+             over_20_seeds = tab_runs(nf))
+}))</code></pre>
+<pre><code>## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  2  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  3  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA 
+## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA</code></pre>
+<pre class="r"><code>write.csv(pa_stability, file.path(out_dir, &quot;parallel-analysis-stability.csv&quot;), row.names = FALSE)
+knitr::kable(pa_stability)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">group</th>
+<th align="right">main_run</th>
+<th align="left">over_20_seeds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tableau</td>
+<td align="right">2</td>
+<td align="left">2 (20 of 20 seeds)</td>
+</tr>
+<tr class="even">
+<td align="left">Qlik</td>
+<td align="right">2</td>
+<td align="left">2 (20 of 20 seeds)</td>
+</tr>
+<tr class="odd">
+<td align="left">Power BI</td>
+<td align="right">4</td>
+<td align="left">4 (20 of 20 seeds)</td>
+</tr>
+<tr class="even">
+<td align="left">Gephi</td>
+<td align="right">2</td>
+<td align="left">2 (20 of 20 seeds)</td>
+</tr>
+<tr class="odd">
+<td align="left">JMP</td>
+<td align="right">3</td>
+<td align="left">2 (5 of 20 seeds), 3 (15 of 20 seeds)</td>
+</tr>
+<tr class="even">
+<td align="left">Agg</td>
+<td align="right">5</td>
+<td align="left">5 (20 of 20 seeds)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="collapsed-vs-uncollapsed-data-whole-sample" class="section level3">
+<h3>Collapsed vs uncollapsed data (whole sample)</h3>
+<p>The EFA of the whole sample is repeated on the
+<strong>uncollapsed</strong> ratings (same polychoric correlations,
+principal axis, promax) to check that collapsing the rare options does
+not change the structure. For each number of factors, the factors of the
+two solutions are matched by Tucker’s congruence coefficient, and the
+items are compared by their primary factor (largest loading).</p>
+<pre class="r"><code>dir.create(file.path(out_dir, &quot;loadings-uncollapsed&quot;), showWarnings = FALSE)
+rho_raw &lt;- psych::polychoric(raw)$rho
+write.csv(rho_raw, file.path(out_dir, &quot;correlations&quot;, &quot;polychoric-agg-uncollapsed.csv&quot;))
+items &lt;- names(agg)
+uncollapsed_rows &lt;- list()
+variance_rows &lt;- list()
+for (k in seq_len(params$n_factors_max)) {
+  rot &lt;- if (k == 1) &quot;none&quot; else &quot;promax&quot;
+  efa_u &lt;- psych::fa.sort(psych::fa(rho_raw, n.obs = nrow(raw), nfactors = k, rotate = rot, fm = &quot;pa&quot;))
+  efa_c &lt;- psych::fa.sort(psych::fa(rho_agg, n.obs = n_agg, nfactors = k, rotate = rot, fm = &quot;pa&quot;))
+  L_u &lt;- unclass(efa_u$loadings)[items, , drop = FALSE]
+  L_c &lt;- unclass(efa_c$loadings)[items, , drop = FALSE]
+  write.csv(data.frame(terms = rownames(unclass(efa_u$loadings)), unclass(efa_u$loadings), check.names = FALSE),
+            file.path(out_dir, &quot;loadings-uncollapsed&quot;, sprintf(&quot;pa-%d-factors-agg.csv&quot;, k)), row.names = FALSE)
+  cong &lt;- psych::factor.congruence(L_c, L_u)
+  match &lt;- apply(abs(cong), 1, which.max)              # uncollapsed factor matched to each collapsed factor
+  prim_c &lt;- apply(L_c, 1, which.max)
+  prim_u &lt;- apply(L_u, 1, which.max)
+  changed &lt;- items[match[prim_c] != prim_u]
+  uncollapsed_rows[[k]] &lt;- data.frame(
+    factors = k,
+    congruence = paste(sprintf(&quot;%.3f&quot;, sapply(seq_len(k), function(i) cong[i, match[i]])), collapse = &quot;, &quot;),
+    one_to_one_match = length(unique(match)) == k,
+    items_same_primary_factor = sum(match[prim_c] == prim_u),
+    items_changing_factor = paste(changed, collapse = &quot; &quot;),
+    cum_variance_collapsed = sum(efa_c$Vaccounted[&quot;Proportion Var&quot;, ]),
+    cum_variance_uncollapsed = sum(efa_u$Vaccounted[&quot;Proportion Var&quot;, ]))
+  # variance explained by each factor, uncollapsed factor matched to the collapsed one
+  pv_c &lt;- efa_c$Vaccounted[&quot;Proportion Var&quot;, colnames(L_c)]
+  pv_u &lt;- efa_u$Vaccounted[&quot;Proportion Var&quot;, colnames(L_u)]
+  variance_rows[[k]] &lt;- rbind(
+    data.frame(solution = paste(k, if (k == 1) &quot;factor&quot; else &quot;factors&quot;), factor = colnames(L_c),
+               collapsed = unname(pv_c), uncollapsed = unname(pv_u[match])),
+    data.frame(solution = paste(k, if (k == 1) &quot;factor&quot; else &quot;factors&quot;), factor = &quot;Total&quot;,
+               collapsed = sum(pv_c), uncollapsed = sum(pv_u)))
+}
+variance_explained &lt;- do.call(rbind, variance_rows)
+variance_explained$difference &lt;- variance_explained$collapsed - variance_explained$uncollapsed
+write.csv(variance_explained, file.path(out_dir, &quot;variance-explained-agg.csv&quot;), row.names = FALSE)
+
+uncollapsed_comparison &lt;- do.call(rbind, uncollapsed_rows)
+write.csv(uncollapsed_comparison, file.path(out_dir, &quot;collapsed-vs-uncollapsed-agg.csv&quot;), row.names = FALSE)
+knitr::kable(uncollapsed_comparison, digits = 3)</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="4%" />
+<col width="24%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="13%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">factors</th>
+<th align="left">congruence</th>
+<th align="left">one_to_one_match</th>
+<th align="right">items_same_primary_factor</th>
+<th align="left">items_changing_factor</th>
+<th align="right">cum_variance_collapsed</th>
+<th align="right">cum_variance_uncollapsed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">1.000</td>
+<td align="left">TRUE</td>
+<td align="right">65</td>
+<td align="left"></td>
+<td align="right">0.439</td>
+<td align="right">0.434</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">1.000, 1.000</td>
+<td align="left">TRUE</td>
+<td align="right">64</td>
+<td align="left">P201</td>
+<td align="right">0.480</td>
+<td align="right">0.475</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">1.000, 1.000, 1.000</td>
+<td align="left">TRUE</td>
+<td align="right">62</td>
+<td align="left">P031 P06 P102</td>
+<td align="right">0.502</td>
+<td align="right">0.496</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">1.000, 1.000, 1.000, 0.990</td>
+<td align="left">TRUE</td>
+<td align="right">63</td>
+<td align="left">P06 P201</td>
+<td align="right">0.516</td>
+<td align="right">0.510</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">1.000, 1.000, 1.000, 1.000, 1.000</td>
+<td align="left">TRUE</td>
+<td align="right">63</td>
+<td align="left">P06 P103</td>
+<td align="right">0.528</td>
+<td align="right">0.523</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">1.000, 1.000, 0.990, 1.000, 0.990, 0.930</td>
+<td align="left">TRUE</td>
+<td align="right">60</td>
+<td align="left">P012 P025 P037 P041 P092</td>
+<td align="right">0.539</td>
+<td align="right">0.534</td>
+</tr>
+</tbody>
+</table>
+<p>Proportion of variance explained by each factor and in total, for the
+1–6 factor solutions. The factors are named as in the collapsed
+solution; each uncollapsed factor is the one matched to it by
+congruence.</p>
+<pre class="r"><code>knitr::kable(variance_explained, digits = 3)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">solution</th>
+<th align="left">factor</th>
+<th align="right">collapsed</th>
+<th align="right">uncollapsed</th>
+<th align="right">difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1 factor</td>
+<td align="left">PA1</td>
+<td align="right">0.439</td>
+<td align="right">0.434</td>
+<td align="right">0.005</td>
+</tr>
+<tr class="even">
+<td align="left">1 factor</td>
+<td align="left">Total</td>
+<td align="right">0.439</td>
+<td align="right">0.434</td>
+<td align="right">0.005</td>
+</tr>
+<tr class="odd">
+<td align="left">2 factors</td>
+<td align="left">PA1</td>
+<td align="right">0.288</td>
+<td align="right">0.285</td>
+<td align="right">0.003</td>
+</tr>
+<tr class="even">
+<td align="left">2 factors</td>
+<td align="left">PA2</td>
+<td align="right">0.192</td>
+<td align="right">0.190</td>
+<td align="right">0.002</td>
+</tr>
+<tr class="odd">
+<td align="left">2 factors</td>
+<td align="left">Total</td>
+<td align="right">0.480</td>
+<td align="right">0.475</td>
+<td align="right">0.005</td>
+</tr>
+<tr class="even">
+<td align="left">3 factors</td>
+<td align="left">PA1</td>
+<td align="right">0.189</td>
+<td align="right">0.180</td>
+<td align="right">0.008</td>
+</tr>
+<tr class="odd">
+<td align="left">3 factors</td>
+<td align="left">PA2</td>
+<td align="right">0.161</td>
+<td align="right">0.159</td>
+<td align="right">0.002</td>
+</tr>
+<tr class="even">
+<td align="left">3 factors</td>
+<td align="left">PA3</td>
+<td align="right">0.152</td>
+<td align="right">0.157</td>
+<td align="right">-0.005</td>
+</tr>
+<tr class="odd">
+<td align="left">3 factors</td>
+<td align="left">Total</td>
+<td align="right">0.502</td>
+<td align="right">0.496</td>
+<td align="right">0.006</td>
+</tr>
+<tr class="even">
+<td align="left">4 factors</td>
+<td align="left">PA1</td>
+<td align="right">0.178</td>
+<td align="right">0.180</td>
+<td align="right">-0.001</td>
+</tr>
+<tr class="odd">
+<td align="left">4 factors</td>
+<td align="left">PA2</td>
+<td align="right">0.148</td>
+<td align="right">0.146</td>
+<td align="right">0.002</td>
+</tr>
+<tr class="even">
+<td align="left">4 factors</td>
+<td align="left">PA3</td>
+<td align="right">0.125</td>
+<td align="right">0.126</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">4 factors</td>
+<td align="left">PA4</td>
+<td align="right">0.064</td>
+<td align="right">0.060</td>
+<td align="right">0.004</td>
+</tr>
+<tr class="even">
+<td align="left">4 factors</td>
+<td align="left">Total</td>
+<td align="right">0.516</td>
+<td align="right">0.510</td>
+<td align="right">0.005</td>
+</tr>
+<tr class="odd">
+<td align="left">5 factors</td>
+<td align="left">PA2</td>
+<td align="right">0.151</td>
+<td align="right">0.150</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">5 factors</td>
+<td align="left">PA3</td>
+<td align="right">0.144</td>
+<td align="right">0.145</td>
+<td align="right">-0.001</td>
+</tr>
+<tr class="odd">
+<td align="left">5 factors</td>
+<td align="left">PA1</td>
+<td align="right">0.107</td>
+<td align="right">0.096</td>
+<td align="right">0.011</td>
+</tr>
+<tr class="even">
+<td align="left">5 factors</td>
+<td align="left">PA5</td>
+<td align="right">0.097</td>
+<td align="right">0.105</td>
+<td align="right">-0.008</td>
+</tr>
+<tr class="odd">
+<td align="left">5 factors</td>
+<td align="left">PA4</td>
+<td align="right">0.029</td>
+<td align="right">0.026</td>
+<td align="right">0.002</td>
+</tr>
+<tr class="even">
+<td align="left">5 factors</td>
+<td align="left">Total</td>
+<td align="right">0.528</td>
+<td align="right">0.523</td>
+<td align="right">0.005</td>
+</tr>
+<tr class="odd">
+<td align="left">6 factors</td>
+<td align="left">PA2</td>
+<td align="right">0.145</td>
+<td align="right">0.147</td>
+<td align="right">-0.002</td>
+</tr>
+<tr class="even">
+<td align="left">6 factors</td>
+<td align="left">PA3</td>
+<td align="right">0.138</td>
+<td align="right">0.138</td>
+<td align="right">-0.001</td>
+</tr>
+<tr class="odd">
+<td align="left">6 factors</td>
+<td align="left">PA1</td>
+<td align="right">0.110</td>
+<td align="right">0.097</td>
+<td align="right">0.013</td>
+</tr>
+<tr class="even">
+<td align="left">6 factors</td>
+<td align="left">PA5</td>
+<td align="right">0.093</td>
+<td align="right">0.105</td>
+<td align="right">-0.012</td>
+</tr>
+<tr class="odd">
+<td align="left">6 factors</td>
+<td align="left">PA4</td>
+<td align="right">0.030</td>
+<td align="right">0.027</td>
+<td align="right">0.004</td>
+</tr>
+<tr class="even">
+<td align="left">6 factors</td>
+<td align="left">PA6</td>
+<td align="right">0.023</td>
+<td align="right">0.019</td>
+<td align="right">0.004</td>
+</tr>
+<tr class="odd">
+<td align="left">6 factors</td>
+<td align="left">Total</td>
+<td align="right">0.539</td>
+<td align="right">0.534</td>
+<td align="right">0.005</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="fit-indices" class="section level3">
 <h3>Fit indices</h3>
 <pre class="r"><code>knitr::kable(fit_table, digits = 3)</code></pre>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col width="10%" />
 <col width="9%" />
-<col width="11%" />
-<col width="5%" />
-<col width="7%" />
-<col width="14%" />
-<col width="14%" />
 <col width="8%" />
-<col width="11%" />
+<col width="10%" />
+<col width="5%" />
+<col width="6%" />
+<col width="13%" />
+<col width="13%" />
+<col width="6%" />
 <col width="7%" />
+<col width="10%" />
+<col width="6%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1994,6 +2615,7 @@ knitr::kable(criteria)</code></pre>
 <th align="right">rmsea</th>
 <th align="right">rmsea_lower</th>
 <th align="right">rmsea_upper</th>
+<th align="right">cfi</th>
 <th align="right">tli</th>
 <th align="right">bic</th>
 <th align="right">rmsr</th>
@@ -2008,6 +2630,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.351</td>
 <td align="right">0.349</td>
 <td align="right">0.356</td>
+<td align="right">0.113</td>
 <td align="right">0.076</td>
 <td align="right">17525.502</td>
 <td align="right">0.060</td>
@@ -2020,6 +2643,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.353</td>
 <td align="right">0.351</td>
 <td align="right">0.358</td>
+<td align="right">0.131</td>
 <td align="right">0.056</td>
 <td align="right">17257.584</td>
 <td align="right">0.050</td>
@@ -2032,6 +2656,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.356</td>
 <td align="right">0.354</td>
 <td align="right">0.362</td>
+<td align="right">0.144</td>
 <td align="right">0.030</td>
 <td align="right">17122.028</td>
 <td align="right">0.045</td>
@@ -2044,6 +2669,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.359</td>
 <td align="right">0.357</td>
 <td align="right">0.365</td>
+<td align="right">0.157</td>
 <td align="right">0.002</td>
 <td align="right">16991.329</td>
 <td align="right">0.042</td>
@@ -2056,6 +2682,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.363</td>
 <td align="right">0.361</td>
 <td align="right">0.369</td>
+<td align="right">0.169</td>
 <td align="right">-0.028</td>
 <td align="right">16878.267</td>
 <td align="right">0.038</td>
@@ -2068,6 +2695,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.367</td>
 <td align="right">0.364</td>
 <td align="right">0.373</td>
+<td align="right">0.180</td>
 <td align="right">-0.060</td>
 <td align="right">16781.030</td>
 <td align="right">0.035</td>
@@ -2080,6 +2708,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.326</td>
 <td align="right">0.324</td>
 <td align="right">0.332</td>
+<td align="right">0.105</td>
 <td align="right">0.067</td>
 <td align="right">14391.777</td>
 <td align="right">0.060</td>
@@ -2092,6 +2721,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.329</td>
 <td align="right">0.327</td>
 <td align="right">0.334</td>
+<td align="right">0.120</td>
 <td align="right">0.044</td>
 <td align="right">14243.446</td>
 <td align="right">0.052</td>
@@ -2104,6 +2734,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.332</td>
 <td align="right">0.330</td>
 <td align="right">0.337</td>
+<td align="right">0.133</td>
 <td align="right">0.017</td>
 <td align="right">14173.376</td>
 <td align="right">0.049</td>
@@ -2116,6 +2747,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.335</td>
 <td align="right">0.333</td>
 <td align="right">0.341</td>
+<td align="right">0.144</td>
 <td align="right">-0.013</td>
 <td align="right">14117.018</td>
 <td align="right">0.045</td>
@@ -2128,6 +2760,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.339</td>
 <td align="right">0.336</td>
 <td align="right">0.344</td>
+<td align="right">0.155</td>
 <td align="right">-0.044</td>
 <td align="right">14063.689</td>
 <td align="right">0.042</td>
@@ -2140,6 +2773,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.342</td>
 <td align="right">0.340</td>
 <td align="right">0.348</td>
+<td align="right">0.167</td>
 <td align="right">-0.077</td>
 <td align="right">14012.375</td>
 <td align="right">0.039</td>
@@ -2152,6 +2786,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.304</td>
 <td align="right">0.302</td>
 <td align="right">0.310</td>
+<td align="right">0.090</td>
 <td align="right">0.052</td>
 <td align="right">11771.765</td>
 <td align="right">0.073</td>
@@ -2164,6 +2799,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.306</td>
 <td align="right">0.304</td>
 <td align="right">0.311</td>
+<td align="right">0.112</td>
 <td align="right">0.035</td>
 <td align="right">11541.857</td>
 <td align="right">0.059</td>
@@ -2176,6 +2812,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.308</td>
 <td align="right">0.306</td>
 <td align="right">0.314</td>
+<td align="right">0.127</td>
 <td align="right">0.011</td>
 <td align="right">11447.689</td>
 <td align="right">0.052</td>
@@ -2188,6 +2825,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.311</td>
 <td align="right">0.309</td>
 <td align="right">0.316</td>
+<td align="right">0.141</td>
 <td align="right">-0.017</td>
 <td align="right">11395.708</td>
 <td align="right">0.048</td>
@@ -2200,6 +2838,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.314</td>
 <td align="right">0.312</td>
 <td align="right">0.320</td>
+<td align="right">0.152</td>
 <td align="right">-0.049</td>
 <td align="right">11382.328</td>
 <td align="right">0.045</td>
@@ -2212,6 +2851,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.318</td>
 <td align="right">0.315</td>
 <td align="right">0.323</td>
+<td align="right">0.163</td>
 <td align="right">-0.082</td>
 <td align="right">11369.511</td>
 <td align="right">0.042</td>
@@ -2224,6 +2864,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.340</td>
 <td align="right">0.338</td>
 <td align="right">0.345</td>
+<td align="right">0.129</td>
 <td align="right">0.093</td>
 <td align="right">16874.267</td>
 <td align="right">0.052</td>
@@ -2236,6 +2877,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.342</td>
 <td align="right">0.340</td>
 <td align="right">0.348</td>
+<td align="right">0.144</td>
 <td align="right">0.071</td>
 <td align="right">16697.118</td>
 <td align="right">0.046</td>
@@ -2248,6 +2890,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.346</td>
 <td align="right">0.344</td>
 <td align="right">0.351</td>
+<td align="right">0.155</td>
 <td align="right">0.044</td>
 <td align="right">16605.290</td>
 <td align="right">0.042</td>
@@ -2260,6 +2903,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.349</td>
 <td align="right">0.347</td>
 <td align="right">0.355</td>
+<td align="right">0.167</td>
 <td align="right">0.016</td>
 <td align="right">16518.179</td>
 <td align="right">0.038</td>
@@ -2272,6 +2916,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.353</td>
 <td align="right">0.351</td>
 <td align="right">0.358</td>
+<td align="right">0.178</td>
 <td align="right">-0.013</td>
 <td align="right">16417.281</td>
 <td align="right">0.035</td>
@@ -2284,6 +2929,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.357</td>
 <td align="right">0.354</td>
 <td align="right">0.362</td>
+<td align="right">0.189</td>
 <td align="right">-0.045</td>
 <td align="right">16343.551</td>
 <td align="right">0.033</td>
@@ -2296,6 +2942,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.348</td>
 <td align="right">0.347</td>
 <td align="right">0.354</td>
+<td align="right">0.114</td>
 <td align="right">0.077</td>
 <td align="right">17002.215</td>
 <td align="right">0.057</td>
@@ -2308,6 +2955,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.351</td>
 <td align="right">0.349</td>
 <td align="right">0.356</td>
+<td align="right">0.132</td>
 <td align="right">0.056</td>
 <td align="right">16756.518</td>
 <td align="right">0.047</td>
@@ -2320,6 +2968,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.354</td>
 <td align="right">0.352</td>
 <td align="right">0.360</td>
+<td align="right">0.145</td>
 <td align="right">0.030</td>
 <td align="right">16625.913</td>
 <td align="right">0.042</td>
@@ -2332,6 +2981,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.357</td>
 <td align="right">0.355</td>
 <td align="right">0.363</td>
+<td align="right">0.156</td>
 <td align="right">0.000</td>
 <td align="right">16547.842</td>
 <td align="right">0.039</td>
@@ -2344,6 +2994,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.361</td>
 <td align="right">0.359</td>
 <td align="right">0.367</td>
+<td align="right">0.166</td>
 <td align="right">-0.032</td>
 <td align="right">16480.614</td>
 <td align="right">0.037</td>
@@ -2356,6 +3007,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.365</td>
 <td align="right">0.363</td>
 <td align="right">0.372</td>
+<td align="right">0.176</td>
 <td align="right">-0.066</td>
 <td align="right">16427.860</td>
 <td align="right">0.035</td>
@@ -2368,6 +3020,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.073</td>
 <td align="right">0.071</td>
 <td align="right">0.075</td>
+<td align="right">0.752</td>
 <td align="right">0.744</td>
 <td align="right">-5091.216</td>
 <td align="right">0.040</td>
@@ -2380,6 +3033,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.063</td>
 <td align="right">0.061</td>
 <td align="right">0.065</td>
+<td align="right">0.823</td>
 <td align="right">0.810</td>
 <td align="right">-6300.584</td>
 <td align="right">0.029</td>
@@ -2392,6 +3046,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.059</td>
 <td align="right">0.057</td>
 <td align="right">0.061</td>
+<td align="right">0.848</td>
 <td align="right">0.832</td>
 <td align="right">-6534.056</td>
 <td align="right">0.025</td>
@@ -2404,6 +3059,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.057</td>
 <td align="right">0.055</td>
 <td align="right">0.059</td>
+<td align="right">0.862</td>
 <td align="right">0.842</td>
 <td align="right">-6515.216</td>
 <td align="right">0.023</td>
@@ -2416,6 +3072,7 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.056</td>
 <td align="right">0.054</td>
 <td align="right">0.058</td>
+<td align="right">0.873</td>
 <td align="right">0.850</td>
 <td align="right">-6444.599</td>
 <td align="right">0.021</td>
@@ -2428,12 +3085,56 @@ knitr::kable(criteria)</code></pre>
 <td align="right">0.055</td>
 <td align="right">0.053</td>
 <td align="right">0.057</td>
+<td align="right">0.883</td>
 <td align="right">0.855</td>
 <td align="right">-6333.247</td>
 <td align="right">0.020</td>
 </tr>
 </tbody>
 </table>
+<p><code>psych::fa</code> computes χ², CFI, TLI, RMSEA and BIC with a
+maximum-likelihood formula applied to the polychoric matrix, also for
+principal axis extraction. RMSR is the root mean square of the residual
+correlations (not the SRMR of a CFA). The whole-sample fit is also
+written as a LaTeX table for the paper
+(<code>output/table-efa-fit.tex</code>, needs <code>booktabs</code>);
+the CFA of the same structures is in step 03.</p>
+<pre class="r"><code>f &lt;- fit_table[fit_table$group == &quot;Agg&quot;, ]
+num &lt;- function(x, d) sub(&quot;^-&quot;, &quot;$-$&quot;, formatC(x, format = &quot;f&quot;, digits = d, big.mark = &quot;,&quot;))
+rows &lt;- sprintf(&quot;%d &amp; %s &amp; %d &amp; %s &amp; %s &amp; %s [%s, %s] &amp; %s &amp; %s \\\\&quot;,
+                f$factors, num(f$chi_sq, 2), as.integer(f$df), num(f$cfi, 3), num(f$tli, 3),
+                num(f$rmsea, 3), num(f$rmsea_lower, 3), num(f$rmsea_upper, 3), num(f$rmsr, 3), num(f$bic, 2))
+writeLines(c(
+  &quot;\\begin{table}[htbp]&quot;,
+  &quot;\\centering&quot;,
+  &quot;\\caption{Fit of the exploratory factor analysis solutions with 1 to 6 factors (whole sample, $N = 506$; principal axis factoring on polychoric correlations).}&quot;,
+  &quot;\\label{tab:efa-fit}&quot;,
+  &quot;\\begin{tabular}{rrrrrcrr}&quot;,
+  &quot;\\toprule&quot;,
+  &quot;Factors &amp; $\\chi^2$ &amp; df &amp; CFI &amp; TLI &amp; RMSEA [90\\% CI] &amp; RMSR &amp; BIC \\\\&quot;,
+  &quot;\\midrule&quot;,
+  rows,
+  &quot;\\bottomrule&quot;,
+  &quot;\\end{tabular}&quot;,
+  &quot;\\end{table}&quot;), file.path(out_dir, &quot;table-efa-fit.tex&quot;))
+cat(readLines(file.path(out_dir, &quot;table-efa-fit.tex&quot;)), sep = &quot;\n&quot;)</code></pre>
+<pre><code>## \begin{table}[htbp]
+## \centering
+## \caption{Fit of the exploratory factor analysis solutions with 1 to 6 factors (whole sample, $N = 506$; principal axis factoring on polychoric correlations).}
+## \label{tab:efa-fit}
+## \begin{tabular}{rrrrrcrr}
+## \toprule
+## Factors &amp; $\chi^2$ &amp; df &amp; CFI &amp; TLI &amp; RMSEA [90\% CI] &amp; RMSR &amp; BIC \\
+## \midrule
+## 1 &amp; 7,455.26 &amp; 2015 &amp; 0.752 &amp; 0.744 &amp; 0.073 [0.071, 0.075] &amp; 0.040 &amp; $-$5,091.22 \\
+## 2 &amp; 5,847.39 &amp; 1951 &amp; 0.823 &amp; 0.810 &amp; 0.063 [0.061, 0.065] &amp; 0.029 &amp; $-$6,300.58 \\
+## 3 &amp; 5,221.65 &amp; 1888 &amp; 0.848 &amp; 0.832 &amp; 0.059 [0.057, 0.061] &amp; 0.025 &amp; $-$6,534.06 \\
+## 4 &amp; 4,854.44 &amp; 1826 &amp; 0.862 &amp; 0.842 &amp; 0.057 [0.055, 0.059] &amp; 0.023 &amp; $-$6,515.22 \\
+## 5 &amp; 4,545.24 &amp; 1765 &amp; 0.873 &amp; 0.850 &amp; 0.056 [0.054, 0.058] &amp; 0.021 &amp; $-$6,444.60 \\
+## 6 &amp; 4,283.00 &amp; 1705 &amp; 0.883 &amp; 0.855 &amp; 0.055 [0.053, 0.057] &amp; 0.020 &amp; $-$6,333.25 \\
+## \bottomrule
+## \end{tabular}
+## \end{table}</code></pre>
 </div>
 <div id="polychoric-correlations-whole-sample" class="section level3">
 <h3>Polychoric correlations (whole sample)</h3>

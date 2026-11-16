@@ -117,8 +117,8 @@ analyse_group <- function(g, data) {
   # EFA, 1 to n_factors_max factors
   fits <- list()
   for (k in seq_len(params$n_factors_max)) {
-    efa <- psych::fa(rho, n.obs = n, nfactors = k, rotate = if (k == 1) "none" else "promax", fm = "pa")
-    efa <- psych::fa.sort(efa)
+    efa_fit <- psych::fa(rho, n.obs = n, nfactors = k, rotate = if (k == 1) "none" else "promax", fm = "pa")
+    efa <- psych::fa.sort(efa_fit)   # fa.sort drops some fit statistics (CFI): fit is read from efa_fit
     loadings <- as.data.frame(unclass(efa$loadings))
     variance <- as.data.frame(efa$Vaccounted)[, names(loadings), drop = FALSE]
     separator <- as.data.frame(setNames(rep(list(NA_real_), ncol(loadings)), names(loadings)))
@@ -129,9 +129,9 @@ analyse_group <- function(g, data) {
     write.csv(out, file.path(out_dir, "loadings", sprintf("pa-%d-factors-%s.csv", k, group_slug(g))),
               row.names = FALSE, na = "")
     fits[[k]] <- data.frame(group = g, factors = k,
-                            chi_sq = efa$STATISTIC, df = efa$dof,
-                            rmsea = efa$RMSEA[1], rmsea_lower = efa$RMSEA[2], rmsea_upper = efa$RMSEA[3],
-                            tli = efa$TLI, bic = efa$BIC, rmsr = efa$rms)
+                            chi_sq = efa_fit$STATISTIC, df = efa_fit$dof,
+                            rmsea = efa_fit$RMSEA[1], rmsea_lower = efa_fit$RMSEA[2], rmsea_upper = efa_fit$RMSEA[3],
+                            cfi = efa_fit$CFI, tli = efa_fit$TLI, bic = efa_fit$BIC, rmsr = efa_fit$rms)
   }
 
   list(
@@ -185,6 +185,9 @@ item_normality <- data.frame(
   skew_raw = psych::skew(raw, type = 2), kurtosis_raw = psych::kurtosi(raw, type = 2),
   skew_collapsed = psych::skew(agg, type = 2), kurtosis_collapsed = psych::kurtosi(agg, type = 2),
   shapiro_p_raw = sapply(raw, function(x) shapiro.test(x)$p.value),
+  # ceiling and left tail, uncollapsed answers (share of non-missing answers)
+  share_top_2_3 = sapply(raw, function(x) mean(x[!is.na(x)] >= 2)),
+  share_negative = sapply(raw, function(x) mean(x[!is.na(x)] < 0)),
   row.names = NULL)
 write.csv(item_normality, file.path(out_dir, "item-normality.csv"), row.names = FALSE)
 
@@ -200,6 +203,23 @@ count_table <- data.frame(
 knitr::kable(count_table, digits = 2)
 cat("Items rejecting normality (Shapiro-Wilk, uncollapsed, p < .05):",
     sum(item_normality$shapiro_p_raw < .05), "of", nrow(item_normality), "\n")
+cat(sprintf("Ceiling: %d of %d items have at least half of their answers in 2 or 3 (median item %.0f%%, range %.0f%%-%.0f%%); negative answers: median item %.1f%%, largest %.1f%%.\n",
+            sum(item_normality$share_top_2_3 >= .5), nrow(item_normality),
+            100 * median(item_normality$share_top_2_3), 100 * min(item_normality$share_top_2_3),
+            100 * max(item_normality$share_top_2_3),
+            100 * median(item_normality$share_negative), 100 * max(item_normality$share_negative)))
+```
+
+### Size of the polychoric correlations
+
+```{r correlation-summary}
+correlation_summary <- do.call(rbind, lapply(names(results), function(g) {
+  u <- results[[g]]$rho[upper.tri(results[[g]]$rho)]
+  data.frame(group = g, pairs = length(u), min = min(u), median = median(u), max = max(u),
+             share_above_0.30 = mean(u > .30), share_above_0.50 = mean(u > .50), negative = sum(u < 0))
+}))
+write.csv(correlation_summary, file.path(out_dir, "correlation-summary.csv"), row.names = FALSE)
+knitr::kable(correlation_summary, digits = 3)
 ```
 
 ### Number of factors: other criteria (whole sample)
@@ -238,10 +258,116 @@ knitr::kable(criteria)
 cat("First eigenvalues:", paste(round(eigenvalues[1:6], 2), collapse = ", "), "\n")
 ```
 
+### Stability of the parallel analysis (all groups)
+
+The parallel analysis of the main run (one seed) is repeated with 20 seeds for each group, on the same polychoric
+matrices, to show how much the suggested number of factors depends on the random data.
+
+```{r parallel-stability}
+pa_stability <- do.call(rbind, lapply(names(results), function(g) {
+  nf <- sapply(1:20, function(s) {
+    set.seed(s)
+    psych::fa.parallel(results[[g]]$rho, n.obs = nrow(datasets[[g]]), fa = "fa",
+                       n.iter = params$pa_iterations, plot = FALSE)$nfact
+  })
+  data.frame(group = g, main_run = summary_table$parallel_n_factors[summary_table$group == g],
+             over_20_seeds = tab_runs(nf))
+}))
+write.csv(pa_stability, file.path(out_dir, "parallel-analysis-stability.csv"), row.names = FALSE)
+knitr::kable(pa_stability)
+```
+
+### Collapsed vs uncollapsed data (whole sample)
+
+The EFA of the whole sample is repeated on the **uncollapsed** ratings (same polychoric correlations, principal axis,
+promax) to check that collapsing the rare options does not change the structure. For each number of factors, the
+factors of the two solutions are matched by Tucker's congruence coefficient, and the items are compared by their
+primary factor (largest loading).
+
+```{r uncollapsed}
+dir.create(file.path(out_dir, "loadings-uncollapsed"), showWarnings = FALSE)
+rho_raw <- psych::polychoric(raw)$rho
+write.csv(rho_raw, file.path(out_dir, "correlations", "polychoric-agg-uncollapsed.csv"))
+items <- names(agg)
+uncollapsed_rows <- list()
+variance_rows <- list()
+for (k in seq_len(params$n_factors_max)) {
+  rot <- if (k == 1) "none" else "promax"
+  efa_u <- psych::fa.sort(psych::fa(rho_raw, n.obs = nrow(raw), nfactors = k, rotate = rot, fm = "pa"))
+  efa_c <- psych::fa.sort(psych::fa(rho_agg, n.obs = n_agg, nfactors = k, rotate = rot, fm = "pa"))
+  L_u <- unclass(efa_u$loadings)[items, , drop = FALSE]
+  L_c <- unclass(efa_c$loadings)[items, , drop = FALSE]
+  write.csv(data.frame(terms = rownames(unclass(efa_u$loadings)), unclass(efa_u$loadings), check.names = FALSE),
+            file.path(out_dir, "loadings-uncollapsed", sprintf("pa-%d-factors-agg.csv", k)), row.names = FALSE)
+  cong <- psych::factor.congruence(L_c, L_u)
+  match <- apply(abs(cong), 1, which.max)              # uncollapsed factor matched to each collapsed factor
+  prim_c <- apply(L_c, 1, which.max)
+  prim_u <- apply(L_u, 1, which.max)
+  changed <- items[match[prim_c] != prim_u]
+  uncollapsed_rows[[k]] <- data.frame(
+    factors = k,
+    congruence = paste(sprintf("%.3f", sapply(seq_len(k), function(i) cong[i, match[i]])), collapse = ", "),
+    one_to_one_match = length(unique(match)) == k,
+    items_same_primary_factor = sum(match[prim_c] == prim_u),
+    items_changing_factor = paste(changed, collapse = " "),
+    cum_variance_collapsed = sum(efa_c$Vaccounted["Proportion Var", ]),
+    cum_variance_uncollapsed = sum(efa_u$Vaccounted["Proportion Var", ]))
+  # variance explained by each factor, uncollapsed factor matched to the collapsed one
+  pv_c <- efa_c$Vaccounted["Proportion Var", colnames(L_c)]
+  pv_u <- efa_u$Vaccounted["Proportion Var", colnames(L_u)]
+  variance_rows[[k]] <- rbind(
+    data.frame(solution = paste(k, if (k == 1) "factor" else "factors"), factor = colnames(L_c),
+               collapsed = unname(pv_c), uncollapsed = unname(pv_u[match])),
+    data.frame(solution = paste(k, if (k == 1) "factor" else "factors"), factor = "Total",
+               collapsed = sum(pv_c), uncollapsed = sum(pv_u)))
+}
+variance_explained <- do.call(rbind, variance_rows)
+variance_explained$difference <- variance_explained$collapsed - variance_explained$uncollapsed
+write.csv(variance_explained, file.path(out_dir, "variance-explained-agg.csv"), row.names = FALSE)
+
+uncollapsed_comparison <- do.call(rbind, uncollapsed_rows)
+write.csv(uncollapsed_comparison, file.path(out_dir, "collapsed-vs-uncollapsed-agg.csv"), row.names = FALSE)
+knitr::kable(uncollapsed_comparison, digits = 3)
+```
+
+Proportion of variance explained by each factor and in total, for the 1–6 factor solutions. The factors are named as in
+the collapsed solution; each uncollapsed factor is the one matched to it by congruence.
+
+```{r variance-explained}
+knitr::kable(variance_explained, digits = 3)
+```
+
 ### Fit indices
 
 ```{r fit-table}
 knitr::kable(fit_table, digits = 3)
+```
+
+`psych::fa` computes χ², CFI, TLI, RMSEA and BIC with a maximum-likelihood formula applied to the polychoric matrix,
+also for principal axis extraction. RMSR is the root mean square of the residual correlations (not the SRMR of a CFA).
+The whole-sample fit is also written as a LaTeX table for the paper (`output/table-efa-fit.tex`, needs `booktabs`);
+the CFA of the same structures is in step 03.
+
+```{r fit-table-tex}
+f <- fit_table[fit_table$group == "Agg", ]
+num <- function(x, d) sub("^-", "$-$", formatC(x, format = "f", digits = d, big.mark = ","))
+rows <- sprintf("%d & %s & %d & %s & %s & %s [%s, %s] & %s & %s \\\\",
+                f$factors, num(f$chi_sq, 2), as.integer(f$df), num(f$cfi, 3), num(f$tli, 3),
+                num(f$rmsea, 3), num(f$rmsea_lower, 3), num(f$rmsea_upper, 3), num(f$rmsr, 3), num(f$bic, 2))
+writeLines(c(
+  "\\begin{table}[htbp]",
+  "\\centering",
+  "\\caption{Fit of the exploratory factor analysis solutions with 1 to 6 factors (whole sample, $N = 506$; principal axis factoring on polychoric correlations).}",
+  "\\label{tab:efa-fit}",
+  "\\begin{tabular}{rrrrrcrr}",
+  "\\toprule",
+  "Factors & $\\chi^2$ & df & CFI & TLI & RMSEA [90\\% CI] & RMSR & BIC \\\\",
+  "\\midrule",
+  rows,
+  "\\bottomrule",
+  "\\end{tabular}",
+  "\\end{table}"), file.path(out_dir, "table-efa-fit.tex"))
+cat(readLines(file.path(out_dir, "table-efa-fit.tex")), sep = "\n")
 ```
 
 ### Polychoric correlations (whole sample)
