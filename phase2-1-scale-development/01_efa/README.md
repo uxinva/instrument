@@ -14,7 +14,7 @@ Open `instrument.Rproj` (repository root) and knit `01_efa.Rmd`, or run from the
 Rscript -e 'rmarkdown::render("phase2-1-scale-development/01_efa/01_efa.Rmd")'
 ```
 
-You need R 4.5.2 with `psych`, `corrplot`, `naniar`, `here` and `rmarkdown` (see `renv.lock`). The run takes about 10 minutes, most of it in the parallel analyses (polychoric simulated data: `poly_pa_iterations` in the header, 0 skips it and saves about 4 minutes). First run `data/prepare_data.py` once so that `data/prepared/by-tool/` exists (see [`data/README.md`](../data/README.md)).
+You need R 4.5.2 with `psych`, `corrplot`, `naniar`, `ggplot2`, `here` and `rmarkdown` (see `renv.lock`). The run takes about 10 minutes, most of it in the parallel analyses (polychoric simulated data: `poly_pa_iterations` in the header, 0 skips it and saves about 4 minutes). First run `data/prepare_data.py` once so that `data/prepared/by-tool/` exists (see [`data/README.md`](../data/README.md)).
 
 ## Input
 
@@ -58,6 +58,8 @@ Differences from the original notebook. None of them changes a result:
 | `loadings-uncollapsed/pa-<k>-factors-agg.csv`, `correlations/polychoric-agg-uncollapsed.csv` | EFA of the whole sample on the uncollapsed ratings |
 | `parallel-analysis-stability.csv` | Per group: factors suggested by the parallel analysis of the main run and over 20 seeds |
 | `number-of-factors-criteria-agg.csv` | Whole sample: parallel analysis (factors and components, 20 seeds), MAP, eigenvalues > 1 |
+| `plots/figure-histograms-task-cognition.pdf`, `-system.pdf`, `-visualization.pdf` | Histograms of the items of each factor of the three-factor solution (25, 18 and 22 items), uncollapsed answers (−3 … +3), with the 2.5% merging threshold; figures of the paper's appendix |
+| `plots/figure-scree-pooled.pdf`, `plots/figure-scree-by-system.pdf` | Scree plots with parallel analysis for the paper (first 12 factors, log scale): pooled sample (main text) and the five systems (appendix) |
 | `plots/scree-<group>.pdf`, `plots/polychoric-agg.pdf` | Scree plots with parallel analysis; whole-sample correlation plot |
 | `check-vs-2026-03-18.csv`, `check-kmo-vs-2026-03-18.csv` | Comparison with the reference run |
 | `run_info.txt`, `sessionInfo.txt` | Date, MD5 of the inputs, R session |
@@ -100,5 +102,5 @@ Each tool has about 100 participants for 65 items. The per-tool polychoric matri
 | % missing, Little's MCAR, α, Mardia | identical |
 
 - **Why the per-tool KMO differs slightly more:** KMO inverts the correlation matrix. The smoothed per-tool matrices have a condition number of about 3e11, so differences of 1e-11 in the correlations become about 1e-8 in KMO.
-- **Parallel analysis is random.** Each group gets the same number of factors as on 2026-03-18, except JMP. The groups do not agree with each other: Agg 5; Tableau, Qlik and Gephi 2; Power BI 4; JMP 3 (2 on 2026-03-18). Across 20 seeds (`output/parallel-analysis-stability.csv`), JMP gives 3 in 17 runs and 2 in 3; every other group gives the same number in all 20. The 2026-03-18 run set no seed, so the JMP difference is expected. The per-tool samples (about 100 participants) suggest fewer factors than the whole sample, as is usual with small n.
+- **Parallel analysis is random.** Each group gets the same number of factors as on 2026-03-18, except JMP. The groups do not agree with each other: Agg 5; Tableau, Qlik and Gephi 2; Power BI 4; JMP 3 (2 on 2026-03-18). Across 20 seeds (`output/parallel-analysis-stability.csv`), JMP gives 3 in 15 runs and 2 in 5; every other group gives the same number in all 20. The notebook sets `options(mc.cores = 1)`: on Linux and macOS `fa.parallel` otherwise runs its simulations on several cores, which `set.seed()` does not control, and the counts change between runs. The 2026-03-18 run set no seed, so the JMP difference is expected. The per-tool samples (about 100 participants) suggest fewer factors than the whole sample, as is usual with small n.
 - **Error in the old summary file:** the reference `Summary of Measures of Sampling Adequacy.csv` has the Mardia skewness value in its "Skew p_value" column. `sampling-adequacy-summary.csv` gives the real p-value.

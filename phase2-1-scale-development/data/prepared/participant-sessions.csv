@@ -1,0 +1,2123 @@
+round,survey,response_id,seed,system,code,outcome,in_data,repeated_valid_participant
+1,686728,15,1125665582,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,16,540626968,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,17,825370448,Tableau,C15VDVOL,valid,True,False
+1,686728,19,157288399,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,21,1569676288,Tableau,C15VDVOL,valid,True,False
+1,686728,22,281389972,Tableau,C15VDVOL,valid,True,False
+1,686728,24,1805190929,Tableau,C15VDVOL,valid,True,False
+1,686728,25,80821435,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,27,1397871886,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,28,389707909,Tableau,C15VDVOL,valid,True,False
+1,686728,29,2087809401,Tableau,C15VDVOL,valid,True,False
+1,686728,30,1847534234,Tableau,C15VDVOL,valid,True,False
+1,686728,32,1463933243,Tableau,C15VDVOL,valid,True,False
+1,686728,37,76998092,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,38,1000154074,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,43,1234149963,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,44,627907276,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,46,111222848,Tableau,C15VDVOL,valid,True,False
+1,686728,47,1174442837,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,48,1755096455,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,49,1598781911,Tableau,C15VDVOL,valid,True,False
+1,686728,50,1312377663,Tableau,C15VDVOL,valid,True,False
+1,686728,54,1992970295,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,55,1059963831,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,56,15950688,Tableau,C15VDVOL,valid,True,False
+1,686728,57,530889269,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,58,1629913678,Tableau,C15VDVOL,valid,True,False
+1,686728,61,1176758459,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,62,219385533,Tableau,C15VDVOL,valid,True,False
+1,686728,64,1322194850,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,66,167942953,Tableau,C15VDVOL,valid,True,False
+1,686728,67,1829237453,Tableau,C15VDVOL,valid,True,False
+1,686728,70,503535398,Tableau,C15VDVOL,valid,True,False
+1,686728,71,887933773,Tableau,C15VDVOL,valid,True,False
+1,686728,72,2098565277,Tableau,C15VDVOL,valid,True,False
+1,686728,74,1768395602,Tableau,C15VDVOL,valid,True,False
+1,686728,75,218002015,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,76,374884016,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,77,650443977,Tableau,C15VDVOL,valid,True,False
+1,686728,78,1086987241,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,79,1437989736,,C1LYP9HZ,screened out,False,False
+1,686728,82,206342059,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,83,27146258,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,84,887655919,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,85,851120311,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,87,2075889040,Tableau,C15VDVOL,valid,True,True
+1,686728,88,1929123370,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,89,1895504226,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,90,140024534,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,91,517443377,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,92,1803270283,Tableau,C15VDVOL,valid,True,False
+1,686728,93,628897750,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,94,1290424675,Tableau,C1LYP9HZ,screened out,False,False
+1,686728,95,2091242395,Tableau,C15VDVOL,valid,True,False
+1,686728,99,1279859638,Tableau,C15VDVOL,valid,True,False
+1,686728,110,396878099,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,112,1638530930,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,113,1283618824,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,115,1402062219,Qlik,C15VDVOL,valid,True,False
+1,686728,117,2124591107,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,118,1808900131,Qlik,C15VDVOL,valid,True,False
+1,686728,119,828251173,Qlik,C15VDVOL,valid,True,False
+1,686728,123,1704614921,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,124,723516800,Qlik,C15VDVOL,valid,True,False
+1,686728,125,723921799,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,128,95233848,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,129,516377749,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,131,996604805,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,132,191547086,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,133,713128692,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,134,1405572029,Qlik,C15VDVOL,valid,True,False
+1,686728,135,1533259608,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,136,831940370,Qlik,C15VDVOL,valid,True,True
+1,686728,137,97293227,Qlik,C15VDVOL,valid,True,False
+1,686728,138,1066721337,Qlik,C13OIWSR,no consent,False,False
+1,686728,139,672290241,Qlik,C15VDVOL,valid,True,False
+1,686728,140,1405735530,Qlik,C15VDVOL,valid,True,False
+1,686728,141,354627225,Qlik,C15VDVOL,valid,True,False
+1,686728,142,1008974964,Qlik,C15VDVOL,valid,True,False
+1,686728,143,2080556066,Qlik,C15VDVOL,valid,True,False
+1,686728,145,2129380666,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,146,2028473339,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,148,1864825845,Qlik,C15VDVOL,valid,True,False
+1,686728,149,596979620,Qlik,C15VDVOL,valid,True,False
+1,686728,151,296586707,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,153,1781255339,Qlik,C15VDVOL,valid,True,False
+1,686728,154,641993875,Qlik,C15VDVOL,valid,True,False
+1,686728,156,1337320065,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,157,2026238821,Qlik,C15VDVOL,valid,True,False
+1,686728,158,1193194782,Qlik,C15VDVOL,valid,True,False
+1,686728,159,100363360,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,161,324704286,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,162,1877679468,Qlik,C15VDVOL,valid,True,False
+1,686728,163,1105125465,,C1LYP9HZ,screened out,False,False
+1,686728,164,1470701507,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,165,2095735651,Qlik,C15VDVOL,valid,True,False
+1,686728,166,855153829,Qlik,C15VDVOL,valid,True,False
+1,686728,167,736816944,Qlik,C15VDVOL,valid,True,False
+1,686728,169,2081303480,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,170,2081872192,Qlik,C15VDVOL,valid,True,False
+1,686728,171,375198292,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,172,12812185,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,173,1696142077,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,174,315510480,Qlik,C15VDVOL,valid,True,False
+1,686728,175,740365928,Qlik,C1LYP9HZ,screened out,False,False
+1,686728,176,559954598,Qlik,C15VDVOL,valid,True,False
+1,686728,177,1314257371,Qlik,C15VDVOL,valid,True,False
+2,378394,13,1705764440,Gephi,C15VDVOL,valid,True,False
+2,378394,14,310507182,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,16,1712445359,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,17,943104134,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,18,789618051,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,24,2120303712,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,27,221159734,Gephi,C15VDVOL,valid,True,False
+2,378394,28,278604005,Gephi,C15VDVOL,valid,True,False
+2,378394,34,367104474,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,37,1383439808,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,38,1248179864,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,39,1556757354,Gephi,C15VDVOL,valid,True,False
+2,378394,47,159748818,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,51,656543115,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,52,442310629,Gephi,C15VDVOL,valid,True,False
+2,378394,53,694473722,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,54,831060384,Gephi,C15VDVOL,valid,True,False
+2,378394,55,1862573432,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,56,509384724,Gephi,C15VDVOL,valid,True,False
+2,378394,57,1689898582,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,58,488291185,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,62,608102285,Gephi,C15VDVOL,valid,True,False
+2,378394,64,1607537317,Gephi,C15VDVOL,valid,True,True
+2,378394,65,978303612,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,66,2137565402,Gephi,C15VDVOL,valid,True,False
+2,378394,67,1522917122,Gephi,C15VDVOL,valid,True,False
+2,378394,68,319742610,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,73,2072143555,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,75,1202492001,Gephi,C15VDVOL,valid,True,False
+2,378394,76,654617564,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,77,136679319,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,78,981390689,Gephi,C15VDVOL,valid,True,False
+2,378394,79,1145393410,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,81,611921149,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,82,478968595,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,83,443126205,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,84,326514350,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,85,1034883623,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,88,1543976566,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,89,1526552067,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,91,925983386,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,93,851944318,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,97,369106697,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,98,1448205320,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,99,39721106,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,104,1343817349,Gephi,C15VDVOL,valid,True,False
+2,378394,105,1511293294,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,108,1439321169,Gephi,C15VDVOL,valid,True,False
+2,378394,109,543773504,Gephi,C15VDVOL,valid,True,False
+2,378394,110,664048750,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,111,688058364,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,113,1372865756,Gephi,C15VDVOL,valid,True,False
+2,378394,116,1746251451,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,117,1163487595,Gephi,C15VDVOL,valid,True,False
+2,378394,118,1984632236,Gephi,C15VDVOL,valid,True,False
+2,378394,119,1229296106,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,121,1262037816,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,122,644658156,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,123,1632371144,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,128,467222478,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,129,1767911960,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,130,2129358925,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,131,840454350,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,132,1020593446,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,134,1680893846,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,137,2141818560,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,139,54649663,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,140,1736855864,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,146,662103196,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,148,777008722,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,149,661990984,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,150,101428065,Gephi,C15VDVOL,valid,True,False
+2,378394,151,160247369,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,152,1750281514,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,153,2107599259,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,154,1276022246,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,155,1539829050,Gephi,C15VDVOL,valid,True,False
+2,378394,157,1801389264,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,158,583827579,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,159,1498075860,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,160,411139273,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,161,206468210,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,163,584720726,Gephi,C15VDVOL,valid,True,False
+2,378394,164,1287926203,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,165,1496227247,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,169,1789131799,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,170,1216072050,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,171,1495240152,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,172,1252871938,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,173,1109179375,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,174,2065599513,Gephi,C15VDVOL,valid,True,False
+2,378394,175,702922876,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,176,959791510,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,177,1247597617,Gephi,C15VDVOL,valid,True,False
+2,378394,179,109537850,Gephi,C15VDVOL,valid,True,False
+2,378394,229,1367417124,JMP,C1LYP9HZ,screened out,False,False
+2,378394,230,1410325364,JMP,C1LYP9HZ,screened out,False,False
+2,378394,231,1253292731,JMP,C1LYP9HZ,screened out,False,False
+2,378394,234,732411461,JMP,C1LYP9HZ,screened out,False,False
+2,378394,235,555856317,JMP,C1LYP9HZ,screened out,False,False
+2,378394,237,1269437519,JMP,C15VDVOL,valid,True,False
+2,378394,238,1905590405,JMP,C1LYP9HZ,screened out,False,False
+2,378394,239,1692202583,JMP,C1LYP9HZ,screened out,False,False
+2,378394,240,1311934110,JMP,C1LYP9HZ,screened out,False,False
+2,378394,241,1635589700,JMP,C1LYP9HZ,screened out,False,False
+2,378394,248,1206789465,JMP,C1LYP9HZ,screened out,False,False
+2,378394,249,835124782,JMP,C15VDVOL,valid,True,False
+2,378394,250,1284553869,JMP,C15VDVOL,valid,True,False
+2,378394,251,30291268,JMP,C1LYP9HZ,screened out,False,False
+2,378394,252,1269872043,JMP,C1LYP9HZ,screened out,False,False
+2,378394,254,2083017060,JMP,C1LYP9HZ,screened out,False,False
+2,378394,256,2009030564,JMP,C1LYP9HZ,screened out,False,False
+2,378394,257,459785721,JMP,C1LYP9HZ,screened out,False,False
+2,378394,258,1632264205,JMP,C1LYP9HZ,screened out,False,False
+2,378394,259,1198928869,JMP,C1LYP9HZ,screened out,False,False
+2,378394,260,1860673831,JMP,C1LYP9HZ,screened out,False,False
+2,378394,265,1358761857,JMP,C15VDVOL,valid,True,False
+2,378394,266,1513337443,JMP,C1LYP9HZ,screened out,False,False
+2,378394,268,1177843468,JMP,C1LYP9HZ,screened out,False,False
+2,378394,269,83778075,JMP,C15VDVOL,valid,True,False
+2,378394,270,900045150,JMP,C1LYP9HZ,screened out,False,False
+2,378394,271,620045425,JMP,C15VDVOL,valid,True,False
+2,378394,272,1586805677,JMP,C1LYP9HZ,screened out,False,False
+2,378394,276,2124532652,JMP,C1LYP9HZ,screened out,False,False
+2,378394,277,1062345300,JMP,C1LYP9HZ,screened out,False,False
+2,378394,278,2090687876,JMP,C15VDVOL,valid,True,False
+2,378394,280,332545460,JMP,C1LYP9HZ,screened out,False,False
+2,378394,281,642003894,JMP,C15VDVOL,valid,True,False
+2,378394,283,805369587,JMP,C1LYP9HZ,screened out,False,False
+2,378394,284,1073980055,JMP,C1LYP9HZ,screened out,False,False
+2,378394,285,807014581,JMP,C1LYP9HZ,screened out,False,False
+2,378394,289,2019295198,JMP,C1LYP9HZ,screened out,False,False
+2,378394,291,345682338,JMP,C15VDVOL,valid,True,False
+2,378394,292,1749643344,JMP,C1LYP9HZ,screened out,False,False
+2,378394,299,61798313,JMP,C15VDVOL,valid,True,False
+2,378394,301,2006627922,JMP,C15VDVOL,valid,True,False
+2,378394,303,701018401,JMP,C1LYP9HZ,screened out,False,False
+2,378394,304,1780422984,JMP,C15VDVOL,valid,True,False
+2,378394,309,1645724631,JMP,C1LYP9HZ,screened out,False,False
+2,378394,310,1810991963,JMP,C1LYP9HZ,screened out,False,False
+2,378394,311,1770721728,JMP,C15VDVOL,valid,True,False
+2,378394,315,975284456,JMP,C1LYP9HZ,screened out,False,False
+2,378394,317,2032561870,JMP,C1LYP9HZ,screened out,False,False
+2,378394,318,1082517681,JMP,C1LYP9HZ,screened out,False,False
+2,378394,319,220941477,JMP,C1LYP9HZ,screened out,False,False
+2,378394,321,1589127881,JMP,C1LYP9HZ,screened out,False,False
+2,378394,325,1708172610,JMP,C1LYP9HZ,screened out,False,False
+2,378394,329,1617409112,JMP,C1LYP9HZ,screened out,False,False
+2,378394,330,1689430016,JMP,C1LYP9HZ,screened out,False,False
+2,378394,331,1827714625,JMP,C1LYP9HZ,screened out,False,False
+2,378394,332,34904458,JMP,C15VDVOL,valid,True,False
+2,378394,334,1623693880,JMP,C1LYP9HZ,screened out,False,False
+2,378394,337,1475308839,JMP,C1LYP9HZ,screened out,False,False
+2,378394,338,2017214790,JMP,C1LYP9HZ,screened out,False,False
+2,378394,339,1150097396,JMP,C1LYP9HZ,screened out,False,False
+2,378394,340,24685681,JMP,C1LYP9HZ,screened out,False,False
+2,378394,341,1571975124,JMP,C1LYP9HZ,screened out,False,False
+2,378394,343,1245081779,JMP,C1LYP9HZ,screened out,False,False
+2,378394,344,1645130141,JMP,C1LYP9HZ,screened out,False,False
+2,378394,345,169112381,JMP,C1LYP9HZ,screened out,False,False
+2,378394,346,1988248616,JMP,C1LYP9HZ,screened out,False,False
+2,378394,347,1274481343,JMP,C15VDVOL,valid,True,False
+2,378394,348,962236839,JMP,C1LYP9HZ,screened out,False,False
+2,378394,349,80143926,JMP,C1LYP9HZ,screened out,False,False
+2,378394,350,1058791921,JMP,C1LYP9HZ,screened out,False,False
+2,378394,353,1276934829,JMP,C1LYP9HZ,screened out,False,False
+2,378394,355,1220948988,JMP,C15VDVOL,valid,True,False
+2,378394,356,1560255057,JMP,C15VDVOL,valid,True,False
+2,378394,357,1945865045,JMP,C15VDVOL,valid,True,False
+2,378394,358,1343184384,JMP,C1LYP9HZ,screened out,False,False
+2,378394,359,375064220,JMP,C15VDVOL,valid,True,False
+2,378394,363,1778270346,JMP,C1LYP9HZ,screened out,False,False
+2,378394,364,388034222,JMP,C1LYP9HZ,screened out,False,False
+2,378394,366,1151520080,JMP,C15VDVOL,valid,True,False
+2,378394,367,1399458299,JMP,C1LYP9HZ,screened out,False,False
+2,378394,368,1779339622,JMP,C15VDVOL,valid,True,False
+2,378394,369,1480564831,JMP,C15VDVOL,valid,True,False
+2,378394,374,1929474177,JMP,C1LYP9HZ,screened out,False,False
+2,378394,375,1950932512,JMP,C1LYP9HZ,screened out,False,False
+2,378394,376,1733728894,JMP,C1LYP9HZ,screened out,False,False
+2,378394,377,429833999,JMP,C1LYP9HZ,screened out,False,False
+2,378394,379,44236923,JMP,C15VDVOL,valid,True,False
+2,378394,380,200685556,JMP,C15VDVOL,valid,True,False
+2,378394,381,1691268940,JMP,C15VDVOL,valid,True,False
+2,378394,383,722395864,JMP,C15VDVOL,valid,True,False
+2,378394,384,2018931205,JMP,C15VDVOL,valid,True,False
+2,378394,387,214591033,Power BI,C15VDVOL,valid,True,False
+2,378394,389,1141124080,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,391,727729239,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,392,811026088,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,396,1362687641,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,397,1477851797,Power BI,C15VDVOL,valid,True,False
+2,378394,399,2122413426,Power BI,C15VDVOL,valid,True,False
+2,378394,400,1773667922,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,401,1127360711,Power BI,C15VDVOL,valid,True,False
+2,378394,402,1602750233,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,403,1640390656,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,404,422242758,Power BI,C15VDVOL,valid,True,False
+2,378394,405,172161895,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,406,740209022,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,408,23038545,Power BI,C15VDVOL,valid,True,False
+2,378394,409,1862665525,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,410,400783663,Power BI,C15VDVOL,valid,True,False
+2,378394,411,906802674,Power BI,C15VDVOL,valid,True,False
+2,378394,413,111300978,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,414,1862521605,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,415,349902035,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,416,2054792294,Power BI,C15VDVOL,valid,True,False
+2,378394,417,1221342862,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,418,814068940,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,419,2013332371,Power BI,C15VDVOL,valid,True,False
+2,378394,423,371326662,Power BI,C15VDVOL,valid,True,False
+2,378394,424,1918782880,Power BI,C15VDVOL,valid,True,False
+2,378394,428,419265597,Power BI,C15VDVOL,valid,True,False
+2,378394,429,1286943163,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,430,606535832,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,431,1679462730,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,435,1675110036,Power BI,C15VDVOL,valid,True,False
+2,378394,436,1034052647,Power BI,C15VDVOL,valid,True,False
+2,378394,437,812035482,Power BI,C15VDVOL,valid,True,False
+2,378394,439,521373414,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,441,2006371666,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,443,71489469,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,444,646719477,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,445,1319339755,Power BI,C15VDVOL,valid,True,False
+2,378394,446,934154814,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,448,1474325684,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,449,1035255657,Power BI,C15VDVOL,valid,True,False
+2,378394,450,1679701377,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,451,1090057172,Power BI,C15VDVOL,valid,True,False
+2,378394,452,1060811012,Power BI,C15VDVOL,valid,True,False
+2,378394,453,1681078949,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,454,28450026,Power BI,C15VDVOL,valid,True,False
+2,378394,455,1598248017,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,456,783436559,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,457,1826558503,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,460,2048044925,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,461,123579303,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,463,1193815291,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,464,880347246,Power BI,C15VDVOL,valid,True,False
+2,378394,465,1765241091,Power BI,C15VDVOL,valid,True,False
+2,378394,466,411559993,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,467,1636674742,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,468,1859318476,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,469,999899111,Power BI,C15VDVOL,valid,True,False
+2,378394,470,1348386423,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,471,1770026431,Power BI,C15VDVOL,valid,True,False
+2,378394,472,2019717836,Power BI,C15VDVOL,valid,True,False
+2,378394,477,1113397197,Power BI,C1LYP9HZ,screened out,False,False
+2,378394,478,1714277555,Gephi,C15VDVOL,valid,True,False
+2,378394,479,51038897,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,481,1246136193,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,482,421973595,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,483,742951494,Gephi,C15VDVOL,valid,True,False
+2,378394,487,1211153806,Gephi,C15VDVOL,valid,True,False
+2,378394,488,710354922,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,489,1622532711,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,491,1067022131,Gephi,C15VDVOL,valid,True,False
+2,378394,492,35139449,Gephi,C15VDVOL,valid,True,False
+2,378394,493,1456825454,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,495,1973034859,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,496,775623069,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,497,530126850,Gephi,C15VDVOL,valid,True,True
+2,378394,499,934174721,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,500,2037044324,Gephi,C15VDVOL,valid,True,False
+2,378394,501,1767537582,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,503,408024139,Gephi,C15VDVOL,valid,True,False
+2,378394,504,319552224,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,506,1613715909,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,507,1411924465,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,508,430084049,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,509,645503498,Power BI,C15VDVOL,valid,True,False
+2,378394,510,1631641385,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,511,1636115802,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,512,1776335697,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,514,24897877,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,515,2136414933,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,516,1439639952,Gephi,C15VDVOL,valid,True,False
+2,378394,517,1464476314,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,518,264952972,Gephi,C15VDVOL,valid,True,False
+2,378394,519,1299459139,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,520,1831025488,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,521,1512182927,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,522,970652659,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,524,2038956657,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,526,2033919701,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,527,1193563328,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,529,1496411579,Gephi,C15VDVOL,valid,True,False
+2,378394,530,931672677,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,533,774371570,Gephi,C15VDVOL,valid,True,False
+2,378394,534,1172728737,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,536,332736302,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,538,1407257079,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,540,1817063141,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,541,1914364535,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,542,1666865647,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,544,609269631,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,545,682345717,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,546,352548547,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,548,1432050511,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,549,542053929,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,550,1483893669,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,552,1240733394,Gephi,C15VDVOL,valid,True,False
+2,378394,556,1981474831,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,558,1237268600,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,559,2087733959,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,560,1559555664,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,561,237142419,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,562,554860315,Gephi,C15VDVOL,valid,True,False
+2,378394,563,1029593005,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,565,1099746845,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,567,51445799,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,568,1268084319,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,569,322462968,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,570,1925259741,Gephi,C15VDVOL,valid,True,False
+2,378394,571,1004462115,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,572,891631213,Gephi,C15VDVOL,valid,True,False
+2,378394,575,1281224235,Gephi,C15VDVOL,valid,True,False
+2,378394,576,687086955,Gephi,C15VDVOL,valid,True,False
+2,378394,577,1303793949,Gephi,C15VDVOL,valid,True,False
+2,378394,579,116868009,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,581,1764081455,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,582,1390195077,Gephi,C15VDVOL,valid,True,False
+2,378394,583,1468515983,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,584,1472845045,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,585,1610704083,Gephi,C15VDVOL,valid,True,False
+2,378394,586,1854945157,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,588,1158125185,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,592,767225855,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,593,2061603001,Gephi,C15VDVOL,valid,True,False
+2,378394,594,482706830,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,595,675048102,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,596,8945915,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,597,1767108120,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,598,1330479212,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,599,1975474046,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,603,1392287616,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,606,1079775470,Gephi,C15VDVOL,valid,True,False
+2,378394,608,1813557033,Gephi,C15VDVOL,valid,True,False
+2,378394,610,143716015,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,615,268233992,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,616,873321529,Gephi,C15VDVOL,valid,True,False
+2,378394,618,152989652,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,619,1180163085,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,623,97317941,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,624,1678068140,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,627,31415899,Gephi,C15VDVOL,valid,True,False
+2,378394,631,774227834,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,632,1495735587,Gephi,C15VDVOL,valid,True,False
+2,378394,633,916428465,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,635,1223849833,Gephi,C15VDVOL,valid,True,False
+2,378394,636,1721340128,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,637,246118668,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,638,912848550,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,639,1298530556,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,640,1891648563,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,641,262846048,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,642,2036402833,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,643,2114332602,Gephi,C15VDVOL,valid,True,False
+2,378394,644,456263665,Gephi,C15VDVOL,valid,True,False
+2,378394,645,1348510992,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,646,2103099359,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,647,120527280,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,648,364942038,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,649,677655976,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,650,1571227089,Gephi,C15VDVOL,valid,True,False
+2,378394,651,613152183,Gephi,C15VDVOL,valid,True,False
+2,378394,652,881933976,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,653,48365166,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,655,620387146,Gephi,C15VDVOL,valid,True,False
+2,378394,656,1235187737,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,657,1395637516,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,658,830955912,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,659,993553017,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,660,1208289523,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,662,1796828611,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,665,865747931,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,667,1194432559,Gephi,C15VDVOL,valid,True,False
+2,378394,668,93561976,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,669,888933976,Gephi,C15VDVOL,valid,True,False
+2,378394,671,1240325080,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,672,219847716,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,673,2144691449,Gephi,C15VDVOL,valid,True,False
+2,378394,675,708832166,Gephi,C15VDVOL,valid,True,False
+2,378394,676,298427536,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,677,1616013644,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,678,313057093,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,680,1024923130,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,681,1820365440,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,682,593735118,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,683,1905895100,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,684,851958400,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,685,2080394444,Gephi,C15VDVOL,valid,True,False
+2,378394,687,1684954418,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,688,1956700947,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,689,1480069157,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,690,1105904190,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,691,2133971471,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,692,1318526623,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,693,1888763146,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,696,154542203,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,697,499411436,Gephi,C15VDVOL,valid,True,False
+2,378394,698,79916008,Gephi,C15VDVOL,valid,True,False
+2,378394,701,1404826690,Gephi,C15VDVOL,valid,True,False
+2,378394,703,389144089,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,705,848351003,Gephi,C15VDVOL,valid,True,False
+2,378394,706,1155228074,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,709,1045864082,Gephi,C15VDVOL,valid,True,False
+2,378394,711,118709652,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,713,1775209544,Gephi,C15VDVOL,valid,True,False
+2,378394,714,1804503115,Gephi,C15VDVOL,valid,True,False
+2,378394,715,1742160147,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,718,947597730,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,719,584714293,Gephi,C15VDVOL,valid,True,False
+2,378394,721,695317993,Gephi,C15VDVOL,valid,True,False
+2,378394,722,36298701,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,723,1489679185,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,724,927952200,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,726,968321939,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,727,1671438637,Gephi,C15VDVOL,valid,True,False
+2,378394,728,1799040316,Gephi,C15VDVOL,valid,True,False
+2,378394,729,2036493187,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,730,377526793,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,731,495564907,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,732,1870833246,Gephi,C15VDVOL,valid,True,False
+2,378394,733,901412978,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,734,1670600518,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,736,1372741882,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,737,1257176597,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,738,1040143798,Gephi,C15VDVOL,valid,True,False
+2,378394,739,1362598018,Gephi,C15VDVOL,valid,True,False
+2,378394,740,1856854408,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,741,1867419635,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,742,959349593,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,743,1226478125,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,744,239965011,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,745,1656883701,Gephi,C15VDVOL,valid,True,False
+2,378394,746,1752998279,Gephi,C15VDVOL,valid,True,False
+2,378394,747,1390076749,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,748,2024682938,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,749,828728536,Gephi,C15VDVOL,valid,True,False
+2,378394,750,672217094,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,751,203356133,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,752,191065601,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,756,531613049,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,757,260184684,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,759,1275021569,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,760,785638237,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,762,1695655102,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,763,468831556,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,765,995751743,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,766,2119453845,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,768,814647276,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,769,170642188,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,770,786622747,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,772,1302608600,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,773,1665334138,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,774,725805982,Gephi,C15VDVOL,valid,True,False
+2,378394,777,1336872256,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,778,515341571,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,779,1901869730,Gephi,C15VDVOL,valid,True,False
+2,378394,781,710335362,Gephi,C15VDVOL,valid,True,False
+2,378394,783,487076943,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,784,1733325121,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,785,222363794,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,786,289926515,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,787,598836108,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,788,1048661448,Gephi,C15VDVOL,valid,True,False
+2,378394,791,327394604,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,793,943005552,Gephi,C15VDVOL,valid,True,False
+2,378394,794,843952728,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,795,1496180820,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,796,345576537,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,798,1741476783,Gephi,C15VDVOL,valid,True,False
+2,378394,799,1258647,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,800,2144779065,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,801,1147731710,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,803,1080769370,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,805,1527049238,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,806,789250243,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,807,1732715307,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,808,1610193380,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,810,297277438,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,811,2073966211,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,812,773151132,Gephi,C15VDVOL,valid,True,False
+2,378394,814,602203456,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,816,2015322984,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,818,1837233482,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,819,1019886246,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,820,121299672,Gephi,C15VDVOL,valid,True,False
+2,378394,821,1454896960,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,822,150912709,Gephi,C15VDVOL,valid,True,False
+2,378394,823,224972889,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,826,2143506930,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,827,66289600,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,828,2065975665,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,829,343323615,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,831,777429744,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,832,813626488,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,833,1333401296,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,834,2058079555,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,835,34939096,Gephi,C15VDVOL,valid,True,False
+2,378394,836,641838225,Gephi,C15VDVOL,valid,True,False
+2,378394,838,1323285753,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,840,1997455943,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,841,1738336634,Gephi,C15VDVOL,valid,True,False
+2,378394,842,1894344032,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,843,358387806,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,845,687436197,Gephi,C15VDVOL,valid,True,False
+2,378394,846,119671330,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,847,1403790345,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,848,2139995779,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,849,2068574958,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,851,402538285,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,852,1816529296,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,854,655447563,Gephi,C15VDVOL,valid,True,False
+2,378394,855,1047357384,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,857,2053493327,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,858,1898886571,Gephi,C15VDVOL,valid,True,False
+2,378394,859,859274760,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,860,1594999141,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,861,397027369,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,862,487149165,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,863,129643084,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,864,637584080,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,865,1332033949,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,867,1478371501,Gephi,C15VDVOL,valid,True,False
+2,378394,869,1999284404,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,870,1821251518,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,871,1455559042,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,872,138774882,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,873,712594748,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,874,1722686683,Gephi,C15VDVOL,valid,True,False
+2,378394,875,1532841447,Gephi,C15VDVOL,valid,True,False
+2,378394,877,718306525,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,879,1896037011,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,881,1388332968,Gephi,C15VDVOL,valid,True,False
+2,378394,882,49979997,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,883,699927723,,C1LYP9HZ,screened out,False,False
+2,378394,884,836622834,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,885,562089041,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,887,381761927,Gephi,C15VDVOL,valid,True,False
+2,378394,888,1375738829,Gephi,C15VDVOL,valid,True,False
+2,378394,889,6909170,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,891,1857931795,Gephi,C15VDVOL,valid,True,False
+2,378394,892,115161235,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,893,39061681,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,894,432468090,Gephi,C1LYP9HZ,screened out,False,False
+2,378394,895,1186878575,Gephi,C15VDVOL,valid,True,False
+2,378394,897,2127206152,Gephi,C15VDVOL,valid,True,False
+2,378394,900,1448863294,JMP,C1LYP9HZ,screened out,False,False
+2,378394,901,577913101,JMP,C15VDVOL,valid,True,False
+2,378394,904,414857461,JMP,C1LYP9HZ,screened out,False,False
+2,378394,905,1411268202,JMP,C1LYP9HZ,screened out,False,False
+2,378394,906,344160696,JMP,C15VDVOL,valid,True,False
+2,378394,907,1198856222,JMP,C1LYP9HZ,screened out,False,False
+2,378394,908,878563306,JMP,C1LYP9HZ,screened out,False,False
+2,378394,909,151237886,JMP,C1LYP9HZ,screened out,False,False
+2,378394,910,1937433999,JMP,C1LYP9HZ,screened out,False,False
+2,378394,911,663198354,JMP,C15VDVOL,valid,True,False
+2,378394,912,538881060,JMP,C1LYP9HZ,screened out,False,False
+2,378394,913,862695311,JMP,C1LYP9HZ,screened out,False,False
+2,378394,914,1320115749,JMP,C1LYP9HZ,screened out,False,False
+2,378394,915,1692782497,JMP,C1LYP9HZ,screened out,False,False
+2,378394,916,1186697889,JMP,C1LYP9HZ,screened out,False,False
+2,378394,917,163389631,JMP,C1LYP9HZ,screened out,False,False
+2,378394,918,1521667806,JMP,C1LYP9HZ,screened out,False,False
+2,378394,920,1413729128,JMP,C1LYP9HZ,screened out,False,False
+2,378394,921,1268356860,JMP,C1LYP9HZ,screened out,False,False
+2,378394,922,1438227955,JMP,C15VDVOL,valid,True,False
+2,378394,925,1597128089,JMP,C1LYP9HZ,screened out,False,False
+2,378394,927,1410664166,JMP,C1LYP9HZ,screened out,False,False
+2,378394,928,1462455177,JMP,C1LYP9HZ,screened out,False,False
+2,378394,929,1660376395,JMP,C1LYP9HZ,screened out,False,False
+2,378394,932,1825054480,JMP,C15VDVOL,valid,True,False
+2,378394,936,2071642238,JMP,C1LYP9HZ,screened out,False,False
+2,378394,937,882747229,JMP,C1LYP9HZ,screened out,False,False
+2,378394,939,86005638,JMP,C15VDVOL,valid,True,False
+2,378394,940,1607197460,JMP,C1LYP9HZ,screened out,False,False
+2,378394,941,1358785683,JMP,C1LYP9HZ,screened out,False,False
+2,378394,943,763120499,JMP,C1LYP9HZ,screened out,False,False
+2,378394,944,1856609440,JMP,C1LYP9HZ,screened out,False,False
+2,378394,945,429062892,JMP,C1LYP9HZ,screened out,False,False
+2,378394,947,880226573,JMP,C15VDVOL,valid,True,False
+2,378394,948,1281260506,JMP,C1LYP9HZ,screened out,False,False
+2,378394,949,1766771037,JMP,C15VDVOL,valid,True,False
+2,378394,950,194057308,JMP,C1LYP9HZ,screened out,False,False
+2,378394,951,824225701,JMP,C1LYP9HZ,screened out,False,False
+2,378394,952,193632712,JMP,C1LYP9HZ,screened out,False,False
+2,378394,954,1322439389,JMP,C1LYP9HZ,screened out,False,False
+2,378394,955,539279193,JMP,C15VDVOL,valid,True,False
+2,378394,957,1111713683,JMP,C1LYP9HZ,screened out,False,False
+2,378394,958,1546175780,JMP,C1LYP9HZ,screened out,False,False
+2,378394,959,558208472,JMP,C15VDVOL,valid,True,False
+2,378394,961,275583670,JMP,C15VDVOL,valid,True,False
+2,378394,962,1895337106,JMP,C1LYP9HZ,screened out,False,False
+2,378394,963,477918894,JMP,C1LYP9HZ,screened out,False,False
+2,378394,964,1868683829,JMP,C15VDVOL,valid,True,False
+2,378394,965,1130202971,JMP,C15VDVOL,valid,True,False
+2,378394,967,820912261,JMP,C1LYP9HZ,screened out,False,False
+2,378394,968,1022176505,JMP,C1LYP9HZ,screened out,False,False
+2,378394,970,601852599,JMP,C1LYP9HZ,screened out,False,False
+2,378394,971,273290151,JMP,C15VDVOL,valid,True,False
+2,378394,972,636401346,JMP,C1LYP9HZ,screened out,False,False
+2,378394,973,1185359858,JMP,C15VDVOL,valid,True,False
+2,378394,974,1657805338,JMP,C1LYP9HZ,screened out,False,False
+2,378394,976,975807367,JMP,C1LYP9HZ,screened out,False,False
+2,378394,977,52121780,JMP,C1LYP9HZ,screened out,False,False
+2,378394,979,1655622959,JMP,C1LYP9HZ,screened out,False,False
+2,378394,980,558831112,JMP,C1LYP9HZ,screened out,False,False
+2,378394,981,514652329,JMP,C1LYP9HZ,screened out,False,False
+2,378394,982,1810697631,JMP,C1LYP9HZ,screened out,False,False
+2,378394,983,222501408,JMP,C1LYP9HZ,screened out,False,False
+2,378394,984,678206826,JMP,C1LYP9HZ,screened out,False,False
+2,378394,985,1012023050,JMP,C1LYP9HZ,screened out,False,False
+2,378394,986,182987095,JMP,C1LYP9HZ,screened out,False,False
+2,378394,988,1113369090,JMP,C1LYP9HZ,screened out,False,False
+2,378394,991,554198179,JMP,C1LYP9HZ,screened out,False,False
+2,378394,992,1618653160,JMP,C1LYP9HZ,screened out,False,False
+2,378394,993,2056906811,JMP,C1LYP9HZ,screened out,False,False
+2,378394,994,273288425,JMP,C1LYP9HZ,screened out,False,False
+2,378394,996,466683644,JMP,C1LYP9HZ,screened out,False,False
+2,378394,997,1960222167,JMP,C1LYP9HZ,screened out,False,False
+2,378394,998,215078797,JMP,C1LYP9HZ,screened out,False,False
+2,378394,999,622530321,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1000,163450309,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1001,1656423719,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1002,647613828,JMP,C15VDVOL,valid,True,False
+2,378394,1003,615801759,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1004,89489891,JMP,C15VDVOL,valid,True,False
+2,378394,1005,517892409,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1006,1275285197,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1007,2007347873,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1010,1378189654,JMP,C15VDVOL,valid,True,False
+2,378394,1011,350933245,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1012,1319122513,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1013,1105846773,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1014,507372038,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1018,8050682,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1019,584346139,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1020,1650013491,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1021,687956360,JMP,C15VDVOL,valid,True,False
+2,378394,1022,1951862366,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1023,729045599,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1025,1896578346,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1026,1435148725,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1028,987447338,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1029,1911288290,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1031,432343458,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1032,97863226,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1034,1629415625,JMP,C15VDVOL,valid,True,False
+2,378394,1036,543059355,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1037,1633243826,JMP,C15VDVOL,valid,True,False
+2,378394,1038,353610280,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1040,2109292414,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1042,1003122578,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1043,436802966,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1045,1141458966,JMP,C15VDVOL,valid,True,False
+2,378394,1047,340107769,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1048,2120421484,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1049,2044630435,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1050,1525944790,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1051,704226105,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1053,2074770309,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1054,1240163055,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1055,1322425316,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1057,729413223,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1058,96563992,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1059,1008479658,JMP,C15VDVOL,valid,True,False
+2,378394,1061,933410304,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1062,2046446638,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1063,1248388386,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1064,1128849734,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1065,769427567,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1066,940833927,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1067,674660099,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1069,1278534372,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1071,1258612233,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1072,778806053,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1073,129821134,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1074,203898560,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1075,1232820202,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1076,678409692,JMP,C15VDVOL,valid,True,False
+2,378394,1079,2039529371,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1080,1346470853,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1081,646087069,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1082,1142376571,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1083,1002447815,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1084,1023130092,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1085,1929629348,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1087,1715760054,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1088,1869777560,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1090,904629672,JMP,C15VDVOL,valid,True,False
+2,378394,1091,657537510,JMP,C15VDVOL,valid,True,False
+2,378394,1092,1048290803,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1093,975754969,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1096,1380754218,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1097,1650734439,JMP,C15VDVOL,valid,True,False
+2,378394,1098,717647070,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1100,1200677747,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1101,490211390,J,C1LYP9HZ,screened out,False,False
+2,378394,1102,996105749,JMP,C15VDVOL,valid,True,False
+2,378394,1103,207379862,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1104,1518970177,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1105,1630424634,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1106,353674418,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1107,2059845073,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1108,270867153,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1109,1327515466,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1110,639279255,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1112,281496643,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1117,683618939,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1118,410514902,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1119,1181698799,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1120,1442367116,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1121,391038080,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1122,1748481747,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1124,1997397111,JMP,C15VDVOL,valid,True,False
+2,378394,1125,1499044378,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1126,213657981,JMP,C15VDVOL,valid,True,False
+2,378394,1128,1285593633,JMP,C15VDVOL,valid,True,False
+2,378394,1129,561463167,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1131,706570513,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1132,1222073955,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1134,1195193842,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1136,1375169216,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1137,1496516987,JMP,C15VDVOL,valid,True,False
+2,378394,1139,950584430,JMP,C15VDVOL,valid,True,False
+2,378394,1141,1312426781,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1142,1851332536,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1143,1433266029,JMP,C15VDVOL,valid,True,False
+2,378394,1144,139022790,JMP,C15VDVOL,valid,True,False
+2,378394,1145,2047266779,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1147,844859412,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1148,1910974047,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1149,1212757389,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1150,415861477,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1151,577508443,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1153,514655288,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1154,2138163565,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1155,14961533,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1156,994738180,JMP,C15VDVOL,valid,True,False
+2,378394,1158,1133695964,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1160,637948276,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1163,1979024014,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1164,34220035,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1165,807412026,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1166,308175953,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1169,1983410335,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1170,423824242,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1171,681592778,JMP,C15VDVOL,valid,True,False
+2,378394,1172,1612206611,JMP,C15VDVOL,valid,True,False
+2,378394,1173,1655579450,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1174,332600193,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1175,577552399,JMP,C15VDVOL,valid,True,False
+2,378394,1177,566708506,JMP,C15VDVOL,valid,True,False
+2,378394,1178,579250904,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1179,1553174558,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1180,685347644,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1181,432351503,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1182,38125769,JMP,C15VDVOL,valid,True,False
+2,378394,1183,150356109,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1184,72879981,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1186,368798865,JMP,C15VDVOL,valid,True,False
+2,378394,1187,1125076033,JMP,C15VDVOL,valid,True,False
+2,378394,1188,655545271,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1189,1403493721,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1190,948098787,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1191,530180836,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1192,1350606120,JMP,C15VDVOL,valid,True,False
+2,378394,1194,1041156854,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1195,1767854809,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1196,1926516023,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1198,1883877372,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1199,629787883,JMP,C15VDVOL,valid,True,False
+2,378394,1202,1404584954,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1203,1449819708,JMP,C15VDVOL,valid,True,False
+2,378394,1205,302147986,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1207,795165126,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1210,374898459,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1211,1017263834,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1213,1317949580,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1215,1627141871,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1216,1441461645,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1219,282159927,JMP,C15VDVOL,valid,True,False
+2,378394,1221,1334790,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1222,932384365,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1223,727479903,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1225,1155746400,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1227,1295343060,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1228,383693183,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1229,930791264,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1231,1415197087,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1232,1027613970,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1233,1881275217,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1234,24848057,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1235,31851794,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1237,1461126781,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1238,1808034672,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1239,1023260335,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1240,1919169826,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1241,1345203292,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1243,2142471578,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1244,1345214448,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1245,1032178520,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1246,2083248708,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1247,1224261268,JMP,C15VDVOL,valid,True,False
+2,378394,1249,1740423679,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1250,976182479,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1254,2047423443,JMP,C15VDVOL,valid,True,False
+2,378394,1256,987784625,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1257,398369416,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1258,574564681,JMP,C15VDVOL,valid,True,False
+2,378394,1259,1314847516,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1260,1421454805,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1262,49793249,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1264,1330356820,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1265,975389100,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1266,1508422035,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1267,652327461,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1268,140765565,JMP,C15VDVOL,valid,True,False
+2,378394,1269,2020149748,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1270,1036824305,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1273,1017606245,JMP,C15VDVOL,valid,True,False
+2,378394,1275,177366782,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1276,937360610,JMP,C15VDVOL,valid,True,False
+2,378394,1277,1068530873,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1278,1722915111,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1279,1806446194,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1280,769183588,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1281,1254638394,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1282,1152001991,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1284,822725301,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1285,1161610788,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1286,667858679,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1287,1564339426,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1288,2087366992,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1289,1952193,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1290,989063950,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1291,1911225465,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1292,1786018282,JMP,C15VDVOL,valid,True,False
+2,378394,1293,1086681967,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1294,759790364,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1295,1872822498,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1297,565552268,JMP,C15VDVOL,valid,True,False
+2,378394,1298,1626198434,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1300,2131324637,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1301,535210947,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1303,1385167350,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1304,358139495,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1305,1369087400,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1307,2123746294,JMP,C15VDVOL,valid,True,True
+2,378394,1308,204479131,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1309,975011363,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1310,331800683,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1311,1135810864,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1312,1595480476,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1313,1277116160,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1314,1453224421,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1315,115838936,JMP,C15VDVOL,valid,True,False
+2,378394,1316,742711497,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1317,1427345037,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1318,732937323,JMP,C15VDVOL,valid,True,False
+2,378394,1320,765558430,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1321,683329627,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1322,1649154348,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1323,599959294,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1324,399238942,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1325,1553002894,JMP,C15VDVOL,valid,True,True
+2,378394,1326,1486569623,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1327,482492457,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1328,318952423,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1329,1519120904,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1330,593765522,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1331,1897581983,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1332,1785076267,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1334,840578209,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1335,31547803,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1337,1868015710,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1338,480919500,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1341,420971118,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1342,943093421,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1343,2066410429,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1344,1329779345,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1346,1817528908,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1348,1394666256,JMP,C15VDVOL,valid,True,False
+2,378394,1350,799637914,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1351,1947447137,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1352,1259854442,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1354,1898976937,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1356,519107943,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1357,1812546967,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1359,1974966238,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1362,1063785666,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1363,2109637712,JMP,C15VDVOL,valid,True,True
+2,378394,1364,373490705,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1365,2088113755,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1366,579649255,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1367,388374640,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1368,685581928,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1369,988163055,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1370,23977959,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1371,274607083,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1372,59620496,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1373,28690651,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1375,331881175,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1376,1199139468,JMP,C15VDVOL,valid,True,False
+2,378394,1377,645242531,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1379,329556079,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1381,371065941,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1382,1757247784,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1383,347117411,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1384,2130028556,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1385,1654839042,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1386,1143647257,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1387,1287004777,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1388,779073570,JMP,C1LYP9HZ,screened out,False,False
+2,378394,1389,686841453,JMP,C15VDVOL,valid,True,False
+2,378394,1395,574806279,JMP,CXD3AJQH,screened out,False,False
+2,378394,1397,480670016,JMP,CXD3AJQH,screened out,False,False
+2,378394,1398,1555991771,JMP,CXD3AJQH,screened out,False,False
+2,378394,1399,1908255197,JMP,CXD3AJQH,screened out,False,False
+2,378394,1400,1327924330,JMP,CXD3AJQH,screened out,False,False
+2,378394,1402,758583170,JMP,CXD3AJQH,screened out,False,False
+2,378394,1403,1600040147,JMP,CXD3AJQH,screened out,False,False
+2,378394,1405,503134324,JMP,CXD3AJQH,screened out,False,False
+2,378394,1407,484157999,JMP,CXD3AJQH,screened out,False,False
+2,378394,1408,1576571625,JMP,C8M1PIH2,valid,True,False
+2,378394,1409,1971958915,JMP,C8M1PIH2,valid,True,False
+2,378394,1410,155667801,JMP,CXD3AJQH,screened out,False,False
+2,378394,1411,1392920704,JMP,CXD3AJQH,screened out,False,False
+2,378394,1412,304636792,JMP,CXD3AJQH,screened out,False,False
+2,378394,1413,1158243991,JMP,CXD3AJQH,screened out,False,False
+2,378394,1414,190595252,JMP,CXD3AJQH,screened out,False,False
+2,378394,1415,557486195,JMP,CXD3AJQH,screened out,False,False
+2,378394,1420,795034723,JMP,CXD3AJQH,screened out,False,False
+2,378394,1422,1474403477,JMP,CXD3AJQH,screened out,False,False
+2,378394,1423,1503017254,JMP,CXD3AJQH,screened out,False,False
+2,378394,1425,1576004607,JMP,CXD3AJQH,screened out,False,False
+2,378394,1427,270970639,JMP,CXD3AJQH,screened out,False,False
+2,378394,1428,1482428382,JMP,CXD3AJQH,screened out,False,False
+2,378394,1429,1431174700,JMP,C8M1PIH2,valid,True,False
+2,378394,1431,1886835147,JMP,CXD3AJQH,screened out,False,False
+2,378394,1432,1336269151,JMP,C8M1PIH2,valid,True,False
+2,378394,1433,139108921,JMP,CXD3AJQH,screened out,False,False
+2,378394,1434,985163519,JMP,CXD3AJQH,screened out,False,False
+2,378394,1437,1777468591,JMP,CXD3AJQH,screened out,False,False
+2,378394,1438,1072215024,JMP,CXD3AJQH,screened out,False,False
+2,378394,1439,719358178,JMP,CXD3AJQH,screened out,False,False
+2,378394,1440,1574806991,JMP,CXD3AJQH,screened out,False,False
+2,378394,1441,1416586407,JMP,CXD3AJQH,screened out,False,False
+2,378394,1442,738948102,JMP,CXD3AJQH,screened out,False,False
+2,378394,1443,135825627,JMP,CXD3AJQH,screened out,False,False
+2,378394,1445,2111245996,JMP,CXD3AJQH,screened out,False,False
+2,378394,1446,1034997358,JMP,C8M1PIH2,valid,True,False
+2,378394,1447,575912142,JMP,CXD3AJQH,screened out,False,False
+2,378394,1452,119930441,JMP,CXD3AJQH,screened out,False,False
+2,378394,1453,1445442921,JMP,CXD3AJQH,screened out,False,False
+2,378394,1454,1714749979,JMP,CXD3AJQH,screened out,False,False
+2,378394,1456,1968539763,JMP,CXD3AJQH,screened out,False,False
+2,378394,1457,1407101426,JMP,CXD3AJQH,screened out,False,False
+2,378394,1462,192257837,JMP,C8M1PIH2,valid,True,False
+2,378394,1463,1607693163,JMP,CXD3AJQH,screened out,False,False
+2,378394,1464,336857634,JMP,CXD3AJQH,screened out,False,False
+2,378394,1466,1486333000,JMP,CXD3AJQH,screened out,False,False
+2,378394,1467,796575062,JMP,CXD3AJQH,screened out,False,False
+2,378394,1468,1251546398,JMP,CXD3AJQH,screened out,False,False
+2,378394,1469,1596657302,JMP,CXD3AJQH,screened out,False,False
+2,378394,1470,1473697877,JMP,CXD3AJQH,screened out,False,False
+2,378394,1471,185454130,JMP,CXD3AJQH,screened out,False,False
+2,378394,1472,343628504,JMP,CXD3AJQH,screened out,False,False
+2,378394,1473,1844617418,JMP,C8M1PIH2,valid,True,False
+2,378394,1474,1541755697,JMP,CXD3AJQH,screened out,False,False
+2,378394,1477,1983244223,JMP,CXD3AJQH,screened out,False,False
+2,378394,1478,1524988853,JMP,CXD3AJQH,screened out,False,False
+2,378394,1479,1431056646,JMP,C8M1PIH2,valid,True,False
+2,378394,1482,1548945518,JMP,CXD3AJQH,screened out,False,False
+2,378394,1486,389220075,JMP,CXD3AJQH,screened out,False,False
+2,378394,1489,1244356408,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1491,2056697778,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1492,68756157,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1493,2051640760,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1495,984868196,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1496,1585018390,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1502,1607522083,Qlik,C8M1PIH2,valid,True,False
+2,378394,1503,1092263374,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1504,620797416,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1505,1394624383,Qlik,C8M1PIH2,valid,True,False
+2,378394,1506,1921551314,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1507,1741261846,Qlik,C8M1PIH2,valid,True,False
+2,378394,1511,348382619,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1513,1187427672,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1518,643120551,Qlik,C8M1PIH2,valid,True,False
+2,378394,1519,1783152515,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1520,811225020,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1521,1960561028,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1525,1972677800,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1526,33075766,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1527,904269257,Qlik,C8M1PIH2,valid,True,False
+2,378394,1530,563607302,Qlik,C8M1PIH2,valid,True,False
+2,378394,1531,996902006,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1540,661759901,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1541,533238957,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1542,966791357,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1543,1372375251,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1545,51520568,Qlik,C8M1PIH2,valid,True,False
+2,378394,1546,725216369,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1549,2021394779,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1550,1980597463,Qlik,C8M1PIH2,valid,True,False
+2,378394,1551,821076154,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1557,11780638,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1558,1352290905,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1559,1724082228,Qlik,C8M1PIH2,valid,True,False
+2,378394,1560,1706738957,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1565,1848497772,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1567,1102341094,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1568,187487264,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1569,2137476882,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1570,18789125,Qlik,C8M1PIH2,valid,True,False
+2,378394,1571,1146032105,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1572,1439169217,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1574,1468842853,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1576,1587601092,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1577,1533167614,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1579,527999650,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1580,1293485759,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1582,790777649,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1584,223244327,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1585,965724923,Qlik,C8M1PIH2,valid,True,False
+2,378394,1586,623736880,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1587,558327423,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1588,2122066108,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1591,378470547,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1592,1222451956,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1593,2109445151,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1594,1521101946,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1595,742462711,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1596,620197316,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1597,1792041069,Qlik,C8M1PIH2,valid,True,False
+2,378394,1598,1957001752,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1599,336427690,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1600,1448340869,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1601,1520633269,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1602,1283721367,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1603,692087978,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1604,958317577,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1605,1306609874,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1606,802705911,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1610,86228880,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1611,480215,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1614,1705358157,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1615,1986337482,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1616,1052585268,Qlik,C8M1PIH2,valid,True,False
+2,378394,1617,424043626,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1618,1072991517,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1620,408926540,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1621,1781499752,Qlik,C8M1PIH2,valid,True,False
+2,378394,1622,36542124,Qlik,C8M1PIH2,valid,True,False
+2,378394,1623,72827891,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1624,75306296,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1625,765087142,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1626,1308819001,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1629,41831052,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1634,1581804600,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1635,1094382984,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1636,1746963298,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1637,1957581741,Qlik,C8M1PIH2,valid,True,False
+2,378394,1638,493598353,Qlik,C8M1PIH2,valid,True,False
+2,378394,1639,1496578214,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1644,575486811,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1645,285844786,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1649,642233673,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1650,181915931,Qlik,C8M1PIH2,valid,True,False
+2,378394,1652,1839510881,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1654,1186337995,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1655,1425941392,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1656,1561520263,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1658,1565100378,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1659,2091314223,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1660,1446838090,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1661,34531308,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1662,398579664,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1666,1223727485,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1667,1217608159,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1671,895469600,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1672,854826614,Qlik,C8M1PIH2,valid,True,False
+2,378394,1674,591873120,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1675,1028660583,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1676,110313573,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1677,203011449,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1679,1576570908,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1680,580447528,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1683,1038288105,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1684,802961082,Qlik,C8M1PIH2,valid,True,False
+2,378394,1685,1008643850,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1686,127963516,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1689,1144310129,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1690,1576008613,Qlik,C8M1PIH2,valid,True,False
+2,378394,1691,1682933446,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1692,728164970,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1693,1008249077,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1694,246252802,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1695,1458501955,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1696,919652348,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1697,62350028,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1698,854043712,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1699,1893456179,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1700,532485234,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1701,1588718808,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1702,962962644,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1706,2097562046,Qlik,C8M1PIH2,valid,True,False
+2,378394,1708,94705578,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1709,390044037,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1712,661492315,Qlik,C8M1PIH2,valid,True,False
+2,378394,1713,139780812,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1714,913148186,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1715,81099556,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1716,619086675,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1717,2120271240,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1719,426321165,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1720,156381725,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1721,1248994716,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1722,2031096439,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1723,1800631702,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1726,617239664,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1729,1767445555,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1730,1010716799,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1731,539159780,Qlik,C8M1PIH2,valid,True,False
+2,378394,1733,1290908043,JMP,CXD3AJQH,screened out,False,False
+2,378394,1734,2111586134,JMP,CXD3AJQH,screened out,False,False
+2,378394,1738,1890386318,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1740,648639,JMP,CXD3AJQH,screened out,False,False
+2,378394,1741,1820615871,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1742,869097083,JMP,CXD3AJQH,screened out,False,False
+2,378394,1743,295267387,Qlik,C8M1PIH2,valid,True,False
+2,378394,1744,1593099986,Qlik,C8M1PIH2,valid,True,False
+2,378394,1745,563821333,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1746,1232693212,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1748,397903382,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1749,891201208,JMP,CXD3AJQH,screened out,False,False
+2,378394,1753,1415280173,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1755,1264282209,JMP,C8M1PIH2,valid,True,False
+2,378394,1758,1810552954,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1759,528212922,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1760,1999172263,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1761,1437214482,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1762,1741112262,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1763,1177525395,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1764,409748692,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1765,167830743,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1766,1165607540,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1767,2036286971,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1768,1593684362,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1769,1397732193,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1770,889992426,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1774,942480186,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1775,335018971,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1776,1906604746,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1777,672399538,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1778,314381955,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1779,12769997,Qlik,C8M1PIH2,valid,True,False
+2,378394,1780,2143138437,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1782,1367379546,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1783,471300154,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1785,2047066946,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1789,44329791,Qlik,C8M1PIH2,valid,True,False
+2,378394,1792,753719114,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1794,1237150204,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1796,1446563215,Qlik,C8M1PIH2,valid,True,False
+2,378394,1797,1442801775,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1801,693267642,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1802,83405925,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1803,238770616,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1805,690368825,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1806,923083539,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1807,1000469173,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1809,614927903,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1811,1382874673,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1817,2028165689,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1818,430482196,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1819,541731782,Qlik,C8M1PIH2,valid,True,False
+2,378394,1820,1042393226,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1822,1273771564,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1823,2138755531,Qlik,C8M1PIH2,valid,True,False
+2,378394,1825,1892370932,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1827,870501541,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1829,139397187,Qlik,C8M1PIH2,valid,True,False
+2,378394,1831,125629435,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1832,1997893495,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1833,775758315,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1834,305397134,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1835,1546103350,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1836,1976773586,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1838,372619155,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1839,1189816386,Qlik,C8M1PIH2,valid,True,False
+2,378394,1840,581019459,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1841,892611321,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1845,457337839,Qlik,C8M1PIH2,valid,True,False
+2,378394,1846,2074981876,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1847,685105205,Qlik,C8M1PIH2,valid,True,False
+2,378394,1848,1643495767,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1849,255310337,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1851,178075127,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1853,508755733,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1854,1988262632,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1857,1037320806,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1858,1893479221,Qlik,C8M1PIH2,valid,True,False
+2,378394,1859,484708759,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1860,1272239663,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1861,1167255307,Qlik,C8M1PIH2,valid,True,False
+2,378394,1862,2093236075,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1864,592326533,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1865,1017601682,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1866,938891285,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1867,1230741600,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1868,75294280,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1870,1979763328,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1872,1988636181,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1873,394604007,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1874,390723874,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1878,201609135,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1879,2030364673,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1880,942390253,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1881,1764354658,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1882,1988681546,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1883,404338753,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1885,1709625964,Qlik,C8M1PIH2,valid,True,False
+2,378394,1886,695933800,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1887,1957985150,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1888,1561348630,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1890,1789797511,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1891,190291563,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1892,1183196927,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1898,1369500997,Qlik,C8M1PIH2,valid,True,False
+2,378394,1899,429480490,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1900,1614585296,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1902,1046206228,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1903,1850188265,Qlik,C8M1PIH2,valid,True,False
+2,378394,1905,988432351,Qlik,C8M1PIH2,valid,True,False
+2,378394,1906,838015394,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1907,1679644045,Qlik,C8M1PIH2,valid,True,False
+2,378394,1908,1428799363,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1910,1781531,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1911,880453187,Qlik,C8M1PIH2,valid,True,False
+2,378394,1912,919800996,Qlik,C8M1PIH2,valid,True,False
+2,378394,1913,804034462,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1917,733767438,Qlik,C8M1PIH2,valid,True,False
+2,378394,1918,1984274900,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1919,798723651,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1921,1631325910,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1925,1227723830,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1926,1085123274,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1927,515942542,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1928,845049484,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1929,1022356104,Qlik,C8M1PIH2,valid,True,False
+2,378394,1932,75418213,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1934,1337017620,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1936,1569810678,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1938,345443424,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1940,1287734665,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1941,870581731,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1943,475218635,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1944,520977738,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1945,707292667,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1946,92617249,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1947,395952000,Qlik,C8M1PIH2,valid,True,False
+2,378394,1948,1075490515,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1949,2106786771,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1950,1760181916,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1958,1984854552,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1962,701974034,Qlik,C8M1PIH2,valid,True,False
+2,378394,1963,667085013,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1964,968870765,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1966,1174527813,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1967,328796293,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1971,239354688,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1973,1702134651,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1976,522515937,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1977,808249071,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1980,604033338,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1981,775945473,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1986,1331448308,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1987,1698001454,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1988,1528432396,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1989,2130760462,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1990,732481485,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1991,1861422780,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1992,495462674,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1994,2135107038,Qlik,CXD3AJQH,screened out,False,False
+2,378394,1997,1055298300,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2000,1718830467,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2001,2108609459,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2002,1082623322,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2003,527193850,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2004,27301688,Qlik,C8M1PIH2,valid,True,False
+2,378394,2007,1034077691,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2008,189402430,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2010,2138752972,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2011,610368781,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2015,1424914414,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2016,1848609804,Qlik,C8M1PIH2,valid,True,False
+2,378394,2017,1072379717,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2019,1935030568,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2023,55339958,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2026,2102369177,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2028,1469839307,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2030,1715767922,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2032,346453388,Qlik,C8M1PIH2,valid,True,False
+2,378394,2033,1941628139,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2034,885353122,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2035,2064086505,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2036,1739877930,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2037,1983517088,Qlik,C8M1PIH2,valid,True,False
+2,378394,2038,164959068,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2043,2000439003,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2044,335748747,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2046,557429315,Qlik,C8M1PIH2,valid,True,False
+2,378394,2047,1742108482,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2048,1661664696,Qlik,C8M1PIH2,valid,True,False
+2,378394,2049,676496017,Qlik,C8M1PIH2,valid,True,False
+2,378394,2050,2089718443,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2051,220177428,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2052,313540770,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2053,674532136,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2058,1709510240,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2059,1481634422,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2061,1785906859,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2062,165004519,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2066,1938891740,Qlik,C8M1PIH2,valid,True,False
+2,378394,2067,1424494732,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2068,2090817693,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2069,496739955,Qlik,C8M1PIH2,valid,True,False
+2,378394,2070,135314198,Qlik,C8M1PIH2,valid,True,False
+2,378394,2075,979829261,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2076,1638746010,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2077,1387946231,Qlik,C8M1PIH2,valid,True,False
+2,378394,2078,914848614,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2080,1796687119,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2081,61925591,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2082,1745472655,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2083,2000052309,Qlik,C8M1PIH2,valid,True,False
+2,378394,2085,1667589779,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2086,981956474,Qlik,C8M1PIH2,valid,True,False
+2,378394,2089,521285420,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2090,1853980423,Qlik,C8M1PIH2,valid,True,False
+2,378394,2091,69104169,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2092,583825261,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2094,2095112883,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2095,1791597866,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2096,422640449,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2098,1408501767,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2099,1003768161,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2102,1568040661,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2103,1677679357,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2104,2047440667,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2106,588543356,Qlik,C8M1PIH2,valid,True,False
+2,378394,2107,1370763328,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2108,247124908,Qlik,C8M1PIH2,valid,True,False
+2,378394,2109,489873063,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2110,468437713,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2111,1275918726,Qlik,C8M1PIH2,valid,True,False
+2,378394,2112,2147266552,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2116,87783683,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2117,737483307,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2118,379624613,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2120,45057065,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2121,364988583,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2122,368903980,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2123,800230567,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2124,1526387074,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2125,595599827,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2126,1321979072,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2129,668491726,Qlik,C8M1PIH2,valid,True,False
+2,378394,2130,1703940226,Qlik,C8M1PIH2,valid,True,False
+2,378394,2131,812092649,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2133,901572904,,CXD3AJQH,screened out,False,False
+2,378394,2134,218675159,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2135,1466048360,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2136,93710565,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2137,2050960956,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2138,1281508741,Qlik,C8M1PIH2,valid,True,False
+2,378394,2139,1280434918,Qlik,C8M1PIH2,valid,True,False
+2,378394,2141,1297042751,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2142,1364939786,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2143,711096599,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2144,746483379,Qlik,C8M1PIH2,valid,True,False
+2,378394,2145,830487131,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2146,581080087,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2147,1931289905,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2148,1542147833,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2149,775372343,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2151,629953524,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2152,1493410509,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2154,1185023261,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2155,334767629,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2156,112423217,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2159,783785716,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2161,590951530,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2162,761317396,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2166,1145585740,Qlik,C8M1PIH2,valid,True,False
+2,378394,2167,1535114631,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2168,352937586,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2170,1309158294,Qlik,C8M1PIH2,valid,True,False
+2,378394,2172,1934346140,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2173,1881555720,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2174,773955298,Qlik,C8M1PIH2,valid,True,False
+2,378394,2175,1550909980,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2176,350087374,,CXD3AJQH,screened out,False,False
+2,378394,2177,1116332009,,CXD3AJQH,screened out,False,False
+2,378394,2178,888949822,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2179,61190349,Qlik,C8M1PIH2,valid,True,False
+2,378394,2183,744369688,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2185,1044140580,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2189,921850561,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2190,115038075,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2191,1112455179,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2194,299197387,Tableau,C8M1PIH2,valid,True,False
+2,378394,2195,2092098720,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2196,429886677,Tableau,C8M1PIH2,valid,True,False
+2,378394,2197,111012706,Tableau,C8M1PIH2,valid,True,False
+2,378394,2199,336956454,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2200,1210304273,Qlik,CXD3AJQH,screened out,False,False
+2,378394,2201,975200086,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2202,883379658,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2203,1554119677,Qlik,C8M1PIH2,valid,True,False
+2,378394,2204,995783789,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2210,1182712167,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2213,191244194,Tableau,C8M1PIH2,valid,True,False
+2,378394,2215,1914822521,Tableau,C8M1PIH2,valid,True,False
+2,378394,2216,1247726309,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2217,799340590,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2218,147276032,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2219,50527138,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2221,832258128,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2223,855603132,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2227,472474384,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2228,610805678,Tableau,C8M1PIH2,valid,True,False
+2,378394,2229,411109596,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2230,569578412,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2231,1718483386,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2232,2120872400,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2233,1650012064,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2234,427268187,Tableau,C8M1PIH2,valid,True,False
+2,378394,2235,107899554,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2238,1943639189,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2243,1277083936,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2244,2101585084,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2246,1883180576,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2251,1676951984,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2252,1644652165,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2253,157859587,Tableau,C8M1PIH2,valid,True,False
+2,378394,2255,586597030,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2256,1434615369,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2257,1164860769,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2259,21599353,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2263,246905559,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2264,1362298948,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2265,1118793856,Tableau,C8M1PIH2,valid,True,False
+2,378394,2268,675937615,Tableau,C8M1PIH2,valid,True,False
+2,378394,2269,531161175,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2270,1740072213,Tableau,C8M1PIH2,valid,True,False
+2,378394,2271,1361198273,Tableau,C8M1PIH2,valid,True,False
+2,378394,2272,441444857,Tableau,C8M1PIH2,valid,True,False
+2,378394,2273,1284366628,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2274,162611392,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2275,440687618,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2276,1902444789,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2278,206726795,Tableau,C8M1PIH2,valid,True,False
+2,378394,2279,519209098,Tableau,C8M1PIH2,valid,True,False
+2,378394,2281,553772879,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2282,1952095651,Tableau,C8M1PIH2,valid,True,False
+2,378394,2283,1358876054,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2284,1581714879,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2286,168173856,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2287,1849343141,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2292,956371748,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2293,2108243629,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2294,1356169228,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2295,77618151,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2298,761831390,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2299,1447550148,Tableau,C8M1PIH2,valid,True,False
+2,378394,2301,1032836528,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2302,512670821,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2303,744898440,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2304,1206403383,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2305,1560208323,Tableau,C8M1PIH2,valid,True,False
+2,378394,2307,212816994,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2311,632228892,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2313,2024875906,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2314,1216009411,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2315,102547192,Tableau,C8M1PIH2,valid,True,False
+2,378394,2316,2022817717,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2318,1862858720,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2319,1042432303,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2320,1905100786,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2321,1646033656,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2322,909027247,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2323,83388576,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2324,560712873,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2325,694533436,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2326,1480310797,Tableau,C8M1PIH2,valid,True,False
+2,378394,2327,645593154,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2332,1084738197,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2333,1729374923,Tableau,C8M1PIH2,valid,True,False
+2,378394,2334,127398666,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2335,666660827,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2336,1998544444,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2338,261585236,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2339,1620044370,Tableau,C8M1PIH2,valid,True,False
+2,378394,2340,570834323,Tableau,C8M1PIH2,valid,True,False
+2,378394,2341,1245817061,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2343,65044673,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2344,431251210,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2345,831966226,Tableau,C8M1PIH2,valid,True,False
+2,378394,2347,456114921,Tableau,C8M1PIH2,valid,True,False
+2,378394,2354,654035838,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2355,1912223599,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2356,1945530135,Tableau,C8M1PIH2,valid,True,False
+2,378394,2357,971288598,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2361,1081502328,Tableau,C8M1PIH2,valid,True,False
+2,378394,2365,432027984,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2366,229843378,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2368,1289825480,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2369,152973776,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2373,1857182074,Tableau,C8M1PIH2,valid,True,False
+2,378394,2374,1477887441,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2375,1999928062,Tableau,C8M1PIH2,valid,True,False
+2,378394,2376,133222709,Tableau,C8M1PIH2,valid,True,False
+2,378394,2377,906506781,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2378,2020689084,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2379,1959834622,Tableau,C8M1PIH2,valid,True,False
+2,378394,2380,479168701,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2381,2057934008,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2382,705719725,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2383,448244267,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2384,415620710,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2385,931391025,Tableau,C8M1PIH2,valid,True,False
+2,378394,2386,1516042483,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2387,1191698533,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2389,229550094,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2390,1382946394,Tableau,C8M1PIH2,valid,True,False
+2,378394,2391,198987064,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2393,171586649,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2394,239774347,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2395,384208185,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2396,2042695536,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2397,217231748,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2398,1208669847,Tableau,C8M1PIH2,valid,True,False
+2,378394,2399,1466926371,Tableau,C8M1PIH2,valid,True,True
+2,378394,2400,1844040511,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2401,1287171752,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2402,1646473520,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2404,1360996638,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2405,588509851,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2406,278691999,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2407,456503532,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2408,327847284,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2409,1563165737,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2410,1519104014,Tableau,C8M1PIH2,valid,True,False
+2,378394,2411,1147058043,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2412,625910594,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2413,2061941654,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2414,641927128,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2415,57150682,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2417,212367255,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2418,1626602823,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2419,936395044,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2420,1776725161,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2421,1298579461,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2422,2099572472,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2423,1588062618,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2424,552291891,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2425,2092711004,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2426,1930556568,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2427,504614744,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2429,67876961,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2431,1732213761,Tableau,C8M1PIH2,valid,True,False
+2,378394,2433,198414339,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2434,1004016932,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2435,1518928310,Tableau,C8M1PIH2,valid,True,False
+2,378394,2436,749834698,Tableau,C8M1PIH2,valid,True,False
+2,378394,2437,414472466,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2439,2133955420,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2440,165304749,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2441,81324556,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2442,910338870,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2447,1533215776,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2448,1245682448,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2450,2142698763,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2451,653194768,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2453,763566412,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2456,840066377,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2457,1328022544,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2459,1515288663,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2461,1435408979,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2462,1673076136,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2463,272495923,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2465,759080445,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2466,2047284133,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2467,261999678,Tableau,C8M1PIH2,valid,True,False
+2,378394,2469,716303764,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2470,1651927779,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2471,1203951794,Tableau,C8M1PIH2,valid,True,False
+2,378394,2472,2058603071,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2473,2104273779,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2474,2061869575,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2475,1298166602,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2476,261479910,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2477,441735668,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2478,250629535,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2480,832517561,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2481,1578607708,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2483,1501629594,Tableau,C8M1PIH2,valid,True,False
+2,378394,2484,1337858297,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2485,84958945,Tableau,C8M1PIH2,valid,True,False
+2,378394,2486,331261322,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2487,746241684,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2488,85718235,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2493,61680264,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2494,1084413801,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2495,1754311374,Tableau,C8M1PIH2,valid,True,False
+2,378394,2496,1959631211,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2497,152441524,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2498,303677601,Tableau,C8M1PIH2,valid,True,False
+2,378394,2499,1840712158,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2500,289539933,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2502,121816042,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2503,1709953405,Tableau,C8M1PIH2,valid,True,False
+2,378394,2504,518370610,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2505,528553838,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2508,354714460,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2510,50763671,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2511,768295386,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2512,76647495,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2513,356536637,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2516,1173598906,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2517,518414388,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2518,113733866,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2519,1003748272,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2520,122310531,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2521,1395431211,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2522,1430361025,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2523,778212886,Tableau,C8M1PIH2,valid,True,False
+2,378394,2524,1084263375,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2525,307349672,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2527,1666456971,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2528,887079585,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2529,751717023,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2533,927584795,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2534,1039684551,Tableau,C8M1PIH2,valid,True,False
+2,378394,2535,1472960187,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2538,251714941,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2540,1795097447,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2541,651073410,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2542,236753286,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2543,1161676460,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2544,624017397,Tableau,C8M1PIH2,valid,True,False
+2,378394,2545,769283645,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2547,266094305,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2548,514415140,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2549,1553987629,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2550,1499768641,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2552,152483621,Tableau,C8M1PIH2,valid,True,False
+2,378394,2558,1746241312,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2559,310174773,Tableau,C8M1PIH2,valid,True,False
+2,378394,2563,1773695764,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2564,1569636019,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2565,181190455,Tableau,C8M1PIH2,valid,True,False
+2,378394,2566,301317201,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2569,1007261816,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2571,1213789440,Tableau,C8M1PIH2,valid,True,False
+2,378394,2572,1182572454,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2573,1115317319,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2575,1212167732,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2576,226584666,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2578,132634859,Tableau,C8M1PIH2,valid,True,False
+2,378394,2579,718065232,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2580,1127832610,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2581,543862250,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2583,1991581703,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2584,1980230177,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2585,590035988,Tableau,C8M1PIH2,valid,True,False
+2,378394,2587,1002876570,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2588,1657645298,Tableau,C8M1PIH2,valid,True,False
+2,378394,2589,1841679236,Tableau,C8M1PIH2,valid,True,False
+2,378394,2591,1839458920,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2594,1243456469,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2595,1713723322,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2596,1309455066,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2597,1813529512,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2598,1013279158,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2600,100256316,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2602,765957512,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2603,433197538,Tableau,C8M1PIH2,valid,True,False
+2,378394,2605,1519313490,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2606,393344973,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2607,1777288143,Tableau,C8M1PIH2,valid,True,False
+2,378394,2608,1719672203,Tableau,C8M1PIH2,valid,True,False
+2,378394,2609,1731519228,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2610,159082503,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2611,1245280203,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2612,525644916,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2613,1873972043,Tableau,C8M1PIH2,valid,True,False
+2,378394,2614,1743360316,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2615,915008482,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2616,1972743272,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2618,1185025230,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2619,20527137,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2620,1455531963,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2621,2132530073,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2623,1975108900,Tableau,C8M1PIH2,valid,True,False
+2,378394,2624,2006429582,Tableau,C8M1PIH2,valid,True,False
+2,378394,2625,1179833665,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2626,48372660,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2627,2138604260,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2628,955832244,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2630,1883815975,Tableau,C8M1PIH2,valid,True,False
+2,378394,2631,1350524737,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2637,1784007328,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2638,877102483,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2639,1543657531,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2644,108539727,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2645,1132481154,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2647,653448440,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2649,1676587184,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2650,910181701,Tableau,C8M1PIH2,valid,True,False
+2,378394,2651,1268461772,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2652,1793258318,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2654,187028296,Tableau,C8M1PIH2,valid,True,False
+2,378394,2657,942481728,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2658,913230520,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2659,401065458,Tableau,C8M1PIH2,valid,True,False
+2,378394,2660,1464629059,Tableau,C8M1PIH2,valid,True,False
+2,378394,2661,652836257,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2662,508570517,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2663,232867313,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2664,27771535,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2667,1926602061,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2668,80861573,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2669,1619340129,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2670,1883591536,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2672,1417970537,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2674,1937871350,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2675,1852524508,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2677,1008618345,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2678,1138285458,Tableau,C8M1PIH2,valid,True,False
+2,378394,2679,244065529,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2685,900718276,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2686,167014426,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2688,653563007,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2694,1479284571,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2695,1840259418,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2697,71679595,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2698,1321290560,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2699,1407106131,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2700,316103510,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2701,232358281,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2702,1341414063,Tableau,C8M1PIH2,valid,True,False
+2,378394,2703,146224930,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2705,185919299,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2708,1711124861,Tableau,C8M1PIH2,valid,True,False
+2,378394,2709,259312733,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2715,1491181780,Tableau,C8M1PIH2,valid,True,False
+2,378394,2716,566936333,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2717,1717990895,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2718,1139439317,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2719,1394694004,Tableau,C8M1PIH2,valid,True,False
+2,378394,2720,1315793479,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2721,855933398,Tableau,C8M1PIH2,valid,True,False
+2,378394,2722,1101743450,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2723,1916272680,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2725,850102799,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2730,1384919840,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2731,428402472,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2732,1013960089,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2733,236043109,Tableau,CXD3AJQH,screened out,False,False
+2,378394,2734,1990591289,Tableau,C8M1PIH2,valid,True,False
+2,378394,2736,1480565485,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2737,1216723977,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2739,279500566,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2740,1147506855,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2741,10268008,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2742,914918307,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2744,294292320,Power BI,C8M1PIH2,valid,True,False
+2,378394,2745,803728129,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2746,339945595,Power BI,C8M1PIH2,valid,True,False
+2,378394,2748,1385095720,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2749,306869127,Power BI,C8M1PIH2,valid,True,False
+2,378394,2750,1821041394,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2751,379575662,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2752,744429721,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2753,1846821574,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2755,1021528402,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2756,1976362671,Power BI,C8M1PIH2,valid,True,False
+2,378394,2757,1990976251,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2759,276719621,Power BI,C8M1PIH2,valid,True,False
+2,378394,2760,765721537,Power BI,C8M1PIH2,valid,True,False
+2,378394,2761,1754339236,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2762,285647958,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2764,25052087,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2765,947882919,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2767,809984027,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2768,858875278,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2769,2006163726,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2771,1258767152,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2772,266313119,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2779,1103559028,Power BI,C8M1PIH2,valid,True,False
+2,378394,2780,215970428,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2781,686468943,Power BI,C8M1PIH2,valid,True,False
+2,378394,2784,1123529174,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2785,776500516,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2786,1986779511,Power BI,C8M1PIH2,valid,True,False
+2,378394,2787,1772080054,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2788,1285784681,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2789,906401328,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2790,1783010232,Power BI,C8M1PIH2,valid,True,False
+2,378394,2791,1732320787,Power BI,C8M1PIH2,valid,True,False
+2,378394,2793,1503521855,Power BI,C8M1PIH2,valid,True,False
+2,378394,2794,2058995576,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2795,2055105115,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2796,106368723,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2797,2001461149,Power BI,C8M1PIH2,valid,True,False
+2,378394,2799,66648694,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2800,760535163,Power BI,C8M1PIH2,valid,True,False
+2,378394,2801,519684503,Power BI,C8M1PIH2,valid,True,False
+2,378394,2802,2085847155,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2803,2007247889,Power BI,C8M1PIH2,valid,True,False
+2,378394,2804,1632106154,Power BI,C8M1PIH2,valid,True,False
+2,378394,2806,2009597825,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2807,1150195970,Power BI,C8M1PIH2,valid,True,False
+2,378394,2808,1862681338,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2809,515914594,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2810,1649741193,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2811,1451157660,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2812,636590237,Power BI,C8M1PIH2,valid,True,False
+2,378394,2813,278381619,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2815,670222069,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2822,1241929361,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2824,747872995,Power BI,C8M1PIH2,valid,True,False
+2,378394,2825,323076662,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2827,1190990580,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2828,624806153,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2829,1003053005,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2831,331071696,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2832,1393612681,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2833,1939190117,Power BI,C8M1PIH2,valid,True,False
+2,378394,2834,815011588,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2835,537665942,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2836,1251863909,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2837,1042966303,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2838,889467534,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2839,1661215949,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2840,1230298085,Power BI,C8M1PIH2,valid,True,False
+2,378394,2841,599239870,Power BI,C8M1PIH2,valid,True,False
+2,378394,2842,2068433179,Power BI,C8M1PIH2,valid,True,False
+2,378394,2843,1560147914,Power BI,C8M1PIH2,valid,True,False
+2,378394,2845,708485761,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2846,1963744301,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2847,1677748541,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2849,1153027851,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2850,691798200,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2853,2033899664,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2854,1895658607,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2855,714797696,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2856,282793204,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2857,1746394977,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2858,1216829487,Power BI,C8M1PIH2,valid,True,False
+2,378394,2859,664389512,Power BI,C8M1PIH2,valid,True,False
+2,378394,2861,1465823118,Power BI,C8M1PIH2,valid,True,False
+2,378394,2862,572657281,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2864,1462374447,Power BI,C8M1PIH2,valid,True,False
+2,378394,2865,147482683,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2866,1455491544,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2867,319965908,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2868,2071459014,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2869,56347710,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2870,1870432305,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2871,1915442385,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2872,1375817073,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2873,1192759140,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2875,1359778898,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2876,1029568430,Power BI,C8M1PIH2,valid,True,False
+2,378394,2879,189611780,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2881,1009208705,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2882,273380729,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2884,1467546808,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2886,1715622442,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2887,1243372959,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2888,416144237,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2889,1074680277,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2890,1428625786,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2891,1414821193,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2892,1100261065,Power BI,C8M1PIH2,valid,True,False
+2,378394,2893,1127244626,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2894,279179078,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2896,1061915168,Power BI,C8M1PIH2,valid,True,False
+2,378394,2897,2128417653,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2898,568283111,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2899,856338922,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2901,1164051348,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2902,1100407223,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2904,1134555538,Power BI,C8M1PIH2,valid,True,False
+2,378394,2905,1559519139,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2907,1119208733,Power BI,C8M1PIH2,valid,True,False
+2,378394,2911,1546818335,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2912,1841533935,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2913,1064453398,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2916,549004826,Power BI,C8M1PIH2,valid,True,False
+2,378394,2917,653802647,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2918,1391996647,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2919,31806068,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2920,1990500494,Power BI,C8M1PIH2,valid,True,False
+2,378394,2922,741432976,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2923,2003211670,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2924,1742406639,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2925,1958749467,Power BI,C8M1PIH2,valid,True,False
+2,378394,2926,1543215615,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2928,633867710,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2929,738300412,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2930,1701421454,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2931,276859355,Power BI,C8M1PIH2,valid,True,False
+2,378394,2932,1375308469,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2934,160147198,Power BI,C8M1PIH2,valid,True,False
+2,378394,2935,2048963319,Power BI,C8M1PIH2,valid,True,False
+2,378394,2936,697239353,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2941,148975791,Power BI,C8M1PIH2,valid,True,False
+2,378394,2942,1968336565,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2943,1969439311,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2944,635226367,Power BI,C8M1PIH2,valid,True,False
+2,378394,2945,2038548338,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2946,1308302946,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2948,1139590654,Power BI,C8M1PIH2,valid,True,False
+2,378394,2950,804536518,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2951,141759927,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2952,1890136261,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2953,846054825,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2955,1662290122,Power BI,C8M1PIH2,valid,True,False
+2,378394,2956,401003394,Power BI,C8M1PIH2,valid,True,False
+2,378394,2958,476388521,Power BI,C8M1PIH2,valid,True,False
+2,378394,2959,98643422,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2960,1029997339,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2961,1119789308,Power BI,C8M1PIH2,valid,True,False
+2,378394,2962,2071220797,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2963,1343322946,Power BI,C8M1PIH2,valid,True,False
+2,378394,2965,1717646610,Power BI,C8M1PIH2,valid,True,False
+2,378394,2966,1576418823,Power BI,C8M1PIH2,valid,True,False
+2,378394,2968,257593222,Power BI,CNZ48DF4,no consent,False,False
+2,378394,2969,2091142572,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2970,1388740291,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2971,107117552,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2972,321138473,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2973,1869409036,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2974,2065676916,Power BI,C8M1PIH2,valid,True,False
+2,378394,2975,216868153,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2976,1465996134,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2977,504548490,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2978,518499924,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2980,1210902814,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2981,382487288,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2982,2028006460,Power BI,C8M1PIH2,valid,True,False
+2,378394,2984,1841326264,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2985,380776498,Power BI,C8M1PIH2,valid,True,False
+2,378394,2986,1129092168,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2987,683985843,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2989,2072800694,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2991,1010170456,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2992,1561315012,Power BI,C8M1PIH2,valid,True,False
+2,378394,2993,340517688,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2994,2088895656,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2995,1402693148,Power BI,CXD3AJQH,screened out,False,False
+2,378394,2996,1547731330,Power BI,C8M1PIH2,valid,True,False
+2,378394,2997,1190015004,Power BI,C8M1PIH2,valid,True,False
+2,378394,2998,1589728095,Power BI,C8M1PIH2,valid,True,False
+2,378394,2999,756804647,Power BI,C8M1PIH2,valid,True,False
+2,378394,3000,1470486658,Power BI,C8M1PIH2,valid,True,False
+2,378394,3001,1446774611,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3002,314572824,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3003,1700747484,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3004,1627116120,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3009,986134043,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3010,405243618,Power BI,C8M1PIH2,valid,True,False
+2,378394,3011,1428506989,Power BI,C8M1PIH2,valid,True,False
+2,378394,3012,198140433,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3016,43149053,Power BI,C8M1PIH2,valid,True,False
+2,378394,3019,1998471598,Power BI,C8M1PIH2,valid,True,False
+2,378394,3020,555830983,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3021,703920755,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3022,1497533864,Power BI,C8M1PIH2,valid,True,False
+2,378394,3026,1760173444,Power BI,C8M1PIH2,valid,True,False
+2,378394,3028,677146938,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3029,226983609,Power BI,C8M1PIH2,valid,True,False
+2,378394,3030,1060984706,Power BI,C8M1PIH2,valid,True,False
+2,378394,3031,1696162671,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3032,103849538,Power BI,C8M1PIH2,valid,True,False
+2,378394,3034,656507725,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3036,754315569,Power BI,C8M1PIH2,valid,True,False
+2,378394,3038,1629699642,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3040,864279214,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3041,1980278240,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3042,465652077,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3043,121305216,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3044,370047320,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3045,1026407408,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3046,344372943,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3047,55332230,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3048,28215360,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3049,1153325649,Power BI,C8M1PIH2,valid,True,False
+2,378394,3050,923576050,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3051,1151822974,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3052,20984772,Power BI,CXD3AJQH,screened out,False,False
+2,378394,3054,1965525488,Power BI,C8M1PIH2,valid,True,False
+2,378394,3055,1571368269,Power BI,C8M1PIH2,valid,True,False
+2,378394,3058,921726834,Power BI,C8M1PIH2,valid,True,False
+2,378394,3059,762018463,Power BI,C8M1PIH2,valid,True,False
+2,378394,3062,589700764,Power BI,C8M1PIH2,valid,True,False

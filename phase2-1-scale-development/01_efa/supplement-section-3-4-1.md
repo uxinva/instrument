@@ -8,7 +8,7 @@ Script: `phase2-1-scale-development/01_efa/01_efa.Rmd`, unless stated otherwise.
 |---|---|
 | Shapiro-Wilk test, skewness and kurtosis per item; share of answers in the top categories and in the negative categories | `item-normality.csv` |
 | Mardia's test of multivariate normality | `sampling-adequacy-summary.csv` |
-| Item histograms | OSF supplemental folder, `Phase 2 - Scale Development/Notebooks/01_Notebooks/01-EFA-Histograms.Rmd` |
+| Item histograms (uncollapsed answers, 2.5% threshold) | `plots/figure-histograms-task-cognition.pdf`, `plots/figure-histograms-system.pdf`, `plots/figure-histograms-visualization.pdf` |
 
 ## 3.4.1.3 Methodological Decisions and Justifications
 
@@ -30,7 +30,7 @@ Script: `phase2-1-scale-development/01_efa/01_efa.Rmd`, unless stated otherwise.
 
 | Data | File |
 |---|---|
-| Scree plots with parallel analysis | `plots/scree-<group>.pdf` |
+| Scree plots with parallel analysis | `plots/scree-<group>.pdf`; figures for the paper `plots/figure-scree-pooled.pdf` and `plots/figure-scree-by-system.pdf` |
 | Factors suggested by parallel analysis | `sampling-adequacy-summary.csv` |
 | Parallel analysis repeated with 20 seeds | `parallel-analysis-stability.csv` |
 | Other criteria, whole sample (principal components, polychoric simulated data, MAP, eigenvalues > 1) | `number-of-factors-criteria-agg.csv` |

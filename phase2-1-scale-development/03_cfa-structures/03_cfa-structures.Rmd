@@ -163,7 +163,7 @@ write.csv(side, file.path(out_dir, "efa-vs-cfa-fit.csv"), row.names = FALSE)
 knitr::kable(side, digits = 3)
 ```
 
-LaTeX table of the CFA fit for the paper (`output/table-cfa-fit.tex`, needs `booktabs`):
+LaTeX table of the CFA fit for the paper (`output/table-cfa-fit.tex`, needs `booktabs` and `graphicx`):
 
 ```{r cfa-table-tex}
 num <- function(x, d) sub("^-", "$-$", formatC(x, format = "f", digits = d, big.mark = ","))
@@ -174,10 +174,11 @@ rows <- sprintf("%d & %s & %s & %s [%s, %s] & %s & %s & & %s & %s & %s & %s \\\\
                 num(ml$rmsea_upper, 3), num(ml$srmr, 3), num(ml$bic, 0),
                 num(wl$cfi, 3), num(wl$tli, 3), num(wl$rmsea, 3), num(wl$srmr, 3))
 writeLines(c(
-  "\\begin{table}[htbp]",
+  "\\begin{table*}[htbp]",  # full width (two-column layout)
   "\\centering",
   "\\caption{Fit of confirmatory factor models of the 1 to 6 factor structures (whole sample, $N = 506$; each item loads only on the factor of its largest EFA loading). ML: maximum likelihood with FIML; WLSMV: items treated as ordinal (scaled indices).}",
   "\\label{tab:cfa-fit}",
+  "\\resizebox{\\textwidth}{!}{%",
   "\\begin{tabular}{rrrcrrcrrrr}",
   "\\toprule",
   " & \\multicolumn{5}{c}{ML (FIML)} & & \\multicolumn{4}{c}{WLSMV} \\\\",
@@ -186,8 +187,8 @@ writeLines(c(
   "\\midrule",
   rows,
   "\\bottomrule",
-  "\\end{tabular}",
-  "\\end{table}"), file.path(out_dir, "table-cfa-fit.tex"))
+  "\\end{tabular}}",
+  "\\end{table*}"), file.path(out_dir, "table-cfa-fit.tex"))
 cat(readLines(file.path(out_dir, "table-cfa-fit.tex")), sep = "\n")
 ```
 

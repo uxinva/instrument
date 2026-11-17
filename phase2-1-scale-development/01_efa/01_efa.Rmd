@@ -28,6 +28,10 @@ library(here)
 library(psych)
 library(corrplot)
 library(naniar)
+# fa.parallel runs its simulations with parallel::mclapply on Linux/macOS; with several cores set.seed()
+# does not control them and the suggested number of factors can change between runs. One core makes the
+# results identical on every system (Windows always runs on one core).
+options(mc.cores = 1)
 
 step_dir <- here("phase2-1-scale-development", "01_efa")
 out_dir  <- file.path(step_dir, "output")
@@ -210,6 +214,55 @@ cat(sprintf("Ceiling: %d of %d items have at least half of their answers in 2 or
             100 * median(item_normality$share_negative), 100 * max(item_normality$share_negative)))
 ```
 
+### Item histograms (uncollapsed answers)
+
+One panel per item with the number of answers for each option, before rare options are merged. The dashed line
+marks 2.5% of the item's non-missing answers, the merging threshold of `data/prepare_data.py`. The items are grouped
+by the factor of their largest loading in the three-factor solution of the whole sample, in the order of
+`loadings/pa-3-factors-agg.csv` (by factor, then by loading, as in the paper's table of the three factors). Written
+to `output/plots/figure-histograms-<factor>.pdf`. This replaces the histograms of `01-EFA-Histograms.Rmd` (OSF
+folder), which used 10 bins on the 7-point scale and kept only the last group's figure.
+
+```{r item-histograms, fig.width = 7.2, fig.height = 7}
+# --- item histograms (uncollapsed answers), one figure per factor ----------------------------------------
+# "I don't know / not applicable" answers are missing and not drawn.
+hist_long <- do.call(rbind, lapply(names(raw), function(it) {
+  x <- raw[[it]]; x <- x[!is.na(x)]
+  data.frame(item = it, option = -3:3, n = as.vector(table(factor(x, levels = -3:3))),
+             threshold = 0.025 * length(x))
+}))
+three_agg <- read.csv(file.path(out_dir, "loadings", "pa-3-factors-agg.csv"), check.names = FALSE)
+three_agg <- three_agg[seq_len(which(three_agg$terms == "--- VARIANCE EXPLAINED ---") - 1), ]
+three_L <- apply(three_agg[, c("PA1", "PA2", "PA3")], 2, as.numeric); rownames(three_L) <- three_agg$terms
+factor_names <- c(PA1 = "task-cognition", PA2 = "system", PA3 = "visualization")
+factor_of <- colnames(three_L)[apply(three_L, 1, which.max)]
+names(factor_of) <- rownames(three_L)
+items_by_factor <- lapply(names(factor_names), function(f) rownames(three_L)[factor_of == f])  # file order
+names(items_by_factor) <- factor_names
+
+draw_histograms <- function(its, ncol = 6) {
+  d <- hist_long[hist_long$item %in% its, ]
+  d$item <- factor(d$item, levels = its)
+  ggplot2::ggplot(d, ggplot2::aes(x = option, y = n)) +
+    ggplot2::geom_col(fill = "grey45", width = 0.8) +
+    ggplot2::geom_hline(ggplot2::aes(yintercept = threshold), linetype = "dashed", linewidth = 0.3) +
+    ggplot2::facet_wrap(~ item, ncol = ncol) +
+    ggplot2::scale_x_continuous(breaks = -3:3) +
+    ggplot2::labs(x = "Answer option (-3 = strongly disagree, +3 = strongly agree)", y = "Number of answers") +
+    ggplot2::theme_minimal(base_size = 8) +
+    ggplot2::theme(panel.grid.minor = ggplot2::element_blank(), panel.grid.major.x = ggplot2::element_blank(),
+                   strip.text = ggplot2::element_text(face = "bold"))
+}
+for (f in names(items_by_factor)) {
+  its <- items_by_factor[[f]]
+  rows <- ceiling(length(its) / 6)
+  ggplot2::ggsave(file.path(out_dir, "plots", sprintf("figure-histograms-%s.pdf", f)),
+                  draw_histograms(its), width = 7.2, height = 1.25 * rows + 0.6)
+}
+sapply(items_by_factor, length)
+draw_histograms(items_by_factor[["task-cognition"]])
+```
+
 ### Size of the polychoric correlations
 
 ```{r correlation-summary}
@@ -275,6 +328,53 @@ pa_stability <- do.call(rbind, lapply(names(results), function(g) {
 }))
 write.csv(pa_stability, file.path(out_dir, "parallel-analysis-stability.csv"), row.names = FALSE)
 knitr::kable(pa_stability)
+```
+
+### Scree plot figures for the paper
+
+Same parallel analysis as the main run (`fa = "fa"`, 100 iterations, seed 257); only the drawing changes: the first
+12 factors on a log scale, the mean eigenvalues of the random data, and a line at the number of factors suggested.
+Written to `output/plots/figure-scree-pooled.pdf` (main text) and `output/plots/figure-scree-by-system.pdf` (appendix).
+
+```{r scree-figures, fig.width = 9, fig.height = 5.2}
+# --- figures of the scree plots with parallel analysis, for the paper -----------------------------
+# Same analysis as the main run (fa = "fa", 100 iterations, seed 257); only the drawing changes:
+# the first 12 factors, log scale, and a vertical line at the number of factors suggested.
+scree_panel <- function(rho, n, title = "", k_max = 12, legend = FALSE) {
+  set.seed(params$seed)
+  pa <- psych::fa.parallel(rho, n.obs = n, fa = "fa", n.iter = params$pa_iterations, plot = FALSE)
+  k <- seq_len(k_max)
+  ylim <- range(c(pa$fa.values[k], pa$fa.sim[k]))
+  plot(k, pa$fa.values[k], log = "y", type = "b", pch = 19, cex = 0.8, ylim = ylim, xaxt = "n",
+       xlab = "Factor", ylab = "Eigenvalue (log scale)", main = title, cex.main = 1, font.main = 1, las = 1)
+  axis(1, at = k)
+  lines(k, pa$fa.sim[k], lty = 2, col = "grey40")
+  abline(v = pa$nfact + 0.5, col = "grey60")
+  mtext(sprintf("%d factor%s", pa$nfact, if (pa$nfact == 1) "" else "s"), side = 3, line = -1.2,
+        at = pa$nfact + 0.6, adj = 0, cex = 0.8)
+  if (legend) legend("topright", c("Observed data", "Random data (mean)"), lty = c(1, 2),
+                     pch = c(19, NA), col = c("black", "grey40"), bty = "n", cex = 0.85)
+  invisible(pa$nfact)
+}
+
+pdf(file.path(out_dir, "plots", "figure-scree-pooled.pdf"), width = 5.5, height = 3.6)
+par(mar = c(4, 4.2, 1, 1))
+scree_panel(results[["Agg"]]$rho, nrow(datasets[["Agg"]]), legend = TRUE)
+dev.off()
+
+tools <- setdiff(names(datasets), "Agg")
+draw_systems <- function() {
+  par(mfrow = c(2, 3), mar = c(4, 4.2, 2, 1))
+  for (g in tools) scree_panel(results[[g]]$rho, nrow(datasets[[g]]),
+                               title = sprintf("%s (n = %d)", g, nrow(datasets[[g]])))
+  plot.new()
+  legend("center", c("Observed data", "Random data (mean)"), lty = c(1, 2), pch = c(19, NA),
+         col = c("black", "grey40"), bty = "n")
+}
+pdf(file.path(out_dir, "plots", "figure-scree-by-system.pdf"), width = 9, height = 5.2)
+draw_systems()
+dev.off()
+draw_systems()
 ```
 
 ### Collapsed vs uncollapsed data (whole sample)
@@ -345,7 +445,7 @@ knitr::kable(fit_table, digits = 3)
 
 `psych::fa` computes χ², CFI, TLI, RMSEA and BIC with a maximum-likelihood formula applied to the polychoric matrix,
 also for principal axis extraction. RMSR is the root mean square of the residual correlations (not the SRMR of a CFA).
-The whole-sample fit is also written as a LaTeX table for the paper (`output/table-efa-fit.tex`, needs `booktabs`);
+The whole-sample fit is also written as a LaTeX table for the paper (`output/table-efa-fit.tex`, needs `booktabs` and `graphicx`);
 the CFA of the same structures is in step 03.
 
 ```{r fit-table-tex}
@@ -355,18 +455,19 @@ rows <- sprintf("%d & %s & %d & %s & %s & %s [%s, %s] & %s & %s \\\\",
                 f$factors, num(f$chi_sq, 2), as.integer(f$df), num(f$cfi, 3), num(f$tli, 3),
                 num(f$rmsea, 3), num(f$rmsea_lower, 3), num(f$rmsea_upper, 3), num(f$rmsr, 3), num(f$bic, 2))
 writeLines(c(
-  "\\begin{table}[htbp]",
+  "\\begin{table*}[htbp]",  # full width (two-column layout)
   "\\centering",
   "\\caption{Fit of the exploratory factor analysis solutions with 1 to 6 factors (whole sample, $N = 506$; principal axis factoring on polychoric correlations).}",
   "\\label{tab:efa-fit}",
+  "\\resizebox{\\textwidth}{!}{%",
   "\\begin{tabular}{rrrrrcrr}",
   "\\toprule",
   "Factors & $\\chi^2$ & df & CFI & TLI & RMSEA [90\\% CI] & RMSR & BIC \\\\",
   "\\midrule",
   rows,
   "\\bottomrule",
-  "\\end{tabular}",
-  "\\end{table}"), file.path(out_dir, "table-efa-fit.tex"))
+  "\\end{tabular}}",
+  "\\end{table*}"), file.path(out_dir, "table-efa-fit.tex"))
 cat(readLines(file.path(out_dir, "table-efa-fit.tex")), sep = "\n")
 ```
 

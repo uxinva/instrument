@@ -14,6 +14,9 @@ Ratings of the exploratory survey (65 items, 506 participants). They are used by
 | `prepared/collapse_changes.csv` | Every merge that was made: item, original option, new option, number of answers, size of the left and right neighbours |
 | `prepared/label_check.csv` | Tool label in the data vs. in the survey export (and which export file), per participant |
 | `codebook/items.csv` | Item code, wording, and factor in the 3-factor and the 4-factor structures |
+| `participant_flow.py` | Counts the survey sessions by completion code (participant flow, paper Section 2.3) and checks that the valid sessions are the 506 participants of the data (see below) |
+| `prepared/participant-flow.csv` | Number of sessions per round and outcome (valid, screened out, no consent), with the completion codes |
+| `prepared/participant-sessions.csv` | One row per session that received a completion code: round, LimeSurvey response ID, seed, system, code, outcome, whether it is in the data, and whether the same Prolific participant has another valid session. No Prolific IDs. |
 
 ## How to rebuild `prepared/`
 
@@ -28,6 +31,26 @@ The script does two things:
 1. **Checks the tool labels.** It compares the `stimulus` column with the survey exports and stops if any label disagrees, or if a seed has more than one tool in the exports. All **506** participants are in the exports, and all 506 labels agree.
 2. **Collapses rare answer options.** For each item, an answer option chosen by **≤ 2.5%** of the non-missing answers is merged into the **neighbouring option with more answers** (left or right; on a tie, the left one). The merge repeats until no option is below the threshold. This is the rule of `04_Colapsing_Low-Frequency_Categories-toMoreFrequent.R` (old folder `phase2-2-itemreduction/Notebooks/Reproduce4_Notebooks/`; now in the OSF supplemental folder, `Notebooks/04_Notebooks/`). The script made 111 merges in 64 items, all of them to the right: the rare options are at the negative end of the scale, where the left neighbour is empty or already merged. The result is therefore identical to the "toRight" variant of the script. `collapse_changes.csv` records the size of both neighbours for every merge.
 3. **Writes one collapsed file per tool** (`prepared/by-tool/`). The same 2.5% threshold is applied within each tool's participants, with the **"toRight" rule**: a rare option is merged into the option on its right, or into the one on its left for +3. This is the rule of `04_Colapsing_Low-Frequency Categories-toRight.R`. The "to more frequent" rule is not used within a tool for two reasons. In small groups it can merge an option into an empty neighbour and back again without end. And the per-tool files of the 2026-03-18 EFA (`Data/ratings-1.csv` … `ratings-5.csv` in the OSF folder) are the output of the toRight script. The five files equal those inputs cell by cell, in the same row and column order.
+
+## Participant flow (`participant_flow.py`)
+
+Needs the full LimeSurvey exports of the two survey rounds, which contain Prolific IDs and are **not in Git**: `phase2-1-scale-development/tmp-data/results-survey686728.xlsx` (round 1) and `results-survey378394.xlsx` (round 2), exported with all responses, including incomplete ones. From the repository root:
+
+```bash
+python phase2-1-scale-development/data/participant_flow.py
+```
+
+A session counts as a **submission** when the survey gave it a Prolific completion code. Sessions without a code were abandoned before an exit page. Codes: valid completion C15VDVOL and C8M1PIH2; screened out (system not used, workspace image not recognised, last interaction not remembered) C1LYP9HZ and CXD3AJQH; no consent C13OIWSR and CNZ48DF4.
+
+Result (exports of 2026-11-17):
+
+| Round (survey) | Submissions | No consent | Screened out | Valid |
+|---|---|---|---|---|
+| 1 (686728) | 107 | 1 | 55 | 51 |
+| 2 (378394) | 2,015 | 1 | 1,559 (C1LYP9HZ 697 + CXD3AJQH 862) | 455 (C15VDVOL 221 + C8M1PIH2 234) |
+| Total | **2,122** | **2** | **1,614** | **506** |
+
+The exports have 3,140 rows; the other 1,018 sessions have no code. The 506 valid sessions are exactly the 506 seeds of `raw/ratings-stimulus_original.csv`, with the same system labels. They come from **502** Prolific participants: four participants have two valid sessions, each for a different system (two took part in both rounds, two twice in round 2).
 
 ## `prepared/ratings-stimulus_collapsed.csv`
 

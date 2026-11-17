@@ -2151,8 +2151,8 @@ knitr::kable(side, digits = 3)</code></pre>
 </tbody>
 </table>
 <p>LaTeX table of the CFA fit for the paper
-(<code>output/table-cfa-fit.tex</code>, needs
-<code>booktabs</code>):</p>
+(<code>output/table-cfa-fit.tex</code>, needs <code>booktabs</code> and
+<code>graphicx</code>):</p>
 <pre class="r"><code>num &lt;- function(x, d) sub(&quot;^-&quot;, &quot;$-$&quot;, formatC(x, format = &quot;f&quot;, digits = d, big.mark = &quot;,&quot;))
 ml &lt;- cfa_fit[cfa_fit$estimator == &quot;ML&quot;, ]
 wl &lt;- cfa_fit[cfa_fit$estimator == &quot;WLSMV&quot;, ]
@@ -2161,10 +2161,11 @@ rows &lt;- sprintf(&quot;%d &amp; %s &amp; %s &amp; %s [%s, %s] &amp; %s &amp; %
                 num(ml$rmsea_upper, 3), num(ml$srmr, 3), num(ml$bic, 0),
                 num(wl$cfi, 3), num(wl$tli, 3), num(wl$rmsea, 3), num(wl$srmr, 3))
 writeLines(c(
-  &quot;\\begin{table}[htbp]&quot;,
+  &quot;\\begin{table*}[htbp]&quot;,  # full width (two-column layout)
   &quot;\\centering&quot;,
   &quot;\\caption{Fit of confirmatory factor models of the 1 to 6 factor structures (whole sample, $N = 506$; each item loads only on the factor of its largest EFA loading). ML: maximum likelihood with FIML; WLSMV: items treated as ordinal (scaled indices).}&quot;,
   &quot;\\label{tab:cfa-fit}&quot;,
+  &quot;\\resizebox{\\textwidth}{!}{%&quot;,
   &quot;\\begin{tabular}{rrrcrrcrrrr}&quot;,
   &quot;\\toprule&quot;,
   &quot; &amp; \\multicolumn{5}{c}{ML (FIML)} &amp; &amp; \\multicolumn{4}{c}{WLSMV} \\\\&quot;,
@@ -2173,13 +2174,14 @@ writeLines(c(
   &quot;\\midrule&quot;,
   rows,
   &quot;\\bottomrule&quot;,
-  &quot;\\end{tabular}&quot;,
-  &quot;\\end{table}&quot;), file.path(out_dir, &quot;table-cfa-fit.tex&quot;))
+  &quot;\\end{tabular}}&quot;,
+  &quot;\\end{table*}&quot;), file.path(out_dir, &quot;table-cfa-fit.tex&quot;))
 cat(readLines(file.path(out_dir, &quot;table-cfa-fit.tex&quot;)), sep = &quot;\n&quot;)</code></pre>
-<pre><code>## \begin{table}[htbp]
+<pre><code>## \begin{table*}[htbp]
 ## \centering
 ## \caption{Fit of confirmatory factor models of the 1 to 6 factor structures (whole sample, $N = 506$; each item loads only on the factor of its largest EFA loading). ML: maximum likelihood with FIML; WLSMV: items treated as ordinal (scaled indices).}
 ## \label{tab:cfa-fit}
+## \resizebox{\textwidth}{!}{%
 ## \begin{tabular}{rrrcrrcrrrr}
 ## \toprule
 ##  &amp; \multicolumn{5}{c}{ML (FIML)} &amp; &amp; \multicolumn{4}{c}{WLSMV} \\
@@ -2193,8 +2195,8 @@ cat(readLines(file.path(out_dir, &quot;table-cfa-fit.tex&quot;)), sep = &quot;\n
 ## 5 &amp; 0.872 &amp; 0.867 &amp; 0.046 [0.044, 0.048] &amp; 0.050 &amp; 80,276 &amp; &amp; 0.953 &amp; 0.951 &amp; 0.040 &amp; 0.048 \\
 ## 6 &amp; 0.872 &amp; 0.867 &amp; 0.046 [0.044, 0.048] &amp; 0.051 &amp; 80,291 &amp; &amp; 0.953 &amp; 0.951 &amp; 0.040 &amp; 0.048 \\
 ## \bottomrule
-## \end{tabular}
-## \end{table}</code></pre>
+## \end{tabular}}
+## \end{table*}</code></pre>
 <p>Reading the table:</p>
 <ul>
 <li>The EFA indices come from <code>psych::fa</code> (principal axis on

@@ -1,0 +1,11 @@
+round,survey,outcome,sessions,codes
+1,686728,no consent,1,C13OIWSR 1
+1,686728,screened out,55,C1LYP9HZ 55
+1,686728,valid,51,C15VDVOL 51
+2,378394,no consent,1,CNZ48DF4 1
+2,378394,screened out,1559,C1LYP9HZ 697 + CXD3AJQH 862
+2,378394,valid,455,C15VDVOL 221 + C8M1PIH2 234
+total,both,no consent,2,
+total,both,screened out,1614,
+total,both,valid,506,
+total,both,submissions,2122,
