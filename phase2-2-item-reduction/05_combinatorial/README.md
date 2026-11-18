@@ -11,7 +11,7 @@ This folder records **what was run** for the paper section "Automated Combinator
 | 1 (Python) | [`generate_combinations.py`](generate_combinations.py) | Reads `input/candidate_pool.csv` and writes `input/combinations_<vis>-<task>-<sys>.csv`. Tested on 2026-10-16: the 6/3/3 and 6/4/3 files are **identical** to the May files |
 | 2–3 (R) | [`05_combinatorial.Rmd`](05_combinatorial.Rmd) | Reliability prefilter, CFA for every combination, ranking. Writes CSVs to `output/<run_name>/` |
 | All runs (R) | [`run-all-thresholds.R`](run-all-thresholds.R) | Runs `05_combinatorial.Rmd` for every threshold, **with no limit on the number of models**: 6/3/3 at 0.79–0.72 and 6/4/3 at 0.79–0.78. Runs already done are skipped, so the script can be stopped and restarted. It logs the time of each run in `output/run-all-thresholds-log.csv`. About 1.5 h in total |
-| Summary (Python) | [`build_runs_table.py`](build_runs_table.py) | Reads the run folders (default: the repository runs in `output/rel0XX_…/`; `--may` for the May folders) and writes to `output/`: `runs_summary.csv` and `table_combinatorial_runs.tex` (all runs); `final_reliability_sets.csv` / `table_final_reliability_sets.tex` and `final_item_frequency.csv` / `table_final_item_frequency.tex` (final run, `--final`). Thresholds that were not run, such as 0.80, are derived from the subset reliabilities when no model can be formed; this is marked in the table |
+| Summary (Python) | [`build_runs_table.py`](build_runs_table.py) | Reads the run folders (default: the repository runs in `output/rel0XX_…/`; `--may` for the May folders) and writes to `output/`: `runs_summary.csv` and `table_combinatorial_runs.tex` (all runs); `final_reliability_sets.csv` / `table_final_reliability_sets.tex` and `final_item_frequency.csv` / `table_final_item_frequency.tex` (final run, `--final`). Thresholds that were not run, such as 0.80, are derived from the reliabilities of the item combinations when no model can be formed; this is marked in the table |
 
 ```bash
 python phase2-2-item-reduction/05_combinatorial/generate_combinations.py        # 6/4/3 (default); "6 3 3" for the first runs
@@ -68,8 +68,8 @@ The summary of the runs and the comparison with the May runs are in `output/runs
 
 | Appendix table | File | Made from |
 |---|---|---|
-| Search by threshold (subsets passing reliability, CFA models fitted, models passing model fit) | `output/table_combinatorial_runs.tex` | every run folder |
-| Subsets passing reliability in the final run, with α and ω | `output/table_final_reliability_sets.tex` | `tested_reliability_sets.csv` of the final run |
+| Search by threshold (item combinations satisfying reliability, CFA models fitted, models passing model fit) | `output/table_combinatorial_runs.tex` | every run folder |
+| Item combinations satisfying reliability in the final run, with α and ω | `output/table_final_reliability_sets.tex` | `tested_reliability_sets.csv` of the final run |
 | How often each item appears in the models passing model fit | `output/table_final_item_frequency.tex` | `passing_reliability_cfa_results.csv` of the final run |
 | Selected 13-item instrument: items, wording, α/ω per scale, fit and rank, compared with the alternative that had P214 | `output/table-selected-model.tex` (data: `output/selected-model.csv`) | `input/selected-models.csv` (the models to show), `data/codebook/items.csv` and `passing_reliability_cfa_results.csv` of the final run |
 

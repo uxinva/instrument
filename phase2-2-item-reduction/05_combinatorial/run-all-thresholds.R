@@ -6,9 +6,9 @@
 #
 # A run whose output folder already has passing_reliability_cfa_results.csv is skipped, so the
 # script can be stopped and started again. Delete a run folder to run it again.
-# Threshold 0.80 is not run: no item subset of some scale reaches it, so no model can be formed
+# Threshold 0.80 is not run: no item combination of some scale reaches it, so no model can be formed
 # (build_runs_table.py derives that row). The search stops at 0.72 (decision of 2026-10-21): it is the
-# highest threshold at which subsets with the cognitive items P062 or P064 reach approved models.
+# highest threshold at which item combinations with the cognitive items P062 or P064 reach approved models.
 # The May runs at 0.70 and 0.71 (cut at 1,000 models) are not repeated.
 #
 # Run from the repository root (about 1.5 hours in total; the 0.72 run alone takes about 50 minutes):
