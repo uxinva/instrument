@@ -1,0 +1,96 @@
+item,source,topic,concept,optional
+P0-1,P0,Accessibility,__,True
+P0-10,P0,Collaboration,__,False
+P0-12,P0,Dependability,Consistency,False
+P0-12-A,P0,Dependability,Consistency,False
+P0-14,P0,Usefulness,Task acomplishment,False
+P0-15,P0,Dependability,Robustness,False
+P0-18,P0,Ease of learning,Documentation,True
+P0-19,P0,Ease of learning,__,False
+P0-22,P0,Ease of learning,Memorability,False
+P0-22-A,P0,Ease of learning,Memorability,False
+P0-23,P0,Ease of learning,Time to proficiency,False
+P0-24,P0,Ease of learning,Easy / hard to discover feature,False
+P0-25,P0,Ease of use,Simple interaction,False
+P0-26,P0,Ease of use,__,False
+P0-27,P0,Efficiency,Number of steps,False
+P0-28,P0,Efficiency,Number of steps,False
+P0-29,P0,Usefulness,Fulfillment of a need,False
+P0-30,P0,Usefulness,Task acomplishment,False
+P0-31,P0,Efficiency,Runtime performance,False
+P0-33,P0,Efficiency,Runtime performance,False
+P0-36,P0,Flexibility,Responsiveness,True
+P0-37,P0,Flexibility,External Interoperability,False
+P0-39,P0,Flexibility,Extensibility,False
+P0-4,P0,Pleasure,Enjoyment,False
+P0-4-A,P0,Involvement,Engagement,False
+P0-4-B,P0,Involvement,Engagement,False
+P0-41,P0,Flexibility,Internal Interoperability,False
+P0-42,P0,Flexibility,Specialization/generalization,True
+P0-44,P0,Flexibility,Internationalization,True
+P0-45,P0,Flexibility,Expressiveness,False
+P0-45-A,P0,Dependability,Predictability,False
+P0-46,P0,Flexibility,Portability,True
+P0-49,P0,Fluidity,Smooth workflow,False
+P0-49-B,P0,Fluidity,Smooth workflow,False
+P0-5,P0,Clarity,Visual simplicity,False
+P0-52,P0,Fluidity,Sense of flow,False
+P0-54,P0,Fluidity,Intuitive workflow,False
+P0-57,P0,Insightfulness,Knowledge discovery,False
+P0-6,P0,Clarity,Layout,False
+P0-60,P0,Pleasure,Enjoyment,False
+P0-62,P0,Involvement,Engagement,False
+P0-62-A,P0,Involvement,Engagement,False
+P0-62-C,P0,Insightfulness,Knowledge discovery,False
+P0-64,P0,Novelty,Creativity,False
+P0-65,P0,Novelty,__,False
+P0-66,P0,Pleasure,Enjoyment,False
+P0-67,P0,Repeatability,Undo and redo,False
+P0-68,P0,Repeatability,Reproduction of analysis,False
+P0-71,P0,Repeatability,Transferability,False
+P0-72,P0,Satisfaction,__,False
+P0-73,P0,Satisfaction,Rewarding,False
+P0-74,P0,Satisfaction,"Time pressure, Frustration",False
+P0-74-A,P0,Satisfaction,"Time pressure, Frustration",False
+P0-79,P0,Scalability,Data processing scalability,False
+P0-81,P0,Trust,Privacy,False
+P0-83,P0,Stimulation,Arousing / soothing,False
+P0-84,P0,Trust,Confidence,False
+P0-86,P0,Understandability,Self-explaining,False
+P0-87,P0,Understandability,Simplicity of understanding,False
+P0-88,P0,Understandability,Simplicity of understanding,False
+P0-89,P0,Understandability,Simplicity of understanding,False
+P0-9,P0,Collaboration,Shareable,False
+P0-92,P0,User assistance,Guidance,False
+P0-95,P0,Value,Value added,False
+P0-96,P0,Visualization task,Coordinated View,False
+P0-97,P0,Insightfulness,Knowledge discovery,False
+P0-97-A,P0,Visualization task,Navigation,False
+P0-98,P0,Visualization task,Visual representation,False
+P1-01,P1,Trust,Feeling of safety,False
+P1-02,P1,Trust,Reliability,False
+P1-03,P1,Trust,Transparency,False
+P1-04,P1,Trust,Trust in the system,False
+P1-05,P1,Trust,Trustworthiness of content,False
+P1-06,P1,Trust,Trustworthiness of content,False
+P2-01,P2,Dependability,Control,False
+P2-02,P2,Flexibility,Adaptability,False
+P2-03,P2,Dependability,Error recovery,False
+P2-04,P2,Ease of learning,Prerequisites to proficiency,False
+P2-05,P2,Visualization task,Data features,False
+P2-06,P2,Visualization task,Data reading,False
+P2-07,P2,Efficiency,Mental effort / Cognitive load,False
+P2-08,P2,Involvement,Interest,False
+P2-09,P2,User assistance,Support,False
+P2-10,P2,User assistance,Support,False
+P2-11,P2,Visualization task,Coordinated View,False
+P2-12,P2,Visualization task,Overview/detail,False
+P2-13,P2,Efficiency,Time,False
+P2-14,P2,Efficiency,Effort,False
+P2-15,P2,Satisfaction,Tension,False
+P2-16,P2,Involvement,Interest,False
+P3-01,P3,Usefulness,__,False
+P3-02,P3,Understandability,__,False
+P3-03,P3,Insightfulness,Unexpected discovery,False
+P3-04,P3,Understandability,Model understanding and refining,False
+P3-05,P3,Visualization task,Information redution,False

@@ -1,0 +1,137 @@
+item,task2_answer,concept,topic,status,outcome
+P0-1,35.0,__,Accessibility,C,optional item
+P0-2,62.0,__,Accessibility,C,removed
+P0-3,54.0,Colorblindness,Accessibility,C,removed
+P0-4,65.0,Enjoyment,Pleasure,C,item
+P0-5,109.0,Visual simplicity,Clarity,C,item
+P0-6,15.0,Layout,Clarity,C,item
+P0-7,72.0,Overall design,Clarity,C,removed
+P0-8,8.0,Visual simplicity,Clarity,C,removed
+P0-9,104.0,Shareable,Collaboration,C,item
+P0-10,28.0,__,Collaboration,C,item
+P0-11,93.0,Shareable,Collaboration,C,removed
+P0-12,82.0,Consistency,Dependability,C,item
+P0-12-A,82.0,Consistency,Dependability,,item
+P0-13,111.0,Consistency,Dependability,C,removed
+P0-14,108.0,Task acomplishment,Usefulness,C,item
+P0-15,11.0,Robustness,Dependability,C,item
+P0-16,126.0,Long-term availability,Dependability,C,removed
+P0-17,22.0,Robustness,Dependability,C,removed
+P0-18,107.0,Documentation,Ease of learning,C,optional item
+P0-19,12.0,__,Ease of learning,C,item
+P0-20,19.0,__,Ease of learning,C,removed
+P0-21,16.0,__,Ease of learning,,removed
+P0-22,57.0,Memorability,Ease of learning,,item
+P0-22-A,57.0,Memorability,Ease of learning,,item
+P0-23,115.0,Time to proficiency,Ease of learning,,item
+P0-24,88.0,Easy / hard to discover feature,Ease of learning,,item
+P0-25,63.0,Simple interaction,Ease of use,C,item
+P0-26,46.0,__,Ease of use,C,item
+P0-27,95.0,Number of steps,Efficiency,C,item
+P0-28,110.0,Number of steps,Efficiency,C,item
+P0-29,14.0,Fulfillment of a need,Usefulness,C,item
+P0-30,87.0,Task acomplishment,Usefulness,C,item
+P0-31,6.0,Runtime performance,Efficiency,C,item
+P0-32,53.0,Number of steps,Efficiency,C,removed
+P0-33,67.0,Runtime performance,Efficiency,C,item
+P0-34,18.0,Ethics,Trust,C,removed
+P0-35,124.0,Adaptation of input,Flexibility,C,removed
+P0-36,49.0,Responsiveness,Flexibility,C,optional item
+P0-37,120.0,External Interoperability,Flexibility,C,item
+P0-38,68.0,Context switching,Flexibility,C,removed
+P0-39,96.0,Extensibility,Flexibility,C,item
+P0-40,33.0,Adaptability,Flexibility,C,removed
+P0-41,76.0,Internal Interoperability,Flexibility,C,item
+P0-42,113.0,Specialization/generalization,Flexibility,C,optional item
+P0-43,34.0,External Interoperability,Flexibility,C,removed
+P0-44,114.0,Internationalization,Flexibility,C,optional item
+P0-45,85.0,Expressiveness,Flexibility,C,item
+P0-45-A,85.0,Predictability,Dependability,,item
+P0-46,81.0,Portability,Flexibility,C,optional item
+P0-47,10.0,Responsiveness,Flexibility,C,removed
+P0-48,83.0,Smooth workflow,Fluidity,D,removed
+P0-49,27.0,Smooth workflow,Fluidity,C,item
+P0-49-A,27.0,Smooth workflow,Fluidity,,removed
+P0-49-B,27.0,Smooth workflow,Fluidity,,item
+P0-50,4.0,__,Fluidity,,removed
+P0-51,32.0,__,Fluidity,C,removed
+P0-51,32.0,__,Fluidity,,removed
+P0-51,32.0,__,Fluidity,,removed
+P0-52,98.0,Sense of flow,Fluidity,C,item
+P0-52-A,98.0,Sense of flow,Fluidity,,removed
+P0-52-B,98.0,Sense of flow,Fluidity,,removed
+P0-52-C,98.0,Sense of flow,Fluidity,,removed
+P0-52-D,98.0,Sense of flow,Fluidity,,removed
+P0-52-E,98.0,Sense of flow,Fluidity,,removed
+P0-53,91.0,Smooth workflow,Fluidity,D,removed
+P0-54,89.0,Intuitive workflow,Fluidity,,item
+P0-55,39.0,Smooth workflow,Fluidity,,removed
+P0-56,105.0,Brand,Identification,C,removed
+P0-57,24.0,Knowledge discovery,Insightfulness,D,item
+P0-57-A,24.0,Knowledge discovery,Insightfulness,,removed
+P0-57-B,24.0,Knowledge discovery,Insightfulness,,removed
+P0-57-C,24.0,Knowledge discovery,Insightfulness,,removed
+P0-58,125.0,Surprise,Insightfulness,D,removed
+P0-58-A,,Surprise,Insightfulness,,removed
+P0-58-B,,Surprise,Insightfulness,,removed
+P0-58-C,,Surprise,Insightfulness,,removed
+P0-59,101.0,Focus,Involvement,C,removed
+P0-60,51.0,Enjoyment,Pleasure,C,item
+P0-4-A,64.0,Engagement,Involvement,C,item
+P0-4-B,64.0,Engagement,Involvement,,item
+P0-4-C,64.0,Engagement,Involvement,,removed
+P0-62,106.0,Engagement,Involvement,C,item
+P0-62-A,106.0,Engagement,Involvement,,item
+P0-62-B,106.0,Engagement,Involvement,,removed
+P0-62-C,106.0,Knowledge discovery,Insightfulness,,item
+P0-62-D,106.0,Knowledge discovery,Insightfulness,,removed
+P0-63,13.0,Interest,Involvement,C,removed
+P0-64,74.0,Creativity,Novelty,C,item
+P0-65,41.0,__,Novelty,C,item
+P0-66,79.0,Enjoyment,Pleasure,C,item
+P0-66-A,79.0,Enjoyment,Pleasure,,removed
+P0-67,103.0,Undo and redo,Repeatability,C,item
+P0-68,3.0,Reproduction of analysis,Repeatability,C,item
+P0-69,44.0,Reproduction of analysis,Repeatability,C,removed
+P0-70,127.0,Reproduction of results,Repeatability,C,removed
+P0-71,9.0,Transferability,Repeatability,C,item
+P0-72,17.0,__,Satisfaction,C,item
+P0-73,121.0,Rewarding,Satisfaction,C,item
+P0-74,20.0,"Time pressure, Frustration",Satisfaction,C,item
+P0-74-A,20.0,"Time pressure, Frustration",Satisfaction,,item
+P0-75,90.0,Visual scalability,Scalability,C,removed
+P0-76,48.0,Data processing scalability,Scalability,C,removed
+P0-77,56.0,Process scalability,Scalability,C,removed
+P0-78,23.0,__,Scalability,C,removed
+P0-79,43.0,Data processing scalability,Scalability,C,item
+P0-80,26.0,Data processing scalability,Scalability,C,removed
+P0-81,69.0,Privacy,Trust,C,item
+P0-82,7.0,Privacy,Trust,C,removed
+P0-83,61.0,Arousing / soothing,Stimulation,C,item
+P0-84,36.0,Confidence,Trust,C,item
+P0-85,45.0,Self-explaining,Understandability,C,removed
+P0-86,70.0,Self-explaining,Understandability,C,item
+P0-87,29.0,Simplicity of understanding,Understandability,C,item
+P0-88,42.0,Simplicity of understanding,Understandability,C,item
+P0-89,75.0,Simplicity of understanding,Understandability,C,item
+P0-90,86.0,Simplicity of understanding,Understandability,C,removed
+P0-91,73.0,AI-based assistance,User assistance,C,removed
+P0-92,122.0,Guidance,User assistance,C,item
+P0-93,123.0,User support,User assistance,C,removed
+P0-93-A,123.0,User support,User assistance,,removed
+P0-94,47.0,Localized feedback,User assistance,C,removed
+P0-95,30.0,Value added,Value,C,item
+P0-96,92.0,Coordinated View,Visualization task,C,item
+P0-96-A,92.0,Coordinated View,Visualization task,,removed
+P0-97,25.0,Knowledge discovery,Insightfulness,C,item
+P0-97-A,25.0,Navigation,Visualization task,,item
+P0-98,21.0,Visual representation,Visualization task,C,item
+P0-98-A,21.0,Visual representation,Visualization task,,removed
+P0-99,66.0,Data export,Visualization task,C,removed
+P0-100,50.0,Overview/detail,Visualization task,C,removed
+P0-101,102.0,Coordinated View,Visualization task,C,removed
+P0-111,5.0,Specialization/generalization,Flexibility,,removed
+P0-125,31.0,__,Attractiveness,T1,removed
+P0-125-A,31.0,Fulfillment of a need,Usefulness,,removed
+P0-124,97.0,ZInvalid,ZInvalid,"Other - Scale development, application scenario, user background",removed
+P0-126,60.0,ZInvalid,ZInvalid,Item generation - object of the question,removed

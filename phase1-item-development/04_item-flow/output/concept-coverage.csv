@@ -1,0 +1,77 @@
+topic_concept,p0,p1,p2,p3,note,items_in_pool,sources_with_occurrence
+-,0.0,0.0,0.0,14.0,,0.0,1
+Accessibility-__,1.0,0.0,0.0,3.0,x 1 + few P3 Optional,1.0,2
+Clarity-Layout,1.0,5.0,7.0,24.0,,1.0,4
+Clarity-Visual simplicity,1.0,0.0,2.0,33.0,,1.0,3
+Collaboration-Shareable,1.0,0.0,0.0,17.0,,1.0,2
+Collaboration-__,,,,,,1.0,0
+Dependability-Consistency,2.0,1.0,7.0,35.0,,2.0,4
+Dependability-Control,0.0,0.0,1.0,5.0,,1.0,2
+Dependability-Error recovery,0.0,0.0,1.0,10.0,,1.0,2
+Dependability-Predictability,1.0,2.0,4.0,15.0,,1.0,4
+Dependability-Robustness,1.0,0.0,3.0,21.0,,1.0,3
+Ease of learning-Documentation,1.0,0.0,5.0,2.0,x Optional,1.0,3
+Ease of learning-Easy / hard to discover feature,1.0,0.0,5.0,5.0,,1.0,3
+Ease of learning-Memorability,2.0,1.0,4.0,12.0,,2.0,4
+Ease of learning-Prerequisites to proficiency,0.0,0.0,1.0,1.0,x 1 + few P3,1.0,2
+Ease of learning-Time to proficiency,1.0,0.0,8.0,24.0,,1.0,3
+Ease of learning-__,1.0,0.0,4.0,70.0,,1.0,3
+Ease of use-Simple interaction,1.0,3.0,6.0,45.0,,1.0,4
+Ease of use-__,1.0,0.0,2.0,92.0,,1.0,3
+Efficiency-Effort,0.0,0.0,1.0,13.0,,1.0,2
+Efficiency-Mental effort / Cognitive load,0.0,0.0,1.0,18.0,,1.0,2
+Efficiency-Number of steps,2.0,1.0,10.0,4.0,,2.0,4
+Efficiency-Runtime performance,2.0,2.0,4.0,11.0,,2.0,4
+Efficiency-Time,0.0,0.0,1.0,67.0,,1.0,2
+Flexibility-Adaptability,0.0,0.0,2.0,33.0,,1.0,2
+Flexibility-Expressiveness,1.0,0.0,0.0,14.0,,1.0,2
+Flexibility-Extensibility,1.0,0.0,0.0,19.0,,1.0,2
+Flexibility-External Interoperability,1.0,0.0,0.0,2.0,,1.0,2
+Flexibility-Internal Interoperability,1.0,0.0,0.0,4.0,,1.0,2
+Flexibility-Internationalization,1.0,0.0,0.0,0.0,x 1 pool Optional,1.0,1
+Flexibility-Portability,1.0,0.0,0.0,1.0,x Optional,1.0,2
+Flexibility-Responsiveness,1.0,0.0,0.0,0.0,x 1 pool Optional,1.0,1
+Flexibility-Specialization/generalization,1.0,0.0,0.0,7.0,x Optional,1.0,2
+Fluidity-Intuitive workflow,1.0,0.0,4.0,6.0,,1.0,3
+Fluidity-Sense of flow,1.0,0.0,4.0,9.0,,1.0,3
+Fluidity-Smooth workflow,2.0,0.0,3.0,25.0,,2.0,3
+Insightfulness-Knowledge discovery,3.0,0.0,4.0,216.0,,3.0,3
+Insightfulness-Unexpected discovery,0.0,0.0,0.0,6.0,,1.0,1
+Involvement-Engagement,4.0,0.0,11.0,69.0,,4.0,3
+Involvement-Interest,0.0,0.0,2.0,25.0,,2.0,2
+Novelty-Creativity,1.0,0.0,4.0,12.0,,1.0,3
+Novelty-__,1.0,0.0,1.0,3.0,,1.0,3
+Pleasure-Enjoyment,3.0,3.0,14.0,62.0,,3.0,4
+Repeatability-Reproduction of analysis,1.0,0.0,0.0,5.0,,1.0,2
+Repeatability-Transferability,1.0,0.0,0.0,0.0,x 1 pool,1.0,1
+Repeatability-Undo and redo,1.0,0.0,1.0,4.0,,1.0,3
+Satisfaction-Rewarding,1.0,1.0,0.0,5.0,,1.0,3
+Satisfaction-Tension,0.0,0.0,1.0,4.0,,1.0,2
+"Satisfaction-Time pressure, Frustration",2.0,0.0,12.0,12.0,,2.0,3
+Satisfaction-__,1.0,0.0,8.0,52.0,,1.0,3
+Scalability-Data processing scalability,1.0,0.0,1.0,9.0,,1.0,3
+Stimulation-Arousing / soothing,1.0,0.0,10.0,4.0,,1.0,3
+Trust-Confidence,1.0,0.0,5.0,22.0,,1.0,3
+Trust-Feeling of safety,0.0,0.0,3.0,2.0,x 1 + few P3,1.0,2
+Trust-Privacy,1.0,4.0,0.0,0.0,,1.0,2
+Trust-Reliability,0.0,0.0,2.0,4.0,,1.0,2
+Trust-Transparency,0.0,0.0,1.0,12.0,,1.0,2
+Trust-Trust in the system,0.0,0.0,3.0,18.0,,1.0,2
+Trust-Trustworthiness of content,0.0,0.0,7.0,15.0,,2.0,2
+Understandability-Model understanding and refining,0.0,0.0,0.0,28.0,,1.0,1
+Understandability-Self-explaining,1.0,0.0,1.0,7.0,,1.0,3
+Understandability-Simplicity of understanding,3.0,3.0,8.0,131.0,,3.0,4
+Understandability-__,0.0,0.0,0.0,26.0,,1.0,1
+Usefulness-Fulfillment of a need,1.0,2.0,8.0,29.0,,1.0,4
+Usefulness-Task acomplishment,2.0,4.0,2.0,7.0,,2.0,4
+Usefulness-__,0.0,0.0,0.0,99.0,,1.0,1
+User assistance-Guidance,1.0,1.0,3.0,26.0,,1.0,4
+User assistance-Support,0.0,0.0,2.0,6.0,,2.0,2
+Value-Value added,1.0,1.0,0.0,20.0,,1.0,3
+Visualization task-Coordinated View,1.0,0.0,1.0,13.0,,2.0,3
+Visualization task-Data features,0.0,0.0,1.0,20.0,,1.0,2
+Visualization task-Data reading,0.0,0.0,1.0,15.0,,1.0,2
+Visualization task-Information redution,0.0,0.0,0.0,15.0,,1.0,1
+Visualization task-Navigation,1.0,0.0,1.0,1.0,,1.0,3
+Visualization task-Overview/detail,0.0,0.0,1.0,45.0,,1.0,2
+Visualization task-Visual representation,1.0,2.0,1.0,31.0,,1.0,4

@@ -1,0 +1,14 @@
+item,key,source,topic,concept,efa_factor,efa_loading,es2_mode,es2_mean,validation_factor,validation_short_name,validation_wording
+P0-27,P027,P0,Efficiency,Number of steps,task_cognition,0.543,4.0,4.28,Cognitive value,CogTaskComplete,I could complete my essential tasks efficiently
+P0-60,P060,P0,Pleasure,Enjoyment,task_cognition,0.58,4.0,3.84,Cognitive value,CogSysEnjoy,I enjoyed using this system
+P0-64,P064,P0,Novelty,Creativity,task_cognition,0.747,4.0,3.81,Cognitive value,CogSysThinkDeep,The tool encouraged me to think deeply about my data
+P3-01,P301,P3,Usefulness,__,task_cognition,0.734,5.0,4.62,Cognitive value,CogSysUseful,The system was useful for me
+P0-26,P026,P0,Ease of use,__,system,0.884,4.0,4.22,Intuitiveness,IntSysEasyStart,I found it easy to get started using this system
+P0-88,P088,P0,Understandability,Simplicity of understanding,system,0.892,4.0,4.0,Intuitiveness,IntSysSimpleUnderstand,I found the system simple to understand
+P40-26-A,P4026A,P4,,,system,0.793,,,Intuitiveness,IntAnalysisConfigure,Getting the tool configured for my analysis was straightforward
+P0-22-A,P022A,P0,Ease of learning,Memorability,visualization,0.45,4.0,3.91,Visualization,VisRemember,I can easily remember how to read the visualizations in the system
+P0-67,P067,P0,Repeatability,Undo and redo,visualization,0.432,4.0,3.78,Visualization,VisTrialError,I could safely engage in a trial and error analysis process
+P0-89,P089,P0,Understandability,Simplicity of understanding,visualization,0.649,4.0,3.84,Visualization,VisSimpleUnderstand,The visual representations I saw were simple to understand
+P0-97,P097,P0,Insightfulness,Knowledge discovery,visualization,0.516,5.0,4.44,Visualization,VisSysRetrieveInfo,Using the system I could easily retrieve information from my data
+P0-98,P098,P0,Visualization task,Visual representation,visualization,0.582,5.0,4.56,Visualization,VisAppropriate,I found the visual representations provided by the system were appropriate
+P1-06,P106,P1,Trust,Trustworthiness of content,visualization,0.775,5.0,4.22,Visualization,VisFaithful,The visualizations I saw seemed to represent the data faithfully

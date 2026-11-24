@@ -1,0 +1,16 @@
+topic,limesurvey_code,name,wording,display_order
+S01,S01Attractiveness,Attractiveness,"In my opinion, the system is generally: annoying / enjoyable good / bad unlikable / pleasing unpleasant / pleasant attractive / unattractive friendly / unfriendly",1
+S02,S02Perspicuity,Perspicuity,"In my opinion, the system is generally: not understandable / understandable easy to learn / difficult to learn complicated / easy clear / confusing",2
+S03,S03Efficiency,Efficiency,"In my opinion, the system is generally: fast / slow inefficient / efficient impractical / practical organized / cluttered",3
+S04,S04Dependability,Dependability,"In my opinion, the system is generally: unpredictable / predictable obstructive / supportive secure / not secure meets expectations / does not meet expectations",4
+S05,S05Stimulation,Stimulation,"In my opinion, the system is generally: valuable / inferior boring / exciting not interesting / interesting motivating / demotivating",5
+S06,S06Novelty,Novelty,"In my opinion, the system is generally: creative / dull inventive / conventional usual / leading edge conservative / innovative",6
+S07,S07Trust,Trust,"Regarding the use of data, the system is: insecure / secure untrustworthy / trustworthy unreliable / reliable non-transparent / transparent",7
+S08,S08Clarity,Clarity,In my opinion the user interface of the system looks: poorly grouped / well grouped unstructured / structured disordered / ordered disorganized / organized,8
+S09,S09Usefulness,Usefulness,I consider the possibility of using the system as: useless / useful not helpful / helpful not beneficial / beneficial not rewarding / rewarding,9
+S10,S10Adaptability,Adaptability,"Regarding my personal requirements and preferences, the system is: not adjustable / adjustable not changeable / changeable inflexible / flexible not extendable / extendable",10
+S11,S11Intuitive,Intuitive use,"In my opinion, using the system is: difficult / easy illogical / logical not plausible / plausible inconclusive / conclusive",11
+S12,S12VisualAesthetics,Visual Aesthetics,"In my opinion, the visual design of the system is: ugly / beautiful lacking style / stylish unappealing / appealing unpleasant / pleasant",12
+S13,S13Value,Value,I generally consider the design of the system as: inferior / valuable not presentable / presentable tasteless / tasteful not elegant / elegant,13
+S14,S14TrustworthinessCo,Trustworthiness of Content,"In my opinion, the information and data provided by the system are: useless / useful implausible / plausible untrustworthy / trustworthy inaccurate / accurate",14
+S15,S15QualityContent,Quality of Content,"In my opinion, the information and data provided by the system are: obsolete / up-to-date not interesting / interesting poorly prepared / well prepared incomprehensible / comprehensible",15

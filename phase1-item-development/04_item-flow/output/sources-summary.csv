@@ -1,0 +1,6 @@
+source,description,material,classification,items_in_pool,optional_items
+P0,"Expert suggestions (expert survey 1, Task 2)",105 Task 2 answers coded into 136 topic-concept assignments (26 topics),removed: 68; item: 62; optional item: 6,68,6
+P1,"UEQ+ items of the 15 topics of Task 1, compared with P0",62 items of 15 UEQ+ scales,RELATED: 29; IRRELEVANT: 20; IGNORE: 8; NEW CONCEPT/TOPIC: 5,6,0
+P2,"Items of other standardized questionnaires, compared with P0+P1",472 items of 23 questionnaires,INCLUDE: 341; MAYBE: 79; EXCLUDE: 52,16,0
+P3,"Terms extracted from the VA literature, compared with P0+P1+P2",2072 terms classified into 90 topic-concepts,no status: 1210; ok related: 568; ok changed: 211; ok new concept/topic: 55; ok ignore: 18; other: 9; ease of learning-prerequisites to proficiency: 1,5,0
+Total,Merged pool P0+P1+P2+P3,,,95,6

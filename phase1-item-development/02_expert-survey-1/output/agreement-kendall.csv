@@ -1,0 +1,5 @@
+sample,step,excluded_topic,raters,topics,W,chi2,df,p
+survey 1,0,,37,15,0.3581602,185.527,14,4.886115e-32
+survey 1,1,Attractiveness,37,14,0.3819317,183.7091,13,2.967585e-32
+survey 1,2,Dependability,37,13,0.4071104,180.757,12,2.98323e-32
+pilot,0,,4,15,0.5670033,31.75218,14,0.004343856

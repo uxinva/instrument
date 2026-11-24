@@ -1,0 +1,2073 @@
+term_id,term,final_topic_concept,ai_topic_concept,status
+1,mapping individual perspectives,Collaboration-__,Collaboration-__,OK related
+2,convince,Collaboration-Shareable,Collaboration-Shareable,OK related
+3,quality of solutions,Visualization task-Visual representation,Usefulness-Task accomplishment,OK changed
+4,performance,Flexibility-Adaptability,Flexibility-Adaptability,OK related
+5,usability,Ease of use-__,Ease of use-__,OK related
+6,usability,Ease of use-__,Ease of use-__,OK related
+7,performance,Efficiency-Runtime performance,Efficiency-Runtime performance,OK related
+8,error rates,Dependability-Robustness,Dependability-Robustness,OK related
+9,complexity,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+10,generality,Flexibility-Specialization/generalization,Flexibility-Specialization/generalization,OK related
+11,readability,Clarity-Layout,Clarity-Layout,
+12,color choices,Visualization task-Visual representation,Clarity-Overall design,OK changed
+13,relief,Pleasure-Enjoyment,Pleasure-Enjoyment,OK related
+14,simplicity,Ease of use-Simple interaction,Ease of use-Simple interaction,
+15,understandable,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+16,little training,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,OK related
+17,efficiently,Efficiency-Number of steps,Efficiency-Number of steps,
+18,higher level of analysis,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+19,,Empty -Empty,Empty -Empty,
+20,tell a story using the visualization,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+21,interactions nedded to the job,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+22,enhance exploration,Involvement-Engagement,Involvement-Engagement,OK related
+23,enhance analysis,Flexibility-Extensibility,Usefulness-Task accomplishment,OK changed
+24,utility,Usefulness-__,Usefulness-__,
+25,accuracy,Dependability-Accuracy of results,NOT FOUND-NOT FOUND,OK New concept/topic
+26,usability,Ease of use-__,Ease of use-__,
+27,easy to correct mistakes,Dependability-Error recovery,Dependability-Error recovery,
+28,understanding,Clarity-Visual simplicity,Understandability-Simplicity of understanding,OK changed
+29,recall,Ease of learning-Memorability,Ease of learning-Memorability,OK related
+30,well-suited to task,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+31,see what is happening without details,Understandability-Self-explaining,Understandability-Simplicity of understanding,OK changed
+32,potential to training,Ease of learning-Documentation,Ease of learning-Documentation,
+33,situation patterns,Flexibility-Adaptability,Insightfulness-Knowledge discovery,OK changed
+34,capture the analytical process,Repeatability-Undo and redo,Repeatability-Reproduction of analysis,OK changed
+35,utility,Usefulness-__,Usefulness-__,
+36,parameters adjusting,Flexibility-Extensibility,Flexibility-Extensibility,
+37,successfully identified times and locations,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+38,situation awareness,Understandability-__,Insightfulness-Knowledge discovery,OK changed
+39,utility,Usefulness-__,Usefulness-__,
+40,good match to how one might think,Dependability-Consistency,Dependability-Consistency,OK related
+41,showed too much,Clarity-Visual simplicity,Clarity-Visual simplicity,OK related
+42,exploration,Involvement-Engagement,Involvement-Engagement,OK related
+43,timely data processing,Efficiency-Runtime performance,Efficiency-Runtime performance,
+44,transparency in the data processing,Trust-Transparency,Trust-Transparency,
+45,perception of objects,Fluidity-Sense of flow,Insightfulness-Knowledge discovery,OK changed
+46,understand the meaning of the data,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+47,accurately predict,Dependability-Predictability,Dependability-Predictability,OK related
+48,get comments about observation,Collaboration-__,Collaboration-__,
+49,interact with the data,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+50,utility,Usefulness-__,Usefulness-__,
+51,creative solutions,Novelty-Creativity,Novelty-Creativity,
+52,calm,Satisfaction-Tension,Satisfaction-Tension,
+53,stress,Satisfaction-Tension,Satisfaction-Tension,
+54,cognitive load,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,OK related
+55,being nervous,Satisfaction-Tension,Satisfaction-Tension,
+56,making mistakes,Dependability-Robustness,Dependability-Robustness,
+57,bad choices,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+58,life-changing,Value-Value added,Value-Value added,
+59,continue otherâ€™s work,Collaboration-__,Collaboration-__,
+60,better analysis,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+61,easy to add data,Ease of use-Simple interaction,Ease of use-Simple interaction,
+62,easy to organize information,Clarity-Layout,NOT FOUND-NOT FOUND,OK changed
+63,easy to find information,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+64,easy to share information,Collaboration-Shareable,Collaboration-Shareable,
+65,performance on long term analysis,Efficiency-Time,Efficiency-Time,
+66,build a long-term understanding,Understandability-Memorability of data,Insightfulness-Knowledge discovery,OK new concept/topic
+67,insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+68,efficiently,Efficiency-Number of steps,Efficiency-Number of steps,
+69,explore data quickly,Efficiency-Time,Efficiency-Time,OK related
+70,utility,Usefulness-__,Usefulness-__,
+71,performance,Efficiency-Time,Efficiency-Time,
+72,performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+73,support analysis strategies,Flexibility-Adaptability,Flexibility-Adaptability,
+74,provide information scent,User assistance-Guidance,User assistance-Guidance,OK related
+75,focus on essential information,Fluidity-Sense of flow,Fluidity-Sense of flow,OK related
+76,generate hypotheses,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+77,support sensemaking proces,Fluidity-Smooth workflow,Fluidity-Smooth workflow,OK related
+78,allow flexibility,Flexibility-Adaptability,Flexibility-Adaptability,
+79,Insight Acquisition,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+80,exploration effectively,Involvement-Engagement,Involvement-Engagement,OK related
+81,view of changes over time,Visualization task-Visual representation,Visualization task-Coordinated View,OK changed
+82,find problem relations,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+83,find the starting point,Clarity-Visual simplicity,User assistance-Guidance,OK changed
+84,finding interesting patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+85,difficulties in learning,Ease of learning-Easy / hard to discover feature,Ease of learning-Easy / hard to discover feature,
+86,scatterplot useful for complex databases,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,OK related
+87,user performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+88,useful,Usefulness-__,Usefulness-__,
+89,simple,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+90,understand the measure,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+91,Accuracy,Dependability-Robustness,Dependability-Robustness,
+92,faster,Efficiency-Time,Efficiency-Time,
+93,training time,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+94,screen,Clarity-Layout,Clarity-Layout,OK related
+95,terminology,Understandability-Self-explaining,Understandability-Self-explaining,OK related
+96,learning,Ease of learning-__,Ease of learning-__,
+97,system capabilities,Usefulness-__,Usefulness-__,
+98,effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+99,robust,Dependability-Robustness,Dependability-Robustness,
+100,Effective exploration,Visualization task-Navigation,Involvement-Engagement,OK changed
+101,vary strategies,Flexibility-Adaptability,Flexibility-Adaptability,OK related
+102,helpful,Usefulness-__,Usefulness-__,OK related
+103,difficult to learn,Ease of learning-__,Ease of learning-__,OK related
+104,recover from the mistake,Dependability-Error recovery,Dependability-Error recovery,OK related
+105,speed up,Efficiency-Time,Efficiency-Time,OK related
+106,visual cues,User assistance-Guidance,User assistance-Guidance,OK related
+107,match mental model,Dependability-Consistency,Dependability-Consistency,OK related
+108,look at data again,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,OK related
+109,understandability,Understandability-__,Understandability-__,OK related
+110,consistency of design,Dependability-Consistency,Dependability-Consistency,OK related
+111,response time,Efficiency-Runtime performance,Efficiency-Runtime performance,
+112,usability,Ease of use-__,Ease of use-__,
+113,Utility,Usefulness-__,Usefulness-__,
+114,useful,Usefulness-__,Usefulness-__,
+115,understand insights,Collaboration-__,Insightfulness-Knowledge discovery,OK changed
+116,abundant interactions,Flexibility-Expressiveness,Flexibility-Expressiveness,OK related
+117,useful in complex collaborative tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+118,easy to use,Ease of use-__,Ease of use-__,
+119,Clear,Clarity-__,Clarity-__,OK related
+120,frustration,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+121,adapt mental model to existing views,Dependability-Consistency,Dependability-Consistency,OK related
+122,choose appropriate views,User assistance-Guidance,User assistance-Guidance,OK related
+123,usability,Ease of use-Simple interaction,Ease of use-Simple interaction,
+124,understand visualizations,Visualization task-Data reading,Understandability-Simplicity of understanding,OK changed
+125,interpret the displayed information,Clarity-Visual simplicity,Understandability-Simplicity of understanding,OK changed
+126,collision with the way participantsâ€™ minds work,Dependability-Consistency,Dependability-Consistency,
+127,difficult to learn,Ease of learning-__,Ease of learning-__,
+128,analysis was difficult,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+129,easy to use,Ease of use-__,Ease of use-__,
+130,enjoyed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+131,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+132,large amount of time spent interacting,Efficiency-Time,Efficiency-Time,
+133,perform the tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+134,want to accomplish,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+135,assist task,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+136,barriers encounter,Dependability-Error recovery,Dependability-Error recovery,
+137,usage evolved over time,Ease of learning-__,Ease of learning-__,
+138,People pay attention to visualization,Involvement-Engagement,Involvement-Engagement,
+139,convincing visualization,Collaboration-Shareable,Collaboration-Shareable,
+140,make connections,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+141,compare and search documents,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+142,understand the huge collection of documents,Understandability-__,Understandability-Simplicity of understanding,OK changed
+143,communication,Collaboration-Shareable,Collaboration-Shareable,
+144,complex,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+145,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+146,easy to use,Ease of use-__,Ease of use-__,
+147,dettect patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+148,analysis over longer time periods,Scalability-Data processing scalability,Scalability-Data processing scalability,
+149,well adopted,Ease of learning-__,Ease of learning-__,
+150,familiarize with the system,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+151,data findings,Understandability-Model understanding and refining,Insightfulness-Knowledge discovery,OK new concept/topic
+152,obtain motion sequences of interest,Visualization task-Data reading,Usefulness-Task accomplishment,OK changed
+153,communicating results,Collaboration-Shareable,Collaboration-Shareable,
+154,verify hypotheses,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+155,Usability,Ease of use-__,Ease of use-__,
+156,learned to use,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+157,intuitive,Understandability-Self-explaining,Understandability-Simplicity of understanding,OK changed
+158,interplay of the different views,Visualization task-Coordinated View,Flexibility-Internal Interoperability,OK changed
+159,visual encodings appropriate,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+160,tool tips,User assistance-Guidance,User assistance-Guidance,OK related
+161,fun,Pleasure-Enjoyment,Pleasure-Enjoyment,
+162,visualizing the data in detail,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+163,Efficiency,Efficiency-__,Efficiency-__,
+164,reduces effort,Efficiency-Effort,Efficiency-Effort,
+165,Gaining fast insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+166,reduces work load,Efficiency-Effort,Efficiency-Effort,
+167,helpful,Usefulness-__,Usefulness-__,
+168,model improves,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+169,faster reaction times,Efficiency-Runtime performance,Efficiency-Runtime performance,
+170,useful model representation,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+171,easy to learn,Ease of learning-__,Ease of learning-__,
+172,understandable,Understandability-__,Understandability-__,OK related
+173,creating situational awareness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+174,information overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+175,information kept,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+176,graph layout.,Clarity-Layout,Clarity-Layout,OK related
+177,suitability for task,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+178,helpful to solve the task,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+179,easy to interpret,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+180,easy to understand navigation,Ease of use-Simple interaction,Ease of use-Simple interaction,
+181,helpful to navigate,Ease of use-Navigation,Ease of use-Navigation,
+182,understand data distribution,Understandability-__,Insightfulness-Knowledge discovery,OK related
+183,cluster representation,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+184,helpful to search,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+185,efficient,Efficiency-__,Efficiency-__,
+186,performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+187,time-to-completion of a task,Efficiency-Time,Efficiency-Time,
+188,performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+189,filttering,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+190,summarizing,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+191,training needed,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+192,useful feature,Usefulness-__,Usefulness-__,
+193,difficult,Ease of learning-__,Ease of learning-__,OK related
+194,visual summary,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+195,time consuming,Efficiency-Time,Efficiency-Time,
+196,easy to use,Ease of use-__,Ease of use-__,
+197,easy to learn,Ease of learning-__,Ease of learning-__,
+198,helpful,Usefulness-__,Usefulness-__,
+199,useful,Usefulness-__,Usefulness-__,OK related
+200,like to use,Pleasure-Enjoyment,Pleasure-Enjoyment,OK related
+201,quickly,Efficiency-Time,Efficiency-Time,OK related
+202,assistance barely needed,Ease of learning-__,Ease of learning-Time to proficiency,OK changed
+203,needed time,Efficiency-Time,Efficiency-Time,OK related
+204,hints,User assistance-Guidance,User assistance-Guidance,OK related
+205,flexibility,Flexibility-__,Flexibility-__,OK related
+206,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+207,find insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+208,explore patterns,Insightfulness-Pattern detection,Involvement-Engagement,OK New concept/topic
+209,confirm patterns,Involvement-Engagement,Involvement-Engagement,OK related
+210,sought deeper findings,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+211,aesthetically pleasing,Attractiveness-__,Attractiveness-__,OK related
+212,user-friendly,Ease of use-__,Ease of use-__,
+213,learning time to understand,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+214,flexible,Flexibility-__,Flexibility-__,
+215,efficient,Efficiency-__,Efficiency-__,
+216,adequate analytical functionalities for exploration and discovery,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,OK related
+217,relating different parts of data is easy,Visualization task-Coordinated View,Visualization task-Coordinated View,OK related
+218,helpful,Usefulness-__,Usefulness-__,
+219,useful,Usefulness-__,Usefulness-__,
+220,flexibility,Flexibility-__,Flexibility-__,
+221,confusing,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+222,perform the task in different ways,Flexibility-__,Flexibility-__,
+223,confused,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+224,easily understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+225,difficult to remember,Ease of learning-Memorability,Ease of learning-Memorability,
+226,usability,Ease of use-__,Ease of use-__,
+227,,Empty -Empty,Empty -Empty,
+228,consistent representation,Dependability-Consistency,Dependability-Consistency,OK related
+229,difficulty to solve task,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+230,weaknesses,Dependability-Robustness,Dependability-Robustness,
+231,influence and sensitivity of parameters,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+232,usefulness,Usefulness-__,Usefulness-__,
+233,intuitive,Fluidity-Intuitive workflow,Understandability-Simplicity of understanding,OK changed
+234,easy exploration,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+235,gain insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+236,usefulness,Usefulness-__,Usefulness-__,
+237,in-depth analysis,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+238,usability,Ease of use-__,Ease of use-__,
+239,valuable,Value-Value added,Value-Value added,
+240,visual design,Attractiveness-__,Attractiveness-__,OK related
+241,supported interaction,Flexibility-Expressiveness,Flexibility-Expressiveness,OK related
+242,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+243,easy/diculty to uderstand,Clarity-Visual simplicity,Understandability-Simplicity of understanding,OK changed
+244,short time training,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+245,visual hints,User assistance-Guidance,User assistance-Guidance,OK related
+246,data processing in real-time,Efficiency-Runtime performance,Efficiency-Runtime performance,
+247,easy to be understood,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+248,easy to learn,Ease of learning-__,Ease of learning-__,
+249,explore salient data,Involvement-Engagement,Involvement-Engagement,OK related
+250,easy to interpret the visual encoding,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+251,analyze patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+252,easy or hard to analyze,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+253,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+254,time,Efficiency-Time,Efficiency-Time,
+255,noticed the main patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+256,refine data models,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+257,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+258,convenient exploration,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+259,difficult to learn,Ease of learning-__,Ease of learning-__,
+260,creative,Novelty-Creativity,Novelty-Creativity,
+261,learn to interpret,Ease of learning-__,Ease of learning-__,
+262,usefulness,Usefulness-__,Usefulness-__,
+263,usability,Ease of use-__,Ease of use-__,
+264,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+265,engaging,Involvement-Engagement,Involvement-Engagement,
+266,easy to use,Ease of use-__,Ease of use-__,
+267,smooth interactions,Fluidity-Smooth workflow,Fluidity-Smooth workflow,OK related
+268,helpful for data analysis and exploration,Usefulness-__,Usefulness-__,
+269,consistent colors,Dependability-Consistency,Dependability-Consistency,OK related
+270,understanding,Visualization task-Visual representation,Understandability-__,OK changed
+271,great,Pleasure-Enjoyment,Pleasure-Enjoyment,
+272,easily connect,Visualization task-Coordinated View,Visualization task-Coordinated View,OK related
+273,difficult to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+274,accepted,Ease of use-__,Ease of use-__,
+275,liked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+276,usefulness,Usefulness-__,Usefulness-__,
+277,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+278,find patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+279,useful for data analysis,Usefulness-__,Usefulness-__,
+280,communicating findings,Collaboration-Shareable,Collaboration-Shareable,
+281,Learn how to use,Ease of learning-__,Ease of learning-__,
+282,easy to use,Ease of use-__,Ease of use-__,
+283,easy to query,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+284,easy to interpret,Clarity-Visual simplicity,Understandability-Simplicity of understanding,OK changed
+285,easy to compare,Visualization task-Data features,Usefulness-Task accomplishment,OK changed
+286,understand the changes,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+287,Get an overall understanding,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+288,easy to find,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+289,usability,Ease of use-__,Ease of use-__,
+290,usefulness,Usefulness-__,Usefulness-__,
+291,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+292,interesting,Involvement-Interest,Involvement-Interest,
+293,offset biases,Understandability--Susceptibility to bias,NOT FOUND-NOT FOUND,OK New concept/topic
+294,not well received,Satisfaction-__,Satisfaction-__,
+295,intriguing,Involvement-Interest,Involvement-Interest,OK related
+296,had trouble interpreting,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+297,helping to discover topics,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+298,easy overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+299,notice topics,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+300,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+301,make connections,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+302,like,Visualization task-Coordinated View,Pleasure-Enjoyment,OK changed
+303,get focused,Fluidity-Sense of flow,Fluidity-Sense of flow,OK related
+304,enthusiastic,Involvement-Engagement,Pleasure-Enjoyment,OK changed
+305,help to think,Stimulation-Arousing / soothing,Insightfulness-Knowledge discovery,OK changed
+306,all of a sudden I see,Insightfulness-Unexpected discovery,Insightfulness-Knowledge discovery,OK New concept/topic
+307,easy to interpret,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+308,bothered,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",OK related
+309,struggling,Visualization task-Visual representation,Ease of use-__,OK changed
+310,expressed concern,Trust-Feeling of safety,Trust-Feeling of safety,
+311,easily get back,Repeatability-Undo and redo,Repeatability-Undo and redo,
+312,ease of learning,Ease of learning-__,Ease of learning-__,
+313,know how to use,Ease of learning-__,Ease of learning-__,
+314,interpret the visualizations,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+315,cognitive processes or understand,Understandability-__,Understandability-__,OK related
+316,usability,Ease of use-__,Ease of use-__,
+317,reads my mind,Dependability-Consistency,Dependability-Consistency,
+318,designed for me,Flexibility-Specialization/generalization,Flexibility-Specialization/generalization,
+319,infer the meaning,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+320,figuring things out,Involvement-Engagement,Involvement-Engagement,
+321,familiar,Ease of learning-__,Ease of learning-__,OK related
+322,learning,Ease of learning-__,Ease of learning-__,
+323,undertanding,Understandability-__,Understandability-__,OK related
+324,useful,Usefulness-__,Usefulness-__,
+325,communicate,Visualization task-Visual representation,NOT FOUND-NOT FOUND,OK changed
+326,cool,Pleasure-Enjoyment,Pleasure-Enjoyment,
+327,interesting,Involvement-Interest,Involvement-Interest,
+328,consistent with the mental model,Dependability-Consistency,Dependability-Consistency,
+329,make sense of the new information,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+330,explore findings from insight,Usefulness-Task acomplishment,Involvement-Engagement,OK changed
+331,motivated,Involvement-Engagement,Involvement-Engagement,
+332,confidence,Trust-Confidence,Trust-Confidence,
+333,fatest,Efficiency-Time,Efficiency-Time,
+334,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+335,confident,Trust-Confidence,Trust-Confidence,
+336,understanding,Understandability-__,Understandability-__,OK related
+337,easyest/hardest to use,Ease of use-__,Ease of use-__,
+338,response time,Efficiency-Time,Efficiency-Time,
+339,prefered,Satisfaction-__,Satisfaction-__,
+340,easy of use,Ease of use-__,Ease of use-__,
+341,confidence,Trust-Confidence,Trust-Confidence,
+342,understanding,Understandability-__,Understandability-__,OK related
+343,total time spent,Efficiency-Time,Efficiency-Time,
+344,data model synthesized observations,Understandability-Model understanding and refining,Insightfulness-Knowledge discovery,OK new concept/topic
+345,useful,Usefulness-__,Usefulness-__,
+346,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+347,speed,Efficiency-Time,Efficiency-Time,
+348,corrects my wrong understanding,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+349,find pattern,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+350,eager to find information,Involvement-Engagement,Involvement-Engagement,
+351,attract attention,Involvement-Interest,Involvement-Interest,
+352,usability,Ease of use-__,Ease of use-__,
+353,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+354,useful,Usefulness-__,Usefulness-__,
+355,power of visualization,Attractiveness-__,Attractiveness-__,OK related
+356,gain insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+357,different aspects of the data,Visualization task-Coordinated View,Visualization task-Coordinated View,OK related
+358,ease of interaction,Ease of use-Simple interaction,Ease of use-Simple interaction,
+359,detailed study,Visualization task-Coordinated View,Visualization task-Overview/detail,OK changed
+360,creation of models for automatic detection,Understandability-Model understanding and refining,NOT FOUND-NOT FOUND,OK ignore
+361,predict,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+362,Learning,Ease of learning-__,Ease of learning-__,
+363,adoption,Satisfaction-__,Satisfaction-__,
+364,searching,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+365,unexpeted changes,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+366,helped to detect issues,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+367,improve overall data quality,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+368,discover of mode of usage,Novelty-Creativity,Novelty-Creativity,
+369,pattern analysis,Ease of use-__,Insightfulness-Knowledge discovery,OK changed
+370,usability,Ease of use-__,Ease of use-__,
+371,analytical strategies,Flexibility-Adaptability,Flexibility-Adaptability,
+372,sensemaking,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+373,learn,Ease of learning-__,Ease of learning-__,
+374,categorize,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+375,recognize cluster,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+376,identify the trends,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+377,identify patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+378,confident,Trust-Confidence,Trust-Confidence,
+379,confident,Trust-Confidence,Trust-Confidence,
+380,Efficiency,Efficiency-__,Efficiency-__,
+381,Effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+382,cognitive load,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,OK related
+383,intuitively,Visualization task-Data reading,Understandability-Simplicity of understanding,OK changed
+384,access to data,Usefulness-Task acomplishment,Usefulness-Fulfillment of a need,OK changed
+385,avoid errors,Dependability-Robustness,Dependability-Robustness,
+386,helpful,Usefulness-__,Usefulness-__,
+387,valuable,Value-Value added,Value-Value added,
+388,led to insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+389,frustrated,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+390,exhaustively,Visualization task-Data reading,NOT FOUND-NOT FOUND,OK changed
+391,readable,Clarity-Layout,Clarity-Layout,
+392,generalization,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+393,overly focused,Fluidity-Sense of flow,Fluidity-Sense of flow,
+394,efficient,Efficiency-__,Efficiency-__,
+395,found useful information,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+396,easily examine,Ease of use-Simple interaction,Ease of use-Simple interaction,
+397,overwhelming,Clarity-Visual simplicity,Clarity-Visual simplicity,
+398,find common patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+399,confirms assumption,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+400,examine hypothesis,Involvement-Engagement,Involvement-Engagement,Other
+401,quickly identifies,Efficiency-Time,Efficiency-Time,OK related
+402,surprised,Involvement-Engagement,Involvement-Engagement,Other
+403,generate assumption,Involvement-Engagement,Involvement-Engagement,OK related
+404,curious,Involvement-Interest,Involvement-Interest,OK related
+405,reveal,Efficiency-Time,Insightfulness-Knowledge discovery,OK changed
+406,confirmed,Involvement-Engagement,Involvement-Engagement,OK changed
+407,discovered insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+408,interpreted the results,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+409,shared insights,Collaboration-Shareable,Collaboration-Shareable,OK related
+410,form a hypothesis,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+411,empowered,Value-Value added,Value-Value added,
+412,see interesting patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+413,realized,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+414,interested,Involvement-Interest,Involvement-Interest,
+415,curious,Involvement-Interest,Involvement-Interest,
+416,predictive modeling,Understandability-Model understanding and refining,Usefulness-Task accomplishment,OK new concept/topic
+417,get the results of the prediction,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+418,quick determine predictive features,Efficiency-Time,Efficiency-Time,
+419,excited,Pleasure-Enjoyment,Pleasure-Enjoyment,
+420,easily compare,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+421,resulting insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+422,powerful,Value-Value added,Value-Value added,
+423,helps understand,Understandability-__,Understandability-__,OK related
+424,shed lights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+425,navigate,Ease of use-Navigation,Ease of use-Navigation,OK related
+426,easy to navigate,Ease of use-Navigation,Ease of use-Navigation,
+427,usefulness,Usefulness-__,Usefulness-__,
+428,effectively,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+429,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+430,easy to use,Ease of use-__,Ease of use-__,
+431,self-explaining,Understandability-Self-explaining,Understandability-Self-explaining,
+432,clear how to use,Ease of learning-__,Ease of learning-__,
+433,hidden features,Ease of learning-Easy / hard to discover feature,Ease of learning-Easy / hard to discover feature,
+434,to much information,Clarity-Visual simplicity,Clarity-Visual simplicity,
+435,easy to use,Ease of use-__,Ease of use-__,
+436,ease to learn,Ease of learning-__,Ease of learning-__,
+437,helpfulness,Usefulness-__,Usefulness-__,
+438,enjoyed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+439,accurate,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+440,faster,Efficiency-Time,Efficiency-Time,
+441,visually attractive,Attractiveness-__,Attractiveness-__,OK related
+442,useful,Usefulness-__,Usefulness-__,
+443,efficient,Efficiency-__,Efficiency-__,
+444,took time to remember visual encodings,Ease of learning-Memorability,Ease of learning-Memorability,
+445,not easy to scroll,Ease of use-Simple interaction,Ease of use-Simple interaction,
+446,impressed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+447,amount of information offered,Visualization task-Visual representation,Visualization task-Overview/detail,OK changed
+448,design,Attractiveness-__,Attractiveness-__,OK related
+449,novelty,Novelty-__,Novelty-__,
+450,importance to the problem,Value-Value added,Value-Value added,
+451,interested,Involvement-Interest,Involvement-Interest,
+452,facilitates a quick comparison,Efficiency-Time,Efficiency-Time,
+453,smart idea,Novelty-Creativity,Novelty-Creativity,OK related
+454,clearly visualizes,Clarity-Layout,Clarity-Layout,
+455,find new anomalous behaviors,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+456,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+457,save time,Efficiency-Time,Efficiency-Time,
+458,clearly summarized,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+459,preferred,Satisfaction-__,Satisfaction-__,
+460,engaging,Involvement-Engagement,Involvement-Engagement,
+461,encountered difficulties,Ease of use-__,Ease of use-__,
+462,tedious,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+463,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+464,connect topics,Visualization task-Coordinated View,Visualization task-Coordinated View,OK related
+465,makes it difficult,Ease of use-__,Ease of use-__,
+466,easier to learn,Ease of learning-__,Ease of learning-__,
+467,easier to use,Ease of use-__,Ease of use-__,
+468,prefers,Satisfaction-__,Satisfaction-__,
+469,detect the correlation,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+470,visualization quality,Attractiveness-__,Attractiveness-__,OK related
+471,speed-up,Efficiency-Time,Efficiency-Time,
+472,provides insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+473,intuitive,Fluidity-Intuitive workflow,Understandability-Simplicity of understanding,OK changed
+474,appreciated,Pleasure-Enjoyment,Pleasure-Enjoyment,
+475,modfiy models,Understandability-Model understanding and refining,Flexibility-Adaptability,OK new concept/topic
+476,parameter for desired behavior,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+477,unstable,Dependability-Robustness,Dependability-Robustness,
+478,risky,Trust-Feeling of safety,Trust-Feeling of safety,
+479,impossible to comprehend,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+480,mentally comprehend,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+481,enthusiastic,Pleasure-Enjoyment,Pleasure-Enjoyment,
+482,well designed,Clarity-Overall design,Attractiveness-__,OK changed
+483,user friendly,Ease of use-__,Ease of use-__,
+484,received high praises,Pleasure-Enjoyment,Pleasure-Enjoyment,
+485,easily understood,Ease of learning-Prerequisites to proficiency,Understandability-Simplicity of understanding,OK changed
+486,clear,Usefulness-Fulfillment of a need,Clarity-__,OK changed
+487,useful,Usefulness-__,Usefulness-__,
+488,helpful,Usefulness-__,Usefulness-__,
+489,easily understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+490,efficciency,Efficiency-__,Efficiency-__,
+491,effectively,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+492,find the relationships,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+493,liked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+494,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+495,confidence,Trust-Confidence,Trust-Confidence,
+496,impressed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+497,helpful,Usefulness-__,Usefulness-__,
+498,useful for comparing,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+499,complicated,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+500,understood the metaphors,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+501,difficult to remember,Ease of learning-Memorability,Ease of learning-Memorability,OK related
+502,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+503,successfuly complete the task,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+504,easiest/hardest to use,Ease of use-__,Ease of use-__,OK related
+505,took more time in completing the task,Efficiency-Time,Efficiency-Time,OK related
+506,easy to interpret infomation,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+507,easiest/hardest to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+508,need to code complex flows,Fluidity-Smooth workflow,Ease of use-Simple interaction,OK changed
+509,help complete the tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+510,help finding the correct answers,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+511,understand data,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+512,utility,Usefulness-__,Usefulness-__,
+513,makes patterns clear,Clarity-Visual simplicity,Clarity-__,OK changed
+514,powerful,Value-Value added,Value-Value added,
+515,excited,Pleasure-Enjoyment,Pleasure-Enjoyment,
+516,grouping based on the cluster,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+517,make sense,Insightfulness-Knowledge discovery,Dependability-Consistency,OK changed
+518,see patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+519,clearly revealed a progression,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+520,help to investigate,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+521,outliers were very easy to spot,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+522,correctness of data,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+523,completeness of data,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+524,capture subtle variations,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+525,data collection planning,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+526,comparing the similarities and differences,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+527,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK changed
+528,creative,Novelty-Creativity,Novelty-Creativity,
+529,understand,Understandability-__,Understandability-__,OK related
+530,change the layout of a visualization,Flexibility-Extensibility,Flexibility-Extensibility,
+531,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+532,discover new things,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+533,increase the transparency,Trust-Transparency,Trust-Transparency,
+534,track several items,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+535,understand the patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+536,help interpret,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+537,interpretability,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+538,difficult to learn,Ease of learning-__,Ease of learning-__,
+539,impressed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+540,intuitively showed,Clarity-__,Clarity-__,
+541,useful,Usefulness-__,Usefulness-__,
+542,gives confidence,Trust-Confidence,Trust-Confidence,
+543,take a long time to learn,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+544,does not show directly,Clarity-Layout,Clarity-Layout,
+545,design,Clarity-Visual simplicity,Attractiveness-__,OK changed
+546,useful,Usefulness-__,Usefulness-__,
+547,,Empty -Empty,Empty -Empty,
+548,utility,Usefulness-__,Usefulness-__,
+549,making sense,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+550,relating evidence and questions,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+551,organizing thoughts,Insightfulness-Knowledge discovery,NOT FOUND-NOT FOUND,OK changed
+552,promoting higher-level insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+553,organize findings,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+554,control the layout,Flexibility-Extensibility,Flexibility-Extensibility,
+555,facilitated the discovery,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+556,aligning to their mental models,Dependability-Consistency,Dependability-Consistency,OK related
+557,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+558,familiarity,Trust-Trust in the system,Trust-Trust in the system,
+559,trustworthy,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+560,usability,Ease of use-__,Ease of use-__,
+561,adoption,Satisfaction-__,Satisfaction-__,
+562,recommend,Satisfaction-__,Satisfaction-__,
+563,efficiency,Efficiency-__,Efficiency-__,
+564,transparency,Trust-Transparency,Trust-Transparency,
+565,detection of patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+566,exploration of the evidence,Fluidity-Smooth workflow,Involvement-Engagement,OK changed
+567,enthusiasm,Pleasure-Enjoyment,Pleasure-Enjoyment,
+568,usability,Ease of use-__,Ease of use-__,
+569,intuitively,Visualization task-Overview/detail,Understandability-Simplicity of understanding,OK changed
+570,complexity,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+571,impressed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+572,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+573,explore long data,Involvement-Engagement,Scalability-Data processing scalability,OK changed
+574,shows very clearly,Clarity-__,Clarity-__,
+575,helpful to identify the abnormalities,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+576,space was small,Clarity-Layout,Clarity-Layout,OK related
+577,learnability,Ease of learning-__,Ease of learning-__,
+578,informativeness,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+579,intuitiveness,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+580,highlight abnormalities,Visualization task-Data features,Clarity-__,OK changed
+581,further manipulate data,Flexibility-Extensibility,Flexibility-Extensibility,OK related
+582,useful,Usefulness-__,Usefulness-__,
+583,usability,Ease of use-__,Ease of use-__,
+584,visual representation,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+585,interaction with clusters,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+586,familiar representataion,Ease of learning-__,Ease of learning-__,
+587,too much information,Clarity-Visual simplicity,Clarity-Visual simplicity,
+588,missed the information,Clarity-Layout,Clarity-Layout,
+589,power for exploratory analysis,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+590,get a highlevel view of the dataset,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+591,drilling down into individual data,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+592,examine high-level patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+593,focus on specific data,Fluidity-Sense of flow,Usefulness-Fulfillment of a need,OK changed
+594,usefulness,Usefulness-__,Usefulness-__,
+595,made easier a task,Efficiency-Effort,Efficiency-Effort,
+596,answer many questions,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+597,appealing,Attractiveness-__,Attractiveness-__,
+598,see clearly,Visualization task-Data features,Clarity-__,OK changed
+599,overwhelming view,Clarity-Visual simplicity,Clarity-Visual simplicity,
+600,significant insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+601,identify patterns,Insightfulness-Pattern detection,Insightfulness-Knowledge discovery,OK new concept/topic
+602,overview of data,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+603,real-time updates,Efficiency-Runtime performance,Efficiency-Runtime performance,OK related
+604,refine visualization,Flexibility-Extensibility,Flexibility-Extensibility,OK related
+605,complexity of the user interface,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+606,clarity,Clarity-Visual simplicity,Clarity-__,OK changed
+607,promising,Value-Value added,Value-Value added,
+608,self-explaining,Understandability-Self-explaining,Understandability-Self-explaining,
+609,satisfied,Satisfaction-__,Satisfaction-__,
+610,intuitive to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+611,easy to use,Ease of use-__,Ease of use-__,
+612,appreciated,Pleasure-Enjoyment,Pleasure-Enjoyment,
+613,clear view of the subgroups,Insightfulness-Knowledge discovery,Clarity-Layout,OK changed
+614,find outliers,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+615,individual-level visual representation,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+616,easy to remember,Ease of learning-Memorability,Ease of learning-Memorability,
+617,natural illustration of grouping,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+618,useful,Usefulness-__,Usefulness-__,
+619,valuable information,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+620,quickly locate it,Efficiency-Time,Efficiency-Time,OK related
+621,multiple interactions,Flexibility-Expressiveness,Flexibility-Expressiveness,OK related
+622,explore the group of students in which I interested,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+623,gives me some hints,User assistance-Guidance,User assistance-Guidance,OK related
+624,clear meaning,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+625,reliable,Trust-Reliability,Trust-Reliability,
+626,understand correlations,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+627,able to identify,User assistance-Guidance,Insightfulness-Knowledge discovery,OK changed
+628,quality of the data,Visualization task-Data reading,NOT FOUND-NOT FOUND,OK changed
+629,matched his expectation,Dependability-Predictability,Dependability-Predictability,
+630,attracted,Involvement-Interest,Involvement-Interest,
+631,confirmed the pattern,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+632,provided insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+633,explored the correlation,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+634,looked for categories,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+635,show the aggregated view,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+636,showed a clear pattern,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+637,endorsed the benefit,Value-Value added,Value-Value added,
+638,trust the data,Trust-__,Trust-__,
+639,get a sense of the situation,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+640,help to decide,Usefulness-Task accomplishment,Usefulness-Task accomplishment,Other
+641,explored different strategies,User behaviour-__,Flexibility-Adaptability,OK new concept/topic
+642,keep track,Repeatability-Reproduction of analysis,NOT FOUND-NOT FOUND,OK changed
+643,consistent use of colo,Dependability-Consistency,Dependability-Consistency,OK related
+644,easier to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,Ease of learning-Prerequisites to proficiency
+645,useful,Usefulness-__,Usefulness-__,
+646,Identified gaps,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+647,Understood relationship,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+648,Identified patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+649,Easy to learn,Ease of learning-__,Ease of learning-__,
+650,easy to use,Ease of use-__,Ease of use-__,
+651,design conveyed an integrated sense,Clarity-__,Clarity-__,
+652,helpful,Usefulness-__,Usefulness-__,
+653,Easy to identify,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+654,Easy to find,Visualization task-Overview/detail,Insightfulness-Knowledge discovery,OK changed
+655,Willing to use,Satisfaction-__,Satisfaction-__,
+656,faster,Efficiency-Time,Efficiency-Time,
+657,easier for exploring,Ease of use-Simple interaction,Ease of use-Simple interaction,
+658,exploring,Involvement-Engagement,Involvement-Engagement,OK related
+659,answering questions,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+660,valuable,Value-Value added,Value-Value added,
+661,use it again,Satisfaction-__,Satisfaction-__,
+62,awareness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+663,answering a question,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+664,assessing hypothesis,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+665,impression of the interface,Attractiveness-__,Attractiveness-__,
+666,engaged in the sensemaking,Involvement-Engagement,Involvement-Engagement,
+667,communicate findings,Collaboration-Shareable,Collaboration-Shareable,OK related
+668,create clusters,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK changed
+669,explain their schema,Collaboration-Shareable,Collaboration-Shareable,OK related
+670,effectively display,Clarity-Layout,Clarity-Layout,
+671,understand,Understandability-__,Understandability-__,OK related
+672,keep track,Repeatability-Reproduction of analysis,NOT FOUND-NOT FOUND,OK changed
+673,trust in the tool,Trust-Trust in the system,Trust-Trust in the system,
+674,confident in the correct relationship,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+675,understand relationships,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+676,provide support,User assistance-Support,User assistance-Support,
+677,believe that the added value,Value-Value added,Value-Value added,
+678,trust,Trust-Trust in the system,Trust-Trust in the system,
+679,natural,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+680,in-depth analysis,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+681,easier to contextualize findings,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+682,irritating,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+683,smooth transitions,Fluidity-Smooth workflow,Fluidity-Smooth workflow,OK related
+684,helpful,Usefulness-__,Usefulness-__,
+685,impressed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+686,cool,Pleasure-Enjoyment,Pleasure-Enjoyment,
+687,useful,Usefulness-__,Usefulness-__,
+688,easily identify,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+689,comprehensive,Understandability-Simplicity of understanding,NOT FOUND-NOT FOUND,OK changed
+690,overwhelming,Efficiency-Mental effort / Cognitive load,Clarity-Visual simplicity,OK changed
+691,discover patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+692,simple,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+693,grasp the meaning,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+694,see patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+695,helpful,Usefulness-__,Usefulness-__,
+696,took time to verify,Efficiency-Time,Efficiency-Time,
+697,confident,Trust-Confidence,Trust-Confidence,
+698,effectively used,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+699,intrigued,Involvement-Interest,Involvement-Interest,
+700,powerful,Value-Value added,Value-Value added,
+701,shows clearly,Visualization task-Data features,Clarity-__,OK changed
+702,spot patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+703,shorten the time to find information,Efficiency-Time,Efficiency-Time,
+704,wondered whether,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+705,observed that while,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+706,further understand how inclination affects,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+707,partitioned into groups,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+708,observed likely to keep the inclination,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+709,show more details,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+710,smooth animation,Fluidity-Smooth workflow,Fluidity-Smooth workflow,OK related
+711,interactiveness,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+712,make the exploration easier,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+713,make the exploration more effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+714,understanding the structure of trees,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+715,awesome,Pleasure-Enjoyment,Pleasure-Enjoyment,
+716,Given the historic data is more likely,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+717,need to further research,Involvement-Engagement,Involvement-Engagement,
+718,show trend,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+719,show probability,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+720,confirms the explanation,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+721,appreciated the insights,Satisfaction-__,Insightfulness-Knowledge discovery,OK changed
+722,new insights,Novelty-__,Novelty-__,OK related
+723,system inspired,Novelty-Creativity,Novelty-Creativity,
+724,valued,Value-Value added,Value-Value added,
+725,generate hypothesis,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+726,understand results and dataset,Understandability-__,Understandability-__,OK related
+727,visually spotting,Clarity-Visual simplicity,Clarity-Layout,OK changed
+728,interpreting the analysis results,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+729,time-consuming,Efficiency-Time,Efficiency-Time,
+730,how effectively,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+731,convenient tool,Ease of use-__,Ease of use-__,
+732,finding something that worked for them.,Flexibility-Adaptability,Flexibility-Adaptability,
+733,had difficulty,Ease of use-__,Ease of use-__,
+734,failed to complete the objective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+735,creating new clusters,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK changed
+736,to compare,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+737,have no easy mechanism to compare different groups,Ease of use-Simple interaction,Ease of use-Simple interaction,
+738,they had not found any explanations,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+739,performed well,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+740,useful,Usefulness-__,Usefulness-__,
+741,prompted reflection,Understandability--Susceptibility to bias,NOT FOUND-NOT FOUND,OK new concept/topic
+742,fun to use,Pleasure-Enjoyment,Pleasure-Enjoyment,
+743,see categories,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+744,appreciated,Pleasure-Enjoyment,Pleasure-Enjoyment,
+745,overwhelmed,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+746,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+747,seeing how the model treated their constraints,Trust-Transparency,Trust-Transparency,
+748,believe the model better reflected their subjective preferences,Dependability-Consistency,Dependability-Consistency,
+749,labelling experience,Ease of use-__,Ease of use-__,
+750,confident,Trust-Confidence,Trust-Confidence,
+751,strategies,User behaviour-__,User Behavior-User Behavior,OK new concept/topic
+752,identifying distinct clusters,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+753,find outliers,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+754,make clear borders,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+755,curious,Involvement-Interest,Involvement-Interest,
+756,sceptical,Trust-Trust in the system,Trust-Trust in the system,
+757,reliability,Trust-Reliability,Trust-Reliability,
+758,useful,Usefulness-__,Usefulness-__,
+759,knowledge,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+760,acceptable,Satisfaction-__,Satisfaction-__,
+761,liked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+762,trusted,Trust-Trust in the system,Trust-Trust in the system,OK related
+763,comfortable with the design,Clarity-Overall design,Ease of use-__,OK changed
+764,helped interpret models,Understandability-Model understanding and refining,Understandability-Simplicity of understanding,OK new concept/topic
+765,precise understanding,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+766,compare and contrast,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+767,immediate benefit,Value-Value added,Value-Value added,
+768,relied on the output,Trust-Trust in the system,Trust-Trust in the system,
+769,trustworthiness,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+770,validate modeling results,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+771,appreciated the visual,Attractiveness-__,Attractiveness-__,OK related
+772,guiding through the process,User assistance-Guidance,User assistance-Guidance,
+773,work on a higher level,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+774,get more detailed information,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+775,enhanced the orientation,Ease of use-Navigation,Ease of use-Navigation,
+776,keeping in context,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+777,steep learning curve,Ease of learning-__,Ease of learning-__,
+778,rich set of interactions,Ease of learning-Time to proficiency,Flexibility-Expressiveness,OK changed
+779,density of the information,Scalability-Data processing scalability,Clarity-Visual simplicity,OK changed
+780,learning about the dataset,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+781,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+782,richness of ondemand information,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+783,difficulty,Ease of use-__,Ease of use-__,
+784,usefulness,Usefulness-__,Usefulness-__,
+785,performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+786,Detail oriented questions,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+787,Overview oriented questions,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+788,patterns or trends occurring over time,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+789,precision and recall,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+790,utility,Usefulness-__,Usefulness-__,
+791,ease,Ease of use-__,Ease of use-__,
+792,attention,Involvement-Engagement,Involvement-Engagement,
+793,stimulation,Stimulation-__,Stimulation-__,
+794,likability,Pleasure-Enjoyment,Pleasure-Enjoyment,
+795,engagement during the task,Involvement-Engagement,Involvement-Engagement,
+796,susceptibility to bias,Understandability-Susceptibility to bias,NOT FOUND-NOT FOUND,OK ignore
+797,Visual Anchor,Involvement-Engagement,NOT FOUND-NOT FOUND,OK changed
+798,Numerical Anchor,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+799,anchoring,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+800,differences in interaction patterns,User behaviour-__,User Behavior-User Behavior,OK new concept/topic
+801,satisfaction,Satisfaction-__,Satisfaction-__,
+802,ease of use,Ease of use-__,Ease of use-__,
+803,learnability,Ease of learning-__,Ease of learning-__,
+804,mental effort,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+805,physical effort,Efficiency-Effort,Efficiency-Effort,OK ignore
+806,time spent on answering the questions,Efficiency-Time,Efficiency-Time,
+807,helpfulness,Usefulness-__,Usefulness-__,
+808,time to complete the tasks,Efficiency-Time,Efficiency-Time,
+809,Satisfaction,Satisfaction-__,Satisfaction-__,
+810,easy to use,Ease of use-__,Ease of use-__,
+811,informativeness,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+812,helpfulness,Usefulness-__,Usefulness-__,
+813,familiar,Ease of learning-__,Ease of learning-__,
+814,adopt,Satisfaction-__,Satisfaction-__,
+815,customize,Flexibility-Extensibility,Flexibility-Extensibility,
+816,levels of detail,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+817,model understandable,Understandability-Model understanding and refining,Understandability-Simplicity of understanding,OK new concept/topic
+818,trust in automation,Trust-Trust in the system,Trust-Trust in the system,
+819,efficiency,Efficiency-__,Efficiency-__,
+820,engage,Involvement-Engagement,Involvement-Engagement,
+821,save time in the long run,Efficiency-Time,Efficiency-Time,
+822,complete overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+823,concluded,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+824,insights gained,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+825,noticed an extreme drop,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+826,learned,Ease of learning-__,Insightfulness-Knowledge discovery,OK changed
+827,correct answers,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+828,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+829,efficiency,Efficiency-Time,Efficiency-Time,
+830,usefulness,Usefulness-__,Usefulness-__,
+831,simplicity,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+832,informative,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+833,easy to use,Ease of use-__,Ease of use-__,
+834,appreciated our system,Pleasure-Enjoyment,Pleasure-Enjoyment,
+835,usefulness,Usefulness-__,Usefulness-__,
+836,effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+837,efficient,Efficiency-__,Efficiency-__,
+838,searching meaningful patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+839,verifying their reliability,Trust-Reliability,Trust-Reliability,
+840,identified unexpected patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+841,smooth interactions,Fluidity-Smooth workflow,Fluidity-Smooth workflow,OK related
+842,easy to use,Ease of use-__,Ease of use-__,
+843,steep learning curve,Ease of learning-__,Ease of learning-__,
+844,challenging,Ease of use-__,Ease of use-__,
+845,Learning Cost,Ease of learning-__,Ease of learning-__,
+846,without any help,Ease of learning-__,Ease of learning-__,
+847,easy to follow,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+848,usefulness,Usefulness-__,Usefulness-__,
+849,understanding of paths,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+850,hard to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+851,get insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+852,identify clustered anomalies,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+853,quickly determine,Efficiency-Time,Efficiency-Time,
+854,more efficient,Efficiency-__,Efficiency-__,
+855,tedious,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+856,challenging,Ease of use-__,Ease of use-__,
+857,develop automation to facilitate exploration,Flexibility-Extensibility,Flexibility-Extensibility,
+858,appreciate,Pleasure-Enjoyment,Pleasure-Enjoyment,
+859,lacking,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+860,advanced automation,Flexibility-Extensibility,Flexibility-Extensibility,OK related
+861,anything helpful,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+862,very specific question,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,OK related
+863,looking for something interesting,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+864,understanding,Understandability-__,Understandability-__,OK related
+865,generating new questions,Involvement-Engagement,Involvement-Engagement,OK related
+866,demonstrating a new tool,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+867,show what insights it can reveal,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+868,finding spurious correlations,Dependability-Robustness,Dependability-Robustness,
+869,data collection is costly,Scalability-Data processing scalability,Efficiency-Effort,OK changed
+870,wasting time,Efficiency-Time,Efficiency-Time,
+871,understand the semantics of the data,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+872,integrate the different data sources,Flexibility-Internal Interoperability,Flexibility-Internal Interoperability,
+873,characterizing data distributions,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+874,characterizing trends,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+875,characterizing correlations,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+876,examining data correctness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+877,data cleaning,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+878,defining new metrics for later monitoring and evaluation,Flexibility-Extensibility,Flexibility-Extensibility,OK related
+879,identify the best way to present the data,Visualization task-Visual representation,Clarity-__,OK changed
+880,yields nothing interesting,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+881,resulting in a biased outcome,Understandability-Susceptibility to bias,Dependability-Robustness,OK new concept/topic
+882,transparency,Trust-Transparency,Trust-Transparency,
+883,understand why something is happening,Trust-Transparency,Trust-Transparency,
+884,having complete control over the code,Dependability-Control,Dependability-Control,
+885,hard-to-diagnose errors,Dependability-Error recovery,Dependability-Error recovery,
+886,ease of using,Ease of use-__,Ease of use-__,
+887,easy to get started,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+888,familiar with using pen and touch input,Ease of learning-__,Ease of learning-__,
+889,confident,Trust-Confidence,Trust-Confidence,
+890,Directly manipulating objects,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+891,fun to use,Pleasure-Enjoyment,Pleasure-Enjoyment,
+892,engaging,Involvement-Engagement,Involvement-Engagement,
+893,helpful,Usefulness-__,Usefulness-__,
+894,direct manipulation,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+895,building connections,Visualization task-Coordinated View,Usefulness-Task accomplishment,OK changed
+896,labelling the connections in diagram,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+897,liked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+898,think deeper,Stimulation-Arousing / soothing,Insightfulness-Knowledge discovery,OK changed
+899,easily remember,Ease of learning-Memorability,Ease of learning-Memorability,
+900,structure became clearer,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+901,enjoyed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+902,organize my ideas,Insightfulness-Knowledge discovery,NOT FOUND-NOT FOUND,OK changed
+903,understand the behavior of the model,Understandability-Model understanding and refining,Understandability-Simplicity of understanding,OK new concept/topic
+904,took extra time,Efficiency-Time,Efficiency-Time,
+905,easy to get the wrong message,Clarity-__,Clarity-__,
+906,had to double check to make sure,Trust-Confidence,Trust-Confidence,
+907,useful,Usefulness-__,Usefulness-__,
+908,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+909,just what they need,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+910,understand how the model reacts,Insightfulness-Knowledge discovery,Understandability-Simplicity of understanding,OK changed
+911,useful in validating hypotheses,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+912,invest[s] an extensive amount of time,Efficiency-Time,Efficiency-Time,
+913,refine the results of the model,Understandability-Model understanding and refining,Usefulness-Task accomplishment,OK new concept/topic
+914,avoid wrong inferences,Trust-Trustworthiness of content,Trust-Trustworthiness of content,OK related
+915,enthusiastic,Pleasure-Enjoyment,Pleasure-Enjoyment,
+916,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+917,improvement in the modeling results,Understandability-Model understanding and refining,Usefulness-Task accomplishment,OK new concept/topic
+918,judge the quality of the model,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+919,trust the system recommendations,Trust-Trust in the system,Trust-Trust in the system,
+920,understanding the model,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+921,skeptical,Trust-Trust in the system,Trust-Trust in the system,
+922,confidence,Trust-Confidence,Trust-Confidence,
+923,transparent process,Trust-Transparency,Trust-Transparency,
+924,applicability,Flexibility-Specialization/generalization,Flexibility-Specialization/generalization,
+925,exploratory analysis,Involvement-Engagement,Involvement-Engagement,OK related
+926,gained insight about the dataset,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+927,gained insight about the modeling process.,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+928,making informed decisions,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+929,cluster view,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+930,informative,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+931,unnecessary details,Clarity-Visual simplicity,Clarity-Visual simplicity,
+932,useful,Usefulness-__,Usefulness-__,
+933,easy to use,Ease of use-__,Ease of use-__,
+934,short training period,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+935,overwhelmed,Clarity-Visual simplicity,Clarity-Visual simplicity,
+936,ease of use,Ease of use-__,Ease of use-__,
+937,took extra steps,Efficiency-Number of steps,Efficiency-Number of steps,
+938,learning curve,Ease of learning-__,Ease of learning-__,
+939,accurate,Dependability-Robustness,Dependability-Robustness,
+940,interpret the systemâ€™s recommendations,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+941,comprehension,Understandability-__,Understandability-__,OK related
+942,trust the system,Trust-Trust in the system,Trust-Trust in the system,
+943,freedom,Flexibility-Adaptability,Flexibility-Adaptability,
+944,informative,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+945,remember,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+946,confused,Dependability-Error recovery,Dependability-Error recovery,
+947,make sense,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+948,enthusiastic,Pleasure-Enjoyment,Pleasure-Enjoyment,
+949,organize his thoughts,Insightfulness-Knowledge discovery,NOT FOUND-NOT FOUND,OK changed
+950,satisfied,Satisfaction-__,Satisfaction-__,
+951,detect patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+952,better insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+953,better decision making,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+954,usability,Ease of use-__,Ease of use-__,
+955,intuitiveness,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+956,improve analysis efficiency,Efficiency-__,Efficiency-__,
+957,understanding evolutionary patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+958,information a bit dense,Clarity-Visual simplicity,Clarity-Visual simplicity,OK related
+959,made it easier to assess data,Ease of use-Simple interaction,Ease of use-Simple interaction,
+960,useful,Usefulness-__,Usefulness-__,
+961,satisfied,Satisfaction-__,Satisfaction-__,
+962,fulfill requirements,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+963,skepticism on the usefulness,Usefulness-__,Usefulness-__,
+964,building a mental relationship,Dependability-Consistency,Dependability-Consistency,
+965,understood,Understandability-__,Understandability-__,OK related
+966,short training phase,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+967,liked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+968,spot interesting patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+969,impact the sensemaking process,Fluidity-Smooth workflow,Insightfulness-Knowledge discovery,OK changed
+970,perform well,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+971,foraged for relevant data,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+972,relevant data discovered,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+973,found relevant data,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+974,strategies,User behaviour-__,User Behavior-User Behavior,Other
+975,task answers,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+976,need to digest the concept,Ease of learning-__,Ease of learning-__,
+977,challenging to understand at first,Ease of learning-__,Ease of learning-__,
+978,get the idea,Ease of learning-__,Ease of learning-Time to proficiency,OK changed
+979,confusing at first,Ease of learning-__,Ease of learning-__,
+980,get to know how they work,Ease of learning-__,Ease of learning-__,
+981,easier,Ease of use-__,Ease of use-__,
+982,learning curve,Ease of learning-__,Ease of learning-__,
+983,understand,Understandability-__,Understandability-__,OK related
+984,meet my expectations,Dependability-Predictability,Dependability-Predictability,
+985,simplifies,Ease of use-Simple interaction,Ease of use-Simple interaction,
+986,speeds data exploration,Efficiency-Time,Efficiency-Time,
+987,helps me learn,Ease of learning-__,Ease of learning-__,
+988,figure out how to,Dependability-Error recovery,Dependability-Error recovery,
+989,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+990,test hypotheses,Involvement-Engagement,Involvement-Engagement,
+991,understand model using visualizations,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+992,evaluate model performance,Understandability-Model understanding and refining,Usefulness-Task accomplishment,OK new concept/topic
+993,see results of model predictions,Understandability-Model understanding and refining,Trust-Transparency,OK new concept/topic
+994,test hypotheses about how the model treats data,Understandability-Model understanding and refining,Involvement-Engagement,OK new concept/topic
+995,Compare models,Understandability-Model understanding and refining,Usefulness-Task accomplishment,OK new concept/topic
+996,useful for novices and scholars,Flexibility-Adaptability,Flexibility-Adaptability,
+997,useful for expert users,Flexibility-Specialization/generalization,Flexibility-Specialization/generalization,
+998,well-integrated into the workflow,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+999,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1000,confident when interpreting the patterns,Trust-Confidence,Trust-Confidence,
+1001,interpretable results,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1002,confidence in assessing patterns,Trust-Confidence,Trust-Confidence,
+1003,difficulty of making judgments,Ease of use-__,Ease of use-__,
+1004,make judgments difficult,Ease of use-__,Ease of use-__,
+1005,causes a bias in perceiving features,Dependability-Robustness,Dependability-Robustness,OK related
+1006,combine algorithms and domain knowledge,Flexibility-Adaptability,Flexibility-Adaptability,
+1007,model all the factors,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1008,manually improve the algorithm results,Flexibility-Adaptability,Flexibility-Adaptability,
+1009,efficiency,Efficiency-__,Efficiency-__,
+1010,easy to identify the influence,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1011,provided guidance,User assistance-Guidance,User assistance-Guidance,
+1012,beneficial for exploring large-scale data,Scalability-Data processing scalability,Scalability-Data processing scalability,OK related
+1013,reduce workload,Efficiency-Effort,Efficiency-Effort,
+1014,overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1015,fast investigation,Efficiency-Time,Efficiency-Time,
+1016,helpful,Usefulness-__,Usefulness-__,
+1017,facilitate easy exploration,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1018,reduce mental work,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1019,efficient in presenting the multiple data,Visualization task-Visual representation,Clarity-__,OK changed
+1020,enjoyed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1021,appreciated,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1022,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1023,steep learning curve,Ease of learning-__,Ease of learning-__,
+1024,became familiar,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+1025,accuracy of labeling,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1026,usefulness,Usefulness-__,Usefulness-__,
+1027,ease of use,Ease of use-__,Ease of use-__,
+1028,performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1029,precision,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1030,recall,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1031,effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1032,usefulness,Usefulness-__,Usefulness-__,
+1033,reached an insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1034,difficult to use,Ease of use-__,Ease of use-__,
+1035,complexity,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1036,steep learning curve,Ease of learning-__,Ease of learning-__,
+1037,utility,Usefulness-__,Usefulness-__,
+1038,usability,Ease of use-__,Ease of use-__,
+1039,saw benefit,Value-Value added,Value-Value added,
+1040,to include prior knowledge,Flexibility-Adaptability,Flexibility-Adaptability,
+1041,don´t know what the machine learns,Understandability-Model understanding and refining,Trust-Transparency,OK new concept/topic
+1042,guidance,User assistance-Guidance,User assistance-Guidance,
+1043,not transparent,Trust-Transparency,Trust-Transparency,
+1044,expected workflow,Dependability-Consistency,Dependability-Consistency,
+1045,clean up the unsuitable details,Visualization task-Information redution,Usefulness-Task accomplishment,OK new concept/topic
+1046,too cluttered,Clarity-Visual simplicity,Clarity-Visual simplicity,
+1047,get a better understanding,Understandability-__,Understandability-__,OK related
+1048,find related information,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1049,satisfying,Satisfaction-Rewarding,Satisfaction-Rewarding,
+1050,see the model respond,Understandability-Model understanding and refining,Trust-Transparency,OK changed
+1051,neat combination of components,Attractiveness-__,Attractiveness-__,
+1052,ecstatically pleasing components,Attractiveness-__,Attractiveness-__,
+1053,good,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1054,wouldnâ€™t use these words,Dependability-Consistency,Dependability-Consistency,
+1055,more accurately,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1056,like adding my intuition,Flexibility-Adaptability,Flexibility-Adaptability,
+1057,coherent,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1058,enjoyed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1059,easy to use,Ease of use-__,Ease of use-__,
+1060,understand results,Understandability-Simplicity of understanding,Understandability-__,OK changed
+1061,use my knowledge,Satisfaction-__,Flexibility-Adaptability,OK changed
+1062,satisfying,Satisfaction-Rewarding,Satisfaction-Rewarding,
+1063,presentation,Collaboration-Shareable,Collaboration-Shareable,OK related
+1064,create a storyline,Collaboration-Shareable,NOT FOUND-NOT FOUND,OK changed
+1065,find outliers,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1066,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1067,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1068,led to wrong answers,Dependability-Robustness,Dependability-Robustness,
+1069,satisfied,Satisfaction-__,Satisfaction-__,
+1070,easy to use,Ease of use-__,Ease of use-__,
+1071,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1072,obtain the overall structure,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1073,investigate,Involvement-Engagement,Involvement-Engagement,Other
+1074,track the evolution,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1075,need to switch between different views,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1076,used in a meaningful way,Usefulness-__,Usefulness-__,
+1077,useful,Usefulness-__,Usefulness-__,
+1078,derive from other visualizations,Fluidity-Intuitive workflow,Involvement-Engagement,OK changed
+1079,engaged in to construct pattern queries,Involvement-Engagement,Involvement-Engagement,
+1080,construct pattern queries,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1081,bottom-up data-driven inquiries,Flexibility-Adaptability,Involvement-Engagement,OK changed
+1082,context inquiries,Flexibility-Adaptability,Involvement-Engagement,OK changed
+1083,exploratory data analysis,Involvement-Engagement,Involvement-Engagement,OK related
+1084,parameter,Flexibility-Extensibility,Flexibility-Extensibility,
+1085,narrow down,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+1086,compare relationships,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1087,adopt a workflow,Fluidity-Smooth workflow,Fluidity-Smooth workflow,OK related
+1088,integrative,Flexibility-Internal Interoperability,Flexibility-Internal Interoperability,
+1089,supporting sensemaking process,Fluidity-Intuitive workflow,Insightfulness-Knowledge discovery,OK changed
+1090,userâ€™s expectations of the response,Dependability-Predictability,Dependability-Predictability,
+1091,the actual visualization generated and expected visualization,Dependability-Predictability,Dependability-Predictability,
+1092,unexpected system behaviors,Dependability-Predictability,Dependability-Predictability,
+1093,prevent system errors,Dependability-Error recovery,Dependability-Error recovery,
+1094,helpful visualization design elements,Visualization task-Visual representation,Usefulness-__,OK changed
+1095,user intended,Dependability-Predictability,Dependability-Predictability,
+1096,compared expectation against the visualization response,Dependability-Predictability,Dependability-Predictability,
+1097,context was unexpectedly lost,Dependability-Consistency,Dependability-Consistency,
+1098,Unexpected visual encodings,Dependability-Predictability,Dependability-Predictability,
+1099,Unexpected behavior,Dependability-Predictability,Dependability-Predictability,
+1100,learned to adapt the view,Flexibility-Adaptability,Flexibility-Adaptability,
+1101,the graph that I wanted,Satisfaction-__,Satisfaction-__,OK related
+1102,better than I expected,Satisfaction-__,Satisfaction-__,
+1103,interest in using,Satisfaction-__,Satisfaction-__,
+1104,better than her current tools,Value-Value added,Value-Value added,
+1105,useful,Usefulness-__,Usefulness-__,
+1106,improve our pipelines,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1107,comprehensively,Usefulness-Task acomplishment,NOT FOUND-NOT FOUND,OK changed
+1108,infer what search strategies used,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1109,integration,Flexibility-Internal Interoperability,Flexibility-Internal Interoperability,
+1110,informative,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1111,easy to use,Ease of use-__,Ease of use-__,
+1112,without any coding,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1113,just a little bit of code,Flexibility-Extensibility,Flexibility-Extensibility,
+1114,usability,Ease of use-__,Ease of use-__,
+1115,insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1116,sufficiently support task,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1117,confused,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1118,unusable,Ease of use-__,Ease of use-__,
+1119,intuitive interface,Clarity-Layout,Understandability-Simplicity of understanding,OK related
+1120,user-friendliness,Ease of use-__,Ease of use-__,
+1121,full control,Dependability-Control,Dependability-Control,
+1122,performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1123,missing progress bar,User assistance-Support,User assistance-Support,
+1124,familiar,Ease of learning-__,Ease of learning-__,
+1125,useful,Usefulness-__,Usefulness-__,
+1126,liked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1127,interactive learning,Involvement-Engagement,Involvement-Engagement,
+1128,slow,Efficiency-Runtime performance,Efficiency-Runtime performance,
+1129,unresponsive,Efficiency-Runtime performance,Efficiency-Runtime performance,
+1130,aligns with human judgements,Dependability-Consistency,Dependability-Consistency,OK related
+1131,diverged the most from human judgements,Dependability-Consistency,Dependability-Consistency,OK related
+1132,made predictions,Dependability-Predictability,Dependability-Predictability,OK related
+1133,performed worst,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1134,understand this view,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1135,useful,Usefulness-__,Usefulness-__,
+1136,see clearly,Clarity-__,Clarity-__,
+1137,suitable to visualize,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+1138,helpful,Usefulness-__,Usefulness-__,
+1139,help find an answer,Visualization task-Coordinated View,Usefulness-Task accomplishment,OK changed
+1140,Interesting,Involvement-Interest,Involvement-Interest,
+1141,well thoughtout,Attractiveness-__,Attractiveness-__,
+1142,enthusiastic,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1143,really good,Satisfaction-__,Satisfaction-__,
+1144,get used to it,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+1145,learn to use,Ease of learning-__,Ease of learning-__,
+1146,strongly recommend,Satisfaction-__,Satisfaction-__,
+1147,scalability challenge,Scalability-Data processing scalability,Scalability-Data processing scalability,
+1148,useful,Usefulness-__,Usefulness-__,
+1149,quickly gain an understanding,Ease of learning-Time to proficiency,Efficiency-Time,OK changed
+1150,novel,Novelty-__,Novelty-__,OK related
+1151,interesting,Involvement-Interest,Involvement-Interest,
+1152,intuitively conveys the information,Clarity-__,Clarity-__,
+1153,identify inconsistency,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1154,insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1155,satisfied,Satisfaction-__,Satisfaction-__,
+1156,comfortable,Ease of use-__,Ease of use-__,
+1157,understanding visual cues,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1158,intuitive,Clarity-Layout,Understandability-Simplicity of understanding,OK changed
+1159,clear to view,Fluidity-Intuitive workflow,Clarity-__,OK changed
+1160,interactions,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+1161,intuitive,Clarity-Layout,Understandability-Simplicity of understanding,OK changed
+1162,easy to use,Ease of use-__,Ease of use-__,
+1163,helpful,Usefulness-__,Usefulness-__,
+1164,effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1165,enjoyed,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1166,understood without having to read the instructions,Understandability-Self-explaining,Understandability-Self-explaining,OK related
+1167,useful,Usefulness-__,Usefulness-__,
+1168,complex,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1169,liked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1170,show patterns quickly,Efficiency-Time,Efficiency-Time,OK related
+1171,expressed interest,Involvement-Interest,Involvement-Interest,
+1172,took a while to understand,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,OK related
+1173,easier to comprehend,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1174,difficult to use,Ease of use-__,Ease of use-__,
+1175,not evident interactions,Ease of learning-Easy / hard to discover feature,Ease of learning-Easy / hard to discover feature,
+1176,share knowledge,Collaboration-Shareable,Collaboration-Shareable,OK related
+1177,collaboration,Collaboration-__,Collaboration-__,
+1178,trying to figure out,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1179,easily identify a particularly high,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1180,demonstration purposes,Collaboration-Shareable,Collaboration-Shareable,
+1181,visually engaging,Involvement-Engagement,Involvement-Engagement,
+1182,accessible,Accessibility-__,Accessibility-__,
+1183,visually tell a story,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+1184,see a bit more,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1185,understanding,Understandability-__,Understandability-__,OK related
+1186,see the data,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+1187,looking for correlation,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1188,concise overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1189,qucikly visualise,Efficiency-Time,Efficiency-Time,
+1190,visualise patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1191,easily explore,Usefulness-Task acomplishment,Ease of use-Simple interaction,OK changed
+1192,drill down,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1193,multiple options of visualization,Flexibility-Extensibility,Flexibility-Extensibility,
+1194,interesting look,Attractiveness-__,Involvement-Interest,OK changed
+1195,highly engaging,Involvement-Engagement,Involvement-Engagement,
+1196,excited,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1197,cool,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1198,futuristic,Novelty-__,Novelty-__,
+1199,amazing,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1200,usefulness,Usefulness-__,Usefulness-__,
+1201,Satisfaction,Satisfaction-__,Satisfaction-__,
+1202,easy to use,Ease of use-__,Ease of use-__,
+1203,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1204,Enjoyable to use,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1205,I will use,Satisfaction-__,Satisfaction-__,
+1206,learn,Ease of learning-__,Ease of learning-__,
+1207,Overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1208,Usefulness,Usefulness-__,Usefulness-__,
+1209,Transition between views,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1210,Animations,Attractiveness-__,Attractiveness-__,
+1211,Input customization,Flexibility-Extensibility,Flexibility-Extensibility,
+1212,Tutorial article,Ease of learning-Documentation,Ease of learning-Documentation,
+1213,Performance,Efficiency-Runtime performance,Efficiency-Runtime performance,
+1214,link operations and structures,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1215,understand the interplay between computations and data,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1216,confused,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1217,like,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1218,hide details,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1219,expand details,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1220,be aware of different views,Ease of learning-Easy / hard to discover feature,Ease of learning-Easy / hard to discover feature,
+1221,illustrate the model,Understandability-Model understanding and refining,Clarity-__,OK new concept/topic
+1222,understanding the relationship between distinct views,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1223,discover the linking between visualization elements,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1224,simulate the modelâ€™s inner-workings,Trust-Transparency,Trust-Transparency,
+1225,validating their hypotheses.,Involvement-Engagement,Involvement-Engagement,
+1226,increase engagement level,Involvement-Engagement,Involvement-Engagement,
+1227,enjoyable to use,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1228,love,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1229,visualization customization,Flexibility-Extensibility,Flexibility-Extensibility,
+1230,test predictions of model behaviors,Understandability-Model understanding and refining,Involvement-Engagement,OK new concept/topic
+1231,engagement,Involvement-Engagement,Involvement-Engagement,
+1232,interest in learning,Involvement-Interest,Involvement-Interest,
+1233,perform complex data combinations,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1234,Easy to learn,Ease of learning-__,Ease of learning-__,
+1235,Intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1236,Expressive for data augmentation,Flexibility-Expressiveness,Flexibility-Expressiveness,OK related
+1237,correctly join,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1238,accurately add new data,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1239,improve the predictive quality,Dependability-Predictability,Usefulness-Task accomplishment,OK changed
+1240,satisfied with the process,Satisfaction-__,Satisfaction-__,
+1241,Mentally demanding,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1242,Hurried or rushed,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+1243,Lack of success,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1244,required level of work,Efficiency-Effort,Efficiency-Effort,
+1245,Insecurity,Trust-Confidence,Trust-Confidence,
+1246,stress,Satisfaction-Tension,Satisfaction-Tension,
+1247,annoyance,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+1248,intuitive to find and augment data,Fluidity-Intuitive workflow,Understandability-Simplicity of understanding,OK changed
+1249,easy to add/remove columns,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+1250,straight forward,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1251,prior knowledge,Dependability-Consistency,Flexibility-Adaptability,OK changed
+1252,improvement in model performance,Understandability-Model understanding and refining,Usefulness-Task accomplishment,OK new concept/topic
+1253,Usability,Ease of use-__,Ease of use-__,
+1254,support unforeseen scenarios,Flexibility-__,Flexibility-__,
+1255,usefulness,Usefulness-__,Usefulness-__,
+1256,appropriate visual representations,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+1257,optimisation model,Flexibility-Extensibility,Flexibility-Extensibility,
+1258,direct manipulatio,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1259,gallery of solutions,Usefulness-Task acomplishment,NOT FOUND-NOT FOUND,OK changed
+1260,comparison of solutions,Visualization task-Coordinated View,NOT FOUND-NOT FOUND,OK changed
+1261,Provide feedback,User assistance-Support,User assistance-Support,
+1262,history of the solutions,Repeatability-Undo and redo,Repeatability-Undo and redo,
+1263,informative in presenting the data,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,OK related
+1264,easier to use,Ease of use-__,Ease of use-__,
+1265,faster,Efficiency-Time,Efficiency-Time,
+1266,likely to use,Satisfaction-__,Satisfaction-__,
+1267,streamline higher-level analyses,Efficiency-__,Efficiency-__,
+1268,formulate a hypothesis,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+1269,trust in the visual representations,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+1270,assumptions affect data interpretation,Dependability-Consistency,Dependability-Consistency,OK related
+1271,incorrect data interpretation,Dependability-Robustness,Dependability-Robustness,
+1272,identify unique characteristics,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1273,explain unique characteristics,Understandability-Self-explaining,Understandability-Simplicity of understanding,OK changed
+1274,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1275,completion time,Efficiency-Time,Efficiency-Time,
+1276,Easy to learn,Ease of learning-__,Ease of learning-__,
+1277,easy to use,Ease of use-__,Ease of use-__,
+1278,Useful,Usefulness-__,Usefulness-__,
+1279,Informative,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1280,Useful visualizations,Usefulness-__,Usefulness-__,
+1281,Useful linking capabilities,Usefulness-__,Usefulness-__,
+1282,high endorsement,Satisfaction-__,Satisfaction-__,
+1283,easily understood,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1284,accepted,Satisfaction-__,Satisfaction-__,
+1285,useful to quantify,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1286,user-friendly exploration,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1287,provided with the bigger picture.,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1288,immerse yourselve in massive data,Involvement-Engagement,Involvement-Engagement,
+1289,get lost in an ocean of data,User assistance-Guidance,User assistance-Guidance,
+1290,quickly located,Efficiency-Time,Efficiency-Time,
+1291,in-depth analyses of patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1292,interest in deploying,Satisfaction-__,Satisfaction-__,
+1293,inconvenient,Ease of use-__,Ease of use-__,
+1294,understanding the patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1295,spirituality,Novelty-Creativity,Pleasure-Enjoyment,OK changed
+1296,creativity,Novelty-Creativity,Novelty-Creativity,
+1297,powerful abstraction,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1298,compact views,Clarity-Visual simplicity,Clarity-Visual simplicity,
+1299,informative views,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1300,explore,Involvement-Engagement,Involvement-Engagement,OK related
+1301,anaylse,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1302,detailed exploration,Visualization task-Coordinated View,Visualization task-Overview/detail,OK changed
+1303,complex,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1304,complex functions,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1305,smooth operation,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1306,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1307,time,Efficiency-Time,Efficiency-Time,
+1308,easiness,Ease of use-__,Ease of use-__,
+1309,confidence,Trust-Confidence,Trust-Confidence,
+1310,satisfied,Satisfaction-__,Satisfaction-__,
+1311,Intuition,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1312,Infomativeness,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1313,ease of use,Ease of use-__,Ease of use-__,
+1314,Helpful,Usefulness-__,Usefulness-__,
+1315,Willingness,Satisfaction-__,Satisfaction-__,
+1316,,Empty -Empty,Empty -Empty,
+1317,,Empty -Empty,Empty -Empty,
+1318,,Empty -Empty,Empty -Empty,
+1319,,Empty -Empty,Empty -Empty,
+1320,,Empty -Empty,Empty -Empty,
+1321,,Empty -Empty,Empty -Empty,
+1322,,Empty -Empty,Empty -Empty,
+1323,,Empty -Empty,Empty -Empty,
+1324,,Empty -Empty,Empty -Empty,
+1325,,Empty -Empty,Empty -Empty,
+1326,,Empty -Empty,Empty -Empty,
+1327,understandability,Understandability-__,Understandability-__,OK related
+1328,Mind Wandering:,Involvement-Engagement,Involvement-Engagement,
+1329,Trust,Trust-Trust in the system,Trust-Trust in the system,
+1330,credibility,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+1331,clarity,Clarity-__,Clarity-__,
+1332,reliability,Trust-Reliability,Trust-Reliability,
+1333,familiarity,Understandability-Simplicity of understanding,NOT FOUND-NOT FOUND,OK changed
+1334,confidence,Trust-Confidence,Trust-Confidence,
+1335,Cognitive engagement,Involvement-Engagement,Involvement-Engagement,
+1336,Affective engagement,Involvement-Engagement,Involvement-Engagement,
+1337,Design Quality,Attractiveness-__,Attractiveness-__,OK related
+1338,simplicity,Clarity-Visual simplicity,Clarity-Visual simplicity,
+1339,diversity,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1340,craftsmanship,Attractiveness-__,Attractiveness-__,OK ignore
+1341,Emotional Response,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1342,affect,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1343,aesthetic appeal,Attractiveness-__,Attractiveness-__,
+1344,communicative utility,Usefulness-__,Usefulness-__,
+1345,Short-Term Recall,Ease of learning-Memorability,Ease of learning-Memorability,
+1346,Long-Term Recall,Ease of learning-Memorability,Ease of learning-Memorability,
+1347,,Empty -Empty,Empty -Empty,
+1348,,Empty -Empty,Empty -Empty,
+1349,,Empty -Empty,Empty -Empty,
+1350,exploration rate,Efficiency-Time,Efficiency-Time,
+1351,make rapid progress,Efficiency-Time,Efficiency-Time,
+1352,trying different approaches,Flexibility-Adaptability,Flexibility-Adaptability,
+1353,Provide Overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1354,make sense,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1355,grasp what they know,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1356,further investigation,Involvement-Engagement,Involvement-Engagement,OK related
+1357,gain new knowledge,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1358,obtain a clear picture,Visualization task-Overview/detail,Clarity-Layout,OK changed
+1359,providing insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1360,overall distribution,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1361,conflicting hypotheses.,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+1362,adjusting the level of abstraction,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1363,adjusting range of selection.,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+1364,flexibly change perspective,Flexibility-Adaptability,Flexibility-Adaptability,
+1365,filtering unnecessary data.,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+1366,grouping and aggregating,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1367,reduces working memory load,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,OK related
+1368,Detect Pattern,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1369,discover new knowledge,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1370,Match Mental Model,Dependability-Consistency,Dependability-Consistency,OK related
+1371,,Empty -Empty,Empty -Empty,
+1372,time to explore data,Efficiency-Time,Efficiency-Time,
+1373,gain a good amount of insights,Efficiency-Time,Insightfulness-Knowledge discovery,OK changed
+1374,focusing on the flow of data,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1375,focused more on the content and on the meaning,Fluidity-Sense of flow,Insightfulness-Knowledge discovery,OK changed
+1376,engaged,Involvement-Engagement,Involvement-Engagement,
+1377,generated more hypotheses,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+1378,use prior knowledge,Dependability-Consistency,Flexibility-Adaptability,OK changed
+1379,hunted insights,Involvement-Engagement,Involvement-Engagement,OK related
+1380,gather insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1381,accessible,Accessibility-__,Accessibility-__,
+1382,complementary information is displayed in a synchronized manner.,Visualization task-Coordinated View,Flexibility-Internal Interoperability,OK changed
+1383,focus in a subset of the information,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK changed
+1384,reducing the cognitive overload,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1385,giving extra information without overloading the user,User assistance-Guidance,User assistance-Guidance,
+1386,simple the interaction,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1387,interaction consistent,Dependability-Consistency,Dependability-Consistency,
+1388,minimize the cognitive translation,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1389,engagement with their task,Involvement-Engagement,Involvement-Engagement,
+1390,distracted with navigating a tool,Fluidity-Sense of flow,Fluidity-Sense of flow,
+1391,stay in the flow of the analytic process,Fluidity-Sense of flow,Fluidity-Sense of flow,
+1392,steer the models,Flexibility-Adaptability,Flexibility-Adaptability,
+1393,maintaining the expressiveness,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1394,recognizing moments of insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1395,directly controll dimension reduction models,Flexibility-Adaptability,Flexibility-Adaptability,
+1396,directly manipulate models underlying the visualizations,Flexibility-Adaptability,Flexibility-Adaptability,
+1397,leverage the visual representation as a medium for user interaction,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1398,interaction is distant from the domain,Dependability-Consistency,Dependability-Consistency,
+1399,correct answers,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1400,useful,Usefulness-__,Usefulness-__,
+1401,utility,Usefulness-__,Usefulness-__,
+1402,situation awareness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,Other
+1403,visualizations,Visualization task-Visual representation,Visualization task-Visual representation,Other
+1404,interaction,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1405,analytic process,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1406,analysis accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1407,usability,Ease of use-__,Ease of use-__,
+1408,understanding of the model,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1409,what would happen if the parameters were set to specific values,Dependability-Predictability,Dependability-Predictability,
+1410,model efficiency,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1411,used different approaches,Flexibility-Adaptability,Flexibility-Adaptability,
+1412,without having expertise,Accessibility-__,Accessibility-__,
+1413,Consume less time,Efficiency-Time,Efficiency-Time,
+1414,better level of understanding,Understandability-__,Understandability-__,OK related
+1415,better insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1416,the same or better quality,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1417,results overly biased,Dependability-Robustness,Dependability-Robustness,
+1418,adjusted by the user,Flexibility-Adaptability,Flexibility-Adaptability,
+1419,inference was acceptable,Satisfaction-__,Satisfaction-__,OK related
+1420,useful information,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1421,difficult to look at the critical path,Clarity-Visual simplicity,Clarity-Layout,OK changed
+1422,omplexity of an abstract model,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1423,engage,Involvement-Engagement,Involvement-Engagement,
+1424,,Empty -Empty,Empty -Empty,
+1425,,Empty -Empty,Empty -Empty,
+1426,,Empty -Empty,Empty -Empty,
+1427,,Empty -Empty,Empty -Empty,
+1428,,Empty -Empty,Empty -Empty,
+1430,repeat the analysis process,Ease of learning-Memorability,Ease of learning-Memorability,OK related
+1431,recreate the steps of the analysis,Repeatability-Reproduction of analysis,Repeatability-Reproduction of analysis,OK related
+1432,recall the steps of processes,Ease of learning-Memorability,Ease of learning-Memorability,OK related
+1433,trivial insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1434,finding the highest value,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1435,quick associations about peculiarities,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1436,patterns in the data,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1437,read the visualizations,Visualization task-Data reading,Understandability-Simplicity of understanding,OK changed
+1438,knows the grammar of graphs,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1439,data-related insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1440,stepwise knowledge-building process,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1441,rules,User assistance-Guidance,User assistance-Guidance,OK related
+1442,Knowledge-based-insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1443,Knowledge novelty,Novelty-__,Novelty-__,OK related
+1444,Knowledge complexity,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1445,Knowledge deepness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1446,planning of future exploration activities,Involvement-Engagement,Involvement-Engagement,OK related
+1447,conscious analytical processes,Involvement-Engagement,Involvement-Engagement,OK related
+1448,topological searches in the problem space,Involvement-Engagement,Involvement-Engagement,OK related
+1449,domain knowledge,Insightfulness-Knowledge discovery,Flexibility-Adaptability,OK changed
+1450,find novel ways of tool interaction,Novelty-Creativity,Novelty-Creativity,OK related
+1451,insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1452,impressions about working steps,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1453,satisfaction,Satisfaction-__,Satisfaction-__,
+1454,correct problems in the data sets,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1455,quality of data,Dependability-Robustness,NOT FOUND-NOT FOUND,OK changed
+1456,understand complex and dynamic data,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1457,perceive complex and dynamic data,Understandability-__,Clarity-__,OK related
+1458,aligning to needs,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1459,collaboration,Collaboration-__,Collaboration-__,
+1460,data abstracted into a visualization,Visualization task-Overview/detail,Visualization task-Visual representation,OK changed
+1461,political features,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+1462,sociological features,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+1463,Achieve Insight into Problems,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1464,looking outside their normal,Novelty-Creativity,Novelty-Creativity,OK related
+1465,understand the model,Understandability-Model understanding and refining,Understandability-Simplicity of understanding,OK new concept/topic
+1466,visualize aspects of data.,Visualization task-__,Visualization task-__,OK related
+1467,understand associations?,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1468,externalizes a complicated thought,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1469,exploration of wicked problems,Collaboration-__,Insightfulness-Knowledge discovery,OK changed
+1470,communicating complicated findings,Collaboration-Shareable,Collaboration-Shareable,
+1471,,Empty -Empty,Empty -Empty,
+1472,,Empty -Empty,Empty -Empty,
+1473,,Empty -Empty,Empty -Empty,
+1474,,Empty -Empty,Empty -Empty,
+1475,too much control,Dependability-Control,Dependability-Control,
+1476,able to figure out,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1477,a lot to take in,Clarity-Visual simplicity,Clarity-Visual simplicity,
+1478,set serendipitous goals,Involvement-Engagement,Involvement-Engagement,
+1479,motivation,Involvement-Engagement,Involvement-Engagement,
+1480,save time,Efficiency-Time,Efficiency-Time,
+1481,content of data,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1482,information overload,Clarity-Visual simplicity,Clarity-Visual simplicity,
+1483,simplified interfaces,Clarity-Overall design,Ease of use-Simple interaction,OK changed
+1484,step-by-step guided,User assistance-Guidance,User assistance-Guidance,
+1485,familiarity,Ease of learning-__,Ease of learning-__,
+1486,confused,Dependability-Error recovery,Dependability-Error recovery,
+1487,change-of-plan,Flexibility-Adaptability,Flexibility-Adaptability,
+1488,automatically highlight,User assistance-Guidance,User assistance-Guidance,OK related
+1489,satisfied with the approach,Satisfaction-__,Satisfaction-__,
+1490,be in control,Dependability-Control,Dependability-Control,
+1491,identify repeated actions,User assistance-Support,User assistance-Support,
+1492,aggregate selection,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1493,part-of/absolute,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+1494,limited knowledge about how to use,Ease of learning-__,Ease of learning-__,
+1495,false conclusions,Dependability-Robustness,Dependability-Robustness,OK related
+1496,misunderstanding,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1497,simplified interactivity,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1498,had trouble observing,Clarity-Layout,Clarity-Layout,OK related
+1499,lead to wrong interpretations,Clarity-Layout,Clarity-Layout,
+1500,Understanding data,Understandability-__,Understandability-__,OK related
+1501,unexpected findings,Insightfulness-Unexpected discovery,Insightfulness-Knowledge discovery,OK new concept/topic
+1502,suspicions,Trust-Trust in the system,Trust-Trust in the system,
+1503,misleading inferences,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1504,discouraged,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+1505,efficiency,Efficiency-__,Efficiency-__,
+1506,usability,Ease of use-__,Ease of use-__,
+1507,expressiveness,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1508,powerful,Value-Value added,Value-Value added,
+1509,easy to learn,Ease of learning-__,Ease of learning-__,
+1510,suit novice audience,Flexibility-Adaptability,Flexibility-Adaptability,
+1511,suit expert audiences,Flexibility-Specialization/generalization,Flexibility-Specialization/generalization,
+1512,,Empty -Empty,Empty -Empty,
+1513,,Empty -Empty,Empty -Empty,
+1514,,Empty -Empty,Empty -Empty,
+1515,,Empty -Empty,Empty -Empty,
+1516,,Empty -Empty,Empty -Empty,
+1517,,Empty -Empty,Empty -Empty,
+1518,,Empty -Empty,Empty -Empty,
+1519,,Empty -Empty,Empty -Empty,
+1520,Data ambiguity,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+1521,User trust,Trust-Trust in the system,Trust-Trust in the system,
+1522,Promotes Insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1523,Completeness,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+1524,visual organization,Clarity-Layout,Clarity-Layout,OK related
+1525,visual encoding,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+1526,state transition/rebuilding,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1527,orientation and help,User assistance-Guidance,User assistance-Guidance,
+1528,navigation and querying,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1529,data set reduction,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+1530,limitations,Flexibility-Portability,NOT FOUND-NOT FOUND,OK changed
+1531,cognitive complexity,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1532,Spatial organization,Clarity-Visual simplicity,Clarity-Layout,OK changed
+1533,codification of information,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+1534,state transition/rebuilding,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1535,orientation and help,User assistance-Guidance,User assistance-Guidance,
+1536,navigation and querying,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1537,data set reduction,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+1538,Performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1539,Usability,Ease of use-__,Ease of use-__,
+1540,utility or impact,Value-Value added,Value-Value added,
+1541,Situation Awareness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1542,Collaboration,Collaboration-__,Collaboration-__,
+1543,Interaction,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+1544,Creativity,Novelty-Creativity,Novelty-Creativity,
+1545,Utility,Usefulness-__,Usefulness-__,
+1546,logistics and interoperability,Flexibility-External Interoperability,Flexibility-External Interoperability,
+1547,Trust,Trust-Trust in the system,Trust-Trust in the system,
+1548,Useful process,Usefulness-__,Usefulness-__,
+1549,visualizations useful,Usefulness-__,Usefulness-__,
+1550,interaction useful,Usefulness-__,Usefulness-__,
+1551,Efficient process,Efficiency-__,Efficiency-__,
+1552,easy to obtain the visualizations,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1553,multiple interactions,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1554,easy to understand process,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1555,easy to understand visualization,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1556,easy to understand interaction,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1557,Novelty,Novelty-__,Novelty-__,
+1558,Situation Awareness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1559,Collaboration,Collaboration-__,Collaboration-__,
+1560,Interaction,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1561,Creativity/Novelty,Novelty-__,Novelty-__,
+1562,Utility,Usefulness-__,Usefulness-__,
+1563,User-oriented design,Flexibility-Adaptability,Flexibility-Adaptability,OK ignore
+1564,Situation Awareness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,Other
+1565,Collaboration,Collaboration-__,Collaboration-__,
+1566,Interaction,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1567,Creativity,Novelty-Creativity,Novelty-Creativity,
+1568,Utility,Usefulness-__,Usefulness-__,
+1569,Size metrics,Scalability-Data processing scalability,Scalability-Data processing scalability,
+1570,Visual effectiveness,Clarity-__,Clarity-__,
+1571,Time,Efficiency-Time,Efficiency-Time,
+1572,Insights,Insightfulness-Unexpected discovery,Insightfulness-Knowledge discovery,OK new concept/topic
+1573,Essence,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1574,Confidence,Trust-Confidence,Trust-Confidence,
+1575,Answering questions,Insightfulness-Knowledge discovery,Usefulness-Task accomplishment,OK changed
+1576,Understanding of the data,Understandability-__,Understandability-__,OK related
+1577,Discoveries,Insightfulness-Unexpected discovery,Insightfulness-Knowledge discovery,OK new concept/topic
+1578,rapid comprehension,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1579,seeking information,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1580,big picture perspective,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1581,understanding beyond individual data cases,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1582,avoid incorrect inferences,Dependability-Robustness,Dependability-Robustness,
+1583,learning,Ease of learning-__,Ease of learning-__,
+1584,data quality,Visualization task-Data features,NOT FOUND-NOT FOUND,OK changed
+1585,Overview:,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1586,Zoom :,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1587,Filter:,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+1588,Details-on-demand:,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1589,Relate:,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1590,History:,Repeatability-Undo and redo,Repeatability-Undo and redo,OK related
+1591,Extract:,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+1592,Guidance,User assistance-Guidance,User assistance-Guidance,
+1593,Workload,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1594,Explicit control:,Dependability-Control,Dependability-Control,
+1595,Adaptability,Flexibility-Adaptability,Flexibility-Adaptability,
+1596,Error management,Dependability-Error recovery,Dependability-Error recovery,
+1597,Consistency,Dependability-Consistency,Dependability-Consistency,OK related
+1598,Significance of codes,Visualization task-Visual representation,Understandability-Simplicity of understanding,OK changed
+1599,Compatibility,Dependability-Consistency,Dependability-Consistency,
+1600,Expose uncertainty,Trust-Transparency,Trust-Transparency,OK related
+1601,Concretize relationships,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1602,Determination of Domain Parameters,Flexibility-Expressiveness,Insightfulness-Knowledge discovery,OK changed
+1603,Multivariate Explanation,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1604,Formulate cause & effect,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1605,Confirm Hypotheses,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+1606,,-,-,
+1607,,-,-,
+1608,,-,-,
+1609,,-,-,
+1610,,-,-,
+1611,,-,-,
+1612,,-,-,
+1613,,-,-,
+1614,,-,-,
+1615,,-,-,
+1616,,-,-,
+1617,,-,-,
+1618,,-,-,
+1619,Data preparation,Scalability-Data processing scalability,Flexibility-Extensibility,OK changed
+1620,Model building,Understandability-Model understanding and refining,Flexibility-Extensibility,OK new concept/topic
+1621,visual mapping,Flexibility-Adaptability,Flexibility-Extensibility,OK changed
+1622,Model usage,Understandability-Model understanding and refining,Flexibility-Adaptability,OK new concept/topic
+1623,Model-vis,Understandability-Model understanding and refining,Flexibility-Adaptability,OK new concept/topic
+1624,Visualization manipulation,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1625,explore datsets,Involvement-Engagement,Involvement-Engagement,OK related
+1626,get impression,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1627,parameter changes,Flexibility-Adaptability,Flexibility-Adaptability,
+1628,capture findings,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1629,develop insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1630,verify hypothesis,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+1631,knowledge generation,Fluidity-Smooth workflow,Insightfulness-Knowledge discovery,OK changed
+1632,integration of algorithm and visualization,Flexibility-Internal Interoperability,Flexibility-Internal Interoperability,
+1633,,Empty -Empty,Empty -Empty,
+1634,,Empty -Empty,Empty -Empty,
+1635,use visualization for casual purpose,Involvement-Interest,Involvement-Interest,
+1636,Domain experts,Flexibility-Specialization/generalization,Flexibility-Specialization/generalization,
+1637,,Empty -Empty,Empty -Empty,
+1638,,Empty -Empty,Empty -Empty,
+1639,,Empty -Empty,Empty -Empty,
+1640,,Empty -Empty,Empty -Empty,
+1641,,Empty -Empty,Empty -Empty,
+1642,influence the adoption of a tool,Satisfaction-__,Satisfaction-__,
+1643,appropriated and used,Flexibility-Adaptability,Flexibility-Adaptability,
+1644,help to solve tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1645,generation of actionable and relevant knowledge,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1646,visual analysis,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1647,reasoning about data,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1648,insights obtaine,Usefulness-Task acomplishment,Insightfulness-Knowledge discovery,OK changed
+1649,quality of the data analysis experience,Satisfaction-__,Satisfaction-__,
+1650,data exploration,Involvement-Engagement,Involvement-Engagement,OK related
+1651,Knowledge discovery,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1652,Hypothesis generation,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+1653,Decision making,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1654,convey a message,Collaboration-Shareable,Collaboration-Shareable,
+1655,deliver a message effectively,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1656,learn better and faster,Ease of learning-__,Ease of learning-__,
+1657,collaborative data analysis,Collaboration-__,Collaboration-__,
+1658,arrive at joint conclusion or discovery,Collaboration-__,Collaboration-__,
+1659,stimulate group sensemaking,Collaboration-__,Collaboration-__,
+1660,support group insight,Collaboration-__,Collaboration-__,
+1661,work quality,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1662,task completion time,Efficiency-Time,Efficiency-Time,
+1663,task accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1664,perceived effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1665,perceived efficiency,Efficiency-__,Efficiency-__,
+1666,perceived correctness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1667,satisfaction,Satisfaction-__,Satisfaction-__,
+1668,trust,Trust-Trust in the system,Trust-Trust in the system,
+1669,liked/disliked,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1670,visualization quality,Attractiveness-__,Attractiveness-__,OK related
+1671,shows patterns of interest,Understandability-Model understanding and refining,Insightfulness-Knowledge discovery,OK new concept/topic
+1672,truthful representation of the underlying data,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+1673,cluttered view,Clarity-Visual simplicity,Clarity-Visual simplicity,OK related
+1674,faster,Efficiency-Runtime performance,Efficiency-Runtime performance,
+1675,extreme cases,Dependability-Robustness,Dependability-Robustness,OK related
+1676,,Empty -Empty,Empty -Empty,
+1677,,Empty -Empty,Empty -Empty,
+1678,,Empty -Empty,Empty -Empty,
+1679,,Empty -Empty,Empty -Empty,
+1680,usable,Ease of use-__,Ease of use-__,
+1681,trustworthy,Trust-Trust in the system,Trust-Trust in the system,
+1682,satisfied,Satisfaction-__,Satisfaction-__,
+1683,perform the tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1684,fair to the data,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+1685,not salient enoug,Visualization task-Visual representation,Clarity-Layout,OK changed
+1686,understand the model,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1687,generalizable,Flexibility-Specialization/generalization,Flexibility-Specialization/generalization,
+1688,obtain the best model,Understandability-Model understanding and refining,Usefulness-Task accomplishment,OK new concept/topic
+1689,ask the what-if questions to the model,Understandability-Model understanding and refining,Involvement-Engagement,OK new concept/topic
+1690,engaged in making sense,Involvement-Engagement,Involvement-Engagement,
+1691,enthusiastically,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1692,ascetically pleasing,Attractiveness-__,Attractiveness-__,OK related
+1693,fun to interact with,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1694,thought-provoking,Involvement-Engagement,Involvement-Interest,OK changed
+1695,entice curious non-expert,Involvement-Interest,Involvement-Interest,
+1696,gather knowledge on a domain,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1697,tweak the initial model,Flexibility-Adaptability,Flexibility-Adaptability,
+1698,utilize prior knowledge to refine the model,Understandability-Model understanding and refining,Flexibility-Adaptability,OK new concept/topic
+1699,aware of potential misleading relations,User assistance-Guidance,User assistance-Guidance,
+1700,understanding of the model,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1701,efficiency in decision making task,Efficiency-__,Efficiency-__,
+1702,easy to use.,Ease of use-__,Ease of use-__,
+1703,feel like I learned something,Ease of learning-__,Ease of learning-__,
+1704,improving model performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1705,reduces my workload,Efficiency-Effort,Efficiency-Effort,
+1706,effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1707,efficient mechanism to label,Efficiency-Effort,Efficiency-Effort,
+1708,familiar,Ease of learning-__,Ease of learning-__,
+1709,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1710,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1711,explains the prediction agreement,Trust-Transparency,Trust-Transparency,
+1712,improve performance to label,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1713,easy to identify,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+1714,visual guidance,User assistance-Guidance,User assistance-Guidance,
+1715,semantic interactions,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+1716,performed easily,Ease of use-__,Ease of use-__,
+1717,difficult to compute,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1718,higher response accuracies,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1719,shorter response times,Efficiency-Time,Efficiency-Time,
+1720,lower mental effort,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1721,it was unclear,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1722,confused,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1723,facilitate fast detection,Visualization task-Visual representation,Efficiency-Time,OK changed
+1724,compare and track changes,Repeatability-Reproduction of analysis,NOT FOUND-NOT FOUND,OK changed
+1725,Difficulty,Ease of use-__,Ease of use-__,
+1726,satisfaction,Satisfaction-__,Satisfaction-__,
+1727,frustration,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+1728,mental demand,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1729,Physical demand,Efficiency-Effort,Efficiency-Effort,OK ignore
+1730,found clusters,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1731,calculated average,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1732,remember the average of the previous cluster,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,OK related
+1733,took more work,Efficiency-Effort,Efficiency-Effort,
+1734,had a high load on memory,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1735,easy labelling,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+1736,comparison,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1737,summarize,Visualization task-Overview/detail,Usefulness-Task accomplishment,OK changed
+1738,get overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1739,Good directional cues,User assistance-Guidance,User assistance-Guidance,
+1740,line clutter,Clarity-Visual simplicity,Clarity-Visual simplicity,OK related
+1741,move slowly,Efficiency-Time,Efficiency-Time,
+1742,getting no information,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1743,avoids confusion,Clarity-Visual simplicity,Clarity-__,OK changed
+1744,can see,Visualization task-Data reading,Insightfulness-Knowledge discovery,OK changed
+1745,interesting,Involvement-Interest,Involvement-Interest,
+1746,use their labeling data for training,Flexibility-Adaptability,Flexibility-Adaptability,OK related
+1747,focusing on the dominant stream,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1748,difficult to learn,Ease of learning-__,Ease of learning-__,
+1749,easier to identify the dominant mood,Ease of learning-__,Insightfulness-Knowledge discovery,OK changed
+1750,conveying predictions with uncertainty,Trust-Transparency,Trust-Transparency,OK related
+1751,observe model performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1752,reason about the causes,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1753,weighted accuracy of prediction,Trust-Trustworthiness of content,Visualization task-Visual representation,OK changed
+1754,understand the overview of dataset,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1755,identify the error patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1756,analyze the causes of error patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1757,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1758,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1759,easy to learn,Ease of learning-__,Ease of learning-__,
+1760,easy to use,Ease of use-__,Ease of use-__,
+1761,would recommend,Satisfaction-__,Satisfaction-__,
+1762,useful to use,Usefulness-__,Usefulness-__,
+1763,would use in the future,Satisfaction-__,Satisfaction-__,
+1764,achieved high accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1765,effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1766,could be learned in a reasonable amount of time,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+1767,usability,Ease of use-__,Ease of use-__,
+1768,understanding the entire system,Understandability-__,Understandability-__,
+1769,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1770,easy to use,Ease of use-__,Ease of use-__,
+1771,flexible,Flexibility-__,Flexibility-__,
+1772,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1773,user friendly,Ease of use-__,Ease of use-__,
+1774,runs fast,Efficiency-Runtime performance,Efficiency-Runtime performance,
+1775,learning effort,Ease of learning-__,Ease of learning-__,
+1776,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1777,optimize analysis time,Efficiency-Time,Efficiency-Time,
+1778,easy to use,Ease of use-__,Ease of use-__,
+1779,easy to learn,Ease of learning-__,Ease of learning-__,
+1780,integrating the system,Flexibility-External Interoperability,Flexibility-External Interoperability,
+1781,familiarization time,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+1782,quick visualization for decision making,Efficiency-Time,Efficiency-Time,OK related
+1783,recommend,Satisfaction-__,Satisfaction-__,
+1784,colors and symbols,Visualization task-Visual representation,Visualization task-Visual representation,OK related
+1785,,Empty -Empty,Empty -Empty,
+1786,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1787,hard to read,Clarity-Layout,Clarity-Layout,
+1788,helpful,Usefulness-__,Usefulness-__,
+1789,affect your mental map,Dependability-Consistency,Fluidity-Smooth workflow,OK changed
+1790,save time,Efficiency-Time,Efficiency-Time,
+1791,reduce time to routine analysis,Efficiency-Time,Efficiency-Time,
+1792,provide insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1793,essence of the underlying data,Understandability-Simplicity of understanding,Visualization task-Overview/detail,OK changed
+1794,confidence about the data,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+1795,ease of interpretation,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1796,useful,Usefulness-__,Usefulness-__,
+1797,conveyed certain insights that were harder to see,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1798,overview of correlations at a glance,Visualization task-Coordinated View,Visualization task-Overview/detail,OK changed
+1799,show relationships,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1800,correlations were hard to detect,Clarity-Visual simplicity,Clarity-__,OK changed
+1801,satisfied,Satisfaction-__,Satisfaction-__,
+1802,fulfill most of their requirements,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1803,powerful,Value-Value added,Value-Value added,
+1804,dig deeper,Involvement-Engagement,Involvement-Engagement,OK related
+1805,gain more insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1806,surprised,Involvement-Engagement,Involvement-Engagement,
+1807,focused on analyzing,Fluidity-Sense of flow,Involvement-Engagement,OK changed
+1808,interesting information,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1809,keen,Involvement-Interest,Involvement-Interest,
+1810,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1811,useful to analyze,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1812,interactions are good,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1813,fluency,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1814,are not so familiar,Ease of learning-__,Ease of learning-__,
+1815,takes more time to learn,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+1816,encodes too much information,Visualization task-Visual representation,Clarity-Visual simplicity,OK changed
+1817,assist understanding,Understandability-Simplicity of understanding,User assistance-Guidance,OK changed
+1818,easy to locate,Clarity-Layout,Clarity-Layout,
+1819,clear idea about the distribution,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1820,outliers are easy to detect,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1821,visually appealing,Attractiveness-__,Attractiveness-__,OK related
+1822,a lot of information,Clarity-Visual simplicity,Clarity-Visual simplicity,
+1823,easy/difficult to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1824,check content,Involvement-Engagement,Involvement-Engagement,OK related
+1825,showed information I wanted,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1826,interested,Involvement-Interest,Involvement-Interest,
+1827,innovative,Novelty-__,Novelty-__,
+1828,scalability problem,Scalability-Data processing scalability,Scalability-Data processing scalability,
+1829,revisit detected patterns,Repeatability-Reproduction of analysis,Repeatability-Reproduction of analysis,OK related
+1830,confused,Dependability-Error recovery,Dependability-Error recovery,
+1831,with colours it´s easier to see a pattern,Visualization task-Visual representation,Clarity-Layout,OK changed
+1832,trying to absorb what the thing was saying,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1833,meaning of the visualization.,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1834,feeling of completion,Satisfaction-Rewarding,Satisfaction-Rewarding,
+1835,accomplishment,Satisfaction-Rewarding,Satisfaction-Rewarding,
+1836,sense of achievement,Satisfaction-Rewarding,Satisfaction-Rewarding,
+1837,absorbing as much information as is possible,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1838,Making sense,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1839,trust what is being represented,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+1840,Meeting or contradicting expectations,Dependability-Predictability,Dependability-Predictability,
+1841,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1842,relied,Trust-Trust in the system,Trust-Trust in the system,
+1843,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1844,tasks became easier,Ease of use-__,Ease of use-__,
+1845,very cluttered,Clarity-Visual simplicity,Clarity-Visual simplicity,OK related
+1846,learn about datase,Ease of learning-Time to proficiency,Ease of learning-__,OK changed
+1847,insights on detailed relations,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1848,insights on trends,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1849,made observations,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1850,reached insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1851,exploration influenced by what I learned,Involvement-Engagement,Involvement-Engagement,
+1852,confortable to use,Ease of use-__,Ease of use-__,
+1853,target exploration,Involvement-Engagement,Involvement-Engagement,
+1854,confidence that my observations were correct,Trust-Confidence,Trust-Confidence,
+1855,comprehensive exploration,Involvement-Engagement,Involvement-Engagement,OK related
+1856,insights valuable,Value-Value added,Value-Value added,
+1857,reduces occlusion,Clarity-Visual simplicity,Clarity-Visual simplicity,OK related
+1858,reduces dispersion,Clarity-Visual simplicity,Clarity-Visual simplicity,OK related
+1859,tracking is easier,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1860,useful,Usefulness-__,Usefulness-__,
+1861,understand,Understandability-__,Understandability-__,OK related
+1862,look at information interesting,Involvement-Interest,Involvement-Interest,OK related
+1863,show interesting information,Collaboration-Shareable,Collaboration-Shareable,
+1864,better awareness,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1865,tell a story,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+1866,put data behind,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1867,satisfied with the system,Satisfaction-__,Satisfaction-__,
+1868,easy to learn,Ease of learning-__,Ease of learning-__,
+1869,easy to use,Ease of use-__,Ease of use-__,
+1870,useful,Usefulness-__,Usefulness-__,
+1871,intuitive,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1872,clear,Clarity-Layout,Clarity-__,OK related
+1873,tracking,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1874,reviewing,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1875,summarization,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1876,dynamic topical changes,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1877,visualization design,Attractiveness-__,Attractiveness-__,OK related
+1878,easily navigate,Ease of use-Navigation,Ease of use-Navigation,
+1879,attention paid,Clarity-Layout,Clarity-Layout,
+1880,guide a person,User assistance-Guidance,User assistance-Guidance,
+1881,spent much of their time,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+1882,irritating,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+1883,separation between control panels and the visualization,Clarity-Layout,Clarity-Layout,
+1884,familiar layouts,Ease of learning-__,Ease of learning-__,
+1885,difficulty discovering embedded interactions,Ease of learning-Easy / hard to discover feature,Ease of learning-Easy / hard to discover feature,
+1886,consistent layouts,Dependability-Consistency,Dependability-Consistency,
+1887,transition to more complex interactions,User assistance-Guidance,User assistance-Guidance,
+1888,understood the knowledge tree organization,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1889,clear system design,Clarity-__,Clarity-__,OK changed
+1890,well interpretable,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1891,conclusive,Clarity-__,Clarity-__,
+1892,trustworthy,Trust-Trust in the system,Trust-Trust in the system,
+1893,make sense,Visualization task-Information redution,Understandability-Simplicity of understanding,OK changed
+1894,readily understood,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1895,compare patients for categorization,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1896,good for quick decision making.,Efficiency-Time,Efficiency-Time,
+1897,easy to get an overview,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+1898,sharp distinction can be derived,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1899,interval range can be derived,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1900,variance can be derived,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1901,differences can be derived,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1902,relationships can be derived,Visualization task-Data features,Insightfulness-Knowledge discovery,OK changed
+1903,assign meaning,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1904,contains a lot of information,Clarity-Visual simplicity,Clarity-Visual simplicity,
+1905,clearly structured,Clarity-Layout,Clarity-Layout,
+1906,innovative,Novelty-__,Novelty-__,
+1907,easy to learn,Ease of learning-__,Ease of learning-__,
+1908,flexibly,Flexibility-__,Flexibility-__,
+1909,encouraging,Involvement-Engagement,Involvement-Engagement,
+1910,sophisticated exploration tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1911,minimal assistance,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+1912,suitable for analyzing data,Usefulness-__,Usefulness-__,OK related
+1913,would like to analyze interrelations,Involvement-Interest,Involvement-Interest,
+1914,additional attributes,Flexibility-Extensibility,Flexibility-Extensibility,
+1915,appreciated,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1916,clearly showed events,Clarity-__,Clarity-__,
+1917,convenient selection,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+1918,harder to make decisions,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1919,difficult to work,Ease of use-__,Ease of use-__,
+1920,find answers,Usefulness-Fulfillment of a need,Usefulness-Fulfillment of a need,
+1921,make unreasonable decisions,Dependability-Robustness,Dependability-Robustness,
+1922,did not pay enough attention,Involvement-Engagement,Involvement-Engagement,
+1923,telli something,Visualization task-Visual representation,User assistance-Guidance,OK changed
+1924,organize information,Clarity-Layout,NOT FOUND-NOT FOUND,OK changed
+1925,tend to emphasize,Involvement-Interest,User Behavior-User Behavior,OK changed
+1926,tend to perceive,Visualization task-Visual representation,User Behavior-User Behavior,OK changed
+1927,easier for users to learn,Ease of learning-__,Ease of learning-__,
+1928,check connections,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1929,help users remember,Ease of learning-Memorability,Ease of learning-Memorability,
+1930,objects can be customized,Flexibility-Extensibility,Flexibility-Extensibility,OK related
+1931,provides data previews,User assistance-Guidance,User assistance-Support,OK changed
+1932,support interactive data selection,Ease of use-Simple interaction,Ease of use-Simple interaction,OK related
+1933,intuitive connection to data sources,Scalability-Data processing scalability,Flexibility-External Interoperability,OK changed
+1934,combine different chart types,Visualization task-Visual representation,Flexibility-Extensibility,OK changed
+1935,provide recommendations for what to visualize,User assistance-Guidance,User assistance-Guidance,
+1936,automated data analysis,NOT FOUND-NOT FOUND,NOT FOUND-NOT FOUND,OK ignore
+1937,identify findings,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1938,time to findings,Efficiency-Time,Efficiency-Time,
+1939,time to create a visualization,Efficiency-Time,Efficiency-Time,
+1940,limits what is shown,Scalability-__,Scalability-__,
+1941,sensemaing patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1942,cognitive load,Efficiency-Mental effort / Cognitive load,Efficiency-Mental effort / Cognitive load,
+1943,perceived overall effort,Efficiency-Effort,Efficiency-Effort,
+1944,perceived performance,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1945,perceived frustration,"Satisfaction-Time pressure, Frustration","Satisfaction-Time pressure, Frustration",
+1946,learned features capture the human perception,Dependability-Consistency,Dependability-Consistency,OK related
+1947,trained model preserve visual perception,Understandability-Model understanding and refining,Dependability-Consistency,OK new concept/topic
+1948,efficacy to detect line patterns,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1949,correlation is shown,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1950,predictability of the model is stable,Dependability-Predictability,Dependability-Predictability,
+1951,using pre-trained baseline model,Flexibility-Extensibility,Flexibility-Extensibility,
+1952,models with low interpretability,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+1953,automated pattern extraction method,Insightfulness-Knowledge discovery,Usefulness-Fulfillment of a need,OK changed
+1954,interactions are easy to learn,Ease of learning-__,Ease of learning-__,
+1955,interactions are easy to use,Ease of use-__,Ease of use-__,
+1956,do what I want,Flexibility-Expressiveness,Flexibility-Expressiveness,
+1957,useful,Usefulness-__,Usefulness-__,
+1958,enjoy,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1959,help you in completing the tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1960,like the experience,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1961,usefulness,Usefulness-__,Usefulness-__,
+1962,convenience of the functions,Ease of use-__,Ease of use-__,
+1963,effectiveness,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1964,become familiar with the data,Ease of learning-__,Ease of learning-__,
+1965,excited,Pleasure-Enjoyment,Pleasure-Enjoyment,
+1966,results were what they wanted,Satisfaction-__,Satisfaction-__,
+1967,satisfied with the results,Satisfaction-__,Satisfaction-__,
+1968,accuracy of our iterative model,Dependability-Robustness,Dependability-Robustness,
+1969,model performs better,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1970,easy to understand,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+1971,analyzing past decisions retrospectively,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1972,make sure meetings are scheduled more regularly,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1973,useful,Usefulness-__,Usefulness-__,
+1974,aesthetically pleasant,Attractiveness-__,Attractiveness-__,OK related
+1975,fast to find information,Efficiency-Time,Efficiency-Time,
+1976,likely use this tool,Satisfaction-__,Satisfaction-__,
+1977,trust in the dataset,Trust-Trustworthiness of content,Trust-Trustworthiness of content,
+1978,familiarity with tools,Ease of learning-__,Ease of learning-__,
+1979,confident in using interaction techniques.,Trust-Confidence,Trust-Confidence,
+1980,usefulness,Usefulness-__,Usefulness-__,
+1981,showed interest,Involvement-Interest,Involvement-Interest,
+1982,simple to learn,Ease of learning-__,Ease of learning-__,
+1983,effective to explore data,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+1984,would like to use,Satisfaction-__,Satisfaction-__,
+1985,easier to compare,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+1986,made mistakes,Dependability-Robustness,Dependability-Robustness,
+1987,pay attention,Involvement-Engagement,Involvement-Engagement,
+1988,find meaningful insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1989,find trustworthy insights,Trust-Trustworthiness of content,Trust-Trustworthiness of content,OK related
+1990,want to share,Collaboration-Shareable,Collaboration-Shareable,
+1991,directness of the insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1992,unexpectedness of the insight,Insightfulness-Unexpected discovery,Novelty-__,OK new concept/topic
+1993,correctness of the insight,Trust-Trustworthiness of content,Trust-Trustworthiness of content,OK related
+1994,breadth of the insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1995,depth of the insight,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+1996,flexibility,Flexibility-__,Flexibility-__,
+1997,directness of manipulation,Ease of use-Simple interaction,Ease of use-Simple interaction,
+1998,great for exploring data,Involvement-Engagement,Involvement-Engagement,OK related
+1999,made sense in my head,Dependability-Consistency,Dependability-Consistency,OK related
+2000,felt it like a tool,Usefulness-__,Usefulness-__,
+2001,closer to how people interact in the real-world,Dependability-Consistency,Dependability-Consistency,
+2002,reduces the effortto analyze eata,Efficiency-Effort,Efficiency-Effort,
+2003,save time for analyzingdata,Efficiency-Time,Efficiency-Time,
+2004,easier to understand patterns,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+2005,quickly test hypotheses,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+2006,see the entire cohort and individuals at the same time,Visualization task-Overview/detail,Visualization task-Overview/detail,OK related
+2007,makes sense in data,Dependability-Consistency,Dependability-Consistency,
+2008,refining subgroups,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+2009,extracting patterns from data,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+2010,test the assumptions,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+2011,test pattern robustness,Dependability-Robustness,Involvement-Engagement,OK changed
+2012,completion time,Efficiency-Time,Efficiency-Time,
+2013,performed faster,Efficiency-Time,Efficiency-Time,
+2014,supportiveness in the tasks,User assistance-Support,User assistance-Support,
+2015,obtain more insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,Other
+2016,found problems with the layout,Clarity-Layout,Clarity-Layout,OK related
+2017,more satisfied,Satisfaction-__,Satisfaction-__,
+2018,needed fewer iterations to find a good parameter setting,Efficiency-Number of steps,Efficiency-Number of steps,
+2019,decide about sizes of clusters,Understandability-Simplicity of understanding,Usefulness-Task accomplishment,OK changed
+2020,distance preservation,Trust-Trustworthiness of content,Trust-Trustworthiness of content,OK related
+2021,extract patterns,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+2022,interpret â€œunusualâ€_x009d_ patterns,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,OK related
+2023,confident in the results,Trust-Confidence,Trust-Confidence,
+2024,provides good support for the tasks,User assistance-Support,User assistance-Support,
+2025,arousal,Stimulation-Arousing / soothing,Stimulation-Arousing / soothing,
+2026,valence,Pleasure-Enjoyment,Pleasure-Enjoyment,
+2027,Calmâ€”Exciting (arousal),Stimulation-Arousing / soothing,Stimulation-Arousing / soothing,
+2028,Unhappyâ€”Happy (pleasure),Pleasure-Enjoyment,Pleasure-Enjoyment,
+2029,appropriate,Dependability-Consistency,Dependability-Consistency,OK related
+2030,like,Pleasure-Enjoyment,Pleasure-Enjoyment,
+2031,read the visualization,Understandability-Simplicity of understanding,Understandability-Simplicity of understanding,
+2032,make decisions,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+2033,accuracy,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+2034,speed,Efficiency-Time,Efficiency-Time,
+2035,confidence,Trust-Confidence,Trust-Confidence,
+2036,clear workflow,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+2037,strengthens the analytical method,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+2038,quickly locate,Efficiency-Time,Efficiency-Time,OK related
+2039,user-friendly interface,Ease of use-__,Ease of use-__,
+2040,impressive,Pleasure-Enjoyment,Pleasure-Enjoyment,
+2041,explore our data,Involvement-Engagement,Involvement-Engagement,OK related
+2042,effective,Usefulness-Task accomplishment,Usefulness-Task accomplishment,
+2043,find new insights,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+2044,hard to find,Ease of use-__,Insightfulness-Knowledge discovery,OK changed
+2045,find interesting stories,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+2046,inspired,Involvement-Interest,Novelty-Creativity,OK changed
+2047,comprehensive,Usefulness-Task acomplishment,NOT FOUND-NOT FOUND,OK changed
+2048,fulfilled design tasks,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+2049,aesthetic visualization,Attractiveness-__,Attractiveness-__,OK related
+2050,intuitive interactions,Ease of use-Simple interaction,Ease of use-Simple interaction,
+2051,useful for finding salient features,Visualization task-Data features,Usefulness-Task accomplishment,OK changed
+2052,straightforward for comparing,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+2053,overall flow,Fluidity-Smooth workflow,Fluidity-Smooth workflow,
+2054,quickly catch the idea,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+2055,remember,Ease of learning-Memorability,Ease of learning-Memorability,
+2056,master it,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+2057,clearly see,Clarity-__,Clarity-__,
+2058,interactions ituitive,Ease of use-Simple interaction,Ease of use-Simple interaction,
+2059,exploration approaches changed over time,Flexibility-Adaptability,Flexibility-Adaptability,OK related
+2060,verify facts,Insightfulness-Knowledge discovery,Involvement-Engagement,OK changed
+2061,get familiar,Ease of learning-Time to proficiency,Ease of learning-Time to proficiency,
+2062,consistent findings,Dependability-Consistency,Dependability-Consistency,OK related
+2063,unexpected findings,Insightfulness-Unexpected discovery,Insightfulness-Knowledge discovery,OK new concept/topic
+2064,surprised,Involvement-Engagement,Involvement-Engagement,
+2065,discovery,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+2066,focus for a long time,Involvement-Engagement,Involvement-Engagement,
+2067,helps brush data more efficiently,Efficiency-Effort,Efficiency-Effort,
+2068,interesting findings,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related
+2069,contradictory with our prior knowledge,Dependability-Consistency,Dependability-Consistency,OK related
+2070,filter,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+2071,narrow down,Visualization task-Information redution,Usefulness-Fulfillment of a need,OK new concept/topic
+2072,compare,Usefulness-Task accomplishment,Usefulness-Task accomplishment,OK related
+2073,interesting observation,Insightfulness-Knowledge discovery,Insightfulness-Knowledge discovery,OK related

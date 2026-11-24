@@ -1,0 +1,84 @@
+statement,team_code,text,display_order
+P06,P0-6,The visual layout of the system was clear,0
+P05,P0-5,The visual representations were too complex for me,1
+P09,P0-9,I could easily share the analysis results of this system with others,2
+P012A,P0-12-A,The data representations were consistent with how I think about the data,3
+P012,P0-12,The system offered a consistent way of interacting with the data during the entire workflow,4
+P201,P2-01,I felt in control when using the system,5
+P203,P2-03,The system helped me to overcome any problems I have had in using it,6
+P045A,P0-45-A,The system reacted to my inputs as I expected,7
+P015,P0-15,I did not encounter bugs or system failures that hindered my data analyses,8
+P019,P0-19,I found it easy to learn to use the system,9
+P024,P0-24,The system's features were intuitive to discover,10
+P022A,P0-22-A,I can easily remember how to read the visualizations in the system,11
+P022,P0-22,I can easily remember how to use the system,12
+P204,P2-04,I needed to learn many things before I could get going with this system,13
+P023,P0-23,I learned to use this system quickly,14
+P026,P0-26,I found it easy to use this system,15
+P025,P0-25,I found it simple to analyze and explore the data in the system,16
+P214,P2-14,Using the system was effortless for me,17
+P207,P2-07,It was mentally demanding to accomplish my tasks using this system,18
+P027,P0-27,I could complete my essential tasks efficiently,19
+P028,P0-28,I could perform my tasks with a minimal number of actions,20
+P033,P0-33,The system's response time was satisfactory,21
+P031,P0-31,I have not experienced latency issues with the system,22
+P213,P2-13,The system helped me complete my work in less time,23
+P202,P2-02,I could adjust the system according to my preferences,24
+P045,P0-45,The system provided rich interaction functionalities to express my analysis goals,25
+P039,P0-39,The system provided adequate customization options for my data analysis needs,26
+P037,P0-37,The system integrates well into my overall data analysis workflow,27
+P041,P0-41,The system's components worked seamlessly together,28
+P042,P0-42,The features are tailored to the specific needs of my analysis domain,29
+P054,P0-54,I found it intuitive to interact with the system,30
+P052,P0-52,The system helped me to focus on my tasks,31
+P049,P0-49,The system supported a smooth data processing workflow,32
+P097,P0-97,"Using the system, I could easily retrieve information from my data",33
+P057,P0-57,The system helped me to gain knowledge about my data,34
+P062C,P0-62-C,The system facilitated to form and evaluate hypotheses about my data,35
+P303,P3-03,I was surprised by an unexpected but desirable discovery,36
+P062,P0-62,The system encouraged me to further explore my data,37
+P04A,P0-4-A,"I would use this system frequently, if I had a reason to",38
+P062A,P0-62-A,The system motivated me to interact with the visualization and manipulate the data,39
+P04B,P0-4-B,"When I used the system, I felt so involved that I didn't notice what was around me",40
+P216,P2-16,The features or interactions provided in this system were interesting to me,41
+P208,P2-08,I found the system interesting to use,42
+P065,P0-65,Using this system inspired me to consider novel data processing workflows,43
+P064,P0-64,Using this system encouraged creative and critical thinking,44
+P060,P0-60,I enjoyed using this system,45
+P068,P0-68,The system was consistent in that the same actions led to the same outcomes,46
+P071,P0-71,I was able to apply what I learned about using this system across different datasets,47
+P067,P0-67,I could safely engage in a trial and error analysis process,48
+P072,P0-72,I felt satisfied with this system,49
+P073,P0-73,I felt rewarded when using this system,50
+P215,P2-15,I felt tense when using this system,51
+P074,P0-74,I felt frustrated when using this system,52
+P074A,P0-74-A,I got tired after using this system,53
+P083,P0-83,The system stimulated my thinking process,54
+P084,P0-84,I felt confident that I was using the system correctly,55
+P101,P1-01,Using the tool felt safe,56
+P081,P0-81,I felt confident that the system protected my data privacy,57
+P102,P1-02,The system worked reliably,58
+P103,P1-03,The system handled my data in a transparent way,59
+P104,P1-04,I trusted the system to handle my data appropriately,60
+P105,P1-05,I trusted the insights I generated with the tool,61
+P106,P1-06,The system's visualizations were accurate representations of my data,62
+P302,P3-02,The system helped me to understand the data,63
+P086,P0-86,The system was self-explanatory,64
+P088,P0-88,The system was simple to understand,65
+P089,P0-89,The visual representations was simple to understand,66
+P087,P0-87,The system was simple to use,67
+P301,P3-01,The system was useful,68
+P029,P0-29,The system provided useful information to help me accomplish my tasks,69
+P014,P0-14,I was able to perform all my data analysis steps with this system,70
+P030,P0-30,The system was effective for my task,71
+P092,P0-92,The system effectively guided me in performing my tasks,72
+P209,P2-09,The system kept me informed of any automated steps it was taking,73
+P095,P0-95,The system provided value for the work I needed to perform,74
+P096,P0-96,I found it straightforward to link information across different visualizations in the system,75
+P211,P2-11,The system allowed me to look at my data from multiple viewpoints,76
+P205,P2-05,"I could clearly see data features (for example, a minimum, or an outlier, or a trend) in the visualizations provided",77
+P206,P2-06,I could easily identify relevant information in the visualizations provided by the system,78
+P305,P3-05,The system allowed me to reduce the information displayed and focus on what interested me,79
+P097A,P0-97-A,I could easily navigate between visualizations,80
+P212,P2-12,The system let me switch between an overview and detailed views of my data,81
+P098,P0-98,The visual representations provided by the system were appropriate,82

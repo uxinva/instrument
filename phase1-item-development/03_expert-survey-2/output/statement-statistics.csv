@@ -1,0 +1,84 @@
+statement,team_code,text,n,mode_first,mode_low,mode_high,mode_tie,mean,median,variance,sd,n_1,n_2,n_3,n_4,n_5,n_comments,removed
+P06,P0-6,The visual layout of the system was clear,32,5,4,5,True,4.40625,4,0.378024,0.614837,0,0,2,15,15,0,False
+P05,P0-5,The visual representations were too complex for me,32,5,5,5,False,4.03125,4,0.934476,0.966683,1,0,8,11,12,1,False
+P09,P0-9,I could easily share the analysis results of this system with others,32,4,4,4,False,3.625,4,0.564516,0.751343,0,2,11,16,3,0,False
+P012A,P0-12-A,The data representations were consistent with how I think about the data,32,3,3,3,False,3.59375,4,0.700605,0.837021,1,0,14,13,4,3,True
+P012,P0-12,The system offered a consistent way of interacting with the data during the entire workflow,32,5,5,5,False,4.21875,4,0.69254,0.83219,0,1,5,12,14,1,False
+P201,P2-01,I felt in control when using the system,32,5,5,5,False,4.3125,4,0.608871,0.780302,0,1,3,13,15,0,False
+P203,P2-03,The system helped me to overcome any problems I have had in using it,32,4,4,4,False,3.8125,4,0.544355,0.737804,0,0,12,14,6,1,False
+P045A,P0-45-A,The system reacted to my inputs as I expected,32,5,5,5,False,4.4375,5,0.447581,0.669015,0,0,3,12,17,1,False
+P015,P0-15,I did not encounter bugs or system failures that hindered my data analyses,32,5,5,5,False,4.09375,4,0.861895,0.928383,0,2,6,11,13,0,False
+P019,P0-19,I found it easy to learn to use the system,32,3,3,4,True,3.96875,4,0.676411,0.822442,0,0,11,11,10,1,True
+P024,P0-24,The system's features were intuitive to discover,32,4,4,4,False,4.0625,4,0.447581,0.669015,0,0,6,18,8,3,False
+P022A,P0-22-A,I can easily remember how to read the visualizations in the system,32,4,4,4,False,3.90625,4,0.668347,0.817525,0,1,9,14,8,1,False
+P022,P0-22,I can easily remember how to use the system,32,4,4,4,False,4,4,0.709677,0.842424,0,1,8,13,10,1,False
+P204,P2-04,I needed to learn many things before I could get going with this system,32,4,3,4,True,3.6875,4,0.995968,0.997982,0,4,10,10,8,3,False
+P023,P0-23,I learned to use this system quickly,32,3,3,3,False,3.90625,4,0.732863,0.856074,0,0,13,9,10,2,True
+P026,P0-26,I found it easy to use this system,32,4,4,4,False,4.21875,4,0.434476,0.659148,0,0,4,17,11,1,False
+P025,P0-25,I found it simple to analyze and explore the data in the system,32,4,4,4,False,4.09375,4,0.603831,0.777065,0,1,5,16,10,0,False
+P214,P2-14,Using the system was effortless for me,32,4,4,4,False,3.96875,4,0.547379,0.739851,0,0,9,15,8,0,False
+P207,P2-07,It was mentally demanding to accomplish my tasks using this system,32,4,4,4,False,3.9375,4,1.02823,1.01401,0,4,5,12,11,4,False
+P027,P0-27,I could complete my essential tasks efficiently,32,4,4,4,False,4.28125,4,0.466734,0.683179,0,1,1,18,12,0,False
+P028,P0-28,I could perform my tasks with a minimal number of actions,32,3,3,3,False,3.71875,3,0.853831,0.92403,0,1,16,6,9,1,True
+P033,P0-33,The system's response time was satisfactory,32,4,4,4,False,4.21875,4,0.498992,0.706394,0,0,5,15,12,0,False
+P031,P0-31,I have not experienced latency issues with the system,32,4,4,4,False,3.71875,4,0.595766,0.771859,0,1,12,14,5,3,False
+P213,P2-13,The system helped me complete my work in less time,32,4,4,4,False,4.125,4,0.5,0.707107,0,0,6,16,10,2,False
+P202,P2-02,I could adjust the system according to my preferences,32,3,3,3,False,3.53125,3,0.515121,0.717719,0,1,16,12,3,1,True
+P045,P0-45,The system provided rich interaction functionalities to express my analysis goals,32,3,3,3,False,3.6875,3,0.673387,0.820602,0,0,17,8,7,0,True
+P039,P0-39,The system provided adequate customization options for my data analysis needs,32,3,3,3,False,3.5625,3.5,0.512097,0.715609,0,1,15,13,3,3,True
+P037,P0-37,The system integrates well into my overall data analysis workflow,32,4,4,4,False,3.9375,4,0.641129,0.800705,0,1,8,15,8,1,False
+P041,P0-41,The system's components worked seamlessly together,32,4,4,4,False,4.09375,4,0.732863,0.856074,0,2,4,15,11,0,False
+P042,P0-42,The features are tailored to the specific needs of my analysis domain,32,4,4,4,False,3.9375,4,0.641129,0.800705,0,2,5,18,7,1,False
+P054,P0-54,I found it intuitive to interact with the system,32,4,4,4,False,4.09375,4,0.603831,0.777065,0,1,5,16,10,1,False
+P052,P0-52,The system helped me to focus on my tasks,32,4,4,4,False,3.90625,4,0.539315,0.73438,0,1,7,18,6,2,False
+P049,P0-49,The system supported a smooth data processing workflow,32,4,4,4,False,3.90625,4,0.603831,0.777065,0,1,8,16,7,2,False
+P097,P0-97,"Using the system, I could easily retrieve information from my data",32,5,5,5,False,4.4375,5,0.447581,0.669015,0,0,3,12,17,1,False
+P057,P0-57,The system helped me to gain knowledge about my data,32,5,5,5,False,4.59375,5,0.378024,0.614837,0,0,2,9,21,0,False
+P062C,P0-62-C,The system facilitated to form and evaluate hypotheses about my data,32,4,4,4,False,4.1875,4,0.608871,0.780302,0,1,4,15,12,0,False
+P303,P3-03,I was surprised by an unexpected but desirable discovery,32,3,3,3,False,3.6875,4,0.802419,0.895779,0,2,13,10,7,0,True
+P062,P0-62,The system encouraged me to further explore my data,32,4,4,4,False,3.96875,4,0.611895,0.782237,0,0,10,13,9,1,False
+P04A,P0-4-A,"I would use this system frequently, if I had a reason to",32,4,4,4,False,3.90625,4,0.797379,0.892961,0,3,5,16,8,2,False
+P062A,P0-62-A,The system motivated me to interact with the visualization and manipulate the data,32,3,3,4,True,3.59375,4,0.636089,0.797552,0,2,13,13,4,2,True
+P04B,P0-4-B,"When I used the system, I felt so involved that I didn't notice what was around me",32,3,3,3,False,2.90625,3,1.11996,1.05828,2,9,15,2,4,4,True
+P216,P2-16,The features or interactions provided in this system were interesting to me,32,3,3,4,True,3.40625,3,0.765121,0.874712,0,5,12,12,3,2,True
+P208,P2-08,I found the system interesting to use,32,4,4,4,False,3.375,3.5,0.887097,0.941858,0,7,9,13,3,1,False
+P065,P0-65,Using this system inspired me to consider novel data processing workflows,32,3,3,3,False,3.0625,3,0.641129,0.800705,0,8,15,8,1,5,True
+P064,P0-64,Using this system encouraged creative and critical thinking,32,4,4,4,False,3.8125,4,0.479839,0.692704,0,0,11,16,5,0,False
+P060,P0-60,I enjoyed using this system,32,4,4,4,False,3.84375,4,0.845766,0.919655,0,3,7,14,8,1,False
+P068,P0-68,The system was consistent in that the same actions led to the same outcomes,32,5,5,5,False,4.625,5,0.435484,0.659912,0,0,3,6,23,0,False
+P071,P0-71,I was able to apply what I learned about using this system across different datasets,32,3,3,4,True,3.59375,4,0.636089,0.797552,0,2,13,13,4,1,True
+P067,P0-67,I could safely engage in a trial and error analysis process,32,4,3,4,True,3.78125,4,0.69254,0.83219,0,1,12,12,7,1,False
+P072,P0-72,I felt satisfied with this system,32,4,4,4,False,4.15625,4,0.523185,0.723316,0,1,3,18,10,0,False
+P073,P0-73,I felt rewarded when using this system,32,3,3,3,False,3.3125,3,0.995968,0.997982,0,7,13,7,5,2,True
+P215,P2-15,I felt tense when using this system,32,3,3,3,False,3.4375,3,1.28629,1.13415,1,5,13,5,8,1,True
+P074,P0-74,I felt frustrated when using this system,32,5,5,5,False,4.21875,5,1.01512,1.00753,0,3,4,8,17,1,False
+P074A,P0-74-A,I got tired after using this system,32,4,4,4,False,3.6875,4,0.995968,0.997982,1,2,10,12,7,2,False
+P083,P0-83,The system stimulated my thinking process,32,4,4,4,False,4.09375,4,0.603831,0.777065,0,0,8,13,11,0,False
+P084,P0-84,I felt confident that I was using the system correctly,32,5,5,5,False,4.375,5,0.629032,0.793116,0,0,6,8,18,1,False
+P101,P1-01,Using the tool felt safe,32,3,3,3,False,3.5,3.5,1.22581,1.10716,1,5,10,9,7,3,True
+P081,P0-81,I felt confident that the system protected my data privacy,32,3,3,3,False,3.5,3,1.29032,1.13592,0,7,11,5,9,3,True
+P102,P1-02,The system worked reliably,32,5,5,5,False,4.5,5,0.580645,0.762001,0,1,2,9,20,0,False
+P103,P1-03,The system handled my data in a transparent way,32,4,4,4,False,3.96875,4,0.676411,0.822442,0,1,8,14,9,3,False
+P104,P1-04,I trusted the system to handle my data appropriately,32,5,5,5,False,4.40625,5,0.700605,0.837021,0,1,4,8,19,2,False
+P105,P1-05,I trusted the insights I generated with the tool,32,5,5,5,False,4.5625,5,0.318548,0.564401,0,0,1,12,19,0,False
+P106,P1-06,The system's visualizations were accurate representations of my data,32,5,5,5,False,4.21875,4.5,0.950605,0.97499,1,0,6,9,16,3,False
+P302,P3-02,The system helped me to understand the data,32,5,5,5,False,4.6875,5,0.221774,0.470929,0,0,0,10,22,0,False
+P086,P0-86,The system was self-explanatory,32,4,4,4,False,3.75,4,0.645161,0.803219,0,2,9,16,5,1,False
+P088,P0-88,The system was simple to understand,32,4,4,4,False,4,4,0.645161,0.803219,0,0,10,12,10,4,False
+P089,P0-89,The visual representations was simple to understand,32,4,4,4,False,3.84375,4,0.523185,0.723316,0,1,8,18,5,5,False
+P087,P0-87,The system was simple to use,32,4,4,4,False,4.03125,4,0.482863,0.694883,0,0,7,17,8,2,False
+P301,P3-01,The system was useful,32,5,5,5,False,4.625,5,0.564516,0.751343,0,1,2,5,24,2,False
+P029,P0-29,The system provided useful information to help me accomplish my tasks,32,5,5,5,False,4.28125,4,0.53125,0.728869,0,0,5,13,14,0,False
+P014,P0-14,I was able to perform all my data analysis steps with this system,32,4,4,4,False,3.8125,4,0.995968,0.997982,0,4,7,12,9,2,False
+P030,P0-30,The system was effective for my task,32,5,5,5,False,4.53125,5,0.515121,0.717719,0,1,1,10,20,1,False
+P092,P0-92,The system effectively guided me in performing my tasks,32,4,4,4,False,3.6875,4,0.608871,0.780302,0,2,10,16,4,1,False
+P209,P2-09,The system kept me informed of any automated steps it was taking,32,3,3,3,False,3.65625,3,0.748992,0.865443,0,1,16,8,7,1,True
+P095,P0-95,The system provided value for the work I needed to perform,32,5,5,5,False,4.5,5,0.774194,0.879883,1,0,2,8,21,2,False
+P096,P0-96,I found it straightforward to link information across different visualizations in the system,32,4,4,4,False,3.90625,4,0.474798,0.689056,0,0,9,17,6,0,False
+P211,P2-11,The system allowed me to look at my data from multiple viewpoints,32,4,4,4,False,3.875,4,0.370968,0.609071,0,0,8,20,4,2,False
+P205,P2-05,"I could clearly see data features (for example, a minimum, or an outlier, or a trend) in the visualizations provided",32,5,5,5,False,4.09375,4,0.861895,0.928383,0,1,9,8,14,1,False
+P206,P2-06,I could easily identify relevant information in the visualizations provided by the system,32,5,5,5,False,4.4375,5,0.447581,0.669015,0,0,3,12,17,2,False
+P305,P3-05,The system allowed me to reduce the information displayed and focus on what interested me,32,4,4,4,False,3.71875,4,0.466734,0.683179,0,1,10,18,3,2,False
+P097A,P0-97-A,I could easily navigate between visualizations,32,4,4,4,False,3.9375,4,0.447581,0.669015,0,0,8,18,6,2,False
+P212,P2-12,The system let me switch between an overview and detailed views of my data,32,4,4,4,False,3.8125,4,0.544355,0.737804,0,0,12,14,6,0,False
+P098,P0-98,The visual representations provided by the system were appropriate,32,5,5,5,False,4.5625,5,0.318548,0.564401,0,0,1,12,19,0,False

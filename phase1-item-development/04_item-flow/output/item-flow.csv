@@ -1,0 +1,11 @@
+stage_order,stage,P0,P1,P2,P3,P4,P9,scale_items,attention_checks,optional
+1,Merged pool P0+P1+P2+P3,68,6,16,5,0,0,95,0,6
+2,After internal review (pilot),58,6,16,4,0,0,84,0,0
+3,After pilot (expert survey 2),58,6,15,4,0,0,83,0,0
+4,After expert survey 2 (interview round 1),46,5,11,3,0,0,65,0,0
+5,After interview round 1 (round 2),45,5,12,3,2,0,67,0,0
+6,After interview round 2,43,5,11,3,2,1,64,1,0
+7,After round 3 (final revision),44,5,12,3,2,2,66,2,0
+8,"Exploratory survey (Prolific, EFA)",43,5,12,3,2,2,65,2,0
+9,After EFA screening (item reduction),37,1,7,2,2,0,49,0,0
+10,Selected scale (validation),10,1,0,1,1,0,13,0,0

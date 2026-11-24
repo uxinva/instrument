@@ -1,0 +1,63 @@
+ueqplus_scale,recommendation,new_concept,p0_topic,p0_concept
+Attractiveness,RELATED,,Pleasure,Pleasure-Enjoyment
+Attractiveness,IGNORE,,,
+Attractiveness,RELATED,,Pleasure,Pleasure-Enjoyment
+Attractiveness,RELATED,,Ease of use,Ease of use-_Topic
+Attractiveness,RELATED,,Attractiveness,Attractiveness-_Topic
+Attractiveness,RELATED,,Pleasure,Pleasure-Enjoyment
+Efficiency,RELATED,,Efficiency,Efficiency-Runtime performance
+Efficiency,RELATED,,Efficiency,Efficiency-Number of steps
+Efficiency,RELATED,,Usefulness,Usefulness-Task acomplishment
+Efficiency,RELATED,,Clarity,Clarity-Layout
+Perspicuity,RELATED,,Understandability,Understandability-Simplicity of understanding
+Perspicuity,RELATED,,Ease of learning,Ease of learning-_Topic
+Perspicuity,RELATED,,Ease of use,Ease of use-_Topic
+Perspicuity,RELATED,,Clarity,Clarity-Layout
+Dependability,RELATED,,Dependability,Dependability-Predictability
+Dependability,RELATED,,User assistance,User assistance-Guidance
+Dependability,IGNORE,,,
+Dependability,RELATED,,Dependability,Dependability-Predictability
+Stimulation,IRRELEVANT,,,
+Stimulation,IRRELEVANT,,,
+Stimulation,IRRELEVANT,,,
+Stimulation,IRRELEVANT,,,
+Novelty,IRRELEVANT,,,
+Novelty,IRRELEVANT,,,
+Novelty,IRRELEVANT,,,
+Novelty,IRRELEVANT,,,
+Trust,NEW CONCEPT/TOPIC,Feeling of safety,Trust,Trust-Privacy
+Trust,RELATED,,Trust,Trust-Privacy
+Trust,NEW CONCEPT/TOPIC,Reliability,Trust,Trust-Privacy
+Trust,NEW CONCEPT/TOPIC,Transparency,Trust,Trust-Privacy
+Aesthetics,IRRELEVANT,,,
+Aesthetics,IRRELEVANT,,,
+Aesthetics,IRRELEVANT,,,
+Aesthetics,IRRELEVANT,,,
+Adaptability,IRRELEVANT,,,
+Adaptability,IRRELEVANT,,,
+Adaptability,IRRELEVANT,,,
+Adaptability,IRRELEVANT,,,
+Usefulness,RELATED,,Usefulness,Usefulness-Task acomplishment
+Usefulness,RELATED,,Usefulness,Usefulness-Task acomplishment
+Usefulness,RELATED,,Value,Value-Value added
+Usefulness,RELATED,,Satisfaction,Satisfaction-Rewarding
+Intuitive Use,RELATED,,Ease of use,Ease of use-_Topic
+Intuitive Use,RELATED,,Ease of learning,Ease of learning-Easy / hard to discover feature
+Intuitive Use,IGNORE,,,
+Intuitive Use,IGNORE,,,
+Value,IRRELEVANT,,,
+Value,IRRELEVANT,,,
+Value,IRRELEVANT,,,
+Value,IRRELEVANT,,,
+Trustworthiness of Content,RELATED,,Usefulness,Usefulness-Task acomplishment
+Trustworthiness of Content,IGNORE,,,
+Trustworthiness of Content,NEW CONCEPT/TOPIC,Trustworthiness of content,,
+Trustworthiness of Content,NEW CONCEPT/TOPIC,Trustworthiness of content,,
+Quality of Content,IGNORE,,,
+Quality of Content,IGNORE,,,
+Quality of Content,RELATED,,Visualization task,Visualization task-Visual representation
+Quality of Content,RELATED,,Understandability,Understandability-Simplicity of understanding
+Clarity,IGNORE,,Clarity,
+Clarity,RELATED,,Clarity,Clarity-Layout
+Clarity,RELATED,,Clarity,Clarity-Layout
+Clarity,RELATED,,Clarity,Clarity-Layout
