@@ -17,9 +17,14 @@ relative_links:
   collections: false
 
 # Not published on the site
+# "*.Rmd": the R Markdown sources start with a YAML header, so Jekyll renders them as
+# pages and fails on code such as "{%" (build error of 2026-11). The sources stay in
+# the repository; the rendered .html reports are published.
 exclude:
   - phase3-validation/data/raw
   - phase2-1-scale-development/data/raw
+  - phase1-item-development/data/raw
+  - "*.Rmd"
   - "*.Rproj"
   - renv/
   - renv.lock
