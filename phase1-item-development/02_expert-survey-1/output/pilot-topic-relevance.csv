@@ -1,16 +1,16 @@
-topic,name,rank,n,median,mean,variance,sd,n_1,n_2,n_3,n_4,n_5,relevant
-S02,Perspicuity,1,4,5,4.75,0.25,0.5,0,0,0,1,3,True
-S04,Dependability,2,4,5,4.75,0.25,0.5,0,0,0,1,3,True
-S03,Efficiency,3,4,5,4.5,1,1,0,0,1,0,3,True
-S14,Trustworthiness of Content,4,4,4.5,4.25,0.916667,0.957427,0,0,1,1,2,True
-S08,Clarity,5,4,4,4.25,0.25,0.5,0,0,0,3,1,True
-S09,Usefulness,6,4,4,4.25,0.25,0.5,0,0,0,3,1,True
-S01,Attractiveness,7,4,4,3.75,0.25,0.5,0,0,1,3,0,False
-S07,Trust,8,4,4,3.75,0.25,0.5,0,0,1,3,0,False
-S12,Visual Aesthetics,9,4,4,3.75,0.25,0.5,0,0,1,3,0,False
-S15,Quality of Content,10,4,4,3.75,0.25,0.5,0,0,1,3,0,False
-S11,Intuitive use,11,4,3.5,3.5,0.333333,0.57735,0,0,2,2,0,False
-S13,Value,12,4,3.5,3.5,0.333333,0.57735,0,0,2,2,0,False
-S05,Stimulation,13,4,3,3.25,0.25,0.5,0,0,3,1,0,False
-S10,Adaptability,14,4,3,3.25,1.58333,1.25831,0,1,2,0,1,False
-S06,Novelty,15,4,2,2,0,0,0,4,0,0,0,False
+topic,name,rank,n,median,mean,variance,sd,pct_rated_4_5,kendall_w_without_topic,n_1,n_2,n_3,n_4,n_5,relevant
+S02,Perspicuity,1,4,5,4.75,0.25,0.5,100,0.530303,0,0,0,1,3,True
+S04,Dependability,2,4,5,4.75,0.25,0.5,100,0.530303,0,0,0,1,3,True
+S03,Efficiency,3,4,5,4.5,1,1,75,0.600968,0,0,1,0,3,True
+S14,Trustworthiness of Content,4,4,4.5,4.25,0.916667,0.957427,75,0.601684,0,0,1,1,2,True
+S08,Clarity,5,4,4,4.25,0.25,0.5,100,0.565428,0,0,0,3,1,True
+S09,Usefulness,6,4,4,4.25,0.25,0.5,100,0.583996,0,0,0,3,1,True
+S01,Attractiveness,7,4,4,3.75,0.25,0.5,75,0.58125,0,0,1,3,0,False
+S07,Trust,8,4,4,3.75,0.25,0.5,75,0.58125,0,0,1,3,0,False
+S12,Visual Aesthetics,9,4,4,3.75,0.25,0.5,75,0.58125,0,0,1,3,0,False
+S15,Quality of Content,10,4,4,3.75,0.25,0.5,75,0.588225,0,0,1,3,0,False
+S11,Intuitive use,11,4,3.5,3.5,0.333333,0.57735,50,0.566003,0,0,2,2,0,False
+S13,Value,12,4,3.5,3.5,0.333333,0.57735,50,0.566003,0,0,2,2,0,False
+S05,Stimulation,13,4,3,3.25,0.25,0.5,25,0.575118,0,0,3,1,0,False
+S10,Adaptability,14,4,3,3.25,1.58333,1.25831,25,0.599141,0,1,2,0,1,False
+S06,Novelty,15,4,2,2,0,0,0,0.444444,0,4,0,0,0,False

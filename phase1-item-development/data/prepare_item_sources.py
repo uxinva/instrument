@@ -4,6 +4,7 @@ Inputs (Google Sheets downloaded as .xlsx into phase1-item-development/tmp-data/
 not versioned):
     Items Historic.xlsx                       Google Sheet "Items Historic"
     Task2SuggestedItemsAnalysis250127.xlsx    Google Sheet "Task2SuggestedItemsAnalysis250127"
+    Task 1 - CommentsAnalysis250127.xlsx      Google Sheet "Task 1 - CommentsAnalysis250127"
 
 Outputs (committed), in phase1-item-development/data/raw/:
     item-history.csv            one row per item and stage: item, stage, present, text, decision
@@ -14,6 +15,12 @@ Outputs (committed), in phase1-item-development/data/raw/:
     source-p2-scales.csv        items of other standardized scales compared with P0+P1 (P2<>P1+P0)
     source-p3-literature.csv    terms extracted from the VA literature and their final topic-concept
     concept-occurrences.csv     number of occurrences of each topic-concept in P0, P1, P2 and P3
+    expert-survey-1_comment-coding.csv   open coding of the Task 1 comments of expert survey 1: one row
+                                per coded segment, topic, rating, one 0/1 column per code category
+                                (comment texts not included)
+    expert-survey-1_task2-coding.csv     the two independent codings of the Task 2 answers: whether
+                                each answer names an item or a topic (coder A, coder B) and the
+                                consolidation status (texts and concept labels not included)
 
 Item texts of the scales (P1, P2), the excerpts of the papers (P3), the expert suggestions and
 the experts' comments are not copied. Item codes follow the team spreadsheets (P0-12-A).
@@ -35,6 +42,22 @@ OLD_DIR = PHASE_DIR / "tmp-data" / "old-analysis"
 RAW_DIR = PHASE_DIR / "data" / "raw"
 ITEMS_HISTORIC = OLD_DIR / "Items Historic.xlsx"
 TASK2 = OLD_DIR / "Task2SuggestedItemsAnalysis250127.xlsx"
+TASK1 = OLD_DIR / "Task 1 - CommentsAnalysis250127.xlsx"
+TOPICS = PHASE_DIR / "data" / "codebook" / "expert-survey-1_topics.csv"
+
+# Code categories of the open coding of the Task 1 comments (columns G-P of the sheet
+# "Comments & Ratings - Task1 Open"), with the names used in the outputs.
+COMMENT_CODES = {
+    "Specific item commented on": "specific_item",
+    "Reason for importance": "reason_importance",
+    "Reason for irrelvance": "reason_irrelevance",
+    "Tradeoffs to consider": "tradeoff",
+    "Dependence of the topic on other factors": "context_dependence",
+    "Interpretation of the topic (concept)": "interpretation",
+    "problem rating this topic": "rating_problem",
+    "Similarity to other items/topics": "overlap_other_topic",
+    "Suggesting new items": "new_item_suggested",
+}
 
 # Sheet "Items Historic": one row per item; the stages are pairs of columns (item code, text),
 # oldest on the right. Zero-based column indexes; the decision column holds the team's label.
@@ -162,6 +185,43 @@ def p3_literature() -> pd.DataFrame:
                           "ai_topic_concept": text(r[5]), "status": text(r[15])} for r in rows])
 
 
+def comment_coding() -> pd.DataFrame:
+    rows = sheet(TASK1, "Comments & Ratings - Task1 Open")
+    header = [text(h) for h in rows[0]]
+    col = {h: i for i, h in enumerate(header)}
+    names = pd.read_csv(TOPICS).set_index("name")["topic"] if TOPICS.exists() else pd.Series(dtype=str)
+    names.index = names.index.str.lower()
+    levels = {"Never relevant": 1, "Not often relevant": 2, "Sometimes relevant": 3,
+              "Frequently relevant": 4, "Always relevant": 5}
+    out = []
+    for r in rows[1:]:
+        if not r[col["Comment"]]:
+            continue
+        name = text(r[col["Survey Question"]])
+        rec = {"comment_id": int(float(r[col["Comment ID"]])), "topic": names.get(name.lower(), name),
+               "topic_name": name, "rating": levels.get(text(r[col["Column 19"]]))}
+        for src, dst in COMMENT_CODES.items():
+            rec[dst] = int(bool(text(r[col[src]]))) if src in col else 0
+        out.append(rec)
+    return pd.DataFrame(out)
+
+
+def task2_coding() -> pd.DataFrame:
+    """Coder A: sheet "Task2-Concepts Classification" (columns H-J, consolidation status in V);
+    coder B: sheet "Task2-Concepts Emanuele" (columns G-I). Rows are aligned by position and
+    checked on the answer number."""
+    is_num = lambda v: v is not None and re.fullmatch(r"\d+(\.0)?", str(v).strip())  # noqa: E731
+    a = [r for r in sheet(TASK2, "Task2-Concepts Classification") if is_num(r[1])]
+    b = [r for r in sheet(TASK2, "Task2-Concepts Emanuele") if is_num(r[0])]
+    if [int(float(r[1])) for r in a] != [int(float(r[0])) for r in b]:
+        sys.exit("The two Task 2 codings are not in the same order; check the sheets.")
+    low = lambda v: text(v).lower()  # noqa: E731
+    return pd.DataFrame([{"segment": i + 1, "task2_answer": int(float(ra[1])),
+                          "item_or_topic_a": low(ra[9]), "item_or_topic_b": low(rb[8]),
+                          "concept_coded_a": int(bool(text(ra[7]))), "concept_coded_b": int(bool(text(rb[6]))),
+                          "status": low(ra[21])} for i, (ra, rb) in enumerate(zip(a, b))])
+
+
 def concept_occurrences() -> pd.DataFrame:
     rows = [r for r in sheet(ITEMS_HISTORIC, "Concept Occurences")[1:] if r[0] not in (None, "")]
     return pd.DataFrame([{"topic_concept": text(r[0]), "p0": int(r[1] or 0), "p1": int(r[2] or 0),
@@ -172,6 +232,7 @@ def concept_occurrences() -> pd.DataFrame:
 def main() -> None:
     need(ITEMS_HISTORIC)
     need(TASK2)
+    need(TASK1)
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     builders = {
         "item-history.csv": item_history,
@@ -181,6 +242,8 @@ def main() -> None:
         "source-p2-scales.csv": p2_scales,
         "source-p3-literature.csv": p3_literature,
         "concept-occurrences.csv": concept_occurrences,
+        "expert-survey-1_comment-coding.csv": comment_coding,
+        "expert-survey-1_task2-coding.csv": task2_coding,
     }
     for name, build in builders.items():
         df = build()

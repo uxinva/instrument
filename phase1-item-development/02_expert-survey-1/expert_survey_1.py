@@ -13,8 +13,19 @@ Reads the anonymised data in phase1-item-development/data/ and writes, to output
     rating-counts.csv             number of ratings at each level (survey 1 and pilot)
     agreement-kendall.csv         Kendall's W of the 15 topics and of the stepwise exclusion
     pilot-topic-relevance.csv     the same topic table for the pilot (4 experts)
-    task2-suggestions.csv         answers to Task 2: experts, fields filled, invalid answers
-    table-topic-relevance.tex     LaTeX table of the topic relevance
+    task2-suggestions.csv         answers to Task 2: experts, fields filled, non-answers
+    agreement-icc.csv             ICC of the 15 topics (two-way, average of the 37 experts), consistency and
+                                  absolute agreement, with 95% confidence intervals
+    comment-coding-by-topic.csv   open coding of the Task 1 comments: coded segments per topic and code
+    task2-coding-agreement.csv    agreement of the two coders on "item or topic" for the Task 2 answers
+    table-topic-relevance.tex     LaTeX table of the topic relevance (median, mean, variance, % rated 4-5,
+                                  Kendall's W without the topic, comments, kept)
+    table-comment-coding.tex      LaTeX table of the comment codes per topic
+    table-removed-topics.tex      LaTeX table of the five topics that were not kept, with the reasons
+    figure-topic-relevance.pdf/.png  distribution of the ratings of the 15 topics (diverging bars)
+    ../tmp-data/expert-survey-1_comments-of-removed-topics.csv   the comments on the five removed topics,
+                                  to choose quotations (written only if the raw export is present; not
+                                  versioned)
 
 Choices reproduced from the 2025 analysis (slides of 30 January and 6 February 2025):
 - variance and SD with n - 1;
@@ -69,6 +80,23 @@ SLIDE_PROFILE = {"Woman": 13, "Man": 24, "years_mean": 12.9,
 SLIDE_KENDALL = {"excluded": ["Attractiveness", "Dependability"], "W": 0.4071104}
 SLIDE_PILOT_COUNTS = {1: 0, 2: 5, 3: 15, 4: 26, 5: 14}
 
+# Reasons for not keeping the five topics with a mean below 4 (team decision, meeting of
+# 6 February 2025; summary of the qualitative analysis of the comments).
+REMOVAL_REASONS = {
+    "Visual Aesthetics": "Overlaps with Attractiveness",
+    "Value": "Interpreted in inconsistent ways; its items did not seem to describe the topic",
+    "Adaptability": "Depends on the system and its context of use",
+    "Stimulation": "Not a frequently desired quality in daily use; depends on the usage pattern",
+    "Novelty": "Rarely relevant; other qualities (effectiveness, efficiency, learnability) matter more",
+}
+CODE_LABELS = {
+    "reason_irrelevance": "Reason for irrelevance", "reason_importance": "Reason for importance",
+    "context_dependence": "Depends on context", "specific_item": "Comment on a specific item",
+    "overlap_other_topic": "Overlap with another topic", "tradeoff": "Trade-off",
+    "rating_problem": "Difficulty in rating", "new_item_suggested": "New item suggested",
+    "interpretation": "Interpretation of the topic",
+}
+
 
 # --------------------------------------------------------------------------- statistics
 
@@ -99,7 +127,8 @@ def topic_table(ratings: pd.DataFrame, topics: pd.DataFrame, comments: pd.DataFr
     for t in ratings.columns:
         v = ratings[t].dropna()
         row = {"topic": t, "name": topics.at[t, "name"], "n": len(v), "median": v.median(), "mean": v.mean(),
-               "variance": v.var(ddof=1), "sd": v.std(ddof=1)}
+               "variance": v.var(ddof=1), "sd": v.std(ddof=1), "pct_rated_4_5": 100 * (v >= 4).mean(),
+               "kendall_w_without_topic": kendall_w(ratings.drop(columns=t))["W"]}
         for level in LEVELS:
             row[f"n_{level}"] = int((v == level).sum())
         if comments is not None:
@@ -122,6 +151,158 @@ def profile_table(participants: pd.DataFrame) -> pd.DataFrame:
                        ("expertise_va_system_design", "VA system design")]:
         prof += [(f"{label}: {lvl}", n) for lvl, n in participants[col].value_counts().items()]
     return pd.DataFrame(prof, columns=["measure", "value"])
+
+
+def icc_two_way(matrix: np.ndarray, alpha: float = 0.05) -> list[dict]:
+    """ICC for n subjects (rows) rated by k raters (columns): two-way model, average of the k
+    ratings, consistency and absolute agreement, with confidence intervals as in irr::icc
+    (McGraw and Wong, 1996)."""
+    n, k = matrix.shape
+    g = matrix.mean()
+    msr = k * ((matrix.mean(axis=1) - g) ** 2).sum() / (n - 1)
+    msc = n * ((matrix.mean(axis=0) - g) ** 2).sum() / (k - 1)
+    resid = matrix - matrix.mean(axis=1, keepdims=True) - matrix.mean(axis=0, keepdims=True) + g
+    mse = (resid ** 2).sum() / ((n - 1) * (k - 1))
+    f = msr / mse
+    df1, df2 = n - 1, (n - 1) * (k - 1)
+    out = []
+    icc_c = (msr - mse) / msr
+    fl, fu = f / stats.f.ppf(1 - alpha / 2, df1, df2), f * stats.f.ppf(1 - alpha / 2, df2, df1)
+    out.append({"type": "consistency, ICC(C,k)", "icc": icc_c, "ci_low": 1 - 1 / fl, "ci_high": 1 - 1 / fu,
+                "F": f, "df1": df1, "df2": df2, "p": stats.f.sf(f, df1, df2)})
+    icc_a = (msr - mse) / (msr + (msc - mse) / n)
+    a = k * icc_a / (n * (1 - icc_a))
+    b = 1 + k * icc_a * (n - 1) / (n * (1 - icc_a))
+    v = (a * msc + b * mse) ** 2 / ((a * msc) ** 2 / (k - 1) + (b * mse) ** 2 / df2)
+    f_l, f_u = stats.f.ppf(1 - alpha / 2, n - 1, v), stats.f.ppf(1 - alpha / 2, v, n - 1)
+    lo = n * (msr - f_l * mse) / (f_l * (k * msc + (k * n - k - n) * mse) + n * msr)
+    hi = n * (f_u * msr - mse) / (k * msc + (k * n - k - n) * mse + n * f_u * msr)
+    lo, hi = lo * k / (1 + lo * (k - 1)), hi * k / (1 + hi * (k - 1))
+    out.append({"type": "absolute agreement, ICC(A,k)", "icc": icc_a, "ci_low": lo, "ci_high": hi,
+                "F": f, "df1": df1, "df2": v, "p": stats.f.sf(f, df1, v)})
+    for o in out:
+        o.update({"subjects_topics": n, "raters_experts": k})
+    return out
+
+
+def comment_coding_table(coding: pd.DataFrame, topics: pd.DataFrame) -> pd.DataFrame:
+    codes = [c for c in CODE_LABELS if c in coding.columns]
+    tab = coding.groupby("topic")[codes].sum()
+    tab.insert(0, "segments", coding.groupby("topic").size())
+    tab.insert(0, "comments", coding.groupby("topic")["comment_id"].nunique())
+    tab = tab.reindex(topics.index).fillna(0).astype(int)
+    tab.insert(0, "name", topics["name"])
+    total = tab.drop(columns="name").sum()
+    tab.loc["total"] = ["Total", *total.tolist()]
+    return tab
+
+
+def latex_comment_coding(tab: pd.DataFrame, table: pd.DataFrame) -> str:
+    codes = [c for c in CODE_LABELS if c in tab.columns and tab.loc["total", c] > 0]
+    order = list(table["topic"]) + ["total"]
+    head = " & ".join([r"Topic", "Comm.", "Seg."] + [rf"\rotatebox{{90}}{{{CODE_LABELS[c]}}}" for c in codes])
+    lines = [r"\begin{table}[tbp]", r"\centering",
+             r"\caption{Open coding of the comments on the 15 topics (first expert survey): number of comments, "
+             r"coded segments and segments per code. Topics in the order of Table~\ref{tab:topic-relevance}.}",
+             r"\label{tab:comment-coding}", r"\footnotesize", r"\setlength{\tabcolsep}{3pt}",
+             r"\resizebox{\columnwidth}{!}{%",
+             r"\begin{tabular}{l" + "r" * (2 + len(codes)) + "}", r"\toprule", head + r" \\", r"\midrule"]
+    for t in order:
+        r = tab.loc[t]
+        if t == "total":
+            lines.append(r"\midrule")
+        lines.append(" & ".join([str(r["name"]), str(r["comments"]), str(r["segments"])] +
+                                [str(r[c]) if r[c] else "" for c in codes]) + r" \\")
+    lines += [r"\bottomrule", r"\end{tabular}}", r"\end{table}", ""]
+    return "\n".join(lines)
+
+
+def latex_removed_topics(table: pd.DataFrame, tab: pd.DataFrame) -> str:
+    removed = table[~table["relevant"]].sort_values("mean", ascending=False)
+    lines = [r"\begin{table*}[tbp]", r"\centering",
+             r"\caption{Topics not kept after the first expert survey: mean relevance, share of ratings 4--5, "
+             r"number of comments, the most frequent codes of the comments and the reason for the decision.}",
+             r"\label{tab:removed-topics}", r"\footnotesize",
+             r"\begin{tabular}{lrrrp{4.2cm}p{6.4cm}}", r"\toprule",
+             r"Topic & Mean & \% 4--5 & Comm. & Main codes & Reason \\", r"\midrule"]
+    codes = [c for c in CODE_LABELS if c in tab.columns and c not in ("specific_item", "reason_importance")]
+    for _, r in removed.iterrows():
+        row = tab.loc[r["topic"]]
+        main = sorted(((row[c], CODE_LABELS[c]) for c in codes if row[c] > 0), reverse=True)[:2]
+        main_txt = "; ".join(f"{lab.lower()} ({n})" for n, lab in main) or "--"
+        lines.append(f"{r['name']} & {r['mean']:.2f} & {r['pct_rated_4_5']:.0f} & {row['comments']} & "
+                     f"{main_txt} & {REMOVAL_REASONS.get(r['name'], '')} \\\\")
+    lines += [r"\bottomrule", r"\end{tabular}", r"\end{table*}", ""]
+    return "\n".join(lines)
+
+
+def figure_topic_relevance(table: pd.DataFrame, path_stem: Path) -> None:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    order = table.sort_values(["mean"], ascending=True)
+    colors = {1: "#b2182b", 2: "#ef8a62", 3: "#bdbdbd", 4: "#67a9cf", 5: "#2166ac"}
+    fig, ax = plt.subplots(figsize=(6.4, 4.2))
+    y = range(len(order))
+    n = order["n"].values
+    pct = {lvl: 100 * order[f"n_{lvl}"].values / n for lvl in LEVELS}
+    left = -(pct[1] + pct[2] + pct[3] / 2)
+    for lvl in LEVELS:
+        ax.barh(list(y), pct[lvl], left=left, color=colors[lvl], edgecolor="white", linewidth=0.5,
+                label=LEVELS[lvl], height=0.72)
+        left = left + pct[lvl]
+    ax.axvline(0, color="#333333", linewidth=0.8)
+    labels = [f"{nm}{'' if rel else '  ×'}" for nm, rel in zip(order["name"], order["relevant"])]
+    ax.set_yticks(list(y), labels, fontsize=8.5)
+    for tick, rel in zip(ax.get_yticklabels(), order["relevant"]):
+        tick.set_color("#222222" if rel else "#888888")
+    ax.set_xlim(-60, 122)
+    ax.set_xticks([-50, -25, 0, 25, 50, 75, 100], ["50", "25", "0", "25", "50", "75", "100"], fontsize=8)
+    ax.set_xlabel("% of experts (n = 37)", fontsize=8.5)
+    for i, m in zip(y, order["mean"]):
+        ax.text(121, i, f"{m:.2f}", va="center", ha="right", fontsize=7.5, color="#444444")
+    ax.text(121, len(order) - 0.3, "Mean", ha="right", va="bottom", fontsize=7.5, color="#444444")
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    ax.tick_params(axis="y", length=0)
+    ax.legend(ncol=5, fontsize=7, frameon=False, loc="upper center", bbox_to_anchor=(0.42, -0.13),
+              handlelength=1.2, columnspacing=1.0)
+    fig.tight_layout()
+    fig.savefig(path_stem.with_suffix(".pdf"), bbox_inches="tight")
+    fig.savefig(path_stem.with_suffix(".png"), dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+
+def task2_agreement(coding: pd.DataFrame) -> pd.DataFrame:
+    both = coding[coding["item_or_topic_a"].isin(["item", "topic"]) & coding["item_or_topic_b"].isin(["item", "topic"])]
+    n = len(both)
+    po = (both["item_or_topic_a"] == both["item_or_topic_b"]).mean()
+    pe = sum((both["item_or_topic_a"] == c).mean() * (both["item_or_topic_b"] == c).mean() for c in ("item", "topic"))
+    status = coding["status"].fillna("").str.strip().replace({"c": "consolidated", "nv": "not valid",
+                                                              "d": "to discuss", "t1": "comment on Task 1"})
+    rows = [("Coded segments (both coders)", len(coding)),
+            ("Task 2 answers coded", coding["task2_answer"].nunique()),
+            ("Segments classified as item or topic by both coders", n),
+            ("Agreement on item vs topic (%)", round(100 * po, 1)),
+            ("Cohen's kappa, item vs topic", round((po - pe) / (1 - pe), 3))]
+    rows += [(f"Consolidation status: {k}", v) for k, v in status.value_counts().items()]
+    return pd.DataFrame(rows, columns=["measure", "value"])
+
+
+def comments_of_removed_topics(table: pd.DataFrame) -> pd.DataFrame | None:
+    files = sorted(TMP_DIR.glob("results-survey654492*.xlsx"), key=lambda p: p.stat().st_mtime)
+    if not files:
+        return None
+    df = pd.read_excel(files[-1])
+    df.columns = [str(c).split(". ", 1)[0] for c in df.columns]
+    df = df[df["submitdate"].notna()].sort_values("id").reset_index(drop=True)
+    df["expert"] = [f"A{i:02d}" for i in range(1, len(df) + 1)]
+    topics = pd.read_csv(DATA_DIR / "codebook" / "expert-survey-1_topics.csv").set_index("topic")
+    rows = []
+    for _, r in table[~table["relevant"]].iterrows():
+        code = topics.at[r["topic"], "limesurvey_code"]
+        for _, x in df[["expert", code, f"{code}[comment]"]].dropna().iterrows():
+            rows.append({"topic": r["name"], "expert": x["expert"], "rating": x[code], "comment": x[f"{code}[comment]"]})
+    return pd.DataFrame(rows)
 
 
 def response_summary() -> pd.DataFrame | None:
@@ -147,18 +328,22 @@ def latex_topics(table: pd.DataFrame) -> str:
         r"\begin{table}[tbp]",
         r"\centering",
         r"\caption{Relevance of the 15 UEQ+ topics in the first expert survey ($n = 37$; "
-        r"1 = never relevant, 5 = always relevant). Topics with a mean $\geq$ 4 were kept.}",
+        r"1 = never relevant, 5 = always relevant): median, mean, variance, share of experts who rated the "
+        r"topic 4 or 5, Kendall's $W$ of the other 14 topics when the topic is removed ($W = 0.358$ with all "
+        r"15), and number of comments. Topics with a mean $\geq$ 4 were kept.}",
         r"\label{tab:topic-relevance}",
-        r"\small",
-        r"\begin{tabular}{lrrrc}",
+        r"\resizebox{\columnwidth}{!}{%",
+        r"\begin{tabular}{lrrrrrrc}",
         r"\toprule",
-        r"Topic & Median & Mean & Variance & Kept \\",
+        r"Topic & Median & Mean & Var. & \% 4--5 & $W_{-t}$ & Comm. & Kept \\",
         r"\midrule",
     ]
     for _, r in table.iterrows():
-        kept = r"\checkmark" if r["relevant"] else ""
-        lines.append(f"{r['name']} & {r['median']:g} & {r['mean']:.2f} & {r['variance']:.2f} & {kept} \\\\")
-    lines += [r"\bottomrule", r"\end{tabular}", r"\end{table}", ""]
+        kept = "yes" if r["relevant"] else "no"
+        lines.append(f"{r['name']} & {r['median']:g} & {r['mean']:.2f} & {r['variance']:.2f} & "
+                     f"{r['pct_rated_4_5']:.0f} & {r['kendall_w_without_topic']:.3f} & {int(r.get('n_comments', 0))} & "
+                     f"{kept} \\\\")
+    lines += [r"\bottomrule", r"\end{tabular}}", r"\end{table}", ""]
     return "\n".join(lines)
 
 
@@ -245,6 +430,26 @@ def main() -> None:
     pd.DataFrame([{"level": k, "label": LEVELS[k], "survey_1": counts[k], "pilot": pilot_counts[k]} for k in LEVELS]) \
         .to_csv(OUT_DIR / "rating-counts.csv", index=False)
 
+    icc = icc_two_way(ratings.T.values.astype(float))
+    pd.DataFrame(icc).to_csv(OUT_DIR / "agreement-icc.csv", index=False, float_format="%.6g")
+    figure_topic_relevance(table, OUT_DIR / "figure-topic-relevance")
+
+    coding_path = DATA_DIR / "raw" / "expert-survey-1_comment-coding.csv"
+    if coding_path.exists():
+        tab = comment_coding_table(pd.read_csv(coding_path), topics)
+        tab.to_csv(OUT_DIR / "comment-coding-by-topic.csv")
+        (OUT_DIR / "table-comment-coding.tex").write_text(latex_comment_coding(tab, table), encoding="utf-8")
+        (OUT_DIR / "table-removed-topics.tex").write_text(latex_removed_topics(table, tab), encoding="utf-8")
+    else:
+        print("Comment coding not found: run data/prepare_item_sources.py.")
+    t2_path = DATA_DIR / "raw" / "expert-survey-1_task2-coding.csv"
+    if t2_path.exists():
+        agree = task2_agreement(pd.read_csv(t2_path))
+        agree.to_csv(OUT_DIR / "task2-coding-agreement.csv", index=False)
+    quotes = comments_of_removed_topics(table)
+    if quotes is not None:
+        quotes.to_csv(TMP_DIR / "expert-survey-1_comments-of-removed-topics.csv", index=False)
+
     names = topics["name"].to_dict()
     steps = stepwise_exclusion(ratings, names)
     kendall = pd.DataFrame(steps)
@@ -266,6 +471,9 @@ def main() -> None:
           f"p = {steps[0]['p']:.2g}); stepwise: " +
           ", ".join(f"without {s['excluded_topic']} W = {s['W']:.4f}" for s in steps[1:]))
     print(f"Pilot: rating counts {pilot_counts}; W = {pilot_w['W']:.3f}")
+    for i in icc:
+        print(f"ICC {i['type']}: {i['icc']:.3f} [{i['ci_low']:.3f}, {i['ci_high']:.3f}], "
+              f"F({i['df1']}, {i['df2']:.0f}) = {i['F']:.2f}")
     print(f"Task 2: {n_filled} answer fields filled by {int((suggestions['n_suggestions'] > 0).sum())} experts")
 
     if args.check:

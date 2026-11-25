@@ -46,13 +46,14 @@ python phase1-item-development/04_item-flow/item_history_page.py   # the HTML pa
 | `item-history.html` | Interactive page with the history of the 99 candidate items (search by code or words, filters by source and result, details per stage); written by `item_history_page.py`, self-contained, published on the repository site |
 | `table-item-flow-changes.tex` | LaTeX table for the appendix (`tab:item-flow-changes`): for each stage, the items removed and added, the number reworded, and the reason (short reasons in `TRANSITION_REASONS` in `item_flow.py`) |
 | `table-final-items-history.tex` | LaTeX table for the appendix (`tab:final-items-history`): the 13 items of the validated scale by factor, with source, topic and concept, first and final wording, expert survey 2 mean and EFA loading |
+| `table-p0-by-topic.tex` | LaTeX table `tab:p0-by-topic`: P0 per topic (assignments, concepts, items, optional, not used; invalid answers excluded) |
 | `table-item-flow.tex` | LaTeX table of the item flow, with a column "Section" (`\ref` to the section of the paper that describes each stage; the labels are set in `STAGE_SECTIONS` at the top of `item_flow.py`, and the script prints the labels the paper must define) |
 
 ## Results
 
 **Sources of the pool (95 items, 6 marked optional):**
 
-- P0: 105 Task 2 answers coded into 136 topic-concept assignments (26 topics); 62 became items, 6 optional items, 68 were not used → **68 items**.
+- P0: 105 Task 2 answers coded into 136 topic-concept assignments; 2 were coded invalid, the other 134 fall in 25 topics (23 with items) and 46 concepts; 62 became items, 6 optional items, 66 did not lead to a separate item → **68 items**.
 - P1: 62 UEQ+ items of the 15 scales; related to P0 29, irrelevant 20, ignore 8, new concept or topic 5 → **6 items**.
 - P2: 472 items of 23 questionnaires; include 341, maybe 79, exclude 52 → **16 items**.
 - P3: 2,072 literature terms classified into 90 topic-concepts → **5 items**.

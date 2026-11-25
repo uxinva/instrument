@@ -1,0 +1,17 @@
+topic,name,comments,segments,reason_irrelevance,reason_importance,context_dependence,specific_item,overlap_other_topic,tradeoff,rating_problem,new_item_suggested,interpretation
+S01,Attractiveness,3,5,0,5,0,0,0,1,0,0,0
+S02,Perspicuity,3,9,4,3,0,8,0,1,1,1,0
+S03,Efficiency,4,12,1,3,5,0,0,3,0,0,0
+S04,Dependability,4,4,1,1,1,4,0,0,0,0,0
+S05,Stimulation,3,5,2,1,2,4,2,0,1,0,0
+S06,Novelty,5,15,7,1,1,0,1,3,1,0,0
+S07,Trust,4,8,4,1,2,1,0,0,1,1,0
+S08,Clarity,3,3,1,1,0,0,1,0,0,0,0
+S09,Usefulness,0,0,0,0,0,0,0,0,0,0,0
+S10,Adaptability,4,5,2,0,3,0,0,1,0,0,0
+S11,Intuitive use,3,3,0,1,1,0,1,0,0,0,0
+S12,Visual Aesthetics,4,4,0,1,0,0,1,1,1,0,0
+S13,Value,5,6,1,0,1,1,1,0,3,0,0
+S14,Trustworthiness of Content,2,4,2,0,1,0,1,0,0,0,0
+S15,Quality of Content,5,7,3,0,2,0,2,0,1,0,0
+total,Total,52,90,28,18,19,18,10,10,9,2,0

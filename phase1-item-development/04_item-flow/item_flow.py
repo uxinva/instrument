@@ -21,6 +21,7 @@ output of phase 2.2 (49 items) and the item codebook of phase 3 (13 items), and 
     table-item-flow.tex         LaTeX table of the item flow (main text)
     table-item-flow-changes.tex LaTeX table (appendix): items removed, added and reworded at each stage, and why
     table-final-items-history.tex LaTeX table (appendix): origin and wording history of the 13 final items
+    table-p0-by-topic.tex       LaTeX table (appendix): Task 2 answers coded per topic and the P0 items written
 
 Sources (team codes):
     P0  items written from the experts' suggestions (Task 2 of expert survey 1)
@@ -133,6 +134,39 @@ def latex_changes(changes: pd.DataFrame, traj: pd.DataFrame) -> str:
         lines.append(f"{tex(r['to_stage'])} & {removed}{n_removed} & {code_list(r['added'], r['n_added'])} & "
                      f"{r['n_reworded'] if k <= 8 else '--'} & {TRANSITION_REASONS.get(k, '')} \\\\")
     lines += [r"\bottomrule", r"\end{tabular}", r"\end{table*}", ""]
+    return "\n".join(lines)
+
+
+def latex_p0_by_topic(p0: pd.DataFrame, pool: pd.DataFrame) -> str:
+    p0_pool = pool[pool["source"] == "P0"]
+    concepts = p0_pool[p0_pool["concept"] != "__"].groupby("topic")["concept"].nunique()
+    invalid = p0["topic"].str.lower().str.contains("invalid")
+    n_invalid = int(invalid.sum())
+    tab = p0[~invalid].pivot_table(index="topic", columns="outcome", values="item", aggfunc="count", fill_value=0)
+    for c in ("item", "optional item", "removed"):
+        if c not in tab:
+            tab[c] = 0
+    tab["assignments"] = tab[["item", "optional item", "removed"]].sum(axis=1)
+    tab["concepts"] = concepts.reindex(tab.index).fillna(0).astype(int)
+    tab = tab.sort_values(["item", "assignments"], ascending=False)
+    lines = [r"\begin{table}[tbp]", r"\centering",
+             r"\caption{Pool P0: the experts' answers to Task 2 of the first expert survey, coded by topic. "
+             r"Coded: topic-concept assignments (an answer can name more than one concept); Concepts: distinct "
+             r"concepts with an item; Items and Optional: items written; Not used: assignments that did not lead "
+             r"to a separate item. " + (f"{n_invalid} assignments coded as invalid are not shown." if n_invalid else "")
+             + "}",
+             r"\label{tab:p0-by-topic}", r"\footnotesize",
+             r"\resizebox{\columnwidth}{!}{%", r"\begin{tabular}{lrrrrr}", r"\toprule",
+             r"Topic & Coded & Concepts & Items & Optional & Not used \\", r"\midrule"]
+    for t, r in tab.iterrows():
+        lines.append(f"{tex(t)} & {r['assignments']} & {r['concepts']} & {r['item']} & {r['optional item']} & "
+                     f"{r['removed']} \\\\")
+    tot = tab[["assignments", "concepts", "item", "optional item", "removed"]].sum()
+    n_with_items = int((tab["item"] + tab["optional item"] > 0).sum())
+    lines += [r"\midrule",
+              f"Total ({len(tab)} topics, {n_with_items} with items) & {tot['assignments']} & {tot['concepts']} & {tot['item']} & "
+              f"{tot['optional item']} & {tot['removed']} \\\\",
+              r"\bottomrule", r"\end{tabular}}", r"\end{table}", ""]
     return "\n".join(lines)
 
 
@@ -270,6 +304,7 @@ def main() -> None:
     changes_df = pd.DataFrame(changes)
     changes_df.to_csv(OUT_DIR / "item-flow-changes.csv", index=False)
     (OUT_DIR / "table-item-flow-changes.tex").write_text(latex_changes(changes_df, traj), encoding="utf-8")
+    (OUT_DIR / "table-p0-by-topic.tex").write_text(latex_p0_by_topic(p0, pool), encoding="utf-8")
 
     topics = pool.set_index("item")["topic"]
 

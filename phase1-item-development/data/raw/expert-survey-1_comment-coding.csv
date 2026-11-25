@@ -1,0 +1,91 @@
+comment_id,topic,topic_name,rating,specific_item,reason_importance,reason_irrelevance,tradeoff,context_dependence,interpretation,rating_problem,overlap_other_topic,new_item_suggested
+1,S01,Attractiveness,5,0,1,0,0,0,0,0,0,0
+1,S01,Attractiveness,5,0,1,0,0,0,0,0,0,0
+1,S01,Attractiveness,5,0,1,0,0,0,0,0,0,0
+2,S01,Attractiveness,5,0,1,0,0,0,0,0,0,0
+101,S01,Attractiveness,4,0,1,0,1,0,0,0,0,0
+3,S02,Perspicuity,3,0,0,1,0,0,0,0,0,0
+3,S02,Perspicuity,3,1,0,1,0,0,0,0,0,0
+3,S02,Perspicuity,3,1,1,0,0,0,0,0,0,0
+4,S02,Perspicuity,4,1,0,0,1,0,0,0,0,0
+4,S02,Perspicuity,4,1,1,0,0,0,0,0,0,0
+4,S02,Perspicuity,4,1,0,1,0,0,0,0,0,0
+102,S02,Perspicuity,5,1,0,0,0,0,0,1,0,1
+102,S02,Perspicuity,5,1,0,1,0,0,0,0,0,0
+102,S02,Perspicuity,5,1,1,0,0,0,0,0,0,0
+5,S03,Efficiency,4,0,1,0,0,0,0,0,0,0
+5,S03,Efficiency,4,0,0,0,0,0,0,0,0,0
+5,S03,Efficiency,4,0,0,0,0,1,0,0,0,0
+5,S03,Efficiency,4,0,0,0,1,0,0,0,0,0
+6,S03,Efficiency,3,0,0,0,0,1,0,0,0,0
+6,S03,Efficiency,3,0,0,0,1,0,0,0,0,0
+7,S03,Efficiency,4,0,1,0,0,0,0,0,0,0
+7,S03,Efficiency,4,0,1,1,0,0,0,0,0,0
+103,S03,Efficiency,3,0,0,0,0,1,0,0,0,0
+103,S03,Efficiency,3,0,0,0,1,0,0,0,0,0
+103,S03,Efficiency,3,0,0,0,0,1,0,0,0,0
+103,S03,Efficiency,3,0,0,0,0,1,0,0,0,0
+8,S04,Dependability,3,1,0,0,0,1,0,0,0,0
+9,S04,Dependability,5,1,0,1,0,0,0,0,0,0
+10,S04,Dependability,5,1,0,0,0,0,0,0,0,0
+11,S04,Dependability,5,1,1,0,0,0,0,0,0,0
+12,S05,Stimulation,4,0,0,0,0,0,0,0,1,0
+12,S05,Stimulation,4,1,0,1,0,1,0,0,0,0
+13,S05,Stimulation,3,1,0,1,0,1,0,0,1,0
+104,S05,Stimulation,4,1,0,0,0,0,0,1,0,0
+104,S05,Stimulation,4,1,1,0,0,0,0,0,0,0
+14,S06,Novelty,2,0,0,1,0,0,0,0,0,0
+14,S06,Novelty,2,0,1,0,1,0,0,0,0,0
+14,S06,Novelty,2,0,0,1,1,0,0,0,0,0
+15,S06,Novelty,3,0,0,0,0,0,0,1,0,0
+15,S06,Novelty,3,0,0,0,0,0,0,0,0,0
+15,S06,Novelty,3,0,0,1,0,0,0,0,0,0
+15,S06,Novelty,3,0,0,1,0,0,0,0,0,0
+15,S06,Novelty,3,0,0,1,0,0,0,0,0,0
+15,S06,Novelty,3,0,0,0,0,0,0,0,0,0
+16,S06,Novelty,3,0,0,0,0,0,0,0,1,0
+105,S06,Novelty,3,0,0,0,0,1,0,0,0,0
+106,S06,Novelty,3,0,0,1,0,0,0,0,0,0
+106,S06,Novelty,3,0,0,0,0,0,0,0,0,0
+106,S06,Novelty,3,0,0,0,1,0,0,0,0,0
+106,S06,Novelty,3,0,0,1,0,0,0,0,0,0
+17,S07,Trust,3,0,0,0,0,1,0,0,0,0
+18,S07,Trust,2,0,0,1,0,0,0,0,0,0
+18,S07,Trust,2,0,0,1,0,0,0,0,0,0
+19,S07,Trust,3,0,0,1,0,0,0,1,0,0
+19,S07,Trust,3,0,0,0,0,1,0,0,0,0
+19,S07,Trust,3,0,0,1,0,0,0,0,0,0
+107,S07,Trust,5,0,1,0,0,0,0,0,0,1
+107,S07,Trust,5,1,0,0,0,0,0,0,0,0
+20,S08,Clarity,5,0,0,0,0,0,0,0,1,0
+21,S08,Clarity,5,0,1,0,0,0,0,0,0,0
+108,S08,Clarity,3,0,0,1,0,0,0,0,0,0
+22,S10,Adaptability,3,0,0,0,1,1,0,0,0,0
+23,S10,Adaptability,4,0,0,0,0,1,0,0,0,0
+23,S10,Adaptability,4,0,0,1,0,0,0,0,0,0
+24,S10,Adaptability,3,0,0,1,0,0,0,0,0,0
+109,S10,Adaptability,3,0,0,0,0,1,0,0,0,0
+25,S11,Intuitive use,4,0,0,0,0,0,0,0,1,0
+26,S11,Intuitive use,3,0,1,0,0,0,0,0,0,0
+110,S11,Intuitive use,3,0,0,0,0,1,0,0,0,0
+27,S12,Visual Aesthetics,2,0,0,0,0,0,0,0,1,0
+28,S12,Visual Aesthetics,3,0,0,0,0,0,0,1,0,0
+111,S12,Visual Aesthetics,4,0,0,0,1,0,0,0,0,0
+112,S12,Visual Aesthetics,5,0,1,0,0,0,0,0,0,0
+29,S13,Value,1,0,0,0,0,0,0,1,0,0
+30,S13,Value,2,1,0,1,0,0,0,0,0,0
+31,S13,Value,4,0,0,0,0,0,0,0,1,0
+32,S13,Value,2,0,0,0,0,0,0,1,0,0
+32,S13,Value,2,0,0,0,0,1,0,0,0,0
+33,S13,Value,2,0,0,0,0,0,0,1,0,0
+34,S14,Trustworthiness of Content,5,0,0,0,0,0,0,0,1,0
+34,S14,Trustworthiness of Content,5,0,0,0,0,1,0,0,0,0
+34,S14,Trustworthiness of Content,5,0,0,1,0,0,0,0,0,0
+113,S14,Trustworthiness of Content,5,0,0,1,0,0,0,0,0,0
+35,S15,Quality of Content,4,0,0,0,0,0,0,0,1,0
+36,S15,Quality of Content,3,0,0,1,0,0,0,0,0,0
+37,S15,Quality of Content,5,0,0,0,0,0,0,1,0,0
+114,S15,Quality of Content,3,0,0,0,0,1,0,0,1,0
+115,S15,Quality of Content,3,0,0,0,0,1,0,0,0,0
+115,S15,Quality of Content,3,0,0,1,0,0,0,0,0,0
+115,S15,Quality of Content,3,0,0,1,0,0,0,0,0,0
