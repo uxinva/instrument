@@ -96,7 +96,7 @@ Each phase keeps these files in its own folder **`restricted-data/`**, which is 
 python restricted_data.py verify          # are the restricted files present and unchanged?
 ```
 
-The analyses (everything after `data/raw/`) need only the committed files. A copy of every `restricted-data/` folder is kept in the project's Google Drive; at publication it is deposited with restricted access. Phase 2.2 has no restricted data: it starts from the prepared data of phase 2.1.
+The analyses (everything after `data/raw/`) need only the committed files. A copy of every `restricted-data/` folder is kept in the project's Google Drive ([restricted-data backup](https://drive.google.com/drive/folders/1HssOc4f1aBc2T3bSOg7UK5BqQ78Qy-Pf), access limited to the team); at publication it is deposited with restricted access. Phase 2.2 has no restricted data: it starts from the prepared data of phase 2.1.
 
 Folders named `tmp-data/` hold only scratch files that can be deleted and rebuilt.
 
