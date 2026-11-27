@@ -1,10 +1,12 @@
 """Anonymise the LimeSurvey exports.
 
-Reads the original exports from   data/private/limesurvey-exports/*.xlsx
+Reads the original exports from   restricted-data/limesurvey-exports/*.xlsx
 writes anonymised copies to       data/raw/*.csv
-and keeps the pseudonym map in    data/private/id_map.csv
+and keeps the pseudonym map in    restricted-data/id_map.csv
 
-data/private/ is git-ignored and must never be committed. The anonymised
+restricted-data/ (in phase3-validation/) is git-ignored and must never be committed; only its
+MANIFEST.csv (files, origins, checksums) and README.md are. Until 2026-11-27 these files were in
+data/private/. The anonymised
 files in data/raw/ are the ones used by prepare_data.py and kept in git.
 
 What is replaced (Prolific survey only):
@@ -12,7 +14,7 @@ What is replaced (Prolific survey only):
                                       who started the survey twice keeps the
                                       same code)
   SESSIONID   -> S0001, S0002, ...   (one code per Prolific session)
-It also applies the text redactions listed in data/private/redactions.csv
+It also applies the text redactions listed in restricted-data/redactions.csv
 (columns: file, id, column, find, replace), used to hide details in free-text
 answers that could identify a participant. The list is private because it
 contains the original text. Every `find` must occur in its cell, otherwise the
@@ -26,14 +28,20 @@ free number. Run from the repository root:
     python phase3-validation/data/anonymise_raw.py
 """
 
+import sys
 from pathlib import Path
 
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+import restricted_data  # noqa: E402  (repository root)
+
 DATA_DIR = Path(__file__).resolve().parent
-EXPORTS_DIR = DATA_DIR / "private" / "limesurvey-exports"
-MAP_FILE = DATA_DIR / "private" / "id_map.csv"
-REDACTIONS_FILE = DATA_DIR / "private" / "redactions.csv"
+PHASE_DIR = DATA_DIR.parent
+RESTRICTED = PHASE_DIR / "restricted-data"
+EXPORTS_DIR = RESTRICTED / "limesurvey-exports"
+MAP_FILE = RESTRICTED / "id_map.csv"
+REDACTIONS_FILE = RESTRICTED / "redactions.csv"
 RAW_DIR = DATA_DIR / "raw"
 
 # column -> prefix of its pseudonyms
@@ -82,7 +90,17 @@ def main() -> None:
     redactions = (pd.read_csv(REDACTIONS_FILE, dtype=str, keep_default_na=False)
                   if REDACTIONS_FILE.exists() else pd.DataFrame(columns=["file", "id", "column", "find", "replace"]))
 
-    for xlsx in sorted(EXPORTS_DIR.glob("results-survey*.xlsx")):
+    exports = sorted(EXPORTS_DIR.glob("results-survey*.xlsx"))
+    if not exports:
+        sys.exit(f"No exports in {EXPORTS_DIR}; see {RESTRICTED / 'README.md'}.")
+    # Without the redaction list the anonymised files would contain identifying free text, and
+    # without the pseudonym map the codes would change: stop instead of overwriting data/raw/.
+    restricted_data.require(PHASE_DIR, "redactions.csv")
+    if not MAP_FILE.exists():
+        sys.exit(f"Missing {MAP_FILE}: the pseudonym map keeps the codes of data/raw/ stable. "
+                 "Do not run this script without it.")
+    for xlsx in exports:
+        restricted_data.require(PHASE_DIR, f"limesurvey-exports/{xlsx.name}")
         df = pd.read_excel(xlsx, dtype=str)
         for field in PSEUDONYMISED:
             if field in df.columns:
@@ -95,7 +113,7 @@ def main() -> None:
 
     MAP_FILE.parent.mkdir(exist_ok=True)
     id_map.to_csv(MAP_FILE, index=False, lineterminator="\n")
-    print(f"Pseudonym map: {MAP_FILE.relative_to(DATA_DIR)} ({len(id_map)} entries)")
+    print(f"Pseudonym map: {MAP_FILE.relative_to(PHASE_DIR)} ({len(id_map)} entries)")
 
     # Safety check: no original ID may be left in the anonymised files
     for csv in RAW_DIR.glob("*.csv"):

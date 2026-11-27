@@ -23,8 +23,14 @@ _site/
 .DS_Store
 Thumbs.db
 
-# Original survey exports and the pseudonym map (personal information).
-# Never commit these. data/raw/ holds the anonymised exports instead.
+# Restricted data: the records that produce the results but cannot be published
+# (original survey exports, pseudonym maps, team spreadsheets with copyrighted item texts or
+# free-text answers). One folder per phase; only its MANIFEST.csv and README.md are committed.
+**/restricted-data/*
+!**/restricted-data/MANIFEST.csv
+!**/restricted-data/README.md
+
+# Older locations of personal data and scratch files (kept ignored for safety).
 **/data/private/
 **/data/private.*
 **/data/private-*

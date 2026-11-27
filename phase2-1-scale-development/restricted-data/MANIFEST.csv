@@ -1,0 +1,3 @@
+file,description,origin,obtained,used_by,bytes,sha256
+limesurvey/results-survey378394.xlsx,"Exploratory survey, round 2: all responses and columns, including Prolific IDs","LimeSurvey, survey 378394",2026-11-17,data/participant_flow.py,2800392,923ee76a4d31e0ac6a24a0974a7eca833d020cdd7c52c60e3c65de3864f37345
+limesurvey/results-survey686728.xlsx,"Exploratory survey, round 1: all responses and columns, including Prolific IDs","LimeSurvey, survey 686728",2026-11-17,data/participant_flow.py,161439,8c43d39a70b5718e787bdf115b4f0f31bbcb3728ec8f7c38ef8379123975253d

@@ -148,6 +148,8 @@ def brief(item: str, traj: pd.DataFrame, pres: pd.DataFrame, stages: list[int]) 
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):  # Windows consoles: never stop on a character they cannot show
+        sys.stdout.reconfigure(errors="replace")
     parser = argparse.ArgumentParser(description="Look up candidate items by code or words.",
                                      formatter_class=argparse.RawDescriptionHelpFormatter, epilog=__doc__)
     parser.add_argument("query", nargs="*", help="item code (P0-26, P026) or words to search")

@@ -3,15 +3,16 @@
 The raw LimeSurvey exports are turned into the files used by the analysis steps in two stages, each done by a script:
 
 ```
+restricted-data/                NOT in git (personal data); only MANIFEST.csv and README.md are
+├── limesurvey-exports/         original exports (.xlsx)
+├── id_map.csv                  pseudonym map: original Prolific IDs ↔ codes
+├── redactions.csv              free-text redactions (original text ↔ replacement)
+└── MANIFEST.csv                every file with its origin, date and SHA-256 checksum
 data/
-├── private/                    NOT in git (personal data)
-│   ├── limesurvey-exports/     original exports (.xlsx)
-│   ├── id_map.csv              pseudonym map: original Prolific IDs ↔ codes
-│   └── redactions.csv          free-text redactions (original text ↔ replacement)
 ├── raw/                        anonymised exports (.csv)          ← anonymise_raw.py
 ├── prepared/                   cleaned and merged files (.csv)    ← prepare_data.py
 ├── codebook/items.csv          item codes, short names, factors and wording
-├── anonymise_raw.py            private/limesurvey-exports/ → raw/
+├── anonymise_raw.py            ../restricted-data/limesurvey-exports/ → raw/
 └── prepare_data.py             raw/ → prepared/
 ```
 
@@ -24,14 +25,14 @@ python phase3-validation/data/prepare_data.py
 
 ## 1. Anonymisation (`anonymise_raw.py`)
 
-The original exports stay in `data/private/`, which is listed in `.gitignore` and must never be committed. The script writes an anonymised copy of each export to `data/raw/`:
+The original exports stay in `phase3-validation/restricted-data/` (until 2026-11-27: `data/private/`), which is listed in `.gitignore` and must never be committed; its `MANIFEST.csv` records every file with its checksum. The script writes an anonymised copy of each export to `data/raw/`:
 
 - `PROLIFICID` is replaced by a code `P0001`, `P0002`, … There is one code per participant: someone who started the survey more than once keeps the same code.
 - `SESSIONID` is replaced by a code `S0001`, `S0002`, …
-- Details in free-text answers that could identify a participant are replaced by a placeholder in square brackets, e.g. `[university]`, `[employer]`, `[custom research tool]`. The replacements are listed in `data/private/redactions.csv`, which is private because it contains the original text. If a listed text is not found, the script stops, so a redaction is never skipped silently.
+- Details in free-text answers that could identify a participant are replaced by a placeholder in square brackets, e.g. `[university]`, `[employer]`, `[custom research tool]`. The replacements are listed in `restricted-data/redactions.csv`, which is private because it contains the original text. If a listed text is not found, the script stops, so a redaction is never skipped silently.
 - All other columns are copied unchanged. `STUDYID` identifies the Prolific study, not a person, so it is kept.
 
-The link between codes and original IDs is kept only in `data/private/id_map.csv`. The script reuses this map, so the codes stay the same every time it runs. At the end it checks that no original ID is left in `data/raw/`.
+The link between codes and original IDs is kept only in `restricted-data/id_map.csv`. The script reuses this map, so the codes stay the same every time it runs. At the end it checks that no original ID is left in `data/raw/`.
 
 **Free-text review.** All free-text answers were read before publication (gender and age are covered by the ethics approval). In the Student survey, where the group is small, four responses mentioned details that could identify the participant: an institution and an employer, a custom-built research tool and its topic, and teaching the course. These details were redacted. The Forum and Prolific answers mention at most an occupation or a country, which is not enough to identify anyone in these samples. **Any new data must be reviewed the same way before it is committed.**
 

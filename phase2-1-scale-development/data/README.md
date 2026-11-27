@@ -34,7 +34,7 @@ The script does two things:
 
 ## Participant flow (`participant_flow.py`)
 
-Needs the full LimeSurvey exports of the two survey rounds, which contain Prolific IDs and are **not in Git**: `phase2-1-scale-development/tmp-data/results-survey686728.xlsx` (round 1) and `results-survey378394.xlsx` (round 2), exported with all responses, including incomplete ones. From the repository root:
+Needs the full LimeSurvey exports of the two survey rounds, which contain Prolific IDs and are **not in Git**: `phase2-1-scale-development/restricted-data/limesurvey/results-survey686728.xlsx` (round 1) and `results-survey378394.xlsx` (round 2), listed with their checksums in [`../restricted-data/MANIFEST.csv`](../restricted-data/README.md), exported with all responses, including incomplete ones. From the repository root:
 
 ```bash
 python phase2-1-scale-development/data/participant_flow.py

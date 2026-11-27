@@ -22,7 +22,7 @@ python phase1-item-development/data/prepare_expert_data.py        # only if the 
 python phase1-item-development/03_expert-survey-2/expert_survey_2.py --check
 ```
 
-`--check` compares the results with a local copy of the 2025 spreadsheet (`tmp-data/old-analysis/2nd_survey_results_complete_answers.xlsx`, Google Sheet "2nd_survey_results_complete_answers", sheet "Analysis"); without the copy it only reports that there is nothing to compare.
+`--check` compares the results with a local copy of the 2025 spreadsheet (`restricted-data/team-sheets/2nd_survey_results_complete_answers.xlsx`, Google Sheet "2nd_survey_results_complete_answers", sheet "Analysis"); without the copy it only reports that there is nothing to compare.
 
 ## Outputs (`output/`)
 

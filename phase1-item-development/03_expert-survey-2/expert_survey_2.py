@@ -16,7 +16,7 @@ reproduces that rule ("mode_first") and also reports the lower and the higher ti
 A statement is removed when mode_first <= 3 (18 statements).
 
 --check compares the results with the 2025 spreadsheet, if a copy is present at
-tmp-data/old-analysis/2nd_survey_results_complete_answers.xlsx (not versioned).
+restricted-data/team-sheets/2nd_survey_results_complete_answers.xlsx (not versioned).
 
 Run from the repository root:
     python phase1-item-development/03_expert-survey-2/expert_survey_2.py [--check]
@@ -35,7 +35,7 @@ STEP_DIR = Path(__file__).resolve().parent
 PHASE_DIR = STEP_DIR.parent
 DATA_DIR = PHASE_DIR / "data"
 OUT_DIR = STEP_DIR / "output"
-OLD_ANALYSIS = PHASE_DIR / "tmp-data" / "old-analysis" / "2nd_survey_results_complete_answers.xlsx"
+OLD_ANALYSIS = PHASE_DIR / "restricted-data" / "team-sheets" / "2nd_survey_results_complete_answers.xlsx"
 
 LEVELS = {1: "Never relevant", 2: "Not often relevant", 3: "Sometimes relevant",
           4: "Frequently relevant", 5: "Always relevant"}

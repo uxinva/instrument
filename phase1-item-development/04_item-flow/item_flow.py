@@ -139,33 +139,47 @@ def latex_changes(changes: pd.DataFrame, traj: pd.DataFrame) -> str:
 
 def latex_p0_by_topic(p0: pd.DataFrame, pool: pd.DataFrame) -> str:
     p0_pool = pool[pool["source"] == "P0"]
+    n_topic_level = int((p0_pool["concept"] == "__").sum())
     concepts = p0_pool[p0_pool["concept"] != "__"].groupby("topic")["concept"].nunique()
     invalid = p0["topic"].str.lower().str.contains("invalid")
     n_invalid = int(invalid.sum())
-    tab = p0[~invalid].pivot_table(index="topic", columns="outcome", values="item", aggfunc="count", fill_value=0)
+    valid = p0[~invalid].copy()
+    # A not-used assignment is "repeated" when its topic-concept already has an item.
+    with_item = set(map(tuple, valid.loc[valid["outcome"] != "removed", ["topic", "concept"]].values))
+    valid["repeated"] = [(o == "removed") and ((t, c) in with_item)
+                         for o, t, c in valid[["outcome", "topic", "concept"]].values]
+    tab = valid.pivot_table(index="topic", columns="outcome", values="item", aggfunc="count", fill_value=0)
     for c in ("item", "optional item", "removed"):
         if c not in tab:
             tab[c] = 0
     tab["assignments"] = tab[["item", "optional item", "removed"]].sum(axis=1)
+    tab["repeated"] = valid.groupby("topic")["repeated"].sum().reindex(tab.index).fillna(0).astype(int)
+    tab["other"] = tab["removed"] - tab["repeated"]
     tab["concepts"] = concepts.reindex(tab.index).fillna(0).astype(int)
     tab = tab.sort_values(["item", "assignments"], ascending=False)
+    ueq = PHASE_DIR / "data" / "codebook" / "expert-survey-1_topics.csv"
+    ueq_names = {n.lower() for n in pd.read_csv(ueq)["name"]} if ueq.exists() else set()
+    n_new = sum(t.lower() not in ueq_names for t in tab.index) if ueq_names else 0
     lines = [r"\begin{table}[tbp]", r"\centering",
              r"\caption{Pool P0: the experts' answers to Task 2 of the first expert survey, coded by topic. "
-             r"Coded: topic-concept assignments (an answer can name more than one concept); Concepts: distinct "
-             r"concepts with an item; Items and Optional: items written; Not used: assignments that did not lead "
-             r"to a separate item. " + (f"{n_invalid} assignments coded as invalid are not shown." if n_invalid else "")
-             + "}",
+             r"Coded: topic--concept assignments (an answer can name more than one concept); Concepts: distinct "
+             r"concepts with an item" + (f" ({n_topic_level} further items address the topic as a whole)" if n_topic_level else "")
+             + r"; Items and Optional: items written; Repeated: assignments of a concept that already had an item; "
+             r"Other: assignments not used for other reasons (e.g., concepts judged hard for users to assess or about system functions rather than UX). "
+             + (r"$^\dagger$~Topic not among the 15 UEQ+ topics of Task~1. " if ueq_names else "")
+             + (f"{n_invalid} assignments coded as invalid are not shown." if n_invalid else "") + "}",
              r"\label{tab:p0-by-topic}", r"\footnotesize",
-             r"\resizebox{\columnwidth}{!}{%", r"\begin{tabular}{lrrrrr}", r"\toprule",
-             r"Topic & Coded & Concepts & Items & Optional & Not used \\", r"\midrule"]
+             r"\resizebox{\columnwidth}{!}{%", r"\begin{tabular}{lrrrrrr}", r"\toprule",
+             r"Topic & Coded & Concepts & Items & Optional & Repeated & Other \\", r"\midrule"]
     for t, r in tab.iterrows():
-        lines.append(f"{tex(t)} & {r['assignments']} & {r['concepts']} & {r['item']} & {r['optional item']} & "
-                     f"{r['removed']} \\\\")
-    tot = tab[["assignments", "concepts", "item", "optional item", "removed"]].sum()
+        mark = r"$^\dagger$" if ueq_names and t.lower() not in ueq_names else ""
+        lines.append(f"{tex(t)}{mark} & {r['assignments']} & {r['concepts']} & {r['item']} & {r['optional item']} & "
+                     f"{r['repeated']} & {r['other']} \\\\")
+    tot = tab[["assignments", "concepts", "item", "optional item", "repeated", "other"]].sum()
     n_with_items = int((tab["item"] + tab["optional item"] > 0).sum())
     lines += [r"\midrule",
-              f"Total ({len(tab)} topics, {n_with_items} with items) & {tot['assignments']} & {tot['concepts']} & {tot['item']} & "
-              f"{tot['optional item']} & {tot['removed']} \\\\",
+              f"Total ({len(tab)} topics, {n_new} new; {n_with_items} with items) & {tot['assignments']} & {tot['concepts']} & "
+              f"{tot['item']} & {tot['optional item']} & {tot['repeated']} & {tot['other']} \\\\",
               r"\bottomrule", r"\end{tabular}}", r"\end{table}", ""]
     return "\n".join(lines)
 
@@ -204,6 +218,100 @@ def latex_final_items(traj: pd.DataFrame, hist: pd.DataFrame) -> str:
                      f"{es2} & {r['efa_loading']:.2f} \\\\")
     lines += [r"\bottomrule", r"\end{tabular}", r"\end{table*}", ""]
     return "\n".join(lines)
+
+
+P2_LABELS = {  # display names of the questionnaires of P2 (as written in the team sheet → paper)
+    "Presence (include Presence and Immersive tendency questionnaires below)": "Presence and Immersive Tendency",
+    "PXI Player Experience Inventory (Funcional and Psychosocial Consequences)": "PXI (Player Experience Inventory)",
+    "Emotions - SAM non-verbal pictorial X Semantic Differential scale)": "SAM (Self-Assessment Manikin)",
+    "IPQ (igroup presence questionnaire)": "IPQ (igroup Presence Questionnaire)",
+    "Trust betwee People and Automation Scale": "Trust between People and Automation",
+    "Recommender Systems": "Recommender systems (user-centric evaluation)",
+}
+
+
+def p2_label(name: str) -> str:
+    if str(name).startswith("With the help of the word pairs"):
+        return "UEQ"  # the UEQ instruction text leaked into the scale column of one row
+    return P2_LABELS.get(name, name)
+
+
+def stage_counts(pool: pd.DataFrame, items) -> dict:
+    x = pool[pool["item"].isin(set(items))]
+    named = x[x["concept"] != "__"]
+    return {"items": len(x), "optional": int(x["optional"].sum()),
+            "concepts": named.groupby(["topic", "concept"]).ngroups,
+            "topic_level": int((x["concept"] == "__").sum()), "topics": x["topic"].nunique()}
+
+
+def latex_merge_pools(pool: pd.DataFrame, hist: pd.DataFrame, p1: pd.DataFrame, p2: pd.DataFrame,
+                      p3: pd.DataFrame) -> tuple[str, pd.DataFrame]:
+    p2_n = p2["scale"].map(p2_label).nunique()
+    steps = [
+        ("P0: experts' suggestions", "104 valid answers of Task 2", ["P0"]),
+        ("+ P1: UEQ+ scales", f"{len(p1)} items of {p1['ueqplus_scale'].nunique()} scales", ["P0", "P1"]),
+        ("+ P2: standardized questionnaires", f"{len(p2)} items of {p2_n} questionnaires", ["P0", "P1", "P2"]),
+        ("+ P3: VA literature", f"{len(p3):,} terms", ["P0", "P1", "P2", "P3"]),
+    ]
+    rows, prev = [], None
+    for label, material, srcs in steps:
+        c = stage_counts(pool, pool[pool["source"].isin(srcs)]["item"])
+        c.update(step=label, material=material,
+                 new_concepts=c["concepts"] - (prev["concepts"] if prev else 0),
+                 added=c["items"] - (prev["items"] if prev else 0))
+        rows.append(c)
+        prev = c
+    for order, label, material in ((2, "Internal review", "--"), (3, "Final review (pilot)", "--")):
+        items = hist[(hist["stage_order"] == order) & (hist["present"] == 1)]["item"]
+        c = stage_counts(pool, items)
+        c.update(step=label, material=material, new_concepts=c["concepts"] - prev["concepts"],
+                 added=c["items"] - prev["items"])
+        rows.append(c)
+        prev = c
+    df = pd.DataFrame(rows)[["step", "material", "added", "new_concepts", "items", "optional", "concepts",
+                             "topic_level", "topics"]]
+    sign = lambda v: f"+{v}" if v > 0 else (r"$-$" + str(-v) if v < 0 else "0")
+    lines = [r"\begin{table*}[tbp]", r"\centering",
+             r"\caption{Combination of the four sources into the item pool and its internal review. Added and New "
+             r"concepts: change with respect to the previous row; Items: cumulative (Optional: items that apply only "
+             r"to some systems or users); Concepts: distinct topic--concepts with an item; Topic-level: items that "
+             r"address a topic as a whole; Topics: topics with at least one item.}",
+             r"\label{tab:merge-pools}", r"\small",
+             r"\resizebox{\textwidth}{!}{%", r"\begin{tabular}{llrrrrrrr}", r"\toprule",
+             r"Step & Material & Added & New concepts & Items & Optional & Concepts & Topic-level & Topics \\",
+             r"\midrule"]
+    for i, r in df.iterrows():
+        if i == 4:
+            lines.append(r"\midrule")
+        added = str(r["added"]) if i == 0 else sign(r["added"])
+        newc = str(r["new_concepts"]) if i == 0 else sign(r["new_concepts"])
+        lines.append(f"{tex(r['step'])} & {tex(r['material'])} & {added} & {newc} & {r['items']} & {r['optional']} & "
+                     f"{r['concepts']} & {r['topic_level']} & {r['topics']} \\\\")
+    lines += [r"\bottomrule", r"\end{tabular}}", r"\end{table*}", ""]
+    return "\n".join(lines), df
+
+
+def latex_p2_questionnaires(p2: pd.DataFrame) -> tuple[str, pd.DataFrame]:
+    x = p2.assign(questionnaire=p2["scale"].map(p2_label))
+    tab = x.pivot_table(index="questionnaire", columns="classification", values="subscale", aggfunc="size",
+                        fill_value=0)
+    for c in ("INCLUDE", "MAYBE", "EXCLUDE"):
+        if c not in tab:
+            tab[c] = 0
+    tab["total"] = tab[["INCLUDE", "MAYBE", "EXCLUDE"]].sum(axis=1)
+    tab = tab.sort_values(["total", "INCLUDE"], ascending=False)[["total", "INCLUDE", "MAYBE", "EXCLUDE"]]
+    lines = [r"\begin{table}[tbp]", r"\centering",
+             r"\caption{Pool P2: items of standardized questionnaires compared with the concepts of P0+P1. "
+             r"Include: related to a concept of the list; Maybe: possibly related; Exclude: not related to UX in VA.}",
+             r"\label{tab:p2-questionnaires}", r"\footnotesize",
+             r"\resizebox{\columnwidth}{!}{%", r"\begin{tabular}{lrrrr}", r"\toprule",
+             r"Questionnaire & Items & Include & Maybe & Exclude \\", r"\midrule"]
+    for q, r in tab.iterrows():
+        lines.append(f"{tex(q)} & {r['total']} & {r['INCLUDE']} & {r['MAYBE']} & {r['EXCLUDE']} \\\\")
+    tot = tab.sum()
+    lines += [r"\midrule", f"Total ({len(tab)} questionnaires) & {tot['total']} & {tot['INCLUDE']} & {tot['MAYBE']} & "
+              f"{tot['EXCLUDE']} \\\\", r"\bottomrule", r"\end{tabular}}", r"\end{table}", ""]
+    return "\n".join(lines), tab
 
 
 def main() -> None:
@@ -305,6 +413,12 @@ def main() -> None:
     changes_df.to_csv(OUT_DIR / "item-flow-changes.csv", index=False)
     (OUT_DIR / "table-item-flow-changes.tex").write_text(latex_changes(changes_df, traj), encoding="utf-8")
     (OUT_DIR / "table-p0-by-topic.tex").write_text(latex_p0_by_topic(p0, pool), encoding="utf-8")
+    merge_tex, merge_df = latex_merge_pools(pool, hist, p1, p2, p3)
+    merge_df.to_csv(OUT_DIR / "merge-pools.csv", index=False)
+    (OUT_DIR / "table-merge-pools.tex").write_text(merge_tex, encoding="utf-8")
+    p2_tex, p2_df = latex_p2_questionnaires(p2)
+    p2_df.rename_axis("questionnaire").to_csv(OUT_DIR / "source-p2-by-questionnaire.csv")
+    (OUT_DIR / "table-p2-questionnaires.tex").write_text(p2_tex, encoding="utf-8")
 
     topics = pool.set_index("item")["topic"]
 

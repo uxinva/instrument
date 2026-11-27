@@ -4,7 +4,7 @@
 
 This phase produces the **65 items** rated in the exploratory survey of [phase 2.1](../phase2-1-scale-development/README.md); step 04 follows the items further, to the 49 items of the item-reduction screening and the 13 items of the validated scale. It covers the generation of the item pool from the literature, two surveys with experts, the cognitive interviews and the item revisions made between these stages.
 
-- **Data:** anonymised expert-survey data in [`data/`](data/README.md). Original exports (with names or e-mails) stay in `tmp-data/`, which is never committed (see `.gitignore`).
+- **Data:** anonymised expert-survey data in [`data/`](data/README.md). The original LimeSurvey exports and the team spreadsheets they come from are in [`restricted-data/`](restricted-data/README.md), which is never committed; its `MANIFEST.csv` lists every file with its origin and checksum.
 
 ## Steps
 

@@ -4,9 +4,9 @@ code they received, and check that the valid sessions are exactly the 506 partic
 Run from the repository root:
     python phase2-1-scale-development/data/participant_flow.py
 
-Input (personal information, NOT in Git; see .gitignore)
-    tmp-data/results-survey686728.xlsx    LimeSurvey export of round 1 (all responses, all columns)
-    tmp-data/results-survey378394.xlsx    LimeSurvey export of round 2
+Input (personal information, NOT in Git; listed with checksums in restricted-data/MANIFEST.csv)
+    restricted-data/limesurvey/results-survey686728.xlsx    LimeSurvey export of round 1 (all responses, all columns)
+    restricted-data/limesurvey/results-survey378394.xlsx    LimeSurvey export of round 2
     raw/ratings-stimulus_original.csv     the 506 participants of the analysis (seed, stimulus, 65 items)
 
 Output (no Prolific IDs; can be committed)
@@ -31,14 +31,17 @@ from pathlib import Path
 import sys
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+import restricted_data  # noqa: E402  (repository root)
+
 HERE = Path(__file__).resolve().parent
 PHASE = HERE.parent
-TMP = PHASE / "tmp-data"
+EXPORTS = PHASE / "restricted-data" / "limesurvey"
 RAW = HERE / "raw"
 PREPARED = HERE / "prepared"
 
-ROUNDS = {1: ("686728", TMP / "results-survey686728.xlsx"),
-          2: ("378394", TMP / "results-survey378394.xlsx")}
+ROUNDS = {1: ("686728", EXPORTS / "results-survey686728.xlsx"),
+          2: ("378394", EXPORTS / "results-survey378394.xlsx")}
 OUTCOME = {"C15VDVOL": "valid", "C8M1PIH2": "valid",
            "C1LYP9HZ": "screened out", "CXD3AJQH": "screened out",
            "C13OIWSR": "no consent", "CNZ48DF4": "no consent"}
@@ -64,8 +67,7 @@ def code_column(df):
 
 
 def read_round(rnd, survey, path):
-    if not path.exists():
-        sys.exit(f"Missing {path}: export survey {survey} from LimeSurvey (all responses) into tmp-data/")
+    path = restricted_data.require(PHASE, f"limesurvey/{path.name}")  # stops if missing, warns if changed
     df = pd.read_excel(path)
     # LimeSurvey puts the Prolific URL parameters right after 'Referrer URL':
     # PROLIFIC_PID, STUDY_ID, SESSION_ID, SYSTEM (headers are empty in the export).

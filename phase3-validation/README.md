@@ -58,6 +58,9 @@ The exact versions are in [`renv.lock`](../renv.lock), recorded from the environ
 
 ## Reproducibility notes
 
+- **Restricted data.** The original LimeSurvey exports, the pseudonym map and the redaction list are in [`restricted-data/`](restricted-data/README.md) (not in Git; checksums in its `MANIFEST.csv`). With them, `data/anonymise_raw.py` rebuilds the three files of `data/raw/` byte for byte (checked on 2026-11-27).
+- **Where the files came from.** [`file-map_old-to-new.csv`](file-map_old-to-new.csv) maps every file of the original analysis folders ("Reproduce0" … "Reproduce6") to its place in this repository, or says why it was dropped, merged or retired.
+
 The results were reproduced on a second computer (macOS on Apple Silicon, with the package versions in `renv.lock`), and they match the originals (Windows) with these exceptions:
 
 - **Package versions matter.** An older `psych` version gives a different RMSR in step 04 and different parallel-analysis simulations in step 06. Use `renv::restore()` to get the recorded versions.

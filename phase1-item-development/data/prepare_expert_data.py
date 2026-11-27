@@ -1,10 +1,11 @@
 """Build the anonymised expert-survey data of phase 1 from the LimeSurvey exports.
 
-Inputs (never committed; see .gitignore), in phase1-item-development/tmp-data/:
+Inputs (restricted, never committed), in phase1-item-development/restricted-data/limesurvey/:
     results-survey<ID>.xlsx       responses, exported with "Question code & question text"
                                   headers and full answer texts
     limesurvey_survey_<ID>.lss    survey structure
-The file names may carry a " (1)" or " (2)" suffix added by the browser; the newest match is used.
+They are listed, with their checksums, in restricted-data/MANIFEST.csv; a warning is printed if a
+file differs from the recorded version.
 
 Outputs (committed), in phase1-item-development/data/:
     Expert survey 1 (654492) and its pilot (654491):
@@ -39,8 +40,11 @@ from pathlib import Path
 
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+import restricted_data  # noqa: E402  (repository root)
+
 PHASE_DIR = Path(__file__).resolve().parent.parent
-TMP_DIR = PHASE_DIR / "tmp-data"
+EXPORTS_DIR = PHASE_DIR / "restricted-data" / "limesurvey"
 DATA_DIR = PHASE_DIR / "data"
 
 RELEVANCE_LEVELS = {
@@ -67,11 +71,14 @@ SURVEY_2_PILOT_RESPONSE_IDS = {9, 12}
 # --------------------------------------------------------------------------- helpers
 
 def find_input(pattern: str) -> Path:
-    """Newest file in tmp-data/ matching a glob pattern (handles "name (1).xlsx")."""
-    matches = sorted(TMP_DIR.glob(pattern), key=lambda p: p.stat().st_mtime)
+    """The restricted export matching a glob pattern (exactly one), checked against the manifest."""
+    matches = sorted(EXPORTS_DIR.glob(pattern))
     if not matches:
-        sys.exit(f"No file matching {pattern!r} in {TMP_DIR}")
-    return matches[-1]
+        sys.exit(f"No file matching {pattern!r} in {EXPORTS_DIR}\n"
+                 f"See {EXPORTS_DIR.parent / 'README.md'}.")
+    if len(matches) > 1:
+        sys.exit(f"More than one file matches {pattern!r} in {EXPORTS_DIR}: keep only the one in MANIFEST.csv.")
+    return restricted_data.require(PHASE_DIR, f"limesurvey/{matches[0].name}")
 
 
 def read_export(pattern: str) -> pd.DataFrame:

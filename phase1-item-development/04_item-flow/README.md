@@ -13,7 +13,7 @@ This step describes how the candidate items were produced from four sources and 
 
 ## Data
 
-From [`../data/raw/`](../data/README.md), built by `data/prepare_item_sources.py` from the team Google Sheets "Items Historic" and "Task2SuggestedItemsAnalysis250127" (downloaded as .xlsx into `tmp-data/old-analysis/`): `item-history.csv`, `item-pool.csv`, `source-p0-suggestions.csv`, `source-p1-ueqplus.csv`, `source-p2-scales.csv`, `source-p3-literature.csv`, `concept-occurrences.csv`. The texts of the scale items, the paper excerpts, the expert suggestions and the expert comments are not copied.
+From [`../data/raw/`](../data/README.md), built by `data/prepare_item_sources.py` from the team Google Sheets "Items Historic" and "Task2SuggestedItemsAnalysis250127" (downloaded as .xlsx into `restricted-data/team-sheets/`): `item-history.csv`, `item-pool.csv`, `source-p0-suggestions.csv`, `source-p1-ueqplus.csv`, `source-p2-scales.csv`, `source-p3-literature.csv`, `concept-occurrences.csv`. The texts of the scale items, the paper excerpts, the expert suggestions and the expert comments are not copied.
 
 The last two stages are read from files of the other phases: `phase2-2-item-reduction/00-efa-screening/output/efa-screening-items.csv` and `items-after-screening.csv` (49 items, with the EFA loadings and the screening decisions) and `phase3-validation/data/codebook/items.csv` (13 items). Codes are matched without hyphens (P0-26 = P026, P40-26-A = P4026A). The shared code is in `item_tracking.py`.
 
@@ -46,14 +46,16 @@ python phase1-item-development/04_item-flow/item_history_page.py   # the HTML pa
 | `item-history.html` | Interactive page with the history of the 99 candidate items (search by code or words, filters by source and result, details per stage); written by `item_history_page.py`, self-contained, published on the repository site |
 | `table-item-flow-changes.tex` | LaTeX table for the appendix (`tab:item-flow-changes`): for each stage, the items removed and added, the number reworded, and the reason (short reasons in `TRANSITION_REASONS` in `item_flow.py`) |
 | `table-final-items-history.tex` | LaTeX table for the appendix (`tab:final-items-history`): the 13 items of the validated scale by factor, with source, topic and concept, first and final wording, expert survey 2 mean and EFA loading |
-| `table-p0-by-topic.tex` | LaTeX table `tab:p0-by-topic`: P0 per topic (assignments, concepts, items, optional, not used; invalid answers excluded) |
+| `merge-pools.csv`, `table-merge-pools.tex` | Combination of the sources (`tab:merge-pools`, `table*`): per step (P0, +P1, +P2, +P3, internal review, final review of the pilot) the items and new concepts added, cumulative items, optional items, named topic-concepts, topic-level items (concept "__") and topics. 68/46/23 → 74/51 → 90/64 → 95/67/23 → 84/61/21 → 83/61/21 |
+| `source-p2-by-questionnaire.csv`, `table-p2-questionnaires.tex` | P2 per questionnaire (`tab:p2-questionnaires`): items and the include / maybe / exclude classification. The row whose "scale" is the leaked UEQ instruction text is counted as UEQ, so there are 22 questionnaires; display names in `P2_LABELS` |
+| `table-p0-by-topic.tex` | LaTeX table `tab:p0-by-topic`: P0 per topic (assignments, concepts, items, optional; not used split into repeated (concept already had an item) and other; † = topic not among the 15 UEQ+ topics; invalid answers excluded) |
 | `table-item-flow.tex` | LaTeX table of the item flow, with a column "Section" (`\ref` to the section of the paper that describes each stage; the labels are set in `STAGE_SECTIONS` at the top of `item_flow.py`, and the script prints the labels the paper must define) |
 
 ## Results
 
 **Sources of the pool (95 items, 6 marked optional):**
 
-- P0: 105 Task 2 answers coded into 136 topic-concept assignments; 2 were coded invalid, the other 134 fall in 25 topics (23 with items) and 46 concepts; 62 became items, 6 optional items, 66 did not lead to a separate item → **68 items**.
+- P0: 105 Task 2 answers coded into 136 topic-concept assignments; 2 were coded invalid, the other 134 fall in 25 topics (23 with items) and 46 concepts; 62 became items, 6 optional items, 66 did not lead to a separate item (37 repeated a concept that already had an item, 29 other) → **68 items**. 16 of the 25 topics are not UEQ+ topics. The 68 items cover 46 named concepts; 6 items address a topic as a whole (concept "__" in the sheet; the team's "47 concepts" counts these as one more concept). The sheet "Suggested Items List" has the 104 valid answers.
 - P1: 62 UEQ+ items of the 15 scales; related to P0 29, irrelevant 20, ignore 8, new concept or topic 5 → **6 items**.
 - P2: 472 items of 23 questionnaires; include 341, maybe 79, exclude 52 → **16 items**.
 - P3: 2,072 literature terms classified into 90 topic-concepts → **5 items**.

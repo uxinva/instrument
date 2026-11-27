@@ -1,9 +1,9 @@
 # Phase 1 data
 
-Anonymised data of the expert surveys and the item sources, built by two scripts. Their inputs stay in `../tmp-data/`, which is never committed:
+Anonymised data of the expert surveys and the item sources, built by two scripts. Their inputs are in [`../restricted-data/`](../restricted-data/README.md), which is never committed (files, origins and checksums in its `MANIFEST.csv`):
 
-- [`prepare_expert_data.py`](prepare_expert_data.py) reads the LimeSurvey exports (`results-survey<ID>.xlsx`, `limesurvey_survey_<ID>.lss`). They contain dates, Response IDs, a name or pseudonym field (pilot of survey 1) and free-text comments and suggestions; none of these are copied.
-- [`prepare_item_sources.py`](prepare_item_sources.py) reads the team Google Sheets "Items Historic", "Task2SuggestedItemsAnalysis250127" and "Task 1 - CommentsAnalysis250127", downloaded as .xlsx into `../tmp-data/old-analysis/`. The texts of the scale items (P1, P2), the paper excerpts (P3), the expert suggestions and comments are not copied.
+- [`prepare_expert_data.py`](prepare_expert_data.py) reads the LimeSurvey exports (`restricted-data/limesurvey/results-survey<ID>.xlsx`, `limesurvey_survey_<ID>.lss`). They contain dates, Response IDs, a name or pseudonym field (pilot of survey 1) and free-text comments and suggestions; none of these are copied.
+- [`prepare_item_sources.py`](prepare_item_sources.py) reads the team Google Sheets "Items Historic", "Task2SuggestedItemsAnalysis250127" and "Task 1 - CommentsAnalysis250127", downloaded as .xlsx into `../restricted-data/team-sheets/`. The texts of the scale items (P1, P2), the paper excerpts (P3), the expert suggestions and comments are not copied.
 
 Only submitted survey responses are kept. Experts are coded in increasing Response ID order: `A01`… (survey 1), `AP1`… (pilot of survey 1), `E01`… (survey 2). The order is kept because the 2025 analysis of survey 2 computed the mode in that order (see [`../03_expert-survey-2/README.md`](../03_expert-survey-2/README.md)).
 
@@ -39,7 +39,7 @@ Only submitted survey responses are kept. Experts are coded in increasing Respon
 
 ## Run
 
-From the repository root, after placing the inputs in `phase1-item-development/tmp-data/`:
+From the repository root, with the inputs in `phase1-item-development/restricted-data/` (the scripts warn if a file differs from the version in `MANIFEST.csv`):
 
 ```
 python phase1-item-development/data/prepare_expert_data.py

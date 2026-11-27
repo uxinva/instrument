@@ -35,7 +35,7 @@ Choices reproduced from the 2025 analysis (slides of 30 January and 6 February 2
   gives the highest W, until W > 0.4 (Attractiveness, then Dependability: W = 0.407).
 
 --check compares the results with the values on the 2025 slides and with the ratings in a
-local copy of the spreadsheet "Task 1 - CommentsAnalysis250127" (tmp-data/old-analysis/).
+local copy of the spreadsheet "Task 1 - CommentsAnalysis250127" (restricted-data/team-sheets/).
 
 Run from the repository root:
     python phase1-item-development/02_expert-survey-1/expert_survey_1.py [--check]
@@ -55,9 +55,11 @@ from scipy import stats
 STEP_DIR = Path(__file__).resolve().parent
 PHASE_DIR = STEP_DIR.parent
 DATA_DIR = PHASE_DIR / "data"
-TMP_DIR = PHASE_DIR / "tmp-data"
+TMP_DIR = PHASE_DIR / "tmp-data"  # scratch files only (not versioned)
+RESTRICTED = PHASE_DIR / "restricted-data"  # records that cannot be published (see its MANIFEST.csv)
+EXPORTS_DIR = RESTRICTED / "limesurvey"
 OUT_DIR = STEP_DIR / "output"
-OLD_TASK1 = TMP_DIR / "old-analysis" / "Task 1 - CommentsAnalysis250127.xlsx"
+OLD_TASK1 = RESTRICTED / "team-sheets" / "Task 1 - CommentsAnalysis250127.xlsx"
 
 LEVELS = {1: "Never relevant", 2: "Not often relevant", 3: "Sometimes relevant",
           4: "Frequently relevant", 5: "Always relevant"}
@@ -289,7 +291,7 @@ def task2_agreement(coding: pd.DataFrame) -> pd.DataFrame:
 
 
 def comments_of_removed_topics(table: pd.DataFrame) -> pd.DataFrame | None:
-    files = sorted(TMP_DIR.glob("results-survey654492*.xlsx"), key=lambda p: p.stat().st_mtime)
+    files = sorted(EXPORTS_DIR.glob("results-survey654492*.xlsx"), key=lambda p: p.stat().st_mtime)
     if not files:
         return None
     df = pd.read_excel(files[-1])
@@ -306,8 +308,8 @@ def comments_of_removed_topics(table: pd.DataFrame) -> pd.DataFrame | None:
 
 
 def response_summary() -> pd.DataFrame | None:
-    """Started/submitted/incomplete and completion time, read from the raw export (tmp-data)."""
-    files = sorted(TMP_DIR.glob("results-survey654492*.xlsx"), key=lambda p: p.stat().st_mtime)
+    """Started/submitted/incomplete and completion time, read from the raw export (restricted-data)."""
+    files = sorted(EXPORTS_DIR.glob("results-survey654492*.xlsx"), key=lambda p: p.stat().st_mtime)
     if not files:
         return None
     df = pd.read_excel(files[-1])
@@ -418,7 +420,7 @@ def main() -> None:
     if summary is not None:
         summary.to_csv(OUT_DIR / "response-summary.csv", index=False)
     else:
-        print("response-summary.csv not written: the raw export is not in tmp-data/.")
+        print("response-summary.csv not written: the raw export is not in restricted-data/limesurvey/.")
 
     table = topic_table(ratings, topics, comments)
     table.to_csv(OUT_DIR / "topic-relevance.csv", index=False, float_format="%.6g")
@@ -448,6 +450,7 @@ def main() -> None:
         agree.to_csv(OUT_DIR / "task2-coding-agreement.csv", index=False)
     quotes = comments_of_removed_topics(table)
     if quotes is not None:
+        TMP_DIR.mkdir(exist_ok=True)
         quotes.to_csv(TMP_DIR / "expert-survey-1_comments-of-removed-topics.csv", index=False)
 
     names = topics["name"].to_dict()

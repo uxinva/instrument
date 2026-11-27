@@ -57,9 +57,12 @@ instrument/
 ├── instrument.Rproj           R project: open this in RStudio
 ├── _config.yml                GitHub Pages site settings
 ├── .github/workflows/         builds and publishes the site
+├── restricted_data.py         checks the restricted records of every phase against their manifests
 ├── phase1-item-development/    being documented: literature search, expert surveys, item flow
+│   └── restricted-data/       records that cannot be published (not in Git; MANIFEST.csv is)
 ├── phase2-1-scale-development/  being documented: EFA of the 65 items
-│   └── data/                  exploratory survey: raw data, data preparation, prepared data, item codebook (also used by phase 2.2)
+│   ├── data/                  exploratory survey: raw data, data preparation, prepared data, item codebook (also used by phase 2.2)
+│   └── restricted-data/       original survey exports with Prolific IDs (not in Git; MANIFEST.csv is)
 ├── phase2-2-item-reduction/
 │   ├── README.md              overview of the phase and how to reproduce it
 │   ├── item-reduction-context.md   summary: data, decisions, reference results, software
@@ -75,12 +78,27 @@ instrument/
     ├── README.md              overview of the phase and how to reproduce it
     ├── render_all.R           runs every step in order
     ├── data/                  raw data, data preparation, prepared data, item codebook
+    ├── restricted-data/       original exports, pseudonym map, redactions (not in Git; MANIFEST.csv is)
     └── NN_step-name/          one folder per analysis step (00–08)
         ├── README.md          what the step does, its inputs and outputs
         ├── NN_step-name.Rmd   notebook (step 02 is a Python notebook, .ipynb)
         ├── NN_step-name.html  rendered report
         └── output/            tables and figures produced by the step
 ```
+
+## Restricted data
+
+Some files produce the results but cannot be published: the original survey exports (with Prolific IDs, names or free-text answers), the pseudonym maps, and the team spreadsheets that contain the texts of copyrighted questionnaires or the experts' suggestions. They are the primary records of the project, because the anonymised files in `data/raw/` are built from them.
+
+Each phase keeps these files in its own folder **`restricted-data/`**, which is never committed (see `.gitignore`). What is committed is `restricted-data/MANIFEST.csv`: one row per file with its description, origin (LimeSurvey survey ID, Google Drive file ID), date, size and SHA-256 checksum, and `restricted-data/README.md`, which says how to obtain the files. The preparation scripts read their inputs only from `restricted-data/`, stop if a file is missing and warn if a file differs from the version in the manifest.
+
+```
+python restricted_data.py verify          # are the restricted files present and unchanged?
+```
+
+The analyses (everything after `data/raw/`) need only the committed files. A copy of every `restricted-data/` folder is kept in the project's Google Drive; at publication it is deposited with restricted access. Phase 2.2 has no restricted data: it starts from the prepared data of phase 2.1.
+
+Folders named `tmp-data/` hold only scratch files that can be deleted and rebuilt.
 
 ## Requirements
 

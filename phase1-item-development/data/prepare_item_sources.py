@@ -1,6 +1,7 @@
 """Extract the item sources and the item history of phase 1 from the team spreadsheets.
 
-Inputs (Google Sheets downloaded as .xlsx into phase1-item-development/tmp-data/old-analysis/;
+Inputs (Google Sheets downloaded as .xlsx into phase1-item-development/restricted-data/team-sheets/,
+listed with their checksums in restricted-data/MANIFEST.csv;
 not versioned):
     Items Historic.xlsx                       Google Sheet "Items Historic"
     Task2SuggestedItemsAnalysis250127.xlsx    Google Sheet "Task2SuggestedItemsAnalysis250127"
@@ -37,8 +38,11 @@ from pathlib import Path
 
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+import restricted_data  # noqa: E402  (repository root)
+
 PHASE_DIR = Path(__file__).resolve().parent.parent
-OLD_DIR = PHASE_DIR / "tmp-data" / "old-analysis"
+OLD_DIR = PHASE_DIR / "restricted-data" / "team-sheets"
 RAW_DIR = PHASE_DIR / "data" / "raw"
 ITEMS_HISTORIC = OLD_DIR / "Items Historic.xlsx"
 TASK2 = OLD_DIR / "Task2SuggestedItemsAnalysis250127.xlsx"
@@ -76,8 +80,7 @@ COL_ID, COL_TOPIC, COL_CONCEPT = 1, 2, 3
 
 
 def need(path: Path) -> None:
-    if not path.exists():
-        sys.exit(f"Missing input: {path}\nDownload the Google Sheet as .xlsx into {OLD_DIR}.")
+    restricted_data.require(PHASE_DIR, f"team-sheets/{path.name}")
 
 
 _WORKBOOKS: dict = {}

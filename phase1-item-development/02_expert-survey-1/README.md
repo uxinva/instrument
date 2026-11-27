@@ -20,7 +20,7 @@ python phase1-item-development/data/prepare_expert_data.py      # only if the ex
 python phase1-item-development/02_expert-survey-1/expert_survey_1.py --check
 ```
 
-`--check` compares the results with the values on the 2025 slides (topic table, participants, Kendall's W, pilot counts) and the 37 × 15 ratings with the sheet "Ratings" of a local copy of the Google Sheet "Task 1 - CommentsAnalysis250127" (`tmp-data/old-analysis/`). `response-summary.csv` is written only when the raw export is in `tmp-data/`.
+`--check` compares the results with the values on the 2025 slides (topic table, participants, Kendall's W, pilot counts) and the 37 × 15 ratings with the sheet "Ratings" of a local copy of the Google Sheet "Task 1 - CommentsAnalysis250127" (`restricted-data/team-sheets/`). `response-summary.csv` is written only when the raw export is in `restricted-data/limesurvey/`.
 
 ## Outputs (`output/`)
 
